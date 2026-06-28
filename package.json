@@ -1,0 +1,48 @@
+{
+  "name": "@luminarylabs/nexusrealtime-kits",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Official first-party kit catalog, domain bundles, and installer for NexusRealtime.",
+  "exports": {
+    ".": "./src/index.js",
+    "./installer": "./installer/index.js",
+    "./all": "./bundles/all.js",
+    "./domain-foundation": "./domains/foundation/index.js",
+    "./domain-input": "./domains/input/index.js",
+    "./domain-spatial": "./domains/spatial/index.js",
+    "./domain-progression": "./domains/progression/index.js",
+    "./domain-hazard-combat": "./domains/hazard-combat/index.js",
+    "./domain-economy-resources": "./domains/economy-resources/index.js",
+    "./domain-building": "./domains/building/index.js",
+    "./domain-camera-feedback": "./domains/camera-feedback/index.js",
+    "./domain-render-descriptors": "./domains/render-descriptors/index.js",
+    "./domain-aerial": "./domains/aerial/index.js",
+    "./domain-rpg-social": "./domains/rpg-social/index.js",
+    "./domain-rpg-combat": "./domains/rpg-combat/index.js",
+    "./domain-xr": "./domains/xr/index.js",
+    "./domain-generic-defense": "./domains/generic-defense/index.js",
+    "./domain-route-extraction": "./domains/route-extraction/index.js",
+    "./kits/*": "./kits/*/index.js"
+  },
+  "peerDependencies": {
+    "nexusrealtime": "*"
+  },
+  "files": [
+    "src",
+    "installer",
+    "domains",
+    "bundles",
+    "kits",
+    "adapters",
+    "presets",
+    "docs",
+    "KIT-CATALOG.md",
+    "KIT-INSTALLER.md",
+    "kit-catalog.json"
+  ],
+  "scripts": {
+    "check": "node tests/installer/installer-smoke.mjs",
+    "test": "node tests/installer/installer-smoke.mjs"
+  },
+  "license": "MIT"
+}
