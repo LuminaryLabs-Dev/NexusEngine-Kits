@@ -33,7 +33,9 @@ export const KIT_CATALOG = {
 };
 
 export function createNexusRealtimeKitCatalog() {
-  return structuredClone ? structuredClone(KIT_CATALOG) : JSON.parse(JSON.stringify(KIT_CATALOG));
+  return typeof structuredClone === "function"
+    ? structuredClone(KIT_CATALOG)
+    : JSON.parse(JSON.stringify(KIT_CATALOG));
 }
 
 export function listDomainIds(catalog = KIT_CATALOG) {
