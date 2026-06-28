@@ -2,7 +2,7 @@
 
 NexusRealtime Kits is the official first-party plugin catalog for NexusRealtime.
 
-It is the promotion target for stable capabilities incubated in `NexusRealtime-ProtoKits`. Kits in this repo are intended to be installable one at a time, by domain bundle, by game stack, or through the full catalog.
+This repo is a clean rebuild that runs alongside `NexusRealtime-ProtoKits`. ProtoKits remains the incubation/reference repo. Kits mirrors the useful capability coverage, but rebuilds it with cleaner domain boundaries, manifests, tests, install reports, CDN paths, and parity tracking.
 
 > Note: this repository is currently named `NexusRealitime-Kits` on GitHub. The package identity and docs use `NexusRealtime-Kits` / `@luminarylabs/nexusrealtime-kits` as the intended public kit catalog name.
 
@@ -13,13 +13,28 @@ NexusRealtime
   runs kits and owns runtime contracts
 
 NexusRealtime-Kits
-  publishes official first-party kits and bundles
+  clean official rebuild of first-party kits, domains, bundles, adapters, presets, and installer
 
 NexusRealtime-ProtoKits
-  incubates future kits before promotion
+  incubation/reference repo for experimental kits and parity source behavior
 ```
 
-This repo should not become a pile of demos. It should become a curated, domain-based kit catalog.
+This repo should not become a copied ProtoKits tree. It should mimic useful ProtoKit behavior, but improve the public factories, manifests, docs, testability, install paths, CDN entrypoints, and domain boundaries.
+
+## Rebuild Rule
+
+```txt
+same capability coverage
+cleaner public factories
+cleaner runtime behavior
+cleaner resources/events/systems
+better manifests
+better tests
+better install paths
+better CDN paths
+better docs
+better domain boundaries
+```
 
 ## Install Shapes
 
@@ -60,31 +75,25 @@ import { createNexusRealtimeKitInstaller } from "https://cdn.jsdelivr.net/gh/Lum
 
 ## Current Status
 
-This is the migration bootstrap. The catalog, domains, bundles, and installer are implemented first so stable ProtoKits have a landing zone.
+This is the clean rebuild foundation. The catalog, domains, bundles, installer, contracts, parity tracking, and docs land first so every future rebuilt kit has a stable long-term shape.
 
-Many catalog entries are currently `migration-placeholder` entries. A placeholder is intentionally installable as a metadata-only runtime kit so apps, agents, docs, and KitBuilder tooling can resolve the domain shape before each kit's full behavior is migrated from ProtoKits.
-
-## Migration Rule
-
-```txt
-Experiment
-→ ProtoKit
-→ validated ProtoKit
-→ official NexusRealtime Kit
-→ NexusRealtime runtime primitive only if the runtime contract itself must change
-```
-
-Do not move unstable behavior here. Promote only when the kit is generic, deterministic, renderer-agnostic, documented, testable, and useful beyond one game.
+Many catalog entries are currently `migration-placeholder` entries. A placeholder is installable as a metadata-only runtime kit so apps, agents, docs, and KitBuilder tooling can resolve the official domain shape before each kit's full behavior is rebuilt against ProtoKits parity.
 
 ## Repository Map
 
 ```txt
+contracts/       manifest schemas, status enums, and install report contracts
 installer/       dynamic kit/domain/bundle installer
-kit-catalog.json machine-readable catalog seed
-domains/         domain bundle entrypoints
+kit-catalog.json machine-readable kit catalog seed
+domain-catalog.json machine-readable domain catalog
+bundle-catalog.json machine-readable bundle catalog
+domains/         domain bundle entrypoints and future domain manifests
 bundles/         full-catalog and game-stack bundles
-kits/            official kit landing zones as migration proceeds
-docs/            install, CDN, promotion, and migration guides
+kits/            official kit landing zones and rebuilt behaviors
+parity/          ProtoKits-to-Kits parity tracking
+examples/        one-kit, one-domain, bundle, full catalog, CDN, and headless usage
+tests/           installer, contracts, domains, bundles, kits, parity, CDN, smoke
+scripts/         catalog, manifest, parity, export, and readiness checks
 ```
 
 ## Core Principle
@@ -92,7 +101,9 @@ docs/            install, CDN, promotion, and migration guides
 ```txt
 One kit should be installable.
 One domain should be installable.
+One bundle should be installable.
 The whole catalog should be installable.
 Every install should be inspectable.
 Every stable kit should be CDN-addressable.
+Every rebuilt kit should track ProtoKits parity.
 ```
