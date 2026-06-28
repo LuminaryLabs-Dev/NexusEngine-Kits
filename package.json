@@ -47,18 +47,31 @@
   "files": [
     "src",
     "installer",
+    "contracts",
     "domains",
     "bundles",
     "kits",
     "adapters",
     "presets",
+    "parity",
     "docs",
+    "examples",
     "KIT-CATALOG.md",
     "KIT-INSTALLER.md",
-    "kit-catalog.json"
+    "REBUILD-PARITY.md",
+    "kit-catalog.json",
+    "domain-catalog.json",
+    "bundle-catalog.json"
   ],
   "scripts": {
-    "check": "node tests/installer/installer-smoke.mjs",
+    "build:catalog": "node scripts/build-catalog.mjs",
+    "check": "npm run check:catalog && npm run check:manifests && npm run check:exports && npm test",
+    "check:catalog": "node scripts/validate-catalog.mjs",
+    "check:manifests": "node scripts/validate-manifests.mjs",
+    "check:exports": "node scripts/check-exports.mjs",
+    "check:readiness": "node scripts/check-kit-readiness.mjs",
+    "generate:cdn-index": "node scripts/generate-cdn-index.mjs",
+    "generate:parity-report": "node scripts/generate-parity-report.mjs",
     "test": "node tests/installer/installer-smoke.mjs"
   },
   "license": "MIT"
