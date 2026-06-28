@@ -8,6 +8,11 @@ import {
   createManifestRuntimeKit,
   loadKitFactory
 } from "./kit-manifest-loader.js";
+import { createCompletionLedgerKit } from "../kits/spatial/completion-ledger-kit/index.js";
+
+const REBUILT_FACTORIES = {
+  "completion-ledger-kit": createCompletionLedgerKit
+};
 
 function installIntoEngine(engine, kit, options = {}) {
   if (!engine || typeof engine !== "object") {
@@ -36,8 +41,8 @@ function installIntoEngine(engine, kit, options = {}) {
 function fallbackInstall(engine, kit) {
   if (!Array.isArray(engine.kits)) engine.kits = [];
   engine.kits.push(kit);
-  if (typeof kit.initWorld === "function" && engine.world) {
-    kit.initWorld({ engine, world: engine.world, kit, options: {} });
+  if (typeof kit.initWorld === "function") {
+    kit.initWorld({ engine, world: engine.world ?? {}, kit, options: {} });
   }
   return kit;
 }
@@ -46,6 +51,8 @@ export function createNexusRealtimeKitInstaller(options = {}) {
   const catalog = options.catalog ?? KIT_CATALOG;
 
   async function createKit(kitId, config = {}) {
+    const rebuiltFactory = REBUILT_FACTORIES[kitId];
+    if (typeof rebuiltFactory === "function") return rebuiltFactory(config);
     const manifest = resolveKitManifest(kitId, catalog);
     const factory = await loadKitFactory(manifest, { ...options, catalog });
     return factory(config);
