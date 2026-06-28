@@ -1,0 +1,17 @@
+{
+  "id": "spatial",
+  "label": "Spatial Domain",
+  "description": "Spatial lookup, interaction, hold actions, and completion services.",
+  "kind": "runtime-domain",
+  "kits": [
+    "spatial-index-kit",
+    "interactable-registry-kit",
+    "spatial-interaction-kit",
+    "hold-action-kit",
+    "completion-ledger-kit"
+  ],
+  "exports": {
+    "package": "@luminarylabs/nexusrealtime-kits/domain-spatial",
+    "cdn": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/domains/spatial/index.js"
+  }
+}
