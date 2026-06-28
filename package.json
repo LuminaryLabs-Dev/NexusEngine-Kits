@@ -72,7 +72,7 @@
     "check:readiness": "node scripts/check-kit-readiness.mjs",
     "generate:cdn-index": "node scripts/generate-cdn-index.mjs",
     "generate:parity-report": "node scripts/generate-parity-report.mjs",
-    "test": "node tests/installer/installer-smoke.mjs"
+    "test": "node tests/installer/installer-smoke.mjs && node kits/spatial/completion-ledger-kit/smoke.test.mjs"
   },
   "license": "MIT"
 }
