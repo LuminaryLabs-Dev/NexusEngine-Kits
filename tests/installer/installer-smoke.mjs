@@ -7,6 +7,8 @@ import {
 
 const engine = {
   kits: [],
+  n: {},
+  tickCount: 1,
   installKit(kit) {
     this.kits.push(kit);
     kit.initWorld?.({ engine: this, world: {}, kit, options: {} });
@@ -18,6 +20,14 @@ const installer = createNexusRealtimeKitInstaller();
 const one = await installer.installKit(engine, "completion-ledger-kit");
 assert.equal(one.installed, true);
 assert.equal(engine.kits[0].id, "completion-ledger-kit");
+assert.equal(engine.kits[0].metadata.realBehavior, true);
+assert.equal(typeof engine.n.completionLedger.complete, "function");
+assert.equal(engine.n.completionLedger.complete("installer-smoke").ok, true);
+assert.equal(engine.n.completionLedger.has("installer-smoke"), true);
+
+const duplicate = await installer.installKit(engine, "completion-ledger-kit");
+assert.equal(duplicate.installed, false);
+assert.equal(duplicate.duplicate, true);
 
 const domain = await installer.installDomain(engine, "input");
 assert.equal(domain.domainId, "input");
