@@ -12,7 +12,12 @@ This index tracks the documentation layer for NexusRealtime Kits.
 - `AAA-READINESS.md` — AAA-readiness status.
 - `ROADMAP.md` — rebuild roadmap.
 - `RELEASE-CHECKLIST.md` — release checklist.
-- `CONTRIBUTING.md` — contribution rules.
+- `KNOWN-LIMITATIONS.md` — current limitations.
+- `IMPLEMENTATION-GAPS.md` — implementation gap tracker.
+- `FAILURE-MODES.md` — known failure modes.
+- `PLACEHOLDER-MATRIX.md` — placeholder and candidate matrix.
+- `READINESS-MATRIX.md` — readiness status definitions.
+- `AAA-GAP-REGISTER.md` — why this is not AAA-ready yet.
 
 ## Core docs
 
@@ -34,46 +39,58 @@ This index tracks the documentation layer for NexusRealtime Kits.
 - `docs/TESTING-GUIDE.md`
 - `docs/SNAPSHOT-RESET-GUIDE.md`
 - `docs/INSTALL-REPORT-GUIDE.md`
-- `docs/CDN-RELEASE-GUIDE.md`
 - `docs/PACKAGE-EXPORTS-GUIDE.md`
 - `docs/DOMAIN-SCOPE-GUIDE.md`
-- `docs/PERFORMANCE-BUDGET-GUIDE.md`
 - `docs/VERSIONING-GUIDE.md`
-- `docs/DEPRECATION-GUIDE.md`
-- `docs/TROUBLESHOOTING.md`
+- `docs/KNOWN-LIMITATIONS.md`
+- `docs/IMPLEMENTATION-GAPS.md`
+- `docs/FAILURE-MODES.md`
+- `docs/PLACEHOLDER-MATRIX.md`
+- `docs/READINESS-MATRIX.md`
+- `docs/AAA-GAP-REGISTER.md`
+- `docs/WHAT-INSTALLABLE-MEANS.md`
+- `docs/WHAT-CANDIDATE-MEANS.md`
+- `docs/WHAT-OFFICIAL-MEANS.md`
+
+## Failure and readiness docs
+
+- `KNOWN-LIMITATIONS.md`
+- `IMPLEMENTATION-GAPS.md`
+- `FAILURE-MODES.md`
+- `PLACEHOLDER-MATRIX.md`
+- `READINESS-MATRIX.md`
+- `AAA-GAP-REGISTER.md`
+- `docs/WHAT-INSTALLABLE-MEANS.md`
+- `docs/WHAT-CANDIDATE-MEANS.md`
+- `docs/WHAT-OFFICIAL-MEANS.md`
 
 ## Contract docs
 
 - `contracts/KIT-MANIFEST.md`
 - `contracts/DOMAIN-MANIFEST.md`
-- `contracts/BUNDLE-MANIFEST.md`
-- `contracts/INSTALL-REPORT.md`
+- `contracts/REPORT.md` — alias for install report contract.
 - `contracts/STATUS-VALUES.md`
-- `contracts/PROVIDES-REQUIRES-TOKENS.md`
-- `contracts/CONTRACT-EVOLUTION.md`
 
 ## Installer docs
 
 - `installer/INSTALLER-API.md`
 - `installer/DYNAMIC-INSTALL.md`
-- `installer/CDN-RESOLUTION.md`
+- `installer/CDN.md` — alias for CDN resolution.
 - `installer/DOMAIN-INSTALL.md`
 - `installer/BUNDLE-INSTALL.md`
 - `installer/INSTALL-PLAN.md`
-- `installer/ERROR-CODES.md`
+- `installer/ERRORS.md` — alias for error codes.
 - `installer/EXAMPLES.md`
 
 ## Parity docs
 
-- `parity/README.md`
+- `parity/OVERVIEW.md`
 - `parity/PROTOKITS-SOURCE-MAP.md`
-- `parity/PARITY-STATUS-RULES.md`
-- `parity/INTENTIONAL-DIFFERENCES.md`
 - `parity/source-notes/*.md`
 
 ## Domain docs
 
-Each domain should have `README.md`, `domain.json`, and examples.
+Each domain should have `README.md` or `DOCS.md`; limitation docs are added first for high-risk domains.
 
 - foundation
 - input
@@ -107,7 +124,7 @@ Each bundle should have `README.md`, `bundle.json`, and examples.
 
 ## First-wave kit docs
 
-Each first-wave kit should have `README.md`, `kit.json`, `source-parity.md`, smoke test, and examples.
+Each first-wave kit should have `README.md` or `LIMITATIONS.md`, `kit.json` when physical, `source-parity.md` when behavior is rebuilt, smoke test when candidate, and examples.
 
 - completion-ledger-kit
 - spatial-interaction-kit
