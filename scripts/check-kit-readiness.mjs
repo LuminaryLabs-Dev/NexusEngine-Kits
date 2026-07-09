@@ -11,7 +11,8 @@ const firstWave = [
   "build-placement-kit",
   "structure-runtime-kit",
   "asset-descriptor-kit",
-  "diegetic-feedback-signal-kit"
+  "diegetic-feedback-signal-kit",
+  "generic-resource-loop-kit"
 ];
 
 const missing = firstWave.filter((kitId) => !kits.includes(kitId));

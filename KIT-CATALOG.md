@@ -39,7 +39,7 @@ simulation
 
 ```txt
 migration-placeholder
-  Catalog entry exists and can install as a metadata-only runtime kit.
+  Catalog entry exists for discovery but default installation rejects it.
 
 candidate
   Behavior has migrated from ProtoKits but needs more validation.
@@ -54,7 +54,7 @@ archived
   No longer recommended.
 ```
 
-The bootstrap catalog starts with placeholder entries so the installer, package exports, CDN references, docs, and future KitBuilder tooling have a stable target shape before every behavior migration is complete.
+The bootstrap catalog starts with placeholder entries so package, domain, documentation, and future tooling have a stable target shape. Only official entries participate in default creation and installation.
 
 ## Promotion Source
 

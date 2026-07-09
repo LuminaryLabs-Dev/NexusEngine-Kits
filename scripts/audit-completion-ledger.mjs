@@ -7,7 +7,7 @@ const audit = createAudit("Completion Ledger Behavior Audit");
 
 try {
   const engine = { kits: [], n: {}, tickCount: 42, installKit(kit) { this.kits.push(kit); kit.initWorld?.({ engine: this, world: {}, kit }); return kit; } };
-  const installer = createNexusEngineKitInstaller();
+  const installer = createNexusEngineKitInstaller({ allowStatuses: ["official", "candidate"] });
   const report = await installer.installKit(engine, "completion-ledger-kit");
   assert.equal(report.installed, true);
   assert.equal(engine.kits[0].metadata.realBehavior, true);

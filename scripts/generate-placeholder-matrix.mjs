@@ -16,8 +16,8 @@ for (const [domain, kits] of Object.entries(kitCatalog.domains ?? {})) {
       docs: exists(...base, "README.md"),
       manifest: exists(...base, "kit.json"),
       smoke: exists(...base, "smoke.test.mjs"),
-      realBehavior: kit === "completion-ledger-kit",
-      status: kit === "completion-ledger-kit" ? "candidate" : (parity.kits?.[kit]?.status ?? "migration-placeholder")
+      realBehavior: Boolean(parity.kits?.[kit]?.realBehavior),
+      status: parity.kits?.[kit]?.status ?? "migration-placeholder"
     });
   }
 }

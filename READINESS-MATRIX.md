@@ -14,6 +14,8 @@ Readiness is evidence-based. Do not promote a kit, domain, or bundle by intentio
 
 ## Current key status
 
+`generic-resource-loop-kit` is official real behavior.
+
 `completion-ledger-kit` is candidate real behavior.
 
 Most other catalog entries are migration-placeholder or scaffolded.

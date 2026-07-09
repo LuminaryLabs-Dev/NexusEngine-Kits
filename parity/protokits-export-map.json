@@ -12,6 +12,7 @@
     "build-placement-kit": "@luminarylabs/nexusengine-protokits/build-placement-kit",
     "structure-runtime-kit": "@luminarylabs/nexusengine-protokits/structure-runtime-kit",
     "asset-descriptor-kit": "@luminarylabs/nexusengine-protokits/asset-descriptor-kit",
-    "diegetic-feedback-signal-kit": "@luminarylabs/nexusengine-protokits/diegetic-feedback-signal-kit"
+    "diegetic-feedback-signal-kit": "@luminarylabs/nexusengine-protokits/diegetic-feedback-signal-kit",
+    "generic-resource-loop-kit": "@luminarylabs/nexusengine-protokits/generic-resource-loop-kit"
   }
 }

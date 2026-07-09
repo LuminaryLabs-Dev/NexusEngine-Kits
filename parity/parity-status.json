@@ -1,5 +1,11 @@
 {
   "status": "clean-rebuild-bootstrap",
+  "activeCapability": "kit-registry-domain-kit",
+  "baselineCount": 120,
+  "approvedAdditions": {
+    "total": 3,
+    "resolved": 0
+  },
   "kits": {
     "completion-ledger-kit": { "status": "candidate", "target": "kits/spatial/completion-ledger-kit", "realBehavior": true, "next": "domain smoke and full ProtoKits comparison" },
     "spatial-interaction-kit": { "status": "scaffolded", "target": "kits/spatial/spatial-interaction-kit" },
@@ -9,6 +15,13 @@
     "build-placement-kit": { "status": "scaffolded", "target": "kits/building/build-placement-kit" },
     "structure-runtime-kit": { "status": "scaffolded", "target": "kits/building/structure-runtime-kit" },
     "asset-descriptor-kit": { "status": "scaffolded", "target": "kits/render-descriptors/asset-descriptor-kit" },
-    "diegetic-feedback-signal-kit": { "status": "scaffolded", "target": "kits/camera-feedback/diegetic-feedback-signal-kit" }
+    "diegetic-feedback-signal-kit": { "status": "scaffolded", "target": "kits/camera-feedback/diegetic-feedback-signal-kit" },
+    "generic-resource-loop-kit": {
+      "status": "official",
+      "target": "kits/simulation/generic-resource-loop-kit",
+      "realBehavior": true,
+      "sourceCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
+      "next": "keep core coexistence, replay, package, domain, and performance gates green"
+    }
   }
 }

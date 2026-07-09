@@ -14,3 +14,9 @@ Promote proven NexusEngine ProtoKits into stable NexusEngine Kits while preservi
 - Stable promotion preserves useful behavior variations through APIs, policies, adapters, presets, or configuration.
 - Placeholder metadata is never promoted as stable behavior.
 - Every pushed Kits change has a matching pushed LuminaryLabs audit record.
+
+## Current Progress
+
+- Baseline resolved: 1 / 120 after the official resource-meter promotion.
+- Baseline remaining: 119.
+- Active capability: registry control plane (`kit-registry`, `capability-graph`, and `composition-planning`).

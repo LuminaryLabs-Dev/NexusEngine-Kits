@@ -1,0 +1,6 @@
+{
+  "name": "@luminarylabs/nexusengine-kits-generic-resource-loop-kit",
+  "private": true,
+  "type": "module",
+  "exports": "./index.js"
+}

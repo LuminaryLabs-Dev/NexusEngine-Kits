@@ -14,7 +14,8 @@ const firstWave = new Set([
   "build-placement-kit",
   "structure-runtime-kit",
   "asset-descriptor-kit",
-  "diegetic-feedback-signal-kit"
+  "diegetic-feedback-signal-kit",
+  "generic-resource-loop-kit"
 ]);
 
 const rows = [];
@@ -28,16 +29,16 @@ for (const [domain, kits] of Object.entries(kitCatalog.domains ?? {})) {
     const manifest = exists(...base, "kit.json");
     const smoke = exists(...base, "smoke.test.mjs");
     const parityStatus = parity.kits?.[kit]?.status;
-    const status = kit === "completion-ledger-kit" ? "candidate" : (parityStatus ?? "migration-placeholder");
-    const realBehavior = kit === "completion-ledger-kit";
+    const status = parityStatus ?? "migration-placeholder";
+    const realBehavior = Boolean(parity.kits?.[kit]?.realBehavior);
 
-    if (status === "candidate") {
-      if (!folder) audit.error(`${kit} is candidate but has no folder`);
-      if (!index) audit.error(`${kit} is candidate but has no index.js`);
-      if (!readme) audit.error(`${kit} is candidate but has no README.md`);
-      if (!manifest) audit.error(`${kit} is candidate but has no kit.json`);
-      if (!smoke) audit.error(`${kit} is candidate but has no smoke.test.mjs`);
-      if (!realBehavior) audit.error(`${kit} is candidate but no real behavior rule is known`);
+    if (status === "candidate" || status === "official") {
+      if (!folder) audit.error(`${kit} is ${status} but has no folder`);
+      if (!index) audit.error(`${kit} is ${status} but has no index.js`);
+      if (!readme) audit.error(`${kit} is ${status} but has no README.md`);
+      if (!manifest) audit.error(`${kit} is ${status} but has no kit.json`);
+      if (!smoke) audit.error(`${kit} is ${status} but has no smoke.test.mjs`);
+      if (!realBehavior) audit.error(`${kit} is ${status} but no real behavior rule is known`);
     }
 
     if (firstWave.has(kit) && !folder) audit.warn(`first-wave kit ${kit} has no physical folder yet`);

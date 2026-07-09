@@ -28,5 +28,13 @@
     "target": "kits/hazard-combat/damage-health-kit",
     "targetExport": "@luminarylabs/nexusengine-kits/damage-health-kit",
     "strategy": "clean-rebuild"
+  },
+  "generic-resource-loop-kit": {
+    "source": "NexusEngine-ProtoKits/protokits/generic-resource-loop-kit",
+    "sourceCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
+    "target": "kits/simulation/generic-resource-loop-kit",
+    "targetExport": "@luminarylabs/nexusengine-kits/generic-resource-loop-kit",
+    "strategy": "validated-promotion",
+    "status": "official"
   }
 }

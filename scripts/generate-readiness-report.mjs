@@ -7,7 +7,7 @@ for (const [kit, entry] of Object.entries(parity.kits ?? {})) {
   rows.push({
     kit,
     status: entry.status,
-    realBehavior: Boolean(entry.realBehavior) || kit === "completion-ledger-kit",
+    realBehavior: Boolean(entry.realBehavior),
     target: entry.target,
     smoke: entry.target ? exists(entry.target, "smoke.test.mjs") : false,
     next: entry.next ?? "not specified"

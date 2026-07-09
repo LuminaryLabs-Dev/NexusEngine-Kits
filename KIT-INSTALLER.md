@@ -10,7 +10,8 @@ It is not a runtime engine. It resolves kits and installs them into a NexusEngin
 resolve kit ID to manifest
 resolve domain ID to kit list
 resolve bundle ID to domain list
-create metadata-backed runtime kits during migration
+reject unready statuses by default
+create metadata-backed runtime kits only through an explicit migration API
 optionally load real ESM factories when module URLs are available
 install into engine.installKit()
 track duplicate kit IDs
@@ -23,7 +24,7 @@ return install reports
 import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
 const installer = createNexusEngineKitInstaller();
-await installer.installKit(engine, "damage-health-kit");
+await installer.installKit(engine, "generic-resource-loop-kit");
 await installer.installDomain(engine, "hazard-combat");
 await installer.installBundle(engine, "default-game-stack");
 await installer.installAll(engine);
@@ -35,16 +36,14 @@ await installer.installAll(engine);
 import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
 ```
 
-## Placeholder Behavior
+## Readiness Behavior
 
-Until a kit's full behavior is migrated from ProtoKits, the installer creates a metadata-only runtime kit with:
+The default installer allows only `official` manifests. Domain and bundle reports retain one result per catalog entry and mark unready members as `skipped` with `reason: "status-not-allowed"`.
 
-```txt
-id
-provides
-requires
-metadata
-initWorld install report
+```js
+const reviewInstaller = createNexusEngineKitInstaller({
+  allowStatuses: ["official", "candidate"]
+});
 ```
 
-This makes the catalog installable and inspectable before every source kit is fully promoted.
+`createPlaceholderKit()` remains available only for explicit migration and inspection tooling.

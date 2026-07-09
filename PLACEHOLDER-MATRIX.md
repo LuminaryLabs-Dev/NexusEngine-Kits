@@ -1,23 +1,126 @@
 # Placeholder Matrix
 
-This matrix makes placeholder status explicit. It should be regenerated with `npm run generate:placeholder-matrix` after major catalog changes.
+Generated from `kit-catalog.json`, physical files, and parity status.
 
-| Domain | Kit | Cataloged | Physical folder | Real behavior | Docs | Smoke | Status | Next action |
-|---|---|---:|---:|---:|---:|---:|---|---|
-| spatial | completion-ledger-kit | yes | yes | yes | yes | yes | candidate | full ProtoKits parity and domain official review |
-| spatial | spatial-index-kit | yes | no | no | no | no | migration-placeholder | rebuild or document as planned |
-| spatial | interactable-registry-kit | yes | no | no | no | no | migration-placeholder | rebuild or document as planned |
-| spatial | spatial-interaction-kit | yes | yes | no | partial | no | migration-placeholder | rebuild next |
-| spatial | hold-action-kit | yes | no | no | no | no | migration-placeholder | rebuild or document as planned |
-| progression | objective-bridge-kit | yes | yes | no | partial | no | migration-placeholder | rebuild after spatial-interaction-kit |
-| progression | lock-group-kit | yes | yes | no | partial | no | migration-placeholder | rebuild after objective bridge |
-| hazard-combat | damage-health-kit | yes | yes | no | partial | no | migration-placeholder | rebuild first combat kit |
-| economy-resources | resource-node-kit | yes | yes | no | partial | no | migration-placeholder | rebuild first resource kit |
-| building | build-placement-kit | yes | yes | no | partial | no | migration-placeholder | rebuild first building kit |
-| building | structure-runtime-kit | yes | yes | no | partial | no | migration-placeholder | rebuild after placement |
-| render-descriptors | asset-descriptor-kit | yes | yes | no | partial | no | migration-placeholder | rebuild first descriptor kit |
-| camera-feedback | diegetic-feedback-signal-kit | yes | yes | no | partial | no | migration-placeholder | rebuild first feedback kit |
-
-## Rule
-
-A placeholder is allowed only when it is clearly marked and does not claim real behavior.
+| Domain | Kit | Folder | Index | Docs | Manifest | Smoke | Real | Status |
+|---|---|---:|---:|---:|---:|---:|---:|---|
+| foundation | protokit-core | no | no | no | no | no | no | migration-placeholder |
+| foundation | seed-kit | no | no | no | no | no | no | migration-placeholder |
+| foundation | clock-kit | no | no | no | no | no | no | migration-placeholder |
+| foundation | state-digest-kit | no | no | no | no | no | no | migration-placeholder |
+| foundation | replay-test-kit | no | no | no | no | no | no | migration-placeholder |
+| foundation | health-report-kit | no | no | no | no | no | no | migration-placeholder |
+| foundation | performance-budget-kit | no | no | no | no | no | no | migration-placeholder |
+| input | action-input-kit | no | no | no | no | no | no | migration-placeholder |
+| input | input-context-kit | no | no | no | no | no | no | migration-placeholder |
+| input | input-buffer-kit | no | no | no | no | no | no | migration-placeholder |
+| input | view-rig-kit | no | no | no | no | no | no | migration-placeholder |
+| spatial | spatial-index-kit | no | no | no | no | no | no | migration-placeholder |
+| spatial | interactable-registry-kit | no | no | no | no | no | no | migration-placeholder |
+| spatial | spatial-interaction-kit | yes | yes | no | no | no | no | scaffolded |
+| spatial | hold-action-kit | no | no | no | no | no | no | migration-placeholder |
+| spatial | completion-ledger-kit | yes | yes | yes | yes | yes | yes | candidate |
+| progression | objective-bridge-kit | yes | yes | no | no | no | no | scaffolded |
+| progression | objective-kit | no | no | no | no | no | no | migration-placeholder |
+| progression | mission-phase-kit | no | no | no | no | no | no | migration-placeholder |
+| progression | lock-group-kit | yes | yes | no | no | no | no | scaffolded |
+| progression | fail-state-kit | no | no | no | no | no | no | migration-placeholder |
+| progression | score-summary-kit | no | no | no | no | no | no | migration-placeholder |
+| hazard-combat | hazard-director-kit | no | no | no | no | no | no | migration-placeholder |
+| hazard-combat | damage-health-kit | yes | yes | no | no | no | no | migration-placeholder |
+| hazard-combat | encounter-director-kit | no | no | no | no | no | no | migration-placeholder |
+| hazard-combat | light-combat-kit | no | no | no | no | no | no | migration-placeholder |
+| economy-resources | inventory-kit | no | no | no | no | no | no | migration-placeholder |
+| economy-resources | cargo-kit | no | no | no | no | no | no | migration-placeholder |
+| economy-resources | currency-kit | no | no | no | no | no | no | migration-placeholder |
+| economy-resources | market-kit | no | no | no | no | no | no | migration-placeholder |
+| economy-resources | upgrade-kit | no | no | no | no | no | no | migration-placeholder |
+| economy-resources | resource-node-kit | yes | yes | no | no | no | no | scaffolded |
+| economy-resources | recovery-site-kit | no | no | no | no | no | no | migration-placeholder |
+| economy-resources | cargo-transfer-kit | no | no | no | no | no | no | migration-placeholder |
+| building | build-placement-kit | yes | yes | no | no | no | no | scaffolded |
+| building | structure-runtime-kit | yes | yes | no | no | no | no | scaffolded |
+| building | station-interaction-kit | no | no | no | no | no | no | migration-placeholder |
+| camera-feedback | camera-state-kit | no | no | no | no | no | no | migration-placeholder |
+| camera-feedback | camera-mode-kit | no | no | no | no | no | no | migration-placeholder |
+| camera-feedback | camera-collision-kit | no | no | no | no | no | no | migration-placeholder |
+| camera-feedback | camera-comfort-kit | no | no | no | no | no | no | migration-placeholder |
+| camera-feedback | camera-sequence-kit | no | no | no | no | no | no | migration-placeholder |
+| camera-feedback | diegetic-feedback-signal-kit | yes | yes | no | no | no | no | scaffolded |
+| render-descriptors | render-descriptor-kit | no | no | no | no | no | no | migration-placeholder |
+| render-descriptors | asset-descriptor-kit | yes | yes | no | no | no | no | scaffolded |
+| render-descriptors | visual-pipeline-kit | no | no | no | no | no | no | migration-placeholder |
+| render-descriptors | render-layer-kit | no | no | no | no | no | no | migration-placeholder |
+| render-descriptors | material-palette-kit | no | no | no | no | no | no | migration-placeholder |
+| render-descriptors | lighting-descriptor-kit | no | no | no | no | no | no | migration-placeholder |
+| render-descriptors | sky-atmosphere-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-canyon-kits | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-biome-fidelity-kits | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-cel-flight-feel-kits | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-render-bundle-kits | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-ui-interaction-kits | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-patch-window-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | canyon-terrain-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | flight-corridor-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | powered-aerial-flight-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-vegetation-placement-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-procedural-object-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-projectile-system-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-combat-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-encounter-director-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-camera-rig-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | aerial-mission-sequence-kit | no | no | no | no | no | no | migration-placeholder |
+| aerial | environment-kits | no | no | no | no | no | no | migration-placeholder |
+| xr | stereoscopic-render-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| xr | hand-input-adapter-kit | no | no | no | no | no | no | migration-placeholder |
+| xr | xr-ray-interaction-kit | no | no | no | no | no | no | migration-placeholder |
+| xr | webxr-hand-adapter-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | openxr-hand-adapter-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | hand-gesture-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | spatial-scene-graph-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | spatial-scene-graph-kit | no | no | no | no | no | no | migration-placeholder |
+| xr | selection-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | selection-domain-service-kit | no | no | no | no | no | no | migration-placeholder |
+| xr | transform-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | transform-domain-service-kit | no | no | no | no | no | no | migration-placeholder |
+| xr | widget-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | widget-domain-service-kit | no | no | no | no | no | no | migration-placeholder |
+| xr | interaction-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | interaction-domain-service-kit | no | no | no | no | no | no | migration-placeholder |
+| xr | persistence-dsk | no | no | no | no | no | no | migration-placeholder |
+| xr | persistence-domain-service-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-social | dialogue-line-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-social | relationship-state-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-social | npc-schedule-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-social | shop-inventory-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-social | quest-thread-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | enemy-object-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | enemy-agent-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | damage-health-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | guard-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | parry-window-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | mana-meter-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | status-effect-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | vegetation-placement-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | route-clearance-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | terrain-ground-contact-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | world-zone-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| rpg-combat | interaction-domain-kit | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-project-kits | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-project-bridge | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-aaa-dsk-bridge | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-dsk-boundaries | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-map-dsk | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-economy-wallet-dsk | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-build-placement-dsk | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-wave-agent-director-dsk | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-combat-resolver-dsk | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-session-facade-dsk | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-render-descriptor-dsk | no | no | no | no | no | no | migration-placeholder |
+| generic-defense | generic-defense-session-command-kit | no | no | no | no | no | no | migration-placeholder |
+| route-extraction | generic-route-cargo-extraction-kit | no | no | no | no | no | no | migration-placeholder |
+| project-deployment | project-batch-deploy-bridge | no | no | no | no | no | no | migration-placeholder |
+| simulation | generic-pressure-loop-kit | no | no | no | no | no | no | migration-placeholder |
+| simulation | generic-resource-loop-kit | yes | yes | yes | yes | yes | yes | official |
+| simulation | generic-action-window-kit | no | no | no | no | no | no | migration-placeholder |
+| simulation | generic-affordance-descriptor-kit | no | no | no | no | no | no | migration-placeholder |

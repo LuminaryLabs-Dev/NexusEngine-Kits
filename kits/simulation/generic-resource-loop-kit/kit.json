@@ -1,0 +1,36 @@
+{
+  "id": "generic-resource-loop-kit",
+  "domain": "simulation",
+  "domainPath": "n:simulation:resource-meter-service",
+  "apiName": "resourceMeter",
+  "kind": "domain-service-kit",
+  "stability": "official",
+  "version": "1.0.0",
+  "factory": "createGenericResourceLoopKit",
+  "entry": "./index.js",
+  "provides": [
+    "n:simulation:resource-meter-service",
+    "resource:loop",
+    "resource:meters",
+    "resource:meter-service",
+    "validation:resources"
+  ],
+  "requires": [],
+  "cdn": {
+    "jsdelivr": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/kits/simulation/generic-resource-loop-kit/index.js"
+  },
+  "source": {
+    "repo": "LuminaryLabs-Agents/NexusEngine-ProtoKits",
+    "commit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
+    "path": "protokits/generic-resource-loop-kit/index.js",
+    "parity": "official"
+  },
+  "runtime": {
+    "api": "resourceMeter",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "realBehavior": true
+}

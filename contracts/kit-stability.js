@@ -1,6 +1,8 @@
 export const KitStability = Object.freeze({
   EXPERIMENTAL: "experimental",
   PLANNED: "planned",
+  PLACEHOLDER: "migration-placeholder",
+  SCAFFOLDED: "scaffolded",
   CANDIDATE: "candidate",
   OFFICIAL: "official",
   LEGACY: "legacy",

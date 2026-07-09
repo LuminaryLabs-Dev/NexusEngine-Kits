@@ -3,7 +3,9 @@ import * as root from "../src/index.js";
 const required = [
   "createNexusEngineKitInstaller",
   "createAllNexusEngineKits",
-  "createCompletionLedgerKit"
+  "createCompletionLedgerKit",
+  "createGenericResourceLoopKit",
+  "getKitProgress"
 ];
 
 for (const name of required) {

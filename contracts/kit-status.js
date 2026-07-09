@@ -1,6 +1,7 @@
 export const KitStatus = Object.freeze({
   PLANNED: "planned",
   PLACEHOLDER: "migration-placeholder",
+  SCAFFOLDED: "scaffolded",
   CANDIDATE: "candidate",
   OFFICIAL: "official",
   DEPRECATED: "deprecated",

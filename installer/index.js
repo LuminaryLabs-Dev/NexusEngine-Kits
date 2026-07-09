@@ -7,9 +7,16 @@ export {
   factoryNameForKit,
   cdnUrlForKit,
   resolveKitManifest,
+  getKitProgress,
   getDomainKitIds,
   getBundleDomainIds
 } from "./kit-catalog.js";
+
+export {
+  REBUILT_FACTORIES,
+  getRebuiltKitFactory,
+  hasRebuiltKitFactory
+} from "./rebuilt-factories.js";
 
 export {
   createManifestRuntimeKit,

@@ -29,4 +29,4 @@ NexusEngine-Kits is the stable first-party kit catalog. It receives only validat
 
 The repository, package, public APIs, tests, documentation, and CDN examples use NexusEngine identity. The runtime resolves from `github:LuminaryLabs-Dev/NexusEngine#main`; old compatibility names are not retained.
 
-Most catalog entries remain placeholders or scaffolds. `completion-ledger-kit` is recorded as candidate behavior. No other kit should be called stable without current readiness evidence.
+Most catalog entries remain placeholders or scaffolds. `generic-resource-loop-kit` is the first official stable behavior, promoted from ProtoKits commit `9da1fdb979a878dff8f50565fec4a4952e58af5e`; `completion-ledger-kit` remains a candidate. Default installer, domain, bundle, and all-kit creation paths expose only official status unless callers explicitly opt into other statuses. `npm run progress` derives the current baseline counts from catalog manifests.

@@ -44,7 +44,9 @@ better domain boundaries
 import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
 const installer = createNexusEngineKitInstaller();
-await installer.installKit(engine, "damage-health-kit");
+await installer.installKit(engine, "generic-resource-loop-kit", {
+  resources: [{ id: "energy", initial: 100 }]
+});
 ```
 
 ### One domain
@@ -77,13 +79,15 @@ import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/Lumin
 
 This is the clean rebuild foundation. The catalog, domains, bundles, installer, contracts, parity tracking, and docs land first so every future rebuilt kit has a stable long-term shape.
 
-Many catalog entries are currently `migration-placeholder` entries. A placeholder is installable as a metadata-only runtime kit so apps, agents, docs, and KitBuilder tooling can resolve the official domain shape before each kit's full behavior is rebuilt against ProtoKits parity.
+Many catalog entries are currently `migration-placeholder` entries. They remain discoverable, but default installer/domain/bundle APIs skip them instead of presenting metadata as behavior. Callers must explicitly opt into non-official statuses or use `createPlaceholderKit()` for migration tooling.
+
+`generic-resource-loop-kit` is the first official kit. Run `npm run progress` for derived completed/remaining counts.
 
 ## Known Limitations
 
 This repo intentionally separates installability from implementation readiness.
 
-A cataloged kit may be metadata-installable before it has real behavior. A domain may install while most of its member kits are still placeholders. A bundle may compose domains before those domains are production-ready.
+A cataloged kit may exist before it has real behavior. Default creation and installation paths include official kits only, so a domain or bundle can report skipped unready members without silently installing empty behavior.
 
 See:
 
@@ -121,7 +125,7 @@ scripts/         catalog, manifest, parity, export, readiness, placeholder, and 
 One kit should be installable.
 One domain should be installable.
 One bundle should be installable.
-The whole catalog should be installable.
+The whole official catalog should be installable; unready entries should fail closed.
 Every install should be inspectable.
 Every stable kit should be CDN-addressable.
 Every rebuilt kit should track ProtoKits parity.

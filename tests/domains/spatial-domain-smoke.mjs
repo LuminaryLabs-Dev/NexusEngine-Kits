@@ -12,11 +12,13 @@ const engine = {
   }
 };
 
-const installer = createNexusEngineKitInstaller();
+const installer = createNexusEngineKitInstaller({ allowStatuses: ["official", "candidate"] });
 const report = await installer.installDomain(engine, "spatial");
 
 assert.equal(report.domainId, "spatial");
 assert.equal(report.results.length, 5);
+assert.equal(report.results.filter((result) => result.installed).length, 1);
+assert.equal(report.results.filter((result) => result.skipped).length, 4);
 assert.equal(engine.kits.some((kit) => kit.id === "completion-ledger-kit"), true);
 assert.equal(typeof engine.n.completionLedger.complete, "function");
 assert.equal(engine.n.completionLedger.complete("spatial-domain-smoke").ok, true);

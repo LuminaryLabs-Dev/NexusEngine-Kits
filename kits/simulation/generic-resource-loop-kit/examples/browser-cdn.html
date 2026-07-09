@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>NexusEngine Resource Meter</title>
+<script type="importmap">
+{
+  "imports": {
+    "nexusengine": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@main/src/index.js"
+  }
+}
+</script>
+<script type="module">
+  import { createRealtimeGame } from "nexusengine";
+  import { createGenericResourceLoopKit } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/kits/simulation/generic-resource-loop-kit/index.js";
+
+  const engine = createRealtimeGame({
+    kits: [createGenericResourceLoopKit({ resources: [{ id: "energy", initial: 80 }] })]
+  });
+  document.body.textContent = JSON.stringify(engine.n.resourceMeter.getSnapshot(), null, 2);
+</script>
+<body></body>
+</html>

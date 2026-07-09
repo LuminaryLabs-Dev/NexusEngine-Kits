@@ -31,7 +31,8 @@ const firstWave = [
   ["building", "build-placement-kit"],
   ["building", "structure-runtime-kit"],
   ["render-descriptors", "asset-descriptor-kit"],
-  ["camera-feedback", "diegetic-feedback-signal-kit"]
+  ["camera-feedback", "diegetic-feedback-signal-kit"],
+  ["simulation", "generic-resource-loop-kit"]
 ];
 
 for (const [domain, kit] of firstWave) {

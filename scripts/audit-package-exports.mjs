@@ -26,7 +26,8 @@ const expected = [
   "./xr-authoring-stack",
   "./lightweight-web-stack",
   "./domain-spatial",
-  "./completion-ledger-kit"
+  "./completion-ledger-kit",
+  "./generic-resource-loop-kit"
 ];
 
 for (const name of expected) {

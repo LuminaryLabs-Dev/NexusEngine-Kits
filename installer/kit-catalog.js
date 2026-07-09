@@ -3,6 +3,15 @@ export const KIT_CATALOG = {
   repository: "LuminaryLabs-Dev/NexusEngine-Kits",
   branch: "main",
   status: "migration-bootstrap",
+  promotion: {
+    baselineCount: 120,
+    approvedAdditionIds: [
+      "kit-registry-domain-kit",
+      "capability-graph-domain-kit",
+      "composition-planning-domain-kit"
+    ],
+    activeCapability: "kit-registry-domain-kit"
+  },
   domains: {
     foundation: ["protokit-core", "seed-kit", "clock-kit", "state-digest-kit", "replay-test-kit", "health-report-kit", "performance-budget-kit"],
     input: ["action-input-kit", "input-context-kit", "input-buffer-kit", "view-rig-kit"],
@@ -31,6 +40,46 @@ export const KIT_CATALOG = {
     "xr-authoring-stack": ["foundation", "input", "spatial", "camera-feedback", "render-descriptors", "xr"]
   }
 };
+
+const SCAFFOLDED_KIT_IDS = new Set([
+  "spatial-interaction-kit",
+  "objective-bridge-kit",
+  "lock-group-kit",
+  "damage-health-kit",
+  "resource-node-kit",
+  "build-placement-kit",
+  "structure-runtime-kit",
+  "asset-descriptor-kit",
+  "diegetic-feedback-signal-kit"
+]);
+
+export const KIT_MANIFEST_OVERRIDES = Object.freeze({
+  "completion-ledger-kit": Object.freeze({
+    kind: "runtime-kit",
+    stability: "candidate",
+    realBehavior: true,
+    factory: "createCompletionLedgerKit",
+    entry: "./kits/spatial/completion-ledger-kit/index.js"
+  }),
+  "generic-resource-loop-kit": Object.freeze({
+    kind: "domain-service-kit",
+    stability: "official",
+    version: "1.0.0",
+    realBehavior: true,
+    factory: "createGenericResourceLoopKit",
+    entry: "./kits/simulation/generic-resource-loop-kit/index.js",
+    domainPath: "n:simulation:resource-meter-service",
+    apiName: "resourceMeter",
+    sourceProtoKit: "LuminaryLabs-Agents/NexusEngine-ProtoKits@9da1fdb979a878dff8f50565fec4a4952e58af5e/generic-resource-loop-kit",
+    provides: [
+      "n:simulation:resource-meter-service",
+      "resource:loop",
+      "resource:meters",
+      "resource:meter-service",
+      "validation:resources"
+    ]
+  })
+});
 
 export function createNexusEngineKitCatalog() {
   return typeof structuredClone === "function"
@@ -78,17 +127,52 @@ export function resolveKitManifest(kitId, catalog = KIT_CATALOG) {
   if (!domain) {
     throw new Error(`Unknown NexusEngine kit: ${kitId}`);
   }
+  const override = KIT_MANIFEST_OVERRIDES[kitId] ?? {};
+  const stability = override.stability ?? (SCAFFOLDED_KIT_IDS.has(kitId) ? "scaffolded" : "migration-placeholder");
   return {
     id: kitId,
     domain,
-    kind: "runtime-kit",
-    stability: "migration-placeholder",
-    factory: factoryNameForKit(kitId),
-    entry: `./kits/${domain}/${kitId}/index.js`,
-    sourceProtoKit: `@luminarylabs/nexusengine-protokits/${kitId}`,
+    kind: override.kind ?? "runtime-kit",
+    stability,
+    version: override.version,
+    realBehavior: Boolean(override.realBehavior),
+    factory: override.factory ?? factoryNameForKit(kitId),
+    entry: override.entry ?? `./kits/${domain}/${kitId}/index.js`,
+    domainPath: override.domainPath,
+    apiName: override.apiName,
+    sourceProtoKit: override.sourceProtoKit ?? `@luminarylabs/nexusengine-protokits/${kitId}`,
     cdn: { jsdelivr: cdnUrlForKit(kitId, { catalog }) },
-    provides: [`kit:${kitId}`, `domain:${domain}`],
+    provides: override.provides ?? [`kit:${kitId}`, `domain:${domain}`],
     requires: []
+  };
+}
+
+export function getKitProgress(catalog = KIT_CATALOG) {
+  const additionIds = new Set(catalog.promotion?.approvedAdditionIds ?? []);
+  const manifests = listKitIds(catalog).map((kitId) => resolveKitManifest(kitId, catalog));
+  const baseline = manifests.filter((manifest) => !additionIds.has(manifest.id));
+  const additions = manifests.filter((manifest) => additionIds.has(manifest.id));
+  const statuses = {};
+  for (const manifest of manifests) {
+    statuses[manifest.stability] = (statuses[manifest.stability] ?? 0) + 1;
+  }
+  const resolvedStatuses = new Set(["official", "deprecated", "archived"]);
+  const baselineResolved = baseline.filter((manifest) => resolvedStatuses.has(manifest.stability)).length;
+  const additionsResolved = additions.filter((manifest) => resolvedStatuses.has(manifest.stability)).length;
+  return {
+    baselineTotal: catalog.promotion?.baselineCount ?? baseline.length,
+    baselineResolved,
+    baselineRemaining: Math.max(0, (catalog.promotion?.baselineCount ?? baseline.length) - baselineResolved),
+    official: statuses.official ?? 0,
+    candidate: statuses.candidate ?? 0,
+    scaffolded: statuses.scaffolded ?? 0,
+    placeholder: statuses["migration-placeholder"] ?? 0,
+    deprecated: statuses.deprecated ?? 0,
+    archived: statuses.archived ?? 0,
+    blocked: statuses.blocked ?? 0,
+    approvedAdditionsTotal: additionIds.size,
+    approvedAdditionsResolved: additionsResolved,
+    activeCapability: catalog.promotion?.activeCapability ?? null
   };
 }
 

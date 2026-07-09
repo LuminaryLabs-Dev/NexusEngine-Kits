@@ -5,19 +5,26 @@ import {
   resolveKitManifest
 } from "./kit-catalog.js";
 import { createManifestRuntimeKit } from "./kit-manifest-loader.js";
+import { getRebuiltKitFactory } from "./rebuilt-factories.js";
 
 export function createDomainKits(domainId, config = {}, options = {}) {
   const catalog = options.catalog ?? KIT_CATALOG;
-  return getDomainKitIds(domainId, catalog).map((kitId) => {
+  const allowedStatuses = new Set(options.allowStatuses ?? ["official"]);
+  return getDomainKitIds(domainId, catalog).flatMap((kitId) => {
     const manifest = resolveKitManifest(kitId, catalog);
-    return createManifestRuntimeKit(manifest, config[kitId] ?? config[camelKey(kitId)] ?? {});
+    if (!allowedStatuses.has(manifest.stability)) return [];
+    const kitConfig = config[kitId] ?? config[camelKey(kitId)] ?? {};
+    const factory = getRebuiltKitFactory(kitId);
+    if (factory) return [factory(kitConfig)];
+    if (manifest.realBehavior) throw new TypeError(`NexusEngine kit ${kitId} is marked real but has no registered factory.`);
+    return [createManifestRuntimeKit(manifest, kitConfig)];
   });
 }
 
 export function createBundleKits(bundleId, config = {}, options = {}) {
   const catalog = options.catalog ?? KIT_CATALOG;
   return getBundleDomainIds(bundleId, catalog).flatMap((domainId) => (
-    createDomainKits(domainId, config[domainId] ?? {}, { catalog })
+    createDomainKits(domainId, config[domainId] ?? {}, { ...options, catalog })
   ));
 }
 

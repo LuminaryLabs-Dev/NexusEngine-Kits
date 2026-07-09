@@ -63,3 +63,9 @@ export {
 export {
   createDiegeticFeedbackSignalKit
 } from "../kits/camera-feedback/diegetic-feedback-signal-kit/index.js";
+
+export {
+  createGenericResourceLoopKit,
+  createResourceMeterKit,
+  createResourceMeterDomainKit
+} from "../kits/simulation/generic-resource-loop-kit/index.js";
