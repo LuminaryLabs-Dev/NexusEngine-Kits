@@ -1,0 +1,40 @@
+{
+  "status": "clean-rebuild-bootstrap",
+  "bundles": [
+    {
+      "id": "all",
+      "path": "bundles/all.js",
+      "domains": ["foundation", "input", "spatial", "progression", "hazard-combat", "economy-resources", "building", "camera-feedback", "render-descriptors", "aerial", "xr", "rpg-social", "rpg-combat", "generic-defense", "route-extraction", "project-deployment", "simulation"]
+    },
+    {
+      "id": "default-game-stack",
+      "path": "bundles/default-game-stack.js",
+      "domains": ["foundation", "input", "spatial", "progression", "camera-feedback", "render-descriptors"]
+    },
+    {
+      "id": "aerial-game-stack",
+      "path": "bundles/aerial-game-stack.js",
+      "domains": ["foundation", "input", "spatial", "camera-feedback", "render-descriptors", "aerial"]
+    },
+    {
+      "id": "rpg-game-stack",
+      "path": "bundles/rpg-game-stack.js",
+      "domains": ["foundation", "input", "spatial", "progression", "hazard-combat", "rpg-social", "rpg-combat"]
+    },
+    {
+      "id": "defense-game-stack",
+      "path": "bundles/defense-game-stack.js",
+      "domains": ["foundation", "input", "spatial", "progression", "hazard-combat", "economy-resources", "building", "generic-defense"]
+    },
+    {
+      "id": "xr-authoring-stack",
+      "path": "bundles/xr-authoring-stack.js",
+      "domains": ["foundation", "input", "spatial", "camera-feedback", "render-descriptors", "xr"]
+    },
+    {
+      "id": "lightweight-web-stack",
+      "path": "bundles/lightweight-web-stack/index.js",
+      "domains": ["foundation", "input", "spatial", "progression"]
+    }
+  ]
+}

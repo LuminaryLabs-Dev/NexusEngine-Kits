@@ -1,0 +1,22 @@
+{
+  "status": "clean-rebuild-bootstrap",
+  "domains": [
+    { "id": "foundation", "label": "Foundation", "kind": "foundation", "path": "domains/foundation/index.js" },
+    { "id": "input", "label": "Input", "kind": "runtime-domain", "path": "domains/input/index.js" },
+    { "id": "spatial", "label": "Spatial", "kind": "runtime-domain", "path": "domains/spatial/index.js" },
+    { "id": "progression", "label": "Progression", "kind": "runtime-domain", "path": "domains/progression/index.js" },
+    { "id": "hazard-combat", "label": "Hazard And Combat", "kind": "runtime-domain", "path": "domains/hazard-combat/index.js" },
+    { "id": "economy-resources", "label": "Economy And Resources", "kind": "simulation-domain", "path": "domains/economy-resources/index.js" },
+    { "id": "building", "label": "Building", "kind": "simulation-domain", "path": "domains/building/index.js" },
+    { "id": "camera-feedback", "label": "Camera And Feedback", "kind": "presentation-domain", "path": "domains/camera-feedback/index.js" },
+    { "id": "render-descriptors", "label": "Render Descriptors", "kind": "descriptor-domain", "path": "domains/render-descriptors/index.js" },
+    { "id": "aerial", "label": "Aerial", "kind": "game-family-domain", "path": "domains/aerial/index.js" },
+    { "id": "xr", "label": "XR", "kind": "adapter-domain", "path": "domains/xr/index.js" },
+    { "id": "rpg-social", "label": "RPG Social", "kind": "game-family-domain", "path": "domains/rpg-social/index.js" },
+    { "id": "rpg-combat", "label": "RPG Combat", "kind": "game-family-domain", "path": "domains/rpg-combat/index.js" },
+    { "id": "generic-defense", "label": "Generic Defense", "kind": "game-family-domain", "path": "domains/generic-defense/index.js" },
+    { "id": "route-extraction", "label": "Route Extraction", "kind": "game-family-domain", "path": "domains/route-extraction/index.js" },
+    { "id": "project-deployment", "label": "Project Deployment", "kind": "bridge-domain", "path": "domains/project-deployment/index.js" },
+    { "id": "simulation", "label": "Simulation", "kind": "simulation-domain", "path": "domains/simulation/index.js" }
+  ]
+}

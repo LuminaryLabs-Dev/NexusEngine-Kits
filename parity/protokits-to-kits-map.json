@@ -1,0 +1,32 @@
+{
+  "completion-ledger-kit": {
+    "source": "NexusRealtime-ProtoKits/protokits/completion-ledger-kit",
+    "target": "kits/spatial/completion-ledger-kit",
+    "targetExport": "@luminarylabs/nexusrealtime-kits/completion-ledger-kit",
+    "strategy": "clean-rebuild"
+  },
+  "spatial-interaction-kit": {
+    "source": "NexusRealtime-ProtoKits/protokits/spatial-interaction-kit",
+    "target": "kits/spatial/spatial-interaction-kit",
+    "targetExport": "@luminarylabs/nexusrealtime-kits/spatial-interaction-kit",
+    "strategy": "clean-rebuild"
+  },
+  "objective-bridge-kit": {
+    "source": "NexusRealtime-ProtoKits/protokits/objective-bridge-kit",
+    "target": "kits/progression/objective-bridge-kit",
+    "targetExport": "@luminarylabs/nexusrealtime-kits/objective-bridge-kit",
+    "strategy": "clean-rebuild"
+  },
+  "lock-group-kit": {
+    "source": "NexusRealtime-ProtoKits/protokits/lock-group-kit",
+    "target": "kits/progression/lock-group-kit",
+    "targetExport": "@luminarylabs/nexusrealtime-kits/lock-group-kit",
+    "strategy": "clean-rebuild"
+  },
+  "damage-health-kit": {
+    "source": "NexusRealtime-ProtoKits/protokits/damage-health-kit",
+    "target": "kits/hazard-combat/damage-health-kit",
+    "targetExport": "@luminarylabs/nexusrealtime-kits/damage-health-kit",
+    "strategy": "clean-rebuild"
+  }
+}

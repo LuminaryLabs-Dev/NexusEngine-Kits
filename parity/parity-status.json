@@ -1,0 +1,14 @@
+{
+  "status": "clean-rebuild-bootstrap",
+  "kits": {
+    "completion-ledger-kit": { "status": "candidate", "target": "kits/spatial/completion-ledger-kit", "realBehavior": true, "next": "domain smoke and full ProtoKits comparison" },
+    "spatial-interaction-kit": { "status": "scaffolded", "target": "kits/spatial/spatial-interaction-kit" },
+    "objective-bridge-kit": { "status": "scaffolded", "target": "kits/progression/objective-bridge-kit" },
+    "lock-group-kit": { "status": "scaffolded", "target": "kits/progression/lock-group-kit" },
+    "resource-node-kit": { "status": "scaffolded", "target": "kits/economy-resources/resource-node-kit" },
+    "build-placement-kit": { "status": "scaffolded", "target": "kits/building/build-placement-kit" },
+    "structure-runtime-kit": { "status": "scaffolded", "target": "kits/building/structure-runtime-kit" },
+    "asset-descriptor-kit": { "status": "scaffolded", "target": "kits/render-descriptors/asset-descriptor-kit" },
+    "diegetic-feedback-signal-kit": { "status": "scaffolded", "target": "kits/camera-feedback/diegetic-feedback-signal-kit" }
+  }
+}
