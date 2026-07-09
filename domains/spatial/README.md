@@ -19,7 +19,7 @@ The domain is installable. Most members are still metadata-backed placeholders. 
 ## Install
 
 ```js
-import { createSpatialDomainKits } from "@luminarylabs/nexusrealtime-kits/domain-spatial";
+import { createSpatialDomainKits } from "@luminarylabs/nexusengine-kits/domain-spatial";
 
 const kits = createSpatialDomainKits();
 ```
@@ -27,7 +27,7 @@ const kits = createSpatialDomainKits();
 ## CDN
 
 ```js
-import { createSpatialDomainKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/domains/spatial/index.js";
+import { createSpatialDomainKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/domains/spatial/index.js";
 ```
 
 ## Next validation

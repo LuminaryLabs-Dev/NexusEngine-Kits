@@ -4,7 +4,7 @@ The installer API resolves and installs kits, domains, bundles, and the full cat
 
 ## Exports
 
-- `createNexusRealtimeKitInstaller`
+- `createNexusEngineKitInstaller`
 - `installKit`
 - `installDomain`
 - `installBundle`

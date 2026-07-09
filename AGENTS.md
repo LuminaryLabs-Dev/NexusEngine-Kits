@@ -1,8 +1,8 @@
 # AGENTS.md
 
-This file defines how agents work inside NexusRealtime Kits.
+This file defines how agents work inside NexusEngine Kits.
 
-NexusRealtime Kits is the official first-party plugin catalog. It receives stable, reusable capabilities from `NexusRealtime-ProtoKits` and publishes them as individually installable, domain-installable, bundle-installable, CDN-addressable kits.
+NexusEngine Kits is the official first-party plugin catalog. It receives stable, reusable capabilities from `NexusEngine-ProtoKits` and publishes them as individually installable, domain-installable, bundle-installable, CDN-addressable kits.
 
 ## Prime Directive
 
@@ -23,18 +23,18 @@ Validate before marking official.
 
 ## Repo Boundaries
 
-Do not change `LuminaryLabs-Dev/NexusRealtime` from this repo's work.
+Do not change `LuminaryLabs-Dev/NexusEngine` from this repo's work.
 
 Use this split:
 
 ```txt
-NexusRealtime
+NexusEngine
   runtime rail and contracts
 
-NexusRealtime-Kits
+NexusEngine-Kits
   official first-party kit catalog
 
-NexusRealtime-ProtoKits
+NexusEngine-ProtoKits
   incubation and experiments
 ```
 
@@ -81,7 +81,7 @@ The installer may resolve and install:
 - all catalog kits
 - a direct runtime kit object
 
-The installer must not own gameplay behavior. It resolves, creates, validates, and installs kits into a NexusRealtime engine.
+The installer must not own gameplay behavior. It resolves, creates, validates, and installs kits into a NexusEngine engine.
 
 ## Naming Grammar
 
@@ -113,4 +113,4 @@ Before reporting completion, say:
 - which kits/domains changed
 - whether entries are placeholders or full behavior migrations
 - what validation ran
-- whether NexusRealtime runtime repo was left untouched
+- whether NexusEngine runtime repo was left untouched

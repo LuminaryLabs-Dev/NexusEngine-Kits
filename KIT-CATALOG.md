@@ -1,6 +1,6 @@
 # KIT-CATALOG.md
 
-NexusRealtime Kits is organized as an official first-party catalog.
+NexusEngine Kits is organized as an official first-party catalog.
 
 The catalog is intentionally domain-based:
 
@@ -61,8 +61,8 @@ The bootstrap catalog starts with placeholder entries so the installer, package 
 Each catalog kit should eventually trace back to either:
 
 ```txt
-NexusRealtime-ProtoKits
-NexusRealtime runtime contracts
+NexusEngine-ProtoKits
+NexusEngine runtime contracts
 new official kit work created directly here
 ```
 

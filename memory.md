@@ -27,6 +27,6 @@ NexusEngine-Kits is the stable first-party kit catalog. It receives only validat
 
 ## Current Truth
 
-The repository and remote are named NexusEngine-Kits, but package names and substantial documentation still use NexusRealtime naming. Treat that as known migration debt, not evidence that the repository is a different product.
+The repository, package, public APIs, tests, documentation, and CDN examples use NexusEngine identity. The runtime resolves from `github:LuminaryLabs-Dev/NexusEngine#main`; old compatibility names are not retained.
 
 Most catalog entries remain placeholders or scaffolds. `completion-ledger-kit` is recorded as candidate behavior. No other kit should be called stable without current readiness evidence.

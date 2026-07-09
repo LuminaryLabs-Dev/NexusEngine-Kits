@@ -1,6 +1,6 @@
 # Known Limitations
 
-NexusRealtime Kits is a clean rebuild foundation, not a complete game stack.
+NexusEngine Kits is a clean rebuild foundation, not a complete game stack.
 
 ## What works today
 

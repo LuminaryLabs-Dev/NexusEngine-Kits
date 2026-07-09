@@ -8,10 +8,10 @@
   "provides": ["kit:completion-ledger-kit", "domain:spatial"],
   "requires": [],
   "cdn": {
-    "jsdelivr": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/kits/spatial/completion-ledger-kit/index.js"
+    "jsdelivr": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/kits/spatial/completion-ledger-kit/index.js"
   },
   "source": {
-    "repo": "LuminaryLabs-Agents/NexusRealtime-ProtoKits",
+    "repo": "LuminaryLabs-Agents/NexusEngine-ProtoKits",
     "path": "protokits/completion-ledger-kit/index.js",
     "parity": "candidate"
   },

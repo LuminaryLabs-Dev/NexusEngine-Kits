@@ -1,6 +1,6 @@
 # Rebuild, Not Migration
 
-`NexusRealtime-Kits` is not a direct file migration from ProtoKits.
+`NexusEngine-Kits` is not a direct file migration from ProtoKits.
 
 It is a clean official rebuild that runs beside ProtoKits.
 

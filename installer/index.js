@@ -1,6 +1,6 @@
 export {
   KIT_CATALOG,
-  createNexusRealtimeKitCatalog,
+  createNexusEngineKitCatalog,
   listDomainIds,
   listKitIds,
   findKitDomain,
@@ -24,15 +24,15 @@ export {
 export {
   createDomainKits,
   createBundleKits,
-  createAllNexusRealtimeKits
+  createAllNexusEngineKits
 } from "./domain-installer.js";
 
 export {
-  createNexusRealtimeKitInstaller
+  createNexusEngineKitInstaller
 } from "./kit-installer.js";
 
 export {
-  createNexusRealtimeKitInstaller as createKitInstaller
+  createNexusEngineKitInstaller as createKitInstaller
 } from "./create-kit-installer.js";
 
 export {

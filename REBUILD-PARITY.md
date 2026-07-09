@@ -1,6 +1,6 @@
 # Rebuild Parity
 
-This repo is a clean rebuild beside `NexusRealtime-ProtoKits`, not a direct migration.
+This repo is a clean rebuild beside `NexusEngine-ProtoKits`, not a direct migration.
 
 Parity means:
 

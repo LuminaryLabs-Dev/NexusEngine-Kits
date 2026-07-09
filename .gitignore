@@ -1,0 +1,3 @@
+node_modules/
+audit/reports/*
+!audit/reports/README.md

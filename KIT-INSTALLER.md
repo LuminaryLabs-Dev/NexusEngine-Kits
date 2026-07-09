@@ -1,8 +1,8 @@
 # KIT-INSTALLER.md
 
-`NexusRealtime-KitInstaller` lives in this repo under `installer/`.
+`NexusEngine-KitInstaller` lives in this repo under `installer/`.
 
-It is not a runtime engine. It resolves kits and installs them into a NexusRealtime engine.
+It is not a runtime engine. It resolves kits and installs them into a NexusEngine engine.
 
 ## Responsibilities
 
@@ -20,9 +20,9 @@ return install reports
 ## Basic Use
 
 ```js
-import { createNexusRealtimeKitInstaller } from "@luminarylabs/nexusrealtime-kits/installer";
+import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
-const installer = createNexusRealtimeKitInstaller();
+const installer = createNexusEngineKitInstaller();
 await installer.installKit(engine, "damage-health-kit");
 await installer.installDomain(engine, "hazard-combat");
 await installer.installBundle(engine, "default-game-stack");
@@ -32,7 +32,7 @@ await installer.installAll(engine);
 ## CDN Use
 
 ```js
-import { createNexusRealtimeKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/installer/index.js";
+import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
 ```
 
 ## Placeholder Behavior

@@ -4,9 +4,9 @@ Start here before adding, promoting, or refining a kit.
 
 ## Repo Purpose
 
-`NexusRealtime-Kits` is the official first-party kit catalog for NexusRealtime.
+`NexusEngine-Kits` is the official first-party kit catalog for NexusEngine.
 
-It is not the experimental repo. That remains `NexusRealtime-ProtoKits`.
+It is not the experimental repo. That remains `NexusEngine-ProtoKits`.
 
 ## Install Modes
 

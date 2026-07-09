@@ -4,7 +4,7 @@ This doc mirrors the root `KNOWN-LIMITATIONS.md` for readers who start inside `d
 
 ## Current truth
 
-NexusRealtime Kits is a clean rebuild foundation. It is not a complete production game stack.
+NexusEngine Kits is a clean rebuild foundation. It is not a complete production game stack.
 
 ## Real today
 

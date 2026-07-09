@@ -1,13 +1,13 @@
 import assert from "node:assert/strict";
 import { createAudit, writeText } from "./audit-utils.mjs";
 import { createCompletionLedgerKit } from "../kits/spatial/completion-ledger-kit/index.js";
-import { createNexusRealtimeKitInstaller } from "../installer/index.js";
+import { createNexusEngineKitInstaller } from "../installer/index.js";
 
 const audit = createAudit("Completion Ledger Behavior Audit");
 
 try {
   const engine = { kits: [], n: {}, tickCount: 42, installKit(kit) { this.kits.push(kit); kit.initWorld?.({ engine: this, world: {}, kit }); return kit; } };
-  const installer = createNexusRealtimeKitInstaller();
+  const installer = createNexusEngineKitInstaller();
   const report = await installer.installKit(engine, "completion-ledger-kit");
   assert.equal(report.installed, true);
   assert.equal(engine.kits[0].metadata.realBehavior, true);
@@ -25,7 +25,7 @@ try {
   assert.equal(engine.n.completionLedger.has("alpha"), true);
 
   const direct = createCompletionLedgerKit();
-  direct.initWorld({ engine: { n: {}, nexusRealtimeKitInstallReports: [] }, world: {} });
+  direct.initWorld({ engine: { n: {}, nexusEngineKitInstallReports: [] }, world: {} });
   assert.equal(typeof direct.snapshot, "function");
 } catch (error) {
   audit.error(error?.message ?? String(error));

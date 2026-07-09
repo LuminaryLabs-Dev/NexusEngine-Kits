@@ -35,13 +35,13 @@ When installed, the kit exposes completion ledger methods for complete, has, cou
 ## Install one kit
 
 ```js
-import { createCompletionLedgerKit } from "@luminarylabs/nexusrealtime-kits/completion-ledger-kit";
+import { createCompletionLedgerKit } from "@luminarylabs/nexusengine-kits/completion-ledger-kit";
 ```
 
 ## CDN
 
 ```js
-import { createCompletionLedgerKit } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/kits/spatial/completion-ledger-kit/index.js";
+import { createCompletionLedgerKit } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/kits/spatial/completion-ledger-kit/index.js";
 ```
 
 ## Smoke

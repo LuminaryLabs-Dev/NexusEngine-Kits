@@ -1,8 +1,8 @@
 {
-  "name": "@luminarylabs/nexusrealtime-kits",
+  "name": "@luminarylabs/nexusengine-kits",
   "version": "0.0.1",
   "type": "module",
-  "description": "Official first-party kit catalog, domain bundles, and installer for NexusRealtime.",
+  "description": "Official first-party kit catalog, domain bundles, and installer for NexusEngine.",
   "exports": {
     ".": "./src/index.js",
     "./installer": "./installer/index.js",
@@ -43,7 +43,10 @@
     "./kits/*": "./kits/*/index.js"
   },
   "peerDependencies": {
-    "nexusrealtime": "*"
+    "nexusengine": "github:LuminaryLabs-Dev/NexusEngine#main"
+  },
+  "devDependencies": {
+    "nexusengine": "github:LuminaryLabs-Dev/NexusEngine#main"
   },
   "files": [
     "src",

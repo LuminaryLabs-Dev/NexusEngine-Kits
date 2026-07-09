@@ -3,16 +3,16 @@
 Use the installer when the kit may be resolved by catalog ID.
 
 ```js
-import { createNexusRealtimeKitInstaller } from "@luminarylabs/nexusrealtime-kits/installer";
+import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
-const installer = createNexusRealtimeKitInstaller();
+const installer = createNexusEngineKitInstaller();
 await installer.installKit(engine, "completion-ledger-kit");
 ```
 
 Use CDN when working from browser-hosted experiments:
 
 ```js
-import { createNexusRealtimeKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/installer/index.js";
+import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
 ```
 
 During the bootstrap phase, unresolved behavior installs as a metadata-only runtime kit. Full kit behavior is migrated from ProtoKits over time.

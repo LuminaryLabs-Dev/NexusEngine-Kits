@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { createCompletionLedgerKit } from "./index.js";
 
-const engine = { n: {}, tickCount: 7, nexusRealtimeKitInstallReports: [] };
+const engine = { n: {}, tickCount: 7, nexusEngineKitInstallReports: [] };
 const kit = createCompletionLedgerKit();
 
 assert.equal(kit.id, "completion-ledger-kit");

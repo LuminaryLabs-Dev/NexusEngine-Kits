@@ -1,6 +1,6 @@
 # AAA Readiness
 
-NexusRealtime Kits is not yet a complete AAA game stack.
+NexusEngine Kits is not yet a complete AAA game stack.
 
 It is a clean rebuild foundation for reaching AAA-scale kit composition.
 

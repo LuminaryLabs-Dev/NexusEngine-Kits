@@ -21,7 +21,7 @@ export function createBundleKits(bundleId, config = {}, options = {}) {
   ));
 }
 
-export function createAllNexusRealtimeKits(config = {}, options = {}) {
+export function createAllNexusEngineKits(config = {}, options = {}) {
   return createBundleKits("all", config, options);
 }
 

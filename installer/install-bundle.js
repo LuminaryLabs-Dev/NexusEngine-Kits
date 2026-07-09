@@ -1,7 +1,7 @@
-import { createNexusRealtimeKitInstaller } from "./kit-installer.js";
+import { createNexusEngineKitInstaller } from "./kit-installer.js";
 
 export async function installBundleKits(engine, bundleId, config = {}, options = {}) {
-  const kitInstaller = createNexusRealtimeKitInstaller(options);
+  const kitInstaller = createNexusEngineKitInstaller(options);
   return kitInstaller.installBundle(engine, bundleId, config);
 }
 

@@ -1,3 +1,3 @@
 export {
-  createAllNexusRealtimeKits
+  createAllNexusEngineKits
 } from "../installer/domain-installer.js";

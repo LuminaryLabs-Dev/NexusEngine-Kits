@@ -16,14 +16,14 @@ const REBUILT_FACTORIES = {
 
 function installIntoEngine(engine, kit, options = {}) {
   if (!engine || typeof engine !== "object") {
-    throw new TypeError("installIntoEngine expects a NexusRealtime engine object.");
+    throw new TypeError("installIntoEngine expects a NexusEngine engine object.");
   }
 
-  if (!engine.__nexusRealtimeKitsInstalled) {
-    engine.__nexusRealtimeKitsInstalled = new Set();
+  if (!engine.__nexusEngineKitsInstalled) {
+    engine.__nexusEngineKitsInstalled = new Set();
   }
 
-  if (kit.id && engine.__nexusRealtimeKitsInstalled.has(kit.id) && options.allowDuplicateKitIds !== true) {
+  if (kit.id && engine.__nexusEngineKitsInstalled.has(kit.id) && options.allowDuplicateKitIds !== true) {
     return { kit, installed: false, duplicate: true };
   }
 
@@ -32,7 +32,7 @@ function installIntoEngine(engine, kit, options = {}) {
     : fallbackInstall(engine, kit);
 
   if (kit.id) {
-    engine.__nexusRealtimeKitsInstalled.add(kit.id);
+    engine.__nexusEngineKitsInstalled.add(kit.id);
   }
 
   return { kit: installed ?? kit, installed: true, duplicate: false };
@@ -47,7 +47,7 @@ function fallbackInstall(engine, kit) {
   return kit;
 }
 
-export function createNexusRealtimeKitInstaller(options = {}) {
+export function createNexusEngineKitInstaller(options = {}) {
   const catalog = options.catalog ?? KIT_CATALOG;
 
   async function createKit(kitId, config = {}) {

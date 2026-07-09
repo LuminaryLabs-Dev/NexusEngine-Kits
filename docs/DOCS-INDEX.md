@@ -1,6 +1,6 @@
 # Docs Index
 
-This index tracks the documentation layer for NexusRealtime Kits.
+This index tracks the documentation layer for NexusEngine Kits.
 
 ## Root docs
 

@@ -1,4 +1,5 @@
 import { resolveKitManifest } from "../../../installer/kit-catalog.js";
+import { defineEvent } from "nexusengine";
 
 export const kitId = "completion-ledger-kit";
 export const kitManifest = resolveKitManifest(kitId);
@@ -139,9 +140,9 @@ export function createCompletionLedgerKit(config = {}) {
     components: {},
     resources: {},
     events: {
-      CompletionLedgerCompleted: "completion-ledger-completed",
-      CompletionLedgerReset: "completion-ledger-reset",
-      CompletionLedgerRejected: "completion-ledger-rejected"
+      CompletionLedgerCompleted: defineEvent("completion-ledger-completed"),
+      CompletionLedgerReset: defineEvent("completion-ledger-reset"),
+      CompletionLedgerRejected: defineEvent("completion-ledger-rejected")
     },
     systems: [],
     requires: [],
@@ -159,8 +160,8 @@ export function createCompletionLedgerKit(config = {}) {
       if (!engine.n) engine.n = {};
       engine.n.completionLedger = api;
       engine.completionLedger = api;
-      if (!Array.isArray(engine.nexusRealtimeKitInstallReports)) engine.nexusRealtimeKitInstallReports = [];
-      engine.nexusRealtimeKitInstallReports.push({
+      if (!Array.isArray(engine.nexusEngineKitInstallReports)) engine.nexusEngineKitInstallReports = [];
+      engine.nexusEngineKitInstallReports.push({
         id: kitId,
         domain: "spatial",
         stability: "candidate",

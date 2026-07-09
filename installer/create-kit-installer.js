@@ -1,4 +1,4 @@
 export {
-  createNexusRealtimeKitInstaller,
-  createNexusRealtimeKitInstaller as createKitInstaller
+  createNexusEngineKitInstaller,
+  createNexusEngineKitInstaller as createKitInstaller
 } from "./kit-installer.js";

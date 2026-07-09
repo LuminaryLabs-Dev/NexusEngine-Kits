@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { createNexusRealtimeKitInstaller } from "../../installer/index.js";
+import { createNexusEngineKitInstaller } from "../../installer/index.js";
 
 const engine = {
   kits: [],
@@ -12,7 +12,7 @@ const engine = {
   }
 };
 
-const installer = createNexusRealtimeKitInstaller();
+const installer = createNexusEngineKitInstaller();
 const report = await installer.installDomain(engine, "spatial");
 
 assert.equal(report.domainId, "spatial");

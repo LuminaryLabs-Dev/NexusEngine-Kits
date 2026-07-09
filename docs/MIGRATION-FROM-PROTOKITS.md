@@ -1,6 +1,6 @@
 # Migration From ProtoKits
 
-This repo receives stable kits from `LuminaryLabs-Agents/NexusRealtime-ProtoKits`.
+This repo receives stable kits from `LuminaryLabs-Agents/NexusEngine-ProtoKits`.
 
 ## Migration Ladder
 
@@ -8,8 +8,8 @@ This repo receives stable kits from `LuminaryLabs-Agents/NexusRealtime-ProtoKits
 Experiment
 -> ProtoKit
 -> validated ProtoKit
--> NexusRealtime-Kits official kit
--> NexusRealtime runtime primitive only if the runtime contract must change
+-> NexusEngine-Kits official kit
+-> NexusEngine runtime primitive only if the runtime contract must change
 ```
 
 ## What Moves First
@@ -71,6 +71,6 @@ A kit can move here when it is:
 Do not immediately delete ProtoKit paths. ProtoKits should eventually re-export or document replacements:
 
 ```txt
-Old: @luminarylabs/nexusrealtime-protokits/damage-health-kit
-New: @luminarylabs/nexusrealtime-kits/damage-health-kit
+Old: @luminarylabs/nexusengine-protokits/damage-health-kit
+New: @luminarylabs/nexusengine-kits/damage-health-kit
 ```

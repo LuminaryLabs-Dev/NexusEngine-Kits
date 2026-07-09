@@ -1,6 +1,6 @@
 export const KIT_CATALOG = {
-  name: "@luminarylabs/nexusrealtime-kits",
-  repository: "LuminaryLabs-Dev/NexusRealitime-Kits",
+  name: "@luminarylabs/nexusengine-kits",
+  repository: "LuminaryLabs-Dev/NexusEngine-Kits",
   branch: "main",
   status: "migration-bootstrap",
   domains: {
@@ -32,7 +32,7 @@ export const KIT_CATALOG = {
   }
 };
 
-export function createNexusRealtimeKitCatalog() {
+export function createNexusEngineKitCatalog() {
   return typeof structuredClone === "function"
     ? structuredClone(KIT_CATALOG)
     : JSON.parse(JSON.stringify(KIT_CATALOG));
@@ -76,7 +76,7 @@ export function cdnUrlForKit(kitId, options = {}) {
 export function resolveKitManifest(kitId, catalog = KIT_CATALOG) {
   const domain = findKitDomain(kitId, catalog);
   if (!domain) {
-    throw new Error(`Unknown NexusRealtime kit: ${kitId}`);
+    throw new Error(`Unknown NexusEngine kit: ${kitId}`);
   }
   return {
     id: kitId,
@@ -85,7 +85,7 @@ export function resolveKitManifest(kitId, catalog = KIT_CATALOG) {
     stability: "migration-placeholder",
     factory: factoryNameForKit(kitId),
     entry: `./kits/${domain}/${kitId}/index.js`,
-    sourceProtoKit: `@luminarylabs/nexusrealtime-protokits/${kitId}`,
+    sourceProtoKit: `@luminarylabs/nexusengine-protokits/${kitId}`,
     cdn: { jsdelivr: cdnUrlForKit(kitId, { catalog }) },
     provides: [`kit:${kitId}`, `domain:${domain}`],
     requires: []
@@ -94,12 +94,12 @@ export function resolveKitManifest(kitId, catalog = KIT_CATALOG) {
 
 export function getDomainKitIds(domainId, catalog = KIT_CATALOG) {
   const kitIds = catalog.domains?.[domainId];
-  if (!kitIds) throw new Error(`Unknown NexusRealtime kit domain: ${domainId}`);
+  if (!kitIds) throw new Error(`Unknown NexusEngine kit domain: ${domainId}`);
   return kitIds.slice();
 }
 
 export function getBundleDomainIds(bundleId, catalog = KIT_CATALOG) {
   const domains = catalog.bundles?.[bundleId];
-  if (!domains) throw new Error(`Unknown NexusRealtime kit bundle: ${bundleId}`);
+  if (!domains) throw new Error(`Unknown NexusEngine kit bundle: ${bundleId}`);
   return domains.slice();
 }

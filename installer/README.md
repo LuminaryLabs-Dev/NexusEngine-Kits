@@ -1,13 +1,13 @@
 # Installer
 
-The installer resolves catalog entries into NexusRealtime runtime kits.
+The installer resolves catalog entries into NexusEngine runtime kits.
 
 ## API
 
 ```js
-import { createNexusRealtimeKitInstaller } from "./index.js";
+import { createNexusEngineKitInstaller } from "./index.js";
 
-const installer = createNexusRealtimeKitInstaller();
+const installer = createNexusEngineKitInstaller();
 await installer.installKit(engine, "action-input-kit");
 await installer.installDomain(engine, "input");
 await installer.installBundle(engine, "default-game-stack");

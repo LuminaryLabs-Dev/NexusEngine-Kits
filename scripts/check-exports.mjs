@@ -1,8 +1,8 @@
 import * as root from "../src/index.js";
 
 const required = [
-  "createNexusRealtimeKitInstaller",
-  "createAllNexusRealtimeKits",
+  "createNexusEngineKitInstaller",
+  "createAllNexusEngineKits",
   "createCompletionLedgerKit"
 ];
 

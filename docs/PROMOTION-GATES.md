@@ -1,6 +1,6 @@
 # Promotion Gates
 
-A ProtoKit can become an official NexusRealtime Kit only when it passes these gates.
+A ProtoKit can become an official NexusEngine Kit only when it passes these gates.
 
 ## Required Gates
 

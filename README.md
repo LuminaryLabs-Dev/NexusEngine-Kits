@@ -1,21 +1,21 @@
-# NexusRealtime Kits
+# NexusEngine Kits
 
-NexusRealtime Kits is the official first-party plugin catalog for NexusRealtime.
+NexusEngine Kits is the official first-party plugin catalog for NexusEngine.
 
-This repo is a clean rebuild that runs alongside `NexusRealtime-ProtoKits`. ProtoKits remains the incubation/reference repo. Kits mirrors the useful capability coverage, but rebuilds it with cleaner domain boundaries, manifests, tests, install reports, CDN paths, and parity tracking.
+This repo is a clean rebuild that runs alongside `NexusEngine-ProtoKits`. ProtoKits remains the incubation/reference repo. Kits mirrors the useful capability coverage, but rebuilds it with cleaner domain boundaries, manifests, tests, install reports, CDN paths, and parity tracking.
 
-> Note: this repository is currently named `NexusRealitime-Kits` on GitHub. The package identity and docs use `NexusRealtime-Kits` / `@luminarylabs/nexusrealtime-kits` as the intended public kit catalog name.
+The repository, package, public APIs, and documentation use the canonical NexusEngine identity.
 
 ## Role
 
 ```txt
-NexusRealtime
+NexusEngine
   runs kits and owns runtime contracts
 
-NexusRealtime-Kits
+NexusEngine-Kits
   clean official rebuild of first-party kits, domains, bundles, adapters, presets, and installer
 
-NexusRealtime-ProtoKits
+NexusEngine-ProtoKits
   incubation/reference repo for experimental kits and parity source behavior
 ```
 
@@ -41,16 +41,16 @@ better domain boundaries
 ### One kit
 
 ```js
-import { createNexusRealtimeKitInstaller } from "@luminarylabs/nexusrealtime-kits/installer";
+import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
-const installer = createNexusRealtimeKitInstaller();
+const installer = createNexusEngineKitInstaller();
 await installer.installKit(engine, "damage-health-kit");
 ```
 
 ### One domain
 
 ```js
-import { createHazardCombatDomainKits } from "@luminarylabs/nexusrealtime-kits/domain-hazard-combat";
+import { createHazardCombatDomainKits } from "@luminarylabs/nexusengine-kits/domain-hazard-combat";
 
 const engine = createRealtimeGame({
   kits: createHazardCombatDomainKits()
@@ -60,17 +60,17 @@ const engine = createRealtimeGame({
 ### Whole catalog
 
 ```js
-import { createAllNexusRealtimeKits } from "@luminarylabs/nexusrealtime-kits/all";
+import { createAllNexusEngineKits } from "@luminarylabs/nexusengine-kits/all";
 
 const engine = createRealtimeGame({
-  kits: createAllNexusRealtimeKits()
+  kits: createAllNexusEngineKits()
 });
 ```
 
 ### CDN
 
 ```js
-import { createNexusRealtimeKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/installer/index.js";
+import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
 ```
 
 ## Current Status

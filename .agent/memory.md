@@ -5,4 +5,4 @@
 - Kits owns stable, reusable, installable behavior and its package/domain/bundle surfaces.
 - Renderer or host behavior requires explicit adapter classification.
 - Promotion evidence must include source lineage and a matching LuminaryLabs audit.
-- Existing NexusRealtime names in package/docs are migration debt under the current NexusEngine repository identity.
+- The package, APIs, tests, docs, parity records, and CDN examples use NexusEngine identity only.

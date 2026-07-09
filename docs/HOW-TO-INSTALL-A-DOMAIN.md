@@ -5,7 +5,7 @@ A domain is an install group for related kits.
 ## Package import
 
 ```js
-import { createSpatialDomainKits } from "@luminarylabs/nexusrealtime-kits/domain-spatial";
+import { createSpatialDomainKits } from "@luminarylabs/nexusengine-kits/domain-spatial";
 
 const kits = createSpatialDomainKits();
 ```
@@ -13,13 +13,13 @@ const kits = createSpatialDomainKits();
 ## CDN import
 
 ```js
-import { createSpatialDomainKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/domains/spatial/index.js";
+import { createSpatialDomainKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/domains/spatial/index.js";
 ```
 
 ## Installer-driven domain install
 
 ```js
-const installer = createNexusRealtimeKitInstaller();
+const installer = createNexusEngineKitInstaller();
 await installer.installDomain(engine, "spatial");
 ```
 

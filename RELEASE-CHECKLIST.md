@@ -1,6 +1,6 @@
 # Release Checklist
 
-Use this before tagging or publishing NexusRealtime Kits.
+Use this before tagging or publishing NexusEngine Kits.
 
 ## Required checks
 

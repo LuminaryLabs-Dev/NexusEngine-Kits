@@ -1,17 +1,17 @@
 {
-  "sourceRepository": "LuminaryLabs-Agents/NexusRealtime-ProtoKits",
-  "targetRepository": "LuminaryLabs-Dev/NexusRealitime-Kits",
+  "sourceRepository": "LuminaryLabs-Agents/NexusEngine-ProtoKits",
+  "targetRepository": "LuminaryLabs-Dev/NexusEngine-Kits",
   "strategy": "clean-rebuild",
   "exports": {
-    "completion-ledger-kit": "@luminarylabs/nexusrealtime-protokits/completion-ledger-kit",
-    "spatial-interaction-kit": "@luminarylabs/nexusrealtime-protokits/spatial-interaction-kit",
-    "objective-bridge-kit": "@luminarylabs/nexusrealtime-protokits/objective-bridge-kit",
-    "lock-group-kit": "@luminarylabs/nexusrealtime-protokits/lock-group-kit",
-    "damage-health-kit": "@luminarylabs/nexusrealtime-protokits/damage-health-kit",
-    "resource-node-kit": "@luminarylabs/nexusrealtime-protokits/resource-node-kit",
-    "build-placement-kit": "@luminarylabs/nexusrealtime-protokits/build-placement-kit",
-    "structure-runtime-kit": "@luminarylabs/nexusrealtime-protokits/structure-runtime-kit",
-    "asset-descriptor-kit": "@luminarylabs/nexusrealtime-protokits/asset-descriptor-kit",
-    "diegetic-feedback-signal-kit": "@luminarylabs/nexusrealtime-protokits/diegetic-feedback-signal-kit"
+    "completion-ledger-kit": "@luminarylabs/nexusengine-protokits/completion-ledger-kit",
+    "spatial-interaction-kit": "@luminarylabs/nexusengine-protokits/spatial-interaction-kit",
+    "objective-bridge-kit": "@luminarylabs/nexusengine-protokits/objective-bridge-kit",
+    "lock-group-kit": "@luminarylabs/nexusengine-protokits/lock-group-kit",
+    "damage-health-kit": "@luminarylabs/nexusengine-protokits/damage-health-kit",
+    "resource-node-kit": "@luminarylabs/nexusengine-protokits/resource-node-kit",
+    "build-placement-kit": "@luminarylabs/nexusengine-protokits/build-placement-kit",
+    "structure-runtime-kit": "@luminarylabs/nexusengine-protokits/structure-runtime-kit",
+    "asset-descriptor-kit": "@luminarylabs/nexusengine-protokits/asset-descriptor-kit",
+    "diegetic-feedback-signal-kit": "@luminarylabs/nexusengine-protokits/diegetic-feedback-signal-kit"
   }
 }

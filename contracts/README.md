@@ -1,6 +1,6 @@
 # Contracts
 
-Contracts define the reliable shapes used by NexusRealtime Kits.
+Contracts define the reliable shapes used by NexusEngine Kits.
 
 This directory keeps the repo from becoming a loose plugin pile by defining:
 
@@ -13,4 +13,4 @@ This directory keeps the repo from becoming a loose plugin pile by defining:
 - kit stability values
 - domain kinds
 
-The runtime engine remains in `NexusRealtime`. These contracts define how this catalog describes, validates, and installs official kits.
+The runtime engine remains in `NexusEngine`. These contracts define how this catalog describes, validates, and installs official kits.

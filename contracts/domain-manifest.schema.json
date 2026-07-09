@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "NexusRealtime Domain Manifest",
+  "title": "NexusEngine Domain Manifest",
   "type": "object",
   "required": ["id", "label", "kits"],
   "properties": {

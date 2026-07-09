@@ -1,6 +1,6 @@
 {
-  "name": "@luminarylabs/nexusrealtime-kits",
-  "repository": "LuminaryLabs-Dev/NexusRealitime-Kits",
+  "name": "@luminarylabs/nexusengine-kits",
+  "repository": "LuminaryLabs-Dev/NexusEngine-Kits",
   "branch": "main",
   "status": "migration-bootstrap",
   "domains": {

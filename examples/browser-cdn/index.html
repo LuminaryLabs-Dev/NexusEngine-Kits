@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>NexusRealtime Kits CDN Example</title>
+    <title>NexusEngine Kits CDN Example</title>
   </head>
   <body>
     <pre id="out">loading...</pre>
     <script type="module">
-      import { createNexusRealtimeKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/installer/index.js";
+      import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
 
       const engine = {
         kits: [],
@@ -17,7 +17,7 @@
         }
       };
 
-      const installer = createNexusRealtimeKitInstaller();
+      const installer = createNexusEngineKitInstaller();
       await installer.installKit(engine, "completion-ledger-kit");
       document.getElementById("out").textContent = JSON.stringify(engine.kits.map((kit) => kit.id), null, 2);
     </script>

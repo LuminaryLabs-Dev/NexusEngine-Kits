@@ -1,5 +1,5 @@
-import { createAllNexusRealtimeKits } from "../../bundles/all.js";
+import { createAllNexusEngineKits } from "../../bundles/all.js";
 
 export function createFullCatalogExampleKits(config = {}) {
-  return createAllNexusRealtimeKits(config);
+  return createAllNexusEngineKits(config);
 }

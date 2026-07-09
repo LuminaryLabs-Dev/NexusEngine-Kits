@@ -10,7 +10,7 @@
     "render-descriptors"
   ],
   "exports": {
-    "package": "@luminarylabs/nexusrealtime-kits/default-game-stack",
-    "cdn": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/bundles/default-game-stack.js"
+    "package": "@luminarylabs/nexusengine-kits/default-game-stack",
+    "cdn": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/bundles/default-game-stack.js"
   }
 }

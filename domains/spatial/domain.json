@@ -11,7 +11,7 @@
     "completion-ledger-kit"
   ],
   "exports": {
-    "package": "@luminarylabs/nexusrealtime-kits/domain-spatial",
-    "cdn": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusRealitime-Kits@main/domains/spatial/index.js"
+    "package": "@luminarylabs/nexusengine-kits/domain-spatial",
+    "cdn": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/domains/spatial/index.js"
   }
 }

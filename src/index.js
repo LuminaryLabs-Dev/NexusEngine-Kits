@@ -1,7 +1,7 @@
 export * from "../installer/index.js";
 
 export {
-  createAllNexusRealtimeKits
+  createAllNexusEngineKits
 } from "../bundles/all.js";
 
 export {

@@ -1,4 +1,4 @@
-import { createNexusRealtimeKitInstaller } from "../../installer/index.js";
+import { createNexusEngineKitInstaller } from "../../installer/index.js";
 
 export async function runHeadlessSmoke() {
   const engine = {
@@ -9,7 +9,7 @@ export async function runHeadlessSmoke() {
     }
   };
 
-  const installer = createNexusRealtimeKitInstaller();
+  const installer = createNexusEngineKitInstaller();
   await installer.installKit(engine, "completion-ledger-kit");
   await installer.installDomain(engine, "input");
   return engine.kits.map((kit) => kit.id);

@@ -1,6 +1,6 @@
 # Roadmap
 
-This roadmap turns NexusRealtime Kits from a clean rebuild scaffold into a real official kit ecosystem.
+This roadmap turns NexusEngine Kits from a clean rebuild scaffold into a real official kit ecosystem.
 
 ## Phase 1: Reliable repo foundation
 

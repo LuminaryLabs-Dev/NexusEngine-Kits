@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "NexusRealtime Kit Install Report",
+  "title": "NexusEngine Kit Install Report",
   "type": "object",
   "required": ["ok", "operation"],
   "properties": {

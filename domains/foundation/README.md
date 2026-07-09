@@ -14,7 +14,7 @@ The foundation domain contains low-level support kits used by other domains.
 ## Install
 
 ```js
-import { createFoundationDomainKits } from "@luminarylabs/nexusrealtime-kits/domain-foundation";
+import { createFoundationDomainKits } from "@luminarylabs/nexusengine-kits/domain-foundation";
 ```
 
 ## Status

@@ -1,6 +1,6 @@
-import { createNexusRealtimeKitInstaller } from "../../installer/index.js";
+import { createNexusEngineKitInstaller } from "../../installer/index.js";
 
 export async function installCompletionLedgerExample(engine) {
-  const installer = createNexusRealtimeKitInstaller();
+  const installer = createNexusEngineKitInstaller();
   return installer.installKit(engine, "completion-ledger-kit");
 }

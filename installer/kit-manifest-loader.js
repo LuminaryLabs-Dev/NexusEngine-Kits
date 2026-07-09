@@ -25,10 +25,10 @@ export function createManifestRuntimeKit(manifest, config = {}) {
     },
     initWorld({ engine }) {
       if (config.installMarker === false) return;
-      if (!Array.isArray(engine.nexusRealtimeKitInstallReports)) {
-        engine.nexusRealtimeKitInstallReports = [];
+      if (!Array.isArray(engine.nexusEngineKitInstallReports)) {
+        engine.nexusEngineKitInstallReports = [];
       }
-      engine.nexusRealtimeKitInstallReports.push({
+      engine.nexusEngineKitInstallReports.push({
         id: manifest.id,
         domain: manifest.domain,
         stability: manifest.stability ?? "migration-placeholder",

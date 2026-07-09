@@ -3,7 +3,7 @@
 ## ProtoKit source
 
 ```txt
-LuminaryLabs-Agents/NexusRealtime-ProtoKits/protokits/completion-ledger-kit/
+LuminaryLabs-Agents/NexusEngine-ProtoKits/protokits/completion-ledger-kit/
 ```
 
 ## Rebuild status
