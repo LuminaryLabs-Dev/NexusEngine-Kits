@@ -86,7 +86,8 @@
     "bundle-catalog.json",
     "nexusengine.registry.json",
     "promotion-ledger.json",
-    "PROMOTION-LEDGER.md"
+    "PROMOTION-LEDGER.md",
+    "nexusengine-kits.lock.json"
   ],
   "scripts": {
     "audit": "npm run audit:catalog && npm run audit:exports && npm run audit:docs && npm run audit:status && npm run audit:behavior && npm run audit:placeholders && npm run audit:readiness && npm run audit:gaps",
@@ -100,7 +101,8 @@
     "audit:status": "node scripts/audit-status.mjs",
     "build:catalog": "node scripts/build-catalog.mjs",
     "check:generated": "node scripts/check-generated-catalog.mjs",
-    "check": "npm run check:generated && npm run check:catalog && npm run check:manifests && npm run check:exports && npm test && npm run audit",
+    "check:lock": "node scripts/check-self-lock.mjs",
+    "check": "npm run check:generated && npm run check:lock && npm run check:catalog && npm run check:manifests && npm run check:exports && npm test && npm run audit",
     "check:catalog": "node scripts/validate-catalog.mjs",
     "check:manifests": "node scripts/validate-manifests.mjs",
     "check:exports": "node scripts/check-exports.mjs",
