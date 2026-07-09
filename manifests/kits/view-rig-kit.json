@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "view-rig-kit",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "input",
+  "domainPath": "n:input:view-rig",
+  "parentDomainPath": "n:input",
+  "apiName": "viewRig",
+  "factory": "createViewRigKit",
+  "entry": "./kits/input/view-rig-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:view-rig-kit",
+    "domain:input"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/view-rig-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "viewRig",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "view-rig-kit",
+    "blocker": "view-rig-kit has no validated stable implementation or parity record."
+  }
+}

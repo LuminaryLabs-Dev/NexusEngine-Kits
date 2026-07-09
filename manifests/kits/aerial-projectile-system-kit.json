@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "aerial-projectile-system-kit",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "aerial",
+  "domainPath": "n:aerial:aerial-projectile-system",
+  "parentDomainPath": "n:aerial",
+  "apiName": "aerialProjectileSystem",
+  "factory": "createAerialProjectileSystemKit",
+  "entry": "./kits/aerial/aerial-projectile-system-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:aerial-projectile-system-kit",
+    "domain:aerial"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/aerial-projectile-system-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "aerialProjectileSystem",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "aerial-projectile-system-kit",
+    "blocker": "aerial-projectile-system-kit has no validated stable implementation or parity record."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "generic-defense",
+  "label": "Generic Defense",
+  "kind": "game-family-domain",
+  "status": "candidate",
+  "domainPath": "n:generic-defense",
+  "entry": "./domains/generic-defense/index.js",
+  "kits": [
+    "generic-defense-project-kits",
+    "generic-defense-project-bridge",
+    "generic-defense-aaa-dsk-bridge",
+    "generic-defense-dsk-boundaries",
+    "generic-defense-map-dsk",
+    "generic-defense-economy-wallet-dsk",
+    "generic-defense-build-placement-dsk",
+    "generic-defense-wave-agent-director-dsk",
+    "generic-defense-combat-resolver-dsk",
+    "generic-defense-session-facade-dsk",
+    "generic-defense-render-descriptor-dsk",
+    "generic-defense-session-command-kit"
+  ]
+}

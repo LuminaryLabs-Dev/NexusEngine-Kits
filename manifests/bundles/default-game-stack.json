@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "nexusengine.bundle-manifest.v1",
+  "id": "default-game-stack",
+  "label": "default-game-stack",
+  "status": "candidate",
+  "entry": "./bundles/default-game-stack.js",
+  "domains": [
+    "foundation",
+    "input",
+    "spatial",
+    "progression",
+    "camera-feedback",
+    "render-descriptors"
+  ],
+  "kits": []
+}

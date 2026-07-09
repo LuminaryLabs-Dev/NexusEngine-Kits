@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "aerial-canyon-kits",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "aerial",
+  "domainPath": "n:aerial:aerial-canyon-kits",
+  "parentDomainPath": "n:aerial",
+  "apiName": "aerialCanyonKits",
+  "factory": "createAerialCanyonKits",
+  "entry": "./kits/aerial/aerial-canyon-kits/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:aerial-canyon-kits",
+    "domain:aerial"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/aerial-canyon-kits/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "aerialCanyonKits",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "aerial-canyon-kits",
+    "blocker": "aerial-canyon-kits has no validated stable implementation or parity record."
+  }
+}

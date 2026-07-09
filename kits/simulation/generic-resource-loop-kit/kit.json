@@ -1,13 +1,27 @@
 {
+  "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "generic-resource-loop-kit",
+  "version": "1.0.0",
+  "status": "official",
+  "kind": "domain-service-kit",
   "domain": "simulation",
   "domainPath": "n:simulation:resource-meter-service",
+  "parentDomainPath": "n:simulation",
   "apiName": "resourceMeter",
-  "kind": "domain-service-kit",
-  "stability": "official",
-  "version": "1.0.0",
   "factory": "createGenericResourceLoopKit",
-  "entry": "./index.js",
+  "entry": "./kits/simulation/generic-resource-loop-kit/index.js",
+  "packageExport": "./generic-resource-loop-kit",
+  "module": {
+    "package": "./kits/simulation/generic-resource-loop-kit/index.js",
+    "node": "./kits/simulation/generic-resource-loop-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
+  },
+  "integrity": "sha256-uk6UGoKT3rY+8hm8nvJJ4CMdDVnZXP8Luuxt+SAuVgE=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
   "provides": [
     "n:simulation:resource-meter-service",
     "resource:loop",
@@ -15,13 +29,13 @@
     "resource:meter-service",
     "validation:resources"
   ],
-  "requires": [],
-  "cdn": {
-    "jsdelivr": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/kits/simulation/generic-resource-loop-kit/index.js"
-  },
+  "composes": [],
+  "realBehavior": true,
   "source": {
-    "repo": "LuminaryLabs-Agents/NexusEngine-ProtoKits",
-    "commit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
     "path": "protokits/generic-resource-loop-kit/index.js",
     "parity": "official"
   },
@@ -32,5 +46,27 @@
     "reset": true,
     "deterministic": true
   },
-  "realBehavior": true
+  "proof": {
+    "readme": "kits/simulation/generic-resource-loop-kit/README.md",
+    "smoke": "kits/simulation/generic-resource-loop-kit/smoke.test.mjs",
+    "parity": "kits/simulation/generic-resource-loop-kit/source-parity.md",
+    "limitations": "kits/simulation/generic-resource-loop-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": true,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": true,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": null,
+    "blocker": null
+  },
+  "stability": "official"
 }

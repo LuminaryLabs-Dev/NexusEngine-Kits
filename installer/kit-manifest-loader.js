@@ -2,8 +2,12 @@ import {
   KIT_CATALOG,
   resolveKitManifest
 } from "./kit-catalog.js";
+import { TRUSTED_REGISTRY_OWNERS } from "../registry/repository-registry.js";
 
 export function createManifestRuntimeKit(manifest, config = {}) {
+  if (!manifest.realBehavior && config.allowUnresolvedRuntime !== true) {
+    throw new TypeError(`NexusEngine kit ${manifest.id} is ${manifest.status ?? manifest.stability} and has no validated runtime behavior.`);
+  }
   return {
     id: config.id ?? manifest.id,
     components: {},
@@ -16,41 +20,35 @@ export function createManifestRuntimeKit(manifest, config = {}) {
     metadata: {
       kind: manifest.kind ?? "runtime-kit",
       domain: manifest.domain,
-      stability: manifest.stability ?? "migration-placeholder",
+      stability: manifest.status ?? manifest.stability,
       officialKitCatalog: true,
-      migrationPlaceholder: manifest.stability === "migration-placeholder",
-      sourceProtoKit: manifest.sourceProtoKit,
+      unresolvedRuntime: !manifest.realBehavior,
+      source: manifest.source,
       manifest,
       config
-    },
-    initWorld({ engine }) {
-      if (config.installMarker === false) return;
-      if (!Array.isArray(engine.nexusEngineKitInstallReports)) {
-        engine.nexusEngineKitInstallReports = [];
-      }
-      engine.nexusEngineKitInstallReports.push({
-        id: manifest.id,
-        domain: manifest.domain,
-        stability: manifest.stability ?? "migration-placeholder",
-        placeholder: manifest.stability === "migration-placeholder"
-      });
     }
   };
 }
 
 export async function loadKitFactory(manifest, options = {}) {
-  if (options.moduleResolver) {
-    const factory = await options.moduleResolver(manifest, options);
-    if (typeof factory === "function") return factory;
-  }
+  const localFactory = options.factoryRegistry?.[manifest.id] ?? options.localFactory ?? null;
+  if (typeof localFactory === "function") return localFactory;
+  if (!manifest.realBehavior) throw new TypeError(`NexusEngine kit ${manifest.id} has no validated runtime behavior.`);
 
-  if (manifest.moduleUrl && options.allowDynamicImport !== false) {
-    const mod = await import(manifest.moduleUrl);
-    const factory = mod[manifest.factory] ?? mod.default;
-    if (typeof factory === "function") return factory;
+  const owner = manifest.source?.owner;
+  const trustedOwners = new Set(options.trustedOwners ?? TRUSTED_REGISTRY_OWNERS);
+  const external = owner != null && !trustedOwners.has(owner);
+  if (external && options.allowExternalCode !== true) {
+    throw new TypeError(`External kit code is disabled for ${manifest.id}; set allowExternalCode: true with an approved moduleResolver.`);
   }
+  if (!manifest.integrity) throw new TypeError(`NexusEngine kit ${manifest.id} has no verified module integrity.`);
+  if (typeof options.moduleResolver !== "function") throw new TypeError(`NexusEngine kit ${manifest.id} requires an approved moduleResolver.`);
 
-  return (config = {}) => createManifestRuntimeKit(manifest, config);
+  const result = await options.moduleResolver(manifest, options);
+  if (!result || result.verified !== true || result.verifiedIntegrity !== manifest.integrity || typeof result.factory !== "function") {
+    throw new TypeError(`Approved moduleResolver did not return verified factory ${manifest.factory} for ${manifest.id}.`);
+  }
+  return result.factory;
 }
 
 export function loadKitManifest(kitId, catalog = KIT_CATALOG) {

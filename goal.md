@@ -20,3 +20,6 @@ Promote proven NexusEngine ProtoKits into stable NexusEngine Kits while preservi
 - Baseline resolved: 1 / 120 after the official resource-meter promotion.
 - Baseline remaining: 119.
 - Active capability: registry control plane (`kit-registry`, `capability-graph`, and `composition-planning`).
+- Approved registry additions: 3 / 3 resolved and awaiting publication/audit.
+- Official total: 4 (1 baseline plus 3 additions).
+- Active baseline capability after registry publication: `protokit-core`.

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>NexusEngine Kit Registry</title>
+<script type="importmap">
+{"imports":{"nexusengine":"https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@CORE_COMMIT/src/index.js"}}
+</script>
+<script type="module">
+  import { createRealtimeGame } from "nexusengine";
+  import { createKitRegistryDomainKit } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@KITS_COMMIT/kits/registry/kit-registry-domain-kit/index.js";
+  const engine = createRealtimeGame({ kits: [createKitRegistryDomainKit()] });
+  document.body.textContent = JSON.stringify(engine.n.kitRegistry.getProgress());
+</script>
+<body></body>
+</html>

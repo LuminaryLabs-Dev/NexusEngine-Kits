@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "hazard-combat",
+  "label": "Hazard And Combat",
+  "kind": "runtime-domain",
+  "status": "candidate",
+  "domainPath": "n:hazard-combat",
+  "entry": "./domains/hazard-combat/index.js",
+  "kits": [
+    "hazard-director-kit",
+    "damage-health-kit",
+    "encounter-director-kit",
+    "light-combat-kit"
+  ]
+}

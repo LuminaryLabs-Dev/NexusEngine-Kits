@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "input",
+  "label": "Input",
+  "kind": "runtime-domain",
+  "status": "candidate",
+  "domainPath": "n:input",
+  "entry": "./domains/input/index.js",
+  "kits": [
+    "action-input-kit",
+    "input-context-kit",
+    "input-buffer-kit",
+    "view-rig-kit"
+  ]
+}

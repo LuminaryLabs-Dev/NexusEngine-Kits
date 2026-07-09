@@ -1,19 +1,28 @@
 export {
   KIT_CATALOG,
   createNexusEngineKitCatalog,
+  NEXUSENGINE_REPOSITORY_REGISTRY,
   listDomainIds,
   listKitIds,
+  listKitManifests,
+  listDomainManifests,
+  listBundleManifests,
   findKitDomain,
   factoryNameForKit,
   cdnUrlForKit,
   resolveKitManifest,
   getKitProgress,
   getDomainKitIds,
-  getBundleDomainIds
+  getBundleDomainIds,
+  getDomainManifest,
+  getBundleManifest
 } from "./kit-catalog.js";
 
 export {
   REBUILT_FACTORIES,
+  KIT_FACTORY_REGISTRY,
+  getKitFactory,
+  hasKitFactory,
   getRebuiltKitFactory,
   hasRebuiltKitFactory
 } from "./rebuilt-factories.js";
@@ -91,3 +100,19 @@ export {
   createInstallReport,
   mergeInstallReports
 } from "./install-report.js";
+
+export {
+  createRepositoryRegistry,
+  pullRegistry,
+  mergeRegistries,
+  createCapabilityGraph,
+  createInstallPlan,
+  collectNexusEngineProviders,
+  createNexusEngineKitsLockfile,
+  validateNexusEngineKitsLockfile,
+  createInstallPlanFromLockfile,
+  NEXUSENGINE_KITS_LOCK_SCHEMA_VERSION,
+  createBrowserModuleResolver,
+  sha256Integrity,
+  verifyIntegrity
+} from "../registry/index.js";

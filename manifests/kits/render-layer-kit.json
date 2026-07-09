@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "render-layer-kit",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "render-descriptors",
+  "domainPath": "n:render-descriptors:render-layer",
+  "parentDomainPath": "n:render-descriptors",
+  "apiName": "renderLayer",
+  "factory": "createRenderLayerKit",
+  "entry": "./kits/render-descriptors/render-layer-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:render-layer-kit",
+    "domain:render-descriptors"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/render-layer-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "renderLayer",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "render-layer-kit",
+    "blocker": "render-layer-kit has no validated stable implementation or parity record."
+  }
+}

@@ -1,0 +1,2245 @@
+{
+  "schemaVersion": "nexusengine.promotion-ledger.v1",
+  "generatedFrom": "manifests/kits",
+  "progress": {
+    "baselineTotal": 120,
+    "baselineResolved": 1,
+    "baselineRemaining": 119,
+    "official": 4,
+    "candidate": 1,
+    "scaffolded": 9,
+    "placeholder": 109,
+    "deprecated": 0,
+    "archived": 0,
+    "blocked": 0,
+    "approvedAdditionsTotal": 3,
+    "approvedAdditionsResolved": 3,
+    "activeCapability": "protokit-core",
+    "stages": {
+      "inventoried": 123,
+      "sourceMapped": 123,
+      "protoValidated": 5,
+      "candidate": 5,
+      "official": 4,
+      "deprecated": 0,
+      "archived": 0,
+      "blocked": 0
+    }
+  },
+  "entries": [
+    {
+      "id": "action-input-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "action-input-kit",
+      "blocker": "action-input-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-biome-fidelity-kits",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-biome-fidelity-kits",
+      "blocker": "aerial-biome-fidelity-kits has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-camera-rig-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-camera-rig-domain-kit",
+      "blocker": "aerial-camera-rig-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-canyon-kits",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-canyon-kits",
+      "blocker": "aerial-canyon-kits has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-cel-flight-feel-kits",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-cel-flight-feel-kits",
+      "blocker": "aerial-cel-flight-feel-kits has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-combat-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-combat-domain-kit",
+      "blocker": "aerial-combat-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-encounter-director-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-encounter-director-kit",
+      "blocker": "aerial-encounter-director-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-mission-sequence-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-mission-sequence-kit",
+      "blocker": "aerial-mission-sequence-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-patch-window-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-patch-window-domain-kit",
+      "blocker": "aerial-patch-window-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-procedural-object-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-procedural-object-domain-kit",
+      "blocker": "aerial-procedural-object-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-projectile-system-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-projectile-system-kit",
+      "blocker": "aerial-projectile-system-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-render-bundle-kits",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-render-bundle-kits",
+      "blocker": "aerial-render-bundle-kits has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-ui-interaction-kits",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-ui-interaction-kits",
+      "blocker": "aerial-ui-interaction-kits has no validated stable implementation or parity record."
+    },
+    {
+      "id": "aerial-vegetation-placement-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "aerial-vegetation-placement-domain-kit",
+      "blocker": "aerial-vegetation-placement-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "asset-descriptor-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "asset-descriptor-kit",
+      "blocker": "asset-descriptor-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "build-placement-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "build-placement-kit",
+      "blocker": "build-placement-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "camera-collision-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "camera-collision-kit",
+      "blocker": "camera-collision-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "camera-comfort-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "camera-comfort-kit",
+      "blocker": "camera-comfort-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "camera-mode-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "camera-mode-kit",
+      "blocker": "camera-mode-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "camera-sequence-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "camera-sequence-kit",
+      "blocker": "camera-sequence-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "camera-state-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "camera-state-kit",
+      "blocker": "camera-state-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "canyon-terrain-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "canyon-terrain-domain-kit",
+      "blocker": "canyon-terrain-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "capability-graph-domain-kit",
+      "status": "official",
+      "baseline": false,
+      "resolved": true,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": true,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": null,
+      "blocker": null
+    },
+    {
+      "id": "cargo-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "cargo-kit",
+      "blocker": "cargo-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "cargo-transfer-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "cargo-transfer-kit",
+      "blocker": "cargo-transfer-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "clock-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "clock-kit",
+      "blocker": "clock-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "completion-ledger-kit",
+      "status": "candidate",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "completion-ledger-kit",
+      "blocker": "completion-ledger-kit still needs an exact stable source commit, complete feature-union parity, and all stable promotion gates."
+    },
+    {
+      "id": "composition-planning-domain-kit",
+      "status": "official",
+      "baseline": false,
+      "resolved": true,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": true,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": null,
+      "blocker": null
+    },
+    {
+      "id": "currency-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "currency-kit",
+      "blocker": "currency-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "damage-health-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "damage-health-domain-kit",
+      "blocker": "damage-health-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "damage-health-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "damage-health-kit",
+      "blocker": "damage-health-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "dialogue-line-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "dialogue-line-domain-kit",
+      "blocker": "dialogue-line-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "diegetic-feedback-signal-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "diegetic-feedback-signal-kit",
+      "blocker": "diegetic-feedback-signal-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "encounter-director-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "encounter-director-kit",
+      "blocker": "encounter-director-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "enemy-agent-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "enemy-agent-domain-kit",
+      "blocker": "enemy-agent-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "enemy-object-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "enemy-object-domain-kit",
+      "blocker": "enemy-object-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "environment-kits",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "environment-kits",
+      "blocker": "environment-kits has no validated stable implementation or parity record."
+    },
+    {
+      "id": "fail-state-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "fail-state-kit",
+      "blocker": "fail-state-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "flight-corridor-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "flight-corridor-domain-kit",
+      "blocker": "flight-corridor-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-action-window-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-action-window-kit",
+      "blocker": "generic-action-window-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-affordance-descriptor-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-affordance-descriptor-kit",
+      "blocker": "generic-affordance-descriptor-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-aaa-dsk-bridge",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-aaa-dsk-bridge",
+      "blocker": "generic-defense-aaa-dsk-bridge has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-build-placement-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-build-placement-dsk",
+      "blocker": "generic-defense-build-placement-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-combat-resolver-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-combat-resolver-dsk",
+      "blocker": "generic-defense-combat-resolver-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-dsk-boundaries",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-dsk-boundaries",
+      "blocker": "generic-defense-dsk-boundaries has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-economy-wallet-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-economy-wallet-dsk",
+      "blocker": "generic-defense-economy-wallet-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-map-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-map-dsk",
+      "blocker": "generic-defense-map-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-project-bridge",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-project-bridge",
+      "blocker": "generic-defense-project-bridge has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-project-kits",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-project-kits",
+      "blocker": "generic-defense-project-kits has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-render-descriptor-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-render-descriptor-dsk",
+      "blocker": "generic-defense-render-descriptor-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-session-command-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-session-command-kit",
+      "blocker": "generic-defense-session-command-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-session-facade-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-session-facade-dsk",
+      "blocker": "generic-defense-session-facade-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-defense-wave-agent-director-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-defense-wave-agent-director-dsk",
+      "blocker": "generic-defense-wave-agent-director-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-pressure-loop-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-pressure-loop-kit",
+      "blocker": "generic-pressure-loop-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "generic-resource-loop-kit",
+      "status": "official",
+      "baseline": true,
+      "resolved": true,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": true,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": null,
+      "blocker": null
+    },
+    {
+      "id": "generic-route-cargo-extraction-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "generic-route-cargo-extraction-kit",
+      "blocker": "generic-route-cargo-extraction-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "guard-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "guard-domain-kit",
+      "blocker": "guard-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "hand-gesture-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "hand-gesture-dsk",
+      "blocker": "hand-gesture-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "hand-input-adapter-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "hand-input-adapter-kit",
+      "blocker": "hand-input-adapter-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "hazard-director-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "hazard-director-kit",
+      "blocker": "hazard-director-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "health-report-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "health-report-kit",
+      "blocker": "health-report-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "hold-action-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "hold-action-kit",
+      "blocker": "hold-action-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "input-buffer-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "input-buffer-kit",
+      "blocker": "input-buffer-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "input-context-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "input-context-kit",
+      "blocker": "input-context-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "interactable-registry-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "interactable-registry-kit",
+      "blocker": "interactable-registry-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "interaction-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "interaction-domain-kit",
+      "blocker": "interaction-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "interaction-domain-service-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "interaction-domain-service-kit",
+      "blocker": "interaction-domain-service-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "interaction-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "interaction-dsk",
+      "blocker": "interaction-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "inventory-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "inventory-kit",
+      "blocker": "inventory-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "kit-registry-domain-kit",
+      "status": "official",
+      "baseline": false,
+      "resolved": true,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": true,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": null,
+      "blocker": null
+    },
+    {
+      "id": "light-combat-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "light-combat-kit",
+      "blocker": "light-combat-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "lighting-descriptor-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "lighting-descriptor-kit",
+      "blocker": "lighting-descriptor-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "lock-group-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "lock-group-kit",
+      "blocker": "lock-group-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "mana-meter-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "mana-meter-domain-kit",
+      "blocker": "mana-meter-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "market-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "market-kit",
+      "blocker": "market-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "material-palette-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "material-palette-kit",
+      "blocker": "material-palette-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "mission-phase-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "mission-phase-kit",
+      "blocker": "mission-phase-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "npc-schedule-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "npc-schedule-domain-kit",
+      "blocker": "npc-schedule-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "objective-bridge-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "objective-bridge-kit",
+      "blocker": "objective-bridge-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "objective-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "objective-kit",
+      "blocker": "objective-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "openxr-hand-adapter-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "openxr-hand-adapter-dsk",
+      "blocker": "openxr-hand-adapter-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "parry-window-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "parry-window-domain-kit",
+      "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "performance-budget-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "performance-budget-kit",
+      "blocker": "performance-budget-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "persistence-domain-service-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "persistence-domain-service-kit",
+      "blocker": "persistence-domain-service-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "persistence-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "persistence-dsk",
+      "blocker": "persistence-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "powered-aerial-flight-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "powered-aerial-flight-domain-kit",
+      "blocker": "powered-aerial-flight-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "project-batch-deploy-bridge",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "project-batch-deploy-bridge",
+      "blocker": "project-batch-deploy-bridge has no validated stable implementation or parity record."
+    },
+    {
+      "id": "protokit-core",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "protokit-core",
+      "blocker": "protokit-core has no validated stable implementation or parity record."
+    },
+    {
+      "id": "quest-thread-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "quest-thread-domain-kit",
+      "blocker": "quest-thread-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "recovery-site-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "recovery-site-kit",
+      "blocker": "recovery-site-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "relationship-state-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "relationship-state-domain-kit",
+      "blocker": "relationship-state-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "render-descriptor-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "render-descriptor-kit",
+      "blocker": "render-descriptor-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "render-layer-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "render-layer-kit",
+      "blocker": "render-layer-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "replay-test-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "replay-test-kit",
+      "blocker": "replay-test-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "resource-node-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "resource-node-kit",
+      "blocker": "resource-node-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "route-clearance-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "route-clearance-domain-kit",
+      "blocker": "route-clearance-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "score-summary-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "score-summary-kit",
+      "blocker": "score-summary-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "seed-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "seed-kit",
+      "blocker": "seed-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "selection-domain-service-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "selection-domain-service-kit",
+      "blocker": "selection-domain-service-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "selection-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "selection-dsk",
+      "blocker": "selection-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "shop-inventory-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "shop-inventory-domain-kit",
+      "blocker": "shop-inventory-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "sky-atmosphere-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "sky-atmosphere-kit",
+      "blocker": "sky-atmosphere-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "spatial-index-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "spatial-index-kit",
+      "blocker": "spatial-index-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "spatial-interaction-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "spatial-interaction-kit",
+      "blocker": "spatial-interaction-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "spatial-scene-graph-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "spatial-scene-graph-dsk",
+      "blocker": "spatial-scene-graph-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "spatial-scene-graph-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "spatial-scene-graph-kit",
+      "blocker": "spatial-scene-graph-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "state-digest-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "state-digest-kit",
+      "blocker": "state-digest-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "station-interaction-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "station-interaction-kit",
+      "blocker": "station-interaction-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "status-effect-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "status-effect-domain-kit",
+      "blocker": "status-effect-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "stereoscopic-render-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "stereoscopic-render-domain-kit",
+      "blocker": "stereoscopic-render-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "structure-runtime-kit",
+      "status": "scaffolded",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "structure-runtime-kit",
+      "blocker": "structure-runtime-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    {
+      "id": "terrain-ground-contact-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "terrain-ground-contact-domain-kit",
+      "blocker": "terrain-ground-contact-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "transform-domain-service-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "transform-domain-service-kit",
+      "blocker": "transform-domain-service-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "transform-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "transform-dsk",
+      "blocker": "transform-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "upgrade-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "upgrade-kit",
+      "blocker": "upgrade-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "vegetation-placement-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "vegetation-placement-domain-kit",
+      "blocker": "vegetation-placement-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "view-rig-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "view-rig-kit",
+      "blocker": "view-rig-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "visual-pipeline-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "visual-pipeline-kit",
+      "blocker": "visual-pipeline-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "webxr-hand-adapter-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "webxr-hand-adapter-dsk",
+      "blocker": "webxr-hand-adapter-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "widget-domain-service-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "widget-domain-service-kit",
+      "blocker": "widget-domain-service-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "widget-dsk",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "widget-dsk",
+      "blocker": "widget-dsk has no validated stable implementation or parity record."
+    },
+    {
+      "id": "world-zone-domain-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "world-zone-domain-kit",
+      "blocker": "world-zone-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "xr-ray-interaction-kit",
+      "status": "migration-placeholder",
+      "baseline": true,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": false,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "xr-ray-interaction-kit",
+      "blocker": "xr-ray-interaction-kit has no validated stable implementation or parity record."
+    }
+  ]
+}

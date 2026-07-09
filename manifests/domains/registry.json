@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "registry",
+  "label": "Registry Control Plane",
+  "kind": "control-domain",
+  "status": "official",
+  "domainPath": "n:registry",
+  "entry": "./domains/registry/index.js",
+  "kits": ["kit-registry-domain-kit", "capability-graph-domain-kit", "composition-planning-domain-kit"]
+}

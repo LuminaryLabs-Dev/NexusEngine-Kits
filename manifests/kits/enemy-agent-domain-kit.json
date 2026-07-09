@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "enemy-agent-domain-kit",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "rpg-combat",
+  "domainPath": "n:rpg-combat:enemy-agent-domain",
+  "parentDomainPath": "n:rpg-combat",
+  "apiName": "enemyAgentDomain",
+  "factory": "createEnemyAgentDomainKit",
+  "entry": "./kits/rpg-combat/enemy-agent-domain-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:enemy-agent-domain-kit",
+    "domain:rpg-combat"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/enemy-agent-domain-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "enemyAgentDomain",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "enemy-agent-domain-kit",
+    "blocker": "enemy-agent-domain-kit has no validated stable implementation or parity record."
+  }
+}

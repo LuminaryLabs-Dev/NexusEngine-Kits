@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "foundation",
+  "label": "Foundation",
+  "kind": "foundation",
+  "status": "candidate",
+  "domainPath": "n:foundation",
+  "entry": "./domains/foundation/index.js",
+  "kits": [
+    "protokit-core",
+    "seed-kit",
+    "clock-kit",
+    "state-digest-kit",
+    "replay-test-kit",
+    "health-report-kit",
+    "performance-budget-kit"
+  ]
+}

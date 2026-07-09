@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "xr",
+  "label": "XR",
+  "kind": "adapter-domain",
+  "status": "candidate",
+  "domainPath": "n:xr",
+  "entry": "./domains/xr/index.js",
+  "kits": [
+    "stereoscopic-render-domain-kit",
+    "hand-input-adapter-kit",
+    "xr-ray-interaction-kit",
+    "webxr-hand-adapter-dsk",
+    "openxr-hand-adapter-dsk",
+    "hand-gesture-dsk",
+    "spatial-scene-graph-dsk",
+    "spatial-scene-graph-kit",
+    "selection-dsk",
+    "selection-domain-service-kit",
+    "transform-dsk",
+    "transform-domain-service-kit",
+    "widget-dsk",
+    "widget-domain-service-kit",
+    "interaction-dsk",
+    "interaction-domain-service-kit",
+    "persistence-dsk",
+    "persistence-domain-service-kit"
+  ]
+}

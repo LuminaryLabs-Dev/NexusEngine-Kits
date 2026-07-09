@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "project-deployment",
+  "label": "Project Deployment",
+  "kind": "bridge-domain",
+  "status": "candidate",
+  "domainPath": "n:project-deployment",
+  "entry": "./domains/project-deployment/index.js",
+  "kits": [
+    "project-batch-deploy-bridge"
+  ]
+}

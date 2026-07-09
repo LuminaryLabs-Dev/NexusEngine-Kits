@@ -5,7 +5,12 @@ const required = [
   "createAllNexusEngineKits",
   "createCompletionLedgerKit",
   "createGenericResourceLoopKit",
-  "getKitProgress"
+  "getKitProgress",
+  "createRepositoryRegistry",
+  "pullRegistry",
+  "mergeRegistries",
+  "createCapabilityGraph",
+  "createInstallPlan"
 ];
 
 for (const name of required) {

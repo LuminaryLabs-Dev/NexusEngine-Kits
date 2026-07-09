@@ -2,17 +2,21 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "NexusEngine Kit Install Report",
   "type": "object",
-  "required": ["ok", "operation"],
+  "required": ["ok", "registryId", "selection", "resolvedSources", "installed", "skipped", "warnings", "errors", "coreDependencies"],
   "properties": {
     "ok": { "type": "boolean" },
     "operation": { "type": "string" },
-    "kitId": { "type": "string" },
-    "domainId": { "type": "string" },
-    "bundleId": { "type": "string" },
-    "installed": { "type": "boolean" },
-    "duplicate": { "type": "boolean" },
-    "warnings": { "type": "array", "items": { "type": "string" } },
-    "errors": { "type": "array", "items": { "type": "string" } }
+    "registryId": { "type": ["string", "null"] },
+    "resolvedCommit": { "type": ["string", "null"] },
+    "selection": { "type": "object" },
+    "plan": { "type": ["object", "null"] },
+    "resolvedSources": { "type": "array" },
+    "installed": { "type": "array" },
+    "skipped": { "type": "array" },
+    "warnings": { "type": "array" },
+    "errors": { "type": "array" },
+    "coreDependencies": { "type": "array", "items": { "type": "string" } },
+    "meta": { "type": "object" }
   },
   "additionalProperties": true
 }

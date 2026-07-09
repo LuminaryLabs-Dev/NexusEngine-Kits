@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "kit-registry-domain-kit",
+  "version": "1.0.0",
+  "status": "official",
+  "kind": "domain-service-kit",
+  "domain": "registry",
+  "domainPath": "n:registry:kits",
+  "parentDomainPath": "n:registry",
+  "apiName": "kitRegistry",
+  "factory": "createKitRegistryDomainKit",
+  "entry": "./kits/registry/kit-registry-domain-kit/index.js",
+  "packageExport": "./kit-registry-domain-kit",
+  "module": {
+    "package": "./kits/registry/kit-registry-domain-kit/index.js",
+    "node": "./kits/registry/kit-registry-domain-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/kit-registry-domain-kit/index.js"
+  },
+  "integrity": "sha256-xyu8d8rRV9mBtXNTMrLoEl14EhPPWC6qqzy4oKDBq1w=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "n:registry:kits",
+    "registry:kits",
+    "registry:repositories",
+    "kit:manifest-registry",
+    "domain:manifest-registry"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
+    "path": "protokits/kit-registry-domain-kit/index.js",
+    "parity": "official"
+  },
+  "runtime": {
+    "api": "kitRegistry",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/registry/kit-registry-domain-kit/README.md",
+    "smoke": "tests/registry/registry-control-plane-smoke.mjs",
+    "parity": "kits/registry/kit-registry-domain-kit/source-parity.md",
+    "limitations": "kits/registry/kit-registry-domain-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": true,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": true,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": null,
+    "blocker": null
+  },
+  "stability": "official"
+}

@@ -2,13 +2,16 @@ export function createInstallReport(fields = {}) {
   return {
     ok: fields.ok ?? true,
     operation: fields.operation ?? "install",
-    kitId: fields.kitId ?? null,
-    domainId: fields.domainId ?? null,
-    bundleId: fields.bundleId ?? null,
-    installed: fields.installed ?? false,
-    duplicate: fields.duplicate ?? false,
+    registryId: fields.registryId ?? null,
+    resolvedCommit: fields.resolvedCommit ?? null,
+    selection: fields.selection ?? {},
+    plan: fields.plan ?? null,
+    resolvedSources: fields.resolvedSources ?? [],
+    installed: fields.installed ?? [],
+    skipped: fields.skipped ?? [],
     warnings: fields.warnings ?? [],
     errors: fields.errors ?? [],
+    coreDependencies: fields.coreDependencies ?? [],
     meta: fields.meta ?? {}
   };
 }
@@ -18,9 +21,12 @@ export function mergeInstallReports(operation, reports = [], fields = {}) {
     ...fields,
     operation,
     ok: reports.every((report) => report?.ok !== false),
-    installed: reports.some((report) => report?.installed === true),
+    resolvedSources: reports.flatMap((report) => report?.resolvedSources ?? []),
+    installed: reports.flatMap((report) => report?.installed ?? []),
+    skipped: reports.flatMap((report) => report?.skipped ?? []),
     warnings: reports.flatMap((report) => report?.warnings ?? []),
     errors: reports.flatMap((report) => report?.errors ?? []),
+    coreDependencies: [...new Set(reports.flatMap((report) => report?.coreDependencies ?? []))],
     meta: { reports }
   });
 }

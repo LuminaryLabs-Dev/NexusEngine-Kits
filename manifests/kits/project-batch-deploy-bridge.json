@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "project-batch-deploy-bridge",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "project-deployment",
+  "domainPath": "n:project-deployment:project-batch-deploy-bridge",
+  "parentDomainPath": "n:project-deployment",
+  "apiName": "projectBatchDeployBridge",
+  "factory": "createProjectBatchDeployBridge",
+  "entry": "./kits/project-deployment/project-batch-deploy-bridge/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:project-batch-deploy-bridge",
+    "domain:project-deployment"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/project-batch-deploy-bridge/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "projectBatchDeployBridge",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "project-batch-deploy-bridge",
+    "blocker": "project-batch-deploy-bridge has no validated stable implementation or parity record."
+  }
+}

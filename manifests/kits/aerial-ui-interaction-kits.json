@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "aerial-ui-interaction-kits",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "aerial",
+  "domainPath": "n:aerial:aerial-ui-interaction-kits",
+  "parentDomainPath": "n:aerial",
+  "apiName": "aerialUiInteractionKits",
+  "factory": "createAerialUiInteractionKits",
+  "entry": "./kits/aerial/aerial-ui-interaction-kits/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:aerial-ui-interaction-kits",
+    "domain:aerial"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/aerial-ui-interaction-kits/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "aerialUiInteractionKits",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "aerial-ui-interaction-kits",
+    "blocker": "aerial-ui-interaction-kits has no validated stable implementation or parity record."
+  }
+}

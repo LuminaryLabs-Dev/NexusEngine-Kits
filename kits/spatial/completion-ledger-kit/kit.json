@@ -1,17 +1,38 @@
 {
+  "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "completion-ledger-kit",
-  "domain": "spatial",
+  "version": "0.0.0",
+  "status": "candidate",
   "kind": "runtime-kit",
-  "stability": "candidate",
+  "domain": "spatial",
+  "domainPath": "n:spatial:completion-ledger",
+  "parentDomainPath": "n:spatial",
+  "apiName": "completionLedger",
   "factory": "createCompletionLedgerKit",
-  "entry": "./index.js",
-  "provides": ["kit:completion-ledger-kit", "domain:spatial"],
-  "requires": [],
-  "cdn": {
-    "jsdelivr": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/kits/spatial/completion-ledger-kit/index.js"
+  "entry": "./kits/spatial/completion-ledger-kit/index.js",
+  "packageExport": "./completion-ledger-kit",
+  "module": {
+    "package": "./kits/spatial/completion-ledger-kit/index.js",
+    "node": "./kits/spatial/completion-ledger-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/completion-ledger-kit/index.js"
   },
+  "integrity": "sha256-0Qboeiym0l9zq02zooxp9zctB+YLenqz4KVNkjleQ8g=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:completion-ledger-kit",
+    "domain:spatial"
+  ],
+  "composes": [],
+  "realBehavior": true,
   "source": {
-    "repo": "LuminaryLabs-Agents/NexusEngine-ProtoKits",
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
     "path": "protokits/completion-ledger-kit/index.js",
     "parity": "candidate"
   },
@@ -19,5 +40,28 @@
     "api": "completionLedger",
     "snapshot": true,
     "reset": true
-  }
+  },
+  "proof": {
+    "readme": "kits/spatial/completion-ledger-kit/README.md",
+    "smoke": "kits/spatial/completion-ledger-kit/smoke.test.mjs",
+    "parity": "kits/spatial/completion-ledger-kit/source-parity.md",
+    "limitations": "kits/spatial/completion-ledger-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "completion-ledger-kit",
+    "blocker": "completion-ledger-kit still needs an exact stable source commit, complete feature-union parity, and all stable promotion gates."
+  },
+  "stability": "candidate"
 }

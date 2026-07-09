@@ -1,0 +1,6 @@
+{
+  "name": "@luminarylabs/nexusengine-kits-capability-graph-domain-kit",
+  "private": true,
+  "type": "module",
+  "exports": "./index.js"
+}

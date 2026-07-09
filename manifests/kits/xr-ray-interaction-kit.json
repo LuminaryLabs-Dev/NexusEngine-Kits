@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "xr-ray-interaction-kit",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "xr",
+  "domainPath": "n:xr:xr-ray-interaction",
+  "parentDomainPath": "n:xr",
+  "apiName": "xrRayInteraction",
+  "factory": "createXrRayInteractionKit",
+  "entry": "./kits/xr/xr-ray-interaction-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:xr-ray-interaction-kit",
+    "domain:xr"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/xr-ray-interaction-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "xrRayInteraction",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "xr-ray-interaction-kit",
+    "blocker": "xr-ray-interaction-kit has no validated stable implementation or parity record."
+  }
+}

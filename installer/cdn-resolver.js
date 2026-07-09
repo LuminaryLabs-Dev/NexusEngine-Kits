@@ -8,13 +8,16 @@ import {
 export function createCdnResolver(options = {}) {
   const catalog = options.catalog ?? KIT_CATALOG;
   const repository = options.repository ?? catalog.repository;
-  const ref = options.ref ?? catalog.branch ?? "main";
+  const ref = options.resolvedCommit ?? options.ref;
+  if (!/^[a-f0-9]{40}$/i.test(ref ?? "") && options.allowMutableRef !== true) {
+    throw new TypeError("CDN resolution requires a full immutable commit SHA.");
+  }
   const root = options.root ?? `https://cdn.jsdelivr.net/gh/${repository}@${ref}`;
 
   return {
     root,
     kit(kitId) {
-      return cdnUrlForKit(kitId, { catalog, repository, ref });
+      return cdnUrlForKit(kitId, { catalog, repository, ref, allowMutableRef: options.allowMutableRef });
     },
     domain(domainId) {
       getDomainKitIds(domainId, catalog);

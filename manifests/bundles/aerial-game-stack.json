@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "nexusengine.bundle-manifest.v1",
+  "id": "aerial-game-stack",
+  "label": "aerial-game-stack",
+  "status": "candidate",
+  "entry": "./bundles/aerial-game-stack.js",
+  "domains": [
+    "foundation",
+    "input",
+    "spatial",
+    "camera-feedback",
+    "render-descriptors",
+    "aerial"
+  ],
+  "kits": []
+}

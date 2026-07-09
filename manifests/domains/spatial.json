@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "spatial",
+  "label": "Spatial",
+  "kind": "runtime-domain",
+  "status": "candidate",
+  "domainPath": "n:spatial",
+  "entry": "./domains/spatial/index.js",
+  "kits": [
+    "spatial-index-kit",
+    "interactable-registry-kit",
+    "spatial-interaction-kit",
+    "hold-action-kit",
+    "completion-ledger-kit"
+  ]
+}

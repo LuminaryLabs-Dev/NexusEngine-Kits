@@ -5,7 +5,9 @@ export const KitStatus = Object.freeze({
   CANDIDATE: "candidate",
   OFFICIAL: "official",
   DEPRECATED: "deprecated",
-  ARCHIVED: "archived"
+  ARCHIVED: "archived",
+  BLOCKED: "blocked",
+  EXPERIMENTAL: "experimental"
 });
 
 export function isKitStatus(value) {

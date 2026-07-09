@@ -4,8 +4,7 @@ import {
   getDomainKitIds,
   resolveKitManifest
 } from "./kit-catalog.js";
-import { createManifestRuntimeKit } from "./kit-manifest-loader.js";
-import { getRebuiltKitFactory } from "./rebuilt-factories.js";
+import { getKitFactory } from "./rebuilt-factories.js";
 
 export function createDomainKits(domainId, config = {}, options = {}) {
   const catalog = options.catalog ?? KIT_CATALOG;
@@ -14,10 +13,9 @@ export function createDomainKits(domainId, config = {}, options = {}) {
     const manifest = resolveKitManifest(kitId, catalog);
     if (!allowedStatuses.has(manifest.stability)) return [];
     const kitConfig = config[kitId] ?? config[camelKey(kitId)] ?? {};
-    const factory = getRebuiltKitFactory(kitId);
+    const factory = getKitFactory(kitId);
     if (factory) return [factory(kitConfig)];
-    if (manifest.realBehavior) throw new TypeError(`NexusEngine kit ${kitId} is marked real but has no registered factory.`);
-    return [createManifestRuntimeKit(manifest, kitConfig)];
+    throw new TypeError(`NexusEngine kit ${kitId} has allowed status ${manifest.stability} but no validated generated factory.`);
   });
 }
 

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "progression",
+  "label": "Progression",
+  "kind": "runtime-domain",
+  "status": "candidate",
+  "domainPath": "n:progression",
+  "entry": "./domains/progression/index.js",
+  "kits": [
+    "objective-bridge-kit",
+    "objective-kit",
+    "mission-phase-kit",
+    "lock-group-kit",
+    "fail-state-kit",
+    "score-summary-kit"
+  ]
+}

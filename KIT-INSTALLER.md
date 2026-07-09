@@ -10,9 +10,9 @@ It is not a runtime engine. It resolves kits and installs them into a NexusEngin
 resolve kit ID to manifest
 resolve domain ID to kit list
 resolve bundle ID to domain list
-reject unready statuses by default
-create metadata-backed runtime kits only through an explicit migration API
-optionally load real ESM factories when module URLs are available
+plan dependencies and reject missing providers or cycles before execution
+skip unready domain/bundle members and reject direct unready selections
+resolve only real generated factories or integrity-verified modules
 install into engine.installKit()
 track duplicate kit IDs
 return install reports
@@ -33,7 +33,7 @@ await installer.installAll(engine);
 ## CDN Use
 
 ```js
-import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
+import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@<40-character-sha>/installer/index.js";
 ```
 
 ## Readiness Behavior
@@ -46,4 +46,6 @@ const reviewInstaller = createNexusEngineKitInstaller({
 });
 ```
 
-`createPlaceholderKit()` remains available only for explicit migration and inspection tooling.
+`createPlaceholderKit()` is disabled. Unresolved behavior belongs in ProtoKits until promotion proof exists.
+
+Registry metadata can be pulled without code execution. Third-party registries require an explicit registry SHA pin, and third-party modules additionally require `allowExternalCode: true`, an integrity hash, and an approved module resolver.

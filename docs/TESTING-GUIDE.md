@@ -12,6 +12,12 @@ Testing proves that the catalog is installable and that rebuilt kits match inten
 - snapshot and reset
 - parity
 - exports
+- registry trust and collision rejection
+- immutable commit and integrity failure
+- offline lockfile replay
+- Node package/local module resolution
+- real Chromium import and installation
+- 1,000-manifest lookup and planning budgets
 
 ## Kit test rule
 

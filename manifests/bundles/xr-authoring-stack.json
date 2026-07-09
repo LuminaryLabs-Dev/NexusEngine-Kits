@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "nexusengine.bundle-manifest.v1",
+  "id": "xr-authoring-stack",
+  "label": "xr-authoring-stack",
+  "status": "candidate",
+  "entry": "./bundles/xr-authoring-stack.js",
+  "domains": [
+    "foundation",
+    "input",
+    "spatial",
+    "camera-feedback",
+    "render-descriptors",
+    "xr"
+  ],
+  "kits": []
+}

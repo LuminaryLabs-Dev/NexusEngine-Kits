@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "damage-health-kit",
+  "version": "0.0.0",
+  "status": "scaffolded",
+  "kind": "runtime-kit",
+  "domain": "hazard-combat",
+  "domainPath": "n:hazard-combat:damage-health",
+  "parentDomainPath": "n:hazard-combat",
+  "apiName": "damageHealth",
+  "factory": "createDamageHealthKit",
+  "entry": "./kits/hazard-combat/damage-health-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": "./kits/hazard-combat/damage-health-kit/index.js",
+    "node": "./kits/hazard-combat/damage-health-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/hazard-combat/damage-health-kit/index.js"
+  },
+  "integrity": "sha256-G0EYIH7iAj38upY5KGXb+pAtYHjsUlHJecay2SxKspA=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:damage-health-kit",
+    "domain:hazard-combat"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/damage-health-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "damageHealth",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": "kits/hazard-combat/damage-health-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "damage-health-kit",
+    "blocker": "damage-health-kit has only scaffold or metadata behavior and lacks validated source parity."
+  },
+  "stability": "scaffolded"
+}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>NexusEngine Composition Planning</title>
+<script type="importmap">
+{"imports":{"nexusengine":"https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@CORE_COMMIT/src/index.js"}}
+</script>
+<script type="module">
+  import { createInstallPlan } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@KITS_COMMIT/kits/registry/composition-planning-domain-kit/index.js";
+  document.body.textContent = JSON.stringify(createInstallPlan({ id: "example", kits: ["example-kit"] }, { manifests: [{ id: "example-kit", domain: "example" }] }));
+</script>
+<body></body>
+</html>

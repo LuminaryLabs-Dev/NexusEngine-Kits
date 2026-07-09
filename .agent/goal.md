@@ -6,7 +6,7 @@ Promote only validated NexusEngine ProtoKit behavior into the stable catalog whi
 
 ## Current promotion
 
-`generic-resource-loop-kit` is the first official baseline capability, sourced from ProtoKits commit `9da1fdb979a878dff8f50565fec4a4952e58af5e`. The next active promotion is the three-kit registry control plane, which must remain split across registry state, capability graph, and composition planning.
+`generic-resource-loop-kit` is the first official baseline capability. The three-kit registry control plane is implemented and validated as separate official owners for registry state, capability graph, and composition planning; publication and its paired LuminaryLabs audit are the remaining steps for that milestone. The next baseline capability is `protokit-core`.
 
 ## Current promotion hold
 

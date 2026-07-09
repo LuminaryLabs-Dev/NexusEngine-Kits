@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "building",
+  "label": "Building",
+  "kind": "simulation-domain",
+  "status": "candidate",
+  "domainPath": "n:building",
+  "entry": "./domains/building/index.js",
+  "kits": [
+    "build-placement-kit",
+    "structure-runtime-kit",
+    "station-interaction-kit"
+  ]
+}

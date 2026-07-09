@@ -33,6 +33,7 @@ generic-defense
 route-extraction
 project-deployment
 simulation
+registry
 ```
 
 ## Status Levels
@@ -40,6 +41,9 @@ simulation
 ```txt
 migration-placeholder
   Catalog entry exists for discovery but default installation rejects it.
+
+scaffolded
+  Folder or wrapper exists, but stable runtime behavior and parity do not.
 
 candidate
   Behavior has migrated from ProtoKits but needs more validation.
@@ -52,9 +56,12 @@ deprecated
 
 archived
   No longer recommended.
+
+blocked
+  Promotion has an exact unresolved blocker.
 ```
 
-The bootstrap catalog starts with placeholder entries so package, domain, documentation, and future tooling have a stable target shape. Only official entries participate in default creation and installation.
+`manifests/kits`, `manifests/domains`, and `manifests/bundles` are authoritative. `npm run build:catalog` generates the JavaScript catalog, JSON catalogs, repository registry, factory table, CDN index, parity records, readiness ledger, progress, and physical `kit.json` mirrors. Only official entries participate in default creation and installation.
 
 ## Promotion Source
 

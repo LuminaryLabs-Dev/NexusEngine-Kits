@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "composition-planning-domain-kit",
+  "version": "1.0.0",
+  "status": "official",
+  "kind": "domain-service-kit",
+  "domain": "registry",
+  "domainPath": "n:registry:composition",
+  "parentDomainPath": "n:registry",
+  "apiName": "compositionPlanning",
+  "factory": "createCompositionPlanningDomainKit",
+  "entry": "./kits/registry/composition-planning-domain-kit/index.js",
+  "packageExport": "./composition-planning-domain-kit",
+  "module": {
+    "package": "./kits/registry/composition-planning-domain-kit/index.js",
+    "node": "./kits/registry/composition-planning-domain-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/composition-planning-domain-kit/index.js"
+  },
+  "integrity": "sha256-aNLCfw95wj4vy9H+pLf5UmDj9fs0HVM5ln7raEbXA2A=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [
+    "n:registry:kits",
+    "n:registry:capabilities"
+  ],
+  "provides": [
+    "n:registry:composition",
+    "domain:composition-planning",
+    "domain:install-plan",
+    "domain:dependency-gap-report"
+  ],
+  "composes": [
+    "kit-registry-domain-kit",
+    "capability-graph-domain-kit"
+  ],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
+    "path": "protokits/composition-planning-domain-kit/index.js",
+    "parity": "official"
+  },
+  "runtime": {
+    "api": "compositionPlanning",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/registry/composition-planning-domain-kit/README.md",
+    "smoke": "tests/registry/registry-control-plane-smoke.mjs",
+    "parity": "kits/registry/composition-planning-domain-kit/source-parity.md",
+    "limitations": "kits/registry/composition-planning-domain-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": true,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": true,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": null,
+    "blocker": null
+  },
+  "stability": "official"
+}

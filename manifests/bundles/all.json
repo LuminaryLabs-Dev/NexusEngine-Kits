@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "nexusengine.bundle-manifest.v1",
+  "id": "all",
+  "label": "all",
+  "status": "candidate",
+  "entry": "./bundles/all.js",
+  "domains": [
+    "registry",
+    "foundation",
+    "input",
+    "spatial",
+    "progression",
+    "hazard-combat",
+    "economy-resources",
+    "building",
+    "camera-feedback",
+    "render-descriptors",
+    "aerial",
+    "xr",
+    "rpg-social",
+    "rpg-combat",
+    "generic-defense",
+    "route-extraction",
+    "project-deployment",
+    "simulation"
+  ],
+  "kits": []
+}

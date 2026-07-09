@@ -1,40 +1,141 @@
 {
-  "status": "clean-rebuild-bootstrap",
+  "status": "registry-backed",
   "bundles": [
     {
-      "id": "all",
-      "path": "bundles/all.js",
-      "domains": ["foundation", "input", "spatial", "progression", "hazard-combat", "economy-resources", "building", "camera-feedback", "render-descriptors", "aerial", "xr", "rpg-social", "rpg-combat", "generic-defense", "route-extraction", "project-deployment", "simulation"]
-    },
-    {
-      "id": "default-game-stack",
-      "path": "bundles/default-game-stack.js",
-      "domains": ["foundation", "input", "spatial", "progression", "camera-feedback", "render-descriptors"]
-    },
-    {
+      "schemaVersion": "nexusengine.bundle-manifest.v1",
       "id": "aerial-game-stack",
-      "path": "bundles/aerial-game-stack.js",
-      "domains": ["foundation", "input", "spatial", "camera-feedback", "render-descriptors", "aerial"]
+      "label": "aerial-game-stack",
+      "status": "candidate",
+      "entry": "./bundles/aerial-game-stack.js",
+      "domains": [
+        "foundation",
+        "input",
+        "spatial",
+        "camera-feedback",
+        "render-descriptors",
+        "aerial"
+      ],
+      "kits": []
     },
     {
-      "id": "rpg-game-stack",
-      "path": "bundles/rpg-game-stack.js",
-      "domains": ["foundation", "input", "spatial", "progression", "hazard-combat", "rpg-social", "rpg-combat"]
+      "schemaVersion": "nexusengine.bundle-manifest.v1",
+      "id": "all",
+      "label": "all",
+      "status": "candidate",
+      "entry": "./bundles/all.js",
+      "domains": [
+        "registry",
+        "foundation",
+        "input",
+        "spatial",
+        "progression",
+        "hazard-combat",
+        "economy-resources",
+        "building",
+        "camera-feedback",
+        "render-descriptors",
+        "aerial",
+        "xr",
+        "rpg-social",
+        "rpg-combat",
+        "generic-defense",
+        "route-extraction",
+        "project-deployment",
+        "simulation"
+      ],
+      "kits": []
     },
     {
+      "schemaVersion": "nexusengine.bundle-manifest.v1",
+      "id": "default-game-stack",
+      "label": "default-game-stack",
+      "status": "candidate",
+      "entry": "./bundles/default-game-stack.js",
+      "domains": [
+        "foundation",
+        "input",
+        "spatial",
+        "progression",
+        "camera-feedback",
+        "render-descriptors"
+      ],
+      "kits": []
+    },
+    {
+      "schemaVersion": "nexusengine.bundle-manifest.v1",
       "id": "defense-game-stack",
-      "path": "bundles/defense-game-stack.js",
-      "domains": ["foundation", "input", "spatial", "progression", "hazard-combat", "economy-resources", "building", "generic-defense"]
+      "label": "defense-game-stack",
+      "status": "candidate",
+      "entry": "./bundles/defense-game-stack.js",
+      "domains": [
+        "foundation",
+        "input",
+        "spatial",
+        "progression",
+        "hazard-combat",
+        "economy-resources",
+        "building",
+        "generic-defense"
+      ],
+      "kits": []
     },
     {
-      "id": "xr-authoring-stack",
-      "path": "bundles/xr-authoring-stack.js",
-      "domains": ["foundation", "input", "spatial", "camera-feedback", "render-descriptors", "xr"]
-    },
-    {
+      "schemaVersion": "nexusengine.bundle-manifest.v1",
       "id": "lightweight-web-stack",
-      "path": "bundles/lightweight-web-stack/index.js",
-      "domains": ["foundation", "input", "spatial", "progression"]
+      "label": "lightweight-web-stack",
+      "status": "candidate",
+      "entry": "./bundles/lightweight-web-stack/index.js",
+      "domains": [
+        "foundation",
+        "input",
+        "spatial",
+        "progression"
+      ],
+      "kits": []
+    },
+    {
+      "schemaVersion": "nexusengine.bundle-manifest.v1",
+      "id": "registry-control-plane",
+      "label": "Registry Control Plane",
+      "status": "official",
+      "entry": "./bundles/registry-control-plane.js",
+      "domains": [
+        "registry"
+      ],
+      "kits": []
+    },
+    {
+      "schemaVersion": "nexusengine.bundle-manifest.v1",
+      "id": "rpg-game-stack",
+      "label": "rpg-game-stack",
+      "status": "candidate",
+      "entry": "./bundles/rpg-game-stack.js",
+      "domains": [
+        "foundation",
+        "input",
+        "spatial",
+        "progression",
+        "hazard-combat",
+        "rpg-social",
+        "rpg-combat"
+      ],
+      "kits": []
+    },
+    {
+      "schemaVersion": "nexusengine.bundle-manifest.v1",
+      "id": "xr-authoring-stack",
+      "label": "xr-authoring-stack",
+      "status": "candidate",
+      "entry": "./bundles/xr-authoring-stack.js",
+      "domains": [
+        "foundation",
+        "input",
+        "spatial",
+        "camera-feedback",
+        "render-descriptors",
+        "xr"
+      ],
+      "kits": []
     }
   ]
 }

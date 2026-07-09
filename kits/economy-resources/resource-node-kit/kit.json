@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "resource-node-kit",
+  "version": "0.0.0",
+  "status": "scaffolded",
+  "kind": "runtime-kit",
+  "domain": "economy-resources",
+  "domainPath": "n:economy-resources:resource-node",
+  "parentDomainPath": "n:economy-resources",
+  "apiName": "resourceNode",
+  "factory": "createResourceNodeKit",
+  "entry": "./kits/economy-resources/resource-node-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": "./kits/economy-resources/resource-node-kit/index.js",
+    "node": "./kits/economy-resources/resource-node-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/economy-resources/resource-node-kit/index.js"
+  },
+  "integrity": "sha256-LF056XwIlFf1N+Zu+q3URY9HLuo/b9KcwBViPotr/B4=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:resource-node-kit",
+    "domain:economy-resources"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/resource-node-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "resourceNode",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": "kits/economy-resources/resource-node-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "resource-node-kit",
+    "blocker": "resource-node-kit has only scaffold or metadata behavior and lacks validated source parity."
+  },
+  "stability": "scaffolded"
+}

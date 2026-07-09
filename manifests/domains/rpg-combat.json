@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "rpg-combat",
+  "label": "RPG Combat",
+  "kind": "game-family-domain",
+  "status": "candidate",
+  "domainPath": "n:rpg-combat",
+  "entry": "./domains/rpg-combat/index.js",
+  "kits": [
+    "enemy-object-domain-kit",
+    "enemy-agent-domain-kit",
+    "damage-health-domain-kit",
+    "guard-domain-kit",
+    "parry-window-domain-kit",
+    "mana-meter-domain-kit",
+    "status-effect-domain-kit",
+    "vegetation-placement-domain-kit",
+    "route-clearance-domain-kit",
+    "terrain-ground-contact-domain-kit",
+    "world-zone-domain-kit",
+    "interaction-domain-kit"
+  ]
+}

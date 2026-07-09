@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "generic-defense-session-command-kit",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "generic-defense",
+  "domainPath": "n:generic-defense:generic-defense-session-command",
+  "parentDomainPath": "n:generic-defense",
+  "apiName": "genericDefenseSessionCommand",
+  "factory": "createGenericDefenseSessionCommandKit",
+  "entry": "./kits/generic-defense/generic-defense-session-command-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:generic-defense-session-command-kit",
+    "domain:generic-defense"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/generic-defense-session-command-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "genericDefenseSessionCommand",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "generic-defense-session-command-kit",
+    "blocker": "generic-defense-session-command-kit has no validated stable implementation or parity record."
+  }
+}

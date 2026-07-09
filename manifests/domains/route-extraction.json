@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "route-extraction",
+  "label": "Route Extraction",
+  "kind": "game-family-domain",
+  "status": "candidate",
+  "domainPath": "n:route-extraction",
+  "entry": "./domains/route-extraction/index.js",
+  "kits": [
+    "generic-route-cargo-extraction-kit"
+  ]
+}

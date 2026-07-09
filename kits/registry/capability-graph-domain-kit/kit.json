@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "capability-graph-domain-kit",
+  "version": "1.0.0",
+  "status": "official",
+  "kind": "domain-service-kit",
+  "domain": "registry",
+  "domainPath": "n:registry:capabilities",
+  "parentDomainPath": "n:registry",
+  "apiName": "capabilityGraph",
+  "factory": "createCapabilityGraphDomainKit",
+  "entry": "./kits/registry/capability-graph-domain-kit/index.js",
+  "packageExport": "./capability-graph-domain-kit",
+  "module": {
+    "package": "./kits/registry/capability-graph-domain-kit/index.js",
+    "node": "./kits/registry/capability-graph-domain-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/capability-graph-domain-kit/index.js"
+  },
+  "integrity": "sha256-HEW0xI9RJqyJdd9pd/Mk1rDZIpIQYcjwWv62mJzAGxA=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [
+    "n:registry:kits"
+  ],
+  "provides": [
+    "n:registry:capabilities",
+    "domain:capability-graph",
+    "domain:dependency-graph"
+  ],
+  "composes": [
+    "kit-registry-domain-kit"
+  ],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
+    "path": "protokits/capability-graph-domain-kit/index.js",
+    "parity": "official"
+  },
+  "runtime": {
+    "api": "capabilityGraph",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/registry/capability-graph-domain-kit/README.md",
+    "smoke": "tests/registry/registry-control-plane-smoke.mjs",
+    "parity": "kits/registry/capability-graph-domain-kit/source-parity.md",
+    "limitations": "kits/registry/capability-graph-domain-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": true,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": true,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": null,
+    "blocker": null
+  },
+  "stability": "official"
+}

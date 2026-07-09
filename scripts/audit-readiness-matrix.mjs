@@ -1,43 +1,24 @@
 import { createAudit, exists, readJson } from "./audit-utils.mjs";
 
 const audit = createAudit("Readiness Matrix Audit");
-const parity = readJson("parity/parity-status.json");
+const catalog = readJson("kit-catalog.json");
 
-const evidence = {
-  "completion-ledger-kit": {
-    domain: "spatial",
-    realBehavior: true,
-    hasDomainSmoke: exists("tests", "domains", "spatial-domain-smoke.mjs")
-  },
-  "generic-resource-loop-kit": {
-    domain: "simulation",
-    realBehavior: true,
-    hasDomainSmoke: exists("tests", "domains", "simulation-domain-smoke.mjs")
-  }
-};
-
-for (const [kit, entry] of Object.entries(parity.kits ?? {})) {
-  const status = entry.status;
-  const info = evidence[kit] ?? { domain: null, realBehavior: false, hasDomainSmoke: false };
-  const domain = info.domain ?? kit.split("-")[0];
-  const folder = ["kits", domain, kit];
-
+for (const manifest of catalog.manifests ?? []) {
+  const status = manifest.status;
+  const folder = ["kits", manifest.domain, manifest.id];
   if (status === "candidate" || status === "official") {
-    if (!info.realBehavior) audit.error(`${kit} is ${status} but not marked as real behavior in readiness evidence`);
-    if (!exists(...folder, "README.md")) audit.error(`${kit} is ${status} but missing README.md`);
-    if (!exists(...folder, "kit.json")) audit.error(`${kit} is ${status} but missing kit.json`);
-    if (!exists(...folder, "source-parity.md")) audit.error(`${kit} is ${status} but missing source-parity.md`);
-    if (!exists(...folder, "smoke.test.mjs")) audit.error(`${kit} is ${status} but missing smoke.test.mjs`);
+    if (!manifest.realBehavior) audit.error(`${manifest.id} is ${status} but not marked as real behavior`);
+    if (!exists(...folder, "README.md")) audit.error(`${manifest.id} is ${status} but missing README.md`);
+    if (!exists(...folder, "kit.json")) audit.error(`${manifest.id} is ${status} but missing generated kit.json`);
+    if (!exists(manifest.proof?.parity ?? "missing")) audit.error(`${manifest.id} is ${status} but missing source parity proof`);
+    if (!exists(manifest.proof?.smoke ?? "missing")) audit.error(`${manifest.id} is ${status} but missing smoke proof`);
   }
-
   if (status === "official") {
-    if (!info.realBehavior) audit.error(`${kit} is official but not marked real`);
-    if (!info.hasDomainSmoke) audit.error(`${kit} is official but has no domain smoke evidence`);
+    if (!manifest.integrity) audit.error(`${manifest.id} is official but has no generated integrity`);
+    if (!exists("tests", "domains", `${manifest.domain}-domain-smoke.mjs`)) audit.error(`${manifest.id} is official but ${manifest.domain} has no domain smoke`);
+    if (!manifest.packageExport) audit.error(`${manifest.id} is official but has no package export`);
   }
-
-  if (status === "migration-placeholder" && info.realBehavior) {
-    audit.error(`${kit} is migration-placeholder but has real behavior evidence`);
-  }
+  if (status === "migration-placeholder" && manifest.realBehavior) audit.error(`${manifest.id} is a placeholder but has real behavior evidence`);
 }
 
 audit.finish("readiness-matrix-report");

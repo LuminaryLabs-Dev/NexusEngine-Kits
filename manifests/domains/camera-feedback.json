@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "camera-feedback",
+  "label": "Camera And Feedback",
+  "kind": "presentation-domain",
+  "status": "candidate",
+  "domainPath": "n:camera-feedback",
+  "entry": "./domains/camera-feedback/index.js",
+  "kits": [
+    "camera-state-kit",
+    "camera-mode-kit",
+    "camera-collision-kit",
+    "camera-comfort-kit",
+    "camera-sequence-kit",
+    "diegetic-feedback-signal-kit"
+  ]
+}

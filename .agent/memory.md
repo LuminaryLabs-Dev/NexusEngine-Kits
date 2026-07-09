@@ -6,3 +6,6 @@
 - Renderer or host behavior requires explicit adapter classification.
 - Promotion evidence must include source lineage and a matching LuminaryLabs audit.
 - The package, APIs, tests, docs, parity records, and CDN examples use NexusEngine identity only.
+- Authoritative catalog truth lives under `manifests/`; catalogs, factories, registry, parity, readiness, physical manifests, CDN index, and progress are generated.
+- Remote metadata pull never executes code. External registries require an exact opt-in SHA, and external code also requires `allowExternalCode`, integrity proof, and an approved resolver.
+- Registry, capability graph, and composition planning remain three bounded DSK owners under `n:registry`.

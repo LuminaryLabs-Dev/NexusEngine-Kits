@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "render-descriptors",
+  "label": "Render Descriptors",
+  "kind": "descriptor-domain",
+  "status": "candidate",
+  "domainPath": "n:render-descriptors",
+  "entry": "./domains/render-descriptors/index.js",
+  "kits": [
+    "render-descriptor-kit",
+    "asset-descriptor-kit",
+    "visual-pipeline-kit",
+    "render-layer-kit",
+    "material-palette-kit",
+    "lighting-descriptor-kit",
+    "sky-atmosphere-kit"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "aerial",
+  "label": "Aerial",
+  "kind": "game-family-domain",
+  "status": "candidate",
+  "domainPath": "n:aerial",
+  "entry": "./domains/aerial/index.js",
+  "kits": [
+    "aerial-canyon-kits",
+    "aerial-biome-fidelity-kits",
+    "aerial-cel-flight-feel-kits",
+    "aerial-render-bundle-kits",
+    "aerial-ui-interaction-kits",
+    "aerial-patch-window-domain-kit",
+    "canyon-terrain-domain-kit",
+    "flight-corridor-domain-kit",
+    "powered-aerial-flight-domain-kit",
+    "aerial-vegetation-placement-domain-kit",
+    "aerial-procedural-object-domain-kit",
+    "aerial-projectile-system-kit",
+    "aerial-combat-domain-kit",
+    "aerial-encounter-director-kit",
+    "aerial-camera-rig-domain-kit",
+    "aerial-mission-sequence-kit",
+    "environment-kits"
+  ]
+}

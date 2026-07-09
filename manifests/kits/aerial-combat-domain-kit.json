@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "aerial-combat-domain-kit",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "aerial",
+  "domainPath": "n:aerial:aerial-combat-domain",
+  "parentDomainPath": "n:aerial",
+  "apiName": "aerialCombatDomain",
+  "factory": "createAerialCombatDomainKit",
+  "entry": "./kits/aerial/aerial-combat-domain-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:aerial-combat-domain-kit",
+    "domain:aerial"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/aerial-combat-domain-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "aerialCombatDomain",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "aerial-combat-domain-kit",
+    "blocker": "aerial-combat-domain-kit has no validated stable implementation or parity record."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "simulation",
+  "label": "Simulation",
+  "kind": "simulation-domain",
+  "status": "candidate",
+  "domainPath": "n:simulation",
+  "entry": "./domains/simulation/index.js",
+  "kits": [
+    "generic-pressure-loop-kit",
+    "generic-resource-loop-kit",
+    "generic-action-window-kit",
+    "generic-affordance-descriptor-kit"
+  ]
+}

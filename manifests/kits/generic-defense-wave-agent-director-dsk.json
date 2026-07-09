@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "generic-defense-wave-agent-director-dsk",
+  "version": "0.0.0",
+  "status": "migration-placeholder",
+  "kind": "runtime-kit",
+  "domain": "generic-defense",
+  "domainPath": "n:generic-defense:generic-defense-wave-agent-director-dsk",
+  "parentDomainPath": "n:generic-defense",
+  "apiName": "genericDefenseWaveAgentDirectorDsk",
+  "factory": "createGenericDefenseWaveAgentDirectorDsk",
+  "entry": "./kits/generic-defense/generic-defense-wave-agent-director-dsk/index.js",
+  "packageExport": null,
+  "module": {
+    "package": null,
+    "node": null,
+    "browser": null
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:generic-defense-wave-agent-director-dsk",
+    "domain:generic-defense"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/generic-defense-wave-agent-director-dsk/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "genericDefenseWaveAgentDirectorDsk",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": null
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "generic-defense-wave-agent-director-dsk",
+    "blocker": "generic-defense-wave-agent-director-dsk has no validated stable implementation or parity record."
+  }
+}

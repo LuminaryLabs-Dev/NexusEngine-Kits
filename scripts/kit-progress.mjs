@@ -14,4 +14,7 @@ if (process.argv.includes("--json")) {
   console.log(`Approved additions:  ${progress.approvedAdditionsResolved} / ${progress.approvedAdditionsTotal}`);
   console.log(`Active capability:   ${progress.activeCapability ?? "none"}`);
   console.log(`Blocked capabilities: ${progress.blocked}`);
+  console.log(`Inventoried:          ${progress.stages.inventoried}`);
+  console.log(`Source mapped:        ${progress.stages.sourceMapped}`);
+  console.log(`Proto validated:      ${progress.stages.protoValidated}`);
 }

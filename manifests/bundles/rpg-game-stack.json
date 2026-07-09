@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "nexusengine.bundle-manifest.v1",
+  "id": "rpg-game-stack",
+  "label": "rpg-game-stack",
+  "status": "candidate",
+  "entry": "./bundles/rpg-game-stack.js",
+  "domains": [
+    "foundation",
+    "input",
+    "spatial",
+    "progression",
+    "hazard-combat",
+    "rpg-social",
+    "rpg-combat"
+  ],
+  "kits": []
+}

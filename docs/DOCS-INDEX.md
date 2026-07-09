@@ -29,6 +29,7 @@ This index tracks the documentation layer for NexusEngine Kits.
 - `docs/HOW-TO-INSTALL-A-BUNDLE.md`
 - `docs/HOW-TO-INSTALL-ALL-KITS.md`
 - `docs/CDN-INSTALLATION.md`
+- `docs/REGISTRY-INSTALLATION.md`
 - `docs/KIT-NAMING-GRAMMAR.md`
 - `docs/KIT-AUTHORING-GUIDE.md`
 - `docs/DOMAIN-AUTHORING-GUIDE.md`
@@ -109,6 +110,7 @@ Each domain should have `README.md` or `DOCS.md`; limitation docs are added firs
 - route-extraction
 - project-deployment
 - simulation
+- registry
 
 ## Bundle docs
 
@@ -121,6 +123,7 @@ Each bundle should have `README.md`, `bundle.json`, and examples.
 - defense-game-stack
 - xr-authoring-stack
 - lightweight-web-stack
+- registry-control-plane
 
 ## First-wave kit docs
 

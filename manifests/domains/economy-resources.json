@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "economy-resources",
+  "label": "Economy And Resources",
+  "kind": "simulation-domain",
+  "status": "candidate",
+  "domainPath": "n:economy-resources",
+  "entry": "./domains/economy-resources/index.js",
+  "kits": [
+    "inventory-kit",
+    "cargo-kit",
+    "currency-kit",
+    "market-kit",
+    "upgrade-kit",
+    "resource-node-kit",
+    "recovery-site-kit",
+    "cargo-transfer-kit"
+  ]
+}

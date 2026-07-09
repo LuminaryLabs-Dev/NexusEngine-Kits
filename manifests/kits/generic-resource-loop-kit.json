@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "generic-resource-loop-kit",
+  "version": "1.0.0",
+  "status": "official",
+  "kind": "domain-service-kit",
+  "domain": "simulation",
+  "domainPath": "n:simulation:resource-meter-service",
+  "parentDomainPath": "n:simulation",
+  "apiName": "resourceMeter",
+  "factory": "createGenericResourceLoopKit",
+  "entry": "./kits/simulation/generic-resource-loop-kit/index.js",
+  "packageExport": "./generic-resource-loop-kit",
+  "module": {
+    "package": "./kits/simulation/generic-resource-loop-kit/index.js",
+    "node": "./kits/simulation/generic-resource-loop-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "n:simulation:resource-meter-service",
+    "resource:loop",
+    "resource:meters",
+    "resource:meter-service",
+    "validation:resources"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
+    "path": "protokits/generic-resource-loop-kit/index.js",
+    "parity": "official"
+  },
+  "runtime": {
+    "api": "resourceMeter",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/simulation/generic-resource-loop-kit/README.md",
+    "smoke": "kits/simulation/generic-resource-loop-kit/smoke.test.mjs",
+    "parity": "kits/simulation/generic-resource-loop-kit/source-parity.md",
+    "limitations": "kits/simulation/generic-resource-loop-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": true,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": true,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": null,
+    "blocker": null
+  }
+}

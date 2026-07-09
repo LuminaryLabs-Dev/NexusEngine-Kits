@@ -2,11 +2,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "NexusEngine Bundle Manifest",
   "type": "object",
-  "required": ["id", "domains"],
+  "required": ["schemaVersion", "id", "status", "entry", "domains", "kits"],
   "properties": {
     "id": { "type": "string", "minLength": 1 },
+    "schemaVersion": { "const": "nexusengine.bundle-manifest.v1" },
+    "status": { "type": "string", "minLength": 1 },
+    "entry": { "type": "string", "minLength": 1 },
     "description": { "type": "string" },
     "domains": { "type": "array", "items": { "type": "string" } },
+    "kits": { "type": "array", "items": { "type": "string" } },
     "exports": { "type": "object" }
   },
   "additionalProperties": true

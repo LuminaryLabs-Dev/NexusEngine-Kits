@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NexusEngine Repository Registry",
+  "type": "object",
+  "required": ["schemaVersion", "id", "owner", "repository", "requestedRef", "resolvedCommit", "engineCompatibility", "kits", "domains", "bundles"],
+  "properties": {
+    "schemaVersion": { "const": "nexusengine.repository-registry.v1" },
+    "id": { "type": "string", "minLength": 1 },
+    "owner": { "type": "string", "minLength": 1 },
+    "repository": { "type": "string", "minLength": 1 },
+    "requestedRef": { "type": "string", "minLength": 1 },
+    "resolvedCommit": { "type": ["string", "null"], "pattern": "^[a-fA-F0-9]{40}$" },
+    "engineCompatibility": {
+      "type": "object",
+      "required": ["package", "range", "testedCommit"]
+    },
+    "kits": { "type": "array" },
+    "domains": { "type": "array" },
+    "bundles": { "type": "array" }
+  },
+  "additionalProperties": true
+}

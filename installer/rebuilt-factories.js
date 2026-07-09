@@ -1,15 +1,16 @@
-import { createCompletionLedgerKit } from "../kits/spatial/completion-ledger-kit/index.js";
-import { createGenericResourceLoopKit } from "../kits/simulation/generic-resource-loop-kit/index.js";
+import { GENERATED_KIT_FACTORIES } from "./generated-factories.js";
 
-export const REBUILT_FACTORIES = Object.freeze({
-  "completion-ledger-kit": createCompletionLedgerKit,
-  "generic-resource-loop-kit": createGenericResourceLoopKit
-});
+export const KIT_FACTORY_REGISTRY = GENERATED_KIT_FACTORIES;
+export const REBUILT_FACTORIES = KIT_FACTORY_REGISTRY;
 
-export function getRebuiltKitFactory(kitId) {
-  return REBUILT_FACTORIES[kitId] ?? null;
+export function getKitFactory(kitId) {
+  return KIT_FACTORY_REGISTRY[kitId] ?? null;
 }
 
-export function hasRebuiltKitFactory(kitId) {
-  return typeof getRebuiltKitFactory(kitId) === "function";
+export const getRebuiltKitFactory = getKitFactory;
+
+export function hasKitFactory(kitId) {
+  return typeof getKitFactory(kitId) === "function";
 }
+
+export const hasRebuiltKitFactory = hasKitFactory;

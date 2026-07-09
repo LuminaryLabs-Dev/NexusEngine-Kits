@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "nexusengine.bundle-manifest.v1",
+  "id": "lightweight-web-stack",
+  "label": "lightweight-web-stack",
+  "status": "candidate",
+  "entry": "./bundles/lightweight-web-stack/index.js",
+  "domains": [
+    "foundation",
+    "input",
+    "spatial",
+    "progression"
+  ],
+  "kits": []
+}

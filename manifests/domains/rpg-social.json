@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "rpg-social",
+  "label": "RPG Social",
+  "kind": "game-family-domain",
+  "status": "candidate",
+  "domainPath": "n:rpg-social",
+  "entry": "./domains/rpg-social/index.js",
+  "kits": [
+    "dialogue-line-domain-kit",
+    "relationship-state-domain-kit",
+    "npc-schedule-domain-kit",
+    "shop-inventory-domain-kit",
+    "quest-thread-domain-kit"
+  ]
+}

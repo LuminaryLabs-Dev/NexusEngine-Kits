@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>NexusEngine Kits Browser Smoke</title>
+<link rel="icon" href="data:,">
+<script type="importmap">
+{
+  "imports": {
+    "nexusengine": "/node_modules/nexusengine/src/index.js"
+  }
+}
+</script>
+<script type="module">
+  try {
+    const { createRealtimeGame } = await import("nexusengine");
+    const { createCoreSimulationKit } = await import("/node_modules/nexusengine/src/core-kits/index.js");
+    const {
+      createNexusEngineKitInstaller,
+      getKitProgress
+    } = await import("/src/index.js");
+
+    const engine = createRealtimeGame({ kits: [createCoreSimulationKit()] });
+    const installer = createNexusEngineKitInstaller();
+    const registry = await installer.installBundle(engine, "registry-control-plane");
+    const resource = await installer.installKit(engine, "generic-resource-loop-kit", {
+      resources: [{ id: "browser-energy", initial: 8, max: 10 }]
+    });
+    engine.n.resourceMeter.spend("browser-energy", 3);
+    const progress = getKitProgress();
+    window.__nexusEngineKitsProof = {
+      ok: registry.report.ok && resource.report.ok,
+      registryInstalled: registry.report.installed.map((entry) => entry.id),
+      energy: engine.n.resourceMeter.get("browser-energy").value,
+      hasCore: typeof engine.n.coreSimulation.getSnapshot === "function",
+      hasRegistry: typeof engine.n.kitRegistry.search === "function",
+      progress
+    };
+    document.body.textContent = window.__nexusEngineKitsProof.ok ? "NexusEngine Kits browser smoke passed" : "NexusEngine Kits browser smoke failed";
+  } catch (error) {
+    window.__nexusEngineKitsProof = { ok: false, error: error.stack ?? error.message };
+    document.body.textContent = `NexusEngine Kits browser smoke failed: ${error.message}`;
+    console.error(error);
+  }
+</script>
+<body>Loading...</body>
+</html>

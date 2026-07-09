@@ -52,10 +52,10 @@ await installer.installKit(engine, "generic-resource-loop-kit", {
 ### One domain
 
 ```js
-import { createHazardCombatDomainKits } from "@luminarylabs/nexusengine-kits/domain-hazard-combat";
+import { createRegistryDomainKits } from "@luminarylabs/nexusengine-kits/domain-registry";
 
 const engine = createRealtimeGame({
-  kits: createHazardCombatDomainKits()
+  kits: createRegistryDomainKits()
 });
 ```
 
@@ -72,16 +72,31 @@ const engine = createRealtimeGame({
 ### CDN
 
 ```js
-import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
+import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@<40-character-sha>/installer/index.js";
+```
+
+### Repository registry
+
+```js
+import {
+  pullRegistry,
+  createInstallPlan,
+  createNexusEngineKitInstaller
+} from "@luminarylabs/nexusengine-kits";
+
+const registry = await pullRegistry("LuminaryLabs-Dev/NexusEngine-Kits");
+const plan = createInstallPlan({ bundles: ["registry-control-plane"] }, { registry });
+const installer = createNexusEngineKitInstaller({ registry });
+await installer.installBundle(engine, "registry-control-plane");
 ```
 
 ## Current Status
 
 This is the clean rebuild foundation. The catalog, domains, bundles, installer, contracts, parity tracking, and docs land first so every future rebuilt kit has a stable long-term shape.
 
-Many catalog entries are currently `migration-placeholder` entries. They remain discoverable, but default installer/domain/bundle APIs skip them instead of presenting metadata as behavior. Callers must explicitly opt into non-official statuses or use `createPlaceholderKit()` for migration tooling.
+Many catalog entries are currently `migration-placeholder` entries. They remain discoverable, but default installer/domain/bundle APIs skip them instead of presenting metadata as behavior. Placeholder and scaffold factories never silently create empty runtime kits.
 
-`generic-resource-loop-kit` is the first official kit. Run `npm run progress` for derived completed/remaining counts.
+`generic-resource-loop-kit` is the first official baseline kit. The three registry control-plane additions are also official without changing the 120-kit baseline denominator. Run `npm run progress` for generated completed/remaining counts.
 
 ## Known Limitations
 
@@ -105,11 +120,14 @@ Framework docs now cover install modes, authoring, testing, contracts, parity, d
 ## Repository Map
 
 ```txt
-contracts/       manifest schemas, status enums, and install report contracts
-installer/       dynamic kit/domain/bundle installer
-kit-catalog.json machine-readable kit catalog seed
-domain-catalog.json machine-readable domain catalog
-bundle-catalog.json machine-readable bundle catalog
+contracts/       manifest, registry, lockfile, status, and report contracts
+manifests/       authoritative kit, domain, bundle, and repository manifests
+registry/        metadata pull, trust, graph/planning, lockfile, integrity, and resolver adapters
+installer/       generated catalog/factories and kit/domain/bundle installation
+kit-catalog.json generated machine-readable kit catalog
+domain-catalog.json generated machine-readable domain catalog
+bundle-catalog.json generated machine-readable bundle catalog
+nexusengine.registry.json generated repository registry template
 domains/         domain bundle entrypoints and future domain manifests
 bundles/         full-catalog and game-stack bundles
 kits/            official kit landing zones and rebuilt behaviors
@@ -128,6 +146,7 @@ One bundle should be installable.
 The whole official catalog should be installable; unready entries should fail closed.
 Every install should be inspectable.
 Every stable kit should be CDN-addressable.
+Every remote module URL should resolve to an immutable commit and verified hash.
 Every rebuilt kit should track ProtoKits parity.
 Every limitation should be visible before it causes bad assumptions.
 ```

@@ -1,22 +1,326 @@
 {
-  "status": "clean-rebuild-bootstrap",
+  "status": "registry-backed",
   "domains": [
-    { "id": "foundation", "label": "Foundation", "kind": "foundation", "path": "domains/foundation/index.js" },
-    { "id": "input", "label": "Input", "kind": "runtime-domain", "path": "domains/input/index.js" },
-    { "id": "spatial", "label": "Spatial", "kind": "runtime-domain", "path": "domains/spatial/index.js" },
-    { "id": "progression", "label": "Progression", "kind": "runtime-domain", "path": "domains/progression/index.js" },
-    { "id": "hazard-combat", "label": "Hazard And Combat", "kind": "runtime-domain", "path": "domains/hazard-combat/index.js" },
-    { "id": "economy-resources", "label": "Economy And Resources", "kind": "simulation-domain", "path": "domains/economy-resources/index.js" },
-    { "id": "building", "label": "Building", "kind": "simulation-domain", "path": "domains/building/index.js" },
-    { "id": "camera-feedback", "label": "Camera And Feedback", "kind": "presentation-domain", "path": "domains/camera-feedback/index.js" },
-    { "id": "render-descriptors", "label": "Render Descriptors", "kind": "descriptor-domain", "path": "domains/render-descriptors/index.js" },
-    { "id": "aerial", "label": "Aerial", "kind": "game-family-domain", "path": "domains/aerial/index.js" },
-    { "id": "xr", "label": "XR", "kind": "adapter-domain", "path": "domains/xr/index.js" },
-    { "id": "rpg-social", "label": "RPG Social", "kind": "game-family-domain", "path": "domains/rpg-social/index.js" },
-    { "id": "rpg-combat", "label": "RPG Combat", "kind": "game-family-domain", "path": "domains/rpg-combat/index.js" },
-    { "id": "generic-defense", "label": "Generic Defense", "kind": "game-family-domain", "path": "domains/generic-defense/index.js" },
-    { "id": "route-extraction", "label": "Route Extraction", "kind": "game-family-domain", "path": "domains/route-extraction/index.js" },
-    { "id": "project-deployment", "label": "Project Deployment", "kind": "bridge-domain", "path": "domains/project-deployment/index.js" },
-    { "id": "simulation", "label": "Simulation", "kind": "simulation-domain", "path": "domains/simulation/index.js" }
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "aerial",
+      "label": "Aerial",
+      "kind": "game-family-domain",
+      "status": "candidate",
+      "domainPath": "n:aerial",
+      "entry": "./domains/aerial/index.js",
+      "kits": [
+        "aerial-canyon-kits",
+        "aerial-biome-fidelity-kits",
+        "aerial-cel-flight-feel-kits",
+        "aerial-render-bundle-kits",
+        "aerial-ui-interaction-kits",
+        "aerial-patch-window-domain-kit",
+        "canyon-terrain-domain-kit",
+        "flight-corridor-domain-kit",
+        "powered-aerial-flight-domain-kit",
+        "aerial-vegetation-placement-domain-kit",
+        "aerial-procedural-object-domain-kit",
+        "aerial-projectile-system-kit",
+        "aerial-combat-domain-kit",
+        "aerial-encounter-director-kit",
+        "aerial-camera-rig-domain-kit",
+        "aerial-mission-sequence-kit",
+        "environment-kits"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "building",
+      "label": "Building",
+      "kind": "simulation-domain",
+      "status": "candidate",
+      "domainPath": "n:building",
+      "entry": "./domains/building/index.js",
+      "kits": [
+        "build-placement-kit",
+        "structure-runtime-kit",
+        "station-interaction-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "camera-feedback",
+      "label": "Camera And Feedback",
+      "kind": "presentation-domain",
+      "status": "candidate",
+      "domainPath": "n:camera-feedback",
+      "entry": "./domains/camera-feedback/index.js",
+      "kits": [
+        "camera-state-kit",
+        "camera-mode-kit",
+        "camera-collision-kit",
+        "camera-comfort-kit",
+        "camera-sequence-kit",
+        "diegetic-feedback-signal-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "economy-resources",
+      "label": "Economy And Resources",
+      "kind": "simulation-domain",
+      "status": "candidate",
+      "domainPath": "n:economy-resources",
+      "entry": "./domains/economy-resources/index.js",
+      "kits": [
+        "inventory-kit",
+        "cargo-kit",
+        "currency-kit",
+        "market-kit",
+        "upgrade-kit",
+        "resource-node-kit",
+        "recovery-site-kit",
+        "cargo-transfer-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "foundation",
+      "label": "Foundation",
+      "kind": "foundation",
+      "status": "candidate",
+      "domainPath": "n:foundation",
+      "entry": "./domains/foundation/index.js",
+      "kits": [
+        "protokit-core",
+        "seed-kit",
+        "clock-kit",
+        "state-digest-kit",
+        "replay-test-kit",
+        "health-report-kit",
+        "performance-budget-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "generic-defense",
+      "label": "Generic Defense",
+      "kind": "game-family-domain",
+      "status": "candidate",
+      "domainPath": "n:generic-defense",
+      "entry": "./domains/generic-defense/index.js",
+      "kits": [
+        "generic-defense-project-kits",
+        "generic-defense-project-bridge",
+        "generic-defense-aaa-dsk-bridge",
+        "generic-defense-dsk-boundaries",
+        "generic-defense-map-dsk",
+        "generic-defense-economy-wallet-dsk",
+        "generic-defense-build-placement-dsk",
+        "generic-defense-wave-agent-director-dsk",
+        "generic-defense-combat-resolver-dsk",
+        "generic-defense-session-facade-dsk",
+        "generic-defense-render-descriptor-dsk",
+        "generic-defense-session-command-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "hazard-combat",
+      "label": "Hazard And Combat",
+      "kind": "runtime-domain",
+      "status": "candidate",
+      "domainPath": "n:hazard-combat",
+      "entry": "./domains/hazard-combat/index.js",
+      "kits": [
+        "hazard-director-kit",
+        "damage-health-kit",
+        "encounter-director-kit",
+        "light-combat-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "input",
+      "label": "Input",
+      "kind": "runtime-domain",
+      "status": "candidate",
+      "domainPath": "n:input",
+      "entry": "./domains/input/index.js",
+      "kits": [
+        "action-input-kit",
+        "input-context-kit",
+        "input-buffer-kit",
+        "view-rig-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "progression",
+      "label": "Progression",
+      "kind": "runtime-domain",
+      "status": "candidate",
+      "domainPath": "n:progression",
+      "entry": "./domains/progression/index.js",
+      "kits": [
+        "objective-bridge-kit",
+        "objective-kit",
+        "mission-phase-kit",
+        "lock-group-kit",
+        "fail-state-kit",
+        "score-summary-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "project-deployment",
+      "label": "Project Deployment",
+      "kind": "bridge-domain",
+      "status": "candidate",
+      "domainPath": "n:project-deployment",
+      "entry": "./domains/project-deployment/index.js",
+      "kits": [
+        "project-batch-deploy-bridge"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "registry",
+      "label": "Registry Control Plane",
+      "kind": "control-domain",
+      "status": "official",
+      "domainPath": "n:registry",
+      "entry": "./domains/registry/index.js",
+      "kits": [
+        "kit-registry-domain-kit",
+        "capability-graph-domain-kit",
+        "composition-planning-domain-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "render-descriptors",
+      "label": "Render Descriptors",
+      "kind": "descriptor-domain",
+      "status": "candidate",
+      "domainPath": "n:render-descriptors",
+      "entry": "./domains/render-descriptors/index.js",
+      "kits": [
+        "render-descriptor-kit",
+        "asset-descriptor-kit",
+        "visual-pipeline-kit",
+        "render-layer-kit",
+        "material-palette-kit",
+        "lighting-descriptor-kit",
+        "sky-atmosphere-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "route-extraction",
+      "label": "Route Extraction",
+      "kind": "game-family-domain",
+      "status": "candidate",
+      "domainPath": "n:route-extraction",
+      "entry": "./domains/route-extraction/index.js",
+      "kits": [
+        "generic-route-cargo-extraction-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "rpg-combat",
+      "label": "RPG Combat",
+      "kind": "game-family-domain",
+      "status": "candidate",
+      "domainPath": "n:rpg-combat",
+      "entry": "./domains/rpg-combat/index.js",
+      "kits": [
+        "enemy-object-domain-kit",
+        "enemy-agent-domain-kit",
+        "damage-health-domain-kit",
+        "guard-domain-kit",
+        "parry-window-domain-kit",
+        "mana-meter-domain-kit",
+        "status-effect-domain-kit",
+        "vegetation-placement-domain-kit",
+        "route-clearance-domain-kit",
+        "terrain-ground-contact-domain-kit",
+        "world-zone-domain-kit",
+        "interaction-domain-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "rpg-social",
+      "label": "RPG Social",
+      "kind": "game-family-domain",
+      "status": "candidate",
+      "domainPath": "n:rpg-social",
+      "entry": "./domains/rpg-social/index.js",
+      "kits": [
+        "dialogue-line-domain-kit",
+        "relationship-state-domain-kit",
+        "npc-schedule-domain-kit",
+        "shop-inventory-domain-kit",
+        "quest-thread-domain-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "simulation",
+      "label": "Simulation",
+      "kind": "simulation-domain",
+      "status": "candidate",
+      "domainPath": "n:simulation",
+      "entry": "./domains/simulation/index.js",
+      "kits": [
+        "generic-pressure-loop-kit",
+        "generic-resource-loop-kit",
+        "generic-action-window-kit",
+        "generic-affordance-descriptor-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "spatial",
+      "label": "Spatial",
+      "kind": "runtime-domain",
+      "status": "candidate",
+      "domainPath": "n:spatial",
+      "entry": "./domains/spatial/index.js",
+      "kits": [
+        "spatial-index-kit",
+        "interactable-registry-kit",
+        "spatial-interaction-kit",
+        "hold-action-kit",
+        "completion-ledger-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "xr",
+      "label": "XR",
+      "kind": "adapter-domain",
+      "status": "candidate",
+      "domainPath": "n:xr",
+      "entry": "./domains/xr/index.js",
+      "kits": [
+        "stereoscopic-render-domain-kit",
+        "hand-input-adapter-kit",
+        "xr-ray-interaction-kit",
+        "webxr-hand-adapter-dsk",
+        "openxr-hand-adapter-dsk",
+        "hand-gesture-dsk",
+        "spatial-scene-graph-dsk",
+        "spatial-scene-graph-kit",
+        "selection-dsk",
+        "selection-domain-service-kit",
+        "transform-dsk",
+        "transform-domain-service-kit",
+        "widget-dsk",
+        "widget-domain-service-kit",
+        "interaction-dsk",
+        "interaction-domain-service-kit",
+        "persistence-dsk",
+        "persistence-domain-service-kit"
+      ]
+    }
   ]
 }

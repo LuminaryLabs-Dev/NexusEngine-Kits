@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "asset-descriptor-kit",
+  "version": "0.0.0",
+  "status": "scaffolded",
+  "kind": "runtime-kit",
+  "domain": "render-descriptors",
+  "domainPath": "n:render-descriptors:asset-descriptor",
+  "parentDomainPath": "n:render-descriptors",
+  "apiName": "assetDescriptor",
+  "factory": "createAssetDescriptorKit",
+  "entry": "./kits/render-descriptors/asset-descriptor-kit/index.js",
+  "packageExport": null,
+  "module": {
+    "package": "./kits/render-descriptors/asset-descriptor-kit/index.js",
+    "node": "./kits/render-descriptors/asset-descriptor-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/asset-descriptor-kit/index.js"
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "kit:asset-descriptor-kit",
+    "domain:render-descriptors"
+  ],
+  "composes": [],
+  "realBehavior": false,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "protokits/asset-descriptor-kit/index.js",
+    "parity": null
+  },
+  "runtime": {
+    "api": "assetDescriptor",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": null,
+    "smoke": null,
+    "parity": null,
+    "limitations": "kits/render-descriptors/asset-descriptor-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": true,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": false,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "asset-descriptor-kit",
+    "blocker": "asset-descriptor-kit has only scaffold or metadata behavior and lacks validated source parity."
+  }
+}

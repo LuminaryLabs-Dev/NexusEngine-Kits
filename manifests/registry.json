@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "nexusengine.repository-registry.v1",
+  "id": "LuminaryLabs-Dev/NexusEngine-Kits",
+  "owner": "LuminaryLabs-Dev",
+  "repository": "NexusEngine-Kits",
+  "requestedRef": "main",
+  "resolvedCommit": null,
+  "engineCompatibility": {
+    "package": "nexusengine",
+    "range": ">=0.0.3",
+    "testedCommit": "d76d54f862f9c6c6a115471b483dc1afda3f6b4a"
+  },
+  "promotion": {
+    "baselineCount": 120,
+    "approvedAdditionIds": [
+      "kit-registry-domain-kit",
+      "capability-graph-domain-kit",
+      "composition-planning-domain-kit"
+    ],
+    "activeCapability": "protokit-core"
+  },
+  "metadata": {
+    "sourceTemplate": true,
+    "resolvedCommitRule": "A metadata transport must replace null with the immutable fetched commit before trust or installation.",
+    "trustedOwners": [
+      "LuminaryLabs-Dev",
+      "LuminaryLabs-Agents",
+      "LuminaryLabs-Publish"
+    ]
+  }
+}

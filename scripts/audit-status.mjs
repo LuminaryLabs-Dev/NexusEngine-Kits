@@ -2,27 +2,21 @@ import { createAudit, readJson } from "./audit-utils.mjs";
 
 const audit = createAudit("Status Consistency Audit");
 const parity = readJson("parity/parity-status.json");
-const completionManifest = readJson("kits/spatial/completion-ledger-kit/kit.json");
-const resourceManifest = readJson("kits/simulation/generic-resource-loop-kit/kit.json");
+const catalog = readJson("kit-catalog.json");
+const allowed = new Set(["planned", "migration-placeholder", "scaffolded", "candidate", "official", "deprecated", "archived", "blocked", "experimental"]);
+const manifests = new Map((catalog.manifests ?? []).map((manifest) => [manifest.id, manifest]));
 
-const allowed = new Set(["planned", "migration-placeholder", "scaffolded", "candidate", "official", "deprecated", "archived"]);
-
-for (const [kitId, entry] of Object.entries(parity.kits ?? {})) {
+if (Object.keys(parity.kits ?? {}).length !== manifests.size) audit.error("parity records and catalog manifests have different totals");
+for (const [kitId, manifest] of manifests) {
+  const entry = parity.kits?.[kitId];
+  if (!entry) {
+    audit.error(`${kitId} has no parity record`);
+    continue;
+  }
   if (!allowed.has(entry.status)) audit.error(`${kitId} has invalid parity status ${entry.status}`);
-}
-
-const completionStatus = parity.kits?.["completion-ledger-kit"]?.status;
-if (completionManifest.stability !== "candidate") audit.error("completion-ledger-kit kit.json must be candidate while real behavior is under parity review");
-if (completionManifest.source?.parity !== "candidate") audit.error("completion-ledger-kit source parity must be candidate");
-if (completionStatus !== "candidate") audit.error("completion-ledger-kit parity-status.json must be candidate");
-
-const resourceStatus = parity.kits?.["generic-resource-loop-kit"]?.status;
-if (resourceManifest.stability !== "official") audit.error("generic-resource-loop-kit kit.json must be official");
-if (resourceManifest.source?.parity !== "official") audit.error("generic-resource-loop-kit source parity must be official");
-if (resourceStatus !== "official") audit.error("generic-resource-loop-kit parity-status.json must be official");
-
-for (const [kitId, entry] of Object.entries(parity.kits ?? {})) {
-  if (entry.status === "official") audit.warn(`${kitId} is official; verify docs, tests, parity, and domain smoke are all complete`);
+  if (entry.status !== manifest.status) audit.error(`${kitId} parity status ${entry.status} differs from manifest ${manifest.status}`);
+  if (Boolean(entry.realBehavior) !== Boolean(manifest.realBehavior)) audit.error(`${kitId} realBehavior differs between parity and manifest`);
+  if (entry.status === "official") audit.warn(`${kitId} is official; all generated proof gates must stay green`);
 }
 
 audit.finish("status-report");

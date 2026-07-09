@@ -12,12 +12,13 @@ for (const domainId of Object.keys(kitCatalog.domains ?? {})) {
 
 for (const domain of domainCatalog.domains ?? []) {
   if (!exists("domains", domain.id)) audit.error(`domain catalog entry ${domain.id} has no physical domain folder`);
-  if (!exists(domain.path)) audit.error(`domain catalog entry ${domain.id} path missing: ${domain.path}`);
+  const entry = String(domain.entry ?? "").replace(/^\.\//, "");
+  if (!entry || !exists(entry)) audit.error(`domain catalog entry ${domain.id} path missing: ${domain.entry}`);
 }
 
 for (const bundle of bundleCatalog.bundles ?? []) {
-  if (!exists(bundle.path)) audit.error(`bundle ${bundle.id} path missing: ${bundle.path}`);
-  const folder = bundle.path.endsWith(".js") ? bundle.id : bundle.path.split("/").slice(0, -1).join("/");
+  const entry = String(bundle.entry ?? "").replace(/^\.\//, "");
+  if (!entry || !exists(entry)) audit.error(`bundle ${bundle.id} path missing: ${bundle.entry}`);
   if (!exists("bundles", bundle.id, "README.md")) audit.warn(`bundle ${bundle.id} has no README.md`);
 }
 

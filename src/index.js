@@ -69,3 +69,20 @@ export {
   createResourceMeterKit,
   createResourceMeterDomainKit
 } from "../kits/simulation/generic-resource-loop-kit/index.js";
+
+export {
+  createKitRegistryDomainKit,
+  createRepositoryRegistry,
+  mergeRegistries
+} from "../kits/registry/kit-registry-domain-kit/index.js";
+
+export {
+  createCapabilityGraphDomainKit,
+  createCapabilityGraph
+} from "../kits/registry/capability-graph-domain-kit/index.js";
+
+export {
+  createCompositionPlanningDomainKit
+} from "../kits/registry/composition-planning-domain-kit/index.js";
+
+export { createRegistryDomainKits } from "../domains/registry/index.js";

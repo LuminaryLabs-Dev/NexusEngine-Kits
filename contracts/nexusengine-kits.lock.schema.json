@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NexusEngine Kits Lockfile",
+  "type": "object",
+  "required": ["schemaVersion", "registries", "selection", "resolution"],
+  "properties": {
+    "schemaVersion": { "const": "nexusengine.kits-lock.v1" },
+    "registries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "owner", "repository", "requestedRef", "resolvedCommit"],
+        "properties": {
+          "resolvedCommit": { "type": "string", "pattern": "^[a-fA-F0-9]{40}$" }
+        }
+      }
+    },
+    "selection": { "type": "object" },
+    "resolution": {
+      "type": "object",
+      "required": ["installOrder", "coreDependencies", "kits"]
+    }
+  },
+  "additionalProperties": false
+}

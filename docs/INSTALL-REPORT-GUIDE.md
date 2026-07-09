@@ -1,24 +1,15 @@
 # Install Report Guide
 
-Install reports describe what the installer did.
+Planning happens before code execution. Every selection report exposes:
 
-## Fields
-
-```txt
+```text
 ok
-operation
-kitId
-domainId
-bundleId
-installed
-duplicate
-warnings
-errors
-meta
+registryId, resolvedCommit
+selection, plan
+resolvedSources
+installed, skipped
+warnings, errors
+coreDependencies
 ```
 
-## Usage
-
-A successful kit install should report `ok: true`, the operation name, and whether a kit was newly installed or skipped as a duplicate.
-
-Domain and bundle reports should include child reports in `meta.reports`.
+`resolvedSources` records repository identity, commit, module path, and integrity. `skipped` contains unready domain/bundle members or duplicate installed kits. Direct unready selections, missing providers, cycles, lock mismatches, integrity failures, and code-execution failures appear in `errors` and set `ok: false`.

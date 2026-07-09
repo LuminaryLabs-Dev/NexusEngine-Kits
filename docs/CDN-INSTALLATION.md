@@ -1,23 +1,13 @@
 # CDN Installation
 
-CDN imports should be stable and explicit.
-
-## Installer
+Production CDN imports must use a full commit SHA. `main` is a discovery channel, not an executable lock.
 
 ```js
-import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
+import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@<40-character-sha>/installer/index.js";
 ```
 
-## One domain
+Registry manifests expose browser module URL templates containing `{resolvedCommit}`. `pullRegistry()` replaces that token with the commit returned by the metadata transport and rejects mutable HTTP module URLs.
 
-```js
-import { createInputDomainKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/domains/input/index.js";
-```
+For remote execution, use `createBrowserModuleResolver()`. It fetches module bytes, checks the manifest SHA-256 integrity, and only then imports the immutable URL. Third-party code also requires `allowExternalCode: true`.
 
-## Full catalog
-
-```js
-import { createAllNexusEngineKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/bundles/all.js";
-```
-
-Prefer version or commit pinned CDN URLs for production builds after the first tagged release.
+The bare `nexusengine` dependency must be supplied through an import map pinned to the exact `engineCompatibility.testedCommit` or another explicitly validated compatible revision.
