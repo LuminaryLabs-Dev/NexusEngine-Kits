@@ -6714,71 +6714,73 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "seed-kit",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
+    "version": "1.0.0",
+    "status": "official",
+    "kind": "domain-service-kit",
     "domain": "foundation",
-    "domainPath": "n:foundation:seed",
+    "domainPath": "n:foundation:seed-stream",
     "parentDomainPath": "n:foundation",
-    "apiName": "seed",
+    "apiName": "seedStream",
     "factory": "createSeedKit",
     "entry": "./kits/foundation/seed-kit/index.js",
-    "packageExport": null,
+    "packageExport": "./seed-kit",
     "module": {
-      "package": null,
-      "node": null,
-      "browser": null
+      "package": "./kits/foundation/seed-kit/index.js",
+      "node": "./kits/foundation/seed-kit/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js"
     },
-    "integrity": null,
+    "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
     "environments": [
       "node",
       "browser"
     ],
     "requires": [],
     "provides": [
-      "kit:seed-kit",
-      "domain:foundation"
+      "n:foundation:seed-stream",
+      "seed:world",
+      "random:seeded",
+      "random:stream"
     ],
     "composes": [],
-    "realBehavior": false,
+    "realBehavior": true,
     "source": {
       "owner": "LuminaryLabs-Agents",
       "repository": "NexusEngine-ProtoKits",
       "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/seed-kit/index.js",
-      "parity": null
+      "resolvedCommit": "11d245913ba4d30f3ce950eb5a17e1cc6e4aa1f5",
+      "path": "protokits/generic-seed-kit/index.js",
+      "parity": "official"
     },
     "runtime": {
-      "api": "seed",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
+      "api": "seedStream",
+      "snapshot": true,
+      "loadSnapshot": true,
+      "reset": true,
+      "deterministic": true
     },
     "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
+      "readme": "kits/foundation/seed-kit/README.md",
+      "smoke": "kits/foundation/seed-kit/smoke.test.mjs",
+      "parity": "kits/foundation/seed-kit/source-parity.md",
+      "limitations": "kits/foundation/seed-kit/LIMITATIONS.md"
     },
     "promotion": {
       "baseline": true,
-      "resolved": false,
+      "resolved": true,
       "stages": {
         "inventoried": true,
         "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
+        "protoValidated": true,
+        "candidate": true,
+        "official": true,
         "deprecated": false,
         "archived": false,
         "blocked": false
       },
-      "nextCapability": "seed-kit",
-      "blocker": "seed-kit has no validated stable implementation or parity record."
+      "nextCapability": null,
+      "blocker": null
     },
-    "stability": "migration-placeholder"
+    "stability": "official"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -8979,7 +8981,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "capability-graph-domain-kit",
       "composition-planning-domain-kit"
     ],
-    "activeCapability": "seed-kit"
+    "activeCapability": "clock-kit"
   },
   "domains": {
     "aerial": [
@@ -15931,71 +15933,73 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "seed-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "domain-service-kit",
       "domain": "foundation",
-      "domainPath": "n:foundation:seed",
+      "domainPath": "n:foundation:seed-stream",
       "parentDomainPath": "n:foundation",
-      "apiName": "seed",
+      "apiName": "seedStream",
       "factory": "createSeedKit",
       "entry": "./kits/foundation/seed-kit/index.js",
-      "packageExport": null,
+      "packageExport": "./seed-kit",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/foundation/seed-kit/index.js",
+        "node": "./kits/foundation/seed-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:seed-kit",
-        "domain:foundation"
+        "n:foundation:seed-stream",
+        "seed:world",
+        "random:seeded",
+        "random:stream"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "owner": "LuminaryLabs-Agents",
         "repository": "NexusEngine-ProtoKits",
         "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/seed-kit/index.js",
-        "parity": null
+        "resolvedCommit": "11d245913ba4d30f3ce950eb5a17e1cc6e4aa1f5",
+        "path": "protokits/generic-seed-kit/index.js",
+        "parity": "official"
       },
       "runtime": {
-        "api": "seed",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
+        "api": "seedStream",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/foundation/seed-kit/README.md",
+        "smoke": "kits/foundation/seed-kit/smoke.test.mjs",
+        "parity": "kits/foundation/seed-kit/source-parity.md",
+        "limitations": "kits/foundation/seed-kit/LIMITATIONS.md"
       },
       "promotion": {
         "baseline": true,
-        "resolved": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
+          "protoValidated": true,
+          "candidate": true,
+          "official": true,
           "deprecated": false,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "seed-kit",
-        "blocker": "seed-kit has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder"
+      "stability": "official"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -17743,7 +17747,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "capability-graph-domain-kit",
       "composition-planning-domain-kit"
     ],
-    "activeCapability": "seed-kit"
+    "activeCapability": "clock-kit"
   },
   "metadata": {
     "sourceTemplate": true,
@@ -26993,33 +26997,35 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "seed-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "domain-service-kit",
       "domain": "foundation",
-      "domainPath": "n:foundation:seed",
+      "domainPath": "n:foundation:seed-stream",
       "parentDomainPath": "n:foundation",
-      "apiName": "seed",
+      "apiName": "seedStream",
       "factory": "createSeedKit",
       "entry": "./kits/foundation/seed-kit/index.js",
-      "packageExport": null,
+      "packageExport": "./seed-kit",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/foundation/seed-kit/index.js",
+        "node": "./kits/foundation/seed-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:seed-kit",
-        "domain:foundation"
+        "n:foundation:seed-stream",
+        "seed:world",
+        "random:seeded",
+        "random:stream"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
         "owner": "LuminaryLabs-Dev",
@@ -27029,59 +27035,59 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "path": "./kits/foundation/seed-kit/index.js"
       },
       "runtime": {
-        "api": "seed",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
+        "api": "seedStream",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/foundation/seed-kit/README.md",
+        "smoke": "kits/foundation/seed-kit/smoke.test.mjs",
+        "parity": "kits/foundation/seed-kit/source-parity.md",
+        "limitations": "kits/foundation/seed-kit/LIMITATIONS.md"
       },
       "promotion": {
         "baseline": true,
-        "resolved": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
+          "protoValidated": true,
+          "candidate": true,
+          "official": true,
           "deprecated": false,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "seed-kit",
-        "blocker": "seed-kit has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder",
+      "stability": "official",
       "lineage": {
         "source": {
           "owner": "LuminaryLabs-Agents",
           "repository": "NexusEngine-ProtoKits",
           "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/seed-kit/index.js",
-          "parity": null
+          "resolvedCommit": "11d245913ba4d30f3ce950eb5a17e1cc6e4aa1f5",
+          "path": "protokits/generic-seed-kit/index.js",
+          "parity": "official"
         },
         "promotion": {
           "baseline": true,
-          "resolved": false,
+          "resolved": true,
           "stages": {
             "inventoried": true,
             "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
+            "protoValidated": true,
+            "candidate": true,
+            "official": true,
             "deprecated": false,
             "archived": false,
             "blocked": false
           },
-          "nextCapability": "seed-kit",
-          "blocker": "seed-kit has no validated stable implementation or parity record."
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -29925,24 +29931,24 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
 });
 export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineTotal": 120,
-  "baselineResolved": 2,
-  "baselineRemaining": 118,
-  "official": 4,
+  "baselineResolved": 3,
+  "baselineRemaining": 117,
+  "official": 5,
   "candidate": 1,
   "scaffolded": 9,
-  "placeholder": 108,
+  "placeholder": 107,
   "deprecated": 1,
   "archived": 0,
   "blocked": 0,
   "approvedAdditionsTotal": 3,
   "approvedAdditionsResolved": 3,
-  "activeCapability": "seed-kit",
+  "activeCapability": "clock-kit",
   "stages": {
     "inventoried": 123,
     "sourceMapped": 123,
-    "protoValidated": 6,
-    "candidate": 6,
-    "official": 4,
+    "protoValidated": 7,
+    "candidate": 7,
+    "official": 5,
     "deprecated": 1,
     "archived": 0,
     "blocked": 0

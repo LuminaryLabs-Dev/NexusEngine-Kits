@@ -1,6 +1,6 @@
 {
   "status": "registry-backed",
-  "activeCapability": "seed-kit",
+  "activeCapability": "clock-kit",
   "baselineCount": 120,
   "approvedAdditions": {
     "total": 3,
@@ -687,11 +687,11 @@
       "next": "score-summary-kit has no validated stable implementation or parity record."
     },
     "seed-kit": {
-      "status": "migration-placeholder",
+      "status": "official",
       "target": "kits/foundation/seed-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "seed-kit has no validated stable implementation or parity record."
+      "realBehavior": true,
+      "sourceCommit": "11d245913ba4d30f3ce950eb5a17e1cc6e4aa1f5",
+      "next": "keep all stable gates green"
     },
     "selection-domain-service-kit": {
       "status": "migration-placeholder",

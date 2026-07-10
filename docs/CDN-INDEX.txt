@@ -95,7 +95,7 @@ replay-test-kit unavailable
 resource-node-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/economy-resources/resource-node-kit/index.js
 route-clearance-domain-kit unavailable
 score-summary-kit unavailable
-seed-kit unavailable
+seed-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js
 selection-domain-service-kit unavailable
 selection-dsk unavailable
 shop-inventory-domain-kit unavailable

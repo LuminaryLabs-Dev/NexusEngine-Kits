@@ -76,6 +76,11 @@ export {
 } from "../kits/foundation/protokit-core/index.js";
 
 export {
+  createSeedKit,
+  createGenericSeedKit
+} from "../kits/foundation/seed-kit/index.js";
+
+export {
   createKitRegistryDomainKit,
   createRepositoryRegistry,
   mergeRegistries

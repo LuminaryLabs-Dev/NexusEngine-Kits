@@ -10,3 +10,4 @@
 - Remote metadata pull never executes code. External registries require an exact opt-in SHA, and external code also requires `allowExternalCode`, integrity proof, and an approved resolver.
 - Registry, capability graph, and composition planning remain three bounded DSK owners under `n:registry`.
 - Deprecated runtime bridges must carry full parity and proof, remain outside default composition, and require explicit installer status opt-in.
+- `seed-kit` is the official foundation service for world-seed and named-stream state; it composes NexusEngine seeded-random primitives without owning procedural content or host concerns.

@@ -6,7 +6,7 @@ Promote only validated NexusEngine ProtoKit behavior into the stable catalog whi
 
 ## Current promotion
 
-`generic-resource-loop-kit` is the first official baseline capability. The three-kit registry control plane is published and audited as separate official owners for registry state, capability graph, and composition planning. `protokit-core` is resolved as a deprecated, opt-in compatibility bridge while NexusEngine retains canonical core ownership. The next baseline capability is `seed-kit`.
+`generic-resource-loop-kit` and `seed-kit` are official baseline capabilities. The three-kit registry control plane is published and audited as separate official owners for registry state, capability graph, and composition planning. `protokit-core` is resolved as a deprecated, opt-in compatibility bridge while NexusEngine retains canonical core ownership. The next baseline capability is `clock-kit`.
 
 ## Current promotion hold
 

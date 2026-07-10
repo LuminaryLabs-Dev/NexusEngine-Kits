@@ -1,0 +1,6 @@
+{
+  "name": "@luminarylabs/nexusengine-kits-seed-kit",
+  "private": true,
+  "type": "module",
+  "exports": "./index.js"
+}

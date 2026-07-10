@@ -28,6 +28,8 @@
     const deprecatedDefault = await installer.installKit(engine, "protokit-core");
     const compatibilityInstaller = createNexusEngineKitInstaller({ allowStatuses: ["official", "deprecated"] });
     const deprecatedOptIn = await compatibilityInstaller.installKit(engine, "protokit-core");
+    const seed = await installer.installKit(engine, "seed-kit", { seed: "browser-world" });
+    const terrainValue = engine.n.seedStream.next("terrain");
     engine.n.resourceMeter.spend("browser-energy", 3);
     const progress = getKitProgress();
     window.__nexusEngineKitsProof = {
@@ -36,7 +38,8 @@
         !deprecatedDefault.installed &&
         deprecatedDefault.reason === "status-not-allowed" &&
         deprecatedOptIn.installed &&
-        progress.baselineResolved === 2,
+        seed.installed &&
+        progress.baselineResolved === 3,
       registryInstalled: registry.report.installed.map((entry) => entry.id),
       energy: engine.n.resourceMeter.get("browser-energy").value,
       hasCore: typeof engine.n.coreSimulation.getSnapshot === "function",
@@ -44,6 +47,8 @@
       deprecatedDefaultReason: deprecatedDefault.reason,
       deprecatedOptInInstalled: deprecatedOptIn.installed,
       compatibilitySnapshot: engine.n.protokitCore.getSnapshot(),
+      terrainValue,
+      seedSnapshot: engine.n.seedStream.getSnapshot(),
       progress
     };
     document.body.textContent = window.__nexusEngineKitsProof.ok ? "NexusEngine Kits browser smoke passed" : "NexusEngine Kits browser smoke failed";

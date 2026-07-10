@@ -6,6 +6,7 @@ const required = [
   "createCompletionLedgerKit",
   "createGenericResourceLoopKit",
   "createProtokitCore",
+  "createSeedKit",
   "getKitProgress",
   "createRepositoryRegistry",
   "pullRegistry",

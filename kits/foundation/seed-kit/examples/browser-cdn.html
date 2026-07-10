@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>NexusEngine Seed Streams</title>
+<script type="importmap">
+{
+  "imports": {
+    "nexusengine": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@851372d29fece5ad7d9a6253fb1a74730ae24047/src/index.js"
+  }
+}
+</script>
+<script type="module">
+  import { createRealtimeGame } from "nexusengine";
+  import { createSeedKit } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@PAYLOAD_COMMIT/kits/foundation/seed-kit/index.js";
+
+  const engine = createRealtimeGame({ kits: [createSeedKit({ seed: "browser-world" })] });
+  engine.n.seedStream.next("terrain");
+  document.body.textContent = JSON.stringify(engine.n.seedStream.getSnapshot(), null, 2);
+</script>
+<body></body>
+</html>

@@ -54,6 +54,7 @@ assert.deepEqual(all.map((kit) => kit.id), [
   "kit-registry-domain-kit",
   "capability-graph-domain-kit",
   "composition-planning-domain-kit",
+  "seed-kit",
   "generic-resource-loop-kit"
 ]);
 

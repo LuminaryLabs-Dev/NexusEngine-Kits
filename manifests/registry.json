@@ -17,7 +17,7 @@
       "capability-graph-domain-kit",
       "composition-planning-domain-kit"
     ],
-    "activeCapability": "seed-kit"
+    "activeCapability": "clock-kit"
   },
   "metadata": {
     "sourceTemplate": true,

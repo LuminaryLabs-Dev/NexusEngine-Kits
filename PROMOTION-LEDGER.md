@@ -1,9 +1,9 @@
 # Promotion Ledger
 
-Baseline resolved: 2 / 120
-Baseline remaining: 118
+Baseline resolved: 3 / 120
+Baseline remaining: 117
 Approved additions: 3 / 3
-Active capability: seed-kit
+Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
 |---|---|---:|---|
@@ -104,7 +104,7 @@ Active capability: seed-kit
 | resource-node-kit | scaffolded | no | resource-node-kit has only scaffold or metadata behavior and lacks validated source parity. |
 | route-clearance-domain-kit | migration-placeholder | no | route-clearance-domain-kit has no validated stable implementation or parity record. |
 | score-summary-kit | migration-placeholder | no | score-summary-kit has no validated stable implementation or parity record. |
-| seed-kit | migration-placeholder | no | seed-kit has no validated stable implementation or parity record. |
+| seed-kit | official | yes |  |
 | selection-domain-service-kit | migration-placeholder | no | selection-domain-service-kit has no validated stable implementation or parity record. |
 | selection-dsk | migration-placeholder | no | selection-dsk has no validated stable implementation or parity record. |
 | shop-inventory-domain-kit | migration-placeholder | no | shop-inventory-domain-kit has no validated stable implementation or parity record. |

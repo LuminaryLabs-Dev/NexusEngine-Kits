@@ -16,7 +16,7 @@
     "node": "./kits/foundation/seed-kit/index.js",
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js"
   },
-  "integrity": null,
+  "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
   "environments": [
     "node",
     "browser"
@@ -66,5 +66,6 @@
     },
     "nextCapability": null,
     "blocker": null
-  }
+  },
+  "stability": "official"
 }
