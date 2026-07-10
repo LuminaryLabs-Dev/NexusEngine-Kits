@@ -11,6 +11,8 @@ if (process.argv.includes("--json")) {
   console.log(`Candidate:           ${progress.candidate}`);
   console.log(`Scaffolded:          ${progress.scaffolded}`);
   console.log(`Placeholder:         ${progress.placeholder}`);
+  console.log(`Deprecated:          ${progress.deprecated}`);
+  console.log(`Archived:            ${progress.archived}`);
   console.log(`Approved additions:  ${progress.approvedAdditionsResolved} / ${progress.approvedAdditionsTotal}`);
   console.log(`Active capability:   ${progress.activeCapability ?? "none"}`);
   console.log(`Blocked capabilities: ${progress.blocked}`);

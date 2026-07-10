@@ -6023,71 +6023,72 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "protokit-core",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
+    "version": "1.0.0",
+    "status": "deprecated",
+    "kind": "compatibility-domain-service-kit",
     "domain": "foundation",
-    "domainPath": "n:foundation:protokit-core",
-    "parentDomainPath": "n:foundation",
+    "domainPath": "n:compatibility:protokit-core",
+    "parentDomainPath": "n:compatibility",
     "apiName": "protokitCore",
     "factory": "createProtokitCore",
     "entry": "./kits/foundation/protokit-core/index.js",
-    "packageExport": null,
+    "packageExport": "./protokit-core",
     "module": {
-      "package": null,
-      "node": null,
-      "browser": null
+      "package": "./kits/foundation/protokit-core/index.js",
+      "node": "./kits/foundation/protokit-core/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js"
     },
-    "integrity": null,
+    "integrity": "sha256-i5xX/vht6VmLIDAJDs7v1cVrauteU70DqqvCaMSXmME=",
     "environments": [
       "node",
       "browser"
     ],
     "requires": [],
     "provides": [
-      "kit:protokit-core",
-      "domain:foundation"
+      "n:compatibility:protokit-core",
+      "compatibility:protokit-core",
+      "foundation:deterministic-utility-compatibility"
     ],
     "composes": [],
-    "realBehavior": false,
+    "realBehavior": true,
     "source": {
       "owner": "LuminaryLabs-Agents",
       "repository": "NexusEngine-ProtoKits",
       "requestedRef": "main",
-      "resolvedCommit": null,
+      "resolvedCommit": "9b0d74c57c29d04a9ba955ae41c8ca19cb2cd5d6",
       "path": "protokits/protokit-core/index.js",
-      "parity": null
+      "parity": "deprecated-replacement-parity"
     },
     "runtime": {
       "api": "protokitCore",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
+      "snapshot": true,
+      "loadSnapshot": true,
+      "reset": true,
+      "deterministic": true
     },
     "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
+      "readme": "kits/foundation/protokit-core/README.md",
+      "smoke": "kits/foundation/protokit-core/smoke.test.mjs",
+      "parity": "kits/foundation/protokit-core/source-parity.md",
+      "limitations": "kits/foundation/protokit-core/LIMITATIONS.md"
     },
     "promotion": {
       "baseline": true,
-      "resolved": false,
+      "resolved": true,
       "stages": {
         "inventoried": true,
         "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
+        "protoValidated": true,
+        "candidate": true,
         "official": false,
-        "deprecated": false,
+        "deprecated": true,
         "archived": false,
         "blocked": false
       },
-      "nextCapability": "protokit-core",
-      "blocker": "protokit-core has no validated stable implementation or parity record."
+      "nextCapability": null,
+      "blocker": null
     },
-    "stability": "migration-placeholder"
+    "stability": "deprecated"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -8978,7 +8979,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "capability-graph-domain-kit",
       "composition-planning-domain-kit"
     ],
-    "activeCapability": "protokit-core"
+    "activeCapability": "seed-kit"
   },
   "domains": {
     "aerial": [
@@ -15239,71 +15240,72 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "protokit-core",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
+      "version": "1.0.0",
+      "status": "deprecated",
+      "kind": "compatibility-domain-service-kit",
       "domain": "foundation",
-      "domainPath": "n:foundation:protokit-core",
-      "parentDomainPath": "n:foundation",
+      "domainPath": "n:compatibility:protokit-core",
+      "parentDomainPath": "n:compatibility",
       "apiName": "protokitCore",
       "factory": "createProtokitCore",
       "entry": "./kits/foundation/protokit-core/index.js",
-      "packageExport": null,
+      "packageExport": "./protokit-core",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/foundation/protokit-core/index.js",
+        "node": "./kits/foundation/protokit-core/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-i5xX/vht6VmLIDAJDs7v1cVrauteU70DqqvCaMSXmME=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:protokit-core",
-        "domain:foundation"
+        "n:compatibility:protokit-core",
+        "compatibility:protokit-core",
+        "foundation:deterministic-utility-compatibility"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "owner": "LuminaryLabs-Agents",
         "repository": "NexusEngine-ProtoKits",
         "requestedRef": "main",
-        "resolvedCommit": null,
+        "resolvedCommit": "9b0d74c57c29d04a9ba955ae41c8ca19cb2cd5d6",
         "path": "protokits/protokit-core/index.js",
-        "parity": null
+        "parity": "deprecated-replacement-parity"
       },
       "runtime": {
         "api": "protokitCore",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/foundation/protokit-core/README.md",
+        "smoke": "kits/foundation/protokit-core/smoke.test.mjs",
+        "parity": "kits/foundation/protokit-core/source-parity.md",
+        "limitations": "kits/foundation/protokit-core/LIMITATIONS.md"
       },
       "promotion": {
         "baseline": true,
-        "resolved": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
+          "protoValidated": true,
+          "candidate": true,
           "official": false,
-          "deprecated": false,
+          "deprecated": true,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "protokit-core",
-        "blocker": "protokit-core has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder"
+      "stability": "deprecated"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -17732,7 +17734,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
   "engineCompatibility": {
     "package": "nexusengine",
     "range": ">=0.0.3",
-    "testedCommit": "d76d54f862f9c6c6a115471b483dc1afda3f6b4a"
+    "testedCommit": "851372d29fece5ad7d9a6253fb1a74730ae24047"
   },
   "promotion": {
     "baselineCount": 120,
@@ -17741,7 +17743,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "capability-graph-domain-kit",
       "composition-planning-domain-kit"
     ],
-    "activeCapability": "protokit-core"
+    "activeCapability": "seed-kit"
   },
   "metadata": {
     "sourceTemplate": true,
@@ -26040,33 +26042,34 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "protokit-core",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
+      "version": "1.0.0",
+      "status": "deprecated",
+      "kind": "compatibility-domain-service-kit",
       "domain": "foundation",
-      "domainPath": "n:foundation:protokit-core",
-      "parentDomainPath": "n:foundation",
+      "domainPath": "n:compatibility:protokit-core",
+      "parentDomainPath": "n:compatibility",
       "apiName": "protokitCore",
       "factory": "createProtokitCore",
       "entry": "./kits/foundation/protokit-core/index.js",
-      "packageExport": null,
+      "packageExport": "./protokit-core",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/foundation/protokit-core/index.js",
+        "node": "./kits/foundation/protokit-core/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-i5xX/vht6VmLIDAJDs7v1cVrauteU70DqqvCaMSXmME=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:protokit-core",
-        "domain:foundation"
+        "n:compatibility:protokit-core",
+        "compatibility:protokit-core",
+        "foundation:deterministic-utility-compatibility"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
         "owner": "LuminaryLabs-Dev",
@@ -26077,58 +26080,58 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       },
       "runtime": {
         "api": "protokitCore",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/foundation/protokit-core/README.md",
+        "smoke": "kits/foundation/protokit-core/smoke.test.mjs",
+        "parity": "kits/foundation/protokit-core/source-parity.md",
+        "limitations": "kits/foundation/protokit-core/LIMITATIONS.md"
       },
       "promotion": {
         "baseline": true,
-        "resolved": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
+          "protoValidated": true,
+          "candidate": true,
           "official": false,
-          "deprecated": false,
+          "deprecated": true,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "protokit-core",
-        "blocker": "protokit-core has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder",
+      "stability": "deprecated",
       "lineage": {
         "source": {
           "owner": "LuminaryLabs-Agents",
           "repository": "NexusEngine-ProtoKits",
           "requestedRef": "main",
-          "resolvedCommit": null,
+          "resolvedCommit": "9b0d74c57c29d04a9ba955ae41c8ca19cb2cd5d6",
           "path": "protokits/protokit-core/index.js",
-          "parity": null
+          "parity": "deprecated-replacement-parity"
         },
         "promotion": {
           "baseline": true,
-          "resolved": false,
+          "resolved": true,
           "stages": {
             "inventoried": true,
             "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
+            "protoValidated": true,
+            "candidate": true,
             "official": false,
-            "deprecated": false,
+            "deprecated": true,
             "archived": false,
             "blocked": false
           },
-          "nextCapability": "protokit-core",
-          "blocker": "protokit-core has no validated stable implementation or parity record."
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -29922,25 +29925,25 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
 });
 export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineTotal": 120,
-  "baselineResolved": 1,
-  "baselineRemaining": 119,
+  "baselineResolved": 2,
+  "baselineRemaining": 118,
   "official": 4,
   "candidate": 1,
   "scaffolded": 9,
-  "placeholder": 109,
-  "deprecated": 0,
+  "placeholder": 108,
+  "deprecated": 1,
   "archived": 0,
   "blocked": 0,
   "approvedAdditionsTotal": 3,
   "approvedAdditionsResolved": 3,
-  "activeCapability": "protokit-core",
+  "activeCapability": "seed-kit",
   "stages": {
     "inventoried": 123,
     "sourceMapped": 123,
-    "protoValidated": 5,
-    "candidate": 5,
+    "protoValidated": 6,
+    "candidate": 6,
     "official": 4,
-    "deprecated": 0,
+    "deprecated": 1,
     "archived": 0,
     "blocked": 0
   }

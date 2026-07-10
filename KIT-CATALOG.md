@@ -61,7 +61,7 @@ blocked
   Promotion has an exact unresolved blocker.
 ```
 
-`manifests/kits`, `manifests/domains`, and `manifests/bundles` are authoritative. `npm run build:catalog` generates the JavaScript catalog, JSON catalogs, repository registry, factory table, CDN index, parity records, readiness ledger, progress, and physical `kit.json` mirrors. Only official entries participate in default creation and installation.
+`manifests/kits`, `manifests/domains`, and `manifests/bundles` are authoritative. `npm run build:catalog` generates the JavaScript catalog, JSON catalogs, repository registry, factory table, CDN index, parity records, readiness ledger, progress, and physical `kit.json` mirrors. Only official entries participate in default creation and installation; deprecated runtime bridges require explicit `allowStatuses` opt-in.
 
 ## Promotion Source
 

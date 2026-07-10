@@ -3,25 +3,25 @@
   "generatedFrom": "manifests/kits",
   "progress": {
     "baselineTotal": 120,
-    "baselineResolved": 1,
-    "baselineRemaining": 119,
+    "baselineResolved": 2,
+    "baselineRemaining": 118,
     "official": 4,
     "candidate": 1,
     "scaffolded": 9,
-    "placeholder": 109,
-    "deprecated": 0,
+    "placeholder": 108,
+    "deprecated": 1,
     "archived": 0,
     "blocked": 0,
     "approvedAdditionsTotal": 3,
     "approvedAdditionsResolved": 3,
-    "activeCapability": "protokit-core",
+    "activeCapability": "seed-kit",
     "stages": {
       "inventoried": 123,
       "sourceMapped": 123,
-      "protoValidated": 5,
-      "candidate": 5,
+      "protoValidated": 6,
+      "candidate": 6,
       "official": 4,
-      "deprecated": 0,
+      "deprecated": 1,
       "archived": 0,
       "blocked": 0
     }
@@ -1595,21 +1595,21 @@
     },
     {
       "id": "protokit-core",
-      "status": "migration-placeholder",
+      "status": "deprecated",
       "baseline": true,
-      "resolved": false,
+      "resolved": true,
       "stages": {
         "inventoried": true,
         "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
+        "protoValidated": true,
+        "candidate": true,
         "official": false,
-        "deprecated": false,
+        "deprecated": true,
         "archived": false,
         "blocked": false
       },
-      "nextCapability": "protokit-core",
-      "blocker": "protokit-core has no validated stable implementation or parity record."
+      "nextCapability": null,
+      "blocker": null
     },
     {
       "id": "quest-thread-domain-kit",

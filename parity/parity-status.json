@@ -1,6 +1,6 @@
 {
   "status": "registry-backed",
-  "activeCapability": "protokit-core",
+  "activeCapability": "seed-kit",
   "baselineCount": 120,
   "approvedAdditions": {
     "total": 3,
@@ -617,11 +617,11 @@
       "next": "project-batch-deploy-bridge has no validated stable implementation or parity record."
     },
     "protokit-core": {
-      "status": "migration-placeholder",
+      "status": "deprecated",
       "target": "kits/foundation/protokit-core",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "protokit-core has no validated stable implementation or parity record."
+      "realBehavior": true,
+      "sourceCommit": "9b0d74c57c29d04a9ba955ae41c8ca19cb2cd5d6",
+      "next": "keep all stable gates green"
     },
     "quest-thread-domain-kit": {
       "status": "migration-placeholder",

@@ -85,7 +85,7 @@ persistence-domain-service-kit unavailable
 persistence-dsk unavailable
 powered-aerial-flight-domain-kit unavailable
 project-batch-deploy-bridge unavailable
-protokit-core unavailable
+protokit-core https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js
 quest-thread-domain-kit unavailable
 recovery-site-kit unavailable
 relationship-state-domain-kit unavailable

@@ -71,6 +71,11 @@ export {
 } from "../kits/simulation/generic-resource-loop-kit/index.js";
 
 export {
+  createProtokitCore,
+  createProtokitCoreCompatibilityKit
+} from "../kits/foundation/protokit-core/index.js";
+
+export {
   createKitRegistryDomainKit,
   createRepositoryRegistry,
   mergeRegistries

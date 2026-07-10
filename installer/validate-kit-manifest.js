@@ -1,5 +1,6 @@
 export function validateKitManifest(manifest) {
   const errors = [];
+  const distributedRuntime = manifest?.status === "official" || manifest?.status === "deprecated";
   if (!manifest || typeof manifest !== "object") errors.push("manifest must be an object");
   for (const field of ["id", "version", "status", "domain", "domainPath", "apiName", "factory", "entry"]) {
     if (!manifest?.[field]) errors.push(`manifest.${field} is required`);
@@ -10,8 +11,9 @@ export function validateKitManifest(manifest) {
   if (!Array.isArray(manifest?.requires)) errors.push("manifest.requires must be an array");
   if (!manifest?.promotion || typeof manifest.promotion.resolved !== "boolean") errors.push("manifest.promotion.resolved is required");
   if (manifest?.promotion?.resolved === false && !manifest.promotion.blocker) errors.push("unresolved manifests require promotion.blocker");
-  if (manifest?.status === "official" && !manifest.realBehavior) errors.push("official manifests require realBehavior");
-  if (manifest?.status === "official" && !manifest.integrity) errors.push("official manifests require integrity");
+  if (distributedRuntime && !manifest.realBehavior) errors.push(`${manifest.status} manifests require realBehavior`);
+  if (distributedRuntime && !manifest.integrity) errors.push(`${manifest.status} manifests require integrity`);
+  if (distributedRuntime && !manifest.packageExport) errors.push(`${manifest.status} manifests require packageExport`);
   return { ok: errors.length === 0, errors };
 }
 

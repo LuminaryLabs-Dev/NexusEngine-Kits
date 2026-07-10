@@ -25,14 +25,25 @@
     const resource = await installer.installKit(engine, "generic-resource-loop-kit", {
       resources: [{ id: "browser-energy", initial: 8, max: 10 }]
     });
+    const deprecatedDefault = await installer.installKit(engine, "protokit-core");
+    const compatibilityInstaller = createNexusEngineKitInstaller({ allowStatuses: ["official", "deprecated"] });
+    const deprecatedOptIn = await compatibilityInstaller.installKit(engine, "protokit-core");
     engine.n.resourceMeter.spend("browser-energy", 3);
     const progress = getKitProgress();
     window.__nexusEngineKitsProof = {
-      ok: registry.report.ok && resource.report.ok,
+      ok: registry.report.ok &&
+        resource.report.ok &&
+        !deprecatedDefault.installed &&
+        deprecatedDefault.reason === "status-not-allowed" &&
+        deprecatedOptIn.installed &&
+        progress.baselineResolved === 2,
       registryInstalled: registry.report.installed.map((entry) => entry.id),
       energy: engine.n.resourceMeter.get("browser-energy").value,
       hasCore: typeof engine.n.coreSimulation.getSnapshot === "function",
       hasRegistry: typeof engine.n.kitRegistry.search === "function",
+      deprecatedDefaultReason: deprecatedDefault.reason,
+      deprecatedOptInInstalled: deprecatedOptIn.installed,
+      compatibilitySnapshot: engine.n.protokitCore.getSnapshot(),
       progress
     };
     document.body.textContent = window.__nexusEngineKitsProof.ok ? "NexusEngine Kits browser smoke passed" : "NexusEngine Kits browser smoke failed";

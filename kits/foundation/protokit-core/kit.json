@@ -16,7 +16,7 @@
     "node": "./kits/foundation/protokit-core/index.js",
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js"
   },
-  "integrity": null,
+  "integrity": "sha256-i5xX/vht6VmLIDAJDs7v1cVrauteU70DqqvCaMSXmME=",
   "environments": [
     "node",
     "browser"
@@ -65,5 +65,6 @@
     },
     "nextCapability": null,
     "blocker": null
-  }
+  },
+  "stability": "deprecated"
 }

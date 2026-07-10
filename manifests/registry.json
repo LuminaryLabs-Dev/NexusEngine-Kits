@@ -8,7 +8,7 @@
   "engineCompatibility": {
     "package": "nexusengine",
     "range": ">=0.0.3",
-    "testedCommit": "d76d54f862f9c6c6a115471b483dc1afda3f6b4a"
+    "testedCommit": "851372d29fece5ad7d9a6253fb1a74730ae24047"
   },
   "promotion": {
     "baselineCount": 120,
@@ -17,7 +17,7 @@
       "capability-graph-domain-kit",
       "composition-planning-domain-kit"
     ],
-    "activeCapability": "protokit-core"
+    "activeCapability": "seed-kit"
   },
   "metadata": {
     "sourceTemplate": true,

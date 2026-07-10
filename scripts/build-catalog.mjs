@@ -63,6 +63,7 @@ const kitIds = new Set(rawKits.map((manifest) => manifest.id));
 const domainIds = new Set(domains.map((manifest) => manifest.id));
 const additionIds = new Set(registryConfig.promotion.approvedAdditionIds);
 const resolvedStatuses = new Set(["official", "deprecated", "archived"]);
+const distributedRuntimeStatuses = new Set(["official", "deprecated"]);
 
 for (const manifest of rawKits) {
   if (manifest.schemaVersion !== "nexusengine.kit-manifest.v1") throw new Error(`${manifest.id}: unsupported schemaVersion`);
@@ -76,12 +77,13 @@ for (const manifest of rawKits) {
   if (!manifest.promotion || typeof manifest.promotion.resolved !== "boolean") throw new Error(`${manifest.id}: missing promotion state`);
   if (!manifest.promotion.resolved && !manifest.promotion.blocker) throw new Error(`${manifest.id}: unresolved entries require an exact blocker`);
   if (manifest.promotion.resolved !== resolvedStatuses.has(manifest.status)) throw new Error(`${manifest.id}: resolved flag disagrees with status ${manifest.status}`);
-  if (manifest.status === "official") {
-    if (!manifest.realBehavior) throw new Error(`${manifest.id}: official entries require realBehavior`);
-    if (!exists(manifest.entry)) throw new Error(`${manifest.id}: official entry is missing: ${manifest.entry}`);
-    if (!/^[a-f0-9]{40}$/i.test(manifest.source?.resolvedCommit ?? "")) throw new Error(`${manifest.id}: official source requires a full commit SHA`);
+  if (distributedRuntimeStatuses.has(manifest.status)) {
+    if (!manifest.realBehavior) throw new Error(`${manifest.id}: ${manifest.status} entries require realBehavior`);
+    if (!exists(manifest.entry)) throw new Error(`${manifest.id}: ${manifest.status} entry is missing: ${manifest.entry}`);
+    if (!manifest.packageExport) throw new Error(`${manifest.id}: ${manifest.status} entries require a package export`);
+    if (!/^[a-f0-9]{40}$/i.test(manifest.source?.resolvedCommit ?? "")) throw new Error(`${manifest.id}: ${manifest.status} source requires a full commit SHA`);
     for (const field of ["readme", "smoke", "parity", "limitations"]) {
-      if (!exists(manifest.proof?.[field])) throw new Error(`${manifest.id}: official proof is missing: ${field}`);
+      if (!exists(manifest.proof?.[field])) throw new Error(`${manifest.id}: ${manifest.status} proof is missing: ${field}`);
     }
   }
 }

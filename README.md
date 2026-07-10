@@ -96,7 +96,7 @@ This is the clean rebuild foundation. The catalog, domains, bundles, installer, 
 
 Many catalog entries are currently `migration-placeholder` entries. They remain discoverable, but default installer/domain/bundle APIs skip them instead of presenting metadata as behavior. Placeholder and scaffold factories never silently create empty runtime kits.
 
-`generic-resource-loop-kit` is the first official baseline kit. The three registry control-plane additions are also official without changing the 120-kit baseline denominator. Run `npm run progress` for generated completed/remaining counts.
+`generic-resource-loop-kit` is the first official baseline kit. The three registry control-plane additions are also official without changing the 120-kit baseline denominator. `protokit-core` is resolved as a deprecated compatibility bridge and requires explicit installer status opt-in. Run `npm run progress` for generated completed/remaining counts.
 
 ## Known Limitations
 

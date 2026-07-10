@@ -1,9 +1,9 @@
 # Promotion Ledger
 
-Baseline resolved: 1 / 120
-Baseline remaining: 119
+Baseline resolved: 2 / 120
+Baseline remaining: 118
 Approved additions: 3 / 3
-Active capability: protokit-core
+Active capability: seed-kit
 
 | Kit | Status | Resolved | Blocker |
 |---|---|---:|---|
@@ -94,7 +94,7 @@ Active capability: protokit-core
 | persistence-dsk | migration-placeholder | no | persistence-dsk has no validated stable implementation or parity record. |
 | powered-aerial-flight-domain-kit | migration-placeholder | no | powered-aerial-flight-domain-kit has no validated stable implementation or parity record. |
 | project-batch-deploy-bridge | migration-placeholder | no | project-batch-deploy-bridge has no validated stable implementation or parity record. |
-| protokit-core | migration-placeholder | no | protokit-core has no validated stable implementation or parity record. |
+| protokit-core | deprecated | yes |  |
 | quest-thread-domain-kit | migration-placeholder | no | quest-thread-domain-kit has no validated stable implementation or parity record. |
 | recovery-site-kit | migration-placeholder | no | recovery-site-kit has no validated stable implementation or parity record. |
 | relationship-state-domain-kit | migration-placeholder | no | relationship-state-domain-kit has no validated stable implementation or parity record. |
