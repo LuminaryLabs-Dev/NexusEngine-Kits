@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import {
+  createInstallPlan,
   createInstallPlanFromLockfile,
   pullRegistry,
   validateNexusEngineKitsLockfile
@@ -12,6 +13,9 @@ const validation = validateNexusEngineKitsLockfile(lockfile);
 assert.equal(validation.ok, true, validation.errors.join("; "));
 assert.equal(lockfile.registries.length, 1);
 const registry = await pullRegistry({ registry: template, resolvedCommit: lockfile.registries[0].resolvedCommit });
+const currentPlan = createInstallPlan(lockfile.selection, { registry });
+assert.equal(currentPlan.ok, true);
+assert.deepEqual(currentPlan.installOrder, lockfile.resolution.installOrder, "self lockfile must resolve every currently selected official kit");
 const plan = createInstallPlanFromLockfile(lockfile, registry);
 assert.equal(plan.ok, true);
 assert.deepEqual(plan.installOrder, lockfile.resolution.installOrder);
