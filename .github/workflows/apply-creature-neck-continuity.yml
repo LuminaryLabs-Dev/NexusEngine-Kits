@@ -21,6 +21,8 @@ jobs:
       - name: Merge torso neck and head topology
         shell: bash
         run: |
+          set -o pipefail
+          {
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
@@ -72,8 +74,7 @@ jobs:
 
           smoke_path = Path('kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs')
           smoke = smoke_path.read_text()
-          insertion = '''
-          function countIndexedComponents(vertexCount, indices) {
+          insertion = '''function countIndexedComponents(vertexCount, indices) {
             const parent = Array.from({ length: vertexCount }, (_, index) => index);
             const find = (index) => {
               while (parent[index] !== index) {
@@ -123,13 +124,26 @@ jobs:
           node scripts/validate-catalog.mjs
           node scripts/validate-manifests.mjs
           node scripts/check-exports.mjs
+          } 2>&1 | tee /tmp/creature-neck-continuity.log
 
       - name: Commit neck continuity fix
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "4189822+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "Join procedural creature neck and head topology"
           git push origin HEAD:main
+
+      - name: Record failure
+        if: failure()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "4189822+github-actions[bot]@users.noreply.github.com"
+          mkdir -p .agent/creature-neck-continuity
+          cp /tmp/creature-neck-continuity.log .agent/creature-neck-continuity/workflow-error.log 2>/dev/null || echo "workflow failed before log creation" > .agent/creature-neck-continuity/workflow-error.log
+          git add .agent/creature-neck-continuity/workflow-error.log
+          git commit -m "Record creature neck continuity failure" || true
+          git push origin HEAD:main || true
