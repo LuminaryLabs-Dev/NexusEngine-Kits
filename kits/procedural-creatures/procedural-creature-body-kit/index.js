@@ -226,16 +226,12 @@ function createTheropodDescriptor(recipe) {
     { x: 0, y: 0.88 * heightScale, z: 0.43 * bodyLengthScale, rx: 0.31, ry: 0.27, boneA: bone.chest },
     { x: 0, y: 0.94 * heightScale, z: 0.62 * bodyLengthScale, rx: 0.22, ry: 0.22, boneA: bone.chest, boneB: bone.neck, weightB: 0.35 },
     { x: 0, y: 1.0 * heightScale, z: 0.78 * bodyLengthScale, rx: 0.16, ry: 0.17, boneA: bone.neck },
-    { x: 0, y: 1.05 * heightScale, z: 0.92 * bodyLengthScale, rx: 0.13, ry: 0.14, boneA: bone.neck, boneB: bone.head, weightB: 0.45 }
-  ], radial, colors);
-
-  appendTube(target, [
-    { x: 0, y: 1.04 * heightScale, z: 0.88 * headForwardScale, rx: 0.24, ry: 0.2, boneA: bone.head },
+    { x: 0, y: 1.04 * heightScale, z: 0.9 * headForwardScale, rx: 0.18, ry: 0.17, boneA: bone.neck, boneB: bone.head, weightB: 0.45 },
     { x: 0, y: 1.08 * heightScale, z: 1.06 * headForwardScale, rx: 0.29, ry: 0.23, boneA: bone.head },
     { x: 0, y: 1.06 * heightScale, z: 1.27 * headForwardScale, rx: 0.23, ry: 0.18, boneA: bone.head },
     { x: 0, y: 1.03 * heightScale, z: 1.49 * headForwardScale, rx: 0.16, ry: 0.12, boneA: bone.head },
     { x: 0, y: 1.01 * heightScale, z: 1.62 * headForwardScale, rx: 0.09, ry: 0.075, boneA: bone.head }
-  ], Math.max(7, radial - 1), colors);
+  ], radial, colors);
 
   const tailStations = [];
   for (let index = 0; index <= recipe.topology.tailSegments; index += 1) {
@@ -335,7 +331,7 @@ function createTheropodDescriptor(recipe) {
       vertices: target.positions.length / 3,
       triangles: target.indices.length / 3,
       bones: skeleton.bones.length,
-      connectedParts: 7,
+      connectedParts: 6,
       watertight: false
     }
   };
