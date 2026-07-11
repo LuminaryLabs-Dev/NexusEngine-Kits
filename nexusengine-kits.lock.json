@@ -6,7 +6,7 @@
       "owner": "LuminaryLabs-Dev",
       "repository": "NexusEngine-Kits",
       "requestedRef": "main",
-      "resolvedCommit": "5fa890252ebff170674a40dfccebfeef42297553"
+      "resolvedCommit": "c70f405e724d6ed7c0cb80bfc0801c62f4a9429a"
     }
   ],
   "selection": {
@@ -28,60 +28,60 @@
         "id": "generic-resource-loop-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "5fa890252ebff170674a40dfccebfeef42297553",
+        "resolvedCommit": "c70f405e724d6ed7c0cb80bfc0801c62f4a9429a",
         "integrity": "sha256-uk6UGoKT3rY+8hm8nvJJ4CMdDVnZXP8Luuxt+SAuVgE=",
         "module": {
           "package": "./kits/simulation/generic-resource-loop-kit/index.js",
           "node": "./kits/simulation/generic-resource-loop-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@5fa890252ebff170674a40dfccebfeef42297553/kits/simulation/generic-resource-loop-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@c70f405e724d6ed7c0cb80bfc0801c62f4a9429a/kits/simulation/generic-resource-loop-kit/index.js"
         }
       },
       {
         "id": "kit-registry-domain-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "5fa890252ebff170674a40dfccebfeef42297553",
+        "resolvedCommit": "c70f405e724d6ed7c0cb80bfc0801c62f4a9429a",
         "integrity": "sha256-xyu8d8rRV9mBtXNTMrLoEl14EhPPWC6qqzy4oKDBq1w=",
         "module": {
           "package": "./kits/registry/kit-registry-domain-kit/index.js",
           "node": "./kits/registry/kit-registry-domain-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@5fa890252ebff170674a40dfccebfeef42297553/kits/registry/kit-registry-domain-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@c70f405e724d6ed7c0cb80bfc0801c62f4a9429a/kits/registry/kit-registry-domain-kit/index.js"
         }
       },
       {
         "id": "seed-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "5fa890252ebff170674a40dfccebfeef42297553",
+        "resolvedCommit": "c70f405e724d6ed7c0cb80bfc0801c62f4a9429a",
         "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
         "module": {
           "package": "./kits/foundation/seed-kit/index.js",
           "node": "./kits/foundation/seed-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@5fa890252ebff170674a40dfccebfeef42297553/kits/foundation/seed-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@c70f405e724d6ed7c0cb80bfc0801c62f4a9429a/kits/foundation/seed-kit/index.js"
         }
       },
       {
         "id": "capability-graph-domain-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "5fa890252ebff170674a40dfccebfeef42297553",
+        "resolvedCommit": "c70f405e724d6ed7c0cb80bfc0801c62f4a9429a",
         "integrity": "sha256-HEW0xI9RJqyJdd9pd/Mk1rDZIpIQYcjwWv62mJzAGxA=",
         "module": {
           "package": "./kits/registry/capability-graph-domain-kit/index.js",
           "node": "./kits/registry/capability-graph-domain-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@5fa890252ebff170674a40dfccebfeef42297553/kits/registry/capability-graph-domain-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@c70f405e724d6ed7c0cb80bfc0801c62f4a9429a/kits/registry/capability-graph-domain-kit/index.js"
         }
       },
       {
         "id": "composition-planning-domain-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "5fa890252ebff170674a40dfccebfeef42297553",
+        "resolvedCommit": "c70f405e724d6ed7c0cb80bfc0801c62f4a9429a",
         "integrity": "sha256-aNLCfw95wj4vy9H+pLf5UmDj9fs0HVM5ln7raEbXA2A=",
         "module": {
           "package": "./kits/registry/composition-planning-domain-kit/index.js",
           "node": "./kits/registry/composition-planning-domain-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@5fa890252ebff170674a40dfccebfeef42297553/kits/registry/composition-planning-domain-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@c70f405e724d6ed7c0cb80bfc0801c62f4a9429a/kits/registry/composition-planning-domain-kit/index.js"
         }
       }
     ]
