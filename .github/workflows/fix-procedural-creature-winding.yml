@@ -1,0 +1,55 @@
+name: Fix procedural creature winding
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .agent/fix-procedural-creature-winding
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Correct tube winding
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('kits/procedural-creatures/procedural-creature-body-kit/index.js')
+          text = path.read_text()
+          old = '      target.indices.push(a, c, b, b, c, d);'
+          new = '      target.indices.push(a, b, c, b, d, c);'
+          count = text.count(old)
+          if count != 1:
+              raise SystemExit(f'expected one inverted winding line, found {count}')
+          path.write_text(text.replace(old, new, 1))
+          PY
+          node --check kits/procedural-creatures/procedural-creature-body-kit/index.js
+          node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs
+          node scripts/build-catalog.mjs
+          node scripts/validate-catalog.mjs
+          node scripts/validate-manifests.mjs
+          node scripts/check-exports.mjs
+      - name: Commit correction
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add kits/procedural-creatures/procedural-creature-body-kit/index.js \
+            kits/procedural-creatures/procedural-creature-body-kit/kit.json \
+            installer/generated-catalog.js installer/generated-factories.js \
+            kit-catalog.json domain-catalog.json bundle-catalog.json \
+            nexusengine.registry.json promotion-ledger.json parity/parity-status.json \
+            PROMOTION-LEDGER.md docs/CDN-INDEX.txt
+          git commit -m "Correct procedural creature triangle winding"
+          git push origin HEAD:main
