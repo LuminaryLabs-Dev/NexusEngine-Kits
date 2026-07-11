@@ -17,7 +17,8 @@
       "capability-graph-domain-kit",
       "composition-planning-domain-kit",
       "procedural-creature-body-kit",
-      "instanced-render-batch-kit"
+      "instanced-render-batch-kit",
+      "seeded-world-patch-controller-kit"
     ],
     "activeCapability": "clock-kit"
   },
