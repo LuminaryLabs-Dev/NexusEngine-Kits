@@ -203,7 +203,7 @@ function appendTube(target, stations, radialSegments, colors) {
       const b = base + stationIndex * radialSegments + (radialIndex + 1) % radialSegments;
       const c = base + (stationIndex + 1) * radialSegments + radialIndex;
       const d = base + (stationIndex + 1) * radialSegments + (radialIndex + 1) % radialSegments;
-      target.indices.push(a, c, b, b, c, d);
+      target.indices.push(a, b, c, b, d, c);
     }
   }
 }
