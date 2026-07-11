@@ -10,6 +10,7 @@ const composition = await import("@luminarylabs/nexusengine-kits/composition-pla
 const protokitCore = await import("@luminarylabs/nexusengine-kits/protokit-core");
 const seedKit = await import("@luminarylabs/nexusengine-kits/seed-kit");
 const instancedBatch = await import("@luminarylabs/nexusengine-kits/instanced-render-batch-kit");
+const patchController = await import("@luminarylabs/nexusengine-kits/seeded-world-patch-controller-kit");
 const domain = await import("@luminarylabs/nexusengine-kits/domain-registry");
 const bundle = await import("@luminarylabs/nexusengine-kits/registry-control-plane");
 
@@ -25,6 +26,9 @@ for (const [name, value] of Object.entries({
   rootProtokitCore: root.createProtokitCore,
   seedKit: seedKit.createSeedKit,
   instancedBatch: instancedBatch.createInstancedRenderBatchKit,
+  patchController: patchController.createSeededWorldPatchControllerKit,
+  workerExecutor: patchController.createMessageWorkerExecutor,
+  rootPatchController: root.createSeededWorldPatchControllerKit,
   rootSeedKit: root.createSeedKit,
   domain: domain.createRegistryDomainKits,
   bundle: bundle.createRegistryControlPlaneKits
