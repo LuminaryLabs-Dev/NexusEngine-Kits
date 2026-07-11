@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "seeded-world-patch-controller-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "domain-service-kit",
+  "domain": "simulation",
+  "domainPath": "n:simulation:seeded-world-patch-controller",
+  "parentDomainPath": "n:simulation",
+  "apiName": "seededWorldPatchController",
+  "factory": "createSeededWorldPatchControllerKit",
+  "entry": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+  "packageExport": "./seeded-world-patch-controller-kit",
+  "module": {
+    "package": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+    "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
+  },
+  "integrity": null,
+  "environments": ["node", "browser", "worker"],
+  "requires": ["random:stream"],
+  "provides": [
+    "world:seeded-patch-controller",
+    "world:patch-cache",
+    "world:patch-prefetch",
+    "world:patch-activation-budget"
+  ],
+  "composes": ["seed-kit"],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Publish",
+    "repository": "PrehistoricRush",
+    "requestedRef": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+    "resolvedCommit": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+    "path": "src/game.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "seededWorldPatchController",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/simulation/seeded-world-patch-controller-kit/README.md",
+    "smoke": "kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs",
+    "parity": "kits/simulation/seeded-world-patch-controller-kit/source-parity.md",
+    "limitations": "kits/simulation/seeded-world-patch-controller-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "seeded-world-patch-controller-kit",
+    "blocker": "Candidate requires a second world-streaming consumer and multi-browser worker validation before official promotion."
+  }
+}
