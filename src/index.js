@@ -65,6 +65,10 @@ export {
 } from "../kits/render-descriptors/instanced-render-batch-kit/index.js";
 
 export {
+  createCameraSmoothFollowKit
+} from "../kits/camera-feedback/camera-smooth-follow-kit/index.js";
+
+export {
   createDiegeticFeedbackSignalKit
 } from "../kits/camera-feedback/diegetic-feedback-signal-kit/index.js";
 
