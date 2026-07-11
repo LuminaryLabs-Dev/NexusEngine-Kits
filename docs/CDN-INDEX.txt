@@ -84,6 +84,7 @@ performance-budget-kit unavailable
 persistence-domain-service-kit unavailable
 persistence-dsk unavailable
 powered-aerial-flight-domain-kit unavailable
+procedural-creature-body-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js
 project-batch-deploy-bridge unavailable
 protokit-core https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js
 quest-thread-domain-kit unavailable

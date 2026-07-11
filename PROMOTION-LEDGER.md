@@ -2,7 +2,7 @@
 
 Baseline resolved: 3 / 120
 Baseline remaining: 117
-Approved additions: 3 / 3
+Approved additions: 3 / 4
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -93,6 +93,7 @@ Active capability: clock-kit
 | persistence-domain-service-kit | migration-placeholder | no | persistence-domain-service-kit has no validated stable implementation or parity record. |
 | persistence-dsk | migration-placeholder | no | persistence-dsk has no validated stable implementation or parity record. |
 | powered-aerial-flight-domain-kit | migration-placeholder | no | powered-aerial-flight-domain-kit has no validated stable implementation or parity record. |
+| procedural-creature-body-kit | candidate | no | Candidate requires non-theropod body plans and multi-renderer validation before official promotion. |
 | project-batch-deploy-bridge | migration-placeholder | no | project-batch-deploy-bridge has no validated stable implementation or parity record. |
 | protokit-core | deprecated | yes |  |
 | quest-thread-domain-kit | migration-placeholder | no | quest-thread-domain-kit has no validated stable implementation or parity record. |

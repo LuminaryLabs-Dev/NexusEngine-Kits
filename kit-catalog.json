@@ -8,7 +8,8 @@
     "approvedAdditionIds": [
       "kit-registry-domain-kit",
       "capability-graph-domain-kit",
-      "composition-planning-domain-kit"
+      "composition-planning-domain-kit",
+      "procedural-creature-body-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -89,6 +90,9 @@
       "input-context-kit",
       "input-buffer-kit",
       "view-rig-kit"
+    ],
+    "procedural-creatures": [
+      "procedural-creature-body-kit"
     ],
     "progression": [
       "objective-bridge-kit",
@@ -6198,6 +6202,83 @@
         "blocker": "powered-aerial-flight-domain-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "procedural-creature-body-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "procedural-creatures",
+      "domainPath": "n:procedural-creatures:body",
+      "parentDomainPath": "n:procedural-creatures",
+      "apiName": "proceduralCreatureBody",
+      "factory": "createProceduralCreatureBodyKit",
+      "entry": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
+      "packageExport": "./procedural-creature-body-kit",
+      "module": {
+        "package": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
+        "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
+      },
+      "integrity": "sha256-a9QQoMf/1Xt0qkQ5QtqFI8v3R7qZILzG0kfglrRujPs=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "random:stream"
+      ],
+      "provides": [
+        "n:procedural-creatures:body",
+        "creature:body-descriptor",
+        "creature:skeleton-descriptor",
+        "creature:skinning-descriptor",
+        "creature:attachment-descriptor",
+        "creature:collision-shape-descriptor"
+      ],
+      "composes": [
+        "seed-kit"
+      ],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Publish",
+        "repository": "PrehistoricRush",
+        "requestedRef": "643cff89f6e74db983863a942a4644e6746947b5",
+        "resolvedCommit": "643cff89f6e74db983863a942a4644e6746947b5",
+        "path": "src/domains/dino/procedural-dino-body-domain-kit.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "proceduralCreatureBody",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/procedural-creatures/procedural-creature-body-kit/README.md",
+        "smoke": "kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs",
+        "parity": "kits/procedural-creatures/procedural-creature-body-kit/source-parity.md",
+        "limitations": "kits/procedural-creatures/procedural-creature-body-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "procedural-creature-body-kit",
+        "blocker": "Candidate requires non-theropod body plans and multi-renderer validation before official promotion."
+      },
+      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",

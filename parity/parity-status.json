@@ -3,7 +3,7 @@
   "activeCapability": "clock-kit",
   "baselineCount": 120,
   "approvedAdditions": {
-    "total": 3,
+    "total": 4,
     "resolved": 3
   },
   "kits": {
@@ -608,6 +608,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "powered-aerial-flight-domain-kit has no validated stable implementation or parity record."
+    },
+    "procedural-creature-body-kit": {
+      "status": "candidate",
+      "target": "kits/procedural-creatures/procedural-creature-body-kit",
+      "realBehavior": true,
+      "sourceCommit": "643cff89f6e74db983863a942a4644e6746947b5",
+      "next": "Candidate requires non-theropod body plans and multi-renderer validation before official promotion."
     },
     "project-batch-deploy-bridge": {
       "status": "migration-placeholder",
