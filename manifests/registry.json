@@ -18,7 +18,8 @@
       "composition-planning-domain-kit",
       "procedural-creature-body-kit",
       "instanced-render-batch-kit",
-      "seeded-world-patch-controller-kit"
+      "seeded-world-patch-controller-kit",
+      "camera-smooth-follow-kit"
     ],
     "activeCapability": "clock-kit"
   },
