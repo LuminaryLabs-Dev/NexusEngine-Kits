@@ -62,6 +62,7 @@ health-report-kit unavailable
 hold-action-kit unavailable
 input-buffer-kit unavailable
 input-context-kit unavailable
+instanced-render-batch-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/instanced-render-batch-kit/index.js
 interactable-registry-kit unavailable
 interaction-domain-kit unavailable
 interaction-domain-service-kit unavailable

@@ -3,7 +3,7 @@
   "activeCapability": "clock-kit",
   "baselineCount": 120,
   "approvedAdditions": {
-    "total": 4,
+    "total": 5,
     "resolved": 3
   },
   "kits": {
@@ -454,6 +454,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "input-context-kit has no validated stable implementation or parity record."
+    },
+    "instanced-render-batch-kit": {
+      "status": "candidate",
+      "target": "kits/render-descriptors/instanced-render-batch-kit",
+      "realBehavior": true,
+      "sourceCommit": "732426127947c899567c8cd0c9a74f56dc69d902",
+      "next": "Candidate requires multi-renderer validation and at least one additional retained-world consumer before official promotion."
     },
     "interactable-registry-kit": {
       "status": "migration-placeholder",

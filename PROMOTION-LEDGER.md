@@ -2,7 +2,7 @@
 
 Baseline resolved: 3 / 120
 Baseline remaining: 117
-Approved additions: 3 / 4
+Approved additions: 3 / 5
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -71,6 +71,7 @@ Active capability: clock-kit
 | hold-action-kit | migration-placeholder | no | hold-action-kit has no validated stable implementation or parity record. |
 | input-buffer-kit | migration-placeholder | no | input-buffer-kit has no validated stable implementation or parity record. |
 | input-context-kit | migration-placeholder | no | input-context-kit has no validated stable implementation or parity record. |
+| instanced-render-batch-kit | candidate | no | Candidate requires multi-renderer validation and at least one additional retained-world consumer before official promotion. |
 | interactable-registry-kit | migration-placeholder | no | interactable-registry-kit has no validated stable implementation or parity record. |
 | interaction-domain-kit | migration-placeholder | no | interaction-domain-kit has no validated stable implementation or parity record. |
 | interaction-domain-service-kit | migration-placeholder | no | interaction-domain-service-kit has no validated stable implementation or parity record. |

@@ -4432,6 +4432,78 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "instanced-render-batch-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "domain-service-kit",
+    "domain": "render-descriptors",
+    "domainPath": "n:render-descriptors:instanced-render-batch",
+    "parentDomainPath": "n:render-descriptors",
+    "apiName": "instancedRenderBatch",
+    "factory": "createInstancedRenderBatchKit",
+    "entry": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+    "packageExport": "./instanced-render-batch-kit",
+    "module": {
+      "package": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+      "node": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/instanced-render-batch-kit/index.js"
+    },
+    "integrity": "sha256-o8l9Q11T8gEnHStLoiZPQyoDUYCA0gbOQH5GBVJ57z4=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "n:render-descriptors:instanced-render-batch",
+      "render:instanced-batch",
+      "render:instance-cell-membership",
+      "render:instance-overflow-diagnostics",
+      "render:instance-bounds-invalidation"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Publish",
+      "repository": "PrehistoricRush",
+      "requestedRef": "732426127947c899567c8cd0c9a74f56dc69d902",
+      "resolvedCommit": "732426127947c899567c8cd0c9a74f56dc69d902",
+      "path": "src/game.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "instancedRenderBatch",
+      "snapshot": true,
+      "loadSnapshot": true,
+      "reset": true,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/render-descriptors/instanced-render-batch-kit/README.md",
+      "smoke": "kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs",
+      "parity": "kits/render-descriptors/instanced-render-batch-kit/source-parity.md",
+      "limitations": "kits/render-descriptors/instanced-render-batch-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "instanced-render-batch-kit",
+      "blocker": "Candidate requires multi-renderer validation and at least one additional retained-world consumer before official promotion."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "interactable-registry-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -8801,6 +8873,7 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
     "kits": [
       "render-descriptor-kit",
       "asset-descriptor-kit",
+      "instanced-render-batch-kit",
       "visual-pipeline-kit",
       "render-layer-kit",
       "material-palette-kit",
@@ -9069,7 +9142,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "kit-registry-domain-kit",
       "capability-graph-domain-kit",
       "composition-planning-domain-kit",
-      "procedural-creature-body-kit"
+      "procedural-creature-body-kit",
+      "instanced-render-batch-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -9173,6 +9247,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     "render-descriptors": [
       "render-descriptor-kit",
       "asset-descriptor-kit",
+      "instanced-render-batch-kit",
       "visual-pipeline-kit",
       "render-layer-kit",
       "material-palette-kit",
@@ -13744,6 +13819,78 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "instanced-render-batch-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "render-descriptors",
+      "domainPath": "n:render-descriptors:instanced-render-batch",
+      "parentDomainPath": "n:render-descriptors",
+      "apiName": "instancedRenderBatch",
+      "factory": "createInstancedRenderBatchKit",
+      "entry": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+      "packageExport": "./instanced-render-batch-kit",
+      "module": {
+        "package": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+        "node": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/instanced-render-batch-kit/index.js"
+      },
+      "integrity": "sha256-o8l9Q11T8gEnHStLoiZPQyoDUYCA0gbOQH5GBVJ57z4=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:render-descriptors:instanced-render-batch",
+        "render:instanced-batch",
+        "render:instance-cell-membership",
+        "render:instance-overflow-diagnostics",
+        "render:instance-bounds-invalidation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Publish",
+        "repository": "PrehistoricRush",
+        "requestedRef": "732426127947c899567c8cd0c9a74f56dc69d902",
+        "resolvedCommit": "732426127947c899567c8cd0c9a74f56dc69d902",
+        "path": "src/game.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "instancedRenderBatch",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/render-descriptors/instanced-render-batch-kit/README.md",
+        "smoke": "kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs",
+        "parity": "kits/render-descriptors/instanced-render-batch-kit/source-parity.md",
+        "limitations": "kits/render-descriptors/instanced-render-batch-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "instanced-render-batch-kit",
+        "blocker": "Candidate requires multi-renderer validation and at least one additional retained-world consumer before official promotion."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "interactable-registry-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -17916,7 +18063,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "kit-registry-domain-kit",
       "capability-graph-domain-kit",
       "composition-planning-domain-kit",
-      "procedural-creature-body-kit"
+      "procedural-creature-body-kit",
+      "instanced-render-batch-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -24028,6 +24176,104 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "instanced-render-batch-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "render-descriptors",
+      "domainPath": "n:render-descriptors:instanced-render-batch",
+      "parentDomainPath": "n:render-descriptors",
+      "apiName": "instancedRenderBatch",
+      "factory": "createInstancedRenderBatchKit",
+      "entry": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+      "packageExport": "./instanced-render-batch-kit",
+      "module": {
+        "package": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+        "node": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/instanced-render-batch-kit/index.js"
+      },
+      "integrity": "sha256-o8l9Q11T8gEnHStLoiZPQyoDUYCA0gbOQH5GBVJ57z4=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:render-descriptors:instanced-render-batch",
+        "render:instanced-batch",
+        "render:instance-cell-membership",
+        "render:instance-overflow-diagnostics",
+        "render:instance-bounds-invalidation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/render-descriptors/instanced-render-batch-kit/index.js"
+      },
+      "runtime": {
+        "api": "instancedRenderBatch",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/render-descriptors/instanced-render-batch-kit/README.md",
+        "smoke": "kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs",
+        "parity": "kits/render-descriptors/instanced-render-batch-kit/source-parity.md",
+        "limitations": "kits/render-descriptors/instanced-render-batch-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "instanced-render-batch-kit",
+        "blocker": "Candidate requires multi-renderer validation and at least one additional retained-world consumer before official promotion."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Publish",
+          "repository": "PrehistoricRush",
+          "requestedRef": "732426127947c899567c8cd0c9a74f56dc69d902",
+          "resolvedCommit": "732426127947c899567c8cd0c9a74f56dc69d902",
+          "path": "src/game.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": "instanced-render-batch-kit",
+          "blocker": "Candidate requires multi-renderer validation and at least one additional retained-world consumer before official promotion."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "interactable-registry-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -29957,6 +30203,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "kits": [
         "render-descriptor-kit",
         "asset-descriptor-kit",
+        "instanced-render-batch-kit",
         "visual-pipeline-kit",
         "render-layer-kit",
         "material-palette-kit",
@@ -30220,20 +30467,20 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineResolved": 3,
   "baselineRemaining": 117,
   "official": 5,
-  "candidate": 2,
+  "candidate": 3,
   "scaffolded": 9,
   "placeholder": 107,
   "deprecated": 1,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 4,
+  "approvedAdditionsTotal": 5,
   "approvedAdditionsResolved": 3,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 124,
-    "sourceMapped": 124,
-    "protoValidated": 8,
-    "candidate": 8,
+    "inventoried": 125,
+    "sourceMapped": 125,
+    "protoValidated": 9,
+    "candidate": 9,
     "official": 5,
     "deprecated": 1,
     "archived": 0,
