@@ -5,6 +5,8 @@ const required = [
   "createAllNexusEngineKits",
   "createCompletionLedgerKit",
   "createGenericResourceLoopKit",
+  "createSeededWorldPatchControllerKit",
+  "createMessageWorkerExecutor",
   "createProtokitCore",
   "createSeedKit",
   "getKitProgress",
