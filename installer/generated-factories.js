@@ -7,6 +7,7 @@ import { createKitRegistryDomainKit as factory5 } from "../kits/registry/kit-reg
 import { createProceduralCreatureBodyKit as factory6 } from "../kits/procedural-creatures/procedural-creature-body-kit/index.js";
 import { createProtokitCore as factory7 } from "../kits/foundation/protokit-core/index.js";
 import { createSeedKit as factory8 } from "../kits/foundation/seed-kit/index.js";
+import { createSeededWorldPatchControllerKit as factory9 } from "../kits/simulation/seeded-world-patch-controller-kit/index.js";
 
 export const GENERATED_KIT_FACTORIES = Object.freeze({
   "capability-graph-domain-kit": factory0,
@@ -17,5 +18,6 @@ export const GENERATED_KIT_FACTORIES = Object.freeze({
   "kit-registry-domain-kit": factory5,
   "procedural-creature-body-kit": factory6,
   "protokit-core": factory7,
-  "seed-kit": factory8
+  "seed-kit": factory8,
+  "seeded-world-patch-controller-kit": factory9
 });

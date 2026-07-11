@@ -98,6 +98,7 @@ resource-node-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@
 route-clearance-domain-kit unavailable
 score-summary-kit unavailable
 seed-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js
+seeded-world-patch-controller-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js
 selection-domain-service-kit unavailable
 selection-dsk unavailable
 shop-inventory-domain-kit unavailable

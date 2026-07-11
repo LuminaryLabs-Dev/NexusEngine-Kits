@@ -3,7 +3,7 @@
   "activeCapability": "clock-kit",
   "baselineCount": 120,
   "approvedAdditions": {
-    "total": 5,
+    "total": 6,
     "resolved": 3
   },
   "kits": {
@@ -706,6 +706,13 @@
       "realBehavior": true,
       "sourceCommit": "11d245913ba4d30f3ce950eb5a17e1cc6e4aa1f5",
       "next": "keep all stable gates green"
+    },
+    "seeded-world-patch-controller-kit": {
+      "status": "candidate",
+      "target": "kits/simulation/seeded-world-patch-controller-kit",
+      "realBehavior": true,
+      "sourceCommit": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+      "next": "Candidate requires a second world-streaming consumer and multi-browser worker validation before official promotion."
     },
     "selection-domain-service-kit": {
       "status": "migration-placeholder",

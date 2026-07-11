@@ -6933,6 +6933,82 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "seeded-world-patch-controller-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "domain-service-kit",
+    "domain": "simulation",
+    "domainPath": "n:simulation:seeded-world-patch-controller",
+    "parentDomainPath": "n:simulation",
+    "apiName": "seededWorldPatchController",
+    "factory": "createSeededWorldPatchControllerKit",
+    "entry": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+    "packageExport": "./seeded-world-patch-controller-kit",
+    "module": {
+      "package": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+      "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
+    },
+    "integrity": "sha256-Lpa1fMNP8gt5+hgyn3k2kKe4B78iHFWKDsLtwLl9cq0=",
+    "environments": [
+      "node",
+      "browser",
+      "worker"
+    ],
+    "requires": [
+      "random:stream"
+    ],
+    "provides": [
+      "world:seeded-patch-controller",
+      "world:patch-cache",
+      "world:patch-prefetch",
+      "world:patch-activation-budget"
+    ],
+    "composes": [
+      "seed-kit"
+    ],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Publish",
+      "repository": "PrehistoricRush",
+      "requestedRef": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+      "resolvedCommit": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+      "path": "src/game.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "seededWorldPatchController",
+      "snapshot": true,
+      "loadSnapshot": true,
+      "reset": true,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/simulation/seeded-world-patch-controller-kit/README.md",
+      "smoke": "kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs",
+      "parity": "kits/simulation/seeded-world-patch-controller-kit/source-parity.md",
+      "limitations": "kits/simulation/seeded-world-patch-controller-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "seeded-world-patch-controller-kit",
+      "blocker": "Candidate requires a second world-streaming consumer and multi-browser worker validation before official promotion."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "selection-domain-service-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -8943,6 +9019,7 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
     "kits": [
       "generic-pressure-loop-kit",
       "generic-resource-loop-kit",
+      "seeded-world-patch-controller-kit",
       "generic-action-window-kit",
       "generic-affordance-descriptor-kit"
     ]
@@ -9143,7 +9220,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "capability-graph-domain-kit",
       "composition-planning-domain-kit",
       "procedural-creature-body-kit",
-      "instanced-render-batch-kit"
+      "instanced-render-batch-kit",
+      "seeded-world-patch-controller-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -9281,6 +9359,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     "simulation": [
       "generic-pressure-loop-kit",
       "generic-resource-loop-kit",
+      "seeded-world-patch-controller-kit",
       "generic-action-window-kit",
       "generic-affordance-descriptor-kit"
     ],
@@ -16320,6 +16399,82 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "seeded-world-patch-controller-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "simulation",
+      "domainPath": "n:simulation:seeded-world-patch-controller",
+      "parentDomainPath": "n:simulation",
+      "apiName": "seededWorldPatchController",
+      "factory": "createSeededWorldPatchControllerKit",
+      "entry": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+      "packageExport": "./seeded-world-patch-controller-kit",
+      "module": {
+        "package": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+        "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
+      },
+      "integrity": "sha256-Lpa1fMNP8gt5+hgyn3k2kKe4B78iHFWKDsLtwLl9cq0=",
+      "environments": [
+        "node",
+        "browser",
+        "worker"
+      ],
+      "requires": [
+        "random:stream"
+      ],
+      "provides": [
+        "world:seeded-patch-controller",
+        "world:patch-cache",
+        "world:patch-prefetch",
+        "world:patch-activation-budget"
+      ],
+      "composes": [
+        "seed-kit"
+      ],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Publish",
+        "repository": "PrehistoricRush",
+        "requestedRef": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+        "resolvedCommit": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+        "path": "src/game.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "seededWorldPatchController",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/simulation/seeded-world-patch-controller-kit/README.md",
+        "smoke": "kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs",
+        "parity": "kits/simulation/seeded-world-patch-controller-kit/source-parity.md",
+        "limitations": "kits/simulation/seeded-world-patch-controller-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "seeded-world-patch-controller-kit",
+        "blocker": "Candidate requires a second world-streaming consumer and multi-browser worker validation before official promotion."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "selection-domain-service-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -18064,7 +18219,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "capability-graph-domain-kit",
       "composition-planning-domain-kit",
       "procedural-creature-body-kit",
-      "instanced-render-batch-kit"
+      "instanced-render-batch-kit",
+      "seeded-world-patch-controller-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -27613,6 +27769,108 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "seeded-world-patch-controller-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "simulation",
+      "domainPath": "n:simulation:seeded-world-patch-controller",
+      "parentDomainPath": "n:simulation",
+      "apiName": "seededWorldPatchController",
+      "factory": "createSeededWorldPatchControllerKit",
+      "entry": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+      "packageExport": "./seeded-world-patch-controller-kit",
+      "module": {
+        "package": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+        "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
+      },
+      "integrity": "sha256-Lpa1fMNP8gt5+hgyn3k2kKe4B78iHFWKDsLtwLl9cq0=",
+      "environments": [
+        "node",
+        "browser",
+        "worker"
+      ],
+      "requires": [
+        "random:stream"
+      ],
+      "provides": [
+        "world:seeded-patch-controller",
+        "world:patch-cache",
+        "world:patch-prefetch",
+        "world:patch-activation-budget"
+      ],
+      "composes": [
+        "seed-kit"
+      ],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/simulation/seeded-world-patch-controller-kit/index.js"
+      },
+      "runtime": {
+        "api": "seededWorldPatchController",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/simulation/seeded-world-patch-controller-kit/README.md",
+        "smoke": "kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs",
+        "parity": "kits/simulation/seeded-world-patch-controller-kit/source-parity.md",
+        "limitations": "kits/simulation/seeded-world-patch-controller-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "seeded-world-patch-controller-kit",
+        "blocker": "Candidate requires a second world-streaming consumer and multi-browser worker validation before official promotion."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Publish",
+          "repository": "PrehistoricRush",
+          "requestedRef": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+          "resolvedCommit": "5c0bda0c9f1c6ce8bceeb78d3cc8fcf0f00d9d1f",
+          "path": "src/game.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": "seeded-world-patch-controller-kit",
+          "blocker": "Candidate requires a second world-streaming consumer and multi-browser worker validation before official promotion."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "selection-domain-service-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -30273,6 +30531,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "kits": [
         "generic-pressure-loop-kit",
         "generic-resource-loop-kit",
+        "seeded-world-patch-controller-kit",
         "generic-action-window-kit",
         "generic-affordance-descriptor-kit"
       ]
@@ -30467,20 +30726,20 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineResolved": 3,
   "baselineRemaining": 117,
   "official": 5,
-  "candidate": 3,
+  "candidate": 4,
   "scaffolded": 9,
   "placeholder": 107,
   "deprecated": 1,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 5,
+  "approvedAdditionsTotal": 6,
   "approvedAdditionsResolved": 3,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 125,
-    "sourceMapped": 125,
-    "protoValidated": 9,
-    "candidate": 9,
+    "inventoried": 126,
+    "sourceMapped": 126,
+    "protoValidated": 10,
+    "candidate": 10,
     "official": 5,
     "deprecated": 1,
     "archived": 0,

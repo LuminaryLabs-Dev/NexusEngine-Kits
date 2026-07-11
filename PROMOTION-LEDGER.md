@@ -2,7 +2,7 @@
 
 Baseline resolved: 3 / 120
 Baseline remaining: 117
-Approved additions: 3 / 5
+Approved additions: 3 / 6
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -107,6 +107,7 @@ Active capability: clock-kit
 | route-clearance-domain-kit | migration-placeholder | no | route-clearance-domain-kit has no validated stable implementation or parity record. |
 | score-summary-kit | migration-placeholder | no | score-summary-kit has no validated stable implementation or parity record. |
 | seed-kit | official | yes |  |
+| seeded-world-patch-controller-kit | candidate | no | Candidate requires a second world-streaming consumer and multi-browser worker validation before official promotion. |
 | selection-domain-service-kit | migration-placeholder | no | selection-domain-service-kit has no validated stable implementation or parity record. |
 | selection-dsk | migration-placeholder | no | selection-dsk has no validated stable implementation or parity record. |
 | shop-inventory-domain-kit | migration-placeholder | no | shop-inventory-domain-kit has no validated stable implementation or parity record. |

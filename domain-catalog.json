@@ -286,6 +286,7 @@
       "kits": [
         "generic-pressure-loop-kit",
         "generic-resource-loop-kit",
+        "seeded-world-patch-controller-kit",
         "generic-action-window-kit",
         "generic-affordance-descriptor-kit"
       ]
