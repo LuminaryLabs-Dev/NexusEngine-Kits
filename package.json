@@ -47,6 +47,7 @@
     "./instanced-render-batch-kit": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
     "./diegetic-feedback-signal-kit": "./kits/camera-feedback/diegetic-feedback-signal-kit/index.js",
     "./generic-resource-loop-kit": "./kits/simulation/generic-resource-loop-kit/index.js",
+    "./seeded-world-patch-controller-kit": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
     "./protokit-core": "./kits/foundation/protokit-core/index.js",
     "./seed-kit": "./kits/foundation/seed-kit/index.js",
     "./procedural-creature-body-kit": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
@@ -117,7 +118,7 @@
     "generate:placeholder-matrix": "node scripts/generate-placeholder-matrix.mjs",
     "generate:readiness-report": "node scripts/generate-readiness-report.mjs",
     "progress": "node scripts/kit-progress.mjs",
-    "test": "node tests/registry/registry-control-plane-smoke.mjs && node tests/registry/repository-registry-smoke.mjs && node tests/registry/lockfile-smoke.mjs && node tests/registry/module-resolver-smoke.mjs && node tests/registry/planning-performance-smoke.mjs && node tests/installer/planning-rejection-smoke.mjs && node tests/installer/installer-smoke.mjs && node tests/package/package-import-smoke.mjs && node kits/spatial/completion-ledger-kit/smoke.test.mjs && node kits/simulation/generic-resource-loop-kit/smoke.test.mjs && node kits/foundation/protokit-core/smoke.test.mjs && node kits/foundation/seed-kit/smoke.test.mjs && node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs && node kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs && node tests/domains/foundation-domain-smoke.mjs && node tests/domains/spatial-domain-smoke.mjs && node tests/domains/simulation-domain-smoke.mjs && node tests/domains/registry-domain-smoke.mjs && node tests/domains/procedural-creatures-domain-smoke.mjs && node tests/domains/render-descriptors-instanced-batch-smoke.mjs && node tests/progress-smoke.mjs"
+    "test": "node tests/registry/registry-control-plane-smoke.mjs && node tests/registry/repository-registry-smoke.mjs && node tests/registry/lockfile-smoke.mjs && node tests/registry/module-resolver-smoke.mjs && node tests/registry/planning-performance-smoke.mjs && node tests/installer/planning-rejection-smoke.mjs && node tests/installer/installer-smoke.mjs && node tests/package/package-import-smoke.mjs && node kits/spatial/completion-ledger-kit/smoke.test.mjs && node kits/simulation/generic-resource-loop-kit/smoke.test.mjs && node kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs && node kits/foundation/protokit-core/smoke.test.mjs && node kits/foundation/seed-kit/smoke.test.mjs && node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs && node kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs && node tests/domains/foundation-domain-smoke.mjs && node tests/domains/spatial-domain-smoke.mjs && node tests/domains/simulation-domain-smoke.mjs && node tests/domains/registry-domain-smoke.mjs && node tests/domains/procedural-creatures-domain-smoke.mjs && node tests/domains/render-descriptors-instanced-batch-smoke.mjs && node tests/progress-smoke.mjs"
   },
   "license": "MIT"
 }
