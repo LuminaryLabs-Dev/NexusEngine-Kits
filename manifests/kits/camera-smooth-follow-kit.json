@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "camera-smooth-follow-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "domain-service-kit",
+  "domain": "camera-feedback",
+  "domainPath": "n:camera-feedback:smooth-follow",
+  "parentDomainPath": "n:camera-feedback",
+  "apiName": "cameraSmoothFollow",
+  "factory": "createCameraSmoothFollowKit",
+  "entry": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+  "packageExport": "./camera-smooth-follow-kit",
+  "module": {
+    "package": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+    "node": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/camera-feedback/camera-smooth-follow-kit/index.js"
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "camera:smooth-follow",
+    "camera:smooth-position",
+    "camera:smooth-look-target",
+    "camera:smooth-rotation"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Publish",
+    "repository": "PrehistoricRush",
+    "requestedRef": "e7f00ba3781cd78fff3350c4a3e336911e6db1d9",
+    "resolvedCommit": "e7f00ba3781cd78fff3350c4a3e336911e6db1d9",
+    "path": "src/game.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "cameraSmoothFollow",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/camera-feedback/camera-smooth-follow-kit/README.md",
+    "smoke": "kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs",
+    "parity": "kits/camera-feedback/camera-smooth-follow-kit/source-parity.md",
+    "limitations": "kits/camera-feedback/camera-smooth-follow-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "camera-smooth-follow-kit",
+    "blocker": "Candidate requires a second renderer integration and camera-collision composition proof before official promotion."
+  }
+}
