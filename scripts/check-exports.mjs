@@ -7,6 +7,7 @@ const required = [
   "createGenericResourceLoopKit",
   "createSeededWorldPatchControllerKit",
   "createMessageWorkerExecutor",
+  "createCameraSmoothFollowKit",
   "createProtokitCore",
   "createSeedKit",
   "getKitProgress",
