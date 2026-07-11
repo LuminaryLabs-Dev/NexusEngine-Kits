@@ -18,6 +18,7 @@ camera-collision-kit unavailable
 camera-comfort-kit unavailable
 camera-mode-kit unavailable
 camera-sequence-kit unavailable
+camera-smooth-follow-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/camera-feedback/camera-smooth-follow-kit/index.js
 camera-state-kit unavailable
 canyon-terrain-domain-kit unavailable
 capability-graph-domain-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/capability-graph-domain-kit/index.js

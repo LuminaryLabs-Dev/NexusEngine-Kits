@@ -53,6 +53,7 @@
       "entry": "./domains/camera-feedback/index.js",
       "kits": [
         "camera-state-kit",
+        "camera-smooth-follow-kit",
         "camera-mode-kit",
         "camera-collision-kit",
         "camera-comfort-kit",

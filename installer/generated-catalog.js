@@ -1382,6 +1382,77 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "camera-smooth-follow-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "domain-service-kit",
+    "domain": "camera-feedback",
+    "domainPath": "n:camera-feedback:smooth-follow",
+    "parentDomainPath": "n:camera-feedback",
+    "apiName": "cameraSmoothFollow",
+    "factory": "createCameraSmoothFollowKit",
+    "entry": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+    "packageExport": "./camera-smooth-follow-kit",
+    "module": {
+      "package": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+      "node": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/camera-feedback/camera-smooth-follow-kit/index.js"
+    },
+    "integrity": "sha256-CgA9WdvZ908gEskmzLEQ5kzDUpNCJmBQpNbXcmyDspI=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "camera:smooth-follow",
+      "camera:smooth-position",
+      "camera:smooth-look-target",
+      "camera:smooth-rotation"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Publish",
+      "repository": "PrehistoricRush",
+      "requestedRef": "e7f00ba3781cd78fff3350c4a3e336911e6db1d9",
+      "resolvedCommit": "e7f00ba3781cd78fff3350c4a3e336911e6db1d9",
+      "path": "src/game.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "cameraSmoothFollow",
+      "snapshot": true,
+      "loadSnapshot": true,
+      "reset": true,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/camera-feedback/camera-smooth-follow-kit/README.md",
+      "smoke": "kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs",
+      "parity": "kits/camera-feedback/camera-smooth-follow-kit/source-parity.md",
+      "limitations": "kits/camera-feedback/camera-smooth-follow-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "camera-smooth-follow-kit",
+      "blocker": "Candidate requires a second renderer integration and camera-collision composition proof before official promotion."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "camera-state-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -8786,6 +8857,7 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
     "entry": "./domains/camera-feedback/index.js",
     "kits": [
       "camera-state-kit",
+      "camera-smooth-follow-kit",
       "camera-mode-kit",
       "camera-collision-kit",
       "camera-comfort-kit",
@@ -9221,7 +9293,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "composition-planning-domain-kit",
       "procedural-creature-body-kit",
       "instanced-render-batch-kit",
-      "seeded-world-patch-controller-kit"
+      "seeded-world-patch-controller-kit",
+      "camera-smooth-follow-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -9252,6 +9325,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     ],
     "camera-feedback": [
       "camera-state-kit",
+      "camera-smooth-follow-kit",
       "camera-mode-kit",
       "camera-collision-kit",
       "camera-comfort-kit",
@@ -10845,6 +10919,77 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": "camera-sequence-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "camera-smooth-follow-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "camera-feedback",
+      "domainPath": "n:camera-feedback:smooth-follow",
+      "parentDomainPath": "n:camera-feedback",
+      "apiName": "cameraSmoothFollow",
+      "factory": "createCameraSmoothFollowKit",
+      "entry": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+      "packageExport": "./camera-smooth-follow-kit",
+      "module": {
+        "package": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+        "node": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/camera-feedback/camera-smooth-follow-kit/index.js"
+      },
+      "integrity": "sha256-CgA9WdvZ908gEskmzLEQ5kzDUpNCJmBQpNbXcmyDspI=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "camera:smooth-follow",
+        "camera:smooth-position",
+        "camera:smooth-look-target",
+        "camera:smooth-rotation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Publish",
+        "repository": "PrehistoricRush",
+        "requestedRef": "e7f00ba3781cd78fff3350c4a3e336911e6db1d9",
+        "resolvedCommit": "e7f00ba3781cd78fff3350c4a3e336911e6db1d9",
+        "path": "src/game.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "cameraSmoothFollow",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/camera-feedback/camera-smooth-follow-kit/README.md",
+        "smoke": "kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs",
+        "parity": "kits/camera-feedback/camera-smooth-follow-kit/source-parity.md",
+        "limitations": "kits/camera-feedback/camera-smooth-follow-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "camera-smooth-follow-kit",
+        "blocker": "Candidate requires a second renderer integration and camera-collision composition proof before official promotion."
+      },
+      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -18220,7 +18365,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "composition-planning-domain-kit",
       "procedural-creature-body-kit",
       "instanced-render-batch-kit",
-      "seeded-world-patch-controller-kit"
+      "seeded-world-patch-controller-kit",
+      "camera-smooth-follow-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -20133,6 +20279,103 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "camera-sequence-kit",
           "blocker": "camera-sequence-kit has no validated stable implementation or parity record."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "camera-smooth-follow-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "camera-feedback",
+      "domainPath": "n:camera-feedback:smooth-follow",
+      "parentDomainPath": "n:camera-feedback",
+      "apiName": "cameraSmoothFollow",
+      "factory": "createCameraSmoothFollowKit",
+      "entry": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+      "packageExport": "./camera-smooth-follow-kit",
+      "module": {
+        "package": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+        "node": "./kits/camera-feedback/camera-smooth-follow-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/camera-feedback/camera-smooth-follow-kit/index.js"
+      },
+      "integrity": "sha256-CgA9WdvZ908gEskmzLEQ5kzDUpNCJmBQpNbXcmyDspI=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "camera:smooth-follow",
+        "camera:smooth-position",
+        "camera:smooth-look-target",
+        "camera:smooth-rotation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/camera-feedback/camera-smooth-follow-kit/index.js"
+      },
+      "runtime": {
+        "api": "cameraSmoothFollow",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/camera-feedback/camera-smooth-follow-kit/README.md",
+        "smoke": "kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs",
+        "parity": "kits/camera-feedback/camera-smooth-follow-kit/source-parity.md",
+        "limitations": "kits/camera-feedback/camera-smooth-follow-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "camera-smooth-follow-kit",
+        "blocker": "Candidate requires a second renderer integration and camera-collision composition proof before official promotion."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Publish",
+          "repository": "PrehistoricRush",
+          "requestedRef": "e7f00ba3781cd78fff3350c4a3e336911e6db1d9",
+          "resolvedCommit": "e7f00ba3781cd78fff3350c4a3e336911e6db1d9",
+          "path": "src/game.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": "camera-smooth-follow-kit",
+          "blocker": "Candidate requires a second renderer integration and camera-collision composition proof before official promotion."
         }
       }
     },
@@ -30298,6 +30541,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "entry": "./domains/camera-feedback/index.js",
       "kits": [
         "camera-state-kit",
+        "camera-smooth-follow-kit",
         "camera-mode-kit",
         "camera-collision-kit",
         "camera-comfort-kit",
@@ -30726,20 +30970,20 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineResolved": 3,
   "baselineRemaining": 117,
   "official": 5,
-  "candidate": 4,
+  "candidate": 5,
   "scaffolded": 9,
   "placeholder": 107,
   "deprecated": 1,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 6,
+  "approvedAdditionsTotal": 7,
   "approvedAdditionsResolved": 3,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 126,
-    "sourceMapped": 126,
-    "protoValidated": 10,
-    "candidate": 10,
+    "inventoried": 127,
+    "sourceMapped": 127,
+    "protoValidated": 11,
+    "candidate": 11,
     "official": 5,
     "deprecated": 1,
     "archived": 0,

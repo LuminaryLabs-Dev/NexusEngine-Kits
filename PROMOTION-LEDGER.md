@@ -2,7 +2,7 @@
 
 Baseline resolved: 3 / 120
 Baseline remaining: 117
-Approved additions: 3 / 6
+Approved additions: 3 / 7
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -27,6 +27,7 @@ Active capability: clock-kit
 | camera-comfort-kit | migration-placeholder | no | camera-comfort-kit has no validated stable implementation or parity record. |
 | camera-mode-kit | migration-placeholder | no | camera-mode-kit has no validated stable implementation or parity record. |
 | camera-sequence-kit | migration-placeholder | no | camera-sequence-kit has no validated stable implementation or parity record. |
+| camera-smooth-follow-kit | candidate | no | Candidate requires a second renderer integration and camera-collision composition proof before official promotion. |
 | camera-state-kit | migration-placeholder | no | camera-state-kit has no validated stable implementation or parity record. |
 | canyon-terrain-domain-kit | migration-placeholder | no | canyon-terrain-domain-kit has no validated stable implementation or parity record. |
 | capability-graph-domain-kit | official | yes |  |
