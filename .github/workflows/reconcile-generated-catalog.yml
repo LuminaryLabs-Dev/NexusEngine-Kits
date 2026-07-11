@@ -1,0 +1,43 @@
+name: reconcile generated catalog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "manifests/**"
+      - "kits/**"
+      - "domains/**"
+      - "package.json"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Rebuild generated catalogs
+        run: npm run build:catalog
+      - name: Commit reconciled outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add installer/generated-catalog.js installer/generated-factories.js \
+            kit-catalog.json domain-catalog.json bundle-catalog.json \
+            nexusengine.registry.json promotion-ledger.json parity/parity-status.json \
+            PROMOTION-LEDGER.md docs/CDN-INDEX.txt kits
+          if git diff --cached --quiet; then
+            echo "Generated catalog outputs are already current."
+            exit 0
+          fi
+          git commit -m "Rebuild generated kit catalogs"
+          git push origin HEAD:main
