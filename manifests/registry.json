@@ -16,7 +16,8 @@
       "kit-registry-domain-kit",
       "capability-graph-domain-kit",
       "composition-planning-domain-kit",
-      "procedural-creature-body-kit"
+      "procedural-creature-body-kit",
+      "instanced-render-batch-kit"
     ],
     "activeCapability": "clock-kit"
   },
