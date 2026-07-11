@@ -6112,7 +6112,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
     },
-    "integrity": "sha256-a9QQoMf/1Xt0qkQ5QtqFI8v3R7qZILzG0kfglrRujPs=",
+    "integrity": "sha256-tzpoZ+YBrJdYZLur2+r43Q94gpwjvnriaGCVNjFA0bI=",
     "environments": [
       "node",
       "browser"
@@ -15652,7 +15652,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
       },
-      "integrity": "sha256-a9QQoMf/1Xt0qkQ5QtqFI8v3R7qZILzG0kfglrRujPs=",
+      "integrity": "sha256-tzpoZ+YBrJdYZLur2+r43Q94gpwjvnriaGCVNjFA0bI=",
       "environments": [
         "node",
         "browser"
@@ -26782,7 +26782,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
       },
-      "integrity": "sha256-a9QQoMf/1Xt0qkQ5QtqFI8v3R7qZILzG0kfglrRujPs=",
+      "integrity": "sha256-tzpoZ+YBrJdYZLur2+r43Q94gpwjvnriaGCVNjFA0bI=",
       "environments": [
         "node",
         "browser"
