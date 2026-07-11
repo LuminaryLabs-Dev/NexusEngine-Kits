@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "procedural-creatures",
+  "label": "Procedural Creatures",
+  "kind": "simulation-domain",
+  "status": "candidate",
+  "domainPath": "n:procedural-creatures",
+  "entry": "./domains/procedural-creatures/index.js",
+  "kits": [
+    "procedural-creature-body-kit"
+  ]
+}
