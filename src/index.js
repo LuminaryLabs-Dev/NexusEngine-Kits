@@ -61,6 +61,10 @@ export {
 } from "../kits/render-descriptors/asset-descriptor-kit/index.js";
 
 export {
+  createInstancedRenderBatchKit
+} from "../kits/render-descriptors/instanced-render-batch-kit/index.js";
+
+export {
   createDiegeticFeedbackSignalKit
 } from "../kits/camera-feedback/diegetic-feedback-signal-kit/index.js";
 
@@ -71,6 +75,11 @@ export {
 } from "../kits/simulation/generic-resource-loop-kit/index.js";
 
 export {
+  createMessageWorkerExecutor,
+  createSeededWorldPatchControllerKit
+} from "../kits/simulation/seeded-world-patch-controller-kit/index.js";
+
+export {
   createProtokitCore,
   createProtokitCoreCompatibilityKit
 } from "../kits/foundation/protokit-core/index.js";
@@ -79,6 +88,10 @@ export {
   createSeedKit,
   createGenericSeedKit
 } from "../kits/foundation/seed-kit/index.js";
+
+export {
+  createProceduralCreatureBodyKit
+} from "../kits/procedural-creatures/procedural-creature-body-kit/index.js";
 
 export {
   createKitRegistryDomainKit,
