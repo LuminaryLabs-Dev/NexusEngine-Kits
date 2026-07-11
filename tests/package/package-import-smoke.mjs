@@ -11,6 +11,7 @@ const protokitCore = await import("@luminarylabs/nexusengine-kits/protokit-core"
 const seedKit = await import("@luminarylabs/nexusengine-kits/seed-kit");
 const instancedBatch = await import("@luminarylabs/nexusengine-kits/instanced-render-batch-kit");
 const patchController = await import("@luminarylabs/nexusengine-kits/seeded-world-patch-controller-kit");
+const cameraSmoothFollow = await import("@luminarylabs/nexusengine-kits/camera-smooth-follow-kit");
 const domain = await import("@luminarylabs/nexusengine-kits/domain-registry");
 const bundle = await import("@luminarylabs/nexusengine-kits/registry-control-plane");
 
@@ -28,6 +29,8 @@ for (const [name, value] of Object.entries({
   instancedBatch: instancedBatch.createInstancedRenderBatchKit,
   patchController: patchController.createSeededWorldPatchControllerKit,
   workerExecutor: patchController.createMessageWorkerExecutor,
+  cameraSmoothFollow: cameraSmoothFollow.createCameraSmoothFollowKit,
+  rootCameraSmoothFollow: root.createCameraSmoothFollowKit,
   rootPatchController: root.createSeededWorldPatchControllerKit,
   rootSeedKit: root.createSeedKit,
   domain: domain.createRegistryDomainKits,
