@@ -26,35 +26,37 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-          from textwrap import dedent
 
           source_path = Path('kits/procedural-creatures/procedural-creature-body-kit/index.js')
           source = source_path.read_text()
 
-          start_marker = '''  appendTube(target, [
-            { x: 0, y: 0.64 * heightScale'''
-          end_marker = '''  ], Math.max(7, radial - 1), colors);'''
-          start = source.find(start_marker)
-          end_start = source.find(end_marker, start)
-          if start < 0 or end_start < 0:
-              raise SystemExit(f'could not locate split torso/head block: start={start} end={end_start}')
-          end = end_start + len(end_marker)
+          body_station = '{ x: 0, y: 0.64 * heightScale, z: -0.55 * bodyLengthScale'
+          snout_station = '{ x: 0, y: 1.01 * heightScale, z: 1.62 * headForwardScale'
+          body_at = source.find(body_station)
+          snout_at = source.find(snout_station, body_at)
+          start = source.rfind('  appendTube(target, [', 0, body_at)
+          end_marker = '  ], Math.max(7, radial - 1), colors);'
+          end_at = source.find(end_marker, snout_at)
+          if min(body_at, snout_at, start, end_at) < 0:
+              raise SystemExit(f'could not locate split torso/head block: body={body_at} snout={snout_at} start={start} end={end_at}')
+          end = end_at + len(end_marker)
 
-          joined = dedent('''\
-            appendTube(target, [
-              { x: 0, y: 0.64 * heightScale, z: -0.55 * bodyLengthScale, rx: 0.22, ry: 0.2, boneA: bone.pelvis },
-              { x: 0, y: 0.7 * heightScale, z: -0.34 * bodyLengthScale, rx: 0.39, ry: 0.31, boneA: bone.pelvis },
-              { x: 0, y: 0.76 * heightScale, z: -0.08 * bodyLengthScale, rx: 0.45, ry: 0.34, boneA: bone.pelvis, boneB: bone.chest, weightB: 0.2 },
-              { x: 0, y: 0.82 * heightScale, z: 0.2 * bodyLengthScale, rx: 0.4, ry: 0.31, boneA: bone.pelvis, boneB: bone.chest, weightB: 0.62 },
-              { x: 0, y: 0.88 * heightScale, z: 0.43 * bodyLengthScale, rx: 0.31, ry: 0.27, boneA: bone.chest },
-              { x: 0, y: 0.94 * heightScale, z: 0.62 * bodyLengthScale, rx: 0.22, ry: 0.22, boneA: bone.chest, boneB: bone.neck, weightB: 0.35 },
-              { x: 0, y: 1.0 * heightScale, z: 0.78 * bodyLengthScale, rx: 0.16, ry: 0.17, boneA: bone.neck },
-              { x: 0, y: 1.04 * heightScale, z: 0.9 * headForwardScale, rx: 0.18, ry: 0.17, boneA: bone.neck, boneB: bone.head, weightB: 0.45 },
-              { x: 0, y: 1.08 * heightScale, z: 1.06 * headForwardScale, rx: 0.29, ry: 0.23, boneA: bone.head },
-              { x: 0, y: 1.06 * heightScale, z: 1.27 * headForwardScale, rx: 0.23, ry: 0.18, boneA: bone.head },
-              { x: 0, y: 1.03 * heightScale, z: 1.49 * headForwardScale, rx: 0.16, ry: 0.12, boneA: bone.head },
-              { x: 0, y: 1.01 * heightScale, z: 1.62 * headForwardScale, rx: 0.09, ry: 0.075, boneA: bone.head }
-            ], radial, colors);''')
+          joined = '\n'.join([
+            '  appendTube(target, [',
+            '    { x: 0, y: 0.64 * heightScale, z: -0.55 * bodyLengthScale, rx: 0.22, ry: 0.2, boneA: bone.pelvis },',
+            '    { x: 0, y: 0.7 * heightScale, z: -0.34 * bodyLengthScale, rx: 0.39, ry: 0.31, boneA: bone.pelvis },',
+            '    { x: 0, y: 0.76 * heightScale, z: -0.08 * bodyLengthScale, rx: 0.45, ry: 0.34, boneA: bone.pelvis, boneB: bone.chest, weightB: 0.2 },',
+            '    { x: 0, y: 0.82 * heightScale, z: 0.2 * bodyLengthScale, rx: 0.4, ry: 0.31, boneA: bone.pelvis, boneB: bone.chest, weightB: 0.62 },',
+            '    { x: 0, y: 0.88 * heightScale, z: 0.43 * bodyLengthScale, rx: 0.31, ry: 0.27, boneA: bone.chest },',
+            '    { x: 0, y: 0.94 * heightScale, z: 0.62 * bodyLengthScale, rx: 0.22, ry: 0.22, boneA: bone.chest, boneB: bone.neck, weightB: 0.35 },',
+            '    { x: 0, y: 1.0 * heightScale, z: 0.78 * bodyLengthScale, rx: 0.16, ry: 0.17, boneA: bone.neck },',
+            '    { x: 0, y: 1.04 * heightScale, z: 0.9 * headForwardScale, rx: 0.18, ry: 0.17, boneA: bone.neck, boneB: bone.head, weightB: 0.45 },',
+            '    { x: 0, y: 1.08 * heightScale, z: 1.06 * headForwardScale, rx: 0.29, ry: 0.23, boneA: bone.head },',
+            '    { x: 0, y: 1.06 * heightScale, z: 1.27 * headForwardScale, rx: 0.23, ry: 0.18, boneA: bone.head },',
+            '    { x: 0, y: 1.03 * heightScale, z: 1.49 * headForwardScale, rx: 0.16, ry: 0.12, boneA: bone.head },',
+            '    { x: 0, y: 1.01 * heightScale, z: 1.62 * headForwardScale, rx: 0.09, ry: 0.075, boneA: bone.head }',
+            '  ], radial, colors);'
+          ])
           source = source[:start] + joined + source[end:]
           if source.count('connectedParts: 7') != 1:
               raise SystemExit('expected connectedParts: 7 once')
@@ -63,45 +65,47 @@ jobs:
 
           smoke_path = Path('kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs')
           smoke = smoke_path.read_text()
-          helper = dedent('''\
-            function countIndexedComponents(vertexCount, indices) {
-              const parent = Array.from({ length: vertexCount }, (_, index) => index);
-              const find = (index) => {
-                while (parent[index] !== index) {
-                  parent[index] = parent[parent[index]];
-                  index = parent[index];
-                }
-                return index;
-              };
-              const union = (left, right) => {
-                const a = find(left);
-                const b = find(right);
-                if (a !== b) parent[b] = a;
-              };
-              for (let index = 0; index < indices.length; index += 3) {
-                const a = indices[index];
-                const b = indices[index + 1];
-                const c = indices[index + 2];
-                union(a, b);
-                union(b, c);
-                union(c, a);
-              }
-              return new Set(parent.map((_, index) => find(index))).size;
-            }
-
-            ''')
+          helper = '\n'.join([
+            'function countIndexedComponents(vertexCount, indices) {',
+            '  const parent = Array.from({ length: vertexCount }, (_, index) => index);',
+            '  const find = (index) => {',
+            '    while (parent[index] !== index) {',
+            '      parent[index] = parent[parent[index]];',
+            '      index = parent[index];',
+            '    }',
+            '    return index;',
+            '  };',
+            '  const union = (left, right) => {',
+            '    const a = find(left);',
+            '    const b = find(right);',
+            '    if (a !== b) parent[b] = a;',
+            '  };',
+            '  for (let index = 0; index < indices.length; index += 3) {',
+            '    const a = indices[index];',
+            '    const b = indices[index + 1];',
+            '    const c = indices[index + 2];',
+            '    union(a, b);',
+            '    union(b, c);',
+            '    union(c, a);',
+            '  }',
+            '  return new Set(parent.map((_, index) => find(index))).size;',
+            '}',
+            '',
+            ''
+          ])
           create_marker = 'const createGame = () => createRealtimeGame({' 
           if smoke.count(create_marker) != 1:
               raise SystemExit('createGame marker mismatch')
           smoke = smoke.replace(create_marker, helper + create_marker, 1)
           assertion_marker = 'assert.equal(descriptorA.collision.shape, "capsule");'
-          assertions = dedent('''\
-            assert.equal(descriptorA.collision.shape, "capsule");
-            assert.equal(descriptorA.topology.connectedParts, 6);
-            assert.equal(
-              countIndexedComponents(descriptorA.geometry.positions.length / 3, descriptorA.geometry.indices),
-              6
-            );''')
+          assertions = '\n'.join([
+            'assert.equal(descriptorA.collision.shape, "capsule");',
+            'assert.equal(descriptorA.topology.connectedParts, 6);',
+            'assert.equal(',
+            '  countIndexedComponents(descriptorA.geometry.positions.length / 3, descriptorA.geometry.indices),',
+            '  6',
+            ');'
+          ])
           if smoke.count(assertion_marker) != 1:
               raise SystemExit('collision assertion marker mismatch')
           smoke = smoke.replace(assertion_marker, assertions, 1)
@@ -123,6 +127,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f .agent/creature-neck-continuity/workflow-error.log
           git add -A
           git commit -m "Join procedural creature neck and head topology"
           git push origin HEAD:main
