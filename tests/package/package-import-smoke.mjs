@@ -9,6 +9,7 @@ const capabilityGraph = await import("@luminarylabs/nexusengine-kits/capability-
 const composition = await import("@luminarylabs/nexusengine-kits/composition-planning-domain-kit");
 const protokitCore = await import("@luminarylabs/nexusengine-kits/protokit-core");
 const seedKit = await import("@luminarylabs/nexusengine-kits/seed-kit");
+const instancedBatch = await import("@luminarylabs/nexusengine-kits/instanced-render-batch-kit");
 const domain = await import("@luminarylabs/nexusengine-kits/domain-registry");
 const bundle = await import("@luminarylabs/nexusengine-kits/registry-control-plane");
 
@@ -23,6 +24,7 @@ for (const [name, value] of Object.entries({
   protokitCore: protokitCore.createProtokitCore,
   rootProtokitCore: root.createProtokitCore,
   seedKit: seedKit.createSeedKit,
+  instancedBatch: instancedBatch.createInstancedRenderBatchKit,
   rootSeedKit: root.createSeedKit,
   domain: domain.createRegistryDomainKits,
   bundle: bundle.createRegistryControlPlaneKits
