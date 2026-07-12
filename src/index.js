@@ -1,121 +1,35 @@
 export * from "../installer/index.js";
 
-export {
-  createAllNexusEngineKits
-} from "../bundles/all.js";
-
-export {
-  createDefaultGameStackKits
-} from "../bundles/default-game-stack.js";
-
-export {
-  createAerialGameStackKits
-} from "../bundles/aerial-game-stack.js";
-
-export {
-  createRpgGameStackKits
-} from "../bundles/rpg-game-stack.js";
-
-export {
-  createDefenseGameStackKits
-} from "../bundles/defense-game-stack.js";
-
-export {
-  createXrAuthoringStackKits
-} from "../bundles/xr-authoring-stack.js";
-
-export {
-  createCompletionLedgerKit
-} from "../kits/spatial/completion-ledger-kit/index.js";
-
-export {
-  createSpatialInteractionKit
-} from "../kits/spatial/spatial-interaction-kit/index.js";
-
-export {
-  createObjectiveBridgeKit
-} from "../kits/progression/objective-bridge-kit/index.js";
-
-export {
-  createLockGroupKit
-} from "../kits/progression/lock-group-kit/index.js";
-
-export {
-  createDamageHealthKit
-} from "../kits/hazard-combat/damage-health-kit/index.js";
-
-export {
-  createResourceNodeKit
-} from "../kits/economy-resources/resource-node-kit/index.js";
-
-export {
-  createBuildPlacementKit
-} from "../kits/building/build-placement-kit/index.js";
-
-export {
-  createStructureRuntimeKit
-} from "../kits/building/structure-runtime-kit/index.js";
-
-export {
-  createAssetDescriptorKit
-} from "../kits/render-descriptors/asset-descriptor-kit/index.js";
-
-export {
-  createInstancedRenderBatchKit
-} from "../kits/render-descriptors/instanced-render-batch-kit/index.js";
-
-export {
-  createCameraSmoothFollowKit
-} from "../kits/camera-feedback/camera-smooth-follow-kit/index.js";
-
-export {
-  createDiegeticFeedbackSignalKit
-} from "../kits/camera-feedback/diegetic-feedback-signal-kit/index.js";
-
-export {
-  createGenericResourceLoopKit,
-  createResourceMeterKit,
-  createResourceMeterDomainKit
-} from "../kits/simulation/generic-resource-loop-kit/index.js";
-
-export {
-  createMessageWorkerExecutor,
-  createSeededWorldPatchControllerKit
-} from "../kits/simulation/seeded-world-patch-controller-kit/index.js";
-
-export {
-  createProtokitCore,
-  createProtokitCoreCompatibilityKit
-} from "../kits/foundation/protokit-core/index.js";
-
-export {
-  createSeedKit,
-  createGenericSeedKit
-} from "../kits/foundation/seed-kit/index.js";
-
-export {
-  createProceduralCreatureBodyKit
-} from "../kits/procedural-creatures/procedural-creature-body-kit/index.js";
-
+export { createAllNexusEngineKits } from "../bundles/all.js";
+export { createDefaultGameStackKits } from "../bundles/default-game-stack.js";
+export { createAerialGameStackKits } from "../bundles/aerial-game-stack.js";
+export { createRpgGameStackKits } from "../bundles/rpg-game-stack.js";
+export { createDefenseGameStackKits } from "../bundles/defense-game-stack.js";
+export { createXrAuthoringStackKits } from "../bundles/xr-authoring-stack.js";
+export { createCompletionLedgerKit } from "../kits/spatial/completion-ledger-kit/index.js";
+export { createSpatialInteractionKit } from "../kits/spatial/spatial-interaction-kit/index.js";
+export { createObjectiveBridgeKit } from "../kits/progression/objective-bridge-kit/index.js";
+export { createLockGroupKit } from "../kits/progression/lock-group-kit/index.js";
+export { createDamageHealthKit } from "../kits/hazard-combat/damage-health-kit/index.js";
+export { createResourceNodeKit } from "../kits/economy-resources/resource-node-kit/index.js";
+export { createBuildPlacementKit } from "../kits/building/build-placement-kit/index.js";
+export { createStructureRuntimeKit } from "../kits/building/structure-runtime-kit/index.js";
+export { createAssetDescriptorKit } from "../kits/render-descriptors/asset-descriptor-kit/index.js";
+export { createInstancedRenderBatchKit } from "../kits/render-descriptors/instanced-render-batch-kit/index.js";
+export { createCameraSmoothFollowKit } from "../kits/camera-feedback/camera-smooth-follow-kit/index.js";
+export { createDiegeticFeedbackSignalKit } from "../kits/camera-feedback/diegetic-feedback-signal-kit/index.js";
+export { createGenericResourceLoopKit, createResourceMeterKit, createResourceMeterDomainKit } from "../kits/simulation/generic-resource-loop-kit/index.js";
+export { createMessageWorkerExecutor, createSeededWorldPatchControllerKit } from "../kits/simulation/seeded-world-patch-controller-kit/index.js";
+export { createProtokitCore, createProtokitCoreCompatibilityKit } from "../kits/foundation/protokit-core/index.js";
+export { createSeedKit, createGenericSeedKit } from "../kits/foundation/seed-kit/index.js";
+export { createProceduralCreatureBodyKit } from "../kits/procedural-creatures/procedural-creature-body-kit/index.js";
 export * from "../kits/procedural-objects/procedural-object-body-kit/index.js";
 export * from "../kits/procedural-objects/procedural-object-material-kit/index.js";
 export * from "../kits/procedural-objects/procedural-object-lod-kit/index.js";
 export * from "../kits/procedural-objects/procedural-object-capture-profile-kit/index.js";
 export { createProceduralObjectsDomainKits } from "../domains/procedural-objects/index.js";
-
-export {
-  createKitRegistryDomainKit,
-  createRepositoryRegistry,
-  mergeRegistries
-} from "../kits/registry/kit-registry-domain-kit/index.js";
-
-export {
-  createCapabilityGraphDomainKit,
-  createCapabilityGraph
-} from "../kits/registry/capability-graph-domain-kit/index.js";
-
-export {
-  createCompositionPlanningDomainKit
-} from "../kits/registry/composition-planning-domain-kit/index.js";
-
+export { createKitRegistryDomainKit, createRepositoryRegistry, mergeRegistries } from "../kits/registry/kit-registry-domain-kit/index.js";
+export { createCapabilityGraphDomainKit, createCapabilityGraph } from "../kits/registry/capability-graph-domain-kit/index.js";
+export { createCompositionPlanningDomainKit } from "../kits/registry/composition-planning-domain-kit/index.js";
 export { createRegistryDomainKits } from "../domains/registry/index.js";
+export { createAgricultureDomainKit, createProductionDomainKits } from "../domains/production/index.js";

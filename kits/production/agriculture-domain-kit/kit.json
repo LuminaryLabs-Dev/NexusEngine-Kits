@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "agriculture-domain-kit",
+  "version": "1.0.0",
+  "status": "official",
+  "kind": "domain-service-kit",
+  "domain": "production",
+  "domainPath": "n:production:agriculture",
+  "parentDomainPath": "n:production",
+  "apiName": "agriculture",
+  "factory": "createAgricultureDomainKit",
+  "entry": "./kits/production/agriculture-domain-kit/index.js",
+  "packageExport": "./kits/production/agriculture-domain-kit",
+  "module": {
+    "package": "./kits/production/agriculture-domain-kit/index.js",
+    "node": "./kits/production/agriculture-domain-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
+  },
+  "integrity": "sha256-fLwWlN7aQt6ZAyhf1dZ3SwAW6ri4DYnbI36107yKhXk=",
+  "environments": ["node", "browser"],
+  "requires": ["n:core-transaction-ledger"],
+  "provides": [
+    "n:production:agriculture",
+    "production:agriculture",
+    "agriculture:land",
+    "agriculture:soil",
+    "agriculture:cultivation",
+    "agriculture:harvest"
+  ],
+  "composes": ["n:core-transaction-ledger"],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Agents",
+    "repository": "NexusEngine-ProtoKits",
+    "requestedRef": "main",
+    "resolvedCommit": "b96efb2e3a6059c65dbc3e37d5bf051ce38030a0",
+    "path": "protokits/agriculture-domain-kit/index.js",
+    "parity": "official"
+  },
+  "runtime": {
+    "api": "agriculture",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/production/agriculture-domain-kit/README.md",
+    "smoke": "kits/production/agriculture-domain-kit/smoke.test.mjs",
+    "parity": "kits/production/agriculture-domain-kit/source-parity.md",
+    "limitations": "kits/production/agriculture-domain-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": true,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": true,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": null,
+    "blocker": null
+  },
+  "stability": "official"
+}

@@ -1,0 +1,40 @@
+name: Rebuild Agriculture Catalog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "manifests/kits/agriculture-domain-kit.json"
+      - "manifests/domains/production.json"
+      - "manifests/registry.json"
+      - "kits/production/agriculture-domain-kit/**"
+      - "domains/production/**"
+      - "src/index.js"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install --ignore-scripts
+      - run: npm run build:catalog
+      - run: node kits/production/agriculture-domain-kit/smoke.test.mjs
+      - name: Commit generated catalogs
+        run: |
+          if git diff --quiet; then
+            echo "Catalogs already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add installer/generated-catalog.js installer/generated-factories.js kit-catalog.json domain-catalog.json bundle-catalog.json nexusengine.registry.json promotion-ledger.json parity/parity-status.json PROMOTION-LEDGER.md docs/CDN-INDEX.txt kits/production/agriculture-domain-kit/kit.json
+          git commit -m "chore: rebuild agriculture catalogs"
+          git push

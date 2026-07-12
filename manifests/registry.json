@@ -19,7 +19,8 @@
       "procedural-creature-body-kit",
       "instanced-render-batch-kit",
       "seeded-world-patch-controller-kit",
-      "camera-smooth-follow-kit"
+      "camera-smooth-follow-kit",
+      "agriculture-domain-kit"
     ],
     "activeCapability": "clock-kit"
   },

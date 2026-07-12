@@ -1,0 +1,29 @@
+name: Validate Agriculture Domain
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "kits/production/agriculture-domain-kit/**"
+      - "kits/production/index.js"
+      - "domains/production/index.js"
+      - ".github/workflows/agriculture-domain.yml"
+  pull_request:
+    paths:
+      - "kits/production/agriculture-domain-kit/**"
+
+permissions:
+  contents: read
+
+jobs:
+  agriculture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install --ignore-scripts
+      - run: node kits/production/agriculture-domain-kit/smoke.test.mjs

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "production",
+  "label": "Production",
+  "description": "Catalog family for reusable production authorities. It is not an executable parent domain kit.",
+  "kind": "gameplay-domain-family",
+  "status": "official",
+  "domainPath": "n:production",
+  "entry": "./domains/production/index.js",
+  "kits": ["agriculture-domain-kit"]
+}
