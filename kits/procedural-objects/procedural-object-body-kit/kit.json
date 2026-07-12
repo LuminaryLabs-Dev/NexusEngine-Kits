@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "procedural-object-body-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "domain": "procedural-objects",
+  "domainPath": "n:object:procedural:body",
+  "parentDomainPath": "n:object:procedural",
+  "entry": "./index.js",
+  "requires": ["object:descriptor-contract"],
+  "provides": ["object:procedural-body-descriptor"],
+  "rendererAgnostic": true,
+  "snapshotPolicy": "portable",
+  "resetPolicy": "empty-registry"
+}

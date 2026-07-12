@@ -97,6 +97,12 @@ export {
   createProceduralCreatureBodyKit
 } from "../kits/procedural-creatures/procedural-creature-body-kit/index.js";
 
+export * from "../kits/procedural-objects/procedural-object-body-kit/index.js";
+export * from "../kits/procedural-objects/procedural-object-material-kit/index.js";
+export * from "../kits/procedural-objects/procedural-object-lod-kit/index.js";
+export * from "../kits/procedural-objects/procedural-object-capture-profile-kit/index.js";
+export { createProceduralObjectsDomainKits } from "../domains/procedural-objects/index.js";
+
 export {
   createKitRegistryDomainKit,
   createRepositoryRegistry,

@@ -35,6 +35,7 @@
     "./domain-simulation": "./domains/simulation/index.js",
     "./domain-registry": "./domains/registry/index.js",
     "./domain-procedural-creatures": "./domains/procedural-creatures/index.js",
+    "./domain-procedural-objects": "./domains/procedural-objects/index.js",
     "./completion-ledger-kit": "./kits/spatial/completion-ledger-kit/index.js",
     "./spatial-interaction-kit": "./kits/spatial/spatial-interaction-kit/index.js",
     "./objective-bridge-kit": "./kits/progression/objective-bridge-kit/index.js",
@@ -52,6 +53,10 @@
     "./protokit-core": "./kits/foundation/protokit-core/index.js",
     "./seed-kit": "./kits/foundation/seed-kit/index.js",
     "./procedural-creature-body-kit": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
+    "./procedural-object-body-kit": "./kits/procedural-objects/procedural-object-body-kit/index.js",
+    "./procedural-object-material-kit": "./kits/procedural-objects/procedural-object-material-kit/index.js",
+    "./procedural-object-lod-kit": "./kits/procedural-objects/procedural-object-lod-kit/index.js",
+    "./procedural-object-capture-profile-kit": "./kits/procedural-objects/procedural-object-capture-profile-kit/index.js",
     "./kit-registry-domain-kit": "./kits/registry/kit-registry-domain-kit/index.js",
     "./capability-graph-domain-kit": "./kits/registry/capability-graph-domain-kit/index.js",
     "./composition-planning-domain-kit": "./kits/registry/composition-planning-domain-kit/index.js",
@@ -119,7 +124,7 @@
     "generate:placeholder-matrix": "node scripts/generate-placeholder-matrix.mjs",
     "generate:readiness-report": "node scripts/generate-readiness-report.mjs",
     "progress": "node scripts/kit-progress.mjs",
-    "test": "node tests/registry/registry-control-plane-smoke.mjs && node tests/registry/repository-registry-smoke.mjs && node tests/registry/lockfile-smoke.mjs && node tests/registry/module-resolver-smoke.mjs && node tests/registry/planning-performance-smoke.mjs && node tests/installer/planning-rejection-smoke.mjs && node tests/installer/installer-smoke.mjs && node tests/package/package-import-smoke.mjs && node kits/spatial/completion-ledger-kit/smoke.test.mjs && node kits/simulation/generic-resource-loop-kit/smoke.test.mjs && node kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs && node kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs && node kits/foundation/protokit-core/smoke.test.mjs && node kits/foundation/seed-kit/smoke.test.mjs && node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs && node kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs && node tests/domains/foundation-domain-smoke.mjs && node tests/domains/spatial-domain-smoke.mjs && node tests/domains/simulation-domain-smoke.mjs && node tests/domains/registry-domain-smoke.mjs && node tests/domains/procedural-creatures-domain-smoke.mjs && node tests/domains/render-descriptors-instanced-batch-smoke.mjs && node tests/progress-smoke.mjs"
+    "test": "node tests/registry/registry-control-plane-smoke.mjs && node tests/registry/repository-registry-smoke.mjs && node tests/registry/lockfile-smoke.mjs && node tests/registry/module-resolver-smoke.mjs && node tests/registry/planning-performance-smoke.mjs && node tests/installer/planning-rejection-smoke.mjs && node tests/installer/installer-smoke.mjs && node tests/package/package-import-smoke.mjs && node kits/spatial/completion-ledger-kit/smoke.test.mjs && node kits/simulation/generic-resource-loop-kit/smoke.test.mjs && node kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs && node kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs && node kits/foundation/protokit-core/smoke.test.mjs && node kits/foundation/seed-kit/smoke.test.mjs && node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs && node kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs && node tests/domains/foundation-domain-smoke.mjs && node tests/domains/spatial-domain-smoke.mjs && node tests/domains/simulation-domain-smoke.mjs && node tests/domains/registry-domain-smoke.mjs && node tests/domains/procedural-creatures-domain-smoke.mjs && node tests/domains/procedural-objects-domain-smoke.mjs && node tests/domains/render-descriptors-instanced-batch-smoke.mjs && node tests/progress-smoke.mjs"
   },
   "license": "MIT"
 }

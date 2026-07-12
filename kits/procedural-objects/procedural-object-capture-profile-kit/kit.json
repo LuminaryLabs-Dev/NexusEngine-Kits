@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "procedural-object-capture-profile-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "domain": "procedural-objects",
+  "domainPath": "n:object:procedural:capture-profile",
+  "parentDomainPath": "n:object:procedural",
+  "entry": "./index.js",
+  "requires": ["object:descriptor-contract"],
+  "provides": ["object:capture-profile"],
+  "rendererAgnostic": true,
+  "snapshotPolicy": "portable",
+  "resetPolicy": "empty-registry"
+}
