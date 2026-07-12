@@ -35,7 +35,7 @@ function runTropical() {
   assert.deepEqual(plant.resourceChanges, [{ itemId: "taro-seed", amount: -1, reason: "plant" }]);
   agriculture.cultivation.commit(plant, "plant-1");
   agriculture.water.apply("plot-1", "water-1", "player");
-  engine.tick(4.1);
+  engine.tick(4.2);
   assert.equal(agriculture.getPlot("plot-1").status, "ready");
   const harvest = agriculture.harvest.plan("plot-1", { operationId: "harvest-1", actorId: "player" });
   assert.equal(harvest.resourceChanges[0].itemId, "taro-root");
@@ -44,7 +44,7 @@ function runTropical() {
   agriculture.land.prepare("plot-2", "prepare-2", "player");
   agriculture.cultivation.plant("plot-2", "coconut", "plant-2", "player");
   agriculture.water.apply("plot-2", "water-2", "player");
-  engine.tick(4.1);
+  engine.tick(4.2);
   const palmHarvest = agriculture.harvest.plan("plot-2", { operationId: "harvest-2", actorId: "player" });
   agriculture.harvest.commit(palmHarvest, "harvest-2");
   assert.equal(agriculture.getPlot("plot-2").status, "regrowing");
