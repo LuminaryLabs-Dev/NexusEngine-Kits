@@ -63,7 +63,7 @@ assert.deepEqual(runTropical(), runTropical(), "tropical agriculture replay is d
 const temperate = createEngine({
   growthMode: "daily",
   secondsPerResolvedDay: 60,
-  soilDefaults: { soilType: "temperate-loam", moisture: 0.25, fertility: 0.75 },
+  soilDefaults: { soilType: "temperate-loam", moisture: 0.25, fertility: 1 },
   plots: [{ id: "field" }, { id: "orchard" }],
   cropDefinitions: {
     wheat: { id: "wheat", seedItemId: "wheat-seed", harvestItemId: "wheat", growthDays: 2, stageCount: 3, yieldMin: 3, yieldMax: 5, preferredSoils: ["temperate-loam"] },
