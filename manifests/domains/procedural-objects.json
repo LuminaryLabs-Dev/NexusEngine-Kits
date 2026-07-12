@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "procedural-objects",
+  "label": "Procedural Objects",
+  "kind": "simulation-domain",
+  "status": "candidate",
+  "domainPath": "n:object:procedural",
+  "entry": "./domains/procedural-objects/index.js",
+  "kits": [
+    "procedural-object-body-kit",
+    "procedural-object-material-kit",
+    "procedural-object-lod-kit",
+    "procedural-object-capture-profile-kit"
+  ]
+}

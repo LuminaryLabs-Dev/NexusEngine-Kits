@@ -1,7 +1,7 @@
 {
   "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "procedural-creature-body-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "candidate",
   "kind": "domain-service-kit",
   "domain": "procedural-creatures",
@@ -17,24 +17,18 @@
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
   },
   "integrity": null,
-  "environments": [
-    "node",
-    "browser"
-  ],
-  "requires": [
-    "random:stream"
-  ],
+  "environments": ["node", "browser"],
+  "requires": ["random:stream"],
   "provides": [
     "n:procedural-creatures:body",
     "creature:body-descriptor",
     "creature:skeleton-descriptor",
     "creature:skinning-descriptor",
     "creature:attachment-descriptor",
-    "creature:collision-shape-descriptor"
+    "creature:collision-shape-descriptor",
+    "object:descriptor"
   ],
-  "composes": [
-    "seed-kit"
-  ],
+  "composes": ["seed-kit"],
   "realBehavior": true,
   "source": {
     "owner": "LuminaryLabs-Publish",
@@ -44,13 +38,7 @@
     "path": "src/domains/dino/procedural-dino-body-domain-kit.js",
     "parity": "candidate"
   },
-  "runtime": {
-    "api": "proceduralCreatureBody",
-    "snapshot": true,
-    "loadSnapshot": true,
-    "reset": true,
-    "deterministic": true
-  },
+  "runtime": {"api": "proceduralCreatureBody", "snapshot": true, "loadSnapshot": true, "reset": true, "deterministic": true},
   "proof": {
     "readme": "kits/procedural-creatures/procedural-creature-body-kit/README.md",
     "smoke": "kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs",
@@ -60,17 +48,8 @@
   "promotion": {
     "baseline": false,
     "resolved": false,
-    "stages": {
-      "inventoried": true,
-      "sourceMapped": true,
-      "protoValidated": true,
-      "candidate": true,
-      "official": false,
-      "deprecated": false,
-      "archived": false,
-      "blocked": false
-    },
+    "stages": {"inventoried": true, "sourceMapped": true, "protoValidated": true, "candidate": true, "official": false, "deprecated": false, "archived": false, "blocked": false},
     "nextCapability": "procedural-creature-body-kit",
-    "blocker": "Candidate requires non-theropod body plans and multi-renderer validation before official promotion."
+    "blocker": "Candidate requires non-theropod body plans, core-object adoption proof in multiple products, and multi-renderer validation before official promotion."
   }
 }
