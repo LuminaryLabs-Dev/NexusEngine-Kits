@@ -1,7 +1,7 @@
 {
   "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "instanced-render-batch-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "candidate",
   "kind": "domain-service-kit",
   "domain": "render-descriptors",
@@ -26,6 +26,7 @@
     "n:render-descriptors:instanced-render-batch",
     "render:instanced-batch",
     "render:instance-cell-membership",
+    "render:instance-stable-cell-ranges",
     "render:instance-overflow-diagnostics",
     "render:instance-bounds-invalidation"
   ],
