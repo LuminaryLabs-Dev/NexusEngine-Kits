@@ -50,11 +50,64 @@ assert.ok(update.releasedInstanceIds.includes("a"));
 assert.ok(update.releasedInstanceIds.includes("b"));
 assert.ok(update.releasedInstanceIds.includes("c"));
 
+const incremental = service.create({
+  id: "patch-owned-grass",
+  capacity: 8,
+  cellCapacity: 2,
+  updateMode: "incremental",
+  boundsMode: "recompute-on-change"
+});
+
+let cell = incremental.replaceCell("0:0", [instance("g0", 0), instance("g1", 2)]);
+assert.deepEqual(cell.range, { start: 0, count: 2 });
+update = incremental.flush();
+assert.deepEqual(update.changedRanges, [{ start: 0, count: 2 }]);
+assert.equal(update.instanceWrites.length, 1);
+assert.equal(update.instanceWrites[0].instances[0].id, "g0");
+assert.equal(update.slotCount, 2);
+assert.deepEqual(update.instances, [], "incremental flushes do not clone the complete active set");
+
+cell = incremental.replaceCell("1:0", [instance("g2", 4)]);
+assert.deepEqual(cell.range, { start: 2, count: 2 });
+update = incremental.flush();
+assert.deepEqual(update.changedRanges, [{ start: 2, count: 2 }]);
+assert.equal(update.activeCount, 3);
+assert.equal(update.slotCount, 4);
+
+incremental.replaceCell("0:0", [instance("g0", 1)]);
+update = incremental.flush();
+assert.deepEqual(update.changedRanges, [{ start: 0, count: 2 }]);
+assert.deepEqual(update.cellRanges.find((entry) => entry.cellId === "1:0"), {
+  cellId: "1:0",
+  start: 2,
+  count: 2,
+  activeCount: 1,
+  requestedCount: 1,
+  overflowCount: 0
+});
+
+assert.equal(incremental.releaseCell("0:0"), true);
+update = incremental.flush();
+assert.deepEqual(update.changedRanges, [{ start: 0, count: 2 }]);
+assert.equal(update.instanceWrites[0].instances.every((entry) => entry === null), true);
+assert.equal(update.activeCount, 1);
+assert.equal(update.slotCount, 4, "unchanged cells retain stable ranges");
+
+cell = incremental.replaceCell("2:0", [instance("g3", 6), instance("g4", 8), instance("g5", 10)]);
+assert.deepEqual(cell.range, { start: 0, count: 2 }, "released ranges are reused without moving live cells");
+assert.equal(cell.overflowCount, 1);
+update = incremental.flush();
+assert.deepEqual(update.changedRanges, [{ start: 0, count: 2 }]);
+assert.deepEqual(update.overflow.instanceIds, ["g5"]);
+
 const snapshot = service.getSnapshot();
 const restoredEngine = createRealtimeGame({ kits: [createInstancedRenderBatchKit()] });
 restoredEngine.n.instancedRenderBatch.loadSnapshot(snapshot);
 const restored = restoredEngine.n.instancedRenderBatch.get("trees");
 assert.equal(restored.capacity, 3);
 assert.equal(restored.flush().activeCount, 1);
+const restoredIncremental = restoredEngine.n.instancedRenderBatch.get("patch-owned-grass");
+assert.equal(restoredIncremental.updateMode, "incremental");
+assert.equal(restoredIncremental.flush().activeCount, 3);
 
-console.log("instanced render batch smoke passed", restored.getStats());
+console.log("instanced render batch smoke passed", restoredIncremental.getStats());
