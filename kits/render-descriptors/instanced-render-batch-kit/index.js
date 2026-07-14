@@ -1,6 +1,6 @@
 import { defineDomainServiceKit } from "nexusengine";
 
-export const INSTANCED_RENDER_BATCH_KIT_VERSION = "0.1.0";
+export const INSTANCED_RENDER_BATCH_KIT_VERSION = "0.2.0";
 
 const clone = (value) => value == null
   ? value
@@ -85,12 +85,45 @@ function unionBounds(instances) {
   return { min, max, center, radius };
 }
 
+function unionCellBounds(record) {
+  const bounds = [...record.cells.values()].map((cell) => cell.bounds).filter(Boolean);
+  if (!bounds.length) return null;
+  const min = [Infinity, Infinity, Infinity];
+  const max = [-Infinity, -Infinity, -Infinity];
+  for (const entry of bounds) {
+    for (let axis = 0; axis < 3; axis += 1) {
+      min[axis] = Math.min(min[axis], entry.min[axis]);
+      max[axis] = Math.max(max[axis], entry.max[axis]);
+    }
+  }
+  const center = min.map((value, axis) => (value + max[axis]) * 0.5);
+  const radius = Math.hypot(max[0] - center[0], max[1] - center[1], max[2] - center[2]);
+  return { min, max, center, radius };
+}
+
+function normalizeUpdateMode(value) {
+  const mode = String(value ?? "full");
+  if (!new Set(["full", "incremental"]).has(mode)) {
+    throw new TypeError("Instanced render batch updateMode must be full or incremental.");
+  }
+  return mode;
+}
+
 function createBatchRecord(options = {}) {
+  const capacity = positiveInteger(options.capacity, 1, "Instanced render batch capacity");
+  const updateMode = normalizeUpdateMode(options.updateMode);
   return {
     id: stableId(options.id, null, "Instanced render batch"),
-    capacity: positiveInteger(options.capacity, 1, "Instanced render batch capacity"),
+    capacity,
+    cellCapacity: options.cellCapacity == null
+      ? null
+      : positiveInteger(options.cellCapacity, null, "Instanced render batch cellCapacity"),
+    updateMode,
     boundsMode: options.boundsMode ?? "recompute-on-change",
     cells: new Map(),
+    slots: updateMode === "incremental" ? new Array(capacity).fill(null) : null,
+    freeRanges: updateMode === "incremental" ? [{ start: 0, count: capacity }] : [],
+    dirtyRanges: [],
     revision: 0,
     dirty: true,
     releasedInstanceIds: new Set(),
@@ -99,27 +132,183 @@ function createBatchRecord(options = {}) {
   };
 }
 
-function markDirty(record) {
+function markDirty(record, range = null) {
   record.revision += 1;
   record.dirty = true;
+  if (range && range.count > 0) record.dirtyRanges.push({ start: range.start, count: range.count });
 }
 
-function flattenInstances(record) {
+function mergeRanges(ranges) {
+  const sorted = ranges
+    .filter((range) => range.count > 0)
+    .map((range) => ({ start: range.start, count: range.count }))
+    .sort((left, right) => left.start - right.start || left.count - right.count);
+  const output = [];
+  for (const range of sorted) {
+    const previous = output.at(-1);
+    if (!previous || range.start > previous.start + previous.count) {
+      output.push(range);
+      continue;
+    }
+    previous.count = Math.max(previous.start + previous.count, range.start + range.count) - previous.start;
+  }
+  return output;
+}
+
+function mergeFreeRanges(record) {
+  record.freeRanges = mergeRanges(record.freeRanges);
+}
+
+function allocateRange(record, requestedCount) {
+  if (requestedCount <= 0) return null;
+  const index = record.freeRanges.findIndex((range) => range.count >= requestedCount);
+  if (index < 0) return null;
+  const source = record.freeRanges[index];
+  const allocated = { start: source.start, count: requestedCount };
+  source.start += requestedCount;
+  source.count -= requestedCount;
+  if (source.count === 0) record.freeRanges.splice(index, 1);
+  return allocated;
+}
+
+function releaseRange(record, range) {
+  if (!range) return;
+  record.freeRanges.push({ start: range.start, count: range.count });
+  mergeFreeRanges(record);
+}
+
+function cellAllocationSize(record, requestedCount) {
+  if (record.cellCapacity != null) return record.cellCapacity;
+  return requestedCount > 0 ? requestedCount : 0;
+}
+
+function clearSlots(record, range) {
+  if (!range) return;
+  for (let index = range.start; index < range.start + range.count; index += 1) record.slots[index] = null;
+}
+
+function writeIncrementalCell(record, cell, previous = null) {
+  const requestedSize = cellAllocationSize(record, cell.requested.length);
+  let range = previous?.range ?? null;
+  if (range && requestedSize > range.count) {
+    clearSlots(record, range);
+    markDirty(record, range);
+    releaseRange(record, range);
+    range = null;
+  }
+  if (!range && requestedSize > 0) range = allocateRange(record, requestedSize);
+  if (range) clearSlots(record, range);
+
+  const visible = range ? cell.requested.slice(0, range.count) : [];
+  const overflow = cell.requested.slice(visible.length);
+  if (range) {
+    for (let index = 0; index < visible.length; index += 1) record.slots[range.start + index] = visible[index];
+    markDirty(record, range);
+  } else {
+    markDirty(record);
+  }
+  cell.range = range;
+  cell.visible = visible;
+  cell.overflow = overflow;
+  cell.bounds = unionBounds(visible);
+  return cell;
+}
+
+function flattenRequested(record) {
   return [...record.cells.entries()]
     .sort(([left], [right]) => left.localeCompare(right))
-    .flatMap(([, instances]) => instances);
+    .flatMap(([, cell]) => cell.requested);
+}
+
+function activeCount(record) {
+  if (record.updateMode === "full") return Math.min(record.capacity, flattenRequested(record).length);
+  let count = 0;
+  for (const cell of record.cells.values()) count += cell.visible.length;
+  return count;
+}
+
+function requestedCount(record) {
+  let count = 0;
+  for (const cell of record.cells.values()) count += cell.requested.length;
+  return count;
+}
+
+function incrementalOverflow(record) {
+  return [...record.cells.values()].flatMap((cell) => cell.overflow);
+}
+
+function slotCount(record) {
+  let end = 0;
+  for (const cell of record.cells.values()) {
+    if (cell.range) end = Math.max(end, cell.range.start + cell.range.count);
+  }
+  return end;
+}
+
+function cellRanges(record) {
+  return [...record.cells.entries()]
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([cellId, cell]) => ({
+      cellId,
+      start: cell.range?.start ?? null,
+      count: cell.range?.count ?? 0,
+      activeCount: cell.visible.length,
+      requestedCount: cell.requested.length,
+      overflowCount: cell.overflow.length
+    }));
 }
 
 function batchSnapshot(record) {
   return {
     id: record.id,
     capacity: record.capacity,
+    cellCapacity: record.cellCapacity,
+    updateMode: record.updateMode,
     boundsMode: record.boundsMode,
     revision: record.revision,
     cells: [...record.cells.entries()]
       .sort(([left], [right]) => left.localeCompare(right))
-      .map(([cellId, instances]) => ({ cellId, instances: clone(instances) })),
+      .map(([cellId, cell]) => ({ cellId, instances: clone(cell.requested) })),
     lastFlush: clone(record.lastFlush)
+  };
+}
+
+function flushFull(record) {
+  const requested = flattenRequested(record);
+  const instances = requested.slice(0, record.capacity);
+  const overflowInstances = requested.slice(record.capacity);
+  const nextActiveCount = instances.length;
+  const changedSpan = Math.max(nextActiveCount, record.previousActiveCount);
+  return {
+    requestedCount: requested.length,
+    activeCount: nextActiveCount,
+    slotCount: nextActiveCount,
+    instances: clone(instances),
+    instanceWrites: record.dirty && changedSpan > 0
+      ? [{ start: 0, count: changedSpan, instances: clone(instances) }]
+      : [],
+    changedRanges: record.dirty && changedSpan > 0 ? [{ start: 0, count: changedSpan }] : [],
+    bounds: unionBounds(instances),
+    overflowInstances
+  };
+}
+
+function flushIncremental(record) {
+  const changedRanges = mergeRanges(record.dirtyRanges);
+  const overflowInstances = incrementalOverflow(record);
+  return {
+    requestedCount: requestedCount(record),
+    activeCount: activeCount(record),
+    slotCount: slotCount(record),
+    instances: [],
+    instanceWrites: changedRanges.map((range) => ({
+      ...range,
+      instances: clone(record.slots.slice(range.start, range.start + range.count))
+    })),
+    changedRanges,
+    cellRanges: cellRanges(record),
+    bounds: unionCellBounds(record),
+    overflowInstances
   };
 }
 
@@ -127,15 +316,31 @@ function createBatchHandle(record) {
   return Object.freeze({
     id: record.id,
     get capacity() { return record.capacity; },
+    get updateMode() { return record.updateMode; },
     replaceCell(cellIdInput, descriptors = []) {
       const cellId = stableId(cellIdInput, null, "Instance cell");
       if (!Array.isArray(descriptors)) throw new TypeError("replaceCell expects an array of instance descriptors.");
-      const normalized = descriptors.map((descriptor, index) => normalizeInstance(descriptor, cellId, index));
-      const previous = record.cells.get(cellId) ?? [];
-      for (const instance of previous) record.releasedInstanceIds.add(instance.id);
-      record.cells.set(cellId, normalized);
-      markDirty(record);
-      return { cellId, count: normalized.length, capacity: record.capacity };
+      const requested = descriptors.map((descriptor, index) => normalizeInstance(descriptor, cellId, index));
+      const previous = record.cells.get(cellId) ?? null;
+      const nextIds = new Set(requested.map((instance) => instance.id));
+      for (const instance of previous?.requested ?? []) {
+        if (!nextIds.has(instance.id)) record.releasedInstanceIds.add(instance.id);
+      }
+      const cell = { requested, visible: requested, overflow: [], range: null, bounds: null };
+      if (record.updateMode === "incremental") writeIncrementalCell(record, cell, previous);
+      else {
+        cell.bounds = unionBounds(requested);
+        markDirty(record);
+      }
+      record.cells.set(cellId, cell);
+      return {
+        cellId,
+        count: cell.visible.length,
+        requestedCount: requested.length,
+        overflowCount: cell.overflow.length,
+        range: cell.range ? { ...cell.range } : null,
+        capacity: record.capacity
+      };
     },
     retainCell(cellIdInput) {
       const cellId = stableId(cellIdInput, null, "Instance cell");
@@ -145,17 +350,19 @@ function createBatchHandle(record) {
       const cellId = stableId(cellIdInput, null, "Instance cell");
       const previous = record.cells.get(cellId);
       if (!previous) return false;
-      for (const instance of previous) record.releasedInstanceIds.add(instance.id);
+      for (const instance of previous.requested) record.releasedInstanceIds.add(instance.id);
+      if (record.updateMode === "incremental" && previous.range) {
+        clearSlots(record, previous.range);
+        markDirty(record, previous.range);
+        releaseRange(record, previous.range);
+      } else {
+        markDirty(record);
+      }
       record.cells.delete(cellId);
-      markDirty(record);
       return true;
     },
     clear() {
-      for (const instances of record.cells.values()) {
-        for (const instance of instances) record.releasedInstanceIds.add(instance.id);
-      }
-      record.cells.clear();
-      markDirty(record);
+      for (const [cellId] of [...record.cells]) this.releaseCell(cellId);
       return true;
     },
     hasCell(cellIdInput) {
@@ -165,41 +372,38 @@ function createBatchHandle(record) {
       return [...record.cells.keys()].sort();
     },
     flush() {
-      const requested = flattenInstances(record);
-      const instances = requested.slice(0, record.capacity);
-      const overflowInstances = requested.slice(record.capacity);
-      const activeCount = instances.length;
-      const changedSpan = Math.max(activeCount, record.previousActiveCount);
+      const payload = record.updateMode === "incremental" ? flushIncremental(record) : flushFull(record);
       const result = {
         id: record.id,
         version: INSTANCED_RENDER_BATCH_KIT_VERSION,
         revision: record.revision,
         capacity: record.capacity,
-        requestedCount: requested.length,
-        activeCount,
-        instances: clone(instances),
-        changedRanges: record.dirty && changedSpan > 0 ? [{ start: 0, count: changedSpan }] : [],
-        bounds: unionBounds(instances),
+        updateMode: record.updateMode,
+        ...payload,
         boundsDirty: record.dirty && record.boundsMode === "recompute-on-change",
         overflow: {
-          count: overflowInstances.length,
-          instanceIds: overflowInstances.map((instance) => instance.id)
+          count: payload.overflowInstances.length,
+          instanceIds: payload.overflowInstances.map((instance) => instance.id)
         },
         releasedInstanceIds: [...record.releasedInstanceIds].sort(),
         visibility: {
-          empty: activeCount === 0,
-          visible: activeCount > 0
+          empty: payload.activeCount === 0,
+          visible: payload.activeCount > 0
         }
       };
-      record.previousActiveCount = activeCount;
+      delete result.overflowInstances;
+      record.previousActiveCount = result.activeCount;
       record.lastFlush = {
         revision: result.revision,
         activeCount: result.activeCount,
+        slotCount: result.slotCount,
         requestedCount: result.requestedCount,
+        changedRanges: clone(result.changedRanges),
         overflow: clone(result.overflow),
         bounds: clone(result.bounds)
       };
       record.dirty = false;
+      record.dirtyRanges.length = 0;
       record.releasedInstanceIds.clear();
       return result;
     },
@@ -207,13 +411,17 @@ function createBatchHandle(record) {
       return batchSnapshot(record);
     },
     getStats() {
-      const requestedCount = flattenInstances(record).length;
+      const requested = requestedCount(record);
+      const active = activeCount(record);
       return {
         id: record.id,
         capacity: record.capacity,
-        activeCount: Math.min(record.capacity, requestedCount),
-        requestedCount,
-        overflowCount: Math.max(0, requestedCount - record.capacity),
+        updateMode: record.updateMode,
+        cellCapacity: record.cellCapacity,
+        activeCount: active,
+        slotCount: record.updateMode === "incremental" ? slotCount(record) : active,
+        requestedCount: requested,
+        overflowCount: Math.max(0, requested - active),
         cellCount: record.cells.size,
         revision: record.revision,
         dirty: record.dirty
@@ -308,10 +516,11 @@ export function createInstancedRenderBatchKit(config = {}) {
     apiName: config.apiName ?? "instancedRenderBatch",
     version: INSTANCED_RENDER_BATCH_KIT_VERSION,
     stability: "candidate",
-    services: ["batch-registry", "cell-membership", "instance-flush", "overflow-diagnostics", "bounds-invalidation"],
+    services: ["batch-registry", "cell-membership", "stable-cell-ranges", "instance-flush", "overflow-diagnostics", "bounds-invalidation"],
     provides: [
       "render:instanced-batch",
       "render:instance-cell-membership",
+      "render:instance-stable-cell-ranges",
       "render:instance-overflow-diagnostics",
       "render:instance-bounds-invalidation"
     ],
@@ -322,7 +531,7 @@ export function createInstancedRenderBatchKit(config = {}) {
       domainFamily: "render-descriptors",
       rendererAgnostic: true,
       ownsCapacity: true,
-      boundary: "Owns stable instanced-batch capacity, active membership, cell replacement and release, overflow diagnostics, changed ranges, and bounds invalidation. Renderer adapters own GPU buffers, mesh objects, matrix uploads, and actual culling."
+      boundary: "Owns stable instanced-batch capacity, optional stable per-cell slot ranges, active membership, cell replacement and release, overflow diagnostics, changed ranges, and bounds invalidation. Renderer adapters own GPU buffers, mesh objects, matrix uploads, and actual culling."
     }
   });
 }
