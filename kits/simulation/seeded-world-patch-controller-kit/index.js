@@ -421,9 +421,15 @@ function createController(options = {}, seedApi) {
 
   function takeReadyPatches(optionsInput = {}) {
     const maximum = positiveInteger(optionsInput.maximum, activationBudget, "Activation maximum");
+    const allowed = Array.isArray(optionsInput.patchIds) ? new Set(optionsInput.patchIds.map(String)) : null;
+    const deferred = [];
     const output = [];
     while (output.length < maximum && readyQueue.length) {
       const idValue = readyQueue.shift();
+      if (allowed && !allowed.has(idValue)) {
+        deferred.push(idValue);
+        continue;
+      }
       const record = records.get(idValue);
       if (!record?.patch || active.has(idValue) || presentationPrefetched.has(idValue) || !desiredActive.has(idValue)) continue;
       active.add(idValue);
@@ -431,14 +437,21 @@ function createController(options = {}, seedApi) {
       record.lastTouched = ++sequence;
       output.push({ id: record.id, key: record.key, x: record.x, z: record.z, patch: record.patch, promoted: false });
     }
+    readyQueue.unshift(...deferred);
     return output;
   }
 
   function takeReadyPrefetchPatches(optionsInput = {}) {
     const maximum = positiveInteger(optionsInput.maximum, activationBudget, "Presentation-prefetch activation maximum");
+    const allowed = Array.isArray(optionsInput.patchIds) ? new Set(optionsInput.patchIds.map(String)) : null;
+    const deferred = [];
     const output = [];
     while (output.length < maximum && prefetchReadyQueue.length) {
       const idValue = prefetchReadyQueue.shift();
+      if (allowed && !allowed.has(idValue)) {
+        deferred.push(idValue);
+        continue;
+      }
       const record = records.get(idValue);
       if (
         !record?.patch
@@ -459,6 +472,7 @@ function createController(options = {}, seedApi) {
         presentationOnly: true
       });
     }
+    prefetchReadyQueue.unshift(...deferred);
     return output;
   }
 
