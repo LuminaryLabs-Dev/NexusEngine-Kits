@@ -99,16 +99,22 @@ assert.ok(prioritySamples.some((entry) => entry.reason === "prefetch" && entry.f
 
 twoTierController.pump({ maximum: 64 });
 await new Promise((resolve) => setTimeout(resolve, 20));
-const activeEntries = twoTierController.takeReadyPatches({ maximum: 9 });
-assert.equal(activeEntries.length, 9, "the 3x3 simulation core becomes active");
-
-const prefetchedEntries = [];
-for (;;) {
-  const batch = twoTierController.takeReadyPrefetchPatches({ maximum: 16 });
-  if (!batch.length) break;
-  prefetchedEntries.push(...batch);
+const startupCoreIds = [];
+for (let z = -1; z <= 1; z += 1) {
+  for (let x = -1; x <= 1; x += 1) startupCoreIds.push(`${x}:${z}`);
 }
-assert.ok(prefetchedEntries.length >= 12, "the controller exposes presentation-only forward patches");
+const activeEntries = twoTierController.takeReadyPatches({ maximum: 9, patchIds: startupCoreIds });
+assert.equal(activeEntries.length, 9, "the selected 3x3 simulation core becomes active");
+
+const startupVisualIds = [];
+for (let z = 2; z <= 5; z += 1) {
+  for (let x = -1; x <= 1; x += 1) startupVisualIds.push(`${x}:${z}`);
+}
+const prefetchedEntries = twoTierController.takeReadyPrefetchPatches({
+  maximum: 12,
+  patchIds: startupVisualIds
+});
+assert.equal(prefetchedEntries.length, 12, "the selected forward corridor becomes presentation-prefetched");
 assert.equal(
   twoTierController.getPresentationPrefetchedPatchIds().length,
   prefetchedEntries.length,
