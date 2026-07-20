@@ -66,6 +66,16 @@ function createController(options = {}, seedApi) {
   const terrainSettingsHash = stableText(options.terrainSettingsHash, "terrain-default", "Terrain settings hash");
   const vegetationSettingsHash = stableText(options.vegetationSettingsHash, "vegetation-default", "Vegetation settings hash");
   const worldSeed = stableText(options.worldSeed ?? options.seed, seedApi?.getWorldSeed?.() ?? "nexusengine", "World seed");
+  const priorityPolicy = typeof options.priorityPolicy === "function"
+    ? options.priorityPolicy
+    : typeof options.priorityPolicy?.score === "function"
+      ? options.priorityPolicy.score.bind(options.priorityPolicy)
+      : null;
+  const priorityPolicyId = stableText(
+    options.priorityPolicyId ?? options.priorityPolicy?.id,
+    priorityPolicy ? "custom" : "distance-first-v1",
+    "Priority policy id"
+  );
 
   let generator = typeof options.generator === "function" ? options.generator : null;
   let executor = options.executor ?? null;
@@ -81,7 +91,9 @@ function createController(options = {}, seedApi) {
   const inflight = new Set();
   const queue = [];
   const readyQueue = [];
+  const prefetchReadyQueue = [];
   const active = new Set();
+  const presentationPrefetched = new Set();
   const desiredActive = new Set();
   const desiredPrefetch = new Set();
   const released = new Set();
@@ -89,6 +101,10 @@ function createController(options = {}, seedApi) {
 
   function cacheKey(x, z) {
     return `${worldSeed}:${generatorVersion}:${x}:${z}:${terrainSettingsHash}:${vegetationSettingsHash}`;
+  }
+
+  function queueOnce(target, idValue) {
+    if (!target.includes(idValue)) target.push(idValue);
   }
 
   function makeRequest(x, z, priority = 0, reason = "active") {
@@ -123,6 +139,7 @@ function createController(options = {}, seedApi) {
         patch: null,
         priority: Infinity,
         reason: "unknown",
+        prefetchStep: null,
         lastTouched: sequence,
         error: null
       };
@@ -132,14 +149,69 @@ function createController(options = {}, seedApi) {
     return record;
   }
 
-  function enqueue(record, priority, reason) {
-    record.priority = Math.min(record.priority, priority);
-    record.reason = reason;
+  function priorityFor(cell, reason) {
+    const fallback = reason === "active" ? cell.distance : 100 + cell.step;
+    if (!priorityPolicy) return fallback;
+    const offsetX = cell.x - focus.center.x;
+    const offsetZ = cell.z - focus.center.z;
+    const forwardDot = offsetX * focus.forward.x + offsetZ * focus.forward.z;
+    const lateralDistance = Math.abs(offsetX * focus.forward.z - offsetZ * focus.forward.x);
+    const context = Object.freeze({
+      controllerId: id,
+      reason,
+      x: cell.x,
+      z: cell.z,
+      patchId: patchId(cell.x, cell.z),
+      step: Number(cell.step ?? 0),
+      distance: Number(cell.distance ?? Math.max(Math.abs(offsetX), Math.abs(offsetZ))),
+      offsetX,
+      offsetZ,
+      forwardDot,
+      lateralDistance,
+      activeRadius,
+      retainRadius,
+      prefetchDistance,
+      patchSize,
+      focus: clone(focus)
+    });
+    const value = Number(priorityPolicy(context));
+    if (!Number.isFinite(value)) {
+      throw new TypeError(`Priority policy ${priorityPolicyId} returned a non-finite value for ${context.patchId}.`);
+    }
+    return value;
+  }
+
+  function markRecordReady(record) {
+    if (!record?.patch) return;
+    if (active.has(record.id)) {
+      record.status = "active";
+      return;
+    }
+    if (presentationPrefetched.has(record.id)) {
+      record.status = "presentation-prefetched";
+      return;
+    }
+    if (desiredActive.has(record.id)) {
+      record.status = "ready";
+      queueOnce(readyQueue, record.id);
+      return;
+    }
+    if (desiredPrefetch.has(record.id)) {
+      record.status = "presentation-ready";
+      queueOnce(prefetchReadyQueue, record.id);
+      return;
+    }
+    record.status = "cached";
+  }
+
+  function enqueue(record, priority, reason, step = null) {
+    if (priority < record.priority) {
+      record.priority = priority;
+      record.reason = reason;
+    }
+    if (step != null) record.prefetchStep = record.prefetchStep == null ? step : Math.min(record.prefetchStep, step);
     if (record.patch) {
-      if (desiredActive.has(record.id) && !active.has(record.id) && record.status !== "ready") {
-        record.status = "ready";
-        readyQueue.push(record.id);
-      }
+      markRecordReady(record);
       return;
     }
     if (queued.has(record.id) || inflight.has(record.id)) return;
@@ -158,17 +230,25 @@ function createController(options = {}, seedApi) {
     return output;
   }
 
+  function prefetchCoordinatesForStep(centerX, centerZ, forward, step) {
+    const output = [];
+    const x = centerX + Math.round(forward.x * (activeRadius + step));
+    const z = centerZ + Math.round(forward.z * (activeRadius + step));
+    for (let sideZ = -1; sideZ <= 1; sideZ += 1) {
+      for (let sideX = -1; sideX <= 1; sideX += 1) {
+        output.push({ x: x + sideX, z: z + sideZ, step });
+      }
+    }
+    return output;
+  }
+
   function prefetchCoordinates(centerX, centerZ, forward) {
     const output = new Map();
     for (let step = 1; step <= prefetchDistance; step += 1) {
-      const x = centerX + Math.round(forward.x * (activeRadius + step));
-      const z = centerZ + Math.round(forward.z * (activeRadius + step));
-      for (let sideZ = -1; sideZ <= 1; sideZ += 1) {
-        for (let sideX = -1; sideX <= 1; sideX += 1) {
-          const px = x + sideX;
-          const pz = z + sideZ;
-          output.set(patchId(px, pz), { x: px, z: pz, step });
-        }
+      for (const cell of prefetchCoordinatesForStep(centerX, centerZ, forward, step)) {
+        const idValue = patchId(cell.x, cell.z);
+        const previous = output.get(idValue);
+        if (!previous || cell.step < previous.step) output.set(idValue, cell);
       }
     }
     return [...output.values()];
@@ -180,7 +260,13 @@ function createController(options = {}, seedApi) {
 
   function evict() {
     const candidates = [...records.values()]
-      .filter((record) => !active.has(record.id) && !desiredActive.has(record.id) && !desiredPrefetch.has(record.id) && !inflight.has(record.id))
+      .filter((record) =>
+        !active.has(record.id)
+        && !presentationPrefetched.has(record.id)
+        && !desiredActive.has(record.id)
+        && !desiredPrefetch.has(record.id)
+        && !inflight.has(record.id)
+      )
       .sort((left, right) => left.lastTouched - right.lastTouched);
     while (records.size > cacheLimit && candidates.length) {
       const record = candidates.shift();
@@ -211,18 +297,26 @@ function createController(options = {}, seedApi) {
     desiredActive.clear();
     desiredPrefetch.clear();
 
+    for (const idValue of queued) {
+      const record = records.get(idValue);
+      if (!record) continue;
+      record.priority = Infinity;
+      record.reason = "unknown";
+      record.prefetchStep = null;
+    }
+
     for (const cell of activeCoordinates(centerX, centerZ)) {
       const idValue = patchId(cell.x, cell.z);
       desiredActive.add(idValue);
       desiredPrefetch.add(idValue);
-      enqueue(getOrCreateRecord(cell.x, cell.z), cell.distance, "active");
+      enqueue(getOrCreateRecord(cell.x, cell.z), priorityFor(cell, "active"), "active");
     }
 
     for (const cell of prefetchCoordinates(centerX, centerZ, focus.forward)) {
       const idValue = patchId(cell.x, cell.z);
       if (desiredActive.has(idValue)) continue;
       desiredPrefetch.add(idValue);
-      enqueue(getOrCreateRecord(cell.x, cell.z), 100 + cell.step, "prefetch");
+      enqueue(getOrCreateRecord(cell.x, cell.z), priorityFor(cell, "prefetch"), "prefetch", cell.step);
     }
 
     for (const idValue of [...active]) {
@@ -233,12 +327,17 @@ function createController(options = {}, seedApi) {
       if (record) record.status = insideRetainRing(record, centerX, centerZ) ? "retained" : "cached";
     }
 
-    for (const idValue of desiredActive) {
+    for (const idValue of [...presentationPrefetched]) {
+      if (desiredPrefetch.has(idValue)) continue;
+      presentationPrefetched.delete(idValue);
+      released.add(idValue);
       const record = records.get(idValue);
-      if (record?.patch && !active.has(idValue) && record.status !== "ready") {
-        record.status = "ready";
-        readyQueue.push(idValue);
-      }
+      if (record) record.status = insideRetainRing(record, centerX, centerZ) ? "retained" : "cached";
+    }
+
+    for (const idValue of desiredPrefetch) {
+      const record = records.get(idValue);
+      if (record?.patch) markRecordReady(record);
     }
 
     evict();
@@ -269,10 +368,9 @@ function createController(options = {}, seedApi) {
     runRequest(record).then((patch) => {
       if (!patch || typeof patch !== "object") throw new TypeError(`Patch generator returned no patch for ${record.id}.`);
       record.patch = patch;
-      record.status = desiredActive.has(record.id) ? "ready" : "cached";
       record.priority = Infinity;
       record.lastTouched = ++sequence;
-      if (desiredActive.has(record.id)) readyQueue.push(record.id);
+      markRecordReady(record);
     }).catch((error) => {
       record.status = "error";
       record.error = String(error?.message ?? error);
@@ -308,18 +406,16 @@ function createController(options = {}, seedApi) {
     if (!generator) throw new Error(`World patch controller ${id} has no generator.`);
     const record = getOrCreateRecord(Number(x), Number(z));
     if (!record.patch) record.patch = generator(makeRequest(record.x, record.z, 0, "prime"));
-    record.status = desiredActive.has(record.id) ? "ready" : "cached";
     record.lastTouched = ++sequence;
-    if (desiredActive.has(record.id) && !readyQueue.includes(record.id)) readyQueue.push(record.id);
+    markRecordReady(record);
     return record.patch;
   }
 
   function primePatch(x, z, patch) {
     const record = getOrCreateRecord(Number(x), Number(z));
     record.patch = patch;
-    record.status = desiredActive.has(record.id) ? "ready" : "cached";
     record.lastTouched = ++sequence;
-    if (desiredActive.has(record.id) && !readyQueue.includes(record.id)) readyQueue.push(record.id);
+    markRecordReady(record);
     return record.id;
   }
 
@@ -329,13 +425,59 @@ function createController(options = {}, seedApi) {
     while (output.length < maximum && readyQueue.length) {
       const idValue = readyQueue.shift();
       const record = records.get(idValue);
-      if (!record?.patch || active.has(idValue) || !desiredActive.has(idValue)) continue;
+      if (!record?.patch || active.has(idValue) || presentationPrefetched.has(idValue) || !desiredActive.has(idValue)) continue;
       active.add(idValue);
       record.status = "active";
       record.lastTouched = ++sequence;
-      output.push({ id: record.id, key: record.key, x: record.x, z: record.z, patch: record.patch });
+      output.push({ id: record.id, key: record.key, x: record.x, z: record.z, patch: record.patch, promoted: false });
     }
     return output;
+  }
+
+  function takeReadyPrefetchPatches(optionsInput = {}) {
+    const maximum = positiveInteger(optionsInput.maximum, activationBudget, "Presentation-prefetch activation maximum");
+    const output = [];
+    while (output.length < maximum && prefetchReadyQueue.length) {
+      const idValue = prefetchReadyQueue.shift();
+      const record = records.get(idValue);
+      if (
+        !record?.patch
+        || active.has(idValue)
+        || presentationPrefetched.has(idValue)
+        || desiredActive.has(idValue)
+        || !desiredPrefetch.has(idValue)
+      ) continue;
+      presentationPrefetched.add(idValue);
+      record.status = "presentation-prefetched";
+      record.lastTouched = ++sequence;
+      output.push({
+        id: record.id,
+        key: record.key,
+        x: record.x,
+        z: record.z,
+        patch: record.patch,
+        presentationOnly: true
+      });
+    }
+    return output;
+  }
+
+  function promotePrefetchPatch(idValue) {
+    const key = String(idValue);
+    const record = records.get(key);
+    if (!record?.patch || !presentationPrefetched.has(key) || !desiredActive.has(key)) return null;
+    presentationPrefetched.delete(key);
+    active.add(key);
+    record.status = "active";
+    record.lastTouched = ++sequence;
+    return {
+      id: record.id,
+      key: record.key,
+      x: record.x,
+      z: record.z,
+      patch: record.patch,
+      promoted: true
+    };
   }
 
   function takeReleasedPatchIds() {
@@ -344,9 +486,61 @@ function createController(options = {}, seedApi) {
     return output;
   }
 
+  function getForwardReadiness(optionsInput = {}) {
+    const targetIds = Array.isArray(optionsInput.patchIds)
+      ? [...new Set(optionsInput.patchIds.map(String))].sort()
+      : [...desiredPrefetch].filter((idValue) => !desiredActive.has(idValue)).sort();
+    const generatedPatchIds = [];
+    const presentationReadyPatchIds = [];
+    const presentationPrefetchedPatchIds = [];
+    const activePatchIds = [];
+    const readyPatchIds = [];
+    for (const idValue of targetIds) {
+      const record = records.get(idValue);
+      if (record?.patch) generatedPatchIds.push(idValue);
+      if (record?.status === "presentation-ready") presentationReadyPatchIds.push(idValue);
+      if (presentationPrefetched.has(idValue)) presentationPrefetchedPatchIds.push(idValue);
+      if (active.has(idValue)) activePatchIds.push(idValue);
+      if (presentationPrefetched.has(idValue) || active.has(idValue)) readyPatchIds.push(idValue);
+    }
+
+    const steps = [];
+    let contiguousSteps = 0;
+    for (let step = 1; step <= prefetchDistance; step += 1) {
+      const patchIds = [...new Set(prefetchCoordinatesForStep(focus.center.x, focus.center.z, focus.forward, step)
+        .map((cell) => patchId(cell.x, cell.z)))].sort();
+      const presented = patchIds.filter((idValue) => active.has(idValue) || presentationPrefetched.has(idValue));
+      const complete = presented.length === patchIds.length;
+      steps.push({ step, patchIds, presentedPatchIds: presented, complete });
+      if (complete && contiguousSteps === step - 1) contiguousSteps = step;
+    }
+
+    return {
+      controllerId: id,
+      priorityPolicyId,
+      patchSize,
+      required: targetIds.length,
+      generated: generatedPatchIds.length,
+      presentationReady: presentationReadyPatchIds.length,
+      presentationPrefetched: presentationPrefetchedPatchIds.length,
+      simulationActive: activePatchIds.length,
+      ready: readyPatchIds.length,
+      forwardBufferedSteps: contiguousSteps,
+      forwardBufferedMeters: contiguousSteps * patchSize,
+      targetPatchIds: targetIds,
+      generatedPatchIds,
+      presentationReadyPatchIds,
+      presentationPrefetchedPatchIds,
+      activePatchIds,
+      readyPatchIds,
+      steps
+    };
+  }
+
   function getStats() {
     const statuses = {};
     for (const record of records.values()) statuses[record.status] = (statuses[record.status] ?? 0) + 1;
+    const forward = getForwardReadiness();
     return {
       id,
       worldSeed,
@@ -358,14 +552,20 @@ function createController(options = {}, seedApi) {
       cacheLimit,
       activationBudget,
       generationBudget,
+      priorityPolicyId,
       focus: clone(focus),
       desiredActive: desiredActive.size,
       desiredPrefetch: desiredPrefetch.size,
       active: active.size,
+      presentationPrefetched: presentationPrefetched.size,
       cached: records.size,
       ready: readyQueue.length,
+      presentationReady: prefetchReadyQueue.length,
       queued: queue.length,
       inflight: inflight.size,
+      releasedPending: released.size,
+      forwardBufferedSteps: forward.forwardBufferedSteps,
+      forwardBufferedMeters: forward.forwardBufferedMeters,
       statuses,
       diagnostics: diagnostics.slice(-16).map(clone)
     };
@@ -386,11 +586,13 @@ function createController(options = {}, seedApi) {
         cacheLimit,
         activationBudget,
         generationBudget,
+        priorityPolicyId,
         terrainSettingsHash,
         vegetationSettingsHash
       },
       focus: clone(focus),
       activePatchIds: [...active].sort(),
+      presentationPrefetchedPatchIds: [...presentationPrefetched].sort(),
       cachedPatchIds: [...records.keys()].sort(),
       cacheDigest: stableHash([...records.values()].map((record) => `${record.key}:${record.status}`).sort().join("|")),
       stats: getStats()
@@ -403,7 +605,9 @@ function createController(options = {}, seedApi) {
     inflight.clear();
     queue.length = 0;
     readyQueue.length = 0;
+    prefetchReadyQueue.length = 0;
     active.clear();
+    presentationPrefetched.clear();
     desiredActive.clear();
     desiredPrefetch.clear();
     released.clear();
@@ -434,11 +638,16 @@ function createController(options = {}, seedApi) {
     generateSync,
     primePatch,
     takeReadyPatches,
+    takeReadyPrefetchPatches,
+    promotePrefetchPatch,
     takeReleasedPatchIds,
     hasPatch(idValue) { return Boolean(records.get(String(idValue))?.patch); },
     getPatch(idValue) { return records.get(String(idValue))?.patch ?? null; },
     getActivePatchIds() { return [...active].sort(); },
+    getPresentationPrefetchedPatchIds() { return [...presentationPrefetched].sort(); },
     getDesiredActivePatchIds() { return [...desiredActive].sort(); },
+    getDesiredPrefetchPatchIds() { return [...desiredPrefetch].sort(); },
+    getForwardReadiness,
     getStats,
     getSnapshot,
     loadSnapshot(snapshot = {}) {
