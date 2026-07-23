@@ -8,7 +8,8 @@ NexusEngine Kits is a clean rebuild foundation, not a complete game stack.
 - The installer can install a single kit, a domain, a bundle, or the full catalog.
 - Audit scripts exist to detect contradictions between catalogs, package exports, docs, status, and behavior.
 - `completion-ledger-kit` has real candidate behavior.
-- `generic-resource-loop-kit` has official behavior and installs beside NexusEngine core simulation.
+- `generic-resource-loop-kit` is deprecated because NexusEngine Core now owns
+  the canonical resource service and compatibility APIs.
 - The spatial domain is installable and smoke-testable.
 - Default installation skips non-official entries; callers must explicitly opt into candidate or experimental statuses.
 
@@ -20,7 +21,7 @@ execute them as behavior.
 
 ## What is official
 
-There are currently 27 official entries. Run `npm run progress` and inspect the
+There are currently 26 official entries. Run `npm run progress` and inspect the
 generated manifests for the current set.
 
 ## What is candidate

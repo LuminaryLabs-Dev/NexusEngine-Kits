@@ -4369,7 +4369,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
     "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "generic-resource-loop-kit",
     "version": "1.0.0",
-    "status": "official",
+    "status": "deprecated",
     "kind": "domain-service-kit",
     "domain": "simulation",
     "domainPath": "n:simulation:resource-meter-service",
@@ -4383,7 +4383,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/simulation/generic-resource-loop-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
     },
-    "integrity": "sha256-uk6UGoKT3rY+8hm8nvJJ4CMdDVnZXP8Luuxt+SAuVgE=",
+    "integrity": "sha256-T+Er/rdjPFpQL1elIePAboDsBFhNaTHuDuDoksYVCMY=",
     "environments": [
       "node",
       "browser"
@@ -4404,7 +4404,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "requestedRef": "main",
       "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
       "path": "protokits/generic-resource-loop-kit/index.js",
-      "parity": "official"
+      "parity": "historical-passing"
     },
     "runtime": {
       "api": "resourceMeter",
@@ -4427,15 +4427,15 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
         "sourceMapped": true,
         "protoValidated": true,
         "candidate": true,
-        "official": true,
-        "deprecated": false,
+        "official": false,
+        "deprecated": true,
         "archived": false,
         "blocked": false
       },
       "nextCapability": null,
       "blocker": null
     },
-    "stability": "official"
+    "stability": "deprecated"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -10760,7 +10760,8 @@ export const GENERATED_BUNDLE_MANIFESTS = Object.freeze([
       "generic-defense",
       "route-extraction",
       "project-deployment",
-      "simulation"
+      "simulation",
+      "aquatic"
     ],
     "kits": []
   },
@@ -11119,7 +11120,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "generic-defense",
       "route-extraction",
       "project-deployment",
-      "simulation"
+      "simulation",
+      "aquatic"
     ],
     "default-game-stack": [
       "foundation",
@@ -15536,7 +15538,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "generic-resource-loop-kit",
       "version": "1.0.0",
-      "status": "official",
+      "status": "deprecated",
       "kind": "domain-service-kit",
       "domain": "simulation",
       "domainPath": "n:simulation:resource-meter-service",
@@ -15550,7 +15552,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/simulation/generic-resource-loop-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
       },
-      "integrity": "sha256-uk6UGoKT3rY+8hm8nvJJ4CMdDVnZXP8Luuxt+SAuVgE=",
+      "integrity": "sha256-T+Er/rdjPFpQL1elIePAboDsBFhNaTHuDuDoksYVCMY=",
       "environments": [
         "node",
         "browser"
@@ -15571,7 +15573,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "requestedRef": "main",
         "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
         "path": "protokits/generic-resource-loop-kit/index.js",
-        "parity": "official"
+        "parity": "historical-passing"
       },
       "runtime": {
         "api": "resourceMeter",
@@ -15594,15 +15596,15 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
           "sourceMapped": true,
           "protoValidated": true,
           "candidate": true,
-          "official": true,
-          "deprecated": false,
+          "official": false,
+          "deprecated": true,
           "archived": false,
           "blocked": false
         },
         "nextCapability": null,
         "blocker": null
       },
-      "stability": "official"
+      "stability": "deprecated"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -27558,7 +27560,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "generic-resource-loop-kit",
       "version": "1.0.0",
-      "status": "official",
+      "status": "deprecated",
       "kind": "domain-service-kit",
       "domain": "simulation",
       "domainPath": "n:simulation:resource-meter-service",
@@ -27572,7 +27574,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/simulation/generic-resource-loop-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
       },
-      "integrity": "sha256-uk6UGoKT3rY+8hm8nvJJ4CMdDVnZXP8Luuxt+SAuVgE=",
+      "integrity": "sha256-T+Er/rdjPFpQL1elIePAboDsBFhNaTHuDuDoksYVCMY=",
       "environments": [
         "node",
         "browser"
@@ -27616,15 +27618,15 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           "sourceMapped": true,
           "protoValidated": true,
           "candidate": true,
-          "official": true,
-          "deprecated": false,
+          "official": false,
+          "deprecated": true,
           "archived": false,
           "blocked": false
         },
         "nextCapability": null,
         "blocker": null
       },
-      "stability": "official",
+      "stability": "deprecated",
       "lineage": {
         "source": {
           "owner": "LuminaryLabs-Agents",
@@ -27632,7 +27634,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           "requestedRef": "main",
           "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
           "path": "protokits/generic-resource-loop-kit/index.js",
-          "parity": "official"
+          "parity": "historical-passing"
         },
         "promotion": {
           "baseline": true,
@@ -27642,8 +27644,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
             "sourceMapped": true,
             "protoValidated": true,
             "candidate": true,
-            "official": true,
-            "deprecated": false,
+            "official": false,
+            "deprecated": true,
             "archived": false,
             "blocked": false
           },
@@ -36185,7 +36187,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "generic-defense",
         "route-extraction",
         "project-deployment",
-        "simulation"
+        "simulation",
+        "aquatic"
       ],
       "kits": []
     },
@@ -36287,11 +36290,11 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineTotal": 120,
   "baselineResolved": 7,
   "baselineRemaining": 113,
-  "official": 27,
+  "official": 26,
   "candidate": 9,
   "scaffolded": 9,
   "placeholder": 103,
-  "deprecated": 1,
+  "deprecated": 2,
   "archived": 0,
   "blocked": 0,
   "approvedAdditionsTotal": 29,
@@ -36302,8 +36305,8 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
     "sourceMapped": 149,
     "protoValidated": 16,
     "candidate": 37,
-    "official": 27,
-    "deprecated": 1,
+    "official": 26,
+    "deprecated": 2,
     "archived": 0,
     "blocked": 0
   }

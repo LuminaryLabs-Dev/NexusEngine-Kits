@@ -7,19 +7,38 @@ import {
   listKitIds
 } from "../../installer/index.js";
 
-const engine = createRealtimeGame({ kits: [createCoreSimulationKit()] });
+const engine = createRealtimeGame({
+  tick: { maxDelta: 1 },
+  kits: [createCoreSimulationKit({
+    resourceMeters: [{ id: "energy", max: 10, initial: 8 }]
+  })]
+});
 const installer = createNexusEngineKitInstaller();
 const one = await installer.installKit(engine, "generic-resource-loop-kit", {
   resources: [{ id: "energy", max: 10, initial: 8 }]
 });
-assert.equal(one.installed, true);
-assert.equal(one.skipped, false);
-assert.equal(one.report.ok, true);
+assert.equal(one.installed, false);
+assert.equal(one.skipped, true);
+assert.equal(one.reason, "status-not-allowed");
 assert.equal(typeof engine.n.resourceMeter.spend, "function");
 assert.equal(engine.n.resourceMeter.spend("energy", 3).value, 5);
 assert.equal(typeof engine.n.coreSimulation.getSnapshot, "function");
 
-const duplicate = await installer.installKit(engine, "generic-resource-loop-kit");
+const compatibilityEngine = createRealtimeGame({ tick: { maxDelta: 1 } });
+const compatibilityInstaller = createNexusEngineKitInstaller({
+  allowStatuses: ["official", "deprecated"]
+});
+const compatibility = await compatibilityInstaller.installKit(
+  compatibilityEngine,
+  "generic-resource-loop-kit",
+  { resources: [{ id: "legacy", max: 10, initial: 8 }] }
+);
+assert.equal(compatibility.installed, true);
+assert.equal(compatibilityEngine.n.resourceMeter.spend("legacy", 3).value, 5);
+const duplicate = await compatibilityInstaller.installKit(
+  compatibilityEngine,
+  "generic-resource-loop-kit"
+);
 assert.equal(duplicate.installed, false);
 assert.equal(duplicate.duplicate, true);
 
@@ -49,13 +68,8 @@ assert.equal(unresolved.report.installed.length, 0);
 assert.equal(unresolved.report.plan.skipped.filter((issue) => issue.type === "status-not-allowed").length, 4);
 
 const all = createAllNexusEngineKits();
-assert.equal(listKitIds().length, 123);
-assert.deepEqual(all.map((kit) => kit.id), [
-  "kit-registry-domain-kit",
-  "capability-graph-domain-kit",
-  "composition-planning-domain-kit",
-  "seed-kit",
-  "generic-resource-loop-kit"
-]);
+assert.equal(listKitIds().length, 149);
+assert.equal(all.some((kit) => kit.id === "generic-resource-loop-kit"), false);
+assert.equal(all.some((kit) => kit.id === "fishing"), true);
 
 console.log("installer smoke ok", { installed: engine.kits.length, catalog: listKitIds().length, defaultReady: all.length });

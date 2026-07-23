@@ -467,7 +467,7 @@ function createResourceMeterKitDefinition(NexusEngine, config = {}) {
     domainPath: "n:simulation:resource-meter-service",
     parentDomainPath: "n:simulation",
     apiName: RESOURCE_METER_ENGINE_NAMESPACE,
-    stability: "official",
+    stability: "deprecated",
     version: GENERIC_RESOURCE_LOOP_KIT_VERSION,
     services: ["registry", "mutation", "passive-rate", "threshold", "descriptor", "snapshot"],
     provides: ["resource:loop", "resource:meters", "resource:meter-service", "validation:resources"],
@@ -479,7 +479,7 @@ function createResourceMeterKitDefinition(NexusEngine, config = {}) {
     install({ engine }) { syncGenericResourceLoopEngineNamespace(engine); },
     bindings: { ResourceLoopState },
     metadata: {
-      status: "official",
+      status: "deprecated",
       officialKitCatalog: true,
       migrationPlaceholder: false,
       realBehavior: true,
@@ -491,8 +491,8 @@ function createResourceMeterKitDefinition(NexusEngine, config = {}) {
       extendsBase: "nexusengine/core-simulation/resource-meter",
       composes: [],
       ownsLoop: true,
-      purpose: "Deterministic resource meter registry, mutation, passive-rate, threshold, descriptor, and snapshot service.",
-      boundary: "Owns resource meter collections and service behavior. Core owns the pure meter primitive; pressure policies, economy, inventory, controls, rendering, and game fiction remain separate."
+      purpose: "Deprecated standalone resource-meter collection retained for historical consumers.",
+      boundary: "NexusEngine Core owns the canonical resource service. This compatibility kit must not be installed beside Core Simulation and is excluded from default installation."
     }
   });
 }
@@ -505,4 +505,3 @@ export const createResourceMeterKit = createGenericResourceLoopKit;
 export const createResourceMeterDomainKit = createGenericResourceLoopKit;
 export default createGenericResourceLoopKit;
 import * as NexusEngineRuntime from "nexusengine";
-

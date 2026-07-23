@@ -449,7 +449,7 @@
       "next": "generic-pressure-loop-kit has no validated stable implementation or parity record."
     },
     "generic-resource-loop-kit": {
-      "status": "official",
+      "status": "deprecated",
       "target": "kits/simulation/generic-resource-loop-kit",
       "realBehavior": true,
       "sourceCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",

@@ -5,11 +5,11 @@
     "baselineTotal": 120,
     "baselineResolved": 7,
     "baselineRemaining": 113,
-    "official": 27,
+    "official": 26,
     "candidate": 9,
     "scaffolded": 9,
     "placeholder": 103,
-    "deprecated": 1,
+    "deprecated": 2,
     "archived": 0,
     "blocked": 0,
     "approvedAdditionsTotal": 29,
@@ -20,8 +20,8 @@
       "sourceMapped": 149,
       "protoValidated": 16,
       "candidate": 37,
-      "official": 27,
-      "deprecated": 1,
+      "official": 26,
+      "deprecated": 2,
       "archived": 0,
       "blocked": 0
     }
@@ -1163,7 +1163,7 @@
     },
     {
       "id": "generic-resource-loop-kit",
-      "status": "official",
+      "status": "deprecated",
       "baseline": true,
       "resolved": true,
       "stages": {
@@ -1171,8 +1171,8 @@
         "sourceMapped": true,
         "protoValidated": true,
         "candidate": true,
-        "official": true,
-        "deprecated": false,
+        "official": false,
+        "deprecated": true,
         "archived": false,
         "blocked": false
       },

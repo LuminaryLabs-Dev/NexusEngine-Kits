@@ -260,7 +260,8 @@
       "generic-defense",
       "route-extraction",
       "project-deployment",
-      "simulation"
+      "simulation",
+      "aquatic"
     ],
     "default-game-stack": [
       "foundation",
@@ -4677,7 +4678,7 @@
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "generic-resource-loop-kit",
       "version": "1.0.0",
-      "status": "official",
+      "status": "deprecated",
       "kind": "domain-service-kit",
       "domain": "simulation",
       "domainPath": "n:simulation:resource-meter-service",
@@ -4691,7 +4692,7 @@
         "node": "./kits/simulation/generic-resource-loop-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
       },
-      "integrity": "sha256-uk6UGoKT3rY+8hm8nvJJ4CMdDVnZXP8Luuxt+SAuVgE=",
+      "integrity": "sha256-T+Er/rdjPFpQL1elIePAboDsBFhNaTHuDuDoksYVCMY=",
       "environments": [
         "node",
         "browser"
@@ -4712,7 +4713,7 @@
         "requestedRef": "main",
         "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
         "path": "protokits/generic-resource-loop-kit/index.js",
-        "parity": "official"
+        "parity": "historical-passing"
       },
       "runtime": {
         "api": "resourceMeter",
@@ -4735,15 +4736,15 @@
           "sourceMapped": true,
           "protoValidated": true,
           "candidate": true,
-          "official": true,
-          "deprecated": false,
+          "official": false,
+          "deprecated": true,
           "archived": false,
           "blocked": false
         },
         "nextCapability": null,
         "blocker": null
       },
-      "stability": "official"
+      "stability": "deprecated"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",

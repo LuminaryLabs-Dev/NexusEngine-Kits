@@ -23,8 +23,8 @@ behavior.
 baseline resolved: 7 / 120
 baseline remaining: 113
 approved additions resolved: 21 / 29
-official: 27
-deprecated compatibility: 1
+official: 26
+deprecated compatibility: 2
 inventoried: 149
 active capability: clock-kit
 ```

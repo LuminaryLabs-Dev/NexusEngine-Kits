@@ -86,10 +86,10 @@ As generated on 2026-07-23:
 
 ```txt
 149 inventoried
-27 official
+26 official
 7 of 120 baseline entries resolved
 21 of 29 approved additions resolved
-1 deprecated compatibility kit
+2 deprecated compatibility kits
 ```
 
 Run `npm run progress` for current generated counts.

@@ -5,7 +5,7 @@ This file tracks areas where the catalog shape exists but implementation is inco
 | Area | Current state | Missing | Risk | Next fix |
 |---|---|---|---|---|
 | completion-ledger-kit | candidate real behavior | full source/downstream comparison and domain validation | medium | complete behavior comparison |
-| generic-resource-loop-kit | official real behavior | no current behavior gap | low | keep source/core/package/replay gates green |
+| generic-resource-loop-kit | deprecated standalone compatibility | conflicts with canonical Core resource API when composed | low | keep excluded from default installs; migrate remaining consumers to Core |
 | spatial domain | installable | most members are placeholders | high | rebuild spatial-interaction-kit |
 | installer | resolves official factories and fails closed on unready statuses | dependency lock, remote registry loading, richer reports | medium | registry control plane and install-plan support |
 | bundles | scaffolded | real gameplay behavior across member domains | high | first bundle smoke tests after domain behavior exists |

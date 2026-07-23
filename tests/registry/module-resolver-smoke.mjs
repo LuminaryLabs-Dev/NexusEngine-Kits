@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import crypto, { webcrypto } from "node:crypto";
 import { createRealtimeGame } from "nexusengine";
-import { createCoreSimulationKit } from "nexusengine/core-kits";
 import { createNexusEngineKitInstaller } from "../../installer/index.js";
 import { createBrowserModuleResolver, sha256Integrity } from "../../registry/index.js";
 import { createNodeModuleResolver } from "../../registry/node-module-resolver.js";
@@ -36,7 +35,7 @@ const externalRegistry = {
   }]
 };
 
-const engine = createRealtimeGame({ kits: [createCoreSimulationKit()] });
+const engine = createRealtimeGame();
 assert.throws(() => createNexusEngineKitInstaller({ registry: externalRegistry, factoryRegistry: {} }), /explicit full-SHA pin/);
 const blocked = createNexusEngineKitInstaller({
   registry: externalRegistry,
@@ -59,7 +58,11 @@ const allowedResult = await allowed.installKit(engine, "external-resource-meter-
   kitId: "external-resource-meter-kit",
   resources: [{ id: "external-energy", initial: 4 }]
 });
-assert.equal(allowedResult.installed, true);
+assert.equal(
+  allowedResult.installed,
+  true,
+  JSON.stringify(allowedResult.report?.errors ?? [])
+);
 
 const browserSource = "export const createExampleKit = () => ({ id: 'example-kit' });";
 const browserIntegrity = await sha256Integrity(browserSource, { subtle: webcrypto.subtle });

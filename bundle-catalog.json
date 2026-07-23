@@ -41,7 +41,8 @@
         "generic-defense",
         "route-extraction",
         "project-deployment",
-        "simulation"
+        "simulation",
+        "aquatic"
       ],
       "kits": []
     },

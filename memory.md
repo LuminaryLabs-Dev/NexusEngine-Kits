@@ -45,6 +45,8 @@ remains descriptive until a trusted provider resolves it.
 - Complete Reef Rescue behavior is external to this package.
 - The deprecated `protokit-core` compatibility kit remains excluded from
   default installs and requires explicit status opt-in.
+- `generic-resource-loop-kit` is deprecated because current NexusEngine Core
+  owns the same resource service and compatibility API names.
 
 ## Validation
 

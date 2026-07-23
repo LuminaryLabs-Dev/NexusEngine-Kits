@@ -1,6 +1,12 @@
 # generic-resource-loop-kit
 
-Official NexusEngine Domain Service Kit for a deterministic resource-meter service.
+Deprecated standalone NexusEngine Domain Service Kit for a deterministic
+resource-meter service.
+
+NexusEngine Core now owns the canonical `engine.n.resourceMeter` and
+`engine.n.genericResourceLoop` APIs. This kit remains only for historical
+consumers that run without Core Simulation. It is excluded from default
+installation and must not be installed beside Core Simulation.
 
 ## Domain
 
@@ -10,7 +16,8 @@ Official NexusEngine Domain Service Kit for a deterministic resource-meter servi
 - Compatibility APIs: `engine.n.genericResourceLoop`, `engine.resourceMeter`, `engine.genericResourceLoop`
 - Base primitive: `createResourceMeter()` from `nexusengine/core-kits`
 
-NexusEngine owns the pure single-meter primitive. This kit owns a runtime-installed collection service: registration, mutation, passive rates, locks, thresholds, events, read descriptors, reset, and snapshot restoration.
+NexusEngine owns both the primitive and the current Core collection service.
+This package preserves the former standalone implementation for migration only.
 
 ## Source lineage
 
@@ -94,15 +101,18 @@ Does not own:
 - controls, objectives, renderer objects, HUD, DOM, Canvas, or Three.js
 - wall-clock time, unseeded random, persistence transport, or networking
 
-## Experimental purge decision
+## Retirement Decision
 
-- `generic-resource-loop-kit` is the canonical service owner.
-- NexusEngine `createResourceMeter()` remains the canonical pure primitive and is not duplicated as a new primitive here.
+- NexusEngine Core is the canonical service owner.
+- `generic-resource-loop-kit` is deprecated and excluded from default installs.
 - `generic-pressure-loop-kit` and `pressure-domain-kit` remain separate pressure-policy candidates; they are not folded into meter state.
 - External callers of the historical `createResourcePressureKit()` remain a
   documented migration gap until they can move without feature loss.
-- The former NexusEngine-Kits migration placeholder is replaced by this validated behavior version.
+- New consumers use `engine.n.coreSimulation.resources` or its Core compatibility
+  aliases.
 
 ## Validation
 
-The default suite covers real NexusEngine installation, core primitive parity, GoldRush-shaped cargo behavior, NexusEngine-shaped drain/adjust behavior, idempotent registration, lock rejection, threshold policy, descriptors, reset/load, deterministic replay, 1,000-meter bounded-history scale, composite route/cargo consumption, and renderer/global boundaries.
+The compatibility suite covers standalone installation, Core primitive parity,
+resource behavior, reset/load, deterministic replay, bounded history, and
+explicit default-installer rejection.

@@ -2,7 +2,7 @@
   "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "generic-resource-loop-kit",
   "version": "1.0.0",
-  "status": "official",
+  "status": "deprecated",
   "kind": "domain-service-kit",
   "domain": "simulation",
   "domainPath": "n:simulation:resource-meter-service",
@@ -37,7 +37,7 @@
     "requestedRef": "main",
     "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
     "path": "protokits/generic-resource-loop-kit/index.js",
-    "parity": "official"
+    "parity": "historical-passing"
   },
   "runtime": {
     "api": "resourceMeter",
@@ -60,8 +60,8 @@
       "sourceMapped": true,
       "protoValidated": true,
       "candidate": true,
-      "official": true,
-      "deprecated": false,
+      "official": false,
+      "deprecated": true,
       "archived": false,
       "blocked": false
     },

@@ -70,7 +70,7 @@ Active capability: clock-kit
 | generic-defense-session-facade-dsk | migration-placeholder | no | generic-defense-session-facade-dsk has no validated stable implementation or parity record. |
 | generic-defense-wave-agent-director-dsk | migration-placeholder | no | generic-defense-wave-agent-director-dsk has no validated stable implementation or parity record. |
 | generic-pressure-loop-kit | migration-placeholder | no | generic-pressure-loop-kit has no validated stable implementation or parity record. |
-| generic-resource-loop-kit | official | yes |  |
+| generic-resource-loop-kit | deprecated | yes |  |
 | generic-route-cargo-extraction-kit | migration-placeholder | no | generic-route-cargo-extraction-kit has no validated stable implementation or parity record. |
 | greybox-building-kit | official | yes |  |
 | guard-domain-kit | migration-placeholder | no | guard-domain-kit has no validated stable implementation or parity record. |

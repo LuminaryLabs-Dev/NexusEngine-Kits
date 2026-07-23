@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createRealtimeGame } from "nexusengine";
-import { createCoreSimulationKit, createResourceMeter } from "nexusengine/core-kits";
+import { createResourceMeter } from "nexusengine/core-kits";
 import {
   createGenericResourceLoopKit,
   GENERIC_RESOURCE_LOOP_KIT_VERSION
@@ -8,8 +8,8 @@ import {
 
 function createEngine() {
   return createRealtimeGame({
+    tick: { maxDelta: 1 },
     kits: [
-      createCoreSimulationKit(),
       createGenericResourceLoopKit({
         recentChangeLimit: 8,
         resources: [
@@ -30,7 +30,6 @@ function createEngine() {
 }
 
 const engine = createEngine();
-assert.equal(typeof engine.n.coreSimulation.getSnapshot, "function");
 assert.equal(typeof engine.n.resourceMeter.spend, "function");
 assert.equal(engine.n.resourceMeter, engine.n.genericResourceLoop);
 assert.equal(engine.n.resourceMeter, engine.resourceMeter);
@@ -66,6 +65,7 @@ primitive.restore(3);
 assert.equal(primitive.snapshot().value, 8);
 
 const scaleEngine = createRealtimeGame({
+  tick: { maxDelta: 1 },
   kits: [createGenericResourceLoopKit({
     recentChangeLimit: 16,
     resources: Array.from({ length: 1000 }, (_, index) => ({ id: `meter-${index}`, max: 100, initial: 50, rate: index % 2 ? -1 : 1 }))
@@ -75,4 +75,4 @@ scaleEngine.tick(1);
 assert.equal(scaleEngine.n.resourceMeter.getSnapshot().resources.length, 1000);
 assert.ok(scaleEngine.n.resourceMeter.getSnapshot().recentChanges.length <= 16);
 
-console.log("generic-resource-loop-kit official smoke ok");
+console.log("generic-resource-loop-kit deprecated compatibility smoke ok");
