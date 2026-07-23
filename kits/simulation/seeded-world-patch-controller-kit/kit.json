@@ -16,7 +16,7 @@
     "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
   },
-  "integrity": "sha256-Lpa1fMNP8gt5+hgyn3k2kKe4B78iHFWKDsLtwLl9cq0=",
+  "integrity": "sha256-pRnnluIysYV3fcAjk2k+fMS/tarPgwEHP/o4Ob88R+4=",
   "environments": [
     "node",
     "browser",

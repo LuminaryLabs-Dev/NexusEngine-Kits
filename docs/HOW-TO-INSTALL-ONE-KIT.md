@@ -15,4 +15,5 @@ Use CDN when working from browser-hosted experiments:
 import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
 ```
 
-During the bootstrap phase, unresolved behavior installs as a metadata-only runtime kit. Full kit behavior is migrated from ProtoKits over time.
+Unresolved metadata is descriptive only. Default installer paths must skip or
+reject entries without an allowed-status executable factory.

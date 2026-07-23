@@ -10,6 +10,7 @@
     "procedural-object-body-kit",
     "procedural-object-material-kit",
     "procedural-object-lod-kit",
-    "procedural-object-capture-profile-kit"
+    "procedural-object-capture-profile-kit",
+    "forest-placement-kit"
   ]
 }

@@ -1,8 +1,8 @@
 # Promotion Ledger
 
-Baseline resolved: 3 / 120
-Baseline remaining: 117
-Approved additions: 3 / 7
+Baseline resolved: 7 / 120
+Baseline remaining: 113
+Approved additions: 21 / 29
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -21,9 +21,12 @@ Active capability: clock-kit
 | aerial-render-bundle-kits | migration-placeholder | no | aerial-render-bundle-kits has no validated stable implementation or parity record. |
 | aerial-ui-interaction-kits | migration-placeholder | no | aerial-ui-interaction-kits has no validated stable implementation or parity record. |
 | aerial-vegetation-placement-domain-kit | migration-placeholder | no | aerial-vegetation-placement-domain-kit has no validated stable implementation or parity record. |
+| agriculture-domain-kit | official | yes |  |
+| ar-experience-kit | official | yes |  |
+| ar-kit | official | yes |  |
 | asset-descriptor-kit | scaffolded | no | asset-descriptor-kit has only scaffold or metadata behavior and lacks validated source parity. |
 | build-placement-kit | scaffolded | no | build-placement-kit has only scaffold or metadata behavior and lacks validated source parity. |
-| camera-collision-kit | migration-placeholder | no | camera-collision-kit has no validated stable implementation or parity record. |
+| camera-collision-kit | official | yes |  |
 | camera-comfort-kit | migration-placeholder | no | camera-comfort-kit has no validated stable implementation or parity record. |
 | camera-mode-kit | migration-placeholder | no | camera-mode-kit has no validated stable implementation or parity record. |
 | camera-sequence-kit | migration-placeholder | no | camera-sequence-kit has no validated stable implementation or parity record. |
@@ -33,7 +36,10 @@ Active capability: clock-kit
 | capability-graph-domain-kit | official | yes |  |
 | cargo-kit | migration-placeholder | no | cargo-kit has no validated stable implementation or parity record. |
 | cargo-transfer-kit | migration-placeholder | no | cargo-transfer-kit has no validated stable implementation or parity record. |
+| character-ragdoll-kit | official | yes |  |
 | clock-kit | migration-placeholder | no | clock-kit has no validated stable implementation or parity record. |
+| collectible-kit | official | yes |  |
+| companion-command-kit | official | yes |  |
 | completion-ledger-kit | candidate | no | completion-ledger-kit still needs an exact stable source commit, complete feature-union parity, and all stable promotion gates. |
 | composition-planning-domain-kit | official | yes |  |
 | currency-kit | migration-placeholder | no | currency-kit has no validated stable implementation or parity record. |
@@ -46,7 +52,9 @@ Active capability: clock-kit
 | enemy-object-domain-kit | migration-placeholder | no | enemy-object-domain-kit has no validated stable implementation or parity record. |
 | environment-kits | migration-placeholder | no | environment-kits has no validated stable implementation or parity record. |
 | fail-state-kit | migration-placeholder | no | fail-state-kit has no validated stable implementation or parity record. |
+| fishing-kit | official | yes |  |
 | flight-corridor-domain-kit | migration-placeholder | no | flight-corridor-domain-kit has no validated stable implementation or parity record. |
+| forest-placement-kit | official | yes |  |
 | generic-action-window-kit | migration-placeholder | no | generic-action-window-kit has no validated stable implementation or parity record. |
 | generic-affordance-descriptor-kit | migration-placeholder | no | generic-affordance-descriptor-kit has no validated stable implementation or parity record. |
 | generic-defense-aaa-dsk-bridge | migration-placeholder | no | generic-defense-aaa-dsk-bridge has no validated stable implementation or parity record. |
@@ -64,6 +72,7 @@ Active capability: clock-kit
 | generic-pressure-loop-kit | migration-placeholder | no | generic-pressure-loop-kit has no validated stable implementation or parity record. |
 | generic-resource-loop-kit | official | yes |  |
 | generic-route-cargo-extraction-kit | migration-placeholder | no | generic-route-cargo-extraction-kit has no validated stable implementation or parity record. |
+| greybox-building-kit | official | yes |  |
 | guard-domain-kit | migration-placeholder | no | guard-domain-kit has no validated stable implementation or parity record. |
 | hand-gesture-dsk | migration-placeholder | no | hand-gesture-dsk has no validated stable implementation or parity record. |
 | hand-input-adapter-kit | migration-placeholder | no | hand-input-adapter-kit has no validated stable implementation or parity record. |
@@ -77,34 +86,43 @@ Active capability: clock-kit
 | interaction-domain-kit | migration-placeholder | no | interaction-domain-kit has no validated stable implementation or parity record. |
 | interaction-domain-service-kit | migration-placeholder | no | interaction-domain-service-kit has no validated stable implementation or parity record. |
 | interaction-dsk | migration-placeholder | no | interaction-dsk has no validated stable implementation or parity record. |
+| interaction-kit | official | yes |  |
+| interaction-target-kit | official | yes |  |
 | inventory-kit | migration-placeholder | no | inventory-kit has no validated stable implementation or parity record. |
 | kit-registry-domain-kit | official | yes |  |
-| light-combat-kit | migration-placeholder | no | light-combat-kit has no validated stable implementation or parity record. |
+| light-combat-kit | official | yes |  |
 | lighting-descriptor-kit | migration-placeholder | no | lighting-descriptor-kit has no validated stable implementation or parity record. |
+| lock-and-socket-kit | official | yes |  |
 | lock-group-kit | scaffolded | no | lock-group-kit has only scaffold or metadata behavior and lacks validated source parity. |
 | mana-meter-domain-kit | migration-placeholder | no | mana-meter-domain-kit has no validated stable implementation or parity record. |
 | market-kit | migration-placeholder | no | market-kit has no validated stable implementation or parity record. |
 | material-palette-kit | migration-placeholder | no | material-palette-kit has no validated stable implementation or parity record. |
 | mission-phase-kit | migration-placeholder | no | mission-phase-kit has no validated stable implementation or parity record. |
+| moving-target-kit | official | yes |  |
 | npc-schedule-domain-kit | migration-placeholder | no | npc-schedule-domain-kit has no validated stable implementation or parity record. |
 | objective-bridge-kit | scaffolded | no | objective-bridge-kit has only scaffold or metadata behavior and lacks validated source parity. |
-| objective-kit | migration-placeholder | no | objective-kit has no validated stable implementation or parity record. |
+| objective-kit | official | yes |  |
 | openxr-hand-adapter-dsk | migration-placeholder | no | openxr-hand-adapter-dsk has no validated stable implementation or parity record. |
 | parry-window-domain-kit | migration-placeholder | no | parry-window-domain-kit has no validated stable implementation or parity record. |
 | performance-budget-kit | migration-placeholder | no | performance-budget-kit has no validated stable implementation or parity record. |
 | persistence-domain-service-kit | migration-placeholder | no | persistence-domain-service-kit has no validated stable implementation or parity record. |
 | persistence-dsk | migration-placeholder | no | persistence-dsk has no validated stable implementation or parity record. |
 | powered-aerial-flight-domain-kit | migration-placeholder | no | powered-aerial-flight-domain-kit has no validated stable implementation or parity record. |
-| procedural-creature-body-kit | candidate | no | Candidate requires non-theropod body plans and multi-renderer validation before official promotion. |
+| procedural-creature-body-kit | candidate | no | Candidate requires non-theropod body plans, core-object adoption proof in multiple products, and multi-renderer validation before official promotion. |
+| procedural-object-body-kit | candidate | no | Candidate requires multi-consumer and multi-renderer validation before official promotion. |
+| procedural-object-capture-profile-kit | candidate | no | Candidate requires multi-consumer and multi-renderer validation before official promotion. |
+| procedural-object-lod-kit | candidate | no | Candidate requires multi-consumer and multi-renderer validation before official promotion. |
+| procedural-object-material-kit | candidate | no | Candidate requires multi-consumer and multi-renderer validation before official promotion. |
 | project-batch-deploy-bridge | migration-placeholder | no | project-batch-deploy-bridge has no validated stable implementation or parity record. |
 | protokit-core | deprecated | yes |  |
 | quest-thread-domain-kit | migration-placeholder | no | quest-thread-domain-kit has no validated stable implementation or parity record. |
 | recovery-site-kit | migration-placeholder | no | recovery-site-kit has no validated stable implementation or parity record. |
 | relationship-state-domain-kit | migration-placeholder | no | relationship-state-domain-kit has no validated stable implementation or parity record. |
-| render-descriptor-kit | migration-placeholder | no | render-descriptor-kit has no validated stable implementation or parity record. |
+| render-descriptor-kit | official | yes |  |
 | render-layer-kit | migration-placeholder | no | render-layer-kit has no validated stable implementation or parity record. |
 | replay-test-kit | migration-placeholder | no | replay-test-kit has no validated stable implementation or parity record. |
 | resource-node-kit | scaffolded | no | resource-node-kit has only scaffold or metadata behavior and lacks validated source parity. |
+| reveal-light-kit | official | yes |  |
 | route-clearance-domain-kit | migration-placeholder | no | route-clearance-domain-kit has no validated stable implementation or parity record. |
 | score-summary-kit | migration-placeholder | no | score-summary-kit has no validated stable implementation or parity record. |
 | seed-kit | official | yes |  |
@@ -113,8 +131,10 @@ Active capability: clock-kit
 | selection-dsk | migration-placeholder | no | selection-dsk has no validated stable implementation or parity record. |
 | shop-inventory-domain-kit | migration-placeholder | no | shop-inventory-domain-kit has no validated stable implementation or parity record. |
 | sky-atmosphere-kit | migration-placeholder | no | sky-atmosphere-kit has no validated stable implementation or parity record. |
+| sorting-kit | official | yes |  |
 | spatial-index-kit | migration-placeholder | no | spatial-index-kit has no validated stable implementation or parity record. |
 | spatial-interaction-kit | scaffolded | no | spatial-interaction-kit has only scaffold or metadata behavior and lacks validated source parity. |
+| spatial-room-kit | official | yes |  |
 | spatial-scene-graph-dsk | migration-placeholder | no | spatial-scene-graph-dsk has no validated stable implementation or parity record. |
 | spatial-scene-graph-kit | migration-placeholder | no | spatial-scene-graph-kit has no validated stable implementation or parity record. |
 | state-digest-kit | migration-placeholder | no | state-digest-kit has no validated stable implementation or parity record. |
@@ -122,6 +142,8 @@ Active capability: clock-kit
 | status-effect-domain-kit | migration-placeholder | no | status-effect-domain-kit has no validated stable implementation or parity record. |
 | stereoscopic-render-domain-kit | migration-placeholder | no | stereoscopic-render-domain-kit has no validated stable implementation or parity record. |
 | structure-runtime-kit | scaffolded | no | structure-runtime-kit has only scaffold or metadata behavior and lacks validated source parity. |
+| surface-placement-kit | official | yes |  |
+| symbol-alignment-kit | official | yes |  |
 | terrain-ground-contact-domain-kit | migration-placeholder | no | terrain-ground-contact-domain-kit has no validated stable implementation or parity record. |
 | transform-domain-service-kit | migration-placeholder | no | transform-domain-service-kit has no validated stable implementation or parity record. |
 | transform-dsk | migration-placeholder | no | transform-dsk has no validated stable implementation or parity record. |

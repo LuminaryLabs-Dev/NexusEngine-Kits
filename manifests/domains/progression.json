@@ -12,6 +12,11 @@
     "mission-phase-kit",
     "lock-group-kit",
     "fail-state-kit",
-    "score-summary-kit"
+    "score-summary-kit",
+    "collectible-kit",
+    "symbol-alignment-kit",
+    "sorting-kit",
+    "reveal-light-kit",
+    "lock-and-socket-kit"
   ]
 }

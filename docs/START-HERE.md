@@ -1,32 +1,32 @@
-# START-HERE
+# NexusEngine Kits Documentation
 
-Start here before adding, promoting, or refining a kit.
+## Read In Order
 
-## Repo Purpose
+1. [Repository README](../README.md)
+2. [What Official Means](WHAT-OFFICIAL-MEANS.md)
+3. [Kit Authoring](KIT-AUTHORING-GUIDE.md)
+4. [Registry Installation](REGISTRY-INSTALLATION.md)
+5. [Testing](TESTING-GUIDE.md)
 
-`NexusEngine-Kits` is the official first-party kit catalog for NexusEngine.
+## Ownership
 
-It is not the experimental repo. That remains `NexusEngine-ProtoKits`.
+This repository receives reusable behavior that is optional, niche,
+genre-specific, or platform-specific. NexusEngine Core accepts only atomic,
+idempotent, fully reusable behavior. Complete games and authored presets remain
+in game repositories.
 
-## Install Modes
+The ProtoKit workflow is retired. Historical migration and parity documents are
+kept under `docs/legacy/protokits/`.
 
-```txt
-individual kit
-by domain
-by bundle
-full catalog
-installer-driven dynamic install
-CDN ESM import
+## Current Proof
+
+Use:
+
+```bash
+npm run progress
+npm run build:catalog
+npm run check
 ```
 
-## Migration Rule
-
-```txt
-Experiment -> ProtoKit -> validated ProtoKit -> official Kit
-```
-
-Do not skip validation just to fill the catalog.
-
-## First Bootstrap
-
-The initial push creates the catalog, domains, bundles, and installer first. Behavior migration follows kit-by-kit.
+Catalog metadata is not proof that behavior exists. Default installation paths
+execute only allowed-status factories with validated public exports.

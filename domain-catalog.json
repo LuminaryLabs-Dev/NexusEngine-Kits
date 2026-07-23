@@ -31,6 +31,19 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "aquatic",
+      "label": "Aquatic",
+      "description": "Optional reusable aquatic gameplay capabilities.",
+      "kind": "gameplay-domain-family",
+      "status": "official",
+      "domainPath": "n:aquatic",
+      "entry": "./domains/aquatic/index.js",
+      "kits": [
+        "fishing-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "building",
       "label": "Building",
       "kind": "simulation-domain",
@@ -40,7 +53,8 @@
       "kits": [
         "build-placement-kit",
         "structure-runtime-kit",
-        "station-interaction-kit"
+        "station-interaction-kit",
+        "greybox-building-kit"
       ]
     },
     {
@@ -133,7 +147,9 @@
         "hazard-director-kit",
         "damage-health-kit",
         "encounter-director-kit",
-        "light-combat-kit"
+        "light-combat-kit",
+        "character-ragdoll-kit",
+        "moving-target-kit"
       ]
     },
     {
@@ -165,6 +181,35 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "procedural-objects",
+      "label": "Procedural Objects",
+      "kind": "simulation-domain",
+      "status": "candidate",
+      "domainPath": "n:object:procedural",
+      "entry": "./domains/procedural-objects/index.js",
+      "kits": [
+        "procedural-object-body-kit",
+        "procedural-object-material-kit",
+        "procedural-object-lod-kit",
+        "procedural-object-capture-profile-kit",
+        "forest-placement-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "production",
+      "label": "Production",
+      "description": "Catalog family for reusable production authorities. It is not an executable parent domain kit.",
+      "kind": "gameplay-domain-family",
+      "status": "official",
+      "domainPath": "n:production",
+      "entry": "./domains/production/index.js",
+      "kits": [
+        "agriculture-domain-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "progression",
       "label": "Progression",
       "kind": "runtime-domain",
@@ -177,7 +222,12 @@
         "mission-phase-kit",
         "lock-group-kit",
         "fail-state-kit",
-        "score-summary-kit"
+        "score-summary-kit",
+        "collectible-kit",
+        "symbol-alignment-kit",
+        "sorting-kit",
+        "reveal-light-kit",
+        "lock-and-socket-kit"
       ]
     },
     {
@@ -273,7 +323,8 @@
         "relationship-state-domain-kit",
         "npc-schedule-domain-kit",
         "shop-inventory-domain-kit",
-        "quest-thread-domain-kit"
+        "quest-thread-domain-kit",
+        "companion-command-kit"
       ]
     },
     {
@@ -305,7 +356,10 @@
         "interactable-registry-kit",
         "spatial-interaction-kit",
         "hold-action-kit",
-        "completion-ledger-kit"
+        "completion-ledger-kit",
+        "interaction-kit",
+        "spatial-room-kit",
+        "interaction-target-kit"
       ]
     },
     {
@@ -334,7 +388,10 @@
         "interaction-dsk",
         "interaction-domain-service-kit",
         "persistence-dsk",
-        "persistence-domain-service-kit"
+        "persistence-domain-service-kit",
+        "ar-kit",
+        "ar-experience-kit",
+        "surface-placement-kit"
       ]
     }
   ]

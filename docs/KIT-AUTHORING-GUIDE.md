@@ -24,9 +24,12 @@ Before adding behavior, answer:
 - What resources does it expose?
 - What events does it emit or consume?
 - What provides/requires tokens does it use?
-- What ProtoKit behavior is it mimicking?
-- What intentional differences make it cleaner?
+- Why is this reusable but not universal Core behavior?
+- What public NexusEngine contracts does it use?
+- What source or downstream evidence establishes the required behavior?
+- What intentional limitations keep its owner atomic?
 
 ## Stability
 
-Start as `candidate` unless behavior parity, docs, and tests are proven.
+Start as `candidate` unless behavior, ownership, docs, installability, and tests
+are proven. Metadata alone is never behavior proof.

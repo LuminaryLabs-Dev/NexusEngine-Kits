@@ -24,6 +24,9 @@
     "interaction-dsk",
     "interaction-domain-service-kit",
     "persistence-dsk",
-    "persistence-domain-service-kit"
+    "persistence-domain-service-kit",
+    "ar-kit",
+    "ar-experience-kit",
+    "surface-placement-kit"
   ]
 }

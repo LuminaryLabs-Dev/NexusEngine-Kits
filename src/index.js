@@ -33,3 +33,6 @@ export { createCapabilityGraphDomainKit, createCapabilityGraph } from "../kits/r
 export { createCompositionPlanningDomainKit } from "../kits/registry/composition-planning-domain-kit/index.js";
 export { createRegistryDomainKits } from "../domains/registry/index.js";
 export { createAgricultureDomainKit, createProductionDomainKits } from "../domains/production/index.js";
+export * from "../kits/aquatic/fishing-kit/index.js";
+export { aquaticDomain } from "../domains/aquatic/index.js";
+export * from "../kits/migrated-gameplay/index.js";

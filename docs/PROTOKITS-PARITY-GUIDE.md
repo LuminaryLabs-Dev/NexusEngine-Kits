@@ -1,21 +1,9 @@
-# ProtoKits Parity Guide
+# Retired ProtoKit Parity Guide
 
-Use ProtoKits as the behavioral reference, not as a folder structure to copy.
+**Status:** historical pointer
 
-## Parity checklist
+Existing source hashes and parity records may remain as lineage evidence. They
+do not establish an active incubation or promotion workflow.
 
-For each rebuilt kit:
-
-- source ProtoKit path is known
-- target Kit path is known
-- public factory is documented
-- resources are matched or intentionally changed
-- events are matched or intentionally changed
-- snapshot/reset behavior is defined when stateful
-- headless smoke exists
-- browser CDN example exists
-- `source-parity.md` records differences
-
-## Intentional differences
-
-A clean rebuild may rename unclear concepts, split broad kits, turn game-specific behavior into presets, or turn host/platform behavior into adapters.
+The original guide is preserved unchanged at
+[`legacy/protokits/PROTOKITS-PARITY-GUIDE.md`](legacy/protokits/PROTOKITS-PARITY-GUIDE.md).

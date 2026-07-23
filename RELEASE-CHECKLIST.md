@@ -8,7 +8,7 @@ Use this before tagging or publishing NexusEngine Kits.
 - `npm run check:catalog` passes.
 - `npm run check:manifests` passes.
 - `npm run check:exports` passes.
-- Parity report is current when parity changed.
+- Lineage and behavior report is current when source evidence changed.
 - CDN index is current when catalog paths changed.
 
 ## Documentation checks
@@ -16,7 +16,7 @@ Use this before tagging or publishing NexusEngine Kits.
 - README reflects current status.
 - KIT-CATALOG.md reflects domains and bundles.
 - KIT-INSTALLER.md reflects installer API.
-- REBUILD-PARITY.md reflects parity status.
+- REBUILD-PARITY.md reflects lineage and behavior status.
 - First-wave kit READMEs are updated.
 
 ## Release checks
@@ -30,5 +30,5 @@ Use this before tagging or publishing NexusEngine Kits.
 ## After release
 
 - Update docs from branch CDN to tagged CDN.
-- Update ProtoKits migration notes.
-- Update parity report.
+- Update migration notes when public imports changed.
+- Update lineage and behavior reports.

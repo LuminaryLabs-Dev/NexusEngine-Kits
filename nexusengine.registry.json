@@ -19,7 +19,29 @@
       "procedural-creature-body-kit",
       "instanced-render-batch-kit",
       "seeded-world-patch-controller-kit",
-      "camera-smooth-follow-kit"
+      "camera-smooth-follow-kit",
+      "agriculture-domain-kit",
+      "procedural-object-body-kit",
+      "procedural-object-material-kit",
+      "procedural-object-lod-kit",
+      "procedural-object-capture-profile-kit",
+      "fishing-kit",
+      "ar-kit",
+      "ar-experience-kit",
+      "interaction-kit",
+      "companion-command-kit",
+      "character-ragdoll-kit",
+      "forest-placement-kit",
+      "spatial-room-kit",
+      "greybox-building-kit",
+      "surface-placement-kit",
+      "interaction-target-kit",
+      "collectible-kit",
+      "symbol-alignment-kit",
+      "sorting-kit",
+      "reveal-light-kit",
+      "moving-target-kit",
+      "lock-and-socket-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -1367,6 +1389,297 @@
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "agriculture-domain-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "domain-service-kit",
+      "domain": "production",
+      "domainPath": "n:production:agriculture",
+      "parentDomainPath": "n:production",
+      "apiName": "agriculture",
+      "factory": "createAgricultureDomainKit",
+      "entry": "./kits/production/agriculture-domain-kit/index.js",
+      "packageExport": "./kits/production/agriculture-domain-kit",
+      "module": {
+        "package": "./kits/production/agriculture-domain-kit/index.js",
+        "node": "./kits/production/agriculture-domain-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
+      },
+      "integrity": "sha256-fLwWlN7aQt6ZAyhf1dZ3SwAW6ri4DYnbI36107yKhXk=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "n:core-transaction-ledger"
+      ],
+      "provides": [
+        "n:production:agriculture",
+        "production:agriculture",
+        "agriculture:land",
+        "agriculture:soil",
+        "agriculture:cultivation",
+        "agriculture:harvest"
+      ],
+      "composes": [
+        "n:core-transaction-ledger"
+      ],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/production/agriculture-domain-kit/index.js"
+      },
+      "runtime": {
+        "api": "agriculture",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/production/agriculture-domain-kit/README.md",
+        "smoke": "kits/production/agriculture-domain-kit/smoke.test.mjs",
+        "parity": "kits/production/agriculture-domain-kit/source-parity.md",
+        "limitations": "kits/production/agriculture-domain-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Agents",
+          "repository": "NexusEngine-ProtoKits",
+          "requestedRef": "main",
+          "resolvedCommit": "b96efb2e3a6059c65dbc3e37d5bf051ce38030a0",
+          "path": "protokits/agriculture-domain-kit/index.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "ar-experience-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "xr",
+      "domainPath": "n:xr:ar-experience",
+      "parentDomainPath": "n:xr",
+      "apiName": "arExperience",
+      "factory": "createARExperienceKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:xr:ar-experience"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "arExperience",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/ar-experience-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "ar-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "xr",
+      "domainPath": "n:xr:ar-runtime",
+      "parentDomainPath": "n:xr",
+      "apiName": "ar",
+      "factory": "createARKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:xr:ar-runtime"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "ar",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/ar-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "asset-descriptor-kit",
       "version": "0.0.0",
       "status": "scaffolded",
@@ -1558,95 +1871,94 @@
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "camera-collision-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
+      "version": "1.0.0",
+      "status": "official",
       "kind": "runtime-kit",
       "domain": "camera-feedback",
       "domainPath": "n:camera-feedback:camera-collision",
       "parentDomainPath": "n:camera-feedback",
       "apiName": "cameraCollision",
       "factory": "createCameraCollisionKit",
-      "entry": "./kits/camera-feedback/camera-collision-kit/index.js",
-      "packageExport": null,
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:camera-collision-kit",
-        "domain:camera-feedback"
+        "n:camera-feedback:camera-collision"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
         "owner": "LuminaryLabs-Dev",
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolvedCommit": null,
-        "path": "./kits/camera-feedback/camera-collision-kit/index.js"
+        "path": "./kits/migrated-gameplay/index.js"
       },
       "runtime": {
         "api": "cameraCollision",
         "snapshot": false,
         "loadSnapshot": false,
         "reset": false,
-        "deterministic": false
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
       },
       "promotion": {
         "baseline": true,
-        "resolved": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
           "protoValidated": false,
-          "candidate": false,
-          "official": false,
+          "candidate": true,
+          "official": true,
           "deprecated": false,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "camera-collision-kit",
-        "blocker": "camera-collision-kit has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder",
+      "stability": "official",
       "lineage": {
         "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
           "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/camera-collision-kit/index.js",
-          "parity": null
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/camera-occlusion-kit.js",
+          "parity": "official"
         },
         "promotion": {
           "baseline": true,
-          "resolved": false,
+          "resolved": true,
           "stages": {
             "inventoried": true,
             "sourceMapped": true,
             "protoValidated": false,
-            "candidate": false,
-            "official": false,
+            "candidate": true,
+            "official": true,
             "deprecated": false,
             "archived": false,
             "blocked": false
           },
-          "nextCapability": "camera-collision-kit",
-          "blocker": "camera-collision-kit has no validated stable implementation or parity record."
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -2514,6 +2826,100 @@
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "character-ragdoll-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "hazard-combat",
+      "domainPath": "n:hazard-combat:character-ragdoll",
+      "parentDomainPath": "n:hazard-combat",
+      "apiName": "characterRagdoll",
+      "factory": "createCharacterRagdollKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:hazard-combat:character-ragdoll"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "characterRagdoll",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/character-ragdoll-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "clock-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -2604,6 +3010,194 @@
           },
           "nextCapability": "clock-kit",
           "blocker": "clock-kit has no validated stable implementation or parity record."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "collectible-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "progression",
+      "domainPath": "n:progression:collectible",
+      "parentDomainPath": "n:progression",
+      "apiName": "collectible",
+      "factory": "createCollectibleKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:progression:collectible"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "collectible",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/collectible-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "companion-command-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "rpg-social",
+      "domainPath": "n:rpg-social:companion-command",
+      "parentDomainPath": "n:rpg-social",
+      "apiName": "companionCommand",
+      "factory": "createCompanionCommandKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:rpg-social:companion-command"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "companionCommand",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/companion-command-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -3755,6 +4349,105 @@
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "fishing-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "aquatic",
+      "domainPath": "n:aquatic:fishing",
+      "parentDomainPath": "n:aquatic",
+      "apiName": "fishing",
+      "factory": "createFishingKit",
+      "entry": "./kits/aquatic/fishing-kit/index.js",
+      "packageExport": "./fishing-kit",
+      "module": {
+        "package": "./kits/aquatic/fishing-kit/index.js",
+        "node": "./kits/aquatic/fishing-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/aquatic/fishing-kit/index.js"
+      },
+      "integrity": "sha256-Yel5shgK5+V8ew9TPOkgEGUU/Ew6Q+Lptn7uN6jiMwg=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:aquatic:fishing",
+        "aquatic:fishing",
+        "fishing:cast",
+        "fishing:hook",
+        "fishing:fight",
+        "fishing:catch"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/aquatic/fishing-kit/index.js"
+      },
+      "runtime": {
+        "api": "fishing",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/aquatic/fishing-kit/README.md",
+        "smoke": "kits/aquatic/fishing-kit/smoke.test.mjs",
+        "parity": "kits/aquatic/fishing-kit/source-parity.md",
+        "limitations": "kits/aquatic/fishing-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/fishing-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "flight-corridor-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -3845,6 +4538,100 @@
           },
           "nextCapability": "flight-corridor-domain-kit",
           "blocker": "flight-corridor-domain-kit has no validated stable implementation or parity record."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "forest-placement-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "procedural-objects",
+      "domainPath": "n:object:procedural:forest-placement",
+      "parentDomainPath": "n:object:procedural",
+      "apiName": "forestPlacement",
+      "factory": "createForestPlacementKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:object:procedural:forest-placement"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "forestPlacement",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/forest-placement-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -5468,6 +6255,100 @@
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "greybox-building-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "building",
+      "domainPath": "n:building:greybox",
+      "parentDomainPath": "n:building",
+      "apiName": "greyboxBuilding",
+      "factory": "createGreyboxBuildingKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:building:greybox"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "greyboxBuilding",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/greybox-building-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "guard-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -6229,7 +7110,7 @@
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "instanced-render-batch-kit",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "status": "candidate",
       "kind": "domain-service-kit",
       "domain": "render-descriptors",
@@ -6244,7 +7125,7 @@
         "node": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/instanced-render-batch-kit/index.js"
       },
-      "integrity": "sha256-o8l9Q11T8gEnHStLoiZPQyoDUYCA0gbOQH5GBVJ57z4=",
+      "integrity": "sha256-CyZ7f8AaToHVWyUKEm8AzKglV2tEtsxHRHJApgF36Ro=",
       "environments": [
         "node",
         "browser"
@@ -6254,6 +7135,7 @@
         "n:render-descriptors:instanced-render-batch",
         "render:instanced-batch",
         "render:instance-cell-membership",
+        "render:instance-stable-cell-ranges",
         "render:instance-overflow-diagnostics",
         "render:instance-bounds-invalidation"
       ],
@@ -6706,6 +7588,194 @@
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "interaction-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "spatial",
+      "domainPath": "n:spatial:interaction-runtime",
+      "parentDomainPath": "n:spatial",
+      "apiName": "interaction",
+      "factory": "createInteractionKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:spatial:interaction-runtime"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "interaction",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/interaction-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "interaction-target-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "spatial",
+      "domainPath": "n:spatial:interaction-target",
+      "parentDomainPath": "n:spatial",
+      "apiName": "interactionTarget",
+      "factory": "createInteractionTargetKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:spatial:interaction-target"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "interactionTarget",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/interaction-target-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "inventory-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -6900,95 +7970,94 @@
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "light-combat-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
+      "version": "1.0.0",
+      "status": "official",
       "kind": "runtime-kit",
       "domain": "hazard-combat",
       "domainPath": "n:hazard-combat:light-combat",
       "parentDomainPath": "n:hazard-combat",
       "apiName": "lightCombat",
       "factory": "createLightCombatKit",
-      "entry": "./kits/hazard-combat/light-combat-kit/index.js",
-      "packageExport": null,
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:light-combat-kit",
-        "domain:hazard-combat"
+        "n:hazard-combat:light-combat"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
         "owner": "LuminaryLabs-Dev",
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolvedCommit": null,
-        "path": "./kits/hazard-combat/light-combat-kit/index.js"
+        "path": "./kits/migrated-gameplay/index.js"
       },
       "runtime": {
         "api": "lightCombat",
         "snapshot": false,
         "loadSnapshot": false,
         "reset": false,
-        "deterministic": false
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
       },
       "promotion": {
         "baseline": true,
-        "resolved": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
           "protoValidated": false,
-          "candidate": false,
-          "official": false,
+          "candidate": true,
+          "official": true,
           "deprecated": false,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "light-combat-kit",
-        "blocker": "light-combat-kit has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder",
+      "stability": "official",
       "lineage": {
         "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
           "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/light-combat-kit/index.js",
-          "parity": null
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/light-combat-kit.js",
+          "parity": "official"
         },
         "promotion": {
           "baseline": true,
-          "resolved": false,
+          "resolved": true,
           "stages": {
             "inventoried": true,
             "sourceMapped": true,
             "protoValidated": false,
-            "candidate": false,
-            "official": false,
+            "candidate": true,
+            "official": true,
             "deprecated": false,
             "archived": false,
             "blocked": false
           },
-          "nextCapability": "light-combat-kit",
-          "blocker": "light-combat-kit has no validated stable implementation or parity record."
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -7084,6 +8153,100 @@
           },
           "nextCapability": "lighting-descriptor-kit",
           "blocker": "lighting-descriptor-kit has no validated stable implementation or parity record."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "lock-and-socket-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "progression",
+      "domainPath": "n:progression:lock-and-socket",
+      "parentDomainPath": "n:progression",
+      "apiName": "lockAndSocket",
+      "factory": "createLockAndSocketKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:progression:lock-and-socket"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "lockAndSocket",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/lock-and-socket-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -7564,6 +8727,100 @@
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "moving-target-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "hazard-combat",
+      "domainPath": "n:hazard-combat:moving-target",
+      "parentDomainPath": "n:hazard-combat",
+      "apiName": "movingTarget",
+      "factory": "createMovingTargetKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:hazard-combat:moving-target"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "movingTarget",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/moving-target-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "npc-schedule-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -7755,95 +9012,94 @@
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "objective-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
+      "version": "1.0.0",
+      "status": "official",
       "kind": "runtime-kit",
       "domain": "progression",
       "domainPath": "n:progression:objective",
       "parentDomainPath": "n:progression",
       "apiName": "objective",
       "factory": "createObjectiveKit",
-      "entry": "./kits/progression/objective-kit/index.js",
-      "packageExport": null,
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:objective-kit",
-        "domain:progression"
+        "n:progression:objective"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
         "owner": "LuminaryLabs-Dev",
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolvedCommit": null,
-        "path": "./kits/progression/objective-kit/index.js"
+        "path": "./kits/migrated-gameplay/index.js"
       },
       "runtime": {
         "api": "objective",
         "snapshot": false,
         "loadSnapshot": false,
         "reset": false,
-        "deterministic": false
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
       },
       "promotion": {
         "baseline": true,
-        "resolved": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
           "protoValidated": false,
-          "candidate": false,
-          "official": false,
+          "candidate": true,
+          "official": true,
           "deprecated": false,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "objective-kit",
-        "blocker": "objective-kit has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder",
+      "stability": "official",
       "lineage": {
         "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
           "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/objective-kit/index.js",
-          "parity": null
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/objective-flow-kit.js",
+          "parity": "official"
         },
         "promotion": {
           "baseline": true,
-          "resolved": false,
+          "resolved": true,
           "stages": {
             "inventoried": true,
             "sourceMapped": true,
             "protoValidated": false,
-            "candidate": false,
-            "official": false,
+            "candidate": true,
+            "official": true,
             "deprecated": false,
             "archived": false,
             "blocked": false
           },
-          "nextCapability": "objective-kit",
-          "blocker": "objective-kit has no validated stable implementation or parity record."
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -8420,7 +9676,7 @@
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "procedural-creature-body-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "status": "candidate",
       "kind": "domain-service-kit",
       "domain": "procedural-creatures",
@@ -8449,7 +9705,8 @@
         "creature:skeleton-descriptor",
         "creature:skinning-descriptor",
         "creature:attachment-descriptor",
-        "creature:collision-shape-descriptor"
+        "creature:collision-shape-descriptor",
+        "object:descriptor"
       ],
       "composes": [
         "seed-kit"
@@ -8490,7 +9747,7 @@
           "blocked": false
         },
         "nextCapability": "procedural-creature-body-kit",
-        "blocker": "Candidate requires non-theropod body plans and multi-renderer validation before official promotion."
+        "blocker": "Candidate requires non-theropod body plans, core-object adoption proof in multiple products, and multi-renderer validation before official promotion."
       },
       "stability": "candidate",
       "lineage": {
@@ -8516,7 +9773,395 @@
             "blocked": false
           },
           "nextCapability": "procedural-creature-body-kit",
-          "blocker": "Candidate requires non-theropod body plans and multi-renderer validation before official promotion."
+          "blocker": "Candidate requires non-theropod body plans, core-object adoption proof in multiple products, and multi-renderer validation before official promotion."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "procedural-objects",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "object:descriptor-contract"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/procedural-objects/procedural-object-body-kit/index.js"
+      },
+      "runtime": {
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true,
+        "api": "proceduralObjectBody"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "blocker": "Candidate requires multi-consumer and multi-renderer validation before official promotion.",
+        "nextCapability": "procedural-object-body-kit"
+      },
+      "id": "procedural-object-body-kit",
+      "domainPath": "n:object:procedural:body",
+      "parentDomainPath": "n:object:procedural",
+      "apiName": "proceduralObjectBody",
+      "factory": "createProceduralObjectBodyKit",
+      "entry": "./kits/procedural-objects/procedural-object-body-kit/index.js",
+      "packageExport": "./procedural-object-body-kit",
+      "module": {
+        "package": "./kits/procedural-objects/procedural-object-body-kit/index.js",
+        "node": "./kits/procedural-objects/procedural-object-body-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-body-kit/index.js"
+      },
+      "integrity": "sha256-ZII63GVJQhPprV167EHutIeQFu6mFHGTriGlVa3nClg=",
+      "provides": [
+        "n:object:procedural:body",
+        "object:procedural-body-descriptor"
+      ],
+      "proof": {
+        "readme": "kits/procedural-objects/procedural-object-body-kit/README.md",
+        "smoke": "tests/domains/procedural-objects-domain-smoke.mjs",
+        "parity": null,
+        "limitations": null
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "parity": "native",
+          "path": "kits/procedural-objects/procedural-object-body-kit/index.js"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "blocker": "Candidate requires multi-consumer and multi-renderer validation before official promotion.",
+          "nextCapability": "procedural-object-body-kit"
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "procedural-objects",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "object:descriptor-contract"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/procedural-objects/procedural-object-capture-profile-kit/index.js"
+      },
+      "runtime": {
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true,
+        "api": "proceduralObjectCaptureProfile"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "blocker": "Candidate requires multi-consumer and multi-renderer validation before official promotion.",
+        "nextCapability": "procedural-object-capture-profile-kit"
+      },
+      "id": "procedural-object-capture-profile-kit",
+      "domainPath": "n:object:procedural:capture-profile",
+      "parentDomainPath": "n:object:procedural",
+      "apiName": "proceduralObjectCaptureProfile",
+      "factory": "createProceduralObjectCaptureProfileKit",
+      "entry": "./kits/procedural-objects/procedural-object-capture-profile-kit/index.js",
+      "packageExport": "./procedural-object-capture-profile-kit",
+      "module": {
+        "package": "./kits/procedural-objects/procedural-object-capture-profile-kit/index.js",
+        "node": "./kits/procedural-objects/procedural-object-capture-profile-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-capture-profile-kit/index.js"
+      },
+      "integrity": "sha256-ZCB/O6JNW9ol0TS5qHEU2t95+x0yj5C/rvaYVbCd/kY=",
+      "provides": [
+        "n:object:procedural:capture-profile",
+        "object:capture-profile"
+      ],
+      "proof": {
+        "readme": "kits/procedural-objects/procedural-object-capture-profile-kit/README.md",
+        "smoke": "tests/domains/procedural-objects-domain-smoke.mjs",
+        "parity": null,
+        "limitations": null
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "parity": "native",
+          "path": "kits/procedural-objects/procedural-object-capture-profile-kit/index.js"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "blocker": "Candidate requires multi-consumer and multi-renderer validation before official promotion.",
+          "nextCapability": "procedural-object-capture-profile-kit"
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "procedural-objects",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "object:descriptor-contract"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/procedural-objects/procedural-object-lod-kit/index.js"
+      },
+      "runtime": {
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true,
+        "api": "proceduralObjectLod"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "blocker": "Candidate requires multi-consumer and multi-renderer validation before official promotion.",
+        "nextCapability": "procedural-object-lod-kit"
+      },
+      "id": "procedural-object-lod-kit",
+      "domainPath": "n:object:procedural:lod",
+      "parentDomainPath": "n:object:procedural",
+      "apiName": "proceduralObjectLod",
+      "factory": "createProceduralObjectLodKit",
+      "entry": "./kits/procedural-objects/procedural-object-lod-kit/index.js",
+      "packageExport": "./procedural-object-lod-kit",
+      "module": {
+        "package": "./kits/procedural-objects/procedural-object-lod-kit/index.js",
+        "node": "./kits/procedural-objects/procedural-object-lod-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-lod-kit/index.js"
+      },
+      "integrity": "sha256-DxeA4IdOwnN5/eJDGh/+yf5HgTpr+orMYSS5h28zmJ8=",
+      "provides": [
+        "n:object:procedural:lod",
+        "object:procedural-lod-descriptor"
+      ],
+      "proof": {
+        "readme": "kits/procedural-objects/procedural-object-lod-kit/README.md",
+        "smoke": "tests/domains/procedural-objects-domain-smoke.mjs",
+        "parity": null,
+        "limitations": null
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "parity": "native",
+          "path": "kits/procedural-objects/procedural-object-lod-kit/index.js"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "blocker": "Candidate requires multi-consumer and multi-renderer validation before official promotion.",
+          "nextCapability": "procedural-object-lod-kit"
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "procedural-objects",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "object:descriptor-contract"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/procedural-objects/procedural-object-material-kit/index.js"
+      },
+      "runtime": {
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true,
+        "api": "proceduralObjectMaterial"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "blocker": "Candidate requires multi-consumer and multi-renderer validation before official promotion.",
+        "nextCapability": "procedural-object-material-kit"
+      },
+      "id": "procedural-object-material-kit",
+      "domainPath": "n:object:procedural:material",
+      "parentDomainPath": "n:object:procedural",
+      "apiName": "proceduralObjectMaterial",
+      "factory": "createProceduralObjectMaterialKit",
+      "entry": "./kits/procedural-objects/procedural-object-material-kit/index.js",
+      "packageExport": "./procedural-object-material-kit",
+      "module": {
+        "package": "./kits/procedural-objects/procedural-object-material-kit/index.js",
+        "node": "./kits/procedural-objects/procedural-object-material-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-material-kit/index.js"
+      },
+      "integrity": "sha256-629+22rrrRXsiOhnZFep9TiJ6umSY7lnZBqaeO8bcoA=",
+      "provides": [
+        "n:object:procedural:material",
+        "object:procedural-material-descriptor"
+      ],
+      "proof": {
+        "readme": "kits/procedural-objects/procedural-object-material-kit/README.md",
+        "smoke": "tests/domains/procedural-objects-domain-smoke.mjs",
+        "parity": null,
+        "limitations": null
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "parity": "native",
+          "path": "kits/procedural-objects/procedural-object-material-kit/index.js"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "blocker": "Candidate requires multi-consumer and multi-renderer validation before official promotion.",
+          "nextCapability": "procedural-object-material-kit"
         }
       }
     },
@@ -8999,95 +10644,94 @@
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "render-descriptor-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
+      "version": "1.0.0",
+      "status": "official",
       "kind": "runtime-kit",
       "domain": "render-descriptors",
       "domainPath": "n:render-descriptors:render-descriptor",
       "parentDomainPath": "n:render-descriptors",
       "apiName": "renderDescriptor",
       "factory": "createRenderDescriptorKit",
-      "entry": "./kits/render-descriptors/render-descriptor-kit/index.js",
-      "packageExport": null,
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:render-descriptor-kit",
-        "domain:render-descriptors"
+        "n:render-descriptors:render-descriptor"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
         "owner": "LuminaryLabs-Dev",
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolvedCommit": null,
-        "path": "./kits/render-descriptors/render-descriptor-kit/index.js"
+        "path": "./kits/migrated-gameplay/index.js"
       },
       "runtime": {
         "api": "renderDescriptor",
         "snapshot": false,
         "loadSnapshot": false,
         "reset": false,
-        "deterministic": false
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
       },
       "promotion": {
         "baseline": true,
-        "resolved": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
           "protoValidated": false,
-          "candidate": false,
-          "official": false,
+          "candidate": true,
+          "official": true,
           "deprecated": false,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "render-descriptor-kit",
-        "blocker": "render-descriptor-kit has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder",
+      "stability": "official",
       "lineage": {
         "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
           "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/render-descriptor-kit/index.js",
-          "parity": null
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/render-descriptor-kit.js",
+          "parity": "official"
         },
         "promotion": {
           "baseline": true,
-          "resolved": false,
+          "resolved": true,
           "stages": {
             "inventoried": true,
             "sourceMapped": true,
             "protoValidated": false,
-            "candidate": false,
-            "official": false,
+            "candidate": true,
+            "official": true,
             "deprecated": false,
             "archived": false,
             "blocked": false
           },
-          "nextCapability": "render-descriptor-kit",
-          "blocker": "render-descriptor-kit has no validated stable implementation or parity record."
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -9373,6 +11017,100 @@
           },
           "nextCapability": "resource-node-kit",
           "blocker": "resource-node-kit has only scaffold or metadata behavior and lacks validated source parity."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "reveal-light-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "progression",
+      "domainPath": "n:progression:reveal-light",
+      "parentDomainPath": "n:progression",
+      "apiName": "revealLight",
+      "factory": "createRevealLightKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:progression:reveal-light"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "revealLight",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/reveal-light-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -9681,7 +11419,7 @@
         "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
       },
-      "integrity": "sha256-Lpa1fMNP8gt5+hgyn3k2kKe4B78iHFWKDsLtwLl9cq0=",
+      "integrity": "sha256-pRnnluIysYV3fcAjk2k+fMS/tarPgwEHP/o4Ob88R+4=",
       "environments": [
         "node",
         "browser",
@@ -10147,6 +11885,100 @@
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "sorting-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "progression",
+      "domainPath": "n:progression:sorting",
+      "parentDomainPath": "n:progression",
+      "apiName": "sorting",
+      "factory": "createSortingKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:progression:sorting"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "sorting",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/sorting-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "spatial-index-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -10332,6 +12164,100 @@
           },
           "nextCapability": "spatial-interaction-kit",
           "blocker": "spatial-interaction-kit has only scaffold or metadata behavior and lacks validated source parity."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "spatial-room-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "spatial",
+      "domainPath": "n:spatial:room",
+      "parentDomainPath": "n:spatial",
+      "apiName": "spatialRoom",
+      "factory": "createSpatialRoomKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:spatial:room"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "spatialRoom",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/spatial-room-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -10997,6 +12923,194 @@
           },
           "nextCapability": "structure-runtime-kit",
           "blocker": "structure-runtime-kit has only scaffold or metadata behavior and lacks validated source parity."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "surface-placement-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "xr",
+      "domainPath": "n:xr:surface-placement",
+      "parentDomainPath": "n:xr",
+      "apiName": "surfacePlacement",
+      "factory": "createSurfacePlacementKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:xr:surface-placement"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "surfacePlacement",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/surface-placement-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "symbol-alignment-kit",
+      "version": "1.0.0",
+      "status": "official",
+      "kind": "runtime-kit",
+      "domain": "progression",
+      "domainPath": "n:progression:symbol-alignment",
+      "parentDomainPath": "n:progression",
+      "apiName": "symbolAlignment",
+      "factory": "createSymbolAlignmentKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
+      "module": {
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+      },
+      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:progression:symbol-alignment"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/migrated-gameplay/index.js"
+      },
+      "runtime": {
+        "api": "symbolAlignment",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": true,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": true,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": null,
+        "blocker": null
+      },
+      "stability": "official",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "main",
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/symbol-alignment-kit.js",
+          "parity": "official"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": true,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": true,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -12172,6 +14286,19 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "aquatic",
+      "label": "Aquatic",
+      "description": "Optional reusable aquatic gameplay capabilities.",
+      "kind": "gameplay-domain-family",
+      "status": "official",
+      "domainPath": "n:aquatic",
+      "entry": "./domains/aquatic/index.js",
+      "kits": [
+        "fishing-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "building",
       "label": "Building",
       "kind": "simulation-domain",
@@ -12181,7 +14308,8 @@
       "kits": [
         "build-placement-kit",
         "structure-runtime-kit",
-        "station-interaction-kit"
+        "station-interaction-kit",
+        "greybox-building-kit"
       ]
     },
     {
@@ -12274,7 +14402,9 @@
         "hazard-director-kit",
         "damage-health-kit",
         "encounter-director-kit",
-        "light-combat-kit"
+        "light-combat-kit",
+        "character-ragdoll-kit",
+        "moving-target-kit"
       ]
     },
     {
@@ -12306,6 +14436,35 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "procedural-objects",
+      "label": "Procedural Objects",
+      "kind": "simulation-domain",
+      "status": "candidate",
+      "domainPath": "n:object:procedural",
+      "entry": "./domains/procedural-objects/index.js",
+      "kits": [
+        "procedural-object-body-kit",
+        "procedural-object-material-kit",
+        "procedural-object-lod-kit",
+        "procedural-object-capture-profile-kit",
+        "forest-placement-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "production",
+      "label": "Production",
+      "description": "Catalog family for reusable production authorities. It is not an executable parent domain kit.",
+      "kind": "gameplay-domain-family",
+      "status": "official",
+      "domainPath": "n:production",
+      "entry": "./domains/production/index.js",
+      "kits": [
+        "agriculture-domain-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "progression",
       "label": "Progression",
       "kind": "runtime-domain",
@@ -12318,7 +14477,12 @@
         "mission-phase-kit",
         "lock-group-kit",
         "fail-state-kit",
-        "score-summary-kit"
+        "score-summary-kit",
+        "collectible-kit",
+        "symbol-alignment-kit",
+        "sorting-kit",
+        "reveal-light-kit",
+        "lock-and-socket-kit"
       ]
     },
     {
@@ -12414,7 +14578,8 @@
         "relationship-state-domain-kit",
         "npc-schedule-domain-kit",
         "shop-inventory-domain-kit",
-        "quest-thread-domain-kit"
+        "quest-thread-domain-kit",
+        "companion-command-kit"
       ]
     },
     {
@@ -12446,7 +14611,10 @@
         "interactable-registry-kit",
         "spatial-interaction-kit",
         "hold-action-kit",
-        "completion-ledger-kit"
+        "completion-ledger-kit",
+        "interaction-kit",
+        "spatial-room-kit",
+        "interaction-target-kit"
       ]
     },
     {
@@ -12475,7 +14643,10 @@
         "interaction-dsk",
         "interaction-domain-service-kit",
         "persistence-dsk",
-        "persistence-domain-service-kit"
+        "persistence-domain-service-kit",
+        "ar-kit",
+        "ar-experience-kit",
+        "surface-placement-kit"
       ]
     }
   ],

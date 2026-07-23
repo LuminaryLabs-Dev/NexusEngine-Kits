@@ -10,6 +10,8 @@
     "hazard-director-kit",
     "damage-health-kit",
     "encounter-director-kit",
-    "light-combat-kit"
+    "light-combat-kit",
+    "character-ragdoll-kit",
+    "moving-target-kit"
   ]
 }

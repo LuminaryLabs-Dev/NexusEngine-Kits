@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "sorting-kit",
+  "version": "1.0.0",
+  "status": "official",
+  "kind": "runtime-kit",
+  "domain": "progression",
+  "domainPath": "n:progression:sorting",
+  "parentDomainPath": "n:progression",
+  "apiName": "sorting",
+  "factory": "createSortingKit",
+  "entry": "./kits/migrated-gameplay/index.js",
+  "packageExport": "./migrated-gameplay",
+  "module": {
+    "package": "./kits/migrated-gameplay/index.js",
+    "node": "./kits/migrated-gameplay/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "n:progression:sorting"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine",
+    "requestedRef": "main",
+    "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+    "path": "src/sorting-kit.js",
+    "parity": "official"
+  },
+  "runtime": {
+    "api": "sorting",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/migrated-gameplay/README.md",
+    "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+    "parity": "kits/migrated-gameplay/proof/source-parity.md",
+    "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": true,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": true,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": null,
+    "blocker": null
+  }
+}

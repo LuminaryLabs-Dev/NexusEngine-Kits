@@ -1,10 +1,12 @@
 # Preset Documentation
 
-A preset is a reusable configuration package.
+A package preset is a reusable, product-neutral configuration package. A
+complete game preset does not belong in NexusEngine-Kits.
 
 It can define theme defaults, tuning values, content references, and a suggested kit stack.
 
-A preset should not define the reusable rules that belong in a kit.
+A package preset must not define reusable rules that belong in a kit, authored
+game content, product fiction, a complete game loop, or product-specific tuning.
 
 ## Shape
 

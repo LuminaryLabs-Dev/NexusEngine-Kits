@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "aquatic",
+  "label": "Aquatic",
+  "description": "Optional reusable aquatic gameplay capabilities.",
+  "kind": "gameplay-domain-family",
+  "status": "official",
+  "domainPath": "n:aquatic",
+  "entry": "./domains/aquatic/index.js",
+  "kits": ["fishing-kit"]
+}
+

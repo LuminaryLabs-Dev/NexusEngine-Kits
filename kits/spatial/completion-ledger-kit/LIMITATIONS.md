@@ -23,7 +23,7 @@ parity: partial
 
 ## What does not work yet
 
-- full ProtoKits parity comparison
+- full historical source behavior comparison
 - event emission integration beyond event naming
 - official domain-level status
 - persistence contract beyond snapshot/loadSnapshot
@@ -35,7 +35,7 @@ parity: partial
 
 ## Required before official
 
-- complete ProtoKits parity review
+- complete source and downstream behavior review
 - add event integration or document no-event runtime contract
 - domain smoke including the next rebuilt spatial kit
 - release-tagged CDN validation

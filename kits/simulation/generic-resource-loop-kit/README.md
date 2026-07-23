@@ -99,7 +99,8 @@ Does not own:
 - `generic-resource-loop-kit` is the canonical service owner.
 - NexusEngine `createResourceMeter()` remains the canonical pure primitive and is not duplicated as a new primitive here.
 - `generic-pressure-loop-kit` and `pressure-domain-kit` remain separate pressure-policy candidates; they are not folded into meter state.
-- The older ProtoKits `createResourcePressureKit()` remains a compatibility candidate until its callers can migrate without feature loss.
+- External callers of the historical `createResourcePressureKit()` remain a
+  documented migration gap until they can move without feature loss.
 - The former NexusEngine-Kits migration placeholder is replaced by this validated behavior version.
 
 ## Validation

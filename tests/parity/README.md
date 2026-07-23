@@ -1,3 +1,5 @@
 # Parity Tests
 
-Parity tests compare clean rebuild behavior against the documented ProtoKits reference behavior.
+These tests compare current behavior with documented historical source
+requirements. The folder name remains stable for generated and historical
+references.

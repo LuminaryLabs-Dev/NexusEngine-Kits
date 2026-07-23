@@ -19,4 +19,5 @@ import { createFoundationDomainKits } from "@luminarylabs/nexusengine-kits/domai
 
 ## Status
 
-Scaffolded. Behavior parity with ProtoKits is not complete yet.
+Partially implemented. Consult the generated domain manifest and readiness
+matrix; unresolved members remain non-executable through default paths.

@@ -16,7 +16,7 @@
     "node": "./kits/render-descriptors/instanced-render-batch-kit/index.js",
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/instanced-render-batch-kit/index.js"
   },
-  "integrity": null,
+  "integrity": "sha256-CyZ7f8AaToHVWyUKEm8AzKglV2tEtsxHRHJApgF36Ro=",
   "environments": [
     "node",
     "browser"

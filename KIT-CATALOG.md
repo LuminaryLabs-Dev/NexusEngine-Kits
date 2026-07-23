@@ -7,8 +7,8 @@ The catalog is intentionally domain-based:
 ```txt
 one kit      -> install one capability
 one domain   -> install a related kit family
-one bundle   -> install a reusable game stack
-all          -> install the full migration bootstrap catalog
+one bundle   -> install a reusable capability stack
+all          -> install every allowed-status implementation
 ```
 
 ## Domains
@@ -46,7 +46,7 @@ scaffolded
   Folder or wrapper exists, but stable runtime behavior and parity do not.
 
 candidate
-  Behavior has migrated from ProtoKits but needs more validation.
+  Real behavior exists but needs more ownership or validation proof.
 
 official
   Stable enough for first-party use.
@@ -63,14 +63,15 @@ blocked
 
 `manifests/kits`, `manifests/domains`, and `manifests/bundles` are authoritative. `npm run build:catalog` generates the JavaScript catalog, JSON catalogs, repository registry, factory table, CDN index, parity records, readiness ledger, progress, and physical `kit.json` mirrors. Only official entries participate in default creation and installation; deprecated runtime bridges require explicit `allowStatuses` opt-in.
 
-## Promotion Source
+## Evidence Source
 
-Each catalog kit should eventually trace back to either:
+Each catalog kit traces to one or more of:
 
 ```txt
-NexusEngine-ProtoKits
-NexusEngine runtime contracts
-new official kit work created directly here
+historical source lineage
+NexusEngine public runtime contracts
+downstream experiment or game requirements
+new approved implementation in this repository
 ```
 
-Do not promote game-specific demo glue as an official kit.
+Do not accept game-specific demo glue or a complete game as an official kit.

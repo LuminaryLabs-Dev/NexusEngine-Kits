@@ -3,8 +3,8 @@
   "activeCapability": "clock-kit",
   "baselineCount": 120,
   "approvedAdditions": {
-    "total": 7,
-    "resolved": 3
+    "total": 29,
+    "resolved": 21
   },
   "kits": {
     "action-input-kit": {
@@ -105,6 +105,27 @@
       "sourceCommit": null,
       "next": "aerial-vegetation-placement-domain-kit has no validated stable implementation or parity record."
     },
+    "agriculture-domain-kit": {
+      "status": "official",
+      "target": "kits/production/agriculture-domain-kit",
+      "realBehavior": true,
+      "sourceCommit": "b96efb2e3a6059c65dbc3e37d5bf051ce38030a0",
+      "next": "keep all stable gates green"
+    },
+    "ar-experience-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
+    "ar-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
     "asset-descriptor-kit": {
       "status": "scaffolded",
       "target": "kits/render-descriptors/asset-descriptor-kit",
@@ -120,11 +141,11 @@
       "next": "build-placement-kit has only scaffold or metadata behavior and lacks validated source parity."
     },
     "camera-collision-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/camera-feedback/camera-collision-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "camera-collision-kit has no validated stable implementation or parity record."
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "camera-comfort-kit": {
       "status": "migration-placeholder",
@@ -189,12 +210,33 @@
       "sourceCommit": null,
       "next": "cargo-transfer-kit has no validated stable implementation or parity record."
     },
+    "character-ragdoll-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
     "clock-kit": {
       "status": "migration-placeholder",
       "target": "kits/foundation/clock-kit",
       "realBehavior": false,
       "sourceCommit": null,
       "next": "clock-kit has no validated stable implementation or parity record."
+    },
+    "collectible-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
+    "companion-command-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "completion-ledger-kit": {
       "status": "candidate",
@@ -280,12 +322,26 @@
       "sourceCommit": null,
       "next": "fail-state-kit has no validated stable implementation or parity record."
     },
+    "fishing-kit": {
+      "status": "official",
+      "target": "kits/aquatic/fishing-kit",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
     "flight-corridor-domain-kit": {
       "status": "migration-placeholder",
       "target": "kits/aerial/flight-corridor-domain-kit",
       "realBehavior": false,
       "sourceCommit": null,
       "next": "flight-corridor-domain-kit has no validated stable implementation or parity record."
+    },
+    "forest-placement-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "generic-action-window-kit": {
       "status": "migration-placeholder",
@@ -406,6 +462,13 @@
       "sourceCommit": null,
       "next": "generic-route-cargo-extraction-kit has no validated stable implementation or parity record."
     },
+    "greybox-building-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
     "guard-domain-kit": {
       "status": "migration-placeholder",
       "target": "kits/rpg-combat/guard-domain-kit",
@@ -497,6 +560,20 @@
       "sourceCommit": null,
       "next": "interaction-dsk has no validated stable implementation or parity record."
     },
+    "interaction-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
+    "interaction-target-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
     "inventory-kit": {
       "status": "migration-placeholder",
       "target": "kits/economy-resources/inventory-kit",
@@ -512,11 +589,11 @@
       "next": "keep all stable gates green"
     },
     "light-combat-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/hazard-combat/light-combat-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "light-combat-kit has no validated stable implementation or parity record."
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "lighting-descriptor-kit": {
       "status": "migration-placeholder",
@@ -524,6 +601,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "lighting-descriptor-kit has no validated stable implementation or parity record."
+    },
+    "lock-and-socket-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "lock-group-kit": {
       "status": "scaffolded",
@@ -560,6 +644,13 @@
       "sourceCommit": null,
       "next": "mission-phase-kit has no validated stable implementation or parity record."
     },
+    "moving-target-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
     "npc-schedule-domain-kit": {
       "status": "migration-placeholder",
       "target": "kits/rpg-social/npc-schedule-domain-kit",
@@ -575,11 +666,11 @@
       "next": "objective-bridge-kit has only scaffold or metadata behavior and lacks validated source parity."
     },
     "objective-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/progression/objective-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "objective-kit has no validated stable implementation or parity record."
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "openxr-hand-adapter-dsk": {
       "status": "migration-placeholder",
@@ -628,7 +719,35 @@
       "target": "kits/procedural-creatures/procedural-creature-body-kit",
       "realBehavior": true,
       "sourceCommit": "643cff89f6e74db983863a942a4644e6746947b5",
-      "next": "Candidate requires non-theropod body plans and multi-renderer validation before official promotion."
+      "next": "Candidate requires non-theropod body plans, core-object adoption proof in multiple products, and multi-renderer validation before official promotion."
+    },
+    "procedural-object-body-kit": {
+      "status": "candidate",
+      "target": "kits/procedural-objects/procedural-object-body-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "Candidate requires multi-consumer and multi-renderer validation before official promotion."
+    },
+    "procedural-object-capture-profile-kit": {
+      "status": "candidate",
+      "target": "kits/procedural-objects/procedural-object-capture-profile-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "Candidate requires multi-consumer and multi-renderer validation before official promotion."
+    },
+    "procedural-object-lod-kit": {
+      "status": "candidate",
+      "target": "kits/procedural-objects/procedural-object-lod-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "Candidate requires multi-consumer and multi-renderer validation before official promotion."
+    },
+    "procedural-object-material-kit": {
+      "status": "candidate",
+      "target": "kits/procedural-objects/procedural-object-material-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "Candidate requires multi-consumer and multi-renderer validation before official promotion."
     },
     "project-batch-deploy-bridge": {
       "status": "migration-placeholder",
@@ -666,11 +785,11 @@
       "next": "relationship-state-domain-kit has no validated stable implementation or parity record."
     },
     "render-descriptor-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/render-descriptors/render-descriptor-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "render-descriptor-kit has no validated stable implementation or parity record."
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "render-layer-kit": {
       "status": "migration-placeholder",
@@ -692,6 +811,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "resource-node-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    "reveal-light-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "route-clearance-domain-kit": {
       "status": "migration-placeholder",
@@ -749,6 +875,13 @@
       "sourceCommit": null,
       "next": "sky-atmosphere-kit has no validated stable implementation or parity record."
     },
+    "sorting-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
     "spatial-index-kit": {
       "status": "migration-placeholder",
       "target": "kits/spatial/spatial-index-kit",
@@ -762,6 +895,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "spatial-interaction-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    "spatial-room-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "spatial-scene-graph-dsk": {
       "status": "migration-placeholder",
@@ -811,6 +951,20 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "structure-runtime-kit has only scaffold or metadata behavior and lacks validated source parity."
+    },
+    "surface-placement-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
+    },
+    "symbol-alignment-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "terrain-ground-contact-domain-kit": {
       "status": "migration-placeholder",

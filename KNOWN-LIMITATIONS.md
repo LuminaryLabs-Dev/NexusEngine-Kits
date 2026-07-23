@@ -14,15 +14,20 @@ NexusEngine Kits is a clean rebuild foundation, not a complete game stack.
 
 ## What is placeholder-only
 
-Most catalog entries are still metadata-backed placeholders. A placeholder can be installed for shape, reporting, and planning, but it does not yet provide real gameplay or simulation behavior.
+Most catalog entries are still metadata-backed placeholders. They are
+discoverable for reporting and planning, but default installer paths do not
+execute them as behavior.
 
 ## What is official
 
-`generic-resource-loop-kit` is the first official kit. It provides deterministic meter registration, mutation, passive rates, locks, thresholds, descriptors, reset, snapshot restore, bounded history, and compatibility aliases through a native NexusEngine DSK.
+There are currently 27 official entries. Run `npm run progress` and inspect the
+generated manifests for the current set.
 
 ## What is candidate
 
-`completion-ledger-kit` is the first real candidate kit. It has behavior, smoke coverage, docs, a manifest, and parity notes, but it is not official until full ProtoKits parity and domain validation are complete.
+`completion-ledger-kit` has real candidate behavior, smoke coverage, docs, a
+manifest, and lineage notes. It remains non-official until source behavior,
+current downstream requirements, and domain validation are complete.
 
 ## What is not ready
 
@@ -30,7 +35,7 @@ Most catalog entries are still metadata-backed placeholders. A placeholder can b
 - Broad gameplay stacks.
 - Renderer adapters.
 - Save/load beyond individual kit snapshots.
-- Full catalog-wide ProtoKits parity.
+- Full catalog-wide behavior and downstream coverage.
 - Tagged release stability.
 - npm package publication.
 

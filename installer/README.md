@@ -13,6 +13,8 @@ await installer.installDomain(engine, "input");
 await installer.installBundle(engine, "default-game-stack");
 ```
 
-## Bootstrap Note
+## Readiness
 
-Until a kit's behavior is fully migrated from ProtoKits, the installer creates a metadata-only runtime kit that is valid to install and inspect.
+The default installer executes only allowed-status factories. Unresolved
+metadata may be inspected through the catalog, but it is skipped or rejected
+rather than installed as empty behavior.

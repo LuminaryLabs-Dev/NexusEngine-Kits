@@ -14,4 +14,6 @@ CDN:
 import { createAllNexusEngineKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/bundles/all.js";
 ```
 
-The bootstrap all-bundle returns metadata-backed kit entries for the complete catalog. Full behavior migrates from ProtoKits kit-by-kit.
+The all-bundle returns only behavior permitted by its status policy. Catalog
+metadata for unresolved entries remains discoverable but does not become an
+empty runtime implementation.

@@ -17,8 +17,13 @@
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
   },
   "integrity": "sha256-fLwWlN7aQt6ZAyhf1dZ3SwAW6ri4DYnbI36107yKhXk=",
-  "environments": ["node", "browser"],
-  "requires": ["n:core-transaction-ledger"],
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [
+    "n:core-transaction-ledger"
+  ],
   "provides": [
     "n:production:agriculture",
     "production:agriculture",
@@ -27,7 +32,9 @@
     "agriculture:cultivation",
     "agriculture:harvest"
   ],
-  "composes": ["n:core-transaction-ledger"],
+  "composes": [
+    "n:core-transaction-ledger"
+  ],
   "realBehavior": true,
   "source": {
     "owner": "LuminaryLabs-Agents",

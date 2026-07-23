@@ -9,6 +9,7 @@
   "kits": [
     "build-placement-kit",
     "structure-runtime-kit",
-    "station-interaction-kit"
+    "station-interaction-kit",
+    "greybox-building-kit"
   ]
 }

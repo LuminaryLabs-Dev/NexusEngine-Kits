@@ -1,12 +1,14 @@
-# Rebuild Parity
+# Historical Source And Behavior Lineage
 
-This repo is a clean rebuild beside `NexusEngine-ProtoKits`, not a direct migration.
+The `parity/` path retains its historical name so generated records and source
+references remain stable. It now records lineage and behavior coverage rather
+than an active ProtoKit workflow.
 
-Parity means:
+Lineage proof means:
 
 ```txt
-ProtoKit behavior exists.
-Clean replacement exists or is planned.
+Historical or downstream behavior is identified.
+An owned replacement exists or is explicitly unimplemented.
 Public factory has a stable target.
 Resources/events/systems are documented.
 Tests or smoke plans exist.
@@ -39,4 +41,5 @@ archived
 
 ## Rule
 
-Do not copy ProtoKits mess. Mimic useful capability coverage with cleaner contracts, tests, manifests, and domain boundaries.
+Historical source can establish required behavior, but current ownership,
+public contracts, tests, manifests, and downstream proof decide acceptance.

@@ -11,8 +11,8 @@ architecture scaffold: ready
 installer shape: ready
 catalog shape: ready
 domain shape: ready
-parity tracking: ready
-full behavior parity: not ready
+lineage tracking: ready
+full behavior coverage: not ready
 AAA production stack: not ready
 ```
 
@@ -27,14 +27,14 @@ A kit ecosystem is AAA-ready only when it can support:
 - real renderer-facing descriptors
 - asset and performance budgets
 - save/load and replay
-- robust smoke and parity tests
+- robust smoke and behavior-lineage tests
 - CDN and package install stability
 - documented production usage
 
 ## Current blocking gaps
 
 - Most catalog entries are still placeholders.
-- Most kits do not yet have real behavior rebuilt from ProtoKits parity.
+- Most catalog entries do not yet have real approved behavior.
 - Most domains do not yet have domain smoke tests.
 - The installer does not yet provide production-grade dependency locking.
 - The repo has not yet been tagged or published as a stable package.

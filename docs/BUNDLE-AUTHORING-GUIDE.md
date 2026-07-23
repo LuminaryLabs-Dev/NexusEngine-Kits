@@ -2,9 +2,11 @@
 
 A bundle is a curated install stack.
 
-Bundles compose domains and kits for a reusable game or app shape.
+Bundles compose domains and kits for a reusable capability stack.
 
-A bundle should not own new gameplay rules. If new behavior is needed, create or update a kit.
+A bundle does not own new gameplay rules, authored content, or a complete game.
+If reusable non-Core behavior is missing, handle it as a separately reviewed
+kit.
 
 ## Bundle shape
 

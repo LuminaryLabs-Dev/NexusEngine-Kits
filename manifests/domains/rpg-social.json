@@ -11,6 +11,7 @@
     "relationship-state-domain-kit",
     "npc-schedule-domain-kit",
     "shop-inventory-domain-kit",
-    "quest-thread-domain-kit"
+    "quest-thread-domain-kit",
+    "companion-command-kit"
   ]
 }

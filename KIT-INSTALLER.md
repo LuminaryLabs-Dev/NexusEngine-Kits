@@ -46,6 +46,7 @@ const reviewInstaller = createNexusEngineKitInstaller({
 });
 ```
 
-`createPlaceholderKit()` is disabled. Unresolved behavior belongs in ProtoKits until promotion proof exists.
+`createPlaceholderKit()` is disabled. Unresolved behavior remains descriptive
+metadata until an approved implementation passes the official acceptance gates.
 
 Registry metadata can be pulled without code execution. Third-party registries require an explicit registry SHA pin, and third-party modules additionally require `allowExternalCode: true`, an integrity hash, and an approved module resolver.

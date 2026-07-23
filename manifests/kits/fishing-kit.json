@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "fishing-kit",
+  "version": "1.0.0",
+  "status": "official",
+  "kind": "runtime-kit",
+  "domain": "aquatic",
+  "domainPath": "n:aquatic:fishing",
+  "parentDomainPath": "n:aquatic",
+  "apiName": "fishing",
+  "factory": "createFishingKit",
+  "entry": "./kits/aquatic/fishing-kit/index.js",
+  "packageExport": "./fishing-kit",
+  "module": {
+    "package": "./kits/aquatic/fishing-kit/index.js",
+    "node": "./kits/aquatic/fishing-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/aquatic/fishing-kit/index.js"
+  },
+  "integrity": null,
+  "environments": ["node", "browser"],
+  "requires": [],
+  "provides": [
+    "n:aquatic:fishing",
+    "aquatic:fishing",
+    "fishing:cast",
+    "fishing:hook",
+    "fishing:fight",
+    "fishing:catch"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine",
+    "requestedRef": "main",
+    "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+    "path": "src/fishing-kit.js",
+    "parity": "official"
+  },
+  "runtime": {
+    "api": "fishing",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/aquatic/fishing-kit/README.md",
+    "smoke": "kits/aquatic/fishing-kit/smoke.test.mjs",
+    "parity": "kits/aquatic/fishing-kit/source-parity.md",
+    "limitations": "kits/aquatic/fishing-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": true,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": true,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": null,
+    "blocker": null
+  }
+}

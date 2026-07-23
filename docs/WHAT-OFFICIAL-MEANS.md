@@ -8,7 +8,7 @@ Official requires:
 - docs
 - manifest
 - smoke tests
-- parity review
+- source and behavior lineage review
 - domain smoke
 - package and CDN paths
 - no known contradiction between docs and implementation

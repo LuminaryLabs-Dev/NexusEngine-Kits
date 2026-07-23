@@ -1,116 +1,57 @@
-# AGENTS.md
+# NexusEngine Kits Agent Rules
 
-This file defines how agents work inside NexusEngine Kits.
+NexusEngine-Kits is the first-party trusted registry for reusable optional,
+niche, genre, or platform behavior.
 
-NexusEngine Kits is the official first-party plugin catalog. It receives stable, reusable capabilities from `NexusEngine-ProtoKits` and publishes them as individually installable, domain-installable, bundle-installable, CDN-addressable kits.
-
-## Prime Directive
-
-Do not treat this repo as a pile of plugins.
-
-Treat it as a curated kit catalog.
+## Ownership
 
 ```txt
-Find the domain.
-Find the kit.
-Check the ProtoKit source.
-Promote only stable behavior.
-Keep each kit individually installable.
-Keep each domain bundle installable.
-Keep CDN paths stable.
-Validate before marking official.
-```
-
-## Repo Boundaries
-
-Do not change `LuminaryLabs-Dev/NexusEngine` from this repo's work.
-
-Use this split:
-
-```txt
-NexusEngine
-  runtime rail and contracts
+NexusEngine Core
+  atomic + idempotent + fully reusable
 
 NexusEngine-Kits
-  official first-party kit catalog
+  reusable + non-Core
 
-NexusEngine-ProtoKits
-  incubation and experiments
+Experiment or game repository
+  complete games + authored product behavior
 ```
 
-## Promotion Rules
+Do not create or update ProtoKits. Historical source mappings are evidence, not
+an active workflow.
 
-A ProtoKit can move here only when it has:
+## Work Loop
 
-- a clear domain
-- stable kit name
-- reusable behavior
-- deterministic state where relevant
-- renderer-agnostic runtime behavior
-- README or domain docs
-- install example
-- promotion rationale
+1. Read `goal.md`, `memory.md`, and the live manifests.
+2. Confirm the capability is reusable and non-Core.
+3. Reuse or extend the nearest existing owner.
+4. Keep each manifest identity atomic even when source is collocated.
+5. Use only public NexusEngine package entrypoints.
+6. Add README, manifest, package export, registry entry, installer resolution,
+   limitations, lineage, and focused proof.
+7. Regenerate catalogs and run `npm run check`.
+8. Report status, changed owners, validation, and remaining limitations.
 
-If a kit is not stable, document it in the migration plan but leave it in ProtoKits.
+## Boundaries
+
+- Do not edit NexusEngine, experiments, or game repositories from this repo.
+- Do not add a complete game or authored preset.
+- Do not import private NexusEngine source paths.
+- Do not treat metadata or a placeholder factory as working behavior.
+- Do not make executable registry code available until trust, immutable source,
+  integrity, collision, dependency, and status gates pass.
+- Do not publish, push, release, or deploy without explicit approval.
 
 ## Required Kit Shape
-
-Each official kit should eventually have:
 
 ```txt
 kits/<domain>/<kit-name>/
 ├─ README.md
 ├─ kit.json
-├─ package.json
 ├─ index.js
 ├─ smoke.test.mjs
-└─ examples/
-   ├─ headless.js
-   └─ browser-cdn.html
+├─ LIMITATIONS.md
+└─ source-parity.md
 ```
 
-The bootstrap catalog may contain metadata-only placeholder entries. A placeholder is not a full behavior migration. It is a stable landing zone and install path.
-
-## Installer Rules
-
-The installer may resolve and install:
-
-- one kit by ID
-- one domain by ID
-- one bundle by ID
-- all catalog kits
-- a direct runtime kit object
-
-The installer must not own gameplay behavior. It resolves, creates, validates, and installs kits into a NexusEngine engine.
-
-## Naming Grammar
-
-Use:
-
-```txt
-<domain>/<kit-name>-kit
-<domain>/<capability>-adapter
-<domain>/<theme>-preset
-```
-
-Avoid:
-
-```txt
-utils
-helpers
-misc
-core
-common
-random feature blobs
-```
-
-## Completion Checklist
-
-Before reporting completion, say:
-
-- which repo changed
-- which branch changed
-- which kits/domains changed
-- whether entries are placeholders or full behavior migrations
-- what validation ran
-- whether NexusEngine runtime repo was left untouched
+The exact structure may use a shared proof folder when multiple atomic manifest
+identities intentionally share one implementation surface.

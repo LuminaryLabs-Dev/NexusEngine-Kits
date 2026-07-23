@@ -1,13 +1,15 @@
 # What Installable Means
 
-Installable does not always mean real behavior.
+Executable installation always requires real allowed-status behavior. Metadata
+may remain discoverable without being executable.
 
 ## Levels
 
-- metadata-installable: the installer can attach a placeholder runtime kit.
+- metadata-discoverable: the catalog can describe an unresolved entry.
 - scaffold-installable: a folder or entrypoint exists, but behavior is incomplete.
 - candidate behavior installable: real behavior exists with smoke tests.
-- official behavior installable: behavior, docs, manifests, parity, and domain smoke are complete.
+- official behavior installable: behavior, docs, manifests, lineage, registry
+  proof, and domain smoke are complete.
 
 ## Rule
 

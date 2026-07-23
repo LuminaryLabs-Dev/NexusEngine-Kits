@@ -1,6 +1,6 @@
 # Source Parity: completion-ledger-kit
 
-## ProtoKit source
+## Historical source
 
 ```txt
 LuminaryLabs-Agents/NexusEngine-ProtoKits/protokits/completion-ledger-kit/
@@ -14,7 +14,7 @@ LuminaryLabs-Agents/NexusEngine-ProtoKits/protokits/completion-ledger-kit/
 - [x] Reset behavior exists
 - [x] Headless smoke exists
 - [x] CDN example exists
-- [ ] Full ProtoKits behavior comparison complete
+- [ ] Full historical source behavior comparison complete
 - [ ] Domain smoke complete
 
 ## Current behavior
@@ -23,4 +23,7 @@ The clean rebuild tracks completion records by id. It supports one-time completi
 
 ## Intentional differences
 
-This rebuild starts with a small explicit API and serializable state. It avoids UI, host, renderer, and game-specific flow. The kit remains candidate until a full ProtoKits parity review is complete.
+This rebuild starts with a small explicit API and serializable state. It avoids
+UI, host, renderer, and game-specific flow. The kit remains candidate until its
+historical source behavior and current downstream requirements are fully
+reviewed.

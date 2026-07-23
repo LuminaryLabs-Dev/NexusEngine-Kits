@@ -1,81 +1,52 @@
 # NexusEngine Kits
 
-NexusEngine Kits is the official first-party plugin catalog for NexusEngine.
+NexusEngine Kits is the official first-party trusted registry for reusable
+behavior that does not belong in NexusEngine Core.
 
-This repo is a clean rebuild that runs alongside `NexusEngine-ProtoKits`. ProtoKits remains the incubation/reference repo. Kits mirrors the useful capability coverage, but rebuilds it with cleaner domain boundaries, manifests, tests, install reports, CDN paths, and parity tracking.
-
-The repository, package, public APIs, and documentation use the canonical NexusEngine identity.
-
-## Role
+## Ownership
 
 ```txt
 NexusEngine
-  runs kits and owns runtime contracts
+  atomic, idempotent, fully reusable Core behavior
 
 NexusEngine-Kits
-  clean official rebuild of first-party kits, domains, bundles, adapters, presets, and installer
+  reusable optional, niche, genre, or platform behavior
 
-NexusEngine-ProtoKits
-  incubation/reference repo for experimental kits and parity source behavior
+Experiment and game repositories
+  complete games, presets, authored content, and product behavior
 ```
 
-This repo should not become a copied ProtoKits tree. It should mimic useful ProtoKit behavior, but improve the public factories, manifests, docs, testability, install paths, CDN entrypoints, and domain boundaries.
+This package does not incubate ProtoKits. That workflow is retired. Historical
+source mappings remain as lineage evidence only.
 
-## Rebuild Rule
+## Install
 
-```txt
-same capability coverage
-cleaner public factories
-cleaner runtime behavior
-cleaner resources/events/systems
-better manifests
-better tests
-better install paths
-better CDN paths
-better docs
-better domain boundaries
-```
-
-## Install Shapes
-
-### One kit
+One kit:
 
 ```js
 import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
 const installer = createNexusEngineKitInstaller();
-await installer.installKit(engine, "generic-resource-loop-kit", {
-  resources: [{ id: "energy", initial: 100 }]
-});
+await installer.installKit(engine, "fishing-kit");
 ```
 
-### One domain
+Direct public import:
 
 ```js
-import { createRegistryDomainKits } from "@luminarylabs/nexusengine-kits/domain-registry";
+import { createFishingKit } from "@luminarylabs/nexusengine-kits/fishing-kit";
 
-const engine = createRealtimeGame({
-  kits: createRegistryDomainKits()
-});
+const fishing = createFishingKit();
 ```
 
-### Whole catalog
+One domain:
 
 ```js
-import { createAllNexusEngineKits } from "@luminarylabs/nexusengine-kits/all";
+import { createFishingKit } from "@luminarylabs/nexusengine-kits/domain-aquatic";
 
-const engine = createRealtimeGame({
-  kits: createAllNexusEngineKits()
-});
+const engine = createRealtimeGame({ kits: [createFishingKit()] });
 ```
 
-### CDN
-
-```js
-import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@<40-character-sha>/installer/index.js";
-```
-
-### Repository registry
+Registry planning:
 
 ```js
 import {
@@ -85,68 +56,49 @@ import {
 } from "@luminarylabs/nexusengine-kits";
 
 const registry = await pullRegistry("LuminaryLabs-Dev/NexusEngine-Kits");
-const plan = createInstallPlan({ bundles: ["registry-control-plane"] }, { registry });
+const plan = createInstallPlan({ kits: ["fishing-kit"] }, { registry });
 const installer = createNexusEngineKitInstaller({ registry });
-await installer.installBundle(engine, "registry-control-plane");
 ```
 
-## Current Status
+Registry metadata is descriptive until a trusted resolver verifies the owner,
+immutable source, integrity, status, package export, and executable factory.
 
-This is the clean rebuild foundation. The catalog, domains, bundles, installer, contracts, parity tracking, and docs land first so every future rebuilt kit has a stable long-term shape.
-
-Many catalog entries are currently `migration-placeholder` entries. They remain discoverable, but default installer/domain/bundle APIs skip them instead of presenting metadata as behavior. Placeholder and scaffold factories never silently create empty runtime kits.
-
-`generic-resource-loop-kit` and `seed-kit` are official baseline kits. The three registry control-plane additions are also official without changing the 120-kit baseline denominator. `protokit-core` is resolved as a deprecated compatibility bridge and requires explicit installer status opt-in. Run `npm run progress` for generated completed/remaining counts.
-
-## Known Limitations
-
-This repo intentionally separates installability from implementation readiness.
-
-A cataloged kit may exist before it has real behavior. Default creation and installation paths include official kits only, so a domain or bundle can report skipped unready members without silently installing empty behavior.
-
-See:
-
-- `KNOWN-LIMITATIONS.md`
-- `IMPLEMENTATION-GAPS.md`
-- `FAILURE-MODES.md`
-- `PLACEHOLDER-MATRIX.md`
-- `READINESS-MATRIX.md`
-- `AAA-GAP-REGISTER.md`
-
-## Documentation Status
-
-Framework docs now cover install modes, authoring, testing, contracts, parity, domains, bundles, CDN usage, readiness, known limitations, implementation gaps, failure modes, and placeholder status. Per-kit and per-domain docs expand as each placeholder becomes real behavior.
-
-## Repository Map
+## Package Shape
 
 ```txt
-contracts/       manifest, registry, lockfile, status, and report contracts
-manifests/       authoritative kit, domain, bundle, and repository manifests
-registry/        metadata pull, trust, graph/planning, lockfile, integrity, and resolver adapters
-installer/       generated catalog/factories and kit/domain/bundle installation
-kit-catalog.json generated machine-readable kit catalog
-domain-catalog.json generated machine-readable domain catalog
-bundle-catalog.json generated machine-readable bundle catalog
-nexusengine.registry.json generated repository registry template
-domains/         domain bundle entrypoints and future domain manifests
-bundles/         full-catalog and game-stack bundles
-kits/            official kit landing zones and rebuilt behaviors
-parity/          ProtoKits-to-Kits parity tracking
-examples/        one-kit, one-domain, bundle, full catalog, CDN, and headless usage
-tests/           installer, contracts, domains, bundles, kits, parity, CDN, smoke
-scripts/         catalog, manifest, parity, export, readiness, placeholder, and gap checks
+kits/          official and explicitly staged implementations
+domains/       domain composition entrypoints
+bundles/       multi-domain compositions
+manifests/     authoritative kit, domain, bundle, and registry records
+registry/      trust, graph, planning, lockfile, integrity, and resolution
+installer/     generated factories and installation
+contracts/     manifest, status, and install-report contracts
+parity/        historical source and behavior lineage
+docs/          current usage and legacy migration pointers
 ```
 
-## Core Principle
+Placeholders remain discoverable but cannot install as behavior through default
+paths. Deprecated compatibility kits require explicit status opt-in.
+
+## Current Catalog
+
+As generated on 2026-07-23:
 
 ```txt
-One kit should be installable.
-One domain should be installable.
-One bundle should be installable.
-The whole official catalog should be installable; unready entries should fail closed.
-Every install should be inspectable.
-Every stable kit should be CDN-addressable.
-Every remote module URL should resolve to an immutable commit and verified hash.
-Every rebuilt kit should track ProtoKits parity.
-Every limitation should be visible before it causes bad assumptions.
+149 inventoried
+27 official
+7 of 120 baseline entries resolved
+21 of 29 approved additions resolved
+1 deprecated compatibility kit
 ```
+
+Run `npm run progress` for current generated counts.
+
+## Validation
+
+```bash
+npm run build:catalog
+npm run check
+```
+
+Start with [docs/START-HERE.md](docs/START-HERE.md).

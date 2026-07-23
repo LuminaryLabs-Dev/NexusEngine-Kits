@@ -1,20 +1,20 @@
 {
   "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "objective-kit",
-  "version": "0.0.0",
-  "status": "migration-placeholder",
+  "version": "1.0.0",
+  "status": "official",
   "kind": "runtime-kit",
   "domain": "progression",
   "domainPath": "n:progression:objective",
   "parentDomainPath": "n:progression",
   "apiName": "objective",
   "factory": "createObjectiveKit",
-  "entry": "./kits/progression/objective-kit/index.js",
-  "packageExport": null,
+  "entry": "./kits/migrated-gameplay/index.js",
+  "packageExport": "./migrated-gameplay",
   "module": {
-    "package": null,
-    "node": null,
-    "browser": null
+    "package": "./kits/migrated-gameplay/index.js",
+    "node": "./kits/migrated-gameplay/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
   },
   "integrity": null,
   "environments": [
@@ -23,46 +23,45 @@
   ],
   "requires": [],
   "provides": [
-    "kit:objective-kit",
-    "domain:progression"
+    "n:progression:objective"
   ],
   "composes": [],
-  "realBehavior": false,
+  "realBehavior": true,
   "source": {
-    "owner": "LuminaryLabs-Agents",
-    "repository": "NexusEngine-ProtoKits",
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine",
     "requestedRef": "main",
-    "resolvedCommit": null,
-    "path": "protokits/objective-kit/index.js",
-    "parity": null
+    "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+    "path": "src/objective-flow-kit.js",
+    "parity": "official"
   },
   "runtime": {
     "api": "objective",
     "snapshot": false,
     "loadSnapshot": false,
     "reset": false,
-    "deterministic": false
+    "deterministic": true
   },
   "proof": {
-    "readme": null,
-    "smoke": null,
-    "parity": null,
-    "limitations": null
+    "readme": "kits/migrated-gameplay/README.md",
+    "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+    "parity": "kits/migrated-gameplay/proof/source-parity.md",
+    "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
   },
   "promotion": {
     "baseline": true,
-    "resolved": false,
+    "resolved": true,
     "stages": {
       "inventoried": true,
       "sourceMapped": true,
       "protoValidated": false,
-      "candidate": false,
-      "official": false,
+      "candidate": true,
+      "official": true,
       "deprecated": false,
       "archived": false,
       "blocked": false
     },
-    "nextCapability": "objective-kit",
-    "blocker": "objective-kit has no validated stable implementation or parity record."
+    "nextCapability": null,
+    "blocker": null
   }
 }

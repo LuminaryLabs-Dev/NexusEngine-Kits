@@ -1,25 +1,33 @@
 # Goal
 
-Status: active
+**Status:** active
 
-Promote proven NexusEngine ProtoKits into stable NexusEngine Kits while preserving useful feature parity, enforcing domain boundaries, and maintaining exact source and validation lineage.
+Maintain the trusted first-party package for reusable non-Core NexusEngine
+behavior.
 
 ## Success Criteria
 
-- Promotion begins from synchronized `main` branches and respects existing work.
-- Source repositories remain read-only.
-- Every candidate has a canonical domain owner and explicit subdomain boundaries.
-- Existing stable owners are extended before overlapping kits are created.
-- Behavior, reset, snapshot, composition, dependencies, boundaries, lineage, performance, package exports, and downstream use are proven.
-- Stable promotion preserves useful behavior variations through APIs, policies, adapters, presets, or configuration.
-- Placeholder metadata is never promoted as stable behavior.
-- Every pushed Kits change has a matching pushed LuminaryLabs audit record.
+- Every implementation is reusable but correctly excluded from Core.
+- Every manifest identity has one owner and one public destination.
+- Kits use only public NexusEngine package entrypoints.
+- Registry metadata fails closed until a trusted provider verifies executable
+  code.
+- Placeholders never masquerade as behavior.
+- Complete games and authored presets remain outside this package.
+- No active workflow creates or updates ProtoKits.
+- Generated catalogs, exports, installer tables, docs, and proof agree.
 
-## Current Progress
+## Current State
 
-- Baseline resolved: 3 / 120 after resource-meter, deprecated `protokit-core`, and official seed-stream resolution.
-- Baseline remaining: 117.
-- Active capability: `clock-kit`.
-- Approved registry additions: 3 / 3 resolved, published, and audited.
-- Official total: 5 (2 baseline plus 3 additions).
-- Deprecated compatibility resolutions: 1.
+```txt
+baseline resolved: 7 / 120
+baseline remaining: 113
+approved additions resolved: 21 / 29
+official: 27
+deprecated compatibility: 1
+inventoried: 149
+active capability: clock-kit
+```
+
+Run `npm run progress` before reporting counts because this file records only a
+dated working state.
