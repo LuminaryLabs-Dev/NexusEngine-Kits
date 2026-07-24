@@ -10,3 +10,9 @@ The folder is a source colocation boundary, not one installable mega-kit. Every
 factory has its own manifest, registry identity, domain path, and installer
 record.
 
+## Examples
+
+```bash
+node kits/migrated-gameplay/examples/ar-smoke.mjs
+node kits/migrated-gameplay/examples/ar-modes-smoke.mjs
+```
