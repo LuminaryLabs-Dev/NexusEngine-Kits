@@ -1061,7 +1061,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -1129,7 +1129,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -1335,7 +1335,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -2031,7 +2031,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -2168,7 +2168,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -2236,7 +2236,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -3280,7 +3280,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -4524,7 +4524,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -5493,7 +5493,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -5561,7 +5561,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -5770,7 +5770,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -5907,7 +5907,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -6320,7 +6320,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -6526,7 +6526,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -7716,7 +7716,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -7991,7 +7991,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -8620,7 +8620,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -8826,7 +8826,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -9377,7 +9377,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -9445,7 +9445,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/migrated-gameplay/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
@@ -12230,7 +12230,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -12298,7 +12298,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -12504,7 +12504,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -13200,7 +13200,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -13337,7 +13337,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -13405,7 +13405,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -14449,7 +14449,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -15693,7 +15693,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -16662,7 +16662,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -16730,7 +16730,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -16939,7 +16939,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -17076,7 +17076,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -17489,7 +17489,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -17695,7 +17695,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -18885,7 +18885,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -19160,7 +19160,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -19789,7 +19789,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -19995,7 +19995,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -20546,7 +20546,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -20614,7 +20614,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -23004,7 +23004,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -23098,7 +23098,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -23382,7 +23382,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -24338,7 +24338,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -24527,7 +24527,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -24621,7 +24621,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -26055,7 +26055,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -27767,7 +27767,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -29100,7 +29100,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -29194,7 +29194,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -29481,7 +29481,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -29670,7 +29670,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -30239,7 +30239,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -30523,7 +30523,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -32155,7 +32155,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -32534,7 +32534,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -33397,7 +33397,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -33681,7 +33681,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -34440,7 +34440,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
@@ -34534,7 +34534,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/migrated-gameplay/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": "sha256-EreSUTTfZg0FEU3I91PBfXfaoEKRj2cyGOIpu0Q78RU=",
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
