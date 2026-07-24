@@ -6514,6 +6514,76 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "object-placement-contract-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "domain-service-kit",
+    "domain": "spatial",
+    "domainPath": "n:spatial:object-placement",
+    "parentDomainPath": "n:spatial",
+    "apiName": "objectPlacement",
+    "factory": "createObjectPlacementContractKit",
+    "entry": "./kits/spatial/object-placement-contract-kit/index.js",
+    "packageExport": "./object-placement-contract-kit",
+    "module": {
+      "package": "./kits/spatial/object-placement-contract-kit/index.js",
+      "node": "./kits/spatial/object-placement-contract-kit/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/object-placement-contract-kit/index.js"
+    },
+    "integrity": "sha256-LTh4Nfw9OiboNAn5kp37k/maFKzkOq2ZDdC9pZKUpGw=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "spatial:object-placement-contract",
+      "spatial:placement-anchor-alignment",
+      "spatial:placement-validation"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/spatial/object-placement-contract-kit/index.js",
+      "parity": "native"
+    },
+    "runtime": {
+      "api": "objectPlacement",
+      "snapshot": true,
+      "loadSnapshot": true,
+      "reset": true,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/spatial/object-placement-contract-kit/README.md",
+      "smoke": "tests/domains/spatial-domain-smoke.mjs",
+      "parity": null,
+      "limitations": "kits/spatial/object-placement-contract-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "object-placement-contract-kit",
+      "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "objective-bridge-kit",
     "version": "0.0.0",
     "status": "scaffolded",
@@ -10770,6 +10840,7 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
       "spatial-interaction-kit",
       "hold-action-kit",
       "completion-ledger-kit",
+      "object-placement-contract-kit",
       "interaction-kit",
       "spatial-room-kit",
       "interaction-target-kit"
@@ -10984,7 +11055,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "reveal-light-kit",
       "moving-target-kit",
       "lock-and-socket-kit",
-      "mcp-domain-kit"
+      "mcp-domain-kit",
+      "object-placement-contract-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -11158,6 +11230,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "spatial-interaction-kit",
       "hold-action-kit",
       "completion-ledger-kit",
+      "object-placement-contract-kit",
       "interaction-kit",
       "spatial-room-kit",
       "interaction-target-kit"
@@ -17776,6 +17849,76 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "object-placement-contract-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "spatial",
+      "domainPath": "n:spatial:object-placement",
+      "parentDomainPath": "n:spatial",
+      "apiName": "objectPlacement",
+      "factory": "createObjectPlacementContractKit",
+      "entry": "./kits/spatial/object-placement-contract-kit/index.js",
+      "packageExport": "./object-placement-contract-kit",
+      "module": {
+        "package": "./kits/spatial/object-placement-contract-kit/index.js",
+        "node": "./kits/spatial/object-placement-contract-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/object-placement-contract-kit/index.js"
+      },
+      "integrity": "sha256-LTh4Nfw9OiboNAn5kp37k/maFKzkOq2ZDdC9pZKUpGw=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "spatial:object-placement-contract",
+        "spatial:placement-anchor-alignment",
+        "spatial:placement-validation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/spatial/object-placement-contract-kit/index.js",
+        "parity": "native"
+      },
+      "runtime": {
+        "api": "objectPlacement",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/spatial/object-placement-contract-kit/README.md",
+        "smoke": "tests/domains/spatial-domain-smoke.mjs",
+        "parity": null,
+        "limitations": "kits/spatial/object-placement-contract-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "object-placement-contract-kit",
+        "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "objective-bridge-kit",
       "version": "0.0.0",
       "status": "scaffolded",
@@ -21704,7 +21847,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "reveal-light-kit",
       "moving-target-kit",
       "lock-and-socket-kit",
-      "mcp-domain-kit"
+      "mcp-domain-kit",
+      "object-placement-contract-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -30678,6 +30822,102 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "object-placement-contract-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "spatial",
+      "domainPath": "n:spatial:object-placement",
+      "parentDomainPath": "n:spatial",
+      "apiName": "objectPlacement",
+      "factory": "createObjectPlacementContractKit",
+      "entry": "./kits/spatial/object-placement-contract-kit/index.js",
+      "packageExport": "./object-placement-contract-kit",
+      "module": {
+        "package": "./kits/spatial/object-placement-contract-kit/index.js",
+        "node": "./kits/spatial/object-placement-contract-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/object-placement-contract-kit/index.js"
+      },
+      "integrity": "sha256-LTh4Nfw9OiboNAn5kp37k/maFKzkOq2ZDdC9pZKUpGw=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "spatial:object-placement-contract",
+        "spatial:placement-anchor-alignment",
+        "spatial:placement-validation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/spatial/object-placement-contract-kit/index.js"
+      },
+      "runtime": {
+        "api": "objectPlacement",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/spatial/object-placement-contract-kit/README.md",
+        "smoke": "tests/domains/spatial-domain-smoke.mjs",
+        "parity": null,
+        "limitations": "kits/spatial/object-placement-contract-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "object-placement-contract-kit",
+        "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/spatial/object-placement-contract-kit/index.js",
+          "parity": "native"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": "object-placement-contract-kit",
+          "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "objective-bridge-kit",
       "version": "0.0.0",
       "status": "scaffolded",
@@ -36390,6 +36630,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "spatial-interaction-kit",
         "hold-action-kit",
         "completion-ledger-kit",
+        "object-placement-contract-kit",
         "interaction-kit",
         "spatial-room-kit",
         "interaction-target-kit"
@@ -36573,20 +36814,20 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineResolved": 7,
   "baselineRemaining": 113,
   "official": 26,
-  "candidate": 10,
+  "candidate": 11,
   "scaffolded": 9,
   "placeholder": 103,
   "deprecated": 2,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 30,
+  "approvedAdditionsTotal": 31,
   "approvedAdditionsResolved": 21,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 150,
-    "sourceMapped": 150,
-    "protoValidated": 17,
-    "candidate": 38,
+    "inventoried": 151,
+    "sourceMapped": 151,
+    "protoValidated": 18,
+    "candidate": 39,
     "official": 26,
     "deprecated": 2,
     "archived": 0,

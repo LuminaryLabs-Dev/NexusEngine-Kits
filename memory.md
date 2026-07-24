@@ -52,6 +52,11 @@ remains descriptive until a trusted provider resolves it.
   registered providers, is excluded from default bundles, and keeps SDK
   transports in adapters. Editors and games without the kit have no MCP
   runtime surface.
+- `object-placement-contract-kit` is the renderer-neutral source of truth for
+  mesh coordinate frames, local bounds, origins, pivots, named anchors,
+  surface contact, alignment, fitting, and placement validation. Render,
+  collision, navigation, interaction, and evidence adapters consume the same
+  record; the agent owns composition and visual revision decisions.
 
 ## Validation
 

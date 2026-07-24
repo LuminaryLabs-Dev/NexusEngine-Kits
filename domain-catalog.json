@@ -373,6 +373,7 @@
         "spatial-interaction-kit",
         "hold-action-kit",
         "completion-ledger-kit",
+        "object-placement-contract-kit",
         "interaction-kit",
         "spatial-room-kit",
         "interaction-target-kit"

@@ -14,6 +14,7 @@ const patchController = await import("@luminarylabs/nexusengine-kits/seeded-worl
 const cameraSmoothFollow = await import("@luminarylabs/nexusengine-kits/camera-smooth-follow-kit");
 const mcpDomain = await import("@luminarylabs/nexusengine-kits/mcp-domain-kit");
 const mcpNode = await import("@luminarylabs/nexusengine-kits/mcp/node");
+const objectPlacement = await import("@luminarylabs/nexusengine-kits/object-placement-contract-kit");
 const domain = await import("@luminarylabs/nexusengine-kits/domain-registry");
 const bundle = await import("@luminarylabs/nexusengine-kits/registry-control-plane");
 
@@ -40,6 +41,12 @@ for (const [name, value] of Object.entries({
   mcpProviderTemplate: mcpDomain.defineMcpProviderTemplate,
   mcpSdkServer: mcpNode.createMcpSdkServer,
   mcpStdio: mcpNode.connectMcpStdio,
+  objectPlacement: objectPlacement.createObjectPlacementContractKit,
+  placementDescriptor: objectPlacement.createObjectPlacementDescriptor,
+  placementAlign: objectPlacement.alignPlacementAnchors,
+  placementGround: objectPlacement.groundPlacement,
+  placementFit: objectPlacement.fitPlacementWithinBounds,
+  placementValidate: objectPlacement.validatePlacement,
   domain: domain.createRegistryDomainKits,
   bundle: bundle.createRegistryControlPlaneKits
 })) {

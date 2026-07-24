@@ -2,7 +2,7 @@
 
 Baseline resolved: 7 / 120
 Baseline remaining: 113
-Approved additions: 21 / 30
+Approved additions: 21 / 31
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -101,6 +101,7 @@ Active capability: clock-kit
 | mission-phase-kit | migration-placeholder | no | mission-phase-kit has no validated stable implementation or parity record. |
 | moving-target-kit | official | yes |  |
 | npc-schedule-domain-kit | migration-placeholder | no | npc-schedule-domain-kit has no validated stable implementation or parity record. |
+| object-placement-contract-kit | candidate | no | Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion. |
 | objective-bridge-kit | scaffolded | no | objective-bridge-kit has only scaffold or metadata behavior and lacks validated source parity. |
 | objective-kit | official | yes |  |
 | openxr-hand-adapter-dsk | migration-placeholder | no | openxr-hand-adapter-dsk has no validated stable implementation or parity record. |

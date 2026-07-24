@@ -98,13 +98,13 @@ paths. Deprecated compatibility kits require explicit status opt-in.
 
 ## Current Catalog
 
-As generated on 2026-07-23:
+As generated on 2026-07-24:
 
 ```txt
-150 inventoried
+151 inventoried
 26 official
 7 of 120 baseline entries resolved
-21 of 30 approved additions resolved
+21 of 31 approved additions resolved
 2 deprecated compatibility kits
 ```
 

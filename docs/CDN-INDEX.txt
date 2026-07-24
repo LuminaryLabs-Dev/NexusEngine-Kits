@@ -92,6 +92,7 @@ mcp-domain-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{re
 mission-phase-kit unavailable
 moving-target-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 npc-schedule-domain-kit unavailable
+object-placement-contract-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/object-placement-contract-kit/index.js
 objective-bridge-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/progression/objective-bridge-kit/index.js
 objective-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 openxr-hand-adapter-dsk unavailable

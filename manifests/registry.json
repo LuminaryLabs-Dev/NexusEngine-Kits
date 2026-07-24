@@ -42,7 +42,8 @@
       "reveal-light-kit",
       "moving-target-kit",
       "lock-and-socket-kit",
-      "mcp-domain-kit"
+      "mcp-domain-kit",
+      "object-placement-contract-kit"
     ],
     "activeCapability": "clock-kit"
   },

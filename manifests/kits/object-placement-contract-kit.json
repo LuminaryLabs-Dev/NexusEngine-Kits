@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "object-placement-contract-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "domain-service-kit",
+  "domain": "spatial",
+  "domainPath": "n:spatial:object-placement",
+  "parentDomainPath": "n:spatial",
+  "apiName": "objectPlacement",
+  "factory": "createObjectPlacementContractKit",
+  "entry": "./kits/spatial/object-placement-contract-kit/index.js",
+  "packageExport": "./object-placement-contract-kit",
+  "module": {
+    "package": "./kits/spatial/object-placement-contract-kit/index.js",
+    "node": "./kits/spatial/object-placement-contract-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/object-placement-contract-kit/index.js"
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "spatial:object-placement-contract",
+    "spatial:placement-anchor-alignment",
+    "spatial:placement-validation"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/spatial/object-placement-contract-kit/index.js",
+    "parity": "native"
+  },
+  "runtime": {
+    "api": "objectPlacement",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/spatial/object-placement-contract-kit/README.md",
+    "smoke": "tests/domains/spatial-domain-smoke.mjs",
+    "parity": null,
+    "limitations": "kits/spatial/object-placement-contract-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": true,
+      "candidate": true,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "object-placement-contract-kit",
+    "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
+  }
+}

@@ -3,7 +3,7 @@
   "activeCapability": "clock-kit",
   "baselineCount": 120,
   "approvedAdditions": {
-    "total": 30,
+    "total": 31,
     "resolved": 21
   },
   "kits": {
@@ -664,6 +664,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "npc-schedule-domain-kit has no validated stable implementation or parity record."
+    },
+    "object-placement-contract-kit": {
+      "status": "candidate",
+      "target": "kits/spatial/object-placement-contract-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
     },
     "objective-bridge-kit": {
       "status": "scaffolded",

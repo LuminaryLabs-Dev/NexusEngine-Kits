@@ -7,6 +7,7 @@ export { createRpgGameStackKits } from "../bundles/rpg-game-stack.js";
 export { createDefenseGameStackKits } from "../bundles/defense-game-stack.js";
 export { createXrAuthoringStackKits } from "../bundles/xr-authoring-stack.js";
 export { createCompletionLedgerKit } from "../kits/spatial/completion-ledger-kit/index.js";
+export * from "../kits/spatial/object-placement-contract-kit/index.js";
 export { createSpatialInteractionKit } from "../kits/spatial/spatial-interaction-kit/index.js";
 export { createObjectiveBridgeKit } from "../kits/progression/objective-bridge-kit/index.js";
 export { createLockGroupKit } from "../kits/progression/lock-group-kit/index.js";
