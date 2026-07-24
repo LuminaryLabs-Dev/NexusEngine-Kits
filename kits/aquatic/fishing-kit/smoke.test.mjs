@@ -35,4 +35,3 @@ assert.equal(duplicate.duplicate, true);
 assert.equal(engine.kits.filter((kit) => kit.id === "fishing").length, 1);
 
 console.log("fishing-kit smoke ok");
-

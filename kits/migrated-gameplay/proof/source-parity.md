@@ -8,4 +8,3 @@ implementation. Imports of NexusEngine ECS and runtime-kit primitives now use
 public package subpaths. Inter-kit imports remain local to this package.
 
 No private NexusEngine source path is imported.
-

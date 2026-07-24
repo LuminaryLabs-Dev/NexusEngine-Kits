@@ -5,4 +5,3 @@
 - Default content is demonstration data and should be replaced by a product.
 - The kit does not own input-device mapping, persistence, networking, or a
   complete game.
-

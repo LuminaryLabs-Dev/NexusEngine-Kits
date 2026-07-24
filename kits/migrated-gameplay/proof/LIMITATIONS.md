@@ -6,4 +6,3 @@
 - The shared smoke proves factory validity, composition, idempotent
   installation, and registry resolution; products remain responsible for
   authored presentation and controls.
-

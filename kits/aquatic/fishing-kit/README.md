@@ -35,4 +35,3 @@ kit without adding a fishing method to Core.
 - Fishing kit: fishing state, systems, shaders, renderer adapters, and
   fishing/coastal realism.
 - Product or game: authored content, controls, objectives, and presentation.
-

@@ -4,4 +4,3 @@ export const aquaticDomain = Object.freeze({
   id: "aquatic",
   kits: ["fishing-kit"]
 });
-

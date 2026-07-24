@@ -9,4 +9,3 @@
   "entry": "./domains/aquatic/index.js",
   "kits": ["fishing-kit"]
 }
-
