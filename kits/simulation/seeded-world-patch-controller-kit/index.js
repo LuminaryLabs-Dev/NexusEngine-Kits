@@ -259,6 +259,7 @@ function createController(options = {}, seedApi) {
   }
 
   function evict() {
+    const { x: centerX, z: centerZ } = focus.center;
     const candidates = [...records.values()]
       .filter((record) =>
         !active.has(record.id)
@@ -266,6 +267,7 @@ function createController(options = {}, seedApi) {
         && !desiredActive.has(record.id)
         && !desiredPrefetch.has(record.id)
         && !inflight.has(record.id)
+        && !insideRetainRing(record, centerX, centerZ)
       )
       .sort((left, right) => left.lastTouched - right.lastTouched);
     while (records.size > cacheLimit && candidates.length) {

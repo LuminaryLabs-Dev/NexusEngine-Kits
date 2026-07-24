@@ -79,26 +79,11 @@ function decorateCreatureDescriptor(value) {
   };
 }
 
-function wrapApi(api) {
-  return Object.freeze({
-    ...api,
-    create(options = {}) {
-      return decorateCreatureDescriptor(api.create(options));
-    },
-    get(id) {
-      return decorateCreatureDescriptor(api.get(id));
-    },
-    list() {
-      return api.list().map(decorateCreatureDescriptor);
-    },
-    getObjectDescriptor(id) {
-      return decorateCreatureDescriptor(api.get(id)).objectDescriptor;
-    }
-  });
-}
-
 export function createProceduralCreatureBodyKit(config = {}) {
-  const legacy = createLegacyProceduralCreatureBodyKit(config);
+  const legacy = createLegacyProceduralCreatureBodyKit({
+    ...config,
+    decorateDescriptor: decorateCreatureDescriptor
+  });
   return Object.freeze({
     ...legacy,
     version: PROCEDURAL_CREATURE_BODY_KIT_VERSION,
@@ -106,9 +91,6 @@ export function createProceduralCreatureBodyKit(config = {}) {
       ...(legacy.provides ?? []),
       "object:descriptor"
     ],
-    createApi(context) {
-      return wrapApi(legacy.createApi(context));
-    },
     metadata: {
       ...(legacy.metadata ?? {}),
       objectContract: "nexus-object-descriptor/1",

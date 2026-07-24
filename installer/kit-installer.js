@@ -182,7 +182,9 @@ export function createNexusEngineKitInstaller(options = {}) {
     installAll,
     resolveKit: resolveManifest,
     createPlaceholderKit() {
-      throw new TypeError("Placeholder runtime creation is disabled; promote validated behavior or use ProtoKits.");
+      throw new TypeError(
+        "Placeholder runtime creation is disabled; implement approved behavior in NexusEngine-Kits or keep metadata descriptive."
+      );
     },
     getDomainKitIds(domainId) { return getDomainKitIds(domainId, catalog); },
     getBundleDomainIds(bundleId) { return getBundleDomainIds(bundleId, catalog); }

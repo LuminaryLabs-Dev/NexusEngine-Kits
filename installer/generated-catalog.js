@@ -7008,7 +7008,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
     },
-    "integrity": "sha256-DpK0o/m2D7nRGWlvD0UH1ccnMy58U3a2g2Y0UhMzrJM=",
+    "integrity": "sha256-NsLWbu1MNdWvyHjLAcwhTZkkj/AotT7YaW1xSUaVI4w=",
     "environments": [
       "node",
       "browser"
@@ -8268,7 +8268,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
     },
-    "integrity": "sha256-pRnnluIysYV3fcAjk2k+fMS/tarPgwEHP/o4Ob88R+4=",
+    "integrity": "sha256-tjqkkf9IkwMddnM35L8p0py9SqZ0Q4H57mybTwQ1HlI=",
     "environments": [
       "node",
       "browser",
@@ -18177,7 +18177,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
       },
-      "integrity": "sha256-DpK0o/m2D7nRGWlvD0UH1ccnMy58U3a2g2Y0UhMzrJM=",
+      "integrity": "sha256-NsLWbu1MNdWvyHjLAcwhTZkkj/AotT7YaW1xSUaVI4w=",
       "environments": [
         "node",
         "browser"
@@ -19437,7 +19437,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
       },
-      "integrity": "sha256-pRnnluIysYV3fcAjk2k+fMS/tarPgwEHP/o4Ob88R+4=",
+      "integrity": "sha256-tjqkkf9IkwMddnM35L8p0py9SqZ0Q4H57mybTwQ1HlI=",
       "environments": [
         "node",
         "browser",
@@ -31187,7 +31187,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
       },
-      "integrity": "sha256-DpK0o/m2D7nRGWlvD0UH1ccnMy58U3a2g2Y0UhMzrJM=",
+      "integrity": "sha256-NsLWbu1MNdWvyHjLAcwhTZkkj/AotT7YaW1xSUaVI4w=",
       "environments": [
         "node",
         "browser"
@@ -32915,7 +32915,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/simulation/seeded-world-patch-controller-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/seeded-world-patch-controller-kit/index.js"
       },
-      "integrity": "sha256-pRnnluIysYV3fcAjk2k+fMS/tarPgwEHP/o4Ob88R+4=",
+      "integrity": "sha256-tjqkkf9IkwMddnM35L8p0py9SqZ0Q4H57mybTwQ1HlI=",
       "environments": [
         "node",
         "browser",

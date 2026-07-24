@@ -58,6 +58,7 @@
     "./procedural-object-material-kit": "./kits/procedural-objects/procedural-object-material-kit/index.js",
     "./procedural-object-lod-kit": "./kits/procedural-objects/procedural-object-lod-kit/index.js",
     "./procedural-object-capture-profile-kit": "./kits/procedural-objects/procedural-object-capture-profile-kit/index.js",
+    "./kits/production/agriculture-domain-kit": "./kits/production/agriculture-domain-kit/index.js",
     "./kit-registry-domain-kit": "./kits/registry/kit-registry-domain-kit/index.js",
     "./capability-graph-domain-kit": "./kits/registry/capability-graph-domain-kit/index.js",
     "./composition-planning-domain-kit": "./kits/registry/composition-planning-domain-kit/index.js",

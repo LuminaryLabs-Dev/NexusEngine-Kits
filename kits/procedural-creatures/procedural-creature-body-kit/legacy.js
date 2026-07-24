@@ -383,6 +383,9 @@ function createApi(config, seedApi) {
   const initialRecipes = Array.isArray(config.creatures) ? config.creatures.map(clone) : [];
   const records = new Map();
   const worldSeed = () => String(config.seed ?? seedApi?.getWorldSeed?.() ?? "procedural-creatures");
+  const decorateDescriptor = typeof config.decorateDescriptor === "function"
+    ? config.decorateDescriptor
+    : clone;
 
   function create(options = {}) {
     const recipe = normalizeRecipe(options, worldSeed());
@@ -391,7 +394,7 @@ function createApi(config, seedApi) {
     }
     const descriptor = createTheropodDescriptor(recipe);
     records.set(recipe.id, { recipe, descriptor });
-    return clone(descriptor);
+    return decorateDescriptor(descriptor);
   }
 
   function requireRecord(id) {
@@ -438,9 +441,16 @@ function createApi(config, seedApi) {
   const api = {
     create,
     has(id) { return records.has(String(id)); },
-    get(id) { return clone(requireRecord(id).descriptor); },
+    get(id) { return decorateDescriptor(requireRecord(id).descriptor); },
     getRecipe(id) { return clone(requireRecord(id).recipe); },
-    list() { return [...records.values()].map(({ descriptor }) => clone(descriptor)); },
+    list() { return [...records.values()].map(({ descriptor }) => decorateDescriptor(descriptor)); },
+    ...(typeof config.decorateDescriptor === "function"
+      ? {
+          getObjectDescriptor(id) {
+            return decorateDescriptor(requireRecord(id).descriptor).objectDescriptor;
+          }
+        }
+      : {}),
     remove(id) { return records.delete(String(id)); },
     createPose(id, state = {}) { return createPoseDescriptor(requireRecord(id).descriptor, state); },
     getSnapshot,
