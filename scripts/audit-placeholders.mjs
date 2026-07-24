@@ -3,6 +3,11 @@ import { createAudit, exists, readJson, writeText, writeJson } from "./audit-uti
 const audit = createAudit("Placeholder Audit");
 const kitCatalog = readJson("kit-catalog.json");
 const parity = exists("parity", "parity-status.json") ? readJson("parity/parity-status.json") : { kits: {} };
+const manifestsById = new Map((kitCatalog.manifests ?? []).map((manifest) => [manifest.id, manifest]));
+
+function relativePath(value) {
+  return String(value ?? "").replace(/^\.\//, "");
+}
 
 const firstWave = new Set([
   "completion-ledger-kit",
@@ -23,14 +28,19 @@ const rows = [];
 for (const [domain, kits] of Object.entries(kitCatalog.domains ?? {})) {
   for (const kit of kits) {
     const base = ["kits", domain, kit];
-    const folder = exists(...base);
-    const index = exists(...base, "index.js");
-    const readme = exists(...base, "README.md");
-    const manifest = exists(...base, "kit.json");
-    const smoke = exists(...base, "smoke.test.mjs");
+    const kitManifest = manifestsById.get(kit);
+    const entryPath = relativePath(kitManifest?.entry);
+    const entryFolder = entryPath.split("/").slice(0, -1).join("/");
+    const folder = Boolean(entryFolder) && exists(entryFolder);
+    const index = Boolean(entryPath) && exists(entryPath);
+    const readmePath = relativePath(kitManifest?.proof?.readme);
+    const readme = Boolean(readmePath) && exists(readmePath);
+    const manifest = exists("manifests", "kits", `${kit}.json`) || exists(...base, "kit.json");
+    const smokePath = relativePath(kitManifest?.proof?.smoke);
+    const smoke = Boolean(smokePath) && exists(smokePath);
     const parityStatus = parity.kits?.[kit]?.status;
-    const status = parityStatus ?? "migration-placeholder";
-    const realBehavior = Boolean(parity.kits?.[kit]?.realBehavior);
+    const status = parityStatus ?? kitManifest?.status ?? "migration-placeholder";
+    const realBehavior = Boolean(parity.kits?.[kit]?.realBehavior ?? kitManifest?.realBehavior);
 
     if (status === "candidate" || status === "official") {
       if (!folder) audit.error(`${kit} is ${status} but has no folder`);
