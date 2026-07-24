@@ -32,6 +32,12 @@ export { createKitRegistryDomainKit, createRepositoryRegistry, mergeRegistries }
 export { createCapabilityGraphDomainKit, createCapabilityGraph } from "../kits/registry/capability-graph-domain-kit/index.js";
 export { createCompositionPlanningDomainKit } from "../kits/registry/composition-planning-domain-kit/index.js";
 export { createRegistryDomainKits } from "../domains/registry/index.js";
+export {
+  createMcpDomainKit,
+  defineMcpProvider,
+  defineMcpProviderTemplate
+} from "../kits/protocol/mcp-domain-kit/index.js";
+export { createMcpDomainKits } from "../domains/mcp/index.js";
 export { createAgricultureDomainKit, createProductionDomainKits } from "../domains/production/index.js";
 export * from "../kits/aquatic/fishing-kit/index.js";
 export { aquaticDomain } from "../domains/aquatic/index.js";

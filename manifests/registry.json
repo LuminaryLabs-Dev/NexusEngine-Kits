@@ -41,7 +41,8 @@
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit"
+      "lock-and-socket-kit",
+      "mcp-domain-kit"
     ],
     "activeCapability": "clock-kit"
   },

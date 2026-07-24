@@ -2,7 +2,7 @@
 
 Baseline resolved: 7 / 120
 Baseline remaining: 113
-Approved additions: 21 / 29
+Approved additions: 21 / 30
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -97,6 +97,7 @@ Active capability: clock-kit
 | mana-meter-domain-kit | migration-placeholder | no | mana-meter-domain-kit has no validated stable implementation or parity record. |
 | market-kit | migration-placeholder | no | market-kit has no validated stable implementation or parity record. |
 | material-palette-kit | migration-placeholder | no | material-palette-kit has no validated stable implementation or parity record. |
+| mcp-domain-kit | candidate | no | Promote after an immutable feature commit and Editor plus opt-in game runtime proofs. |
 | mission-phase-kit | migration-placeholder | no | mission-phase-kit has no validated stable implementation or parity record. |
 | moving-target-kit | official | yes |  |
 | npc-schedule-domain-kit | migration-placeholder | no | npc-schedule-domain-kit has no validated stable implementation or parity record. |

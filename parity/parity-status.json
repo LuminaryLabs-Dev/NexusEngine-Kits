@@ -3,7 +3,7 @@
   "activeCapability": "clock-kit",
   "baselineCount": 120,
   "approvedAdditions": {
-    "total": 29,
+    "total": 30,
     "resolved": 21
   },
   "kits": {
@@ -636,6 +636,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "material-palette-kit has no validated stable implementation or parity record."
+    },
+    "mcp-domain-kit": {
+      "status": "candidate",
+      "target": "kits/protocol/mcp-domain-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
     },
     "mission-phase-kit": {
       "status": "migration-placeholder",

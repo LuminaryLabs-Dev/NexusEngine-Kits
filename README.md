@@ -63,6 +63,21 @@ const installer = createNexusEngineKitInstaller({ registry });
 Registry metadata is descriptive until a trusted resolver verifies the owner,
 immutable source, integrity, status, package export, and executable factory.
 
+### Optional MCP
+
+MCP is not part of a default bundle. An Editor or game receives MCP tools,
+resources, and prompts only when it explicitly installs `mcp-domain-kit` and
+registers application-owned providers.
+
+```js
+import { createMcpDomainKit } from "@luminarylabs/nexusengine-kits/mcp-domain-kit";
+
+const engine = createRealtimeGame({ kits: [createMcpDomainKit({ providers })] });
+```
+
+The transport-neutral registry is browser-safe. Node applications may connect
+it to stdio through `@luminarylabs/nexusengine-kits/mcp/node`.
+
 ## Package Shape
 
 ```txt
@@ -73,6 +88,7 @@ manifests/     authoritative kit, domain, bundle, and registry records
 registry/      trust, graph, planning, lockfile, integrity, and resolution
 installer/     generated factories and installation
 contracts/     manifest, status, and install-report contracts
+adapters/      explicit host and protocol transport adapters
 parity/        historical source and behavior lineage
 docs/          current usage and legacy migration pointers
 ```
@@ -85,10 +101,10 @@ paths. Deprecated compatibility kits require explicit status opt-in.
 As generated on 2026-07-23:
 
 ```txt
-149 inventoried
+150 inventoried
 26 official
 7 of 120 baseline entries resolved
-21 of 29 approved additions resolved
+21 of 30 approved additions resolved
 2 deprecated compatibility kits
 ```
 

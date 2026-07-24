@@ -6235,6 +6235,79 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "mcp-domain-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "domain-service-kit",
+    "domain": "mcp",
+    "domainPath": "n:mcp",
+    "parentDomainPath": null,
+    "apiName": "mcp",
+    "factory": "createMcpDomainKit",
+    "entry": "./kits/protocol/mcp-domain-kit/index.js",
+    "packageExport": "./mcp-domain-kit",
+    "module": {
+      "package": "./kits/protocol/mcp-domain-kit/index.js",
+      "node": "./kits/protocol/mcp-domain-kit/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/protocol/mcp-domain-kit/index.js"
+    },
+    "integrity": "sha256-dFU0oIkpDEkr8fXsUxUS274e0wJLZbd/VutTzpTF368=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "n:mcp",
+      "protocol:mcp",
+      "mcp:registry",
+      "mcp:tools",
+      "mcp:resources",
+      "mcp:prompts"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "feature/mcp-domain-placement",
+      "resolvedCommit": null,
+      "path": "kits/protocol/mcp-domain-kit/index.js",
+      "parity": "new"
+    },
+    "runtime": {
+      "api": "mcp",
+      "snapshot": true,
+      "loadSnapshot": false,
+      "reset": true,
+      "deterministic": false
+    },
+    "proof": {
+      "readme": "kits/protocol/mcp-domain-kit/README.md",
+      "smoke": "tests/package/package-import-smoke.mjs",
+      "parity": "kits/protocol/mcp-domain-kit/source-parity.md",
+      "limitations": "kits/protocol/mcp-domain-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "static-resource-templates",
+      "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "mission-phase-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -10493,6 +10566,22 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.domain-manifest.v1",
+    "id": "mcp",
+    "label": "Model Context Protocol",
+    "kind": "protocol-domain",
+    "status": "candidate",
+    "domainPath": "n:mcp",
+    "entry": "./domains/mcp/index.js",
+    "kits": [
+      "mcp-domain-kit"
+    ],
+    "metadata": {
+      "optIn": true,
+      "includedInDefaultBundles": false
+    }
+  },
+  {
+    "schemaVersion": "nexusengine.domain-manifest.v1",
     "id": "procedural-creatures",
     "label": "Procedural Creatures",
     "kind": "simulation-domain",
@@ -10894,7 +10983,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit"
+      "lock-and-socket-kit",
+      "mcp-domain-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -10982,6 +11072,9 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "input-context-kit",
       "input-buffer-kit",
       "view-rig-kit"
+    ],
+    "mcp": [
+      "mcp-domain-kit"
     ],
     "procedural-creatures": [
       "procedural-creature-body-kit"
@@ -17404,6 +17497,79 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "mcp-domain-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "mcp",
+      "domainPath": "n:mcp",
+      "parentDomainPath": null,
+      "apiName": "mcp",
+      "factory": "createMcpDomainKit",
+      "entry": "./kits/protocol/mcp-domain-kit/index.js",
+      "packageExport": "./mcp-domain-kit",
+      "module": {
+        "package": "./kits/protocol/mcp-domain-kit/index.js",
+        "node": "./kits/protocol/mcp-domain-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/protocol/mcp-domain-kit/index.js"
+      },
+      "integrity": "sha256-dFU0oIkpDEkr8fXsUxUS274e0wJLZbd/VutTzpTF368=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:mcp",
+        "protocol:mcp",
+        "mcp:registry",
+        "mcp:tools",
+        "mcp:resources",
+        "mcp:prompts"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "feature/mcp-domain-placement",
+        "resolvedCommit": null,
+        "path": "kits/protocol/mcp-domain-kit/index.js",
+        "parity": "new"
+      },
+      "runtime": {
+        "api": "mcp",
+        "snapshot": true,
+        "loadSnapshot": false,
+        "reset": true,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/protocol/mcp-domain-kit/README.md",
+        "smoke": "tests/package/package-import-smoke.mjs",
+        "parity": "kits/protocol/mcp-domain-kit/source-parity.md",
+        "limitations": "kits/protocol/mcp-domain-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "static-resource-templates",
+        "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "mission-phase-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -21537,7 +21703,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit"
+      "lock-and-socket-kit",
+      "mcp-domain-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -30128,6 +30295,105 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "mcp-domain-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "mcp",
+      "domainPath": "n:mcp",
+      "parentDomainPath": null,
+      "apiName": "mcp",
+      "factory": "createMcpDomainKit",
+      "entry": "./kits/protocol/mcp-domain-kit/index.js",
+      "packageExport": "./mcp-domain-kit",
+      "module": {
+        "package": "./kits/protocol/mcp-domain-kit/index.js",
+        "node": "./kits/protocol/mcp-domain-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/protocol/mcp-domain-kit/index.js"
+      },
+      "integrity": "sha256-dFU0oIkpDEkr8fXsUxUS274e0wJLZbd/VutTzpTF368=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:mcp",
+        "protocol:mcp",
+        "mcp:registry",
+        "mcp:tools",
+        "mcp:resources",
+        "mcp:prompts"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/protocol/mcp-domain-kit/index.js"
+      },
+      "runtime": {
+        "api": "mcp",
+        "snapshot": true,
+        "loadSnapshot": false,
+        "reset": true,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/protocol/mcp-domain-kit/README.md",
+        "smoke": "tests/package/package-import-smoke.mjs",
+        "parity": "kits/protocol/mcp-domain-kit/source-parity.md",
+        "limitations": "kits/protocol/mcp-domain-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "static-resource-templates",
+        "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "feature/mcp-domain-placement",
+          "resolvedCommit": null,
+          "path": "kits/protocol/mcp-domain-kit/index.js",
+          "parity": "new"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": "static-resource-templates",
+          "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "mission-phase-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -35920,6 +36186,22 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "mcp",
+      "label": "Model Context Protocol",
+      "kind": "protocol-domain",
+      "status": "candidate",
+      "domainPath": "n:mcp",
+      "entry": "./domains/mcp/index.js",
+      "kits": [
+        "mcp-domain-kit"
+      ],
+      "metadata": {
+        "optIn": true,
+        "includedInDefaultBundles": false
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "procedural-creatures",
       "label": "Procedural Creatures",
       "kind": "simulation-domain",
@@ -36291,20 +36573,20 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineResolved": 7,
   "baselineRemaining": 113,
   "official": 26,
-  "candidate": 9,
+  "candidate": 10,
   "scaffolded": 9,
   "placeholder": 103,
   "deprecated": 2,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 29,
+  "approvedAdditionsTotal": 30,
   "approvedAdditionsResolved": 21,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 149,
-    "sourceMapped": 149,
-    "protoValidated": 16,
-    "candidate": 37,
+    "inventoried": 150,
+    "sourceMapped": 150,
+    "protoValidated": 17,
+    "candidate": 38,
     "official": 26,
     "deprecated": 2,
     "archived": 0,

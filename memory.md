@@ -16,6 +16,7 @@ complete games or product presets.
 - `registry/`: metadata pull, trust, graph, planning, lockfile, integrity, and
   approved module resolution
 - `contracts/`: manifest, status, and install-report contracts
+- `adapters/`: explicit host or protocol transports with no domain behavior
 - `parity/`: historical source and behavior evidence
 
 Generated catalogs, exports, factories, readiness, CDN indexes, and progress
@@ -47,6 +48,10 @@ remains descriptive until a trusted provider resolves it.
   default installs and requires explicit status opt-in.
 - `generic-resource-loop-kit` is deprecated because current NexusEngine Core
   owns the same resource service and compatibility API names.
+- `mcp-domain-kit` is an optional protocol boundary. It exposes only explicitly
+  registered providers, is excluded from default bundles, and keeps SDK
+  transports in adapters. Editors and games without the kit have no MCP
+  runtime surface.
 
 ## Validation
 

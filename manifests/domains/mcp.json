@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "mcp",
+  "label": "Model Context Protocol",
+  "kind": "protocol-domain",
+  "status": "candidate",
+  "domainPath": "n:mcp",
+  "entry": "./domains/mcp/index.js",
+  "kits": [
+    "mcp-domain-kit"
+  ],
+  "metadata": {
+    "optIn": true,
+    "includedInDefaultBundles": false
+  }
+}

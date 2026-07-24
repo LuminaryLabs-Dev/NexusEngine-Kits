@@ -12,6 +12,8 @@ const seedKit = await import("@luminarylabs/nexusengine-kits/seed-kit");
 const instancedBatch = await import("@luminarylabs/nexusengine-kits/instanced-render-batch-kit");
 const patchController = await import("@luminarylabs/nexusengine-kits/seeded-world-patch-controller-kit");
 const cameraSmoothFollow = await import("@luminarylabs/nexusengine-kits/camera-smooth-follow-kit");
+const mcpDomain = await import("@luminarylabs/nexusengine-kits/mcp-domain-kit");
+const mcpNode = await import("@luminarylabs/nexusengine-kits/mcp/node");
 const domain = await import("@luminarylabs/nexusengine-kits/domain-registry");
 const bundle = await import("@luminarylabs/nexusengine-kits/registry-control-plane");
 
@@ -33,6 +35,11 @@ for (const [name, value] of Object.entries({
   rootCameraSmoothFollow: root.createCameraSmoothFollowKit,
   rootPatchController: root.createSeededWorldPatchControllerKit,
   rootSeedKit: root.createSeedKit,
+  mcpDomain: mcpDomain.createMcpDomainKit,
+  mcpProvider: mcpDomain.defineMcpProvider,
+  mcpProviderTemplate: mcpDomain.defineMcpProviderTemplate,
+  mcpSdkServer: mcpNode.createMcpSdkServer,
+  mcpStdio: mcpNode.connectMcpStdio,
   domain: domain.createRegistryDomainKits,
   bundle: bundle.createRegistryControlPlaneKits
 })) {

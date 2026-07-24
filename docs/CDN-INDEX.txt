@@ -88,6 +88,7 @@ lock-group-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{re
 mana-meter-domain-kit unavailable
 market-kit unavailable
 material-palette-kit unavailable
+mcp-domain-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/protocol/mcp-domain-kit/index.js
 mission-phase-kit unavailable
 moving-target-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 npc-schedule-domain-kit unavailable

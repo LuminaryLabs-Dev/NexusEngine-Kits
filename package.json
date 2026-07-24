@@ -37,6 +37,7 @@
     "./domain-procedural-creatures": "./domains/procedural-creatures/index.js",
     "./domain-procedural-objects": "./domains/procedural-objects/index.js",
     "./domain-aquatic": "./domains/aquatic/index.js",
+    "./domain-mcp": "./domains/mcp/index.js",
     "./completion-ledger-kit": "./kits/spatial/completion-ledger-kit/index.js",
     "./spatial-interaction-kit": "./kits/spatial/spatial-interaction-kit/index.js",
     "./objective-bridge-kit": "./kits/progression/objective-bridge-kit/index.js",
@@ -62,6 +63,8 @@
     "./kit-registry-domain-kit": "./kits/registry/kit-registry-domain-kit/index.js",
     "./capability-graph-domain-kit": "./kits/registry/capability-graph-domain-kit/index.js",
     "./composition-planning-domain-kit": "./kits/registry/composition-planning-domain-kit/index.js",
+    "./mcp-domain-kit": "./kits/protocol/mcp-domain-kit/index.js",
+    "./mcp/node": "./adapters/mcp/node-sdk-server.js",
     "./fishing-kit": "./kits/aquatic/fishing-kit/index.js",
     "./fishing-kit/renderers": "./kits/aquatic/fishing-kit/renderers.js",
     "./fishing-kit/shaders": "./kits/aquatic/fishing-kit/shaders.js",
@@ -70,10 +73,25 @@
     "./kits/*": "./kits/*/index.js"
   },
   "peerDependencies": {
-    "nexusengine": "github:LuminaryLabs-Dev/NexusEngine#main"
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "nexusengine": "github:LuminaryLabs-Dev/NexusEngine#main",
+    "zod": "^3.25.0 || ^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@modelcontextprotocol/sdk": {
+      "optional": true
+    },
+    "zod": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "nexusengine": "github:LuminaryLabs-Dev/NexusEngine#main"
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "nexusengine": "github:LuminaryLabs-Dev/NexusEngine#main",
+    "zod": "^4.0.0"
+  },
+  "overrides": {
+    "@hono/node-server": "2.0.11"
   },
   "files": [
     "src",
