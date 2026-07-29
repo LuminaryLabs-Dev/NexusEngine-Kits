@@ -22,10 +22,10 @@ behavior.
 ```txt
 baseline resolved: 7 / 120
 baseline remaining: 113
-approved additions resolved: 21 / 31
+approved additions resolved: 21 / 29
 official: 26
 deprecated compatibility: 2
-inventoried: 151
+inventoried: 149
 active capability: clock-kit
 ```
 

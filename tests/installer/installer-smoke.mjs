@@ -68,9 +68,11 @@ assert.equal(unresolved.report.installed.length, 0);
 assert.equal(unresolved.report.plan.skipped.filter((issue) => issue.type === "status-not-allowed").length, 4);
 
 const all = createAllNexusEngineKits();
-assert.equal(listKitIds().length, 151);
+assert.equal(listKitIds().length, 149);
 assert.equal(all.some((kit) => kit.id === "generic-resource-loop-kit"), false);
 assert.equal(all.some((kit) => kit.id === "fishing"), true);
+assert.equal(listKitIds().includes("mcp-domain-kit"), false);
+assert.equal(listKitIds().includes("object-placement-contract-kit"), false);
 assert.equal(all.some((kit) => kit.id === "mcp-domain-kit"), false);
 assert.equal(all.some((kit) => kit.id === "object-placement-contract-kit"), false);
 

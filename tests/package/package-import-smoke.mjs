@@ -12,9 +12,6 @@ const seedKit = await import("@luminarylabs/nexusengine-kits/seed-kit");
 const instancedBatch = await import("@luminarylabs/nexusengine-kits/instanced-render-batch-kit");
 const patchController = await import("@luminarylabs/nexusengine-kits/seeded-world-patch-controller-kit");
 const cameraSmoothFollow = await import("@luminarylabs/nexusengine-kits/camera-smooth-follow-kit");
-const mcpDomain = await import("@luminarylabs/nexusengine-kits/mcp-domain-kit");
-const mcpNode = await import("@luminarylabs/nexusengine-kits/mcp/node");
-const objectPlacement = await import("@luminarylabs/nexusengine-kits/object-placement-contract-kit");
 const domain = await import("@luminarylabs/nexusengine-kits/domain-registry");
 const bundle = await import("@luminarylabs/nexusengine-kits/registry-control-plane");
 
@@ -36,21 +33,23 @@ for (const [name, value] of Object.entries({
   rootCameraSmoothFollow: root.createCameraSmoothFollowKit,
   rootPatchController: root.createSeededWorldPatchControllerKit,
   rootSeedKit: root.createSeedKit,
-  mcpDomain: mcpDomain.createMcpDomainKit,
-  mcpProvider: mcpDomain.defineMcpProvider,
-  mcpProviderTemplate: mcpDomain.defineMcpProviderTemplate,
-  mcpSdkServer: mcpNode.createMcpSdkServer,
-  mcpStdio: mcpNode.connectMcpStdio,
-  objectPlacement: objectPlacement.createObjectPlacementContractKit,
-  placementDescriptor: objectPlacement.createObjectPlacementDescriptor,
-  placementAlign: objectPlacement.alignPlacementAnchors,
-  placementGround: objectPlacement.groundPlacement,
-  placementFit: objectPlacement.fitPlacementWithinBounds,
-  placementValidate: objectPlacement.validatePlacement,
   domain: domain.createRegistryDomainKits,
   bundle: bundle.createRegistryControlPlaneKits
 })) {
   assert.equal(typeof value, "function", `${name} must be a package function export`);
+}
+
+for (const removedSubpath of [
+  "@luminarylabs/nexusengine-kits/domain-mcp",
+  "@luminarylabs/nexusengine-kits/mcp-domain-kit",
+  "@luminarylabs/nexusengine-kits/mcp/node",
+  "@luminarylabs/nexusengine-kits/object-placement-contract-kit"
+]) {
+  await assert.rejects(
+    import(removedSubpath),
+    /Package subpath .* is not defined by "exports"/,
+    `${removedSubpath} must remain removed after its Core promotion`
+  );
 }
 
 console.log("package import smoke ok");

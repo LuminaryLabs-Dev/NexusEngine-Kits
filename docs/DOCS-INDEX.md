@@ -37,6 +37,7 @@
 
 ## History
 
+- [0.0.4 Core Promotion Migration](0.0.4-CORE-PROMOTION-MIGRATION.md)
 - [Retired ProtoKit Migration](MIGRATION-FROM-PROTOKITS.md)
 - [Retired ProtoKit Parity](PROTOKITS-PARITY-GUIDE.md)
 - [Legacy Files](legacy/README.md)

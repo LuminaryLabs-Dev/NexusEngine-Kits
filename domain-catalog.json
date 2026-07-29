@@ -169,22 +169,6 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
-      "id": "mcp",
-      "label": "Model Context Protocol",
-      "kind": "protocol-domain",
-      "status": "candidate",
-      "domainPath": "n:mcp",
-      "entry": "./domains/mcp/index.js",
-      "kits": [
-        "mcp-domain-kit"
-      ],
-      "metadata": {
-        "optIn": true,
-        "includedInDefaultBundles": false
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "procedural-creatures",
       "label": "Procedural Creatures",
       "kind": "simulation-domain",
@@ -373,7 +357,6 @@
         "spatial-interaction-kit",
         "hold-action-kit",
         "completion-ledger-kit",
-        "object-placement-contract-kit",
         "interaction-kit",
         "spatial-room-kit",
         "interaction-target-kit"

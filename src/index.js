@@ -7,7 +7,6 @@ export { createRpgGameStackKits } from "../bundles/rpg-game-stack.js";
 export { createDefenseGameStackKits } from "../bundles/defense-game-stack.js";
 export { createXrAuthoringStackKits } from "../bundles/xr-authoring-stack.js";
 export { createCompletionLedgerKit } from "../kits/spatial/completion-ledger-kit/index.js";
-export * from "../kits/spatial/object-placement-contract-kit/index.js";
 export { createSpatialInteractionKit } from "../kits/spatial/spatial-interaction-kit/index.js";
 export { createObjectiveBridgeKit } from "../kits/progression/objective-bridge-kit/index.js";
 export { createLockGroupKit } from "../kits/progression/lock-group-kit/index.js";
@@ -33,12 +32,6 @@ export { createKitRegistryDomainKit, createRepositoryRegistry, mergeRegistries }
 export { createCapabilityGraphDomainKit, createCapabilityGraph } from "../kits/registry/capability-graph-domain-kit/index.js";
 export { createCompositionPlanningDomainKit } from "../kits/registry/composition-planning-domain-kit/index.js";
 export { createRegistryDomainKits } from "../domains/registry/index.js";
-export {
-  createMcpDomainKit,
-  defineMcpProvider,
-  defineMcpProviderTemplate
-} from "../kits/protocol/mcp-domain-kit/index.js";
-export { createMcpDomainKits } from "../domains/mcp/index.js";
 export { createAgricultureDomainKit, createProductionDomainKits } from "../domains/production/index.js";
 export * from "../kits/aquatic/fishing-kit/index.js";
 export { aquaticDomain } from "../domains/aquatic/index.js";

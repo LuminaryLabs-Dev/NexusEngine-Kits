@@ -6235,79 +6235,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "mcp-domain-kit",
-    "version": "0.1.0",
-    "status": "candidate",
-    "kind": "domain-service-kit",
-    "domain": "mcp",
-    "domainPath": "n:mcp",
-    "parentDomainPath": null,
-    "apiName": "mcp",
-    "factory": "createMcpDomainKit",
-    "entry": "./kits/protocol/mcp-domain-kit/index.js",
-    "packageExport": "./mcp-domain-kit",
-    "module": {
-      "package": "./kits/protocol/mcp-domain-kit/index.js",
-      "node": "./kits/protocol/mcp-domain-kit/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/protocol/mcp-domain-kit/index.js"
-    },
-    "integrity": "sha256-dFU0oIkpDEkr8fXsUxUS274e0wJLZbd/VutTzpTF368=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "n:mcp",
-      "protocol:mcp",
-      "mcp:registry",
-      "mcp:tools",
-      "mcp:resources",
-      "mcp:prompts"
-    ],
-    "composes": [],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Dev",
-      "repository": "NexusEngine-Kits",
-      "requestedRef": "feature/mcp-domain-placement",
-      "resolvedCommit": null,
-      "path": "kits/protocol/mcp-domain-kit/index.js",
-      "parity": "new"
-    },
-    "runtime": {
-      "api": "mcp",
-      "snapshot": true,
-      "loadSnapshot": false,
-      "reset": true,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": "kits/protocol/mcp-domain-kit/README.md",
-      "smoke": "tests/package/package-import-smoke.mjs",
-      "parity": "kits/protocol/mcp-domain-kit/source-parity.md",
-      "limitations": "kits/protocol/mcp-domain-kit/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": false,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "static-resource-templates",
-      "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
-    },
-    "stability": "candidate"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "mission-phase-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -6511,76 +6438,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": "npc-schedule-domain-kit has no validated stable implementation or parity record."
     },
     "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "object-placement-contract-kit",
-    "version": "0.1.0",
-    "status": "candidate",
-    "kind": "domain-service-kit",
-    "domain": "spatial",
-    "domainPath": "n:spatial:object-placement",
-    "parentDomainPath": "n:spatial",
-    "apiName": "objectPlacement",
-    "factory": "createObjectPlacementContractKit",
-    "entry": "./kits/spatial/object-placement-contract-kit/index.js",
-    "packageExport": "./object-placement-contract-kit",
-    "module": {
-      "package": "./kits/spatial/object-placement-contract-kit/index.js",
-      "node": "./kits/spatial/object-placement-contract-kit/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/object-placement-contract-kit/index.js"
-    },
-    "integrity": "sha256-LTh4Nfw9OiboNAn5kp37k/maFKzkOq2ZDdC9pZKUpGw=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "spatial:object-placement-contract",
-      "spatial:placement-anchor-alignment",
-      "spatial:placement-validation"
-    ],
-    "composes": [],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Dev",
-      "repository": "NexusEngine-Kits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "kits/spatial/object-placement-contract-kit/index.js",
-      "parity": "native"
-    },
-    "runtime": {
-      "api": "objectPlacement",
-      "snapshot": true,
-      "loadSnapshot": true,
-      "reset": true,
-      "deterministic": true
-    },
-    "proof": {
-      "readme": "kits/spatial/object-placement-contract-kit/README.md",
-      "smoke": "tests/domains/spatial-domain-smoke.mjs",
-      "parity": null,
-      "limitations": "kits/spatial/object-placement-contract-kit/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": false,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "object-placement-contract-kit",
-      "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
-    },
-    "stability": "candidate"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -10636,22 +10493,6 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.domain-manifest.v1",
-    "id": "mcp",
-    "label": "Model Context Protocol",
-    "kind": "protocol-domain",
-    "status": "candidate",
-    "domainPath": "n:mcp",
-    "entry": "./domains/mcp/index.js",
-    "kits": [
-      "mcp-domain-kit"
-    ],
-    "metadata": {
-      "optIn": true,
-      "includedInDefaultBundles": false
-    }
-  },
-  {
-    "schemaVersion": "nexusengine.domain-manifest.v1",
     "id": "procedural-creatures",
     "label": "Procedural Creatures",
     "kind": "simulation-domain",
@@ -10840,7 +10681,6 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
       "spatial-interaction-kit",
       "hold-action-kit",
       "completion-ledger-kit",
-      "object-placement-contract-kit",
       "interaction-kit",
       "spatial-room-kit",
       "interaction-target-kit"
@@ -11054,9 +10894,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit",
-      "mcp-domain-kit",
-      "object-placement-contract-kit"
+      "lock-and-socket-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -11145,9 +10983,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "input-buffer-kit",
       "view-rig-kit"
     ],
-    "mcp": [
-      "mcp-domain-kit"
-    ],
     "procedural-creatures": [
       "procedural-creature-body-kit"
     ],
@@ -11230,7 +11065,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "spatial-interaction-kit",
       "hold-action-kit",
       "completion-ledger-kit",
-      "object-placement-contract-kit",
       "interaction-kit",
       "spatial-room-kit",
       "interaction-target-kit"
@@ -17570,79 +17404,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "mcp-domain-kit",
-      "version": "0.1.0",
-      "status": "candidate",
-      "kind": "domain-service-kit",
-      "domain": "mcp",
-      "domainPath": "n:mcp",
-      "parentDomainPath": null,
-      "apiName": "mcp",
-      "factory": "createMcpDomainKit",
-      "entry": "./kits/protocol/mcp-domain-kit/index.js",
-      "packageExport": "./mcp-domain-kit",
-      "module": {
-        "package": "./kits/protocol/mcp-domain-kit/index.js",
-        "node": "./kits/protocol/mcp-domain-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/protocol/mcp-domain-kit/index.js"
-      },
-      "integrity": "sha256-dFU0oIkpDEkr8fXsUxUS274e0wJLZbd/VutTzpTF368=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:mcp",
-        "protocol:mcp",
-        "mcp:registry",
-        "mcp:tools",
-        "mcp:resources",
-        "mcp:prompts"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "feature/mcp-domain-placement",
-        "resolvedCommit": null,
-        "path": "kits/protocol/mcp-domain-kit/index.js",
-        "parity": "new"
-      },
-      "runtime": {
-        "api": "mcp",
-        "snapshot": true,
-        "loadSnapshot": false,
-        "reset": true,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": "kits/protocol/mcp-domain-kit/README.md",
-        "smoke": "tests/package/package-import-smoke.mjs",
-        "parity": "kits/protocol/mcp-domain-kit/source-parity.md",
-        "limitations": "kits/protocol/mcp-domain-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "static-resource-templates",
-        "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
-      },
-      "stability": "candidate"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "mission-phase-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -17846,76 +17607,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": "npc-schedule-domain-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "object-placement-contract-kit",
-      "version": "0.1.0",
-      "status": "candidate",
-      "kind": "domain-service-kit",
-      "domain": "spatial",
-      "domainPath": "n:spatial:object-placement",
-      "parentDomainPath": "n:spatial",
-      "apiName": "objectPlacement",
-      "factory": "createObjectPlacementContractKit",
-      "entry": "./kits/spatial/object-placement-contract-kit/index.js",
-      "packageExport": "./object-placement-contract-kit",
-      "module": {
-        "package": "./kits/spatial/object-placement-contract-kit/index.js",
-        "node": "./kits/spatial/object-placement-contract-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/object-placement-contract-kit/index.js"
-      },
-      "integrity": "sha256-LTh4Nfw9OiboNAn5kp37k/maFKzkOq2ZDdC9pZKUpGw=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "spatial:object-placement-contract",
-        "spatial:placement-anchor-alignment",
-        "spatial:placement-validation"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "kits/spatial/object-placement-contract-kit/index.js",
-        "parity": "native"
-      },
-      "runtime": {
-        "api": "objectPlacement",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/spatial/object-placement-contract-kit/README.md",
-        "smoke": "tests/domains/spatial-domain-smoke.mjs",
-        "parity": null,
-        "limitations": "kits/spatial/object-placement-contract-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "object-placement-contract-kit",
-        "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
-      },
-      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -21812,8 +21503,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
   "resolvedCommit": null,
   "engineCompatibility": {
     "package": "nexusengine",
-    "range": ">=0.0.3",
-    "testedCommit": "851372d29fece5ad7d9a6253fb1a74730ae24047"
+    "range": "0.0.4",
+    "testedCommit": "91ebeeebb4f4f9bb121d13e0a97b6eac849ae485"
   },
   "promotion": {
     "baselineCount": 120,
@@ -21846,9 +21537,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit",
-      "mcp-domain-kit",
-      "object-placement-contract-kit"
+      "lock-and-socket-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -30439,105 +30128,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "mcp-domain-kit",
-      "version": "0.1.0",
-      "status": "candidate",
-      "kind": "domain-service-kit",
-      "domain": "mcp",
-      "domainPath": "n:mcp",
-      "parentDomainPath": null,
-      "apiName": "mcp",
-      "factory": "createMcpDomainKit",
-      "entry": "./kits/protocol/mcp-domain-kit/index.js",
-      "packageExport": "./mcp-domain-kit",
-      "module": {
-        "package": "./kits/protocol/mcp-domain-kit/index.js",
-        "node": "./kits/protocol/mcp-domain-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/protocol/mcp-domain-kit/index.js"
-      },
-      "integrity": "sha256-dFU0oIkpDEkr8fXsUxUS274e0wJLZbd/VutTzpTF368=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:mcp",
-        "protocol:mcp",
-        "mcp:registry",
-        "mcp:tools",
-        "mcp:resources",
-        "mcp:prompts"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/protocol/mcp-domain-kit/index.js"
-      },
-      "runtime": {
-        "api": "mcp",
-        "snapshot": true,
-        "loadSnapshot": false,
-        "reset": true,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": "kits/protocol/mcp-domain-kit/README.md",
-        "smoke": "tests/package/package-import-smoke.mjs",
-        "parity": "kits/protocol/mcp-domain-kit/source-parity.md",
-        "limitations": "kits/protocol/mcp-domain-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "static-resource-templates",
-        "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
-      },
-      "stability": "candidate",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Dev",
-          "repository": "NexusEngine-Kits",
-          "requestedRef": "feature/mcp-domain-placement",
-          "resolvedCommit": null,
-          "path": "kits/protocol/mcp-domain-kit/index.js",
-          "parity": "new"
-        },
-        "promotion": {
-          "baseline": false,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": true,
-            "candidate": true,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "static-resource-templates",
-          "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "mission-phase-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -30817,102 +30407,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "npc-schedule-domain-kit",
           "blocker": "npc-schedule-domain-kit has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "object-placement-contract-kit",
-      "version": "0.1.0",
-      "status": "candidate",
-      "kind": "domain-service-kit",
-      "domain": "spatial",
-      "domainPath": "n:spatial:object-placement",
-      "parentDomainPath": "n:spatial",
-      "apiName": "objectPlacement",
-      "factory": "createObjectPlacementContractKit",
-      "entry": "./kits/spatial/object-placement-contract-kit/index.js",
-      "packageExport": "./object-placement-contract-kit",
-      "module": {
-        "package": "./kits/spatial/object-placement-contract-kit/index.js",
-        "node": "./kits/spatial/object-placement-contract-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/object-placement-contract-kit/index.js"
-      },
-      "integrity": "sha256-LTh4Nfw9OiboNAn5kp37k/maFKzkOq2ZDdC9pZKUpGw=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "spatial:object-placement-contract",
-        "spatial:placement-anchor-alignment",
-        "spatial:placement-validation"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/spatial/object-placement-contract-kit/index.js"
-      },
-      "runtime": {
-        "api": "objectPlacement",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/spatial/object-placement-contract-kit/README.md",
-        "smoke": "tests/domains/spatial-domain-smoke.mjs",
-        "parity": null,
-        "limitations": "kits/spatial/object-placement-contract-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "object-placement-contract-kit",
-        "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
-      },
-      "stability": "candidate",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Dev",
-          "repository": "NexusEngine-Kits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "kits/spatial/object-placement-contract-kit/index.js",
-          "parity": "native"
-        },
-        "promotion": {
-          "baseline": false,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": true,
-            "candidate": true,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "object-placement-contract-kit",
-          "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
         }
       }
     },
@@ -36426,22 +35920,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
-      "id": "mcp",
-      "label": "Model Context Protocol",
-      "kind": "protocol-domain",
-      "status": "candidate",
-      "domainPath": "n:mcp",
-      "entry": "./domains/mcp/index.js",
-      "kits": [
-        "mcp-domain-kit"
-      ],
-      "metadata": {
-        "optIn": true,
-        "includedInDefaultBundles": false
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "procedural-creatures",
       "label": "Procedural Creatures",
       "kind": "simulation-domain",
@@ -36630,7 +36108,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "spatial-interaction-kit",
         "hold-action-kit",
         "completion-ledger-kit",
-        "object-placement-contract-kit",
         "interaction-kit",
         "spatial-room-kit",
         "interaction-target-kit"
@@ -36814,20 +36291,20 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineResolved": 7,
   "baselineRemaining": 113,
   "official": 26,
-  "candidate": 11,
+  "candidate": 9,
   "scaffolded": 9,
   "placeholder": 103,
   "deprecated": 2,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 31,
+  "approvedAdditionsTotal": 29,
   "approvedAdditionsResolved": 21,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 151,
-    "sourceMapped": 151,
-    "protoValidated": 18,
-    "candidate": 39,
+    "inventoried": 149,
+    "sourceMapped": 149,
+    "protoValidated": 16,
+    "candidate": 37,
     "official": 26,
     "deprecated": 2,
     "archived": 0,

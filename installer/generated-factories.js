@@ -19,24 +19,22 @@ import { createInteractionTargetKit as factory17 } from "../kits/migrated-gamepl
 import { createKitRegistryDomainKit as factory18 } from "../kits/registry/kit-registry-domain-kit/index.js";
 import { createLightCombatKit as factory19 } from "../kits/migrated-gameplay/index.js";
 import { createLockAndSocketKit as factory20 } from "../kits/migrated-gameplay/index.js";
-import { createMcpDomainKit as factory21 } from "../kits/protocol/mcp-domain-kit/index.js";
-import { createMovingTargetKit as factory22 } from "../kits/migrated-gameplay/index.js";
-import { createObjectPlacementContractKit as factory23 } from "../kits/spatial/object-placement-contract-kit/index.js";
-import { createObjectiveKit as factory24 } from "../kits/migrated-gameplay/index.js";
-import { createProceduralCreatureBodyKit as factory25 } from "../kits/procedural-creatures/procedural-creature-body-kit/index.js";
-import { createProceduralObjectBodyKit as factory26 } from "../kits/procedural-objects/procedural-object-body-kit/index.js";
-import { createProceduralObjectCaptureProfileKit as factory27 } from "../kits/procedural-objects/procedural-object-capture-profile-kit/index.js";
-import { createProceduralObjectLodKit as factory28 } from "../kits/procedural-objects/procedural-object-lod-kit/index.js";
-import { createProceduralObjectMaterialKit as factory29 } from "../kits/procedural-objects/procedural-object-material-kit/index.js";
-import { createProtokitCore as factory30 } from "../kits/foundation/protokit-core/index.js";
-import { createRenderDescriptorKit as factory31 } from "../kits/migrated-gameplay/index.js";
-import { createRevealLightKit as factory32 } from "../kits/migrated-gameplay/index.js";
-import { createSeedKit as factory33 } from "../kits/foundation/seed-kit/index.js";
-import { createSeededWorldPatchControllerKit as factory34 } from "../kits/simulation/seeded-world-patch-controller-kit/index.js";
-import { createSortingKit as factory35 } from "../kits/migrated-gameplay/index.js";
-import { createSpatialRoomKit as factory36 } from "../kits/migrated-gameplay/index.js";
-import { createSurfacePlacementKit as factory37 } from "../kits/migrated-gameplay/index.js";
-import { createSymbolAlignmentKit as factory38 } from "../kits/migrated-gameplay/index.js";
+import { createMovingTargetKit as factory21 } from "../kits/migrated-gameplay/index.js";
+import { createObjectiveKit as factory22 } from "../kits/migrated-gameplay/index.js";
+import { createProceduralCreatureBodyKit as factory23 } from "../kits/procedural-creatures/procedural-creature-body-kit/index.js";
+import { createProceduralObjectBodyKit as factory24 } from "../kits/procedural-objects/procedural-object-body-kit/index.js";
+import { createProceduralObjectCaptureProfileKit as factory25 } from "../kits/procedural-objects/procedural-object-capture-profile-kit/index.js";
+import { createProceduralObjectLodKit as factory26 } from "../kits/procedural-objects/procedural-object-lod-kit/index.js";
+import { createProceduralObjectMaterialKit as factory27 } from "../kits/procedural-objects/procedural-object-material-kit/index.js";
+import { createProtokitCore as factory28 } from "../kits/foundation/protokit-core/index.js";
+import { createRenderDescriptorKit as factory29 } from "../kits/migrated-gameplay/index.js";
+import { createRevealLightKit as factory30 } from "../kits/migrated-gameplay/index.js";
+import { createSeedKit as factory31 } from "../kits/foundation/seed-kit/index.js";
+import { createSeededWorldPatchControllerKit as factory32 } from "../kits/simulation/seeded-world-patch-controller-kit/index.js";
+import { createSortingKit as factory33 } from "../kits/migrated-gameplay/index.js";
+import { createSpatialRoomKit as factory34 } from "../kits/migrated-gameplay/index.js";
+import { createSurfacePlacementKit as factory35 } from "../kits/migrated-gameplay/index.js";
+import { createSymbolAlignmentKit as factory36 } from "../kits/migrated-gameplay/index.js";
 
 export const GENERATED_KIT_FACTORIES = Object.freeze({
   "agriculture-domain-kit": factory0,
@@ -60,22 +58,20 @@ export const GENERATED_KIT_FACTORIES = Object.freeze({
   "kit-registry-domain-kit": factory18,
   "light-combat-kit": factory19,
   "lock-and-socket-kit": factory20,
-  "mcp-domain-kit": factory21,
-  "moving-target-kit": factory22,
-  "object-placement-contract-kit": factory23,
-  "objective-kit": factory24,
-  "procedural-creature-body-kit": factory25,
-  "procedural-object-body-kit": factory26,
-  "procedural-object-capture-profile-kit": factory27,
-  "procedural-object-lod-kit": factory28,
-  "procedural-object-material-kit": factory29,
-  "protokit-core": factory30,
-  "render-descriptor-kit": factory31,
-  "reveal-light-kit": factory32,
-  "seed-kit": factory33,
-  "seeded-world-patch-controller-kit": factory34,
-  "sorting-kit": factory35,
-  "spatial-room-kit": factory36,
-  "surface-placement-kit": factory37,
-  "symbol-alignment-kit": factory38
+  "moving-target-kit": factory21,
+  "objective-kit": factory22,
+  "procedural-creature-body-kit": factory23,
+  "procedural-object-body-kit": factory24,
+  "procedural-object-capture-profile-kit": factory25,
+  "procedural-object-lod-kit": factory26,
+  "procedural-object-material-kit": factory27,
+  "protokit-core": factory28,
+  "render-descriptor-kit": factory29,
+  "reveal-light-kit": factory30,
+  "seed-kit": factory31,
+  "seeded-world-patch-controller-kit": factory32,
+  "sorting-kit": factory33,
+  "spatial-room-kit": factory34,
+  "surface-placement-kit": factory35,
+  "symbol-alignment-kit": factory36
 });

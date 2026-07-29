@@ -63,20 +63,13 @@ const installer = createNexusEngineKitInstaller({ registry });
 Registry metadata is descriptive until a trusted resolver verifies the owner,
 immutable source, integrity, status, package export, and executable factory.
 
-### Optional MCP
+### Core Promotions
 
-MCP is not part of a default bundle. An Editor or game receives MCP tools,
-resources, and prompts only when it explicitly installs `mcp-domain-kit` and
-registers application-owned providers.
-
-```js
-import { createMcpDomainKit } from "@luminarylabs/nexusengine-kits/mcp-domain-kit";
-
-const engine = createRealtimeGame({ kits: [createMcpDomainKit({ providers })] });
-```
-
-The transport-neutral registry is browser-safe. Node applications may connect
-it to stdio through `@luminarylabs/nexusengine-kits/mcp/node`.
+Generic MCP infrastructure and Object Placement contracts are Core behavior in
+NexusEngine `0.0.4`. Their former candidate exports were removed from this
+package rather than forwarded. See the
+[0.0.4 Core promotion migration](docs/0.0.4-CORE-PROMOTION-MIGRATION.md) for
+direct import replacements.
 
 ## Package Shape
 
@@ -98,13 +91,13 @@ paths. Deprecated compatibility kits require explicit status opt-in.
 
 ## Current Catalog
 
-As generated on 2026-07-24:
+As generated on 2026-07-29:
 
 ```txt
-151 inventoried
+149 inventoried
 26 official
 7 of 120 baseline entries resolved
-21 of 31 approved additions resolved
+21 of 29 approved additions resolved
 2 deprecated compatibility kits
 ```
 

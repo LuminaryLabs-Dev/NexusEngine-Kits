@@ -48,15 +48,10 @@ remains descriptive until a trusted provider resolves it.
   default installs and requires explicit status opt-in.
 - `generic-resource-loop-kit` is deprecated because current NexusEngine Core
   owns the same resource service and compatibility API names.
-- `mcp-domain-kit` is an optional protocol boundary. It exposes only explicitly
-  registered providers, is excluded from default bundles, and keeps SDK
-  transports in adapters. Editors and games without the kit have no MCP
-  runtime surface.
-- `object-placement-contract-kit` is the renderer-neutral source of truth for
-  mesh coordinate frames, local bounds, origins, pivots, named anchors,
-  surface contact, alignment, fitting, and placement validation. Render,
-  collision, navigation, interaction, and evidence adapters consume the same
-  record; the agent owns composition and visual revision decisions.
+- Generic MCP infrastructure and renderer-neutral Object Placement contracts
+  were promoted into NexusEngine Core `0.0.4`. Their candidate Kits
+  implementations, manifests, domains, adapters, and package exports were
+  removed in one hard cutover; this repository keeps only a migration map.
 
 ## Validation
 

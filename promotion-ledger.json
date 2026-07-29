@@ -6,20 +6,20 @@
     "baselineResolved": 7,
     "baselineRemaining": 113,
     "official": 26,
-    "candidate": 11,
+    "candidate": 9,
     "scaffolded": 9,
     "placeholder": 103,
     "deprecated": 2,
     "archived": 0,
     "blocked": 0,
-    "approvedAdditionsTotal": 31,
+    "approvedAdditionsTotal": 29,
     "approvedAdditionsResolved": 21,
     "activeCapability": "clock-kit",
     "stages": {
-      "inventoried": 151,
-      "sourceMapped": 151,
-      "protoValidated": 18,
-      "candidate": 39,
+      "inventoried": 149,
+      "sourceMapped": 149,
+      "protoValidated": 16,
+      "candidate": 37,
       "official": 26,
       "deprecated": 2,
       "archived": 0,
@@ -1648,24 +1648,6 @@
       "blocker": "material-palette-kit has no validated stable implementation or parity record."
     },
     {
-      "id": "mcp-domain-kit",
-      "status": "candidate",
-      "baseline": false,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "static-resource-templates",
-      "blocker": "Promote after an immutable feature commit and Editor plus opt-in game runtime proofs."
-    },
-    {
       "id": "mission-phase-kit",
       "status": "migration-placeholder",
       "baseline": true,
@@ -1718,24 +1700,6 @@
       },
       "nextCapability": "npc-schedule-domain-kit",
       "blocker": "npc-schedule-domain-kit has no validated stable implementation or parity record."
-    },
-    {
-      "id": "object-placement-contract-kit",
-      "status": "candidate",
-      "baseline": false,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "object-placement-contract-kit",
-      "blocker": "Candidate requires renderer, physics, navigation, and multi-object assembly validation before official promotion."
     },
     {
       "id": "objective-bridge-kit",

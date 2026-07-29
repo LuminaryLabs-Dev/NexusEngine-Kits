@@ -7,8 +7,8 @@
   "resolvedCommit": null,
   "engineCompatibility": {
     "package": "nexusengine",
-    "range": ">=0.0.3",
-    "testedCommit": "851372d29fece5ad7d9a6253fb1a74730ae24047"
+    "range": "0.0.4",
+    "testedCommit": "91ebeeebb4f4f9bb121d13e0a97b6eac849ae485"
   },
   "promotion": {
     "baselineCount": 120,
@@ -41,9 +41,7 @@
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit",
-      "mcp-domain-kit",
-      "object-placement-contract-kit"
+      "lock-and-socket-kit"
     ],
     "activeCapability": "clock-kit"
   },
