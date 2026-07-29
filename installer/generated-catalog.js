@@ -984,7 +984,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/production/agriculture-domain-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
     },
-    "integrity": "sha256-fLwWlN7aQt6ZAyhf1dZ3SwAW6ri4DYnbI36107yKhXk=",
+    "integrity": "sha256-wyO64ZEY7F0F8DNrUxLjxKjn1X2XW5yNqgmXULq7FpI=",
     "environments": [
       "node",
       "browser"
@@ -12153,7 +12153,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/production/agriculture-domain-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
       },
-      "integrity": "sha256-fLwWlN7aQt6ZAyhf1dZ3SwAW6ri4DYnbI36107yKhXk=",
+      "integrity": "sha256-wyO64ZEY7F0F8DNrUxLjxKjn1X2XW5yNqgmXULq7FpI=",
       "environments": [
         "node",
         "browser"
@@ -22901,7 +22901,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/production/agriculture-domain-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
       },
-      "integrity": "sha256-fLwWlN7aQt6ZAyhf1dZ3SwAW6ri4DYnbI36107yKhXk=",
+      "integrity": "sha256-wyO64ZEY7F0F8DNrUxLjxKjn1X2XW5yNqgmXULq7FpI=",
       "environments": [
         "node",
         "browser"

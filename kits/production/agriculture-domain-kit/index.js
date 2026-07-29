@@ -373,6 +373,16 @@ export function createAgricultureDomainKit(NexusEngine, config = {}) {
     }, { plotId: plan.plotId, action: plan.eventName, actorId: plan.actorId });
   }
 
+  function commitInteraction(world, plotId, options = {}) {
+    const operationId = stableId(options.operationId, "Agriculture operation");
+    const ledger = engineRef?.n?.coreTransactionLedger;
+    if (!ledger) throw new Error("Agriculture requires engine.n.coreTransactionLedger.");
+    if (ledger.has("agriculture", operationId)) {
+      return ledger.applyOnce("agriculture", operationId, () => null);
+    }
+    return commitPlan(world, buildPlan(world, plotId, { ...options, operationId }), operationId);
+  }
+
   function resolveDay(world, day, weather = {}, operationId) {
     const nextDay = Math.max(0, Math.floor(finite(day, read(world).currentDay + 1)));
     const opId = stableId(operationId ?? `agriculture:day:${nextDay}`, "Agriculture day operation");
@@ -435,15 +445,15 @@ export function createAgricultureDomainKit(NexusEngine, config = {}) {
       const descriptors = () => listPlots().map((plot) => plotDescriptor(plot, crops));
       return {
         cropDefinitions: crops,
-        land: Object.freeze({ getPlot, listPlots, prepare: (plotId, operationId, actorId) => commitPlan(world, buildPlan(world, plotId, { operationId, actorId }), operationId) }),
+        land: Object.freeze({ getPlot, listPlots, prepare: (plotId, operationId, actorId) => commitInteraction(world, plotId, { operationId, actorId }) }),
         soil: Object.freeze({ inspect: (plotId) => clone(getPlot(plotId)?.soil ?? null) }),
         cultivation: Object.freeze({
           plan: (plotId, options) => buildPlan(world, plotId, options),
           commit: (plan, operationId) => commitPlan(world, plan, operationId),
-          plant: (plotId, cropId, operationId, actorId) => commitPlan(world, buildPlan(world, plotId, { operationId, actorId, cropId }), operationId),
+          plant: (plotId, cropId, operationId, actorId) => commitInteraction(world, plotId, { operationId, actorId, cropId }),
           inspect: getPlot
         }),
-        water: Object.freeze({ apply: (plotId, operationId, actorId) => commitPlan(world, buildPlan(world, plotId, { operationId, actorId }), operationId) }),
+        water: Object.freeze({ apply: (plotId, operationId, actorId) => commitInteraction(world, plotId, { operationId, actorId }) }),
         growth: Object.freeze({ resolveDay: (day, weather, operationId) => resolveDay(world, day, weather, operationId) }),
         harvest: Object.freeze({ plan: (plotId, options) => buildPlan(world, plotId, options), commit: (plan, operationId) => commitPlan(world, plan, operationId) }),
         perennials: Object.freeze({ list: () => Object.values(crops).filter((crop) => crop.perennial).map(clone) }),
@@ -455,8 +465,7 @@ export function createAgricultureDomainKit(NexusEngine, config = {}) {
         planInteraction: (plotId, options) => buildPlan(world, plotId, options),
         commitPlan: (plan, operationId) => commitPlan(world, plan, operationId),
         interact(plotId, operationId, actorId = "actor", cropId = null) {
-          const plan = buildPlan(world, plotId, { operationId, actorId, cropId });
-          return plan.ok ? commitPlan(world, plan, operationId) : plan;
+          return commitInteraction(world, plotId, { operationId, actorId, cropId });
         },
         loadSnapshot(snapshot = {}) {
           const next = ensureSnapshot(snapshot, initial, crops);

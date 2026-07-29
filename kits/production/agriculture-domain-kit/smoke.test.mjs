@@ -4,6 +4,7 @@ import { createAgricultureDomainKit } from "./index.js";
 
 function createEngine(config) {
   return NexusEngine.createEngine({
+    tick: { maxDelta: 10 },
     kits: [
       NexusEngine.createCoreTransactionLedgerKit(),
       createAgricultureDomainKit(NexusEngine, config)
@@ -48,6 +49,7 @@ function runTropical() {
   const palmHarvest = agriculture.harvest.plan("plot-2", { operationId: "harvest-2", actorId: "player" });
   agriculture.harvest.commit(palmHarvest, "harvest-2");
   assert.equal(agriculture.getPlot("plot-2").status, "regrowing");
+  agriculture.water.apply("plot-2", "water-3", "player");
   engine.tick(2.1);
   assert.equal(agriculture.getPlot("plot-2").status, "ready");
 
