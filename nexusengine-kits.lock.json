@@ -6,7 +6,7 @@
       "owner": "LuminaryLabs-Dev",
       "repository": "NexusEngine-Kits",
       "requestedRef": "main",
-      "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae"
+      "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5"
     }
   ],
   "selection": {
@@ -23,10 +23,9 @@
       "collectible-kit",
       "companion-command-kit",
       "fishing-kit",
+      "gameplay-interaction-kit",
       "greybox-building-kit",
-      "interaction-kit",
       "interaction-target-kit",
-      "kit-registry-domain-kit",
       "light-combat-kit",
       "lock-and-socket-kit",
       "moving-target-kit",
@@ -37,9 +36,7 @@
       "sorting-kit",
       "spatial-room-kit",
       "surface-placement-kit",
-      "symbol-alignment-kit",
-      "capability-graph-domain-kit",
-      "composition-planning-domain-kit"
+      "symbol-alignment-kit"
     ],
     "coreDependencies": [],
     "kits": [
@@ -47,288 +44,252 @@
         "id": "ar-experience-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "ar-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "camera-collision-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "character-ragdoll-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "collectible-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "companion-command-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "fishing-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-Yel5shgK5+V8ew9TPOkgEGUU/Ew6Q+Lptn7uN6jiMwg=",
         "module": {
           "package": "./kits/aquatic/fishing-kit/index.js",
           "node": "./kits/aquatic/fishing-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/aquatic/fishing-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/aquatic/fishing-kit/index.js"
+        }
+      },
+      {
+        "id": "gameplay-interaction-kit",
+        "version": "1.0.0",
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
+        "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
+        "module": {
+          "package": "./kits/migrated-gameplay/index.js",
+          "node": "./kits/migrated-gameplay/index.js",
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "greybox-building-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
-        }
-      },
-      {
-        "id": "interaction-kit",
-        "version": "1.0.0",
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
-        "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
-        "module": {
-          "package": "./kits/migrated-gameplay/index.js",
-          "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "interaction-target-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
-        }
-      },
-      {
-        "id": "kit-registry-domain-kit",
-        "version": "1.0.0",
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
-        "integrity": "sha256-xyu8d8rRV9mBtXNTMrLoEl14EhPPWC6qqzy4oKDBq1w=",
-        "module": {
-          "package": "./kits/registry/kit-registry-domain-kit/index.js",
-          "node": "./kits/registry/kit-registry-domain-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/registry/kit-registry-domain-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "light-combat-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "lock-and-socket-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "moving-target-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "objective-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "render-descriptor-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "reveal-light-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "seed-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
-        "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
+        "integrity": "sha256-2L+l3CMSGRnw/m/K8ejOl/jV8JPbL9mGHJYvFIhsJmE=",
         "module": {
           "package": "./kits/foundation/seed-kit/index.js",
           "node": "./kits/foundation/seed-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/foundation/seed-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/foundation/seed-kit/index.js"
         }
       },
       {
         "id": "sorting-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "spatial-room-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "surface-placement-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       },
       {
         "id": "symbol-alignment-kit",
         "version": "1.0.0",
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
+        "resolvedCommit": "e3246bd22497b8a925e9e0629621e23f1fa261c5",
         "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
         "module": {
           "package": "./kits/migrated-gameplay/index.js",
           "node": "./kits/migrated-gameplay/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/migrated-gameplay/index.js"
-        }
-      },
-      {
-        "id": "capability-graph-domain-kit",
-        "version": "1.0.0",
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
-        "integrity": "sha256-HEW0xI9RJqyJdd9pd/Mk1rDZIpIQYcjwWv62mJzAGxA=",
-        "module": {
-          "package": "./kits/registry/capability-graph-domain-kit/index.js",
-          "node": "./kits/registry/capability-graph-domain-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/registry/capability-graph-domain-kit/index.js"
-        }
-      },
-      {
-        "id": "composition-planning-domain-kit",
-        "version": "1.0.0",
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "resolvedCommit": "1851fdd65acccea23d404ef7620acee6184403ae",
-        "integrity": "sha256-aNLCfw95wj4vy9H+pLf5UmDj9fs0HVM5ln7raEbXA2A=",
-        "module": {
-          "package": "./kits/registry/composition-planning-domain-kit/index.js",
-          "node": "./kits/registry/composition-planning-domain-kit/index.js",
-          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@1851fdd65acccea23d404ef7620acee6184403ae/kits/registry/composition-planning-domain-kit/index.js"
+          "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@e3246bd22497b8a925e9e0629621e23f1fa261c5/kits/migrated-gameplay/index.js"
         }
       }
     ]
