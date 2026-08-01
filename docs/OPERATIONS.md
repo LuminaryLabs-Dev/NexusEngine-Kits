@@ -30,7 +30,9 @@ Review every generated change. Generated files must agree with `manifests/`; the
 npm pack --dry-run --json
 ```
 
-This verifies the package payload without publishing. At the documented revision the dry-run succeeds, while the public npm registry has no `@luminarylabs/nexusengine-kits` package.
+This verifies the package payload without publishing. At the documented revision the dry-run succeeds with 595 files, an archive of about 9.75 MB, and about 12.6 MB unpacked, while the public npm registry has no `@luminarylabs/nexusengine-kits` package.
+
+The package `files` allowlist includes `docs/`, so the retained editable brand sources and derived images are currently part of that payload. Treat the resulting documentation weight as a release-size limitation until a separately reviewed package-boundary change excludes repository-only source assets.
 
 ## Continuous Integration
 
