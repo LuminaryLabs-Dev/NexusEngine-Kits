@@ -41,3 +41,4 @@ Current progress is 149 inventoried, 26 official, 9 candidate, 9 scaffolded, 103
 - No npm publication, Git tag, or GitHub release is proven.
 - GitHub private vulnerability reporting is disabled.
 - The package declares MIT without a tracked license text.
+- The current dry-run package contains 595 files and is about 9.75 MB because `docs/`, including editable brand sources, is part of the package allowlist.
