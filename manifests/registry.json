@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "nexusengine.repository-registry.v1",
+  "schemaVersion": "nexusengine-kits.catalog-source/1",
   "id": "LuminaryLabs-Dev/NexusEngine-Kits",
   "owner": "LuminaryLabs-Dev",
   "repository": "NexusEngine-Kits",
@@ -8,14 +8,11 @@
   "engineCompatibility": {
     "package": "nexusengine",
     "range": "0.0.4",
-    "testedCommit": "91ebeeebb4f4f9bb121d13e0a97b6eac849ae485"
+    "testedCommit": "a68544434424438491be1398e3f3d5aced5bc5ee"
   },
   "promotion": {
-    "baselineCount": 120,
+    "baselineCount": 108,
     "approvedAdditionIds": [
-      "kit-registry-domain-kit",
-      "capability-graph-domain-kit",
-      "composition-planning-domain-kit",
       "procedural-creature-body-kit",
       "instanced-render-batch-kit",
       "seeded-world-patch-controller-kit",
@@ -28,7 +25,7 @@
       "fishing-kit",
       "ar-kit",
       "ar-experience-kit",
-      "interaction-kit",
+      "gameplay-interaction-kit",
       "companion-command-kit",
       "character-ragdoll-kit",
       "forest-placement-kit",

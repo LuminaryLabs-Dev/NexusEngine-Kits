@@ -2,17 +2,17 @@ import { listKitIds } from "../installer/kit-catalog.js";
 
 const kits = listKitIds();
 const firstWave = [
-  "completion-ledger-kit",
-  "spatial-interaction-kit",
-  "objective-bridge-kit",
-  "lock-group-kit",
-  "damage-health-kit",
-  "resource-node-kit",
-  "build-placement-kit",
-  "structure-runtime-kit",
-  "asset-descriptor-kit",
-  "diegetic-feedback-signal-kit",
-  "generic-resource-loop-kit"
+  "seed-kit",
+  "fishing-kit",
+  "seeded-world-patch-controller-kit",
+  "camera-smooth-follow-kit",
+  "procedural-creature-body-kit",
+  "instanced-render-batch-kit",
+  "agriculture-domain-kit",
+  "procedural-object-body-kit",
+  "procedural-object-material-kit",
+  "procedural-object-lod-kit",
+  "procedural-object-capture-profile-kit"
 ];
 
 const missing = firstWave.filter((kitId) => !kits.includes(kitId));

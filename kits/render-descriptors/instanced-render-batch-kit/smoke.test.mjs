@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { createRealtimeGame } from "nexusengine";
+import { createEngine } from "nexusengine";
 import { createInstancedRenderBatchKit } from "./index.js";
 
 const instance = (id, x) => ({
@@ -9,7 +9,7 @@ const instance = (id, x) => ({
   bounds: { min: [x - 1, 0, -1], max: [x + 1, 2, 1] }
 });
 
-const engine = createRealtimeGame({ kits: [createInstancedRenderBatchKit()] });
+const engine = createEngine({ kits: [createInstancedRenderBatchKit()] });
 const service = engine.n.instancedRenderBatch;
 const batch = service.create({ id: "trees", capacity: 3, boundsMode: "recompute-on-change" });
 
@@ -101,7 +101,7 @@ assert.deepEqual(update.changedRanges, [{ start: 0, count: 2 }]);
 assert.deepEqual(update.overflow.instanceIds, ["g5"]);
 
 const snapshot = service.getSnapshot();
-const restoredEngine = createRealtimeGame({ kits: [createInstancedRenderBatchKit()] });
+const restoredEngine = createEngine({ kits: [createInstancedRenderBatchKit()] });
 restoredEngine.n.instancedRenderBatch.loadSnapshot(snapshot);
 const restored = restoredEngine.n.instancedRenderBatch.get("trees");
 assert.equal(restored.capacity, 3);

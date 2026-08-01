@@ -3,16 +3,15 @@
 **Status:** active
 
 Maintain the trusted first-party package for reusable non-Core NexusEngine
-behavior.
+behavior while completing migration-placeholder proof over time.
 
 ## Success Criteria
 
-- Every implementation is reusable but correctly excluded from Core.
-- Every manifest identity has one owner and one public destination.
-- Kits use only public NexusEngine package entrypoints.
-- Registry metadata fails closed until a trusted provider verifies executable
-  code.
-- Placeholders never masquerade as behavior.
+- Every public identity has one semantic owner and one executable source.
+- Public registry data uses Composition registry v3 and merges with Core without collisions.
+- Metadata stays non-executable until immutable hydration and host preflight.
+- Unresolved records remain searchable and non-installable.
+- Core promotions remove old source, manifests, exports, and runtime aliases.
 - Complete games and authored presets remain outside this package.
 - No active workflow creates or updates ProtoKits.
 - Generated catalogs, exports, installer tables, docs, and proof agree.
@@ -20,14 +19,14 @@ behavior.
 ## Current State
 
 ```txt
-baseline resolved: 7 / 120
-baseline remaining: 113
-approved additions resolved: 21 / 29
-official: 26
-deprecated compatibility: 2
-inventoried: 149
+baseline resolved: 5 / 108
+baseline remaining: 103
+approved additions resolved: 18 / 26
+official: 23
+non-installable candidate/scaffold/placeholder: 111
+deprecated compatibility: 0
+inventoried: 134
 active capability: clock-kit
 ```
 
-Run `npm run progress` before reporting counts because this file records only a
-dated working state.
+Run `npm run progress` before reporting counts.

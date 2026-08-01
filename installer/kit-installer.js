@@ -8,7 +8,10 @@ import { loadKitFactory } from "./kit-manifest-loader.js";
 import { KIT_FACTORY_REGISTRY } from "./rebuilt-factories.js";
 import { createInstallPlan } from "../registry/composition.js";
 import { createInstallPlanFromLockfile } from "../registry/lockfile.js";
-import { assertRegistryTrust, createRepositoryRegistry } from "../registry/repository-registry.js";
+import {
+  assertInternalRegistryTrust,
+  createInternalRepositoryRegistry
+} from "./internal-repository-registry.js";
 
 function installIntoEngine(engine, kit, options = {}) {
   if (!engine || typeof engine !== "object") throw new TypeError("installIntoEngine expects a NexusEngine engine object.");
@@ -38,8 +41,8 @@ function issueMessage(issue) {
 
 export function createNexusEngineKitInstaller(options = {}) {
   const catalog = options.catalog ?? KIT_CATALOG;
-  const registry = createRepositoryRegistry(options.registry ?? NEXUSENGINE_REPOSITORY_REGISTRY);
-  assertRegistryTrust(registry, { ...options, allowLocalTemplate: options.registry == null });
+  const registry = createInternalRepositoryRegistry(options.registry ?? NEXUSENGINE_REPOSITORY_REGISTRY);
+  assertInternalRegistryTrust(registry, { ...options, allowLocalTemplate: options.registry == null });
   const allowedStatuses = [...new Set(options.allowStatuses ?? ["official"])];
   const manifestById = new Map(registry.kits.map((manifest) => [manifest.id, manifest]));
   const factoryRegistry = options.factoryRegistry ?? KIT_FACTORY_REGISTRY;

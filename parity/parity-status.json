@@ -1,19 +1,12 @@
 {
   "status": "registry-backed",
   "activeCapability": "clock-kit",
-  "baselineCount": 120,
+  "baselineCount": 108,
   "approvedAdditions": {
-    "total": 29,
-    "resolved": 21
+    "total": 26,
+    "resolved": 18
   },
   "kits": {
-    "action-input-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/input/action-input-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "action-input-kit has no validated stable implementation or parity record."
-    },
     "aerial-biome-fidelity-kits": {
       "status": "migration-placeholder",
       "target": "kits/aerial/aerial-biome-fidelity-kits",
@@ -126,13 +119,6 @@
       "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
       "next": "keep all stable gates green"
     },
-    "asset-descriptor-kit": {
-      "status": "scaffolded",
-      "target": "kits/render-descriptors/asset-descriptor-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "asset-descriptor-kit has only scaffold or metadata behavior and lacks validated source parity."
-    },
     "build-placement-kit": {
       "status": "scaffolded",
       "target": "kits/building/build-placement-kit",
@@ -189,13 +175,6 @@
       "sourceCommit": null,
       "next": "canyon-terrain-domain-kit has no validated stable implementation or parity record."
     },
-    "capability-graph-domain-kit": {
-      "status": "official",
-      "target": "kits/registry/capability-graph-domain-kit",
-      "realBehavior": true,
-      "sourceCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-      "next": "keep all stable gates green"
-    },
     "cargo-kit": {
       "status": "migration-placeholder",
       "target": "kits/economy-resources/cargo-kit",
@@ -236,20 +215,6 @@
       "target": "kits/migrated-gameplay",
       "realBehavior": true,
       "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
-      "next": "keep all stable gates green"
-    },
-    "completion-ledger-kit": {
-      "status": "candidate",
-      "target": "kits/spatial/completion-ledger-kit",
-      "realBehavior": true,
-      "sourceCommit": null,
-      "next": "completion-ledger-kit still needs an exact stable source commit, complete feature-union parity, and all stable promotion gates."
-    },
-    "composition-planning-domain-kit": {
-      "status": "official",
-      "target": "kits/registry/composition-planning-domain-kit",
-      "realBehavior": true,
-      "sourceCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
       "next": "keep all stable gates green"
     },
     "currency-kit": {
@@ -343,12 +308,12 @@
       "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
       "next": "keep all stable gates green"
     },
-    "generic-action-window-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/simulation/generic-action-window-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "generic-action-window-kit has no validated stable implementation or parity record."
+    "gameplay-interaction-kit": {
+      "status": "official",
+      "target": "kits/migrated-gameplay",
+      "realBehavior": true,
+      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "next": "keep all stable gates green"
     },
     "generic-affordance-descriptor-kit": {
       "status": "migration-placeholder",
@@ -440,20 +405,6 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "generic-defense-wave-agent-director-dsk has no validated stable implementation or parity record."
-    },
-    "generic-pressure-loop-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/simulation/generic-pressure-loop-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "generic-pressure-loop-kit has no validated stable implementation or parity record."
-    },
-    "generic-resource-loop-kit": {
-      "status": "deprecated",
-      "target": "kits/simulation/generic-resource-loop-kit",
-      "realBehavior": true,
-      "sourceCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
-      "next": "keep all stable gates green"
     },
     "generic-route-cargo-extraction-kit": {
       "status": "migration-placeholder",
@@ -560,13 +511,6 @@
       "sourceCommit": null,
       "next": "interaction-dsk has no validated stable implementation or parity record."
     },
-    "interaction-kit": {
-      "status": "official",
-      "target": "kits/migrated-gameplay",
-      "realBehavior": true,
-      "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
-      "next": "keep all stable gates green"
-    },
     "interaction-target-kit": {
       "status": "official",
       "target": "kits/migrated-gameplay",
@@ -580,13 +524,6 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "inventory-kit has no validated stable implementation or parity record."
-    },
-    "kit-registry-domain-kit": {
-      "status": "official",
-      "target": "kits/registry/kit-registry-domain-kit",
-      "realBehavior": true,
-      "sourceCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-      "next": "keep all stable gates green"
     },
     "light-combat-kit": {
       "status": "official",
@@ -693,20 +630,6 @@
       "sourceCommit": null,
       "next": "performance-budget-kit has no validated stable implementation or parity record."
     },
-    "persistence-domain-service-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/xr/persistence-domain-service-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "persistence-domain-service-kit has no validated stable implementation or parity record."
-    },
-    "persistence-dsk": {
-      "status": "migration-placeholder",
-      "target": "kits/xr/persistence-dsk",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "persistence-dsk has no validated stable implementation or parity record."
-    },
     "powered-aerial-flight-domain-kit": {
       "status": "migration-placeholder",
       "target": "kits/aerial/powered-aerial-flight-domain-kit",
@@ -755,13 +678,6 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "project-batch-deploy-bridge has no validated stable implementation or parity record."
-    },
-    "protokit-core": {
-      "status": "deprecated",
-      "target": "kits/foundation/protokit-core",
-      "realBehavior": true,
-      "sourceCommit": "9b0d74c57c29d04a9ba955ae41c8ca19cb2cd5d6",
-      "next": "keep all stable gates green"
     },
     "quest-thread-domain-kit": {
       "status": "migration-placeholder",
@@ -903,20 +819,6 @@
       "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
       "next": "keep all stable gates green"
     },
-    "spatial-scene-graph-dsk": {
-      "status": "migration-placeholder",
-      "target": "kits/xr/spatial-scene-graph-dsk",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "spatial-scene-graph-dsk has no validated stable implementation or parity record."
-    },
-    "spatial-scene-graph-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/xr/spatial-scene-graph-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "spatial-scene-graph-kit has no validated stable implementation or parity record."
-    },
     "state-digest-kit": {
       "status": "migration-placeholder",
       "target": "kits/foundation/state-digest-kit",
@@ -972,13 +874,6 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "terrain-ground-contact-domain-kit has no validated stable implementation or parity record."
-    },
-    "transform-domain-service-kit": {
-      "status": "migration-placeholder",
-      "target": "kits/xr/transform-domain-service-kit",
-      "realBehavior": false,
-      "sourceCommit": null,
-      "next": "transform-domain-service-kit has no validated stable implementation or parity record."
     },
     "transform-dsk": {
       "status": "migration-placeholder",

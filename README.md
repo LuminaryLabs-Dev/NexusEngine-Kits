@@ -1,27 +1,29 @@
 # NexusEngine Kits
 
-NexusEngine Kits is the official first-party trusted registry for reusable
-behavior that does not belong in NexusEngine Core.
+NexusEngine-Kits is the first-party registry for reusable behavior that is useful
+across products but intentionally outside NexusEngine Core.
 
 ## Ownership
 
 ```txt
-NexusEngine
-  atomic, idempotent, fully reusable Core behavior
-
-NexusEngine-Kits
-  reusable optional, niche, genre, or platform behavior
-
-Experiment and game repositories
-  complete games, presets, authored content, and product behavior
+NexusEngine       universal atomic behavior and semantic state ownership
+NexusEngine-Kits  optional niche, genre, platform, and authored systems
+Game repositories complete games, presets, tuning, UI, and product behavior
 ```
 
-This package does not incubate ProtoKits. That workflow is retired. Historical
-source mappings remain as lineage evidence only.
+ProtoKits are retired. Their Git history and extraction lineage remain evidence,
+not an authoring workflow or runtime dependency.
 
-## Install
+## Use A Kit
 
-One kit:
+```js
+import { createEngine } from "nexusengine";
+import { createFishingKit } from "@luminarylabs/nexusengine-kits/fishing-kit";
+
+const engine = createEngine({ kits: [createFishingKit()] });
+```
+
+The local first-party installer uses the generated package catalog:
 
 ```js
 import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
@@ -30,80 +32,58 @@ const installer = createNexusEngineKitInstaller();
 await installer.installKit(engine, "fishing-kit");
 ```
 
-Direct public import:
+## Import The Registry
+
+`nexusengine.registry.json` uses `nexusengine.composition-registry/3`. The tracked
+file is metadata-only and cannot execute code. Fetching it from an immutable Git
+commit hydrates source identity; a host must still verify the package, export,
+integrity, environment, and permissions before execution.
 
 ```js
-import { createFishingKit } from "@luminarylabs/nexusengine-kits/fishing-kit";
+import { createEngineRegistrySnapshot, mergeRegistrySnapshots } from "nexusengine/domains/composition/registry";
+import { pullRegistry } from "@luminarylabs/nexusengine-kits/registry";
 
-const fishing = createFishingKit();
+const kits = await pullRegistry("LuminaryLabs-Dev/NexusEngine-Kits");
+const registry = mergeRegistrySnapshots(createEngineRegistrySnapshot(), [kits]);
 ```
 
-One domain:
+Unresolved placeholders remain searchable with `source.installable: false`.
+Only proven `official` records become installable after immutable hydration.
 
-```js
-import { createFishingKit } from "@luminarylabs/nexusengine-kits/domain-aquatic";
+## Core Cutover
 
-const engine = createRealtimeGame({ kits: [createFishingKit()] });
-```
+Fifteen catalog identities already owned by NexusEngine `0.0.4` were removed,
+including ProtoKit compatibility, generic resource/pressure/action services,
+completion/data behavior, persistence/spatial primitives, and the old
+registry-control-plane Kits. There are no forwarding exports.
 
-Registry planning:
+See [the 0.0.4 migration map](docs/0.0.4-CORE-PROMOTION-MIGRATION.md).
 
-```js
-import {
-  pullRegistry,
-  createInstallPlan,
-  createNexusEngineKitInstaller
-} from "@luminarylabs/nexusengine-kits";
-
-const registry = await pullRegistry("LuminaryLabs-Dev/NexusEngine-Kits");
-const plan = createInstallPlan({ kits: ["fishing-kit"] }, { registry });
-const installer = createNexusEngineKitInstaller({ registry });
-```
-
-Registry metadata is descriptive until a trusted resolver verifies the owner,
-immutable source, integrity, status, package export, and executable factory.
-
-### Core Promotions
-
-Generic MCP infrastructure and Object Placement contracts are Core behavior in
-NexusEngine `0.0.4`. Their former candidate exports were removed from this
-package rather than forwarded. See the
-[0.0.4 Core promotion migration](docs/0.0.4-CORE-PROMOTION-MIGRATION.md) for
-direct import replacements.
-
-## Package Shape
+## Repository Shape
 
 ```txt
-kits/          official and explicitly staged implementations
-domains/       domain composition entrypoints
-bundles/       multi-domain compositions
-manifests/     authoritative kit, domain, bundle, and registry records
-registry/      trust, graph, planning, lockfile, integrity, and resolution
-installer/     generated factories and installation
-contracts/     manifest, status, and install-report contracts
-adapters/      explicit host and protocol transport adapters
-parity/        historical source and behavior lineage
-docs/          current usage and legacy migration pointers
+kits/       proven and staged non-Core implementations
+domains/    package-local grouping entrypoints
+bundles/    package-local multi-domain selections
+manifests/  authoritative Kit, Domain, recipe, and registry sources
+registry/   v3 metadata hydration, trust, integrity, and resolution
+installer/  private generated catalog planning and installation
+parity/     historical source and behavior lineage
+docs/       current usage and migration guidance
 ```
-
-Placeholders remain discoverable but cannot install as behavior through default
-paths. Deprecated compatibility kits require explicit status opt-in.
 
 ## Current Catalog
 
-As generated on 2026-07-29:
-
 ```txt
-149 inventoried
-26 official
-7 of 120 baseline entries resolved
-21 of 29 approved additions resolved
-2 deprecated compatibility kits
+134 inventoried Kit records
+23 official
+111 candidate, scaffolded, or migration-placeholder records
+108 historical baseline records
+26 approved additions
+0 deprecated runtime Kits
 ```
 
-Run `npm run progress` for current generated counts.
-
-## Validation
+Run `npm run progress` for generated counts. Validate changes with:
 
 ```bash
 npm run build:catalog

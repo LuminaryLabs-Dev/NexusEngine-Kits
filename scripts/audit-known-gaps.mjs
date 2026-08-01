@@ -13,7 +13,7 @@ const required = [
   "docs/WHAT-CANDIDATE-MEANS.md",
   "docs/WHAT-OFFICIAL-MEANS.md",
   "domains/spatial/LIMITATIONS.md",
-  "kits/spatial/completion-ledger-kit/LIMITATIONS.md"
+  "docs/0.0.4-CORE-PROMOTION-MIGRATION.md"
 ];
 
 for (const file of required) {

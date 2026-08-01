@@ -1,34 +1,23 @@
 import {
-  REPOSITORY_REGISTRY_SCHEMA_VERSION,
-  TRUSTED_REGISTRY_OWNERS,
-  createRepositoryRegistry,
-  mergeRegistries,
-  normalizeKitManifest,
-  normalizeRepositoryRegistry,
-  validateKitManifest,
-  validateRepositoryRegistry
-} from "../kits/registry/kit-registry-domain-kit/index.js";
+  COMPOSITION_REGISTRY_SCHEMA,
+  normalizeRegistrySnapshot
+} from "nexusengine/domains/composition/registry";
 
-const clone = (value) => value == null ? value : JSON.parse(JSON.stringify(value));
+export const TRUSTED_REGISTRY_OWNERS = Object.freeze([
+  "LuminaryLabs-Dev",
+  "LuminaryLabs-Agents",
+  "LuminaryLabs-Publish"
+]);
+
 const FULL_SHA = /^[a-f0-9]{40}$/i;
-
-export {
-  REPOSITORY_REGISTRY_SCHEMA_VERSION,
-  TRUSTED_REGISTRY_OWNERS,
-  createRepositoryRegistry,
-  mergeRegistries,
-  normalizeKitManifest,
-  normalizeRepositoryRegistry,
-  validateKitManifest,
-  validateRepositoryRegistry
-};
+const clone = (value) => value == null ? value : structuredClone(value);
 
 export function isImmutableCommit(value) {
   return FULL_SHA.test(String(value ?? ""));
 }
 
 function sourceId(source = {}) {
-  if (source.id) return String(source.id);
+  if (source.registryId || source.id) return String(source.registryId ?? source.id);
   if (source.owner && source.repository) return `${source.owner}/${source.repository}`;
   return null;
 }
@@ -39,63 +28,73 @@ function externalPinFor(id, options = {}) {
   return pins[id] ?? null;
 }
 
-function assertTrust(registry, options = {}) {
+function repositoryIdentity(snapshot, options = {}) {
+  const source = snapshot.sources?.find((entry) => entry.registryId === snapshot.registryId) ?? snapshot.sources?.[0] ?? {};
+  return {
+    registryId: snapshot.registryId ?? source.registryId,
+    owner: options.owner ?? source.metadata?.owner ?? null,
+    repository: options.repository ?? source.metadata?.repository ?? null,
+    requestedRef: options.requestedRef ?? source.metadata?.requestedRef ?? "main"
+  };
+}
+
+function assertTrust(identity, commit, options = {}) {
   const trustedOwners = new Set(options.trustedOwners ?? TRUSTED_REGISTRY_OWNERS);
-  const trusted = trustedOwners.has(registry.owner);
-  if (trusted) return true;
-  const expected = externalPinFor(registry.id, options);
+  if (trustedOwners.has(identity.owner)) return true;
+  const expected = externalPinFor(identity.registryId, options);
   if (!isImmutableCommit(expected)) {
-    throw new TypeError(`External registry ${registry.id} requires an explicit full-SHA pin in externalRegistries.`);
+    throw new TypeError(`External registry ${identity.registryId} requires an explicit full-SHA pin in externalRegistries.`);
   }
-  if (expected.toLowerCase() !== registry.resolvedCommit.toLowerCase()) {
-    throw new TypeError(`External registry ${registry.id} resolved to ${registry.resolvedCommit}, not approved pin ${expected}.`);
+  if (expected.toLowerCase() !== commit.toLowerCase()) {
+    throw new TypeError(`External registry ${identity.registryId} resolved to ${commit}, not approved pin ${expected}.`);
   }
   return false;
 }
 
-export function assertRegistryTrust(registry, options = {}) {
-  if (!isImmutableCommit(registry?.resolvedCommit) && options.allowLocalTemplate !== true) {
-    throw new TypeError(`Registry ${registry?.id ?? "source"} requires a full immutable commit SHA.`);
+export function assertRegistryTrust(snapshot, options = {}) {
+  const identity = repositoryIdentity(snapshot, options);
+  const source = snapshot.sources?.find((entry) => entry.registryId === identity.registryId) ?? snapshot.sources?.[0];
+  if (!isImmutableCommit(source?.sourceCommit)) {
+    throw new TypeError(`Registry ${identity.registryId ?? "source"} requires a full immutable commit SHA.`);
   }
-  return assertTrust(registry, options);
+  return assertTrust(identity, source.sourceCommit, options);
 }
 
-function immutableBrowserUrl(url, registry) {
-  if (!url) return null;
-  const commit = registry.resolvedCommit;
-  let next = String(url).replaceAll("{resolvedCommit}", commit);
-  if (next.includes(`@${registry.requestedRef}/`)) next = next.replace(`@${registry.requestedRef}/`, `@${commit}/`);
-  if (/^https?:/.test(next) && !next.includes(commit)) {
-    throw new TypeError(`Browser module URL is not locked to registry commit ${commit}: ${next}`);
+export function hydrateCompositionRegistry(input, resolvedCommit, options = {}) {
+  if (!isImmutableCommit(resolvedCommit)) {
+    throw new TypeError(`Registry ${sourceId(input) ?? "source"} must resolve to a full immutable commit SHA.`);
   }
-  return next;
-}
-
-function hydrateRegistry(input, resolvedCommit, options = {}) {
+  if (input?.schema !== COMPOSITION_REGISTRY_SCHEMA) {
+    throw new TypeError(`Unsupported Composition registry snapshot ${String(input?.schema ?? "<missing>")}.`);
+  }
   const raw = clone(input);
-  raw.resolvedCommit = resolvedCommit;
-  raw.requestedRef = String(raw.requestedRef ?? raw.ref ?? options.requestedRef ?? "main");
-  raw.kits = (raw.kits ?? []).map((manifest) => ({
-    ...manifest,
-    module: {
-      ...(manifest.module ?? {}),
-      browser: immutableBrowserUrl(manifest.module?.browser ?? manifest.moduleUrl, { ...raw, resolvedCommit })
-    },
-    source: {
-      ...(manifest.source ?? {}),
-      registryId: raw.id ?? `${raw.owner}/${raw.repository}`,
-      owner: raw.owner,
-      repository: raw.repository,
-      requestedRef: raw.requestedRef,
-      resolvedCommit,
-      path: manifest.source?.path ?? manifest.entry ?? null
+  const identity = repositoryIdentity(raw, options);
+  const trusted = assertTrust(identity, resolvedCommit, options);
+  raw.sources = (raw.sources ?? []).map((source) => source.registryId === identity.registryId ? {
+    ...source,
+    sourceCommit: resolvedCommit.toLowerCase(),
+    status: "available",
+    metadata: {
+      ...(source.metadata ?? {}),
+      owner: identity.owner,
+      repository: identity.repository,
+      requestedRef: identity.requestedRef,
+      immutable: true,
+      trusted
     }
-  }));
-  const report = validateRepositoryRegistry(raw, { requirePinned: true });
-  if (!report.ok) throw new TypeError(`Invalid repository registry: ${report.errors.join("; ")}`);
-  const registry = report.registry;
-  const trusted = assertTrust(registry, options);
-  return { ...registry, trusted };
+  } : source);
+  raw.kits = (raw.kits ?? []).map((kit) => {
+    if (kit.source?.registryId !== identity.registryId) return kit;
+    const installable = kit.status === "official"
+      && kit.metadata?.realBehavior === true
+      && Boolean(kit.source?.subpath)
+      && Boolean(kit.source?.exportName);
+    return { ...kit, source: { ...(kit.source ?? {}), installable } };
+  });
+  return normalizeRegistrySnapshot(raw, {
+    allowExternalParents: true,
+    allowExternalReferences: true
+  });
 }
 
 async function fetchJson(url, options = {}) {
@@ -108,9 +107,10 @@ async function fetchJson(url, options = {}) {
 
 async function defaultMetadataResolver(source, options = {}) {
   if (typeof source === "string" && /^https?:\/\//.test(source)) {
-    const resolvedCommit = options.resolvedCommit;
-    if (!isImmutableCommit(resolvedCommit)) throw new TypeError("Direct registry URLs require options.resolvedCommit as a full SHA.");
-    return { registry: await fetchJson(source, options), resolvedCommit, metadataUrl: source };
+    if (!isImmutableCommit(options.resolvedCommit)) {
+      throw new TypeError("Direct registry URLs require options.resolvedCommit as a full SHA.");
+    }
+    return { registry: await fetchJson(source, options), resolvedCommit: options.resolvedCommit, metadataUrl: source };
   }
 
   const descriptor = typeof source === "string"
@@ -133,19 +133,23 @@ export async function pullRegistry(source, options = {}) {
   if (source?.registry) {
     resolved = {
       registry: source.registry,
-      resolvedCommit: source.resolvedCommit ?? source.registry.resolvedCommit,
+      resolvedCommit: source.resolvedCommit,
       metadataUrl: source.metadataUrl ?? null
     };
-  } else if (source?.kits && source?.owner && source?.repository) {
-    resolved = { registry: source, resolvedCommit: options.resolvedCommit ?? source.resolvedCommit, metadataUrl: null };
+  } else if (source?.schema === COMPOSITION_REGISTRY_SCHEMA) {
+    resolved = { registry: source, resolvedCommit: options.resolvedCommit, metadataUrl: null };
   } else {
     const resolver = options.metadataResolver ?? defaultMetadataResolver;
     resolved = await resolver(source, options);
   }
-
   if (!resolved?.registry || !isImmutableCommit(resolved.resolvedCommit)) {
     throw new TypeError(`Registry ${sourceId(resolved?.registry ?? source) ?? "source"} must resolve to a full immutable commit SHA.`);
   }
-  const registry = hydrateRegistry(resolved.registry, resolved.resolvedCommit, options);
-  return Object.freeze({ ...registry, metadataUrl: resolved.metadataUrl ?? null });
+  const snapshot = hydrateCompositionRegistry(resolved.registry, resolved.resolvedCommit, {
+    ...options,
+    owner: options.owner ?? source?.owner,
+    repository: options.repository ?? source?.repository,
+    requestedRef: options.requestedRef ?? source?.requestedRef ?? source?.ref
+  });
+  return Object.freeze({ ...snapshot, metadataUrl: resolved.metadataUrl ?? null });
 }

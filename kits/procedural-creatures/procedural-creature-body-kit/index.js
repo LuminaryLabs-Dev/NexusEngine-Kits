@@ -1,4 +1,4 @@
-import { createObjectDescriptor } from "nexusengine";
+import { createObjectDescriptor } from "nexusengine/domains/object";
 import {
   PROCEDURAL_CREATURE_BODY_KIT_VERSION as LEGACY_PROCEDURAL_CREATURE_BODY_KIT_VERSION,
   SMALL_THEROPOD_PRESET,

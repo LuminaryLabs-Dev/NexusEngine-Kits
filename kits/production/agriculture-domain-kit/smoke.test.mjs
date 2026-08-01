@@ -1,12 +1,13 @@
 import assert from "node:assert/strict";
 import * as NexusEngine from "nexusengine";
+import { createTransactionLedgerKit } from "nexusengine/domains/runtime/transaction";
 import { createAgricultureDomainKit } from "./index.js";
 
 function createEngine(config) {
   return NexusEngine.createEngine({
     tick: { maxDelta: 10 },
     kits: [
-      NexusEngine.createCoreTransactionLedgerKit(),
+      createTransactionLedgerKit(),
       createAgricultureDomainKit(NexusEngine, config)
     ]
   });
@@ -57,7 +58,7 @@ function runTropical() {
   const restored = createEngine(tropical);
   restored.n.agriculture.loadSnapshot(snapshot);
   assert.deepEqual(restored.n.agriculture.getSnapshot(), snapshot);
-  return { snapshot, ledger: engine.n.coreTransactionLedger.getSnapshot(), descriptors: agriculture.getDescriptors() };
+  return { snapshot, ledger: engine.n.transaction.getSnapshot(), descriptors: agriculture.getDescriptors() };
 }
 
 assert.deepEqual(runTropical(), runTropical(), "tropical agriculture replay is deterministic");

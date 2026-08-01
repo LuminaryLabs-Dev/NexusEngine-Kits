@@ -1,4 +1,3 @@
-action-input-kit unavailable
 aerial-biome-fidelity-kits unavailable
 aerial-camera-rig-domain-kit unavailable
 aerial-canyon-kits unavailable
@@ -15,7 +14,6 @@ aerial-vegetation-placement-domain-kit unavailable
 agriculture-domain-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js
 ar-experience-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 ar-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
-asset-descriptor-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/asset-descriptor-kit/index.js
 build-placement-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/building/build-placement-kit/index.js
 camera-collision-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 camera-comfort-kit unavailable
@@ -24,15 +22,12 @@ camera-sequence-kit unavailable
 camera-smooth-follow-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/camera-feedback/camera-smooth-follow-kit/index.js
 camera-state-kit unavailable
 canyon-terrain-domain-kit unavailable
-capability-graph-domain-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/capability-graph-domain-kit/index.js
 cargo-kit unavailable
 cargo-transfer-kit unavailable
 character-ragdoll-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 clock-kit unavailable
 collectible-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 companion-command-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
-completion-ledger-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/completion-ledger-kit/index.js
-composition-planning-domain-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/composition-planning-domain-kit/index.js
 currency-kit unavailable
 damage-health-domain-kit unavailable
 damage-health-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/hazard-combat/damage-health-kit/index.js
@@ -46,7 +41,7 @@ fail-state-kit unavailable
 fishing-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/aquatic/fishing-kit/index.js
 flight-corridor-domain-kit unavailable
 forest-placement-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
-generic-action-window-kit unavailable
+gameplay-interaction-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 generic-affordance-descriptor-kit unavailable
 generic-defense-aaa-dsk-bridge unavailable
 generic-defense-build-placement-dsk unavailable
@@ -60,8 +55,6 @@ generic-defense-render-descriptor-dsk unavailable
 generic-defense-session-command-kit unavailable
 generic-defense-session-facade-dsk unavailable
 generic-defense-wave-agent-director-dsk unavailable
-generic-pressure-loop-kit unavailable
-generic-resource-loop-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js
 generic-route-cargo-extraction-kit unavailable
 greybox-building-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 guard-domain-kit unavailable
@@ -77,10 +70,8 @@ interactable-registry-kit unavailable
 interaction-domain-kit unavailable
 interaction-domain-service-kit unavailable
 interaction-dsk unavailable
-interaction-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 interaction-target-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 inventory-kit unavailable
-kit-registry-domain-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/kit-registry-domain-kit/index.js
 light-combat-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 lighting-descriptor-kit unavailable
 lock-and-socket-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
@@ -96,8 +87,6 @@ objective-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{res
 openxr-hand-adapter-dsk unavailable
 parry-window-domain-kit unavailable
 performance-budget-kit unavailable
-persistence-domain-service-kit unavailable
-persistence-dsk unavailable
 powered-aerial-flight-domain-kit unavailable
 procedural-creature-body-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js
 procedural-object-body-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-body-kit/index.js
@@ -105,7 +94,6 @@ procedural-object-capture-profile-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-D
 procedural-object-lod-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-lod-kit/index.js
 procedural-object-material-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-material-kit/index.js
 project-batch-deploy-bridge unavailable
-protokit-core https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js
 quest-thread-domain-kit unavailable
 recovery-site-kit unavailable
 relationship-state-domain-kit unavailable
@@ -126,8 +114,6 @@ sorting-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resol
 spatial-index-kit unavailable
 spatial-interaction-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/spatial-interaction-kit/index.js
 spatial-room-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
-spatial-scene-graph-dsk unavailable
-spatial-scene-graph-kit unavailable
 state-digest-kit unavailable
 station-interaction-kit unavailable
 status-effect-domain-kit unavailable
@@ -136,7 +122,6 @@ structure-runtime-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-K
 surface-placement-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 symbol-alignment-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 terrain-ground-contact-domain-kit unavailable
-transform-domain-service-kit unavailable
 transform-dsk unavailable
 upgrade-kit unavailable
 vegetation-placement-domain-kit unavailable

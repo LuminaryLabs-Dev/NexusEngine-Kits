@@ -7,7 +7,6 @@
   "domainPath": "n:input",
   "entry": "./domains/input/index.js",
   "kits": [
-    "action-input-kit",
     "input-context-kit",
     "input-buffer-kit",
     "view-rig-kit"

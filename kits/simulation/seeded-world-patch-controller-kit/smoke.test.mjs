@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
-import { createRealtimeGame } from "nexusengine";
+import { createEngine } from "nexusengine";
 import { createSeedKit } from "../../foundation/seed-kit/index.js";
 import {
   createMessageWorkerExecutor,
   createSeededWorldPatchControllerKit
 } from "./index.js";
 
-const engine = createRealtimeGame({
+const engine = createEngine({
   kits: [
     createSeedKit({ seed: "patch-world" }),
     createSeededWorldPatchControllerKit()

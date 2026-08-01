@@ -1,8 +1,8 @@
 import {
   createScopedSeed as createNexusScopedSeed,
-  createSeededRandom as createNexusSeededRandom,
-  defineDomainServiceKit as defineNexusDomainServiceKit
-} from "nexusengine";
+  createSeededRandom as createNexusSeededRandom
+} from "nexusengine/foundation";
+import { defineDomainServiceKit as defineNexusDomainServiceKit } from "nexusengine/domain-service-kit";
 
 export const GENERIC_SEED_KIT_VERSION = "1.0.0";
 

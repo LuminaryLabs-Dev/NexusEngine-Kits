@@ -24,11 +24,11 @@
 ## Install
 
 ```js
-import { createRealtimeGame } from "nexusengine";
+import { createEngine } from "nexusengine";
 import { createSeedKit } from "@luminarylabs/nexusengine-kits/seed-kit";
 import { createProceduralCreatureBodyKit } from "@luminarylabs/nexusengine-kits/procedural-creature-body-kit";
 
-const engine = createRealtimeGame({
+const engine = createEngine({
   kits: [
     createSeedKit({ seed: "creature-world" }),
     createProceduralCreatureBodyKit()

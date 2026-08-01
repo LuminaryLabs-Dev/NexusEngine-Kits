@@ -23,17 +23,17 @@ for (const bundle of bundleCatalog.bundles ?? []) {
 }
 
 const firstWave = [
-  ["spatial", "completion-ledger-kit"],
-  ["spatial", "spatial-interaction-kit"],
-  ["progression", "objective-bridge-kit"],
-  ["progression", "lock-group-kit"],
-  ["hazard-combat", "damage-health-kit"],
-  ["economy-resources", "resource-node-kit"],
-  ["building", "build-placement-kit"],
-  ["building", "structure-runtime-kit"],
-  ["render-descriptors", "asset-descriptor-kit"],
-  ["camera-feedback", "diegetic-feedback-signal-kit"],
-  ["simulation", "generic-resource-loop-kit"]
+  ["foundation", "seed-kit"],
+  ["aquatic", "fishing-kit"],
+  ["simulation", "seeded-world-patch-controller-kit"],
+  ["camera-feedback", "camera-smooth-follow-kit"],
+  ["procedural-creatures", "procedural-creature-body-kit"],
+  ["render-descriptors", "instanced-render-batch-kit"],
+  ["production", "agriculture-domain-kit"],
+  ["procedural-objects", "procedural-object-body-kit"],
+  ["procedural-objects", "procedural-object-material-kit"],
+  ["procedural-objects", "procedural-object-lod-kit"],
+  ["procedural-objects", "procedural-object-capture-profile-kit"]
 ];
 
 for (const [domain, kit] of firstWave) {

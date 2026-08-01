@@ -1,7 +1,7 @@
 import { defineComponent, defineEvent, defineResource } from "nexusengine/ecs";
 import { defineRuntimeKit } from "nexusengine/runtime-kit";
 
-function createInteractionRuntimeKit(options = {}, kitId = "interaction-kit") {
+function createInteractionRuntimeKit(options = {}, kitId = "gameplay-interaction-kit") {
   const components = {
     Interactable: defineComponent("interaction-target"),
     Scanner: defineComponent("interaction-scanner"),
@@ -102,7 +102,7 @@ function createInteractionRuntimeKit(options = {}, kitId = "interaction-kit") {
 }
 
 export function createInteractionKit(options = {}) {
-  return createInteractionRuntimeKit(options, "interaction-kit");
+  return createInteractionRuntimeKit(options, "gameplay-interaction-kit");
 }
 
 export function createCharacterInteractionKit(options = {}) {

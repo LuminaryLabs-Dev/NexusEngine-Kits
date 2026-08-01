@@ -1,45 +1,34 @@
 # Known Limitations
 
-NexusEngine Kits is a clean rebuild foundation, not a complete game stack.
+NexusEngine-Kits is the first-party registry for reusable behavior that is not
+universal Core. It is not a complete game stack and catalog presence is not
+proof that executable behavior exists.
 
-## What works today
+## Current Registry
 
-- Package exports exist for the installer, domains, bundles, and first-wave kit entrypoints.
-- The installer can install a single kit, a domain, a bundle, or the full catalog.
-- Audit scripts exist to detect contradictions between catalogs, package exports, docs, status, and behavior.
-- `completion-ledger-kit` has real candidate behavior.
-- `generic-resource-loop-kit` is deprecated because NexusEngine Core now owns
-  the canonical resource service and compatibility APIs.
-- The spatial domain is installable and smoke-testable.
-- Default installation skips non-official entries; callers must explicitly opt into candidate or experimental statuses.
+- 134 Kit records grouped under 21 external semantic Domains and 7 recipes.
+- 23 official Kits are eligible for immutable-source hydration.
+- 8 candidate, 8 scaffolded, and 95 migration-placeholder records remain
+  metadata-only and non-installable through the public registry.
+- Registry metadata can be discovered and planned without executing package
+  code.
+- An official record becomes installable only after its package, exact commit,
+  canonical subpath, export, and SHA-256 source integrity are hydrated.
 
-## What is placeholder-only
+## Not Yet Provided
 
-Most catalog entries are still metadata-backed placeholders. They are
-discoverable for reporting and planning, but default installer paths do not
-execute them as behavior.
+- Runtime package installation. Missing packages return an install requirement.
+- A security sandbox for approved JavaScript. Imported code has host privileges.
+- Complete implementations for placeholder and scaffold records.
+- npm publication or release stability for this cutover.
 
-## What is official
+## Ownership Boundary
 
-There are currently 26 official entries. Run `npm run progress` and inspect the
-generated manifests for the current set.
-
-## What is candidate
-
-`completion-ledger-kit` has real candidate behavior, smoke coverage, docs, a
-manifest, and lineage notes. It remains non-official until source behavior,
-current downstream requirements, and domain validation are complete.
-
-## What is not ready
-
-- Full AAA game production.
-- Broad gameplay stacks.
-- Renderer adapters.
-- Save/load beyond individual kit snapshots.
-- Full catalog-wide behavior and downstream coverage.
-- Tagged release stability.
-- npm package publication.
+Capabilities promoted to NexusEngine Core have no forwarding exports here.
+Complete games and authored presets remain game-owned. ProtoKits is retired and
+is used only as frozen source-lineage evidence.
 
 ## Rule
 
-Installable does not always mean implemented. Catalog presence does not always mean real behavior.
+Metadata-only records are discoverable, not executable. `official` describes
+proof status; immutable hydration determines installability.

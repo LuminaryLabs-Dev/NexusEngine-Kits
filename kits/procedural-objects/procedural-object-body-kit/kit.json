@@ -56,7 +56,7 @@
     "node": "./kits/procedural-objects/procedural-object-body-kit/index.js",
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-body-kit/index.js"
   },
-  "integrity": "sha256-ZII63GVJQhPprV167EHutIeQFu6mFHGTriGlVa3nClg=",
+  "integrity": "sha256-Cs4vD/aVOQ2PUuX3jhGWOeKDZTcXflGC7KxnZ4E32Q8=",
   "provides": [
     "n:object:procedural:body",
     "object:procedural-body-descriptor"

@@ -11,8 +11,7 @@
     "interactable-registry-kit",
     "spatial-interaction-kit",
     "hold-action-kit",
-    "completion-ledger-kit",
-    "interaction-kit",
+    "gameplay-interaction-kit",
     "spatial-room-kit",
     "interaction-target-kit"
   ]

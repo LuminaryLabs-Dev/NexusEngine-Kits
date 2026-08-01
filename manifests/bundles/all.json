@@ -5,7 +5,6 @@
   "status": "candidate",
   "entry": "./bundles/all.js",
   "domains": [
-    "registry",
     "foundation",
     "input",
     "spatial",

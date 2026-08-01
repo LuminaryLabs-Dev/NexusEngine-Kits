@@ -1,14 +1,8 @@
 # Implementation Gaps
 
-This doc mirrors the root implementation gap tracker.
+The canonical gap register is maintained in
+[`../IMPLEMENTATION-GAPS.md`](../IMPLEMENTATION-GAPS.md).
 
-## Highest risks
-
-- Catalog entries can look finished before behavior exists.
-- Domain installs can succeed while most members are placeholders.
-- CDN paths can resolve to scaffolded files.
-- Parity can be incomplete while a kit is already useful.
-
-## Next fix
-
-Rebuild `spatial-interaction-kit` after `completion-ledger-kit`.
+The highest-value remaining work is clean consumer proof for the 23 official
+Kits and honest implementation or rejection of the 111 non-official records.
+Core-promoted behavior is not rebuilt here.

@@ -7,7 +7,6 @@
   "domainPath": "n:foundation",
   "entry": "./domains/foundation/index.js",
   "kits": [
-    "protokit-core",
     "seed-kit",
     "clock-kit",
     "state-digest-kit",

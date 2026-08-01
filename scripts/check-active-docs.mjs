@@ -32,7 +32,10 @@ const forbiddenWorkflow = [
   /A ProtoKit can (?:move|become)/i,
   /leave it in ProtoKits/i,
   /Full (?:kit )?behavior (?:is )?migrat(?:ed|es) from ProtoKits/i,
-  /Unresolved behavior belongs in ProtoKits/i
+  /Unresolved behavior belongs in ProtoKits/i,
+  /createRealtimeGame/,
+  /nexusengine\/core-kits/,
+  /nexusengine\.repository-registry\/1/
 ];
 
 for (const filePath of activeDocs) {

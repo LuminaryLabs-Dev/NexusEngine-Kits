@@ -1,17 +1,7 @@
 # Readiness Matrix
 
-The root `READINESS-MATRIX.md` defines what each status means.
+The canonical status contract and current totals are maintained in
+[`../READINESS-MATRIX.md`](../READINESS-MATRIX.md).
 
-Use this status ladder:
-
-```txt
-planned
-migration-placeholder
-scaffolded
-candidate
-official
-deprecated
-archived
-```
-
-A kit is not official until behavior, docs, manifests, smoke tests, parity, and domain smoke are complete.
+`official` means eligible for immutable hydration. It does not bypass commit,
+subpath, export, environment, or SHA-256 integrity verification.

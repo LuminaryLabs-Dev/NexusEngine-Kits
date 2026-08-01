@@ -347,8 +347,8 @@ export function createAgricultureDomainKit(NexusEngine, config = {}) {
   function commitPlan(world, plan, operationId = plan?.operationId) {
     if (!plan?.ok) return plan ?? reject(world, "invalid-plan");
     const opId = stableId(operationId, "Agriculture operation");
-    const ledger = engineRef?.n?.coreTransactionLedger;
-    if (!ledger) throw new Error("Agriculture requires engine.n.coreTransactionLedger.");
+    const ledger = engineRef?.n?.transaction;
+    if (!ledger) throw new Error("Agriculture requires engine.n.transaction.");
     return ledger.applyOnce("agriculture", opId, () => {
       const state = read(world);
       const current = state.plots[plan.plotId];
@@ -375,8 +375,8 @@ export function createAgricultureDomainKit(NexusEngine, config = {}) {
 
   function commitInteraction(world, plotId, options = {}) {
     const operationId = stableId(options.operationId, "Agriculture operation");
-    const ledger = engineRef?.n?.coreTransactionLedger;
-    if (!ledger) throw new Error("Agriculture requires engine.n.coreTransactionLedger.");
+    const ledger = engineRef?.n?.transaction;
+    if (!ledger) throw new Error("Agriculture requires engine.n.transaction.");
     if (ledger.has("agriculture", operationId)) {
       return ledger.applyOnce("agriculture", operationId, () => null);
     }
@@ -386,7 +386,7 @@ export function createAgricultureDomainKit(NexusEngine, config = {}) {
   function resolveDay(world, day, weather = {}, operationId) {
     const nextDay = Math.max(0, Math.floor(finite(day, read(world).currentDay + 1)));
     const opId = stableId(operationId ?? `agriculture:day:${nextDay}`, "Agriculture day operation");
-    return engineRef.n.coreTransactionLedger.applyOnce("agriculture", opId, () => {
+    return engineRef.n.transaction.applyOnce("agriculture", opId, () => {
       const state = read(world);
       if (nextDay <= state.currentDay) return { ok: false, reason: "day-not-advanced", day: nextDay, currentDay: state.currentDay };
       const rainfall = clamp01(weather.rainfall ?? weather.rain ?? 0);
@@ -420,7 +420,7 @@ export function createAgricultureDomainKit(NexusEngine, config = {}) {
     version: AGRICULTURE_DOMAIN_KIT_VERSION,
     stability: config.stability ?? "official",
     services: ["land", "soil", "cultivation", "water", "growth", "harvest", "perennials", "descriptors", "snapshot", "reset"],
-    requires: ["n:core-transaction-ledger", ...(config.requires ?? [])],
+    requires: ["n:runtime:transaction", ...(config.requires ?? [])],
     provides: ["production:agriculture", "agriculture:land", "agriculture:soil", "agriculture:cultivation", "agriculture:harvest", ...(config.provides ?? [])],
     resources: { AgricultureState },
     events: { PlotPrepared, CropPlanted, CropWatered, CropStageChanged, CropReady, CropHarvested, DayResolved, CommandRejected, SnapshotLoaded, Reset },

@@ -16,7 +16,7 @@
     "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
   },
-  "integrity": "sha256-NsLWbu1MNdWvyHjLAcwhTZkkj/AotT7YaW1xSUaVI4w=",
+  "integrity": "sha256-6IfJNUJ8DxL4b4IHMMEJjM9GYtoJBmlpAHRVgGS1iZc=",
   "environments": [
     "node",
     "browser"

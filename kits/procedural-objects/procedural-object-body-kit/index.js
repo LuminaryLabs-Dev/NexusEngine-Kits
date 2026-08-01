@@ -1,8 +1,8 @@
 import {
   createObjectDescriptor,
-  defineDomainServiceKit,
   validateObjectDescriptor
-} from "nexusengine";
+} from "nexusengine/domains/object";
+import { defineDomainServiceKit } from "nexusengine/domain-service-kit";
 
 export const PROCEDURAL_OBJECT_BODY_KIT_VERSION = "0.1.0";
 const clone = (value) => value === undefined ? undefined : structuredClone(value);

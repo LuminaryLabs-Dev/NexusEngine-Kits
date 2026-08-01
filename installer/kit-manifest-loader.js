@@ -2,7 +2,7 @@ import {
   KIT_CATALOG,
   resolveKitManifest
 } from "./kit-catalog.js";
-import { TRUSTED_REGISTRY_OWNERS } from "../registry/repository-registry.js";
+import { TRUSTED_REGISTRY_OWNERS } from "./internal-repository-registry.js";
 
 export function createManifestRuntimeKit(manifest, config = {}) {
   if (!manifest.realBehavior && config.allowUnresolvedRuntime !== true) {

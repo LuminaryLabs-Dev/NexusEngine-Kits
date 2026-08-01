@@ -1,7 +1,7 @@
-import { createRealtimeGame } from "nexusengine";
+import { createEngine } from "nexusengine";
 import { createSeedKit } from "@luminarylabs/nexusengine-kits/seed-kit";
 
-const engine = createRealtimeGame({
+const engine = createEngine({
   kits: [createSeedKit({ seed: "world-1", streams: ["terrain", "loot"] })]
 });
 

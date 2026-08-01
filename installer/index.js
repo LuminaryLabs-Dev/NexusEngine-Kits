@@ -102,10 +102,8 @@ export {
 } from "./install-report.js";
 
 export {
-  createRepositoryRegistry,
   pullRegistry,
-  mergeRegistries,
-  createCapabilityGraph,
+  hydrateCompositionRegistry,
   createInstallPlan,
   collectNexusEngineProviders,
   createNexusEngineKitsLockfile,

@@ -24,7 +24,7 @@ return install reports
 import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
 const installer = createNexusEngineKitInstaller();
-await installer.installKit(engine, "generic-resource-loop-kit");
+await installer.installKit(engine, "fishing-kit");
 await installer.installDomain(engine, "hazard-combat");
 await installer.installBundle(engine, "default-game-stack");
 await installer.installAll(engine);
@@ -49,4 +49,7 @@ const reviewInstaller = createNexusEngineKitInstaller({
 `createPlaceholderKit()` is disabled. Unresolved behavior remains descriptive
 metadata until an approved implementation passes the official acceptance gates.
 
-Registry metadata can be pulled without code execution. Third-party registries require an explicit registry SHA pin, and third-party modules additionally require `allowExternalCode: true`, an integrity hash, and an approved module resolver.
+The local installer consumes the package's private generated catalog. Public
+registry discovery uses Composition registry v3 and is applied by a host through
+NexusEngine Core Composition. Third-party code still requires an explicit SHA
+pin, verified integrity, and an approved module resolver.

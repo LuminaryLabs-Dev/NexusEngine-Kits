@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
-import { createRealtimeGame } from "nexusengine";
+import { createEngine } from "nexusengine";
 import { createCameraSmoothFollowKit } from "./index.js";
 
-const engine = createRealtimeGame({ kits: [createCameraSmoothFollowKit()] });
+const engine = createEngine({ kits: [createCameraSmoothFollowKit()] });
 const service = engine.n.cameraSmoothFollow;
 const controller = service.create({
   id: "test-camera",
@@ -59,7 +59,7 @@ assert.deepEqual(transform.positionVelocity, [0, 0, 0]);
 assert.deepEqual(transform.lookVelocity, [0, 0, 0]);
 
 const snapshot = service.getSnapshot();
-const restoredEngine = createRealtimeGame({ kits: [createCameraSmoothFollowKit()] });
+const restoredEngine = createEngine({ kits: [createCameraSmoothFollowKit()] });
 restoredEngine.n.cameraSmoothFollow.loadSnapshot(snapshot);
 const restored = restoredEngine.n.cameraSmoothFollow.get("test-camera").getSnapshot();
 assert.deepEqual(restored.state.position, controller.getSnapshot().state.position);

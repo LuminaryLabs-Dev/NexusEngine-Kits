@@ -26,7 +26,7 @@ Renderer-agnostic critically damped camera follow state for position, point of i
 
 ```js
 const kit = createCameraSmoothFollowKit();
-const engine = createRealtimeGame({ kits: [kit] });
+const engine = createEngine({ kits: [kit] });
 const follow = engine.n.cameraSmoothFollow.create({
   id: "player-camera",
   positionSmoothTime: 0.22,

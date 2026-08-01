@@ -1,15 +1,15 @@
 import assert from "node:assert/strict";
 import {
-  createCoreObjectKit,
-  createRealtimeGame
+  createEngine
 } from "nexusengine";
+import { createObjectRegistryKit } from "nexusengine/domains/object";
 import { createProceduralObjectsDomainKits } from "../../domains/procedural-objects/index.js";
 import { createProceduralCreatureBodyKit } from "../../kits/procedural-creatures/procedural-creature-body-kit/index.js";
 import { createSeedKit } from "../../kits/foundation/seed-kit/index.js";
 
-const engine = createRealtimeGame({
+const engine = createEngine({
   kits: [
-    createCoreObjectKit(),
+    createObjectRegistryKit(),
     createSeedKit({ seed: "procedural-object-domain-smoke" }),
     ...createProceduralObjectsDomainKits(),
     createProceduralCreatureBodyKit()
@@ -29,8 +29,8 @@ const body = engine.n.proceduralObjectBody.create({
 });
 
 assert.equal(body.object.schema, "nexus-object-descriptor/1");
-engine.n.coreObject.register(body.object);
-assert.equal(engine.n.coreObject.get("rock-1").objectType, "procedural-rock");
+engine.n.object.register(body.object);
+assert.equal(engine.n.object.get("rock-1").objectType, "procedural-rock");
 
 const material = engine.n.proceduralObjectMaterial.create({
   objectId: "rock-1",

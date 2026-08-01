@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexusengine.dev/schemas/composition-registry-v3.json",
+  "title": "NexusEngine Composition Registry v3",
+  "type": "object",
+  "required": ["schema", "revision", "registryId", "sources", "domains", "kits", "recipes"],
+  "properties": {
+    "schema": { "const": "nexusengine.composition-registry/3" },
+    "revision": { "type": "integer", "minimum": 0 },
+    "registryId": { "type": "string", "minLength": 1 },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["registryId", "package", "version", "sourceCommit", "integrity", "status", "environments", "permissions"],
+        "properties": {
+          "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+          "integrity": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+          "status": { "enum": ["available", "metadata-only", "blocked"] }
+        }
+      }
+    },
+    "domains": { "type": "array" },
+    "kits": { "type": "array" },
+    "recipes": { "type": "array" }
+  }
+}

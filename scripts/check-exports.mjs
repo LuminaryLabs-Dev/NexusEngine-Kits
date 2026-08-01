@@ -3,19 +3,26 @@ import * as root from "../src/index.js";
 const required = [
   "createNexusEngineKitInstaller",
   "createAllNexusEngineKits",
-  "createCompletionLedgerKit",
-  "createGenericResourceLoopKit",
   "createSeededWorldPatchControllerKit",
   "createMessageWorkerExecutor",
   "createCameraSmoothFollowKit",
-  "createProtokitCore",
   "createSeedKit",
   "getKitProgress",
-  "createRepositoryRegistry",
   "pullRegistry",
+  "hydrateCompositionRegistry",
+  "createInstallPlan"
+];
+
+const removed = [
+  "createCompletionLedgerKit",
+  "createGenericResourceLoopKit",
+  "createProtokitCore",
+  "createRepositoryRegistry",
   "mergeRegistries",
   "createCapabilityGraph",
-  "createInstallPlan"
+  "createKitRegistryDomainKit",
+  "createCapabilityGraphDomainKit",
+  "createCompositionPlanningDomainKit"
 ];
 
 for (const name of required) {
@@ -24,4 +31,8 @@ for (const name of required) {
   }
 }
 
-console.log("exports ok", required);
+for (const name of removed) {
+  if (name in root) throw new Error(`Removed Core-owned export remains reachable: ${name}`);
+}
+
+console.log("exports ok", { required, removed });

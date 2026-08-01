@@ -30,7 +30,7 @@ const kits = Array.from({ length: 1000 }, (_, index) => ({
   }
 }));
 const registry = {
-  schemaVersion: "nexusengine.repository-registry.v1",
+  schemaVersion: "nexusengine-kits.internal-registry/1",
   id: "LuminaryLabs-Agents/scale-kits",
   owner: "LuminaryLabs-Agents",
   repository: "scale-kits",

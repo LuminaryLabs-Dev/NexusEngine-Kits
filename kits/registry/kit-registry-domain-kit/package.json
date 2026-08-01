@@ -1,6 +1,0 @@
-{
-  "name": "@luminarylabs/nexusengine-kits-kit-registry-domain-kit",
-  "private": true,
-  "type": "module",
-  "exports": "./index.js"
-}

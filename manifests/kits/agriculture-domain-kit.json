@@ -18,7 +18,7 @@
   },
   "integrity": null,
   "environments": ["node", "browser"],
-  "requires": ["n:core-transaction-ledger"],
+  "requires": ["n:runtime:transaction"],
   "provides": [
     "n:production:agriculture",
     "production:agriculture",
@@ -27,7 +27,7 @@
     "agriculture:cultivation",
     "agriculture:harvest"
   ],
-  "composes": ["n:core-transaction-ledger"],
+  "composes": [],
   "realBehavior": true,
   "source": {
     "owner": "LuminaryLabs-Agents",

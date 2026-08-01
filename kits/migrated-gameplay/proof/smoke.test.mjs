@@ -7,7 +7,7 @@ import * as migrated from "../index.js";
 const cases = [
   ["ar-kit", "createARKit"],
   ["ar-experience-kit", "createARExperienceKit"],
-  ["interaction-kit", "createInteractionKit"],
+  ["gameplay-interaction-kit", "createInteractionKit"],
   ["light-combat-kit", "createLightCombatKit"],
   ["companion-command-kit", "createCompanionCommandKit"],
   ["camera-collision-kit", "createCameraCollisionKit"],

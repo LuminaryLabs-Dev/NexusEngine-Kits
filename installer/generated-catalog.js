@@ -2,75 +2,6 @@
 export const GENERATED_KIT_MANIFESTS = Object.freeze([
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "action-input-kit",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
-    "domain": "input",
-    "domainPath": "n:input:action-input",
-    "parentDomainPath": "n:input",
-    "apiName": "actionInput",
-    "factory": "createActionInputKit",
-    "entry": "./kits/input/action-input-kit/index.js",
-    "packageExport": null,
-    "module": {
-      "package": null,
-      "node": null,
-      "browser": null
-    },
-    "integrity": null,
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:action-input-kit",
-      "domain:input"
-    ],
-    "composes": [],
-    "realBehavior": false,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/action-input-kit/index.js",
-      "parity": null
-    },
-    "runtime": {
-      "api": "actionInput",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "action-input-kit",
-      "blocker": "action-input-kit has no validated stable implementation or parity record."
-    },
-    "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "aerial-biome-fidelity-kits",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -984,13 +915,13 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/production/agriculture-domain-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
     },
-    "integrity": "sha256-wyO64ZEY7F0F8DNrUxLjxKjn1X2XW5yNqgmXULq7FpI=",
+    "integrity": "sha256-sio1fZfmN22wMqbSkMEPn3yBKb+HG0SOjqWxf+Zddlg=",
     "environments": [
       "node",
       "browser"
     ],
     "requires": [
-      "n:core-transaction-ledger"
+      "n:runtime:transaction"
     ],
     "provides": [
       "n:production:agriculture",
@@ -1000,9 +931,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "agriculture:cultivation",
       "agriculture:harvest"
     ],
-    "composes": [
-      "n:core-transaction-ledger"
-    ],
+    "composes": [],
     "realBehavior": true,
     "source": {
       "owner": "LuminaryLabs-Agents",
@@ -1178,75 +1107,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": null
     },
     "stability": "official"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "asset-descriptor-kit",
-    "version": "0.0.0",
-    "status": "scaffolded",
-    "kind": "runtime-kit",
-    "domain": "render-descriptors",
-    "domainPath": "n:render-descriptors:asset-descriptor",
-    "parentDomainPath": "n:render-descriptors",
-    "apiName": "assetDescriptor",
-    "factory": "createAssetDescriptorKit",
-    "entry": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-    "packageExport": null,
-    "module": {
-      "package": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-      "node": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/asset-descriptor-kit/index.js"
-    },
-    "integrity": "sha256-ZrFB97Y6U3NlmpP1R+jothGjZL4DJzBuRgeHCNRfaU4=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:asset-descriptor-kit",
-      "domain:render-descriptors"
-    ],
-    "composes": [],
-    "realBehavior": false,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/asset-descriptor-kit/index.js",
-      "parity": null
-    },
-    "runtime": {
-      "api": "assetDescriptor",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": "kits/render-descriptors/asset-descriptor-kit/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "asset-descriptor-kit",
-      "blocker": "asset-descriptor-kit has only scaffold or metadata behavior and lacks validated source parity."
-    },
-    "stability": "scaffolded"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -1803,80 +1663,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "capability-graph-domain-kit",
-    "version": "1.0.0",
-    "status": "official",
-    "kind": "domain-service-kit",
-    "domain": "registry",
-    "domainPath": "n:registry:capabilities",
-    "parentDomainPath": "n:registry",
-    "apiName": "capabilityGraph",
-    "factory": "createCapabilityGraphDomainKit",
-    "entry": "./kits/registry/capability-graph-domain-kit/index.js",
-    "packageExport": "./capability-graph-domain-kit",
-    "module": {
-      "package": "./kits/registry/capability-graph-domain-kit/index.js",
-      "node": "./kits/registry/capability-graph-domain-kit/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/capability-graph-domain-kit/index.js"
-    },
-    "integrity": "sha256-HEW0xI9RJqyJdd9pd/Mk1rDZIpIQYcjwWv62mJzAGxA=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [
-      "n:registry:kits"
-    ],
-    "provides": [
-      "n:registry:capabilities",
-      "domain:capability-graph",
-      "domain:dependency-graph"
-    ],
-    "composes": [
-      "kit-registry-domain-kit"
-    ],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-      "path": "protokits/capability-graph-domain-kit/index.js",
-      "parity": "official"
-    },
-    "runtime": {
-      "api": "capabilityGraph",
-      "snapshot": true,
-      "loadSnapshot": true,
-      "reset": true,
-      "deterministic": true
-    },
-    "proof": {
-      "readme": "kits/registry/capability-graph-domain-kit/README.md",
-      "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-      "parity": "kits/registry/capability-graph-domain-kit/source-parity.md",
-      "limitations": "kits/registry/capability-graph-domain-kit/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": false,
-      "resolved": true,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": true,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": null,
-      "blocker": null
-    },
-    "stability": "official"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "cargo-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -2275,150 +2061,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
         "inventoried": true,
         "sourceMapped": true,
         "protoValidated": false,
-        "candidate": true,
-        "official": true,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": null,
-      "blocker": null
-    },
-    "stability": "official"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "completion-ledger-kit",
-    "version": "0.0.0",
-    "status": "candidate",
-    "kind": "runtime-kit",
-    "domain": "spatial",
-    "domainPath": "n:spatial:completion-ledger",
-    "parentDomainPath": "n:spatial",
-    "apiName": "completionLedger",
-    "factory": "createCompletionLedgerKit",
-    "entry": "./kits/spatial/completion-ledger-kit/index.js",
-    "packageExport": "./completion-ledger-kit",
-    "module": {
-      "package": "./kits/spatial/completion-ledger-kit/index.js",
-      "node": "./kits/spatial/completion-ledger-kit/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/completion-ledger-kit/index.js"
-    },
-    "integrity": "sha256-0Qboeiym0l9zq02zooxp9zctB+YLenqz4KVNkjleQ8g=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:completion-ledger-kit",
-      "domain:spatial"
-    ],
-    "composes": [],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/completion-ledger-kit/index.js",
-      "parity": "candidate"
-    },
-    "runtime": {
-      "api": "completionLedger",
-      "snapshot": true,
-      "reset": true
-    },
-    "proof": {
-      "readme": "kits/spatial/completion-ledger-kit/README.md",
-      "smoke": "kits/spatial/completion-ledger-kit/smoke.test.mjs",
-      "parity": "kits/spatial/completion-ledger-kit/source-parity.md",
-      "limitations": "kits/spatial/completion-ledger-kit/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "completion-ledger-kit",
-      "blocker": "completion-ledger-kit still needs an exact stable source commit, complete feature-union parity, and all stable promotion gates."
-    },
-    "stability": "candidate"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "composition-planning-domain-kit",
-    "version": "1.0.0",
-    "status": "official",
-    "kind": "domain-service-kit",
-    "domain": "registry",
-    "domainPath": "n:registry:composition",
-    "parentDomainPath": "n:registry",
-    "apiName": "compositionPlanning",
-    "factory": "createCompositionPlanningDomainKit",
-    "entry": "./kits/registry/composition-planning-domain-kit/index.js",
-    "packageExport": "./composition-planning-domain-kit",
-    "module": {
-      "package": "./kits/registry/composition-planning-domain-kit/index.js",
-      "node": "./kits/registry/composition-planning-domain-kit/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/composition-planning-domain-kit/index.js"
-    },
-    "integrity": "sha256-aNLCfw95wj4vy9H+pLf5UmDj9fs0HVM5ln7raEbXA2A=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [
-      "n:registry:kits",
-      "n:registry:capabilities"
-    ],
-    "provides": [
-      "n:registry:composition",
-      "domain:composition-planning",
-      "domain:install-plan",
-      "domain:dependency-gap-report"
-    ],
-    "composes": [
-      "kit-registry-domain-kit",
-      "capability-graph-domain-kit"
-    ],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-      "path": "protokits/composition-planning-domain-kit/index.js",
-      "parity": "official"
-    },
-    "runtime": {
-      "api": "compositionPlanning",
-      "snapshot": true,
-      "loadSnapshot": true,
-      "reset": true,
-      "deterministic": true
-    },
-    "proof": {
-      "readme": "kits/registry/composition-planning-domain-kit/README.md",
-      "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-      "parity": "kits/registry/composition-planning-domain-kit/source-parity.md",
-      "limitations": "kits/registry/composition-planning-domain-kit/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": false,
-      "resolved": true,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
         "candidate": true,
         "official": true,
         "deprecated": false,
@@ -3332,72 +2974,71 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "generic-action-window-kit",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
+    "id": "gameplay-interaction-kit",
+    "version": "1.0.0",
+    "status": "official",
     "kind": "runtime-kit",
-    "domain": "simulation",
-    "domainPath": "n:simulation:generic-action-window",
-    "parentDomainPath": "n:simulation",
-    "apiName": "genericActionWindow",
-    "factory": "createGenericActionWindowKit",
-    "entry": "./kits/simulation/generic-action-window-kit/index.js",
-    "packageExport": null,
+    "domain": "spatial",
+    "domainPath": "n:spatial:gameplay-interaction",
+    "parentDomainPath": "n:spatial",
+    "apiName": "gameplayInteraction",
+    "factory": "createInteractionKit",
+    "entry": "./kits/migrated-gameplay/index.js",
+    "packageExport": "./migrated-gameplay",
     "module": {
-      "package": null,
-      "node": null,
-      "browser": null
+      "package": "./kits/migrated-gameplay/index.js",
+      "node": "./kits/migrated-gameplay/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
     },
-    "integrity": null,
+    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
     "environments": [
       "node",
       "browser"
     ],
     "requires": [],
     "provides": [
-      "kit:generic-action-window-kit",
-      "domain:simulation"
+      "n:spatial:gameplay-interaction"
     ],
     "composes": [],
-    "realBehavior": false,
+    "realBehavior": true,
     "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine",
       "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/generic-action-window-kit/index.js",
-      "parity": null
+      "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+      "path": "src/interaction-kit.js",
+      "parity": "official"
     },
     "runtime": {
-      "api": "genericActionWindow",
+      "api": "gameplayInteraction",
       "snapshot": false,
       "loadSnapshot": false,
       "reset": false,
-      "deterministic": false
+      "deterministic": true
     },
     "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
+      "readme": "kits/migrated-gameplay/README.md",
+      "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+      "parity": "kits/migrated-gameplay/proof/source-parity.md",
+      "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
     },
     "promotion": {
-      "baseline": true,
-      "resolved": false,
+      "baseline": false,
+      "resolved": true,
       "stages": {
         "inventoried": true,
         "sourceMapped": true,
         "protoValidated": false,
-        "candidate": false,
-        "official": false,
+        "candidate": true,
+        "official": true,
         "deprecated": false,
         "archived": false,
         "blocked": false
       },
-      "nextCapability": "generic-action-window-kit",
-      "blocker": "generic-action-window-kit has no validated stable implementation or parity record."
+      "nextCapability": null,
+      "blocker": null
     },
-    "stability": "migration-placeholder"
+    "stability": "official"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -4295,147 +3936,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": "generic-defense-wave-agent-director-dsk has no validated stable implementation or parity record."
     },
     "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "generic-pressure-loop-kit",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
-    "domain": "simulation",
-    "domainPath": "n:simulation:generic-pressure-loop",
-    "parentDomainPath": "n:simulation",
-    "apiName": "genericPressureLoop",
-    "factory": "createGenericPressureLoopKit",
-    "entry": "./kits/simulation/generic-pressure-loop-kit/index.js",
-    "packageExport": null,
-    "module": {
-      "package": null,
-      "node": null,
-      "browser": null
-    },
-    "integrity": null,
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:generic-pressure-loop-kit",
-      "domain:simulation"
-    ],
-    "composes": [],
-    "realBehavior": false,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/generic-pressure-loop-kit/index.js",
-      "parity": null
-    },
-    "runtime": {
-      "api": "genericPressureLoop",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "generic-pressure-loop-kit",
-      "blocker": "generic-pressure-loop-kit has no validated stable implementation or parity record."
-    },
-    "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "generic-resource-loop-kit",
-    "version": "1.0.0",
-    "status": "deprecated",
-    "kind": "domain-service-kit",
-    "domain": "simulation",
-    "domainPath": "n:simulation:resource-meter-service",
-    "parentDomainPath": "n:simulation",
-    "apiName": "resourceMeter",
-    "factory": "createGenericResourceLoopKit",
-    "entry": "./kits/simulation/generic-resource-loop-kit/index.js",
-    "packageExport": "./generic-resource-loop-kit",
-    "module": {
-      "package": "./kits/simulation/generic-resource-loop-kit/index.js",
-      "node": "./kits/simulation/generic-resource-loop-kit/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
-    },
-    "integrity": "sha256-T+Er/rdjPFpQL1elIePAboDsBFhNaTHuDuDoksYVCMY=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "n:simulation:resource-meter-service",
-      "resource:loop",
-      "resource:meters",
-      "resource:meter-service",
-      "validation:resources"
-    ],
-    "composes": [],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
-      "path": "protokits/generic-resource-loop-kit/index.js",
-      "parity": "historical-passing"
-    },
-    "runtime": {
-      "api": "resourceMeter",
-      "snapshot": true,
-      "loadSnapshot": true,
-      "reset": true,
-      "deterministic": true
-    },
-    "proof": {
-      "readme": "kits/simulation/generic-resource-loop-kit/README.md",
-      "smoke": "kits/simulation/generic-resource-loop-kit/smoke.test.mjs",
-      "parity": "kits/simulation/generic-resource-loop-kit/source-parity.md",
-      "limitations": "kits/simulation/generic-resource-loop-kit/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": true,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": false,
-        "deprecated": true,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": null,
-      "blocker": null
-    },
-    "stability": "deprecated"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -5477,74 +4977,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "interaction-kit",
-    "version": "1.0.0",
-    "status": "official",
-    "kind": "runtime-kit",
-    "domain": "spatial",
-    "domainPath": "n:spatial:interaction-runtime",
-    "parentDomainPath": "n:spatial",
-    "apiName": "interaction",
-    "factory": "createInteractionKit",
-    "entry": "./kits/migrated-gameplay/index.js",
-    "packageExport": "./migrated-gameplay",
-    "module": {
-      "package": "./kits/migrated-gameplay/index.js",
-      "node": "./kits/migrated-gameplay/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
-    },
-    "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "n:spatial:interaction-runtime"
-    ],
-    "composes": [],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Dev",
-      "repository": "NexusEngine",
-      "requestedRef": "main",
-      "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
-      "path": "src/interaction-kit.js",
-      "parity": "official"
-    },
-    "runtime": {
-      "api": "interaction",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": true
-    },
-    "proof": {
-      "readme": "kits/migrated-gameplay/README.md",
-      "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
-      "parity": "kits/migrated-gameplay/proof/source-parity.md",
-      "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": false,
-      "resolved": true,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": true,
-        "official": true,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": null,
-      "blocker": null
-    },
-    "stability": "official"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "interaction-target-kit",
     "version": "1.0.0",
     "status": "official",
@@ -5679,78 +5111,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": "inventory-kit has no validated stable implementation or parity record."
     },
     "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "kit-registry-domain-kit",
-    "version": "1.0.0",
-    "status": "official",
-    "kind": "domain-service-kit",
-    "domain": "registry",
-    "domainPath": "n:registry:kits",
-    "parentDomainPath": "n:registry",
-    "apiName": "kitRegistry",
-    "factory": "createKitRegistryDomainKit",
-    "entry": "./kits/registry/kit-registry-domain-kit/index.js",
-    "packageExport": "./kit-registry-domain-kit",
-    "module": {
-      "package": "./kits/registry/kit-registry-domain-kit/index.js",
-      "node": "./kits/registry/kit-registry-domain-kit/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/kit-registry-domain-kit/index.js"
-    },
-    "integrity": "sha256-xyu8d8rRV9mBtXNTMrLoEl14EhPPWC6qqzy4oKDBq1w=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "n:registry:kits",
-      "registry:kits",
-      "registry:repositories",
-      "kit:manifest-registry",
-      "domain:manifest-registry"
-    ],
-    "composes": [],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-      "path": "protokits/kit-registry-domain-kit/index.js",
-      "parity": "official"
-    },
-    "runtime": {
-      "api": "kitRegistry",
-      "snapshot": true,
-      "loadSnapshot": true,
-      "reset": true,
-      "deterministic": true
-    },
-    "proof": {
-      "readme": "kits/registry/kit-registry-domain-kit/README.md",
-      "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-      "parity": "kits/registry/kit-registry-domain-kit/source-parity.md",
-      "limitations": "kits/registry/kit-registry-domain-kit/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": false,
-      "resolved": true,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": true,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": null,
-      "blocker": null
-    },
-    "stability": "official"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -6785,144 +6145,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "persistence-domain-service-kit",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
-    "domain": "xr",
-    "domainPath": "n:xr:persistence-domain-service",
-    "parentDomainPath": "n:xr",
-    "apiName": "persistenceDomainService",
-    "factory": "createPersistenceDomainServiceKit",
-    "entry": "./kits/xr/persistence-domain-service-kit/index.js",
-    "packageExport": null,
-    "module": {
-      "package": null,
-      "node": null,
-      "browser": null
-    },
-    "integrity": null,
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:persistence-domain-service-kit",
-      "domain:xr"
-    ],
-    "composes": [],
-    "realBehavior": false,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/persistence-domain-service-kit/index.js",
-      "parity": null
-    },
-    "runtime": {
-      "api": "persistenceDomainService",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "persistence-domain-service-kit",
-      "blocker": "persistence-domain-service-kit has no validated stable implementation or parity record."
-    },
-    "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "persistence-dsk",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
-    "domain": "xr",
-    "domainPath": "n:xr:persistence-dsk",
-    "parentDomainPath": "n:xr",
-    "apiName": "persistenceDsk",
-    "factory": "createPersistenceDsk",
-    "entry": "./kits/xr/persistence-dsk/index.js",
-    "packageExport": null,
-    "module": {
-      "package": null,
-      "node": null,
-      "browser": null
-    },
-    "integrity": null,
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:persistence-dsk",
-      "domain:xr"
-    ],
-    "composes": [],
-    "realBehavior": false,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/persistence-dsk/index.js",
-      "parity": null
-    },
-    "runtime": {
-      "api": "persistenceDsk",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "persistence-dsk",
-      "blocker": "persistence-dsk has no validated stable implementation or parity record."
-    },
-    "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "powered-aerial-flight-domain-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -7008,7 +6230,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
     },
-    "integrity": "sha256-NsLWbu1MNdWvyHjLAcwhTZkkj/AotT7YaW1xSUaVI4w=",
+    "integrity": "sha256-6IfJNUJ8DxL4b4IHMMEJjM9GYtoJBmlpAHRVgGS1iZc=",
     "environments": [
       "node",
       "browser"
@@ -7126,7 +6348,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/procedural-objects/procedural-object-body-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-body-kit/index.js"
     },
-    "integrity": "sha256-ZII63GVJQhPprV167EHutIeQFu6mFHGTriGlVa3nClg=",
+    "integrity": "sha256-Cs4vD/aVOQ2PUuX3jhGWOeKDZTcXflGC7KxnZ4E32Q8=",
     "provides": [
       "n:object:procedural:body",
       "object:procedural-body-descriptor"
@@ -7420,76 +6642,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": "project-batch-deploy-bridge has no validated stable implementation or parity record."
     },
     "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "protokit-core",
-    "version": "1.0.0",
-    "status": "deprecated",
-    "kind": "compatibility-domain-service-kit",
-    "domain": "foundation",
-    "domainPath": "n:compatibility:protokit-core",
-    "parentDomainPath": "n:compatibility",
-    "apiName": "protokitCore",
-    "factory": "createProtokitCore",
-    "entry": "./kits/foundation/protokit-core/index.js",
-    "packageExport": "./protokit-core",
-    "module": {
-      "package": "./kits/foundation/protokit-core/index.js",
-      "node": "./kits/foundation/protokit-core/index.js",
-      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js"
-    },
-    "integrity": "sha256-i5xX/vht6VmLIDAJDs7v1cVrauteU70DqqvCaMSXmME=",
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "n:compatibility:protokit-core",
-      "compatibility:protokit-core",
-      "foundation:deterministic-utility-compatibility"
-    ],
-    "composes": [],
-    "realBehavior": true,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": "9b0d74c57c29d04a9ba955ae41c8ca19cb2cd5d6",
-      "path": "protokits/protokit-core/index.js",
-      "parity": "deprecated-replacement-parity"
-    },
-    "runtime": {
-      "api": "protokitCore",
-      "snapshot": true,
-      "loadSnapshot": true,
-      "reset": true,
-      "deterministic": true
-    },
-    "proof": {
-      "readme": "kits/foundation/protokit-core/README.md",
-      "smoke": "kits/foundation/protokit-core/smoke.test.mjs",
-      "parity": "kits/foundation/protokit-core/source-parity.md",
-      "limitations": "kits/foundation/protokit-core/LIMITATIONS.md"
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": true,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": true,
-        "candidate": true,
-        "official": false,
-        "deprecated": true,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": null,
-      "blocker": null
-    },
-    "stability": "deprecated"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -8197,7 +7349,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/foundation/seed-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js"
     },
-    "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
+    "integrity": "sha256-2L+l3CMSGRnw/m/K8ejOl/jV8JPbL9mGHJYvFIhsJmE=",
     "environments": [
       "node",
       "browser"
@@ -8878,144 +8030,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "spatial-scene-graph-dsk",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
-    "domain": "xr",
-    "domainPath": "n:xr:spatial-scene-graph-dsk",
-    "parentDomainPath": "n:xr",
-    "apiName": "spatialSceneGraphDsk",
-    "factory": "createSpatialSceneGraphDsk",
-    "entry": "./kits/xr/spatial-scene-graph-dsk/index.js",
-    "packageExport": null,
-    "module": {
-      "package": null,
-      "node": null,
-      "browser": null
-    },
-    "integrity": null,
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:spatial-scene-graph-dsk",
-      "domain:xr"
-    ],
-    "composes": [],
-    "realBehavior": false,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/spatial-scene-graph-dsk/index.js",
-      "parity": null
-    },
-    "runtime": {
-      "api": "spatialSceneGraphDsk",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "spatial-scene-graph-dsk",
-      "blocker": "spatial-scene-graph-dsk has no validated stable implementation or parity record."
-    },
-    "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "spatial-scene-graph-kit",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
-    "domain": "xr",
-    "domainPath": "n:xr:spatial-scene-graph",
-    "parentDomainPath": "n:xr",
-    "apiName": "spatialSceneGraph",
-    "factory": "createSpatialSceneGraphKit",
-    "entry": "./kits/xr/spatial-scene-graph-kit/index.js",
-    "packageExport": null,
-    "module": {
-      "package": null,
-      "node": null,
-      "browser": null
-    },
-    "integrity": null,
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:spatial-scene-graph-kit",
-      "domain:xr"
-    ],
-    "composes": [],
-    "realBehavior": false,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/spatial-scene-graph-kit/index.js",
-      "parity": null
-    },
-    "runtime": {
-      "api": "spatialSceneGraph",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "spatial-scene-graph-kit",
-      "blocker": "spatial-scene-graph-kit has no validated stable implementation or parity record."
-    },
-    "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "state-digest-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -9561,75 +8575,6 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       },
       "nextCapability": "terrain-ground-contact-domain-kit",
       "blocker": "terrain-ground-contact-domain-kit has no validated stable implementation or parity record."
-    },
-    "stability": "migration-placeholder"
-  },
-  {
-    "schemaVersion": "nexusengine.kit-manifest.v1",
-    "id": "transform-domain-service-kit",
-    "version": "0.0.0",
-    "status": "migration-placeholder",
-    "kind": "runtime-kit",
-    "domain": "xr",
-    "domainPath": "n:xr:transform-domain-service",
-    "parentDomainPath": "n:xr",
-    "apiName": "transformDomainService",
-    "factory": "createTransformDomainServiceKit",
-    "entry": "./kits/xr/transform-domain-service-kit/index.js",
-    "packageExport": null,
-    "module": {
-      "package": null,
-      "node": null,
-      "browser": null
-    },
-    "integrity": null,
-    "environments": [
-      "node",
-      "browser"
-    ],
-    "requires": [],
-    "provides": [
-      "kit:transform-domain-service-kit",
-      "domain:xr"
-    ],
-    "composes": [],
-    "realBehavior": false,
-    "source": {
-      "owner": "LuminaryLabs-Agents",
-      "repository": "NexusEngine-ProtoKits",
-      "requestedRef": "main",
-      "resolvedCommit": null,
-      "path": "protokits/transform-domain-service-kit/index.js",
-      "parity": null
-    },
-    "runtime": {
-      "api": "transformDomainService",
-      "snapshot": false,
-      "loadSnapshot": false,
-      "reset": false,
-      "deterministic": false
-    },
-    "proof": {
-      "readme": null,
-      "smoke": null,
-      "parity": null,
-      "limitations": null
-    },
-    "promotion": {
-      "baseline": true,
-      "resolved": false,
-      "stages": {
-        "inventoried": true,
-        "sourceMapped": true,
-        "protoValidated": false,
-        "candidate": false,
-        "official": false,
-        "deprecated": false,
-        "archived": false,
-        "blocked": false
-      },
-      "nextCapability": "transform-domain-service-kit",
-      "blocker": "transform-domain-service-kit has no validated stable implementation or parity record."
     },
     "stability": "migration-placeholder"
   },
@@ -10427,7 +9372,6 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
     "domainPath": "n:foundation",
     "entry": "./domains/foundation/index.js",
     "kits": [
-      "protokit-core",
       "seed-kit",
       "clock-kit",
       "state-digest-kit",
@@ -10485,7 +9429,6 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
     "domainPath": "n:input",
     "entry": "./domains/input/index.js",
     "kits": [
-      "action-input-kit",
       "input-context-kit",
       "input-buffer-kit",
       "view-rig-kit"
@@ -10568,20 +9511,6 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.domain-manifest.v1",
-    "id": "registry",
-    "label": "Registry Control Plane",
-    "kind": "control-domain",
-    "status": "official",
-    "domainPath": "n:registry",
-    "entry": "./domains/registry/index.js",
-    "kits": [
-      "kit-registry-domain-kit",
-      "capability-graph-domain-kit",
-      "composition-planning-domain-kit"
-    ]
-  },
-  {
-    "schemaVersion": "nexusengine.domain-manifest.v1",
     "id": "render-descriptors",
     "label": "Render Descriptors",
     "kind": "descriptor-domain",
@@ -10590,7 +9519,6 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
     "entry": "./domains/render-descriptors/index.js",
     "kits": [
       "render-descriptor-kit",
-      "asset-descriptor-kit",
       "instanced-render-batch-kit",
       "visual-pipeline-kit",
       "render-layer-kit",
@@ -10660,10 +9588,7 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
     "domainPath": "n:simulation",
     "entry": "./domains/simulation/index.js",
     "kits": [
-      "generic-pressure-loop-kit",
-      "generic-resource-loop-kit",
       "seeded-world-patch-controller-kit",
-      "generic-action-window-kit",
       "generic-affordance-descriptor-kit"
     ]
   },
@@ -10680,8 +9605,7 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
       "interactable-registry-kit",
       "spatial-interaction-kit",
       "hold-action-kit",
-      "completion-ledger-kit",
-      "interaction-kit",
+      "gameplay-interaction-kit",
       "spatial-room-kit",
       "interaction-target-kit"
     ]
@@ -10701,18 +9625,13 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
       "webxr-hand-adapter-dsk",
       "openxr-hand-adapter-dsk",
       "hand-gesture-dsk",
-      "spatial-scene-graph-dsk",
-      "spatial-scene-graph-kit",
       "selection-dsk",
       "selection-domain-service-kit",
       "transform-dsk",
-      "transform-domain-service-kit",
       "widget-dsk",
       "widget-domain-service-kit",
       "interaction-dsk",
       "interaction-domain-service-kit",
-      "persistence-dsk",
-      "persistence-domain-service-kit",
       "ar-kit",
       "ar-experience-kit",
       "surface-placement-kit"
@@ -10743,7 +9662,6 @@ export const GENERATED_BUNDLE_MANIFESTS = Object.freeze([
     "status": "candidate",
     "entry": "./bundles/all.js",
     "domains": [
-      "registry",
       "foundation",
       "input",
       "spatial",
@@ -10815,17 +9733,6 @@ export const GENERATED_BUNDLE_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.bundle-manifest.v1",
-    "id": "registry-control-plane",
-    "label": "Registry Control Plane",
-    "status": "official",
-    "entry": "./bundles/registry-control-plane.js",
-    "domains": [
-      "registry"
-    ],
-    "kits": []
-  },
-  {
-    "schemaVersion": "nexusengine.bundle-manifest.v1",
     "id": "rpg-game-stack",
     "label": "rpg-game-stack",
     "status": "candidate",
@@ -10864,11 +9771,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
   "branch": "main",
   "status": "registry-backed",
   "promotion": {
-    "baselineCount": 120,
+    "baselineCount": 108,
     "approvedAdditionIds": [
-      "kit-registry-domain-kit",
-      "capability-graph-domain-kit",
-      "composition-planning-domain-kit",
       "procedural-creature-body-kit",
       "instanced-render-batch-kit",
       "seeded-world-patch-controller-kit",
@@ -10881,7 +9785,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "fishing-kit",
       "ar-kit",
       "ar-experience-kit",
-      "interaction-kit",
+      "gameplay-interaction-kit",
       "companion-command-kit",
       "character-ragdoll-kit",
       "forest-placement-kit",
@@ -10947,7 +9851,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "cargo-transfer-kit"
     ],
     "foundation": [
-      "protokit-core",
       "seed-kit",
       "clock-kit",
       "state-digest-kit",
@@ -10978,7 +9881,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "moving-target-kit"
     ],
     "input": [
-      "action-input-kit",
       "input-context-kit",
       "input-buffer-kit",
       "view-rig-kit"
@@ -11012,14 +9914,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     "project-deployment": [
       "project-batch-deploy-bridge"
     ],
-    "registry": [
-      "kit-registry-domain-kit",
-      "capability-graph-domain-kit",
-      "composition-planning-domain-kit"
-    ],
     "render-descriptors": [
       "render-descriptor-kit",
-      "asset-descriptor-kit",
       "instanced-render-batch-kit",
       "visual-pipeline-kit",
       "render-layer-kit",
@@ -11053,10 +9949,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "companion-command-kit"
     ],
     "simulation": [
-      "generic-pressure-loop-kit",
-      "generic-resource-loop-kit",
       "seeded-world-patch-controller-kit",
-      "generic-action-window-kit",
       "generic-affordance-descriptor-kit"
     ],
     "spatial": [
@@ -11064,8 +9957,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "interactable-registry-kit",
       "spatial-interaction-kit",
       "hold-action-kit",
-      "completion-ledger-kit",
-      "interaction-kit",
+      "gameplay-interaction-kit",
       "spatial-room-kit",
       "interaction-target-kit"
     ],
@@ -11076,18 +9968,13 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "webxr-hand-adapter-dsk",
       "openxr-hand-adapter-dsk",
       "hand-gesture-dsk",
-      "spatial-scene-graph-dsk",
-      "spatial-scene-graph-kit",
       "selection-dsk",
       "selection-domain-service-kit",
       "transform-dsk",
-      "transform-domain-service-kit",
       "widget-dsk",
       "widget-domain-service-kit",
       "interaction-dsk",
       "interaction-domain-service-kit",
-      "persistence-dsk",
-      "persistence-domain-service-kit",
       "ar-kit",
       "ar-experience-kit",
       "surface-placement-kit"
@@ -11103,7 +9990,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "aerial"
     ],
     "all": [
-      "registry",
       "foundation",
       "input",
       "spatial",
@@ -11147,9 +10033,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "spatial",
       "progression"
     ],
-    "registry-control-plane": [
-      "registry"
-    ],
     "rpg-game-stack": [
       "foundation",
       "input",
@@ -11169,75 +10052,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     ]
   },
   "manifests": [
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "action-input-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "input",
-      "domainPath": "n:input:action-input",
-      "parentDomainPath": "n:input",
-      "apiName": "actionInput",
-      "factory": "createActionInputKit",
-      "entry": "./kits/input/action-input-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:action-input-kit",
-        "domain:input"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/action-input-kit/index.js",
-        "parity": null
-      },
-      "runtime": {
-        "api": "actionInput",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "action-input-kit",
-        "blocker": "action-input-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder"
-    },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "aerial-biome-fidelity-kits",
@@ -12153,13 +10967,13 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/production/agriculture-domain-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
       },
-      "integrity": "sha256-wyO64ZEY7F0F8DNrUxLjxKjn1X2XW5yNqgmXULq7FpI=",
+      "integrity": "sha256-sio1fZfmN22wMqbSkMEPn3yBKb+HG0SOjqWxf+Zddlg=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [
-        "n:core-transaction-ledger"
+        "n:runtime:transaction"
       ],
       "provides": [
         "n:production:agriculture",
@@ -12169,9 +10983,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "agriculture:cultivation",
         "agriculture:harvest"
       ],
-      "composes": [
-        "n:core-transaction-ledger"
-      ],
+      "composes": [],
       "realBehavior": true,
       "source": {
         "owner": "LuminaryLabs-Agents",
@@ -12347,75 +11159,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": null
       },
       "stability": "official"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "asset-descriptor-kit",
-      "version": "0.0.0",
-      "status": "scaffolded",
-      "kind": "runtime-kit",
-      "domain": "render-descriptors",
-      "domainPath": "n:render-descriptors:asset-descriptor",
-      "parentDomainPath": "n:render-descriptors",
-      "apiName": "assetDescriptor",
-      "factory": "createAssetDescriptorKit",
-      "entry": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-        "node": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/asset-descriptor-kit/index.js"
-      },
-      "integrity": "sha256-ZrFB97Y6U3NlmpP1R+jothGjZL4DJzBuRgeHCNRfaU4=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:asset-descriptor-kit",
-        "domain:render-descriptors"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/asset-descriptor-kit/index.js",
-        "parity": null
-      },
-      "runtime": {
-        "api": "assetDescriptor",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": "kits/render-descriptors/asset-descriptor-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "asset-descriptor-kit",
-        "blocker": "asset-descriptor-kit has only scaffold or metadata behavior and lacks validated source parity."
-      },
-      "stability": "scaffolded"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -12972,80 +11715,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "capability-graph-domain-kit",
-      "version": "1.0.0",
-      "status": "official",
-      "kind": "domain-service-kit",
-      "domain": "registry",
-      "domainPath": "n:registry:capabilities",
-      "parentDomainPath": "n:registry",
-      "apiName": "capabilityGraph",
-      "factory": "createCapabilityGraphDomainKit",
-      "entry": "./kits/registry/capability-graph-domain-kit/index.js",
-      "packageExport": "./capability-graph-domain-kit",
-      "module": {
-        "package": "./kits/registry/capability-graph-domain-kit/index.js",
-        "node": "./kits/registry/capability-graph-domain-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/capability-graph-domain-kit/index.js"
-      },
-      "integrity": "sha256-HEW0xI9RJqyJdd9pd/Mk1rDZIpIQYcjwWv62mJzAGxA=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [
-        "n:registry:kits"
-      ],
-      "provides": [
-        "n:registry:capabilities",
-        "domain:capability-graph",
-        "domain:dependency-graph"
-      ],
-      "composes": [
-        "kit-registry-domain-kit"
-      ],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-        "path": "protokits/capability-graph-domain-kit/index.js",
-        "parity": "official"
-      },
-      "runtime": {
-        "api": "capabilityGraph",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/registry/capability-graph-domain-kit/README.md",
-        "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-        "parity": "kits/registry/capability-graph-domain-kit/source-parity.md",
-        "limitations": "kits/registry/capability-graph-domain-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": true,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "official"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "cargo-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -13444,150 +12113,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
           "inventoried": true,
           "sourceMapped": true,
           "protoValidated": false,
-          "candidate": true,
-          "official": true,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "official"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "completion-ledger-kit",
-      "version": "0.0.0",
-      "status": "candidate",
-      "kind": "runtime-kit",
-      "domain": "spatial",
-      "domainPath": "n:spatial:completion-ledger",
-      "parentDomainPath": "n:spatial",
-      "apiName": "completionLedger",
-      "factory": "createCompletionLedgerKit",
-      "entry": "./kits/spatial/completion-ledger-kit/index.js",
-      "packageExport": "./completion-ledger-kit",
-      "module": {
-        "package": "./kits/spatial/completion-ledger-kit/index.js",
-        "node": "./kits/spatial/completion-ledger-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/completion-ledger-kit/index.js"
-      },
-      "integrity": "sha256-0Qboeiym0l9zq02zooxp9zctB+YLenqz4KVNkjleQ8g=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:completion-ledger-kit",
-        "domain:spatial"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/completion-ledger-kit/index.js",
-        "parity": "candidate"
-      },
-      "runtime": {
-        "api": "completionLedger",
-        "snapshot": true,
-        "reset": true
-      },
-      "proof": {
-        "readme": "kits/spatial/completion-ledger-kit/README.md",
-        "smoke": "kits/spatial/completion-ledger-kit/smoke.test.mjs",
-        "parity": "kits/spatial/completion-ledger-kit/source-parity.md",
-        "limitations": "kits/spatial/completion-ledger-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "completion-ledger-kit",
-        "blocker": "completion-ledger-kit still needs an exact stable source commit, complete feature-union parity, and all stable promotion gates."
-      },
-      "stability": "candidate"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "composition-planning-domain-kit",
-      "version": "1.0.0",
-      "status": "official",
-      "kind": "domain-service-kit",
-      "domain": "registry",
-      "domainPath": "n:registry:composition",
-      "parentDomainPath": "n:registry",
-      "apiName": "compositionPlanning",
-      "factory": "createCompositionPlanningDomainKit",
-      "entry": "./kits/registry/composition-planning-domain-kit/index.js",
-      "packageExport": "./composition-planning-domain-kit",
-      "module": {
-        "package": "./kits/registry/composition-planning-domain-kit/index.js",
-        "node": "./kits/registry/composition-planning-domain-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/composition-planning-domain-kit/index.js"
-      },
-      "integrity": "sha256-aNLCfw95wj4vy9H+pLf5UmDj9fs0HVM5ln7raEbXA2A=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [
-        "n:registry:kits",
-        "n:registry:capabilities"
-      ],
-      "provides": [
-        "n:registry:composition",
-        "domain:composition-planning",
-        "domain:install-plan",
-        "domain:dependency-gap-report"
-      ],
-      "composes": [
-        "kit-registry-domain-kit",
-        "capability-graph-domain-kit"
-      ],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-        "path": "protokits/composition-planning-domain-kit/index.js",
-        "parity": "official"
-      },
-      "runtime": {
-        "api": "compositionPlanning",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/registry/composition-planning-domain-kit/README.md",
-        "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-        "parity": "kits/registry/composition-planning-domain-kit/source-parity.md",
-        "limitations": "kits/registry/composition-planning-domain-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
           "candidate": true,
           "official": true,
           "deprecated": false,
@@ -14501,72 +13026,71 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "generic-action-window-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
+      "id": "gameplay-interaction-kit",
+      "version": "1.0.0",
+      "status": "official",
       "kind": "runtime-kit",
-      "domain": "simulation",
-      "domainPath": "n:simulation:generic-action-window",
-      "parentDomainPath": "n:simulation",
-      "apiName": "genericActionWindow",
-      "factory": "createGenericActionWindowKit",
-      "entry": "./kits/simulation/generic-action-window-kit/index.js",
-      "packageExport": null,
+      "domain": "spatial",
+      "domainPath": "n:spatial:gameplay-interaction",
+      "parentDomainPath": "n:spatial",
+      "apiName": "gameplayInteraction",
+      "factory": "createInteractionKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:generic-action-window-kit",
-        "domain:simulation"
+        "n:spatial:gameplay-interaction"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine",
         "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/generic-action-window-kit/index.js",
-        "parity": null
+        "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+        "path": "src/interaction-kit.js",
+        "parity": "official"
       },
       "runtime": {
-        "api": "genericActionWindow",
+        "api": "gameplayInteraction",
         "snapshot": false,
         "loadSnapshot": false,
         "reset": false,
-        "deterministic": false
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
       },
       "promotion": {
-        "baseline": true,
-        "resolved": false,
+        "baseline": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
           "protoValidated": false,
-          "candidate": false,
-          "official": false,
+          "candidate": true,
+          "official": true,
           "deprecated": false,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "generic-action-window-kit",
-        "blocker": "generic-action-window-kit has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder"
+      "stability": "official"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -15464,147 +13988,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": "generic-defense-wave-agent-director-dsk has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "generic-pressure-loop-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "simulation",
-      "domainPath": "n:simulation:generic-pressure-loop",
-      "parentDomainPath": "n:simulation",
-      "apiName": "genericPressureLoop",
-      "factory": "createGenericPressureLoopKit",
-      "entry": "./kits/simulation/generic-pressure-loop-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:generic-pressure-loop-kit",
-        "domain:simulation"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/generic-pressure-loop-kit/index.js",
-        "parity": null
-      },
-      "runtime": {
-        "api": "genericPressureLoop",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "generic-pressure-loop-kit",
-        "blocker": "generic-pressure-loop-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "generic-resource-loop-kit",
-      "version": "1.0.0",
-      "status": "deprecated",
-      "kind": "domain-service-kit",
-      "domain": "simulation",
-      "domainPath": "n:simulation:resource-meter-service",
-      "parentDomainPath": "n:simulation",
-      "apiName": "resourceMeter",
-      "factory": "createGenericResourceLoopKit",
-      "entry": "./kits/simulation/generic-resource-loop-kit/index.js",
-      "packageExport": "./generic-resource-loop-kit",
-      "module": {
-        "package": "./kits/simulation/generic-resource-loop-kit/index.js",
-        "node": "./kits/simulation/generic-resource-loop-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
-      },
-      "integrity": "sha256-T+Er/rdjPFpQL1elIePAboDsBFhNaTHuDuDoksYVCMY=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:simulation:resource-meter-service",
-        "resource:loop",
-        "resource:meters",
-        "resource:meter-service",
-        "validation:resources"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
-        "path": "protokits/generic-resource-loop-kit/index.js",
-        "parity": "historical-passing"
-      },
-      "runtime": {
-        "api": "resourceMeter",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/simulation/generic-resource-loop-kit/README.md",
-        "smoke": "kits/simulation/generic-resource-loop-kit/smoke.test.mjs",
-        "parity": "kits/simulation/generic-resource-loop-kit/source-parity.md",
-        "limitations": "kits/simulation/generic-resource-loop-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": true,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "deprecated"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -16646,74 +15029,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "interaction-kit",
-      "version": "1.0.0",
-      "status": "official",
-      "kind": "runtime-kit",
-      "domain": "spatial",
-      "domainPath": "n:spatial:interaction-runtime",
-      "parentDomainPath": "n:spatial",
-      "apiName": "interaction",
-      "factory": "createInteractionKit",
-      "entry": "./kits/migrated-gameplay/index.js",
-      "packageExport": "./migrated-gameplay",
-      "module": {
-        "package": "./kits/migrated-gameplay/index.js",
-        "node": "./kits/migrated-gameplay/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
-      },
-      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:spatial:interaction-runtime"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine",
-        "requestedRef": "main",
-        "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
-        "path": "src/interaction-kit.js",
-        "parity": "official"
-      },
-      "runtime": {
-        "api": "interaction",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/migrated-gameplay/README.md",
-        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
-        "parity": "kits/migrated-gameplay/proof/source-parity.md",
-        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": true,
-          "official": true,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "official"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "interaction-target-kit",
       "version": "1.0.0",
       "status": "official",
@@ -16848,78 +15163,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": "inventory-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "kit-registry-domain-kit",
-      "version": "1.0.0",
-      "status": "official",
-      "kind": "domain-service-kit",
-      "domain": "registry",
-      "domainPath": "n:registry:kits",
-      "parentDomainPath": "n:registry",
-      "apiName": "kitRegistry",
-      "factory": "createKitRegistryDomainKit",
-      "entry": "./kits/registry/kit-registry-domain-kit/index.js",
-      "packageExport": "./kit-registry-domain-kit",
-      "module": {
-        "package": "./kits/registry/kit-registry-domain-kit/index.js",
-        "node": "./kits/registry/kit-registry-domain-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/kit-registry-domain-kit/index.js"
-      },
-      "integrity": "sha256-xyu8d8rRV9mBtXNTMrLoEl14EhPPWC6qqzy4oKDBq1w=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:registry:kits",
-        "registry:kits",
-        "registry:repositories",
-        "kit:manifest-registry",
-        "domain:manifest-registry"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-        "path": "protokits/kit-registry-domain-kit/index.js",
-        "parity": "official"
-      },
-      "runtime": {
-        "api": "kitRegistry",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/registry/kit-registry-domain-kit/README.md",
-        "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-        "parity": "kits/registry/kit-registry-domain-kit/source-parity.md",
-        "limitations": "kits/registry/kit-registry-domain-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": true,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "official"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -17954,144 +16197,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "persistence-domain-service-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:persistence-domain-service",
-      "parentDomainPath": "n:xr",
-      "apiName": "persistenceDomainService",
-      "factory": "createPersistenceDomainServiceKit",
-      "entry": "./kits/xr/persistence-domain-service-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:persistence-domain-service-kit",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/persistence-domain-service-kit/index.js",
-        "parity": null
-      },
-      "runtime": {
-        "api": "persistenceDomainService",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "persistence-domain-service-kit",
-        "blocker": "persistence-domain-service-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "persistence-dsk",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:persistence-dsk",
-      "parentDomainPath": "n:xr",
-      "apiName": "persistenceDsk",
-      "factory": "createPersistenceDsk",
-      "entry": "./kits/xr/persistence-dsk/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:persistence-dsk",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/persistence-dsk/index.js",
-        "parity": null
-      },
-      "runtime": {
-        "api": "persistenceDsk",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "persistence-dsk",
-        "blocker": "persistence-dsk has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "powered-aerial-flight-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -18177,7 +16282,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
       },
-      "integrity": "sha256-NsLWbu1MNdWvyHjLAcwhTZkkj/AotT7YaW1xSUaVI4w=",
+      "integrity": "sha256-6IfJNUJ8DxL4b4IHMMEJjM9GYtoJBmlpAHRVgGS1iZc=",
       "environments": [
         "node",
         "browser"
@@ -18295,7 +16400,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/procedural-objects/procedural-object-body-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-body-kit/index.js"
       },
-      "integrity": "sha256-ZII63GVJQhPprV167EHutIeQFu6mFHGTriGlVa3nClg=",
+      "integrity": "sha256-Cs4vD/aVOQ2PUuX3jhGWOeKDZTcXflGC7KxnZ4E32Q8=",
       "provides": [
         "n:object:procedural:body",
         "object:procedural-body-descriptor"
@@ -18589,76 +16694,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": "project-batch-deploy-bridge has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "protokit-core",
-      "version": "1.0.0",
-      "status": "deprecated",
-      "kind": "compatibility-domain-service-kit",
-      "domain": "foundation",
-      "domainPath": "n:compatibility:protokit-core",
-      "parentDomainPath": "n:compatibility",
-      "apiName": "protokitCore",
-      "factory": "createProtokitCore",
-      "entry": "./kits/foundation/protokit-core/index.js",
-      "packageExport": "./protokit-core",
-      "module": {
-        "package": "./kits/foundation/protokit-core/index.js",
-        "node": "./kits/foundation/protokit-core/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js"
-      },
-      "integrity": "sha256-i5xX/vht6VmLIDAJDs7v1cVrauteU70DqqvCaMSXmME=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:compatibility:protokit-core",
-        "compatibility:protokit-core",
-        "foundation:deterministic-utility-compatibility"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": "9b0d74c57c29d04a9ba955ae41c8ca19cb2cd5d6",
-        "path": "protokits/protokit-core/index.js",
-        "parity": "deprecated-replacement-parity"
-      },
-      "runtime": {
-        "api": "protokitCore",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/foundation/protokit-core/README.md",
-        "smoke": "kits/foundation/protokit-core/smoke.test.mjs",
-        "parity": "kits/foundation/protokit-core/source-parity.md",
-        "limitations": "kits/foundation/protokit-core/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": true,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "deprecated"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -19366,7 +17401,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/foundation/seed-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js"
       },
-      "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
+      "integrity": "sha256-2L+l3CMSGRnw/m/K8ejOl/jV8JPbL9mGHJYvFIhsJmE=",
       "environments": [
         "node",
         "browser"
@@ -20047,144 +18082,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "spatial-scene-graph-dsk",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:spatial-scene-graph-dsk",
-      "parentDomainPath": "n:xr",
-      "apiName": "spatialSceneGraphDsk",
-      "factory": "createSpatialSceneGraphDsk",
-      "entry": "./kits/xr/spatial-scene-graph-dsk/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:spatial-scene-graph-dsk",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/spatial-scene-graph-dsk/index.js",
-        "parity": null
-      },
-      "runtime": {
-        "api": "spatialSceneGraphDsk",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "spatial-scene-graph-dsk",
-        "blocker": "spatial-scene-graph-dsk has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "spatial-scene-graph-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:spatial-scene-graph",
-      "parentDomainPath": "n:xr",
-      "apiName": "spatialSceneGraph",
-      "factory": "createSpatialSceneGraphKit",
-      "entry": "./kits/xr/spatial-scene-graph-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:spatial-scene-graph-kit",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/spatial-scene-graph-kit/index.js",
-        "parity": null
-      },
-      "runtime": {
-        "api": "spatialSceneGraph",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "spatial-scene-graph-kit",
-        "blocker": "spatial-scene-graph-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "state-digest-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -20730,75 +18627,6 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         },
         "nextCapability": "terrain-ground-contact-domain-kit",
         "blocker": "terrain-ground-contact-domain-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder"
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "transform-domain-service-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:transform-domain-service",
-      "parentDomainPath": "n:xr",
-      "apiName": "transformDomainService",
-      "factory": "createTransformDomainServiceKit",
-      "entry": "./kits/xr/transform-domain-service-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:transform-domain-service-kit",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "owner": "LuminaryLabs-Agents",
-        "repository": "NexusEngine-ProtoKits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "protokits/transform-domain-service-kit/index.js",
-        "parity": null
-      },
-      "runtime": {
-        "api": "transformDomainService",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "transform-domain-service-kit",
-        "blocker": "transform-domain-service-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
     },
@@ -21495,7 +19323,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
   ]
 });
 export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
-  "schemaVersion": "nexusengine.repository-registry.v1",
+  "schemaVersion": "nexusengine-kits.internal-registry/1",
   "id": "LuminaryLabs-Dev/NexusEngine-Kits",
   "owner": "LuminaryLabs-Dev",
   "repository": "NexusEngine-Kits",
@@ -21504,14 +19332,11 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
   "engineCompatibility": {
     "package": "nexusengine",
     "range": "0.0.4",
-    "testedCommit": "91ebeeebb4f4f9bb121d13e0a97b6eac849ae485"
+    "testedCommit": "a68544434424438491be1398e3f3d5aced5bc5ee"
   },
   "promotion": {
-    "baselineCount": 120,
+    "baselineCount": 108,
     "approvedAdditionIds": [
-      "kit-registry-domain-kit",
-      "capability-graph-domain-kit",
-      "composition-planning-domain-kit",
       "procedural-creature-body-kit",
       "instanced-render-batch-kit",
       "seeded-world-patch-controller-kit",
@@ -21524,7 +19349,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "fishing-kit",
       "ar-kit",
       "ar-experience-kit",
-      "interaction-kit",
+      "gameplay-interaction-kit",
       "companion-command-kit",
       "character-ragdoll-kit",
       "forest-placement-kit",
@@ -21553,101 +19378,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
   "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
   "trusted": true,
   "kits": [
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "action-input-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "input",
-      "domainPath": "n:input:action-input",
-      "parentDomainPath": "n:input",
-      "apiName": "actionInput",
-      "factory": "createActionInputKit",
-      "entry": "./kits/input/action-input-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:action-input-kit",
-        "domain:input"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/input/action-input-kit/index.js"
-      },
-      "runtime": {
-        "api": "actionInput",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "action-input-kit",
-        "blocker": "action-input-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/action-input-kit/index.js",
-          "parity": null
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "action-input-kit",
-          "blocker": "action-input-kit has no validated stable implementation or parity record."
-        }
-      }
-    },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "aerial-biome-fidelity-kits",
@@ -22901,13 +20631,13 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/production/agriculture-domain-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/production/agriculture-domain-kit/index.js"
       },
-      "integrity": "sha256-wyO64ZEY7F0F8DNrUxLjxKjn1X2XW5yNqgmXULq7FpI=",
+      "integrity": "sha256-sio1fZfmN22wMqbSkMEPn3yBKb+HG0SOjqWxf+Zddlg=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [
-        "n:core-transaction-ledger"
+        "n:runtime:transaction"
       ],
       "provides": [
         "n:production:agriculture",
@@ -22917,9 +20647,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "agriculture:cultivation",
         "agriculture:harvest"
       ],
-      "composes": [
-        "n:core-transaction-ledger"
-      ],
+      "composes": [],
       "realBehavior": true,
       "source": {
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
@@ -23171,101 +20899,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": null,
           "blocker": null
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "asset-descriptor-kit",
-      "version": "0.0.0",
-      "status": "scaffolded",
-      "kind": "runtime-kit",
-      "domain": "render-descriptors",
-      "domainPath": "n:render-descriptors:asset-descriptor",
-      "parentDomainPath": "n:render-descriptors",
-      "apiName": "assetDescriptor",
-      "factory": "createAssetDescriptorKit",
-      "entry": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-        "node": "./kits/render-descriptors/asset-descriptor-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/render-descriptors/asset-descriptor-kit/index.js"
-      },
-      "integrity": "sha256-ZrFB97Y6U3NlmpP1R+jothGjZL4DJzBuRgeHCNRfaU4=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:asset-descriptor-kit",
-        "domain:render-descriptors"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/render-descriptors/asset-descriptor-kit/index.js"
-      },
-      "runtime": {
-        "api": "assetDescriptor",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": "kits/render-descriptors/asset-descriptor-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "asset-descriptor-kit",
-        "blocker": "asset-descriptor-kit has only scaffold or metadata behavior and lacks validated source parity."
-      },
-      "stability": "scaffolded",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/asset-descriptor-kit/index.js",
-          "parity": null
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "asset-descriptor-kit",
-          "blocker": "asset-descriptor-kit has only scaffold or metadata behavior and lacks validated source parity."
         }
       }
     },
@@ -24032,106 +21665,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "capability-graph-domain-kit",
-      "version": "1.0.0",
-      "status": "official",
-      "kind": "domain-service-kit",
-      "domain": "registry",
-      "domainPath": "n:registry:capabilities",
-      "parentDomainPath": "n:registry",
-      "apiName": "capabilityGraph",
-      "factory": "createCapabilityGraphDomainKit",
-      "entry": "./kits/registry/capability-graph-domain-kit/index.js",
-      "packageExport": "./capability-graph-domain-kit",
-      "module": {
-        "package": "./kits/registry/capability-graph-domain-kit/index.js",
-        "node": "./kits/registry/capability-graph-domain-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/capability-graph-domain-kit/index.js"
-      },
-      "integrity": "sha256-HEW0xI9RJqyJdd9pd/Mk1rDZIpIQYcjwWv62mJzAGxA=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [
-        "n:registry:kits"
-      ],
-      "provides": [
-        "n:registry:capabilities",
-        "domain:capability-graph",
-        "domain:dependency-graph"
-      ],
-      "composes": [
-        "kit-registry-domain-kit"
-      ],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/registry/capability-graph-domain-kit/index.js"
-      },
-      "runtime": {
-        "api": "capabilityGraph",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/registry/capability-graph-domain-kit/README.md",
-        "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-        "parity": "kits/registry/capability-graph-domain-kit/source-parity.md",
-        "limitations": "kits/registry/capability-graph-domain-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": true,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "official",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-          "path": "protokits/capability-graph-domain-kit/index.js",
-          "parity": "official"
-        },
-        "promotion": {
-          "baseline": false,
-          "resolved": true,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": true,
-            "candidate": true,
-            "official": true,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": null,
-          "blocker": null
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "cargo-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -24686,202 +22219,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
             "inventoried": true,
             "sourceMapped": true,
             "protoValidated": false,
-            "candidate": true,
-            "official": true,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": null,
-          "blocker": null
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "completion-ledger-kit",
-      "version": "0.0.0",
-      "status": "candidate",
-      "kind": "runtime-kit",
-      "domain": "spatial",
-      "domainPath": "n:spatial:completion-ledger",
-      "parentDomainPath": "n:spatial",
-      "apiName": "completionLedger",
-      "factory": "createCompletionLedgerKit",
-      "entry": "./kits/spatial/completion-ledger-kit/index.js",
-      "packageExport": "./completion-ledger-kit",
-      "module": {
-        "package": "./kits/spatial/completion-ledger-kit/index.js",
-        "node": "./kits/spatial/completion-ledger-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/spatial/completion-ledger-kit/index.js"
-      },
-      "integrity": "sha256-0Qboeiym0l9zq02zooxp9zctB+YLenqz4KVNkjleQ8g=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:completion-ledger-kit",
-        "domain:spatial"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/spatial/completion-ledger-kit/index.js"
-      },
-      "runtime": {
-        "api": "completionLedger",
-        "snapshot": true,
-        "reset": true
-      },
-      "proof": {
-        "readme": "kits/spatial/completion-ledger-kit/README.md",
-        "smoke": "kits/spatial/completion-ledger-kit/smoke.test.mjs",
-        "parity": "kits/spatial/completion-ledger-kit/source-parity.md",
-        "limitations": "kits/spatial/completion-ledger-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "completion-ledger-kit",
-        "blocker": "completion-ledger-kit still needs an exact stable source commit, complete feature-union parity, and all stable promotion gates."
-      },
-      "stability": "candidate",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/completion-ledger-kit/index.js",
-          "parity": "candidate"
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": true,
-            "candidate": true,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "completion-ledger-kit",
-          "blocker": "completion-ledger-kit still needs an exact stable source commit, complete feature-union parity, and all stable promotion gates."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "composition-planning-domain-kit",
-      "version": "1.0.0",
-      "status": "official",
-      "kind": "domain-service-kit",
-      "domain": "registry",
-      "domainPath": "n:registry:composition",
-      "parentDomainPath": "n:registry",
-      "apiName": "compositionPlanning",
-      "factory": "createCompositionPlanningDomainKit",
-      "entry": "./kits/registry/composition-planning-domain-kit/index.js",
-      "packageExport": "./composition-planning-domain-kit",
-      "module": {
-        "package": "./kits/registry/composition-planning-domain-kit/index.js",
-        "node": "./kits/registry/composition-planning-domain-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/composition-planning-domain-kit/index.js"
-      },
-      "integrity": "sha256-aNLCfw95wj4vy9H+pLf5UmDj9fs0HVM5ln7raEbXA2A=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [
-        "n:registry:kits",
-        "n:registry:capabilities"
-      ],
-      "provides": [
-        "n:registry:composition",
-        "domain:composition-planning",
-        "domain:install-plan",
-        "domain:dependency-gap-report"
-      ],
-      "composes": [
-        "kit-registry-domain-kit",
-        "capability-graph-domain-kit"
-      ],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/registry/composition-planning-domain-kit/index.js"
-      },
-      "runtime": {
-        "api": "compositionPlanning",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/registry/composition-planning-domain-kit/README.md",
-        "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-        "parity": "kits/registry/composition-planning-domain-kit/source-parity.md",
-        "limitations": "kits/registry/composition-planning-domain-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": true,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "official",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-          "path": "protokits/composition-planning-domain-kit/index.js",
-          "parity": "official"
-        },
-        "promotion": {
-          "baseline": false,
-          "resolved": true,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": true,
             "candidate": true,
             "official": true,
             "deprecated": false,
@@ -26133,96 +23470,95 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "generic-action-window-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
+      "id": "gameplay-interaction-kit",
+      "version": "1.0.0",
+      "status": "official",
       "kind": "runtime-kit",
-      "domain": "simulation",
-      "domainPath": "n:simulation:generic-action-window",
-      "parentDomainPath": "n:simulation",
-      "apiName": "genericActionWindow",
-      "factory": "createGenericActionWindowKit",
-      "entry": "./kits/simulation/generic-action-window-kit/index.js",
-      "packageExport": null,
+      "domain": "spatial",
+      "domainPath": "n:spatial:gameplay-interaction",
+      "parentDomainPath": "n:spatial",
+      "apiName": "gameplayInteraction",
+      "factory": "createInteractionKit",
+      "entry": "./kits/migrated-gameplay/index.js",
+      "packageExport": "./migrated-gameplay",
       "module": {
-        "package": null,
-        "node": null,
-        "browser": null
+        "package": "./kits/migrated-gameplay/index.js",
+        "node": "./kits/migrated-gameplay/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
       },
-      "integrity": null,
+      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
       "environments": [
         "node",
         "browser"
       ],
       "requires": [],
       "provides": [
-        "kit:generic-action-window-kit",
-        "domain:simulation"
+        "n:spatial:gameplay-interaction"
       ],
       "composes": [],
-      "realBehavior": false,
+      "realBehavior": true,
       "source": {
         "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
         "owner": "LuminaryLabs-Dev",
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolvedCommit": null,
-        "path": "./kits/simulation/generic-action-window-kit/index.js"
+        "path": "./kits/migrated-gameplay/index.js"
       },
       "runtime": {
-        "api": "genericActionWindow",
+        "api": "gameplayInteraction",
         "snapshot": false,
         "loadSnapshot": false,
         "reset": false,
-        "deterministic": false
+        "deterministic": true
       },
       "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
+        "readme": "kits/migrated-gameplay/README.md",
+        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
+        "parity": "kits/migrated-gameplay/proof/source-parity.md",
+        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
       },
       "promotion": {
-        "baseline": true,
-        "resolved": false,
+        "baseline": false,
+        "resolved": true,
         "stages": {
           "inventoried": true,
           "sourceMapped": true,
           "protoValidated": false,
-          "candidate": false,
-          "official": false,
+          "candidate": true,
+          "official": true,
           "deprecated": false,
           "archived": false,
           "blocked": false
         },
-        "nextCapability": "generic-action-window-kit",
-        "blocker": "generic-action-window-kit has no validated stable implementation or parity record."
+        "nextCapability": null,
+        "blocker": null
       },
-      "stability": "migration-placeholder",
+      "stability": "official",
       "lineage": {
         "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
           "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/generic-action-window-kit/index.js",
-          "parity": null
+          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
+          "path": "src/interaction-kit.js",
+          "parity": "official"
         },
         "promotion": {
-          "baseline": true,
-          "resolved": false,
+          "baseline": false,
+          "resolved": true,
           "stages": {
             "inventoried": true,
             "sourceMapped": true,
             "protoValidated": false,
-            "candidate": false,
-            "official": false,
+            "candidate": true,
+            "official": true,
             "deprecated": false,
             "archived": false,
             "blocked": false
           },
-          "nextCapability": "generic-action-window-kit",
-          "blocker": "generic-action-window-kit has no validated stable implementation or parity record."
+          "nextCapability": null,
+          "blocker": null
         }
       }
     },
@@ -27458,199 +24794,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "generic-defense-wave-agent-director-dsk",
           "blocker": "generic-defense-wave-agent-director-dsk has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "generic-pressure-loop-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "simulation",
-      "domainPath": "n:simulation:generic-pressure-loop",
-      "parentDomainPath": "n:simulation",
-      "apiName": "genericPressureLoop",
-      "factory": "createGenericPressureLoopKit",
-      "entry": "./kits/simulation/generic-pressure-loop-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:generic-pressure-loop-kit",
-        "domain:simulation"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/simulation/generic-pressure-loop-kit/index.js"
-      },
-      "runtime": {
-        "api": "genericPressureLoop",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "generic-pressure-loop-kit",
-        "blocker": "generic-pressure-loop-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/generic-pressure-loop-kit/index.js",
-          "parity": null
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "generic-pressure-loop-kit",
-          "blocker": "generic-pressure-loop-kit has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "generic-resource-loop-kit",
-      "version": "1.0.0",
-      "status": "deprecated",
-      "kind": "domain-service-kit",
-      "domain": "simulation",
-      "domainPath": "n:simulation:resource-meter-service",
-      "parentDomainPath": "n:simulation",
-      "apiName": "resourceMeter",
-      "factory": "createGenericResourceLoopKit",
-      "entry": "./kits/simulation/generic-resource-loop-kit/index.js",
-      "packageExport": "./generic-resource-loop-kit",
-      "module": {
-        "package": "./kits/simulation/generic-resource-loop-kit/index.js",
-        "node": "./kits/simulation/generic-resource-loop-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/simulation/generic-resource-loop-kit/index.js"
-      },
-      "integrity": "sha256-T+Er/rdjPFpQL1elIePAboDsBFhNaTHuDuDoksYVCMY=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:simulation:resource-meter-service",
-        "resource:loop",
-        "resource:meters",
-        "resource:meter-service",
-        "validation:resources"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/simulation/generic-resource-loop-kit/index.js"
-      },
-      "runtime": {
-        "api": "resourceMeter",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/simulation/generic-resource-loop-kit/README.md",
-        "smoke": "kits/simulation/generic-resource-loop-kit/smoke.test.mjs",
-        "parity": "kits/simulation/generic-resource-loop-kit/source-parity.md",
-        "limitations": "kits/simulation/generic-resource-loop-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": true,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "deprecated",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": "9da1fdb979a878dff8f50565fec4a4952e58af5e",
-          "path": "protokits/generic-resource-loop-kit/index.js",
-          "parity": "historical-passing"
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": true,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": true,
-            "candidate": true,
-            "official": false,
-            "deprecated": true,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": null,
-          "blocker": null
         }
       }
     },
@@ -29084,100 +26227,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "interaction-kit",
-      "version": "1.0.0",
-      "status": "official",
-      "kind": "runtime-kit",
-      "domain": "spatial",
-      "domainPath": "n:spatial:interaction-runtime",
-      "parentDomainPath": "n:spatial",
-      "apiName": "interaction",
-      "factory": "createInteractionKit",
-      "entry": "./kits/migrated-gameplay/index.js",
-      "packageExport": "./migrated-gameplay",
-      "module": {
-        "package": "./kits/migrated-gameplay/index.js",
-        "node": "./kits/migrated-gameplay/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
-      },
-      "integrity": "sha256-rnLofNzSmepG+LtSExp1FZXLvDAEOU8Wj8+aO26Ki9E=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:spatial:interaction-runtime"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/migrated-gameplay/index.js"
-      },
-      "runtime": {
-        "api": "interaction",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/migrated-gameplay/README.md",
-        "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
-        "parity": "kits/migrated-gameplay/proof/source-parity.md",
-        "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": true,
-          "official": true,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "official",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Dev",
-          "repository": "NexusEngine",
-          "requestedRef": "main",
-          "resolvedCommit": "06305727778d579ca18309221e60c3e41bd066c7",
-          "path": "src/interaction-kit.js",
-          "parity": "official"
-        },
-        "promotion": {
-          "baseline": false,
-          "resolved": true,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": true,
-            "official": true,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": null,
-          "blocker": null
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "interaction-target-kit",
       "version": "1.0.0",
       "status": "official",
@@ -29362,104 +26411,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "inventory-kit",
           "blocker": "inventory-kit has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "kit-registry-domain-kit",
-      "version": "1.0.0",
-      "status": "official",
-      "kind": "domain-service-kit",
-      "domain": "registry",
-      "domainPath": "n:registry:kits",
-      "parentDomainPath": "n:registry",
-      "apiName": "kitRegistry",
-      "factory": "createKitRegistryDomainKit",
-      "entry": "./kits/registry/kit-registry-domain-kit/index.js",
-      "packageExport": "./kit-registry-domain-kit",
-      "module": {
-        "package": "./kits/registry/kit-registry-domain-kit/index.js",
-        "node": "./kits/registry/kit-registry-domain-kit/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/registry/kit-registry-domain-kit/index.js"
-      },
-      "integrity": "sha256-xyu8d8rRV9mBtXNTMrLoEl14EhPPWC6qqzy4oKDBq1w=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:registry:kits",
-        "registry:kits",
-        "registry:repositories",
-        "kit:manifest-registry",
-        "domain:manifest-registry"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/registry/kit-registry-domain-kit/index.js"
-      },
-      "runtime": {
-        "api": "kitRegistry",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/registry/kit-registry-domain-kit/README.md",
-        "smoke": "tests/registry/registry-control-plane-smoke.mjs",
-        "parity": "kits/registry/kit-registry-domain-kit/source-parity.md",
-        "limitations": "kits/registry/kit-registry-domain-kit/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": false,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": true,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "official",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": "e4e8a1e03943d1fb7ab1bfddb8837ad16b919c29",
-          "path": "protokits/kit-registry-domain-kit/index.js",
-          "parity": "official"
-        },
-        "promotion": {
-          "baseline": false,
-          "resolved": true,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": true,
-            "candidate": true,
-            "official": true,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": null,
-          "blocker": null
         }
       }
     },
@@ -30886,196 +27837,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "persistence-domain-service-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:persistence-domain-service",
-      "parentDomainPath": "n:xr",
-      "apiName": "persistenceDomainService",
-      "factory": "createPersistenceDomainServiceKit",
-      "entry": "./kits/xr/persistence-domain-service-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:persistence-domain-service-kit",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/xr/persistence-domain-service-kit/index.js"
-      },
-      "runtime": {
-        "api": "persistenceDomainService",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "persistence-domain-service-kit",
-        "blocker": "persistence-domain-service-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/persistence-domain-service-kit/index.js",
-          "parity": null
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "persistence-domain-service-kit",
-          "blocker": "persistence-domain-service-kit has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "persistence-dsk",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:persistence-dsk",
-      "parentDomainPath": "n:xr",
-      "apiName": "persistenceDsk",
-      "factory": "createPersistenceDsk",
-      "entry": "./kits/xr/persistence-dsk/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:persistence-dsk",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/xr/persistence-dsk/index.js"
-      },
-      "runtime": {
-        "api": "persistenceDsk",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "persistence-dsk",
-        "blocker": "persistence-dsk has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/persistence-dsk/index.js",
-          "parity": null
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "persistence-dsk",
-          "blocker": "persistence-dsk has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "powered-aerial-flight-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -31187,7 +27948,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/procedural-creatures/procedural-creature-body-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js"
       },
-      "integrity": "sha256-NsLWbu1MNdWvyHjLAcwhTZkkj/AotT7YaW1xSUaVI4w=",
+      "integrity": "sha256-6IfJNUJ8DxL4b4IHMMEJjM9GYtoJBmlpAHRVgGS1iZc=",
       "environments": [
         "node",
         "browser"
@@ -31331,7 +28092,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/procedural-objects/procedural-object-body-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-body-kit/index.js"
       },
-      "integrity": "sha256-ZII63GVJQhPprV167EHutIeQFu6mFHGTriGlVa3nClg=",
+      "integrity": "sha256-Cs4vD/aVOQ2PUuX3jhGWOeKDZTcXflGC7KxnZ4E32Q8=",
       "provides": [
         "n:object:procedural:body",
         "object:procedural-body-descriptor"
@@ -31753,102 +28514,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "project-batch-deploy-bridge",
           "blocker": "project-batch-deploy-bridge has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "protokit-core",
-      "version": "1.0.0",
-      "status": "deprecated",
-      "kind": "compatibility-domain-service-kit",
-      "domain": "foundation",
-      "domainPath": "n:compatibility:protokit-core",
-      "parentDomainPath": "n:compatibility",
-      "apiName": "protokitCore",
-      "factory": "createProtokitCore",
-      "entry": "./kits/foundation/protokit-core/index.js",
-      "packageExport": "./protokit-core",
-      "module": {
-        "package": "./kits/foundation/protokit-core/index.js",
-        "node": "./kits/foundation/protokit-core/index.js",
-        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/protokit-core/index.js"
-      },
-      "integrity": "sha256-i5xX/vht6VmLIDAJDs7v1cVrauteU70DqqvCaMSXmME=",
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "n:compatibility:protokit-core",
-        "compatibility:protokit-core",
-        "foundation:deterministic-utility-compatibility"
-      ],
-      "composes": [],
-      "realBehavior": true,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/foundation/protokit-core/index.js"
-      },
-      "runtime": {
-        "api": "protokitCore",
-        "snapshot": true,
-        "loadSnapshot": true,
-        "reset": true,
-        "deterministic": true
-      },
-      "proof": {
-        "readme": "kits/foundation/protokit-core/README.md",
-        "smoke": "kits/foundation/protokit-core/smoke.test.mjs",
-        "parity": "kits/foundation/protokit-core/source-parity.md",
-        "limitations": "kits/foundation/protokit-core/LIMITATIONS.md"
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": true,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": true,
-          "candidate": true,
-          "official": false,
-          "deprecated": true,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": null,
-        "blocker": null
-      },
-      "stability": "deprecated",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": "9b0d74c57c29d04a9ba955ae41c8ca19cb2cd5d6",
-          "path": "protokits/protokit-core/index.js",
-          "parity": "deprecated-replacement-parity"
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": true,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": true,
-            "candidate": true,
-            "official": false,
-            "deprecated": true,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": null,
-          "blocker": null
         }
       }
     },
@@ -32818,7 +29483,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/foundation/seed-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/foundation/seed-kit/index.js"
       },
-      "integrity": "sha256-62H2tVhYBA1gfny9Kd5fIOBVHhOybPBfqvMs5+5z+Ds=",
+      "integrity": "sha256-2L+l3CMSGRnw/m/K8ejOl/jV8JPbL9mGHJYvFIhsJmE=",
       "environments": [
         "node",
         "browser"
@@ -33759,196 +30424,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "spatial-scene-graph-dsk",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:spatial-scene-graph-dsk",
-      "parentDomainPath": "n:xr",
-      "apiName": "spatialSceneGraphDsk",
-      "factory": "createSpatialSceneGraphDsk",
-      "entry": "./kits/xr/spatial-scene-graph-dsk/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:spatial-scene-graph-dsk",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/xr/spatial-scene-graph-dsk/index.js"
-      },
-      "runtime": {
-        "api": "spatialSceneGraphDsk",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "spatial-scene-graph-dsk",
-        "blocker": "spatial-scene-graph-dsk has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/spatial-scene-graph-dsk/index.js",
-          "parity": null
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "spatial-scene-graph-dsk",
-          "blocker": "spatial-scene-graph-dsk has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "spatial-scene-graph-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:spatial-scene-graph",
-      "parentDomainPath": "n:xr",
-      "apiName": "spatialSceneGraph",
-      "factory": "createSpatialSceneGraphKit",
-      "entry": "./kits/xr/spatial-scene-graph-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:spatial-scene-graph-kit",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/xr/spatial-scene-graph-kit/index.js"
-      },
-      "runtime": {
-        "api": "spatialSceneGraph",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "spatial-scene-graph-kit",
-        "blocker": "spatial-scene-graph-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/spatial-scene-graph-kit/index.js",
-          "parity": null
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "spatial-scene-graph-kit",
-          "blocker": "spatial-scene-graph-kit has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "state-digest-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -34702,101 +31177,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "terrain-ground-contact-domain-kit",
           "blocker": "terrain-ground-contact-domain-kit has no validated stable implementation or parity record."
-        }
-      }
-    },
-    {
-      "schemaVersion": "nexusengine.kit-manifest.v1",
-      "id": "transform-domain-service-kit",
-      "version": "0.0.0",
-      "status": "migration-placeholder",
-      "kind": "runtime-kit",
-      "domain": "xr",
-      "domainPath": "n:xr:transform-domain-service",
-      "parentDomainPath": "n:xr",
-      "apiName": "transformDomainService",
-      "factory": "createTransformDomainServiceKit",
-      "entry": "./kits/xr/transform-domain-service-kit/index.js",
-      "packageExport": null,
-      "module": {
-        "package": null,
-        "node": null,
-        "browser": null
-      },
-      "integrity": null,
-      "environments": [
-        "node",
-        "browser"
-      ],
-      "requires": [],
-      "provides": [
-        "kit:transform-domain-service-kit",
-        "domain:xr"
-      ],
-      "composes": [],
-      "realBehavior": false,
-      "source": {
-        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
-        "owner": "LuminaryLabs-Dev",
-        "repository": "NexusEngine-Kits",
-        "requestedRef": "main",
-        "resolvedCommit": null,
-        "path": "./kits/xr/transform-domain-service-kit/index.js"
-      },
-      "runtime": {
-        "api": "transformDomainService",
-        "snapshot": false,
-        "loadSnapshot": false,
-        "reset": false,
-        "deterministic": false
-      },
-      "proof": {
-        "readme": null,
-        "smoke": null,
-        "parity": null,
-        "limitations": null
-      },
-      "promotion": {
-        "baseline": true,
-        "resolved": false,
-        "stages": {
-          "inventoried": true,
-          "sourceMapped": true,
-          "protoValidated": false,
-          "candidate": false,
-          "official": false,
-          "deprecated": false,
-          "archived": false,
-          "blocked": false
-        },
-        "nextCapability": "transform-domain-service-kit",
-        "blocker": "transform-domain-service-kit has no validated stable implementation or parity record."
-      },
-      "stability": "migration-placeholder",
-      "lineage": {
-        "source": {
-          "owner": "LuminaryLabs-Agents",
-          "repository": "NexusEngine-ProtoKits",
-          "requestedRef": "main",
-          "resolvedCommit": null,
-          "path": "protokits/transform-domain-service-kit/index.js",
-          "parity": null
-        },
-        "promotion": {
-          "baseline": true,
-          "resolved": false,
-          "stages": {
-            "inventoried": true,
-            "sourceMapped": true,
-            "protoValidated": false,
-            "candidate": false,
-            "official": false,
-            "deprecated": false,
-            "archived": false,
-            "blocked": false
-          },
-          "nextCapability": "transform-domain-service-kit",
-          "blocker": "transform-domain-service-kit has no validated stable implementation or parity record."
         }
       }
     },
@@ -35854,7 +32234,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "domainPath": "n:foundation",
       "entry": "./domains/foundation/index.js",
       "kits": [
-        "protokit-core",
         "seed-kit",
         "clock-kit",
         "state-digest-kit",
@@ -35912,7 +32291,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "domainPath": "n:input",
       "entry": "./domains/input/index.js",
       "kits": [
-        "action-input-kit",
         "input-context-kit",
         "input-buffer-kit",
         "view-rig-kit"
@@ -35995,20 +32373,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
-      "id": "registry",
-      "label": "Registry Control Plane",
-      "kind": "control-domain",
-      "status": "official",
-      "domainPath": "n:registry",
-      "entry": "./domains/registry/index.js",
-      "kits": [
-        "kit-registry-domain-kit",
-        "capability-graph-domain-kit",
-        "composition-planning-domain-kit"
-      ]
-    },
-    {
-      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "render-descriptors",
       "label": "Render Descriptors",
       "kind": "descriptor-domain",
@@ -36017,7 +32381,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "entry": "./domains/render-descriptors/index.js",
       "kits": [
         "render-descriptor-kit",
-        "asset-descriptor-kit",
         "instanced-render-batch-kit",
         "visual-pipeline-kit",
         "render-layer-kit",
@@ -36087,10 +32450,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "domainPath": "n:simulation",
       "entry": "./domains/simulation/index.js",
       "kits": [
-        "generic-pressure-loop-kit",
-        "generic-resource-loop-kit",
         "seeded-world-patch-controller-kit",
-        "generic-action-window-kit",
         "generic-affordance-descriptor-kit"
       ]
     },
@@ -36107,8 +32467,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "interactable-registry-kit",
         "spatial-interaction-kit",
         "hold-action-kit",
-        "completion-ledger-kit",
-        "interaction-kit",
+        "gameplay-interaction-kit",
         "spatial-room-kit",
         "interaction-target-kit"
       ]
@@ -36128,18 +32487,13 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "webxr-hand-adapter-dsk",
         "openxr-hand-adapter-dsk",
         "hand-gesture-dsk",
-        "spatial-scene-graph-dsk",
-        "spatial-scene-graph-kit",
         "selection-dsk",
         "selection-domain-service-kit",
         "transform-dsk",
-        "transform-domain-service-kit",
         "widget-dsk",
         "widget-domain-service-kit",
         "interaction-dsk",
         "interaction-domain-service-kit",
-        "persistence-dsk",
-        "persistence-domain-service-kit",
         "ar-kit",
         "ar-experience-kit",
         "surface-placement-kit"
@@ -36170,7 +32524,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "status": "candidate",
       "entry": "./bundles/all.js",
       "domains": [
-        "registry",
         "foundation",
         "input",
         "spatial",
@@ -36242,17 +32595,6 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.bundle-manifest.v1",
-      "id": "registry-control-plane",
-      "label": "Registry Control Plane",
-      "status": "official",
-      "entry": "./bundles/registry-control-plane.js",
-      "domains": [
-        "registry"
-      ],
-      "kits": []
-    },
-    {
-      "schemaVersion": "nexusengine.bundle-manifest.v1",
       "id": "rpg-game-stack",
       "label": "rpg-game-stack",
       "status": "candidate",
@@ -36287,26 +32629,26 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
   ]
 });
 export const GENERATED_KIT_PROGRESS = Object.freeze({
-  "baselineTotal": 120,
-  "baselineResolved": 7,
-  "baselineRemaining": 113,
-  "official": 26,
-  "candidate": 9,
-  "scaffolded": 9,
-  "placeholder": 103,
-  "deprecated": 2,
+  "baselineTotal": 108,
+  "baselineResolved": 5,
+  "baselineRemaining": 103,
+  "official": 23,
+  "candidate": 8,
+  "scaffolded": 8,
+  "placeholder": 95,
+  "deprecated": 0,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 29,
-  "approvedAdditionsResolved": 21,
+  "approvedAdditionsTotal": 26,
+  "approvedAdditionsResolved": 18,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 149,
-    "sourceMapped": 149,
-    "protoValidated": 16,
-    "candidate": 37,
-    "official": 26,
-    "deprecated": 2,
+    "inventoried": 134,
+    "sourceMapped": 134,
+    "protoValidated": 10,
+    "candidate": 31,
+    "official": 23,
+    "deprecated": 0,
     "archived": 0,
     "blocked": 0
   }

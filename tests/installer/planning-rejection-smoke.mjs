@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { createRealtimeGame } from "nexusengine";
-import { createCoreSimulationKit } from "nexusengine/core-kits";
+import { createEngine } from "nexusengine";
+import { createSimulationKit } from "nexusengine/domains/simulation";
 import { createInstallPlan, createNexusEngineKitInstaller } from "../../installer/index.js";
 
 const commit = "1234567890abcdef1234567890abcdef12345678";
@@ -22,7 +22,7 @@ const manifest = (id, fields = {}) => ({
   ...fields
 });
 const registry = (id, kits) => ({
-  schemaVersion: "nexusengine.repository-registry.v1",
+  schemaVersion: "nexusengine-kits.internal-registry/1",
   id: `LuminaryLabs-Agents/${id}`,
   owner: "LuminaryLabs-Agents",
   repository: id,
@@ -58,13 +58,13 @@ assert.equal(cycleResult.installed, false);
 assert.equal(cycleResult.report.errors[0].type, "dependency-cycle");
 assert.equal(factoryCalls, 0, "cycles must reject before factory execution");
 
-const coreConsumer = manifest("core-consumer-kit", { requires: ["n:core-simulation"] });
+const coreConsumer = manifest("core-consumer-kit", { requires: ["n:simulation"] });
 const coreRegistry = registry("core-consumer-kits", [coreConsumer]);
 assert.equal(createInstallPlan({ kits: [coreConsumer.id] }, { registry: coreRegistry }).ok, false);
-const coreEngine = createRealtimeGame({ kits: [createCoreSimulationKit()] });
+const coreEngine = createEngine({ kits: [createSimulationKit()] });
 const corePlan = createInstallPlan({ kits: [coreConsumer.id] }, { registry: coreRegistry, engine: coreEngine });
 assert.equal(corePlan.ok, true);
-assert.deepEqual(corePlan.coreDependencies, ["n:core-simulation"]);
+assert.deepEqual(corePlan.coreDependencies, ["n:simulation"]);
 
 const collision = manifest("collision-b-kit", { domainPath: "n:test:collision-a-kit" });
 assert.throws(() => createNexusEngineKitInstaller({

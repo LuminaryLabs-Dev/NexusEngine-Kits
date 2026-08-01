@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { createRealtimeGame } from "nexusengine";
+import { createEngine } from "nexusengine";
 import { createSeedKit } from "../../foundation/seed-kit/index.js";
 import { createProceduralCreatureBodyKit } from "./index.js";
 
@@ -28,7 +28,7 @@ function countIndexedComponents(vertexCount, indices) {
   return new Set(parent.map((_, index) => find(index))).size;
 }
 
-const createGame = () => createRealtimeGame({
+const createGame = () => createEngine({
   kits: [
     createSeedKit({ seed: "procedural-creature-smoke" }),
     createProceduralCreatureBodyKit()

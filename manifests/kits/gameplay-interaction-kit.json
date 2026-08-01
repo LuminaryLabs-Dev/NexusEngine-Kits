@@ -1,13 +1,13 @@
 {
   "schemaVersion": "nexusengine.kit-manifest.v1",
-  "id": "interaction-kit",
+  "id": "gameplay-interaction-kit",
   "version": "1.0.0",
   "status": "official",
   "kind": "runtime-kit",
   "domain": "spatial",
-  "domainPath": "n:spatial:interaction-runtime",
+  "domainPath": "n:spatial:gameplay-interaction",
   "parentDomainPath": "n:spatial",
-  "apiName": "interaction",
+  "apiName": "gameplayInteraction",
   "factory": "createInteractionKit",
   "entry": "./kits/migrated-gameplay/index.js",
   "packageExport": "./migrated-gameplay",
@@ -17,14 +17,9 @@
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js"
   },
   "integrity": null,
-  "environments": [
-    "node",
-    "browser"
-  ],
+  "environments": ["node", "browser"],
   "requires": [],
-  "provides": [
-    "n:spatial:interaction-runtime"
-  ],
+  "provides": ["n:spatial:gameplay-interaction"],
   "composes": [],
   "realBehavior": true,
   "source": {
@@ -36,7 +31,7 @@
     "parity": "official"
   },
   "runtime": {
-    "api": "interaction",
+    "api": "gameplayInteraction",
     "snapshot": false,
     "loadSnapshot": false,
     "reset": false,

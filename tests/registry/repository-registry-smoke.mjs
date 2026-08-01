@@ -1,91 +1,76 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import {
-  mergeRegistries,
+  COMPOSITION_REGISTRY_SCHEMA,
+  createEngineRegistrySnapshot,
+  mergeRegistrySnapshots,
+  normalizeRegistrySnapshot
+} from "nexusengine/domains/composition/registry";
+import {
+  hydrateCompositionRegistry,
   pullRegistry
 } from "../../registry/index.js";
-import { createCdnResolver } from "../../installer/cdn-resolver.js";
-import { createNexusEngineKitInstaller } from "../../installer/index.js";
 
 const commit = "1234567890abcdef1234567890abcdef12345678";
-const template = {
-  schemaVersion: "nexusengine.repository-registry.v1",
-  id: "LuminaryLabs-Dev/example-kits",
-  owner: "LuminaryLabs-Dev",
-  repository: "example-kits",
-  requestedRef: "main",
-  resolvedCommit: null,
-  kits: [{
-    id: "example-kit",
-    status: "official",
-    kind: "domain-service-kit",
-    domain: "example",
-    domainPath: "n:example:kit",
-    apiName: "exampleKit",
-    factory: "createExampleKit",
-    entry: "./kits/example/example-kit/index.js",
-    module: {
-      node: "./kits/example/example-kit/index.js",
-      browser: "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/example-kits@{resolvedCommit}/kits/example/example-kit/index.js"
-    },
-    integrity: "sha256-example",
-    realBehavior: true,
-    provides: ["example:kit"]
-  }]
-};
+const template = JSON.parse(fs.readFileSync(new URL("../../nexusengine.registry.json", import.meta.url), "utf8"));
+
+assert.equal(template.schema, COMPOSITION_REGISTRY_SCHEMA);
+assert.equal(template.sources[0].status, "metadata-only");
+assert.equal(template.kits.every((kit) => kit.source.installable === false), true);
+assert.match(template.sources[0].integrity, /^sha256:[a-f0-9]{64}$/);
+
+const metadataOnly = normalizeRegistrySnapshot(template, {
+  allowExternalParents: true,
+  allowExternalReferences: true
+});
+assert.equal(metadataOnly.kits.length, 134);
 
 let metadataCalls = 0;
-const trusted = await pullRegistry({ owner: "LuminaryLabs-Dev", repository: "example-kits" }, {
+const hydrated = await pullRegistry({ owner: "LuminaryLabs-Dev", repository: "NexusEngine-Kits" }, {
   metadataResolver: async () => {
     metadataCalls += 1;
     return { registry: template, resolvedCommit: commit, metadataUrl: "memory://registry" };
   }
 });
 assert.equal(metadataCalls, 1);
-assert.equal(trusted.trusted, true);
-assert.equal(trusted.resolvedCommit, commit);
-assert.ok(trusted.kits[0].module.browser.includes(commit));
-assert.equal(trusted.kits[0].module.browser.includes("main"), false);
-assert.throws(() => createCdnResolver(), /full immutable commit SHA/);
-assert.ok(createCdnResolver({ resolvedCommit: commit }).kit("generic-resource-loop-kit").includes(commit));
+assert.equal(hydrated.sources[0].sourceCommit, commit);
+assert.equal(hydrated.sources[0].status, "available");
+assert.equal(hydrated.kits.find((kit) => kit.id === "fishing-kit").source.installable, true);
+assert.equal(hydrated.kits.find((kit) => kit.status === "migration-placeholder").source.installable, false);
+assert.equal(hydrated.kits.filter((kit) => kit.source.installable).length, 23);
 
-await assert.rejects(() => pullRegistry({ registry: template, resolvedCommit: null }), /full immutable commit SHA/);
-assert.throws(() => createNexusEngineKitInstaller({ registry: template }), /full immutable commit SHA/);
+const repeated = hydrateCompositionRegistry(template, commit);
+assert.equal(repeated.contentHash, hydrated.contentHash, "same immutable source must hydrate identically");
 
-const externalTemplate = {
-  ...template,
-  id: "ThirdParty/example-kits",
-  owner: "ThirdParty",
-  kits: [{
-    ...template.kits[0],
-    id: "external-example-kit",
-    domainPath: "n:external:example",
-    apiName: "externalExample",
-    module: {
-      node: "data:text/javascript,globalThis.__registryMetadataExecuted=true",
-      browser: null
-    }
-  }]
-};
+const merged = mergeRegistrySnapshots(createEngineRegistrySnapshot(), [hydrated]);
+assert.equal(merged.kits.length, createEngineRegistrySnapshot().kits.length + hydrated.kits.length);
+assert.equal(merged.recipes.length, hydrated.recipes.length);
+
+await assert.rejects(() => pullRegistry({ registry: template }), /full immutable commit SHA/);
+const invalid = structuredClone(template);
+invalid.kits.find((kit) => kit.status === "official").source.installable = true;
+assert.throws(() => normalizeRegistrySnapshot(invalid, {
+  allowExternalParents: true,
+  allowExternalReferences: true
+}), /cannot be installable from metadata-only source/);
+
+const external = structuredClone(template);
+external.registryId = "third-party-kits";
+external.sources[0].registryId = external.registryId;
+external.sources[0].metadata.owner = "ThirdParty";
+external.sources[0].metadata.repository = "example-kits";
+for (const domain of external.domains) domain.sourceRegistryId = external.registryId;
+for (const kit of external.kits) kit.source.registryId = external.registryId;
+for (const recipe of external.recipes) recipe.sourceRegistryId = external.registryId;
+assert.throws(() => hydrateCompositionRegistry(external, commit), /explicit full-SHA pin/);
+assert.doesNotThrow(() => hydrateCompositionRegistry(external, commit, {
+  externalRegistries: { "third-party-kits": commit }
+}));
+assert.throws(() => hydrateCompositionRegistry(external, commit, {
+  externalRegistries: { "third-party-kits": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }
+}), /not approved pin/);
+
 delete globalThis.__registryMetadataExecuted;
-await assert.rejects(() => pullRegistry({ registry: externalTemplate, resolvedCommit: commit }), /requires an explicit full-SHA pin/);
-const external = await pullRegistry({ registry: externalTemplate, resolvedCommit: commit }, {
-  externalRegistries: { "ThirdParty/example-kits": commit }
-});
-assert.equal(external.trusted, false);
-assert.equal(globalThis.__registryMetadataExecuted, undefined, "pulling metadata must not execute module fields");
+assert.equal(globalThis.__registryMetadataExecuted, undefined, "registry metadata must remain non-executable");
 
-assert.throws(() => mergeRegistries([trusted, {
-  ...external,
-  id: "ThirdParty/conflict",
-  repository: "conflict",
-  kits: [{ ...external.kits[0], id: "example-kit", domainPath: "n:external:collision", apiName: "externalCollision" }]
-}], { requirePinned: true }), /kit id collision/);
-
-assert.throws(() => mergeRegistries([trusted, {
-  ...external,
-  id: "ThirdParty/path-conflict",
-  repository: "path-conflict",
-  kits: [{ ...external.kits[0], id: "different-kit", domainPath: "n:example:kit", apiName: "differentKit" }]
-}], { requirePinned: true }), /domain path collision/);
-
-console.log("repository registry trust smoke ok");
+console.log("composition registry v3 trust smoke ok");

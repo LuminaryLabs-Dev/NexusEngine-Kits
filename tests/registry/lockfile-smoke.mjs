@@ -4,20 +4,16 @@ import {
   createInstallPlan,
   createInstallPlanFromLockfile,
   createNexusEngineKitsLockfile,
-  pullRegistry,
   validateNexusEngineKitsLockfile
 } from "../../registry/index.js";
 
 const commit = "1234567890abcdef1234567890abcdef12345678";
-const registry = await pullRegistry({ registry: NEXUSENGINE_REPOSITORY_REGISTRY, resolvedCommit: commit });
-const selection = { bundles: ["registry-control-plane"] };
+const registry = structuredClone(NEXUSENGINE_REPOSITORY_REGISTRY);
+registry.resolvedCommit = commit;
+const selection = { kits: ["fishing-kit"] };
 const plan = createInstallPlan(selection, { registry });
 assert.equal(plan.ok, true);
-assert.deepEqual(plan.installOrder, [
-  "kit-registry-domain-kit",
-  "capability-graph-domain-kit",
-  "composition-planning-domain-kit"
-]);
+assert.deepEqual(plan.installOrder, ["fishing-kit"]);
 
 const lockfile = createNexusEngineKitsLockfile({ registries: [registry], selection, plan });
 assert.equal(validateNexusEngineKitsLockfile(lockfile).ok, true);

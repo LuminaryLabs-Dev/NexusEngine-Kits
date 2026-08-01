@@ -27,16 +27,27 @@ const expected = [
   "./xr-authoring-stack",
   "./lightweight-web-stack",
   "./domain-spatial",
+  "./seed-kit",
+  "./fishing-kit",
+  "./seeded-world-patch-controller-kit",
+  "./camera-smooth-follow-kit",
+  "./instanced-render-batch-kit",
+  "./registry",
+  "./registry/node"
+];
+
+for (const removed of [
   "./completion-ledger-kit",
   "./generic-resource-loop-kit",
+  "./protokit-core",
   "./kit-registry-domain-kit",
   "./capability-graph-domain-kit",
   "./composition-planning-domain-kit",
   "./domain-registry",
-  "./registry-control-plane",
-  "./registry",
-  "./registry/node"
-];
+  "./registry-control-plane"
+]) {
+  if (pkg.exports?.[removed]) audit.error(`Core-owned export remains reachable: ${removed}`);
+}
 
 for (const name of expected) {
   if (!pkg.exports?.[name]) audit.error(`expected public export is missing: ${name}`);

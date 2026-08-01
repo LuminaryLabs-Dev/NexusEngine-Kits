@@ -103,7 +103,6 @@
       "domainPath": "n:foundation",
       "entry": "./domains/foundation/index.js",
       "kits": [
-        "protokit-core",
         "seed-kit",
         "clock-kit",
         "state-digest-kit",
@@ -161,7 +160,6 @@
       "domainPath": "n:input",
       "entry": "./domains/input/index.js",
       "kits": [
-        "action-input-kit",
         "input-context-kit",
         "input-buffer-kit",
         "view-rig-kit"
@@ -244,20 +242,6 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
-      "id": "registry",
-      "label": "Registry Control Plane",
-      "kind": "control-domain",
-      "status": "official",
-      "domainPath": "n:registry",
-      "entry": "./domains/registry/index.js",
-      "kits": [
-        "kit-registry-domain-kit",
-        "capability-graph-domain-kit",
-        "composition-planning-domain-kit"
-      ]
-    },
-    {
-      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "render-descriptors",
       "label": "Render Descriptors",
       "kind": "descriptor-domain",
@@ -266,7 +250,6 @@
       "entry": "./domains/render-descriptors/index.js",
       "kits": [
         "render-descriptor-kit",
-        "asset-descriptor-kit",
         "instanced-render-batch-kit",
         "visual-pipeline-kit",
         "render-layer-kit",
@@ -336,10 +319,7 @@
       "domainPath": "n:simulation",
       "entry": "./domains/simulation/index.js",
       "kits": [
-        "generic-pressure-loop-kit",
-        "generic-resource-loop-kit",
         "seeded-world-patch-controller-kit",
-        "generic-action-window-kit",
         "generic-affordance-descriptor-kit"
       ]
     },
@@ -356,8 +336,7 @@
         "interactable-registry-kit",
         "spatial-interaction-kit",
         "hold-action-kit",
-        "completion-ledger-kit",
-        "interaction-kit",
+        "gameplay-interaction-kit",
         "spatial-room-kit",
         "interaction-target-kit"
       ]
@@ -377,18 +356,13 @@
         "webxr-hand-adapter-dsk",
         "openxr-hand-adapter-dsk",
         "hand-gesture-dsk",
-        "spatial-scene-graph-dsk",
-        "spatial-scene-graph-kit",
         "selection-dsk",
         "selection-domain-service-kit",
         "transform-dsk",
-        "transform-domain-service-kit",
         "widget-dsk",
         "widget-domain-service-kit",
         "interaction-dsk",
         "interaction-domain-service-kit",
-        "persistence-dsk",
-        "persistence-domain-service-kit",
         "ar-kit",
         "ar-experience-kit",
         "surface-placement-kit"

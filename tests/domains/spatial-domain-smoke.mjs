@@ -1,31 +1,21 @@
 import assert from "node:assert/strict";
+import { createEngine } from "nexusengine";
 import { createNexusEngineKitInstaller } from "../../installer/index.js";
-
-function createEngine() {
-  return {
-    kits: [],
-    n: {},
-    tickCount: 3,
-    installKit(kit) {
-      this.kits.push(kit);
-      kit.initWorld?.({ engine: this, world: {}, kit, options: {} });
-      return kit;
-    }
-  };
-}
 
 const installer = createNexusEngineKitInstaller({ allowStatuses: ["official", "candidate"] });
 const engine = createEngine();
 const report = await installer.installDomain(engine, "spatial");
 
 assert.equal(report.domainId, "spatial");
-assert.equal(report.results.length, 5);
-assert.equal(report.results.filter((result) => result.installed).length, 1);
+assert.equal(report.results.length, 7);
+assert.equal(report.results.filter((result) => result.installed).length, 3);
 assert.equal(report.results.filter((result) => result.skipped).length, 4);
-assert.equal(engine.kits.some((kit) => kit.id === "completion-ledger-kit"), true);
-assert.equal(typeof engine.n.completionLedger.complete, "function");
-assert.equal(engine.n.completionLedger.complete("spatial-domain-smoke").ok, true);
-assert.equal(engine.n.completionLedger.has("spatial-domain-smoke"), true);
+assert.deepEqual(report.report.plan.installOrder, [
+  "gameplay-interaction-kit",
+  "interaction-target-kit",
+  "spatial-room-kit"
+]);
+assert.equal(engine.kits.some((kit) => kit.id === "completion-ledger-kit"), false);
 
 const duplicateIds = engine.kits
   .map((kit) => kit.id)

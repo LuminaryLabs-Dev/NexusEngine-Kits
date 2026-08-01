@@ -66,10 +66,33 @@ assert.ok(
     (kit) =>
       kit.id === "fishing-kit" &&
       kit.status === "official" &&
-      kit.realBehavior === true
+      kit.metadata?.realBehavior === true &&
+      kit.source?.installable === false
   ),
-  "Trusted registry does not expose fishing-kit as official real behavior"
+  "Metadata-only registry does not expose fishing-kit as proven official behavior"
 );
+assert.equal(registry.schema, "nexusengine.composition-registry/3");
+assert.equal(registry.sources[0].status, "metadata-only");
+
+const retiredIds = new Set([
+  "action-input-kit",
+  "asset-descriptor-kit",
+  "capability-graph-domain-kit",
+  "completion-ledger-kit",
+  "composition-planning-domain-kit",
+  "generic-action-window-kit",
+  "generic-pressure-loop-kit",
+  "generic-resource-loop-kit",
+  "kit-registry-domain-kit",
+  "persistence-domain-service-kit",
+  "persistence-dsk",
+  "protokit-core",
+  "spatial-scene-graph-dsk",
+  "spatial-scene-graph-kit",
+  "transform-domain-service-kit"
+]);
+assert.deepEqual(registry.kits.filter((kit) => retiredIds.has(kit.id)), []);
+assert.deepEqual(Object.keys(packageJson.exports).filter((entry) => entry.includes("core-kits") || entry.includes("protokit")), []);
 
 for (const forbiddenExport of [
   "createReefRescueKit",

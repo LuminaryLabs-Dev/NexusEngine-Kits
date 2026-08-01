@@ -26,10 +26,10 @@
 ## Usage
 
 ```js
-import { createRealtimeGame } from "nexusengine";
+import { createEngine } from "nexusengine";
 import { createInstancedRenderBatchKit } from "@luminarylabs/nexusengine-kits/instanced-render-batch-kit";
 
-const engine = createRealtimeGame({
+const engine = createEngine({
   kits: [createInstancedRenderBatchKit()]
 });
 

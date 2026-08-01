@@ -8,7 +8,6 @@
   "entry": "./domains/render-descriptors/index.js",
   "kits": [
     "render-descriptor-kit",
-    "asset-descriptor-kit",
     "instanced-render-batch-kit",
     "visual-pipeline-kit",
     "render-layer-kit",

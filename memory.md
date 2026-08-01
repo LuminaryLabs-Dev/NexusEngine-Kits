@@ -2,59 +2,45 @@
 
 ## Purpose
 
-NexusEngine-Kits is the first-party trusted registry for reusable optional,
-niche, genre, or platform behavior. It is not an incubator and does not own
-complete games or product presets.
+NexusEngine-Kits is the first-party registry for reusable optional, niche,
+genre, platform, and authored behavior. NexusEngine owns universal atomic
+behavior; game repositories own complete products and presets.
 
 ## Architecture
 
-- `kits/`: official or explicitly staged implementations grouped by domain
-- `domains/`: domain-level composition entrypoints
-- `bundles/`: multi-domain compositions
-- `installer/`: resolution and installation only
-- `manifests/`: authoritative records
-- `registry/`: metadata pull, trust, graph, planning, lockfile, integrity, and
-  approved module resolution
-- `contracts/`: manifest, status, and install-report contracts
-- `adapters/`: explicit host or protocol transports with no domain behavior
-- `parity/`: historical source and behavior evidence
+- `manifests/` is the only authoring source for Kit, Domain, recipe, and registry metadata.
+- `nexusengine.registry.json` is a generated Composition registry v3 projection.
+- The tracked registry is metadata-only; immutable hydration never executes code.
+- `installer/` uses a private generated catalog for first-party local installation.
+- `registry/` exposes v3 pull, hydration, trust, integrity, and module resolution.
+- `parity/` preserves historical lineage and is not an active ownership source.
 
-Generated catalogs, exports, factories, readiness, CDN indexes, and progress
-derive from manifests and must not become independent truth.
+Generated catalogs, factories, readiness reports, CDN indexes, and progress must
+not become independent truth.
 
 ## Ownership
 
-- NexusEngine owns only atomic, idempotent, fully reusable Core behavior.
-- This repository owns reusable non-Core behavior.
-- Experiment and game repositories own complete games, authored content,
-  routes, UI, product tuning, and product presets.
-- The ProtoKit workflow is retired. Existing source hashes and compatibility
-  names are historical lineage only.
+- No active workflow creates or updates ProtoKits.
+- Core-owned behavior is removed in the same change as its replacement; use a
+  changelog and import map, never runtime forwarding.
+- External Kit registry Domains use namespaced semantic paths below Core parents,
+  such as `n:simulation:aquatic` and `n:spatial:extensions`.
+- Complete games, authored presets, product UI, and product tuning stay outside.
 
-## Trust
+## Current Cutover
 
-Trusted owner names do not bypass immutable source, integrity, collision,
-dependency, package-export, status, or executable-code gates. Registry metadata
-remains descriptive until a trusted provider resolves it.
-
-## Current Migrations
-
-- `fishing-kit` owns fishing simulation, renderers, shaders, realism, and its
-  terrain binding.
-- `migrated-gameplay` exposes 20 atomic optional kit identities through public
-  NexusEngine imports.
-- Complete Reef Rescue behavior is external to this package.
-- The deprecated `protokit-core` compatibility kit remains excluded from
-  default installs and requires explicit status opt-in.
-- `generic-resource-loop-kit` is deprecated because current NexusEngine Core
-  owns the same resource service and compatibility API names.
-- Generic MCP infrastructure and renderer-neutral Object Placement contracts
-  were promoted into NexusEngine Core `0.0.4`. Their candidate Kits
-  implementations, manifests, domains, adapters, and package exports were
-  removed in one hard cutover; this repository keeps only a migration map.
+- Fifteen Core-owned Kit records and six runtime implementations were removed.
+- The old registry-control-plane runtime Kits were removed because Core
+  Composition now owns registry, capability graph, and planning services.
+- `protokit-core` and `generic-resource-loop-kit` have no compatibility exports.
+- The specialized external `interaction-kit` identity became
+  `gameplay-interaction-kit` to avoid colliding with Core `interaction-kit`.
+- Public registry schema is `nexusengine.composition-registry/3`.
+- Current generated inventory is 134 records: 23 official and 111 non-installable
+  candidate, scaffolded, or placeholder records.
 
 ## Validation
 
-Run `npm run build:catalog` and `npm run check`. A kit is not official behavior
-without direct, installed, reset/snapshot where stateful, package-export, and
-registry proof.
+Run `npm run build:catalog` and `npm run check`. A Kit is not executable registry
+behavior until immutable source, integrity, export, environment, status,
+dependency, collision, and host preflight gates pass.

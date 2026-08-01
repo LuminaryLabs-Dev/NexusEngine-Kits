@@ -47,7 +47,101 @@ function js(value) {
   return JSON.stringify(value, null, 2);
 }
 
+function stableValue(value) {
+  if (Array.isArray(value)) return value.map(stableValue);
+  if (!value || typeof value !== "object") return value;
+  return Object.fromEntries(Object.keys(value).sort().map((key) => [key, stableValue(value[key])]));
+}
+
+function walkJavaScript(relativePath) {
+  const absolutePath = path.join(root, relativePath);
+  if (!fs.existsSync(absolutePath)) return [];
+  const stat = fs.statSync(absolutePath);
+  if (stat.isFile()) return relativePath.endsWith(".js") ? [relativePath] : [];
+  return fs.readdirSync(absolutePath).sort().flatMap((name) => walkJavaScript(path.posix.join(relativePath, name)));
+}
+
+function packageExecutionIntegrity(packageJson) {
+  const executableRoots = ["src", "installer", "registry", "domains", "bundles", "kits", "adapters", "presets"];
+  const files = executableRoots.flatMap(walkJavaScript).sort();
+  const hash = crypto.createHash("sha256");
+  hash.update(JSON.stringify(stableValue(packageJson.exports)));
+  for (const relativePath of files) {
+    hash.update("\0");
+    hash.update(relativePath);
+    hash.update("\0");
+    hash.update(fs.readFileSync(path.join(root, relativePath)));
+  }
+  return { integrity: `sha256:${hash.digest("hex")}`, files };
+}
+
+function immediateParent(domainPath) {
+  const separator = domainPath.lastIndexOf(":");
+  return separator <= 1 ? null : domainPath.slice(0, separator);
+}
+
+const COMPOSITION_DOMAIN_PATHS = Object.freeze({
+  aerial: "n:simulation:aerial",
+  aquatic: "n:simulation:aquatic",
+  building: "n:world:building",
+  "camera-feedback": "n:presentation:camera:feedback",
+  "economy-resources": "n:simulation:economy",
+  foundation: "n:policy:extensions",
+  "generic-defense": "n:simulation:defense",
+  "hazard-combat": "n:simulation:combat",
+  input: "n:interaction:input:extensions",
+  "procedural-creatures": "n:actor:creature:procedural",
+  "procedural-objects": "n:object:procedural",
+  production: "n:simulation:production",
+  progression: "n:simulation:progression",
+  "project-deployment": "n:host:project-deployment",
+  "render-descriptors": "n:presentation:graphics:descriptors",
+  "route-extraction": "n:world:route-extraction",
+  "rpg-combat": "n:simulation:rpg-combat",
+  "rpg-social": "n:simulation:rpg-social",
+  simulation: "n:simulation:extensions",
+  spatial: "n:spatial:extensions",
+  xr: "n:interaction:xr"
+});
+
+function compositionDomainId(domainId) {
+  return `kits-${domainId}`;
+}
+
+function compositionKitId(kitId) {
+  return kitId;
+}
+
+function compositionDomainPath(domain) {
+  const domainPath = COMPOSITION_DOMAIN_PATHS[domain.id];
+  if (!domainPath) throw new Error(`${domain.id}: missing Composition registry domain path`);
+  return domainPath;
+}
+
+function compositionKitPath(manifest, domainById) {
+  const domain = domainById.get(manifest.domain);
+  if (!domain) throw new Error(`${manifest.id}: missing domain ${manifest.domain}`);
+  const base = compositionDomainPath(domain);
+  const sourcePrefix = `${domain.domainPath}:`;
+  const suffix = manifest.domainPath.startsWith(sourcePrefix)
+    ? manifest.domainPath.slice(sourcePrefix.length)
+    : compositionKitId(manifest.id).replace(/-kit$/, "");
+  return `${base}:${suffix}`;
+}
+
+function compositionToken(token, domainById) {
+  const value = String(token);
+  for (const domain of domainById.values()) {
+    if (value === domain.domainPath) return compositionDomainPath(domain);
+    if (value.startsWith(`${domain.domainPath}:`)) {
+      return `${compositionDomainPath(domain)}:${value.slice(domain.domainPath.length + 1)}`;
+    }
+  }
+  return value;
+}
+
 const registryConfig = readJson("manifests/registry.json");
+const packageJson = readJson("package.json");
 const rawKits = readManifestFolder("manifests/kits");
 const domains = readManifestFolder("manifests/domains");
 const bundles = readManifestFolder("manifests/bundles");
@@ -143,6 +237,7 @@ const distributedKits = kits.map((manifest) => ({
 
 const repositoryRegistry = {
   ...registryConfig,
+  schemaVersion: "nexusengine-kits.internal-registry/1",
   registryId: registryConfig.id,
   trusted: true,
   kits: distributedKits,
@@ -181,10 +276,91 @@ const factoryImports = factories.map((manifest, index) => `import { ${manifest.f
 const factoryEntries = factories.map((manifest, index) => `  ${JSON.stringify(manifest.id)}: factory${index}`);
 fs.writeFileSync(path.join(root, "installer/generated-factories.js"), `${factoryImports.join("\n")}\n\nexport const GENERATED_KIT_FACTORIES = Object.freeze({\n${factoryEntries.join(",\n")}\n});\n`);
 
+const execution = packageExecutionIntegrity(packageJson);
+const compositionRegistryId = "nexusengine-kits";
+const domainById = new Map(domains.map((domain) => [domain.id, domain]));
+const compositionRegistry = {
+  schema: "nexusengine.composition-registry/3",
+  revision: 1,
+  registryId: compositionRegistryId,
+  sources: [{
+    registryId: compositionRegistryId,
+    package: packageJson.name,
+    version: packageJson.version,
+    sourceCommit: "0000000000000000000000000000000000000000",
+    integrity: execution.integrity,
+    status: "metadata-only",
+    environments: [...new Set(kits.flatMap((manifest) => manifest.environments ?? []))].sort(),
+    permissions: [],
+    metadata: {
+      owner: registryConfig.owner,
+      repository: registryConfig.repository,
+      requestedRef: registryConfig.requestedRef,
+      resolution: "immutable-fetch-required",
+      executableFileCount: execution.files.length
+    }
+  }],
+  domains: domains.map((domain) => ({
+    id: compositionDomainId(domain.id),
+    domainPath: compositionDomainPath(domain),
+    parentDomainPath: immediateParent(compositionDomainPath(domain)),
+    label: domain.label,
+    status: domain.status,
+    responsibility: `Reusable non-Core ${domain.label} capabilities.`,
+    ownedMeaning: [`Reusable ${domain.label} policies, adapters, and authored systems.`],
+    forbiddenResponsibilities: ["Universal NexusEngine Core state and behavior."],
+    requires: [],
+    provides: [compositionDomainPath(domain)],
+    settingsSchema: { type: "object", additionalProperties: true },
+    sourceRegistryId: compositionRegistryId,
+    metadata: { kind: domain.kind, entry: domain.entry }
+  })),
+  kits: kits.map((manifest) => ({
+    id: compositionKitId(manifest.id),
+    version: manifest.version,
+    status: manifest.status,
+    kind: manifest.kind,
+    responsibility: manifest.subtitle ?? manifest.metadata?.purpose ?? manifest.label ?? manifest.id,
+    domainPath: compositionKitPath(manifest, domainById),
+    parentDomainPath: immediateParent(compositionKitPath(manifest, domainById)),
+    apiName: manifest.apiName,
+    apiVisibility: "public",
+    requires: manifest.requires.map((token) => compositionToken(token, domainById)),
+    provides: manifest.provides.map((token) => compositionToken(token, domainById)),
+    composes: (manifest.composes ?? []).map(compositionKitId),
+    defaults: {},
+    settingsSchema: manifest.settingsSchema ?? { type: "object", additionalProperties: true },
+    source: {
+      registryId: compositionRegistryId,
+      subpath: manifest.packageExport ?? null,
+      exportName: manifest.packageExport ? manifest.factory : null,
+      environments: manifest.environments ?? [],
+      permissions: [],
+      installable: false
+    },
+    metadata: {
+      realBehavior: manifest.realBehavior,
+      unresolved: !manifest.promotion?.resolved,
+      sourcePath: manifest.entry,
+      lineage: manifest.source ?? null,
+      proof: manifest.proof ?? null
+    }
+  })),
+  recipes: bundles.map((bundle) => ({
+    id: `kits-${bundle.id}`,
+    label: bundle.label,
+    domains: (bundle.domains ?? []).map(compositionDomainId),
+    kits: (bundle.kits ?? []).map(compositionKitId),
+    settings: {},
+    sourceRegistryId: compositionRegistryId,
+    metadata: { status: bundle.status, entry: bundle.entry }
+  }))
+};
+
 writeJson("kit-catalog.json", catalog);
 writeJson("domain-catalog.json", { status: "registry-backed", domains });
 writeJson("bundle-catalog.json", { status: "registry-backed", bundles });
-writeJson("nexusengine.registry.json", repositoryRegistry);
+writeJson("nexusengine.registry.json", compositionRegistry);
 writeJson("promotion-ledger.json", {
   schemaVersion: "nexusengine.promotion-ledger.v1",
   generatedFrom: "manifests/kits",
@@ -236,5 +412,10 @@ console.log("registry catalogs generated", {
   domains: domains.length,
   bundles: bundles.length,
   factories: factories.length,
+  compositionRegistry: {
+    schema: compositionRegistry.schema,
+    integrity: execution.integrity,
+    executableFiles: execution.files.length
+  },
   progress
 });

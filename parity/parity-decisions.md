@@ -4,7 +4,8 @@ This repo is a clean rebuild, not a direct copy of ProtoKits.
 
 ## Decisions
 
-- ProtoKits remains the reference and incubation repo.
+- The frozen ProtoKits commit remains source-lineage evidence only; it is not an
+  incubation or authoring repository.
 - NexusEngine Kits rebuilds official replacements with stronger manifests, tests, docs, and install paths.
 - Placeholder entries may exist only to stabilize catalog and CDN paths before behavior parity is complete.
 - A kit is not official until behavior, docs, manifest, and smoke checks are present.
@@ -17,4 +18,6 @@ This repo is a clean rebuild, not a direct copy of ProtoKits.
 
 The first rebuild wave focuses on small atomic services because they produce the cleanest installer, domain, and test patterns.
 
-The first official promotion is `generic-resource-loop-kit` from ProtoKits commit `9da1fdb979a878dff8f50565fec4a4952e58af5e`.
+The historical first promotion was `generic-resource-loop-kit` from ProtoKits
+commit `9da1fdb979a878dff8f50565fec4a4952e58af5e`. NexusEngine 0.0.4 now owns that
+universal behavior, so NexusEngine-Kits no longer exports it.

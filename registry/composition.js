@@ -1,5 +1,5 @@
 import { NEXUSENGINE_REPOSITORY_REGISTRY } from "../installer/kit-catalog.js";
-import { createRepositoryRegistry } from "./repository-registry.js";
+import { createInternalRepositoryRegistry } from "../installer/internal-repository-registry.js";
 
 const asList = (value) => Array.isArray(value) ? value : value == null ? [] : [value];
 const unique = (values) => [...new Set(values)];
@@ -26,7 +26,7 @@ export function collectNexusEngineProviders(engine, configured = []) {
 }
 
 function normalizeRegistry(input) {
-  return createRepositoryRegistry(input ?? NEXUSENGINE_REPOSITORY_REGISTRY);
+  return createInternalRepositoryRegistry(input ?? NEXUSENGINE_REPOSITORY_REGISTRY);
 }
 
 export function createInstallPlan(selection = {}, options = {}) {
