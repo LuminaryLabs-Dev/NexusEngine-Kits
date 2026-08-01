@@ -3,6 +3,8 @@
 ## Start
 
 - [Start Here](START-HERE.md)
+- [Architecture](ARCHITECTURE.md)
+- [Operations](OPERATIONS.md)
 - [What Official Means](WHAT-OFFICIAL-MEANS.md)
 - [What Installable Means](WHAT-INSTALLABLE-MEANS.md)
 - [What Candidate Means](WHAT-CANDIDATE-MEANS.md)
@@ -28,6 +30,9 @@
 ## Proof And Operations
 
 - [Testing](TESTING-GUIDE.md)
+- [Security](../SECURITY.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Visual Identity](VISUAL-IDENTITY.md)
 - [Snapshot And Reset](SNAPSHOT-RESET-GUIDE.md)
 - [Install Reports](INSTALL-REPORT-GUIDE.md)
 - [Promotion Gates](PROMOTION-GATES.md)

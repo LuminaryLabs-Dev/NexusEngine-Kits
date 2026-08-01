@@ -3,10 +3,11 @@
 ## Read In Order
 
 1. [Repository README](../README.md)
-2. [What Official Means](WHAT-OFFICIAL-MEANS.md)
-3. [Kit Authoring](KIT-AUTHORING-GUIDE.md)
-4. [Registry Installation](REGISTRY-INSTALLATION.md)
-5. [Testing](TESTING-GUIDE.md)
+2. [Architecture](ARCHITECTURE.md)
+3. [What Official Means](WHAT-OFFICIAL-MEANS.md)
+4. [Kit Authoring](KIT-AUTHORING-GUIDE.md)
+5. [Registry Installation](REGISTRY-INSTALLATION.md)
+6. [Operations and Testing](OPERATIONS.md)
 
 ## Ownership
 

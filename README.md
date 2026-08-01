@@ -1,113 +1,111 @@
+<p align="center">
+  <img src="docs/assets/brand/social-card.png" alt="Manifest records entering the NexusEngine Kits catalog, passing validation, and becoming an installed composition" width="100%">
+</p>
+
 # NexusEngine Kits
 
-NexusEngine Kits is the official first-party trusted registry for reusable
-behavior that does not belong in NexusEngine Core.
+NexusEngine Kits is the first-party trusted registry and installer for reusable NexusEngine behavior that is optional, niche, genre-specific, or platform-specific. It does not own NexusEngine Core behavior, complete games, authored content, or product presets.
 
 ## Ownership
 
-```txt
-NexusEngine
-  atomic, idempotent, fully reusable Core behavior
+```text
+NexusEngine Core
+  atomic, idempotent, fully reusable behavior
 
 NexusEngine-Kits
-  reusable optional, niche, genre, or platform behavior
+  reusable non-Core kits, domains, bundles, and adapters
 
 Experiment and game repositories
-  complete games, presets, authored content, and product behavior
+  complete games, authored content, routes, UI, tuning, and presets
 ```
 
-This package does not incubate ProtoKits. That workflow is retired. Historical
-source mappings remain as lineage evidence only.
+The ProtoKit workflow is retired. Historical mappings remain lineage evidence only and are not an active authoring path.
 
-## Install
+## Verified State
 
-One kit:
+At the current documented snapshot, `npm run progress` reports:
+
+| Measure | Count |
+| --- | ---: |
+| Inventoried kits | 149 |
+| Official | 26 |
+| Candidate | 9 |
+| Scaffolded | 9 |
+| Metadata placeholders | 103 |
+| Deprecated compatibility kits | 2 |
+| Baseline resolved | 7 of 120 |
+| Approved additions resolved | 21 of 29 |
+
+Run `npm run progress` for live counts. Catalog presence is not proof of implemented behavior: default installation permits only `official` entries with validated factories and public exports.
+
+## Quick Start
+
+```bash
+npm ci
+npm run progress
+npm run check
+```
+
+The package metadata identifies version `0.0.1`, but no Git tag, GitHub release, or public npm package is currently available. Use a reviewed source checkout or an immutable commit until a release is published.
+
+### Install One Kit
+
+Given an existing NexusEngine instance:
 
 ```js
 import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
 const installer = createNexusEngineKitInstaller();
-await installer.installKit(engine, "fishing-kit");
+const report = await installer.installKit(engine, "fishing-kit");
+
+if (!report.installed) throw new Error(report.reason);
 ```
 
-Direct public import:
-
-```js
-import { createFishingKit } from "@luminarylabs/nexusengine-kits/fishing-kit";
-
-const fishing = createFishingKit();
-```
-
-One domain:
-
-```js
-import { createFishingKit } from "@luminarylabs/nexusengine-kits/domain-aquatic";
-
-const engine = createRealtimeGame({ kits: [createFishingKit()] });
-```
-
-Registry planning:
+Direct public imports are also available for implemented kits:
 
 ```js
 import {
-  pullRegistry,
-  createInstallPlan,
-  createNexusEngineKitInstaller
-} from "@luminarylabs/nexusengine-kits";
+  createFishingHeadlessRenderer,
+  createFishingKit
+} from "@luminarylabs/nexusengine-kits/fishing-kit";
 
-const registry = await pullRegistry("LuminaryLabs-Dev/NexusEngine-Kits");
-const plan = createInstallPlan({ kits: ["fishing-kit"] }, { registry });
-const installer = createNexusEngineKitInstaller({ registry });
+const fishing = createFishingKit();
+const renderer = createFishingHeadlessRenderer();
 ```
 
-Registry metadata is descriptive until a trusted resolver verifies the owner,
-immutable source, integrity, status, package export, and executable factory.
+See the exact public surface in [`package.json`](package.json) and the installation guides in [`docs/`](docs/DOCS-INDEX.md).
 
-### Core Promotions
+## Trust Model
 
-Generic MCP infrastructure and Object Placement contracts are Core behavior in
-NexusEngine `0.0.4`. Their former candidate exports were removed from this
-package rather than forwarded. See the
-[0.0.4 Core promotion migration](docs/0.0.4-CORE-PROMOTION-MIGRATION.md) for
-direct import replacements.
+`manifests/` is authoritative for kit, domain, bundle, and registry records. Generated catalogs, factories, readiness reports, CDN indexes, and physical manifest mirrors derive from it.
 
-## Package Shape
+Registry metadata remains descriptive until a resolver verifies the owner, immutable source revision, integrity, status, package export, dependencies, and executable factory. External code additionally requires explicit approval and an approved resolver.
 
-```txt
-kits/          official and explicitly staged implementations
-domains/       domain composition entrypoints
-bundles/       multi-domain compositions
-manifests/     authoritative kit, domain, bundle, and registry records
-registry/      trust, graph, planning, lockfile, integrity, and resolution
-installer/     generated factories and installation
+## Repository Shape
+
+```text
+kits/          kit implementations and focused proof
+domains/       related-kit composition entrypoints
+bundles/       reusable multi-domain compositions
+manifests/     authoritative catalog records
+installer/     planning, resolution, and engine installation
+registry/      trust, integrity, lockfiles, and module resolution
 contracts/     manifest, status, and install-report contracts
-adapters/      explicit host and protocol transport adapters
+adapters/      host or protocol transports without domain behavior
 parity/        historical source and behavior lineage
-docs/          current usage and legacy migration pointers
+docs/          usage, authoring, readiness, and migration guidance
 ```
 
-Placeholders remain discoverable but cannot install as behavior through default
-paths. Deprecated compatibility kits require explicit status opt-in.
+Generic MCP infrastructure and renderer-neutral Object Placement contracts were promoted into NexusEngine Core `0.0.4`; their former candidate exports were removed rather than forwarded. See the [Core promotion migration](docs/0.0.4-CORE-PROMOTION-MIGRATION.md).
 
-## Current Catalog
+## Documentation
 
-As generated on 2026-07-29:
+- [Start here](docs/START-HERE.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Operations](docs/OPERATIONS.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md)
+- [Known limitations](KNOWN-LIMITATIONS.md)
+- [Visual identity](docs/VISUAL-IDENTITY.md)
 
-```txt
-149 inventoried
-26 official
-7 of 120 baseline entries resolved
-21 of 29 approved additions resolved
-2 deprecated compatibility kits
-```
-
-Run `npm run progress` for current generated counts.
-
-## Validation
-
-```bash
-npm run build:catalog
-npm run check
-```
-
-Start with [docs/START-HERE.md](docs/START-HERE.md).
+`package.json` declares MIT, but no license text is tracked at this revision. Do not infer redistribution terms beyond the repository's explicit files.
