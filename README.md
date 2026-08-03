@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/brand/social-card.png" alt="Manifest records entering the NexusEngine Kits catalog, passing validation, and becoming an installed composition" width="100%">
+</p>
+
 # NexusEngine Kits
 
 NexusEngine-Kits is the first-party registry for reusable behavior that is useful
@@ -14,6 +18,35 @@ Game repositories complete games, presets, tuning, UI, and product behavior
 ProtoKits are retired. Their Git history and extraction lineage remain evidence,
 not an authoring workflow or runtime dependency.
 
+## Current Verified State
+
+| Measure | Count |
+| --- | ---: |
+| Inventoried kits | 134 |
+| Official | 23 |
+| Candidate | 8 |
+| Scaffolded | 8 |
+| Metadata placeholders | 95 |
+| Deprecated compatibility kits | 0 |
+| Baseline resolved | 5 of 108 |
+| Approved additions resolved | 18 of 26 |
+
+Run `npm run progress` for live counts. Catalog presence is not proof of
+implemented behavior: installation permits only `official` entries with
+validated factories and public exports.
+
+## Quick Start
+
+```bash
+npm ci
+npm run progress
+npm run check
+```
+
+The package metadata identifies version `0.0.1`, but no Git tag, GitHub release,
+or public npm package is currently available. Use a reviewed source checkout or
+an immutable commit until a release is published.
+
 ## Use A Kit
 
 ```js
@@ -29,7 +62,9 @@ The local first-party installer uses the generated package catalog:
 import { createNexusEngineKitInstaller } from "@luminarylabs/nexusengine-kits/installer";
 
 const installer = createNexusEngineKitInstaller();
-await installer.installKit(engine, "fishing-kit");
+const report = await installer.installKit(engine, "fishing-kit");
+
+if (!report.installed) throw new Error(report.reason);
 ```
 
 ## Import The Registry
@@ -90,4 +125,14 @@ npm run build:catalog
 npm run check
 ```
 
-Start with [docs/START-HERE.md](docs/START-HERE.md).
+## Documentation
+
+- [Start here](docs/START-HERE.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Operations](docs/OPERATIONS.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md)
+- [Known limitations](KNOWN-LIMITATIONS.md)
+- [Visual identity](docs/VISUAL-IDENTITY.md)
+
+`package.json` declares MIT, but no license text is tracked at this revision. Do not infer redistribution terms beyond the repository's explicit files.
