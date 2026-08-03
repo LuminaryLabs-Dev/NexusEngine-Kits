@@ -11,7 +11,7 @@ const kits = createAllNexusEngineKits();
 CDN:
 
 ```js
-import { createAllNexusEngineKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/bundles/all.js";
+import { createAllNexusEngineKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@<40-character-sha>/bundles/all.js";
 ```
 
 The all-bundle returns only behavior permitted by its status policy. Catalog

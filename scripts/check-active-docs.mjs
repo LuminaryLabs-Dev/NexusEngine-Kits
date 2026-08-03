@@ -35,7 +35,8 @@ const forbiddenWorkflow = [
   /Unresolved behavior belongs in ProtoKits/i,
   /createRealtimeGame/,
   /nexusengine\/core-kits/,
-  /nexusengine\.repository-registry\/1/
+  /nexusengine\.repository-registry\/1/,
+  /cdn\.jsdelivr\.net\/gh\/LuminaryLabs-Dev\/NexusEngine-Kits@main\//
 ];
 
 for (const filePath of activeDocs) {

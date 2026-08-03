@@ -14,6 +14,7 @@ behavior while completing migration-placeholder proof over time.
 - Core promotions remove old source, manifests, exports, and runtime aliases.
 - Complete games and authored presets remain outside this package.
 - No active workflow creates or updates ProtoKits.
+- Generated-catalog workflows verify committed output without writing to `main`.
 - Generated catalogs, exports, installer tables, docs, and proof agree.
 
 ## Current State

@@ -1,4 +1,4 @@
-name: Rebuild Agriculture Catalog
+name: Verify Agriculture Catalog
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - "src/index.js"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   generate:
@@ -24,17 +24,8 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm install --ignore-scripts
+      - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm run build:catalog
       - run: node kits/production/agriculture-domain-kit/smoke.test.mjs
-      - name: Commit generated catalogs
-        run: |
-          if git diff --quiet; then
-            echo "Catalogs already current"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add installer/generated-catalog.js installer/generated-factories.js kit-catalog.json domain-catalog.json bundle-catalog.json nexusengine.registry.json promotion-ledger.json parity/parity-status.json PROMOTION-LEDGER.md docs/CDN-INDEX.txt kits/production/agriculture-domain-kit/kit.json
-          git commit -m "chore: rebuild agriculture catalogs"
-          git push
+      - name: Reject generated-file drift
+        run: git diff --exit-code

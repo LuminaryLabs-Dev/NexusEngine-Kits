@@ -12,7 +12,7 @@ await installer.installKit(engine, "completion-ledger-kit");
 Use CDN when working from browser-hosted experiments:
 
 ```js
-import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/installer/index.js";
+import { createNexusEngineKitInstaller } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@<40-character-sha>/installer/index.js";
 ```
 
 Unresolved metadata is descriptive only. Default installer paths must skip or

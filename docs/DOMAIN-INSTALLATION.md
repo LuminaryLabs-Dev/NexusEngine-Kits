@@ -12,5 +12,5 @@ const kits = createSpatialDomainKits();
 Example CDN import:
 
 ```js
-import { createSpatialDomainKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@main/domains/spatial/index.js";
+import { createSpatialDomainKits } from "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@<40-character-sha>/domains/spatial/index.js";
 ```

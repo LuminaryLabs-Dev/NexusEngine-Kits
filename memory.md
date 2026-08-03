@@ -14,6 +14,10 @@ behavior; game repositories own complete products and presets.
 - `installer/` uses a private generated catalog for first-party local installation.
 - `registry/` exposes v3 pull, hydration, trust, integrity, and module resolution.
 - `parity/` preserves historical lineage and is not an active ownership source.
+- Local and CI proof install the exact Engine candidate recorded in
+  `package.json`; the public peer contract remains the semantic `0.0.4` line.
+- Catalog workflows regenerate and diff committed output but never write back to
+  the default branch.
 
 Generated catalogs, factories, readiness reports, CDN indexes, and progress must
 not become independent truth.
