@@ -29,6 +29,9 @@ not become independent truth.
   changelog and import map, never runtime forwarding.
 - External Kit registry Domains use namespaced semantic paths below Core parents,
   such as `n:simulation:aquatic` and `n:spatial:extensions`.
+- When Core owns a semantic Domain path, optional registry behavior must use an
+  explicit child path such as `:extensions`; imported registries never replace
+  the Core owner.
 - Complete games, authored presets, product UI, and product tuning stay outside.
 
 ## Current Cutover

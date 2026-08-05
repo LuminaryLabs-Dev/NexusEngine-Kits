@@ -44,7 +44,10 @@ assert.equal(repeated.contentHash, hydrated.contentHash, "same immutable source 
 
 const merged = mergeRegistrySnapshots(createEngineRegistrySnapshot(), [hydrated]);
 assert.equal(merged.kits.length, createEngineRegistrySnapshot().kits.length + hydrated.kits.length);
-assert.equal(merged.recipes.length, hydrated.recipes.length);
+assert.equal(
+  merged.recipes.length,
+  createEngineRegistrySnapshot().recipes.length + hydrated.recipes.length
+);
 
 await assert.rejects(() => pullRegistry({ registry: template }), /full immutable commit SHA/);
 const invalid = structuredClone(template);

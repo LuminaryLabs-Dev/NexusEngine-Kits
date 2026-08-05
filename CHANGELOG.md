@@ -14,6 +14,8 @@ This file records notable verified changes. No Git tag or GitHub release current
 
 - Strengthened agriculture replay behavior and aligned generated catalog and registry metadata.
 - Namespaced external Domain paths below canonical NexusEngine semantic parents.
+- Moved Economy Resources and Progression registry extensions below their Core-owned semantic Domains to avoid replacing restored Core owners.
+- Updated registry merge proof to preserve both Core and imported recipes.
 - Renamed the specialized external `interaction-kit` identity to `gameplay-interaction-kit` to avoid a Core collision.
 - Updated consumers to NexusEngine `0.0.4` canonical package subpaths.
 
