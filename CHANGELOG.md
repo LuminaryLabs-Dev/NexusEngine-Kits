@@ -18,6 +18,7 @@ This file records notable verified changes. No Git tag or GitHub release current
 - Updated registry merge proof to preserve both Core and imported recipes.
 - Renamed the specialized external `interaction-kit` identity to `gameplay-interaction-kit` to avoid a Core collision.
 - Updated consumers to NexusEngine `0.0.4` canonical package subpaths.
+- Pinned release integration to NexusEngine commit `16aee598c06efcb7b511e4827ee3f7e23ce3549b` and its exact registry and tarball hashes.
 
 ### Removed
 

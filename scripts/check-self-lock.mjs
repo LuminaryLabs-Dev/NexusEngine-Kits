@@ -8,6 +8,13 @@ import {
 import { NEXUSENGINE_REPOSITORY_REGISTRY } from "../installer/kit-catalog.js";
 import { hydrateInternalRepositoryRegistry } from "../installer/internal-repository-registry.js";
 
+const packageManifest = JSON.parse(fs.readFileSync(new URL("../package.json", import.meta.url), "utf8"));
+const npmLockfile = JSON.parse(fs.readFileSync(new URL("../package-lock.json", import.meta.url), "utf8"));
+const engineCommit = packageManifest.nexusIntegrationArtifacts.engine.commit;
+const engineSource = `git+https://github.com/LuminaryLabs-Dev/NexusEngine.git#${engineCommit}`;
+assert.equal(packageManifest.devDependencies.nexusengine, engineSource, "Engine development dependency must use exact-commit HTTPS");
+assert.equal(npmLockfile.packages["node_modules/nexusengine"].resolved, engineSource, "Engine lock must use exact-commit HTTPS");
+
 const lockfile = JSON.parse(fs.readFileSync(new URL("../nexusengine-kits.lock.json", import.meta.url), "utf8"));
 const validation = validateNexusEngineKitsLockfile(lockfile);
 assert.equal(validation.ok, true, validation.errors.join("; "));
