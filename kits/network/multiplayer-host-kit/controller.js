@@ -144,16 +144,16 @@ export function createMultiplayerHostController(options = {}) {
       jitterTicks += (Math.abs(sample - rttTicks) - jitterTicks) * 0.2; rttTicks += (sample - rttTicks) * 0.2;
       const offsetSample = num(payload.remoteTick, tick) + sample / 2 - tick; clockOffsetTicks += (offsetSample - clockOffsetTicks) * 0.1; return true;
     }
-    if (payload.type === "player-ready") { ready[payload.player === 0 ? 0 : 1] = Boolean(payload.ready); profiles[payload.player === 0 ? 0 : 1] = { ...profiles[payload.player], ...copy(payload.profile ?? {}) }; simulation.configurePlayers?.(state, copy(profiles)); emit(); return true; }
+    if (payload.type === "player-ready") { const player = role === "host" ? 1 : 0; ready[player] = Boolean(payload.ready); profiles[player] = { ...profiles[player], ...copy(payload.profile ?? {}) }; simulation.configurePlayers?.(state, copy(profiles)); emit(); return true; }
     if (payload.type === "match-event") { if (Number(payload.sequence) > lastEventSequence) { lastEventSequence = Number(payload.sequence); reliableEventCount += 1; notifyApp({ type: "match-event", events: payload.events, tick: payload.tick }); } return true; }
     if (payload.type === "resync-request" && role === "host") { control("resync-state", { state: simulation.captureState(state), hash: simulation.hashState(state), ack: acknowledgements.local ?? -1, hostTick: tick }); return true; }
     if (payload.type === "resync-state" && role === "client") { applyFullState(payload); clockOffsetTicks = num(payload.hostTick, tick) - tick; return true; }
     if (payload.type === "resume" && role === "host") { if (payload.token !== resumeToken) { control("resume-rejected", { reason: "Invalid resume token." }); } else control("resume-state", { state: simulation.captureState(state), hash: simulation.hashState(state), ack: acknowledgements.local ?? -1, hostTick: tick }); return true; }
     if (payload.type === "resume-state") { if (applyFullState(payload)) { recoveryDeadline = null; setPhase("ready"); } return true; }
     if (payload.type === "resume-rejected") { setPhase("failed", String(payload.reason ?? "Resume rejected.")); return true; }
-    if (payload.type === "rematch-vote") { rematch[payload.player === 0 ? 0 : 1] = Boolean(payload.ready); emit(); if (role === "host" && rematch[0] && rematch[1]) startRematch(); return true; }
+    if (payload.type === "rematch-vote") { const player = role === "host" ? 1 : 0; rematch[player] = Boolean(payload.ready); emit(); if (role === "host" && rematch[0] && rematch[1]) startRematch(); return true; }
     if (payload.type === "rematch-start") { state = simulation.loadState(copy(payload.state)); pendingInputs = []; snapshots = []; rematch = { 0: false, 1: false }; ready = { 0: true, 1: true }; setPhase("ready"); notifyApp({ type: "rematch-start" }); return true; }
-    if (payload.type === "forfeit") { state = simulation.forfeit?.(state, payload.player, tick) ?? state; notifyApp({ type: "forfeit", player: payload.player }); return true; }
+    if (payload.type === "forfeit") { const player = role === "host" ? 1 : 0; state = simulation.forfeit?.(state, player, tick) ?? state; notifyApp({ type: "forfeit", player }); return true; }
     if (payload.type === "app") { notifyApp(payload.message); return true; }
     return false;
   }
@@ -191,7 +191,7 @@ export function createMultiplayerHostController(options = {}) {
   }
 
   function startRematch() {
-    state = simulation.createInitialState(copy(options.initialState)); simulation.configurePlayers?.(state, copy(profiles)); pendingInputs = []; snapshots = []; rematch = { 0: false, 1: false };
+    state = simulation.createInitialState(copy(options.initialState)); simulation.configurePlayers?.(state, copy(profiles)); pendingInputs = []; snapshots = []; seenEvents.clear(); rematch = { 0: false, 1: false };
     control("rematch-start", { state: simulation.captureState(state), hash: simulation.hashState(state), hostTick: tick });
     setPhase("ready"); notifyApp({ type: "rematch-start" });
   }
@@ -207,7 +207,7 @@ export function createMultiplayerHostController(options = {}) {
       const frame = { sequence: inputSequence++, tick, estimatedHostTick: Math.round(tick + clockOffsetTicks), input: copy(localInput) }; pendingInputs.push(frame);
       send("realtime", { type: "input-bundle", protocolVersion, frames: pendingInputs.slice(-redundantInputs) });
       state = simulation.applyInputs(state, { local: localInput }, delta);
-    } else state = simulation.applyInputs(state, { host: localInput, ...latestInputs }, delta);
+    } else state = simulation.applyInputs(state, localPlayer === 1 ? { local: localInput, host: latestInputs.host } : { host: localInput, ...latestInputs }, delta);
     const historical = (targetTick) => history.reduce((best, item) => item.tick <= targetTick ? item : best, history[0])?.state;
     state = simulation.step(state, delta, tick, { authoritative: role === "host", localPlayer, inputTicks: copy(latestInputTicks), getHistoricalState: historical });
     history.push({ tick, state: simulation.captureState(state) }); if (history.length > Math.ceil(rate * 0.5)) history.shift();

@@ -121,6 +121,11 @@ for (let index = 0; index < 8; index += 1) { client.tick(1 / 60); host.tick(1 / 
 assert.ok(realtimeMessages.some((message) => message.type === "input-bundle" && message.frames.length > 1), "recent inputs are bundled redundantly");
 assert.ok(client.getStatus().jitterMs >= 0 && client.getStatus().connectionQuality, "quality metrics are exposed");
 
+host.receive("control", { type: "player-ready", protocolVersion: 2, player: 0, ready: true, profile: { name: "Guest" } });
+host.tick(1 / 60);
+assert.equal(host.getStatus().profiles[0].name, "Player 1", "a peer cannot spoof the host player index");
+assert.equal(host.getStatus().profiles[1].name, "Guest", "remote profile changes are bound to the transport role");
+
 client.requestRematch();
 host.requestRematch();
 host.tick(1 / 60); client.tick(1 / 60);
