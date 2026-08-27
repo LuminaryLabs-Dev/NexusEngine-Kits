@@ -5,6 +5,7 @@ export function createPeerJSTransportProvider(options = {}) {
   if (typeof Peer !== "function") throw new TypeError("PeerJS transport requires an injected Peer constructor.");
 
   let peer = null, control = null, realtime = null, callbacks = {}, openedAt = 0, generation = 0;
+  let mode = "idle", savedConfig = null, reconnecting = null;
   let phase = "idle", sent = { control: 0, realtime: 0 }, received = { control: 0, realtime: 0 };
   const timeoutMs = Math.max(1000, Number(options.connectionTimeoutMs ?? 12000));
 
@@ -40,6 +41,7 @@ export function createPeerJSTransportProvider(options = {}) {
     });
     connection.on("close", () => {
       if (connectionGeneration !== generation) return;
+      if ((channel === "control" ? control : realtime) !== connection) return;
       status("connection-lost", { peerId: connection.peer });
     });
     connection.on("error", (error) => {
@@ -66,7 +68,11 @@ export function createPeerJSTransportProvider(options = {}) {
         else status("failed", { message: String(error?.message ?? error) });
       });
       peer.on("disconnected", () => {
-        if (peerGeneration === generation) status("connection-lost");
+        if (peerGeneration !== generation) return;
+        status("connection-lost");
+        if (options.autoReconnect !== false && peer && !peer.destroyed) {
+          try { peer.reconnect(); status("reconnecting"); } catch { /* controller owns the grace deadline */ }
+        }
       });
       peer.on("close", () => {
         if (peerGeneration === generation) status("closed");
@@ -106,6 +112,7 @@ export function createPeerJSTransportProvider(options = {}) {
     capabilities: Object.freeze({ peerToPeer: true, control: "reliable", realtime: "latency-first", jsonPortable: true }),
     initialize(next = {}) { callbacks = next; return this; },
     async createSession(config = {}) {
+      mode = "host"; savedConfig = clone(config);
       status("opening");
       try {
         const peerId = await createPeer(config.peerId);
@@ -119,7 +126,7 @@ export function createPeerJSTransportProvider(options = {}) {
     async joinSession(config = {}) {
       const sessionId = String(config.sessionId ?? "").trim();
       if (!sessionId) throw new TypeError("PeerJS joinSession requires sessionId.");
-      status("connecting");
+      mode = "client"; savedConfig = clone(config); status("connecting");
       try {
         const peerId = await createPeer(config.peerId);
         const connectionGeneration = generation;
@@ -137,10 +144,38 @@ export function createPeerJSTransportProvider(options = {}) {
     },
     sendControl(payload) { return send("control", payload); },
     sendRealtime(payload) { return send("realtime", payload); },
+    async reconnect(config = savedConfig ?? {}) {
+      if (reconnecting) return reconnecting;
+      reconnecting = (async () => {
+        status("reconnecting");
+        if (peer?.disconnected && !peer.destroyed) {
+          peer.reconnect();
+          await withTimeout(new Promise((resolve) => peer.once("open", resolve)), "PeerJS reconnect");
+        }
+        if (control?.open && realtime?.open) { maybeReady(control.peer); return true; }
+        if (mode === "client") {
+          closeConnections("reconnecting");
+          await this.joinSession(config);
+          return true;
+        }
+        status("listening", { sessionId: peer?.id ?? config.peerId });
+        return true;
+      })().finally(() => { reconnecting = null; });
+      return reconnecting;
+    },
+    async takeoverSession(config = {}) {
+      const sessionId = String(config.sessionId ?? savedConfig?.sessionId ?? "").trim();
+      if (!sessionId) throw new TypeError("PeerJS takeoverSession requires sessionId.");
+      closeConnections("migrating-host");
+      mode = "host"; savedConfig = { ...clone(config), peerId: sessionId };
+      const peerId = await createPeer(sessionId);
+      status("listening", { sessionId: peerId, migrated: true });
+      return { sessionId: peerId, peerId, migrated: true };
+    },
     getStats() {
       return {
         id: "peerjs", phase, open: Boolean(peer?.open),
-        connected: Boolean(control?.open && realtime?.open), openedAt,
+        connected: Boolean(control?.open && realtime?.open), openedAt, mode,
         sent: clone(sent), received: clone(received)
       };
     },
@@ -150,7 +185,7 @@ export function createPeerJSTransportProvider(options = {}) {
       openedAt = 0;
       sent = { control: 0, realtime: 0 };
       received = { control: 0, realtime: 0 };
-      phase = "idle";
+      phase = "idle"; mode = "idle"; savedConfig = null;
     },
     dispose() {
       generation += 1;
@@ -159,7 +194,7 @@ export function createPeerJSTransportProvider(options = {}) {
       peer?.destroy?.();
       control = realtime = peer = null;
       callbacks = {};
-      phase = "disposed";
+      phase = "disposed"; mode = "idle"; savedConfig = null;
     }
   };
 }

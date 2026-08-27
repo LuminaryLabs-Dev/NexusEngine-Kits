@@ -109,6 +109,22 @@ assert.equal(client.getStatus().stalePackets, staleBefore + 1, "stale snapshots 
 client.receive("realtime", { type: "snapshot", sequence: 9999, tick: 9999, acknowledgements: { local: 9999 }, state: current, hash: "corrupt" });
 client.tick(1 / 60);
 assert.equal(client.getStatus().hashMismatches, 1, "snapshot hashes are validated");
+host.tick(1 / 60);
+client.tick(1 / 60);
+assert.equal(client.getStatus().resyncs, 1, "a hash mismatch automatically requests and applies a full authoritative state");
+
+const realtimeMessages = [];
+const originalRealtime = clientTransport.sendRealtime;
+clientTransport.sendRealtime = (value) => { realtimeMessages.push(structuredClone(value)); return originalRealtime(value); };
+client.setLocalInput({ move: 1 });
+for (let index = 0; index < 8; index += 1) { client.tick(1 / 60); host.tick(1 / 60); }
+assert.ok(realtimeMessages.some((message) => message.type === "input-bundle" && message.frames.length > 1), "recent inputs are bundled redundantly");
+assert.ok(client.getStatus().jitterMs >= 0 && client.getStatus().connectionQuality, "quality metrics are exposed");
+
+client.requestRematch();
+host.requestRematch();
+host.tick(1 / 60); client.tick(1 / 60);
+assert.deepEqual(client.getStatus().rematch, { 0: false, 1: false }, "two votes restart a match in the same room");
 
 const timeoutTransport = transport(() => true);
 timeoutTransport.pair({ deliver() {}, transportReady() {} });
