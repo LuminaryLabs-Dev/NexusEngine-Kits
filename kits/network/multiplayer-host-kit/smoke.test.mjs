@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { createMultiplayerHostController } from "./index.js";
+import { createMultiplayerHostController } from "./controller.js";
 
 function transport(drop = () => false) {
   let receiver = null, status = null, remote = null, sent = 0, dropped = 0;

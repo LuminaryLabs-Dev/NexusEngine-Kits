@@ -45,6 +45,7 @@
     "./domain-aquatic": "./domains/aquatic/index.js",
     "./domain-network": "./domains/network/index.js",
     "./multiplayer-host-kit": "./kits/network/multiplayer-host-kit/index.js",
+    "./multiplayer-host-controller": "./kits/network/multiplayer-host-kit/controller.js",
     "./peerjs-transport-provider-kit": "./kits/network/peerjs-transport-provider-kit/index.js",
     "./spatial-interaction-kit": "./kits/spatial/spatial-interaction-kit/index.js",
     "./objective-bridge-kit": "./kits/progression/objective-bridge-kit/index.js",

@@ -8,7 +8,7 @@
       "package": "@luminarylabs/nexusengine-kits",
       "version": "0.0.1",
       "sourceCommit": "0000000000000000000000000000000000000000",
-      "integrity": "sha256:75c70bd7a83e23a05b31d01a4969c1637e905890427f7d944c387b82f660d74b",
+      "integrity": "sha256:4f5df516cddafd3100e0105d2a1ba6221ec75c501882d14a3774af80537627f9",
       "status": "metadata-only",
       "environments": [
         "browser",
@@ -21,7 +21,7 @@
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolution": "immutable-fetch-required",
-        "executableFileCount": 118
+        "executableFileCount": 119
       }
     }
   ],

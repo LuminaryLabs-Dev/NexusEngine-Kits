@@ -5748,7 +5748,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/network/multiplayer-host-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
     },
-    "integrity": "sha256-WYgSj7Sh63/uWw2NDVE5JDMUXEuHmFPL9nB/tqACBXA=",
+    "integrity": "sha256-LZpyqlZJ1Vv/vcJAEGUWekP5kOUPThA9uTl+fD03YtM=",
     "environments": [
       "node",
       "browser"
@@ -15961,7 +15961,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/network/multiplayer-host-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
       },
-      "integrity": "sha256-WYgSj7Sh63/uWw2NDVE5JDMUXEuHmFPL9nB/tqACBXA=",
+      "integrity": "sha256-LZpyqlZJ1Vv/vcJAEGUWekP5kOUPThA9uTl+fD03YtM=",
       "environments": [
         "node",
         "browser"
@@ -27589,7 +27589,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/network/multiplayer-host-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
       },
-      "integrity": "sha256-WYgSj7Sh63/uWw2NDVE5JDMUXEuHmFPL9nB/tqACBXA=",
+      "integrity": "sha256-LZpyqlZJ1Vv/vcJAEGUWekP5kOUPThA9uTl+fD03YtM=",
       "environments": [
         "node",
         "browser"
