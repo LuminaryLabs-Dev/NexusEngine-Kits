@@ -1,7 +1,7 @@
 {
   "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "peerjs-transport-provider-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "candidate",
   "kind": "provider-kit",
   "domain": "network",

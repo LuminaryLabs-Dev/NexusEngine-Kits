@@ -5733,7 +5733,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "multiplayer-host-kit",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "status": "candidate",
     "kind": "domain-service-kit",
     "domain": "network",
@@ -5748,7 +5748,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/network/multiplayer-host-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
     },
-    "integrity": "sha256-zxeov2SKCVLGkw7MEU244+UoVRao6v3jFelkSEHTdMg=",
+    "integrity": "sha256-WYgSj7Sh63/uWw2NDVE5JDMUXEuHmFPL9nB/tqACBXA=",
     "environments": [
       "node",
       "browser"
@@ -5757,7 +5757,8 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
     "provides": [
       "network:multiplayer-host",
       "network:prediction",
-      "network:reconciliation"
+      "network:reconciliation",
+      "network:session-handshake"
     ],
     "composes": [
       "peerjs-transport-provider-kit"
@@ -6149,7 +6150,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "peerjs-transport-provider-kit",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "status": "candidate",
     "kind": "provider-kit",
     "domain": "network",
@@ -6164,7 +6165,7 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "node": "./kits/network/peerjs-transport-provider-kit/index.js",
       "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js"
     },
-    "integrity": "sha256-Fh0XJVoiTa0SrdRn/sBjS0Xd5FheLcLUk8/vYNxK3nc=",
+    "integrity": "sha256-uGQkZGj+HlK4RGM5XmSqGsiQ+c4fdlsKZjfglFdPtac=",
     "environments": [
       "node",
       "browser"
@@ -15945,7 +15946,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "multiplayer-host-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "status": "candidate",
       "kind": "domain-service-kit",
       "domain": "network",
@@ -15960,7 +15961,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/network/multiplayer-host-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
       },
-      "integrity": "sha256-zxeov2SKCVLGkw7MEU244+UoVRao6v3jFelkSEHTdMg=",
+      "integrity": "sha256-WYgSj7Sh63/uWw2NDVE5JDMUXEuHmFPL9nB/tqACBXA=",
       "environments": [
         "node",
         "browser"
@@ -15969,7 +15970,8 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "provides": [
         "network:multiplayer-host",
         "network:prediction",
-        "network:reconciliation"
+        "network:reconciliation",
+        "network:session-handshake"
       ],
       "composes": [
         "peerjs-transport-provider-kit"
@@ -16361,7 +16363,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "peerjs-transport-provider-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "status": "candidate",
       "kind": "provider-kit",
       "domain": "network",
@@ -16376,7 +16378,7 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "node": "./kits/network/peerjs-transport-provider-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js"
       },
-      "integrity": "sha256-Fh0XJVoiTa0SrdRn/sBjS0Xd5FheLcLUk8/vYNxK3nc=",
+      "integrity": "sha256-uGQkZGj+HlK4RGM5XmSqGsiQ+c4fdlsKZjfglFdPtac=",
       "environments": [
         "node",
         "browser"
@@ -27572,7 +27574,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "multiplayer-host-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "status": "candidate",
       "kind": "domain-service-kit",
       "domain": "network",
@@ -27587,7 +27589,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/network/multiplayer-host-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
       },
-      "integrity": "sha256-zxeov2SKCVLGkw7MEU244+UoVRao6v3jFelkSEHTdMg=",
+      "integrity": "sha256-WYgSj7Sh63/uWw2NDVE5JDMUXEuHmFPL9nB/tqACBXA=",
       "environments": [
         "node",
         "browser"
@@ -27596,7 +27598,8 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "provides": [
         "network:multiplayer-host",
         "network:prediction",
-        "network:reconciliation"
+        "network:reconciliation",
+        "network:session-handshake"
       ],
       "composes": [
         "peerjs-transport-provider-kit"
@@ -28144,7 +28147,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "peerjs-transport-provider-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "status": "candidate",
       "kind": "provider-kit",
       "domain": "network",
@@ -28159,7 +28162,7 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
         "node": "./kits/network/peerjs-transport-provider-kit/index.js",
         "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js"
       },
-      "integrity": "sha256-Fh0XJVoiTa0SrdRn/sBjS0Xd5FheLcLUk8/vYNxK3nc=",
+      "integrity": "sha256-uGQkZGj+HlK4RGM5XmSqGsiQ+c4fdlsKZjfglFdPtac=",
       "environments": [
         "node",
         "browser"

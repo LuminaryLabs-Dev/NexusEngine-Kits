@@ -1,7 +1,7 @@
 {
   "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "multiplayer-host-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "candidate",
   "kind": "domain-service-kit",
   "domain": "network",
@@ -15,7 +15,7 @@
   "integrity": null,
   "environments": ["node","browser"],
   "requires": [],
-  "provides": ["network:multiplayer-host","network:prediction","network:reconciliation"],
+  "provides": ["network:multiplayer-host","network:prediction","network:reconciliation","network:session-handshake"],
   "composes": ["peerjs-transport-provider-kit"],
   "realBehavior": true,
   "source": {"owner":"LuminaryLabs-Dev","repository":"NexusArcade-Prototypes","requestedRef":"a94855122e52d1dadbfac310ca56367783cfa109","resolvedCommit":"a94855122e52d1dadbfac310ca56367783cfa109","path":"prototypes/knockout-circuit/index.html","parity":"candidate"},

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "nexusengine.kit-manifest.v1",
   "id": "multiplayer-host-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "candidate",
   "kind": "domain-service-kit",
   "domain": "network",
@@ -16,7 +16,7 @@
     "node": "./kits/network/multiplayer-host-kit/index.js",
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
   },
-  "integrity": "sha256-zxeov2SKCVLGkw7MEU244+UoVRao6v3jFelkSEHTdMg=",
+  "integrity": "sha256-WYgSj7Sh63/uWw2NDVE5JDMUXEuHmFPL9nB/tqACBXA=",
   "environments": [
     "node",
     "browser"
@@ -25,7 +25,8 @@
   "provides": [
     "network:multiplayer-host",
     "network:prediction",
-    "network:reconciliation"
+    "network:reconciliation",
+    "network:session-handshake"
   ],
   "composes": [
     "peerjs-transport-provider-kit"

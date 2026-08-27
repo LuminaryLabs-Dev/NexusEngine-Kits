@@ -8,7 +8,7 @@
       "package": "@luminarylabs/nexusengine-kits",
       "version": "0.0.1",
       "sourceCommit": "0000000000000000000000000000000000000000",
-      "integrity": "sha256:0793251f6b187a8c6513f2b915c72a1e651d1d133f11218cfd951129585e2eb0",
+      "integrity": "sha256:75c70bd7a83e23a05b31d01a4969c1637e905890427f7d944c387b82f660d74b",
       "status": "metadata-only",
       "environments": [
         "browser",
@@ -4943,7 +4943,7 @@
     },
     {
       "id": "multiplayer-host-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "status": "candidate",
       "kind": "domain-service-kit",
       "responsibility": "multiplayer-host-kit",
@@ -4955,7 +4955,8 @@
       "provides": [
         "network:multiplayer-host",
         "network:prediction",
-        "network:reconciliation"
+        "network:reconciliation",
+        "network:session-handshake"
       ],
       "composes": [
         "peerjs-transport-provider-kit"
@@ -5257,7 +5258,7 @@
     },
     {
       "id": "peerjs-transport-provider-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "status": "candidate",
       "kind": "provider-kit",
       "responsibility": "peerjs-transport-provider-kit",
