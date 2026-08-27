@@ -144,7 +144,7 @@ export function createMultiplayerHostController(options = {}) {
       jitterTicks += (Math.abs(sample - rttTicks) - jitterTicks) * 0.2; rttTicks += (sample - rttTicks) * 0.2;
       const offsetSample = num(payload.remoteTick, tick) + sample / 2 - tick; clockOffsetTicks += (offsetSample - clockOffsetTicks) * 0.1; return true;
     }
-    if (payload.type === "player-ready") { ready[payload.player === 0 ? 0 : 1] = Boolean(payload.ready); profiles[payload.player === 0 ? 0 : 1] = { ...profiles[payload.player], ...copy(payload.profile ?? {}) }; emit(); return true; }
+    if (payload.type === "player-ready") { ready[payload.player === 0 ? 0 : 1] = Boolean(payload.ready); profiles[payload.player === 0 ? 0 : 1] = { ...profiles[payload.player], ...copy(payload.profile ?? {}) }; simulation.configurePlayers?.(state, copy(profiles)); emit(); return true; }
     if (payload.type === "match-event") { if (Number(payload.sequence) > lastEventSequence) { lastEventSequence = Number(payload.sequence); reliableEventCount += 1; notifyApp({ type: "match-event", events: payload.events, tick: payload.tick }); } return true; }
     if (payload.type === "resync-request" && role === "host") { control("resync-state", { state: simulation.captureState(state), hash: simulation.hashState(state), ack: acknowledgements.local ?? -1, hostTick: tick }); return true; }
     if (payload.type === "resync-state" && role === "client") { applyFullState(payload); clockOffsetTicks = num(payload.hostTick, tick) - tick; return true; }
@@ -191,7 +191,7 @@ export function createMultiplayerHostController(options = {}) {
   }
 
   function startRematch() {
-    state = simulation.createInitialState(copy(options.initialState)); pendingInputs = []; snapshots = []; rematch = { 0: false, 1: false };
+    state = simulation.createInitialState(copy(options.initialState)); simulation.configurePlayers?.(state, copy(profiles)); pendingInputs = []; snapshots = []; rematch = { 0: false, 1: false };
     control("rematch-start", { state: simulation.captureState(state), hash: simulation.hashState(state), hostTick: tick });
     setPhase("ready"); notifyApp({ type: "rematch-start" });
   }
