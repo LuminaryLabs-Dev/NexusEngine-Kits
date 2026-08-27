@@ -81,11 +81,13 @@ market-kit unavailable
 material-palette-kit unavailable
 mission-phase-kit unavailable
 moving-target-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
+multiplayer-host-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js
 npc-schedule-domain-kit unavailable
 objective-bridge-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/progression/objective-bridge-kit/index.js
 objective-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 openxr-hand-adapter-dsk unavailable
 parry-window-domain-kit unavailable
+peerjs-transport-provider-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js
 performance-budget-kit unavailable
 powered-aerial-flight-domain-kit unavailable
 procedural-creature-body-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js

@@ -3,7 +3,7 @@
   "activeCapability": "clock-kit",
   "baselineCount": 108,
   "approvedAdditions": {
-    "total": 26,
+    "total": 28,
     "resolved": 18
   },
   "kits": {
@@ -588,6 +588,13 @@
       "sourceCommit": "06305727778d579ca18309221e60c3e41bd066c7",
       "next": "keep all stable gates green"
     },
+    "multiplayer-host-kit": {
+      "status": "candidate",
+      "target": "kits/network/multiplayer-host-kit",
+      "realBehavior": true,
+      "sourceCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+      "next": "Candidate requires production TURN and reconnect validation before official promotion."
+    },
     "npc-schedule-domain-kit": {
       "status": "migration-placeholder",
       "target": "kits/rpg-social/npc-schedule-domain-kit",
@@ -622,6 +629,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "parry-window-domain-kit has no validated stable implementation or parity record."
+    },
+    "peerjs-transport-provider-kit": {
+      "status": "candidate",
+      "target": "kits/network/peerjs-transport-provider-kit",
+      "realBehavior": true,
+      "sourceCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+      "next": "Candidate requires cross-NAT TURN and reconnect validation before official promotion."
     },
     "performance-budget-kit": {
       "status": "migration-placeholder",

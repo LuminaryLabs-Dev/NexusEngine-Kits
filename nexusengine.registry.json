@@ -8,7 +8,7 @@
       "package": "@luminarylabs/nexusengine-kits",
       "version": "0.0.1",
       "sourceCommit": "0000000000000000000000000000000000000000",
-      "integrity": "sha256:64c91535f3032a2888a0b75ccad2ea20100b5d47fcc43d02e174d033440d2b5f",
+      "integrity": "sha256:0793251f6b187a8c6513f2b915c72a1e651d1d133f11218cfd951129585e2eb0",
       "status": "metadata-only",
       "environments": [
         "browser",
@@ -21,7 +21,7 @@
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolution": "immutable-fetch-required",
-        "executableFileCount": 115
+        "executableFileCount": 118
       }
     }
   ],
@@ -267,6 +267,33 @@
       "metadata": {
         "kind": "runtime-domain",
         "entry": "./domains/input/index.js"
+      }
+    },
+    {
+      "id": "kits-network",
+      "domainPath": "n:network:extensions",
+      "parentDomainPath": "n:network",
+      "label": "Network Providers",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core Network Providers capabilities.",
+      "ownedMeaning": [
+        "Reusable Network Providers policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:network:extensions"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/network/index.js"
       }
     },
     {
@@ -4915,6 +4942,61 @@
       }
     },
     {
+      "id": "multiplayer-host-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "responsibility": "multiplayer-host-kit",
+      "domainPath": "n:network:extensions:multiplayer-host",
+      "parentDomainPath": "n:network:extensions",
+      "apiName": "multiplayer",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "network:multiplayer-host",
+        "network:prediction",
+        "network:reconciliation"
+      ],
+      "composes": [
+        "peerjs-transport-provider-kit"
+      ],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./multiplayer-host-kit",
+        "exportName": "createMultiplayerHostKit",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/network/multiplayer-host-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusArcade-Prototypes",
+          "requestedRef": "a94855122e52d1dadbfac310ca56367783cfa109",
+          "resolvedCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+          "path": "prototypes/knockout-circuit/index.html",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/network/multiplayer-host-kit/README.md",
+          "smoke": "kits/network/multiplayer-host-kit/smoke.test.mjs",
+          "parity": "kits/network/multiplayer-host-kit/source-parity.md",
+          "limitations": "kits/network/multiplayer-host-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
       "id": "npc-schedule-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -5170,6 +5252,58 @@
           "smoke": null,
           "parity": null,
           "limitations": null
+        }
+      }
+    },
+    {
+      "id": "peerjs-transport-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "responsibility": "peerjs-transport-provider-kit",
+      "domainPath": "n:network:extensions:peerjs-transport",
+      "parentDomainPath": "n:network:extensions",
+      "apiName": "peerjsTransport",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "network:transport-provider",
+        "network:peerjs"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./peerjs-transport-provider-kit",
+        "exportName": "createPeerJSTransportProvider",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/network/peerjs-transport-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusArcade-Prototypes",
+          "requestedRef": "a94855122e52d1dadbfac310ca56367783cfa109",
+          "resolvedCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+          "path": "prototypes/knockout-circuit/index.html",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/network/peerjs-transport-provider-kit/README.md",
+          "smoke": "kits/network/peerjs-transport-provider-kit/smoke.test.mjs",
+          "parity": "kits/network/peerjs-transport-provider-kit/source-parity.md",
+          "limitations": "kits/network/peerjs-transport-provider-kit/LIMITATIONS.md"
         }
       }
     },

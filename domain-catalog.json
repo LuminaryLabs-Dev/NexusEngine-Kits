@@ -167,6 +167,19 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "network",
+      "label": "Network Providers",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:network:extensions",
+      "entry": "./domains/network/index.js",
+      "kits": [
+        "multiplayer-host-kit",
+        "peerjs-transport-provider-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "procedural-creatures",
       "label": "Procedural Creatures",
       "kind": "simulation-domain",

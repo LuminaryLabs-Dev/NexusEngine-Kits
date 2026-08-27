@@ -38,7 +38,9 @@
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit"
+      "lock-and-socket-kit",
+      "multiplayer-host-kit",
+      "peerjs-transport-provider-kit"
     ],
     "activeCapability": "clock-kit"
   },

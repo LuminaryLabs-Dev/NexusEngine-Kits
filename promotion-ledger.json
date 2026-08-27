@@ -6,20 +6,20 @@
     "baselineResolved": 5,
     "baselineRemaining": 103,
     "official": 23,
-    "candidate": 8,
+    "candidate": 10,
     "scaffolded": 8,
     "placeholder": 95,
     "deprecated": 0,
     "archived": 0,
     "blocked": 0,
-    "approvedAdditionsTotal": 26,
+    "approvedAdditionsTotal": 28,
     "approvedAdditionsResolved": 18,
     "activeCapability": "clock-kit",
     "stages": {
-      "inventoried": 134,
-      "sourceMapped": 134,
-      "protoValidated": 10,
-      "candidate": 31,
+      "inventoried": 136,
+      "sourceMapped": 136,
+      "protoValidated": 12,
+      "candidate": 33,
       "official": 23,
       "deprecated": 0,
       "archived": 0,
@@ -1522,6 +1522,24 @@
       "blocker": null
     },
     {
+      "id": "multiplayer-host-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "production TURN and reconnect proof",
+      "blocker": "Candidate requires production TURN and reconnect validation before official promotion."
+    },
+    {
       "id": "npc-schedule-domain-kit",
       "status": "migration-placeholder",
       "baseline": true,
@@ -1610,6 +1628,24 @@
       },
       "nextCapability": "parry-window-domain-kit",
       "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "peerjs-transport-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "cross-NAT browser proof",
+      "blocker": "Candidate requires cross-NAT TURN and reconnect validation before official promotion."
     },
     {
       "id": "performance-budget-kit",

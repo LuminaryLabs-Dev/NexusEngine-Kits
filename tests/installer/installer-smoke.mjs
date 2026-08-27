@@ -46,7 +46,7 @@ const retiredToCore = [
 for (const id of retiredToCore) assert.equal(listKitIds().includes(id), false, `${id} must not remain in the external catalog`);
 
 const all = createAllNexusEngineKits();
-assert.equal(listKitIds().length, 134);
+assert.equal(listKitIds().length, 136);
 assert.equal(all.some((kit) => kit.id === "fishing"), true);
 assert.equal(listKitIds().includes("mcp-domain-kit"), false);
 assert.equal(listKitIds().includes("object-placement-contract-kit"), false);

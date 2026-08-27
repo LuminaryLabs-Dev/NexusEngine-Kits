@@ -5732,6 +5732,78 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "multiplayer-host-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "domain-service-kit",
+    "domain": "network",
+    "domainPath": "n:network:extensions:multiplayer-host",
+    "parentDomainPath": "n:network:extensions",
+    "apiName": "multiplayer",
+    "factory": "createMultiplayerHostKit",
+    "entry": "./kits/network/multiplayer-host-kit/index.js",
+    "packageExport": "./multiplayer-host-kit",
+    "module": {
+      "package": "./kits/network/multiplayer-host-kit/index.js",
+      "node": "./kits/network/multiplayer-host-kit/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
+    },
+    "integrity": "sha256-zxeov2SKCVLGkw7MEU244+UoVRao6v3jFelkSEHTdMg=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "network:multiplayer-host",
+      "network:prediction",
+      "network:reconciliation"
+    ],
+    "composes": [
+      "peerjs-transport-provider-kit"
+    ],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusArcade-Prototypes",
+      "requestedRef": "a94855122e52d1dadbfac310ca56367783cfa109",
+      "resolvedCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+      "path": "prototypes/knockout-circuit/index.html",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "multiplayer",
+      "snapshot": true,
+      "loadSnapshot": true,
+      "reset": true,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/network/multiplayer-host-kit/README.md",
+      "smoke": "kits/network/multiplayer-host-kit/smoke.test.mjs",
+      "parity": "kits/network/multiplayer-host-kit/source-parity.md",
+      "limitations": "kits/network/multiplayer-host-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "production TURN and reconnect proof",
+      "blocker": "Candidate requires production TURN and reconnect validation before official promotion."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "npc-schedule-domain-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -6073,6 +6145,75 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
     },
     "stability": "migration-placeholder"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "peerjs-transport-provider-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "provider-kit",
+    "domain": "network",
+    "domainPath": "n:network:extensions:peerjs-transport",
+    "parentDomainPath": "n:network:extensions",
+    "apiName": "peerjsTransport",
+    "factory": "createPeerJSTransportProvider",
+    "entry": "./kits/network/peerjs-transport-provider-kit/index.js",
+    "packageExport": "./peerjs-transport-provider-kit",
+    "module": {
+      "package": "./kits/network/peerjs-transport-provider-kit/index.js",
+      "node": "./kits/network/peerjs-transport-provider-kit/index.js",
+      "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js"
+    },
+    "integrity": "sha256-Fh0XJVoiTa0SrdRn/sBjS0Xd5FheLcLUk8/vYNxK3nc=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "network:transport-provider",
+      "network:peerjs"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusArcade-Prototypes",
+      "requestedRef": "a94855122e52d1dadbfac310ca56367783cfa109",
+      "resolvedCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+      "path": "prototypes/knockout-circuit/index.html",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "peerjsTransport",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": true,
+      "deterministic": false
+    },
+    "proof": {
+      "readme": "kits/network/peerjs-transport-provider-kit/README.md",
+      "smoke": "kits/network/peerjs-transport-provider-kit/smoke.test.mjs",
+      "parity": "kits/network/peerjs-transport-provider-kit/source-parity.md",
+      "limitations": "kits/network/peerjs-transport-provider-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": true,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "cross-NAT browser proof",
+      "blocker": "Candidate requires cross-NAT TURN and reconnect validation before official promotion."
+    },
+    "stability": "candidate"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -9436,6 +9577,19 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.domain-manifest.v1",
+    "id": "network",
+    "label": "Network Providers",
+    "kind": "service-domain",
+    "status": "candidate",
+    "domainPath": "n:network:extensions",
+    "entry": "./domains/network/index.js",
+    "kits": [
+      "multiplayer-host-kit",
+      "peerjs-transport-provider-kit"
+    ]
+  },
+  {
+    "schemaVersion": "nexusengine.domain-manifest.v1",
     "id": "procedural-creatures",
     "label": "Procedural Creatures",
     "kind": "simulation-domain",
@@ -9798,7 +9952,9 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit"
+      "lock-and-socket-kit",
+      "multiplayer-host-kit",
+      "peerjs-transport-provider-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -9884,6 +10040,10 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "input-context-kit",
       "input-buffer-kit",
       "view-rig-kit"
+    ],
+    "network": [
+      "multiplayer-host-kit",
+      "peerjs-transport-provider-kit"
     ],
     "procedural-creatures": [
       "procedural-creature-body-kit"
@@ -15784,6 +15944,78 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "multiplayer-host-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "network",
+      "domainPath": "n:network:extensions:multiplayer-host",
+      "parentDomainPath": "n:network:extensions",
+      "apiName": "multiplayer",
+      "factory": "createMultiplayerHostKit",
+      "entry": "./kits/network/multiplayer-host-kit/index.js",
+      "packageExport": "./multiplayer-host-kit",
+      "module": {
+        "package": "./kits/network/multiplayer-host-kit/index.js",
+        "node": "./kits/network/multiplayer-host-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
+      },
+      "integrity": "sha256-zxeov2SKCVLGkw7MEU244+UoVRao6v3jFelkSEHTdMg=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "network:multiplayer-host",
+        "network:prediction",
+        "network:reconciliation"
+      ],
+      "composes": [
+        "peerjs-transport-provider-kit"
+      ],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusArcade-Prototypes",
+        "requestedRef": "a94855122e52d1dadbfac310ca56367783cfa109",
+        "resolvedCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+        "path": "prototypes/knockout-circuit/index.html",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "multiplayer",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/network/multiplayer-host-kit/README.md",
+        "smoke": "kits/network/multiplayer-host-kit/smoke.test.mjs",
+        "parity": "kits/network/multiplayer-host-kit/source-parity.md",
+        "limitations": "kits/network/multiplayer-host-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "production TURN and reconnect proof",
+        "blocker": "Candidate requires production TURN and reconnect validation before official promotion."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "npc-schedule-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -16125,6 +16357,75 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "peerjs-transport-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "domain": "network",
+      "domainPath": "n:network:extensions:peerjs-transport",
+      "parentDomainPath": "n:network:extensions",
+      "apiName": "peerjsTransport",
+      "factory": "createPeerJSTransportProvider",
+      "entry": "./kits/network/peerjs-transport-provider-kit/index.js",
+      "packageExport": "./peerjs-transport-provider-kit",
+      "module": {
+        "package": "./kits/network/peerjs-transport-provider-kit/index.js",
+        "node": "./kits/network/peerjs-transport-provider-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js"
+      },
+      "integrity": "sha256-Fh0XJVoiTa0SrdRn/sBjS0Xd5FheLcLUk8/vYNxK3nc=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "network:transport-provider",
+        "network:peerjs"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusArcade-Prototypes",
+        "requestedRef": "a94855122e52d1dadbfac310ca56367783cfa109",
+        "resolvedCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+        "path": "prototypes/knockout-circuit/index.html",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "peerjsTransport",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": true,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/network/peerjs-transport-provider-kit/README.md",
+        "smoke": "kits/network/peerjs-transport-provider-kit/smoke.test.mjs",
+        "parity": "kits/network/peerjs-transport-provider-kit/source-parity.md",
+        "limitations": "kits/network/peerjs-transport-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "cross-NAT browser proof",
+        "blocker": "Candidate requires cross-NAT TURN and reconnect validation before official promotion."
+      },
+      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -19362,7 +19663,9 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "sorting-kit",
       "reveal-light-kit",
       "moving-target-kit",
-      "lock-and-socket-kit"
+      "lock-and-socket-kit",
+      "multiplayer-host-kit",
+      "peerjs-transport-provider-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -27268,6 +27571,104 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "multiplayer-host-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "domain-service-kit",
+      "domain": "network",
+      "domainPath": "n:network:extensions:multiplayer-host",
+      "parentDomainPath": "n:network:extensions",
+      "apiName": "multiplayer",
+      "factory": "createMultiplayerHostKit",
+      "entry": "./kits/network/multiplayer-host-kit/index.js",
+      "packageExport": "./multiplayer-host-kit",
+      "module": {
+        "package": "./kits/network/multiplayer-host-kit/index.js",
+        "node": "./kits/network/multiplayer-host-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/multiplayer-host-kit/index.js"
+      },
+      "integrity": "sha256-zxeov2SKCVLGkw7MEU244+UoVRao6v3jFelkSEHTdMg=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "network:multiplayer-host",
+        "network:prediction",
+        "network:reconciliation"
+      ],
+      "composes": [
+        "peerjs-transport-provider-kit"
+      ],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/network/multiplayer-host-kit/index.js"
+      },
+      "runtime": {
+        "api": "multiplayer",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/network/multiplayer-host-kit/README.md",
+        "smoke": "kits/network/multiplayer-host-kit/smoke.test.mjs",
+        "parity": "kits/network/multiplayer-host-kit/source-parity.md",
+        "limitations": "kits/network/multiplayer-host-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "production TURN and reconnect proof",
+        "blocker": "Candidate requires production TURN and reconnect validation before official promotion."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusArcade-Prototypes",
+          "requestedRef": "a94855122e52d1dadbfac310ca56367783cfa109",
+          "resolvedCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+          "path": "prototypes/knockout-circuit/index.html",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": "production TURN and reconnect proof",
+          "blocker": "Candidate requires production TURN and reconnect validation before official promotion."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "npc-schedule-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -27737,6 +28138,101 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "parry-window-domain-kit",
           "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "peerjs-transport-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "domain": "network",
+      "domainPath": "n:network:extensions:peerjs-transport",
+      "parentDomainPath": "n:network:extensions",
+      "apiName": "peerjsTransport",
+      "factory": "createPeerJSTransportProvider",
+      "entry": "./kits/network/peerjs-transport-provider-kit/index.js",
+      "packageExport": "./peerjs-transport-provider-kit",
+      "module": {
+        "package": "./kits/network/peerjs-transport-provider-kit/index.js",
+        "node": "./kits/network/peerjs-transport-provider-kit/index.js",
+        "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js"
+      },
+      "integrity": "sha256-Fh0XJVoiTa0SrdRn/sBjS0Xd5FheLcLUk8/vYNxK3nc=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "network:transport-provider",
+        "network:peerjs"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/network/peerjs-transport-provider-kit/index.js"
+      },
+      "runtime": {
+        "api": "peerjsTransport",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": true,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/network/peerjs-transport-provider-kit/README.md",
+        "smoke": "kits/network/peerjs-transport-provider-kit/smoke.test.mjs",
+        "parity": "kits/network/peerjs-transport-provider-kit/source-parity.md",
+        "limitations": "kits/network/peerjs-transport-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": true,
+          "candidate": true,
+          "official": false,
+          "deprecated": false,
+          "archived": false,
+          "blocked": false
+        },
+        "nextCapability": "cross-NAT browser proof",
+        "blocker": "Candidate requires cross-NAT TURN and reconnect validation before official promotion."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusArcade-Prototypes",
+          "requestedRef": "a94855122e52d1dadbfac310ca56367783cfa109",
+          "resolvedCommit": "a94855122e52d1dadbfac310ca56367783cfa109",
+          "path": "prototypes/knockout-circuit/index.html",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": true,
+            "candidate": true,
+            "official": false,
+            "deprecated": false,
+            "archived": false,
+            "blocked": false
+          },
+          "nextCapability": "cross-NAT browser proof",
+          "blocker": "Candidate requires cross-NAT TURN and reconnect validation before official promotion."
         }
       }
     },
@@ -32298,6 +32794,19 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "network",
+      "label": "Network Providers",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:network:extensions",
+      "entry": "./domains/network/index.js",
+      "kits": [
+        "multiplayer-host-kit",
+        "peerjs-transport-provider-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "procedural-creatures",
       "label": "Procedural Creatures",
       "kind": "simulation-domain",
@@ -32633,20 +33142,20 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineResolved": 5,
   "baselineRemaining": 103,
   "official": 23,
-  "candidate": 8,
+  "candidate": 10,
   "scaffolded": 8,
   "placeholder": 95,
   "deprecated": 0,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 26,
+  "approvedAdditionsTotal": 28,
   "approvedAdditionsResolved": 18,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 134,
-    "sourceMapped": 134,
-    "protoValidated": 10,
-    "candidate": 31,
+    "inventoried": 136,
+    "sourceMapped": 136,
+    "protoValidated": 12,
+    "candidate": 33,
     "official": 23,
     "deprecated": 0,
     "archived": 0,

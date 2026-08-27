@@ -28,3 +28,6 @@ export { createAgricultureDomainKit, createProductionDomainKits } from "../domai
 export * from "../kits/aquatic/fishing-kit/index.js";
 export { aquaticDomain } from "../domains/aquatic/index.js";
 export * from "../kits/migrated-gameplay/index.js";
+export { createNetworkDomainKits } from "../domains/network/index.js";
+export { createMultiplayerHostKit, createMultiplayerHostController } from "../kits/network/multiplayer-host-kit/index.js";
+export { createPeerJSTransportProvider } from "../kits/network/peerjs-transport-provider-kit/index.js";

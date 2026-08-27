@@ -2,7 +2,7 @@
 
 Baseline resolved: 5 / 108
 Baseline remaining: 103
-Approved additions: 18 / 26
+Approved additions: 18 / 28
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -90,11 +90,13 @@ Active capability: clock-kit
 | material-palette-kit | migration-placeholder | no | material-palette-kit has no validated stable implementation or parity record. |
 | mission-phase-kit | migration-placeholder | no | mission-phase-kit has no validated stable implementation or parity record. |
 | moving-target-kit | official | yes |  |
+| multiplayer-host-kit | candidate | no | Candidate requires production TURN and reconnect validation before official promotion. |
 | npc-schedule-domain-kit | migration-placeholder | no | npc-schedule-domain-kit has no validated stable implementation or parity record. |
 | objective-bridge-kit | scaffolded | no | objective-bridge-kit has only scaffold or metadata behavior and lacks validated source parity. |
 | objective-kit | official | yes |  |
 | openxr-hand-adapter-dsk | migration-placeholder | no | openxr-hand-adapter-dsk has no validated stable implementation or parity record. |
 | parry-window-domain-kit | migration-placeholder | no | parry-window-domain-kit has no validated stable implementation or parity record. |
+| peerjs-transport-provider-kit | candidate | no | Candidate requires cross-NAT TURN and reconnect validation before official promotion. |
 | performance-budget-kit | migration-placeholder | no | performance-budget-kit has no validated stable implementation or parity record. |
 | powered-aerial-flight-domain-kit | migration-placeholder | no | powered-aerial-flight-domain-kit has no validated stable implementation or parity record. |
 | procedural-creature-body-kit | candidate | no | Candidate requires non-theropod body plans, core-object adoption proof in multiple products, and multi-renderer validation before official promotion. |
