@@ -129,6 +129,10 @@ upgrade-kit unavailable
 vegetation-placement-domain-kit unavailable
 view-rig-kit unavailable
 visual-pipeline-kit unavailable
+webgpu-compute-provider-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/gpu-providers/webgpu-compute-provider-kit/index.js
+webgpu-frame-provider-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/gpu-providers/webgpu-frame-provider-kit/index.js
+webgpu-host-provider-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/gpu-providers/webgpu-host-provider-kit/index.js
+webgpu-render-provider-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/gpu-providers/webgpu-render-provider-kit/index.js
 webxr-hand-adapter-dsk unavailable
 widget-domain-service-kit unavailable
 widget-dsk unavailable

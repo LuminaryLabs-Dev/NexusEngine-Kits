@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "webgpu-render-provider-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "provider-kit",
+  "domain": "gpu-providers",
+  "domainPath": "n:host:gpu-providers:render",
+  "parentDomainPath": "n:host:gpu-providers",
+  "apiName": "webgpuRenderProvider",
+  "factory": "createWebGPURenderProvider",
+  "entry": "./kits/gpu-providers/webgpu-render-provider-kit/index.js",
+  "packageExport": "./webgpu-render-provider-kit",
+  "module": {
+    "package": "./kits/gpu-providers/webgpu-render-provider-kit/index.js",
+    "node": "./kits/gpu-providers/webgpu-render-provider-kit/index.js",
+    "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/gpu-providers/webgpu-render-provider-kit/index.js"
+  },
+  "environments": [
+    "node",
+    "browser",
+    "worker"
+  ],
+  "requires": [],
+  "provides": [
+    "webgpu:render-provider"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine",
+    "requestedRef": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+    "resolvedCommit": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+    "path": "src/core-domains",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "webgpuRenderProvider",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": "kits/gpu-providers/webgpu-render-provider-kit/README.md",
+    "smoke": "tests/providers/gpu-shared-resource-smoke.mjs",
+    "parity": "kits/gpu-providers/webgpu-render-provider-kit/source-parity.md",
+    "limitations": "kits/gpu-providers/webgpu-render-provider-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false,
+      "deprecated": false,
+      "archived": false,
+      "blocked": false
+    },
+    "nextCapability": "device diversity proof",
+    "blocker": "Candidate provider migration requires independent physical-device validation before official promotion."
+  },
+  "stability": "candidate",
+  "integrity": "sha256-0fVRKfH/BiIfRf5YL5rcOQ6clAArLqNR0ePA4hbw5wA="
+}

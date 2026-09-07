@@ -22,18 +22,24 @@ not an authoring workflow or runtime dependency.
 
 | Measure | Count |
 | --- | ---: |
-| Inventoried kits | 134 |
+| Inventoried kits | 140 |
 | Official | 23 |
-| Candidate | 8 |
+| Candidate | 14 |
 | Scaffolded | 8 |
 | Metadata placeholders | 95 |
 | Deprecated compatibility kits | 0 |
 | Baseline resolved | 5 of 108 |
-| Approved additions resolved | 18 of 26 |
+| Approved additions resolved | 18 of 32 |
 
 Run `npm run progress` for live counts. Catalog presence is not proof of
 implemented behavior: installation permits only `official` entries with
 validated factories and public exports.
+
+Optional WebGPU Host, Render, Frame and Compute providers live under
+`n:host:gpu-providers`. Import their factories through
+`@luminarylabs/nexusengine-kits/providers/webgpu`. They are candidate providers
+with preserved mock-device proof, not production hardware certification.
+See [provider migration](docs/WEBGPU-PROVIDERS.md).
 
 ## Quick Start
 
@@ -110,11 +116,11 @@ docs/       current usage and migration guidance
 ## Current Catalog
 
 ```txt
-134 inventoried Kit records
+140 inventoried Kit records
 23 official
-111 candidate, scaffolded, or migration-placeholder records
+117 candidate, scaffolded, or migration-placeholder records
 108 historical baseline records
-26 approved additions
+32 approved additions
 0 deprecated runtime Kits
 ```
 

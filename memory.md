@@ -51,3 +51,5 @@ not become independent truth.
 Run `npm run build:catalog` and `npm run check`. A Kit is not executable registry
 behavior until immutable source, integrity, export, environment, status,
 dependency, collision, and host preflight gates pass.
+
+- Concrete WebGPU Host/Render/Frame/Compute implementations migrated from Engine into `n:host:gpu-providers`. Their four factory wrappers remain candidate, consume public Engine entrypoints and carry preserved mock-device tests; hardware promotion requires separate evidence.

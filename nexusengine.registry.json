@@ -8,7 +8,7 @@
       "package": "@luminarylabs/nexusengine-kits",
       "version": "0.0.1",
       "sourceCommit": "0000000000000000000000000000000000000000",
-      "integrity": "sha256:4f5df516cddafd3100e0105d2a1ba6221ec75c501882d14a3774af80537627f9",
+      "integrity": "sha256:71807fce02d045b2ec17f771d2ea76861303cd09879b79496f1296c460398b44",
       "status": "metadata-only",
       "environments": [
         "browser",
@@ -21,7 +21,7 @@
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolution": "immutable-fetch-required",
-        "executableFileCount": 119
+        "executableFileCount": 129
       }
     }
   ],
@@ -213,6 +213,33 @@
       "metadata": {
         "kind": "game-family-domain",
         "entry": "./domains/generic-defense/index.js"
+      }
+    },
+    {
+      "id": "kits-gpu-providers",
+      "domainPath": "n:host:gpu-providers",
+      "parentDomainPath": "n:host",
+      "label": "GPU Providers",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core GPU Providers capabilities.",
+      "ownedMeaning": [
+        "Reusable GPU Providers policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:host:gpu-providers"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/gpu-providers/index.js"
       }
     },
     {
@@ -7457,6 +7484,214 @@
           "smoke": null,
           "parity": null,
           "limitations": null
+        }
+      }
+    },
+    {
+      "id": "webgpu-compute-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "responsibility": "webgpu-compute-provider-kit",
+      "domainPath": "n:host:gpu-providers:compute",
+      "parentDomainPath": "n:host:gpu-providers",
+      "apiName": "webgpuComputeProvider",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "webgpu:compute-provider"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./webgpu-compute-provider-kit",
+        "exportName": "createWebGPUComputeProvider",
+        "environments": [
+          "node",
+          "browser",
+          "worker"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/gpu-providers/webgpu-compute-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+          "resolvedCommit": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+          "path": "src/core-domains",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/gpu-providers/webgpu-compute-provider-kit/README.md",
+          "smoke": "tests/providers/gpu-compute-smoke.mjs",
+          "parity": "kits/gpu-providers/webgpu-compute-provider-kit/source-parity.md",
+          "limitations": "kits/gpu-providers/webgpu-compute-provider-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
+      "id": "webgpu-frame-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "responsibility": "webgpu-frame-provider-kit",
+      "domainPath": "n:host:gpu-providers:frame",
+      "parentDomainPath": "n:host:gpu-providers",
+      "apiName": "webgpuFrameProvider",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "webgpu:frame-provider"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./webgpu-frame-provider-kit",
+        "exportName": "createWebGPUFrameExecutor",
+        "environments": [
+          "node",
+          "browser",
+          "worker"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/gpu-providers/webgpu-frame-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+          "resolvedCommit": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+          "path": "src/core-domains",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/gpu-providers/webgpu-frame-provider-kit/README.md",
+          "smoke": "tests/providers/gpu-unified-frame-smoke.mjs",
+          "parity": "kits/gpu-providers/webgpu-frame-provider-kit/source-parity.md",
+          "limitations": "kits/gpu-providers/webgpu-frame-provider-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
+      "id": "webgpu-host-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "responsibility": "webgpu-host-provider-kit",
+      "domainPath": "n:host:gpu-providers:host",
+      "parentDomainPath": "n:host:gpu-providers",
+      "apiName": "webgpuHostProvider",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "webgpu:host-provider"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./webgpu-host-provider-kit",
+        "exportName": "createWebGPUHostProvider",
+        "environments": [
+          "node",
+          "browser",
+          "worker"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/gpu-providers/webgpu-host-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+          "resolvedCommit": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+          "path": "src/core-domains",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/gpu-providers/webgpu-host-provider-kit/README.md",
+          "smoke": "tests/providers/gpu-host-smoke.mjs",
+          "parity": "kits/gpu-providers/webgpu-host-provider-kit/source-parity.md",
+          "limitations": "kits/gpu-providers/webgpu-host-provider-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
+      "id": "webgpu-render-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "responsibility": "webgpu-render-provider-kit",
+      "domainPath": "n:host:gpu-providers:render",
+      "parentDomainPath": "n:host:gpu-providers",
+      "apiName": "webgpuRenderProvider",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "webgpu:render-provider"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./webgpu-render-provider-kit",
+        "exportName": "createWebGPURenderProvider",
+        "environments": [
+          "node",
+          "browser",
+          "worker"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/gpu-providers/webgpu-render-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine",
+          "requestedRef": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+          "resolvedCommit": "bacc8fc0073bf92910e26776a6695d2b8ec45858",
+          "path": "src/core-domains",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/gpu-providers/webgpu-render-provider-kit/README.md",
+          "smoke": "tests/providers/gpu-shared-resource-smoke.mjs",
+          "parity": "kits/gpu-providers/webgpu-render-provider-kit/source-parity.md",
+          "limitations": "kits/gpu-providers/webgpu-render-provider-kit/LIMITATIONS.md"
         }
       }
     },

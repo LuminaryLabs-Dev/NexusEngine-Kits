@@ -91,6 +91,7 @@ const COMPOSITION_DOMAIN_PATHS = Object.freeze({
   "hazard-combat": "n:simulation:combat",
   input: "n:interaction:input:extensions",
   network: "n:network:extensions",
+  "gpu-providers": "n:host:gpu-providers",
   "procedural-creatures": "n:actor:creature:procedural",
   "procedural-objects": "n:object:procedural",
   production: "n:simulation:production",

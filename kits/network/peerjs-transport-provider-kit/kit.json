@@ -16,7 +16,7 @@
     "node": "./kits/network/peerjs-transport-provider-kit/index.js",
     "browser": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js"
   },
-  "integrity": "sha256-uGQkZGj+HlK4RGM5XmSqGsiQ+c4fdlsKZjfglFdPtac=",
+  "integrity": "sha256-gad29dmMAf7KQOyfRUMwQO5y2IVtMwB5mC7h1Jfdnnk=",
   "environments": [
     "node",
     "browser"

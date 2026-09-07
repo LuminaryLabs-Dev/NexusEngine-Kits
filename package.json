@@ -6,9 +6,9 @@
   "nexusIntegrationArtifacts": {
     "engine": {
       "version": "0.0.4",
-      "commit": "16aee598c06efcb7b511e4827ee3f7e23ce3549b",
-      "registryHash": "sha256:740e0916c8017e4e2a91be79c7b02359c4fa1186d7174a52d6311ec8563cb3af",
-      "tarballSha256": "6ffc795737846027fb0426791e77ed77faed90917d25954ffde5d45154eee424"
+      "commit": "a74e8689d1a71c0b42236c009f0f4c46e9b89387",
+      "registryHash": "sha256:d2b8af8d1d542bdb125d33b8a4ff5a32de1cf73da399e57e9a29b5ae35d4a8f5",
+      "tarballSha256": "5a7e2985fd1c67e1204490570e7ccf008eff742f157485bfa552881584b2883b"
     }
   },
   "exports": {
@@ -69,13 +69,19 @@
     "./fishing-kit/renderers": "./kits/aquatic/fishing-kit/renderers.js",
     "./fishing-kit/shaders": "./kits/aquatic/fishing-kit/shaders.js",
     "./fishing-kit/realism": "./kits/aquatic/fishing-kit/realism.js",
-    "./migrated-gameplay": "./kits/migrated-gameplay/index.js"
+    "./migrated-gameplay": "./kits/migrated-gameplay/index.js",
+    "./providers/webgpu": "./adapters/gpu/webgpu/index.js",
+    "./domain-gpu-providers": "./domains/gpu-providers/index.js",
+    "./webgpu-host-provider-kit": "./kits/gpu-providers/webgpu-host-provider-kit/index.js",
+    "./webgpu-compute-provider-kit": "./kits/gpu-providers/webgpu-compute-provider-kit/index.js",
+    "./webgpu-render-provider-kit": "./kits/gpu-providers/webgpu-render-provider-kit/index.js",
+    "./webgpu-frame-provider-kit": "./kits/gpu-providers/webgpu-frame-provider-kit/index.js"
   },
   "peerDependencies": {
     "nexusengine": "0.0.4"
   },
   "devDependencies": {
-    "nexusengine": "git+https://github.com/LuminaryLabs-Dev/NexusEngine.git#16aee598c06efcb7b511e4827ee3f7e23ce3549b"
+    "nexusengine": "git+https://github.com/LuminaryLabs-Dev/NexusEngine.git#a74e8689d1a71c0b42236c009f0f4c46e9b89387"
   },
   "files": [
     "src",
@@ -136,7 +142,8 @@
     "generate:placeholder-matrix": "node scripts/generate-placeholder-matrix.mjs",
     "generate:readiness-report": "node scripts/generate-readiness-report.mjs",
     "progress": "node scripts/kit-progress.mjs",
-    "test": "node tests/registry/repository-registry-smoke.mjs && node tests/registry/lockfile-smoke.mjs && node tests/registry/module-resolver-smoke.mjs && node tests/registry/planning-performance-smoke.mjs && node tests/installer/planning-rejection-smoke.mjs && node tests/installer/installer-smoke.mjs && node tests/package/package-import-smoke.mjs && node kits/network/multiplayer-host-kit/smoke.test.mjs && node kits/network/multiplayer-host-kit/network-conditions.test.mjs && node kits/network/peerjs-transport-provider-kit/smoke.test.mjs && node kits/aquatic/fishing-kit/smoke.test.mjs && node kits/production/agriculture-domain-kit/smoke.test.mjs && node kits/migrated-gameplay/proof/smoke.test.mjs && node kits/migrated-gameplay/examples/ar-smoke.mjs && node kits/migrated-gameplay/examples/ar-modes-smoke.mjs && node kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs && node kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs && node kits/foundation/seed-kit/smoke.test.mjs && node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs && node kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs && node tests/domains/foundation-domain-smoke.mjs && node tests/domains/spatial-domain-smoke.mjs && node tests/domains/simulation-domain-smoke.mjs && node tests/domains/procedural-creatures-domain-smoke.mjs && node tests/domains/procedural-objects-domain-smoke.mjs && node tests/domains/render-descriptors-instanced-batch-smoke.mjs && node tests/progress-smoke.mjs"
+    "test": "node tests/registry/repository-registry-smoke.mjs && node tests/registry/lockfile-smoke.mjs && node tests/registry/module-resolver-smoke.mjs && node tests/registry/planning-performance-smoke.mjs && node tests/installer/planning-rejection-smoke.mjs && node tests/installer/installer-smoke.mjs && node tests/package/package-import-smoke.mjs && node kits/network/multiplayer-host-kit/smoke.test.mjs && node kits/network/multiplayer-host-kit/network-conditions.test.mjs && node kits/network/peerjs-transport-provider-kit/smoke.test.mjs && node kits/aquatic/fishing-kit/smoke.test.mjs && node kits/production/agriculture-domain-kit/smoke.test.mjs && node kits/migrated-gameplay/proof/smoke.test.mjs && node kits/migrated-gameplay/examples/ar-smoke.mjs && node kits/migrated-gameplay/examples/ar-modes-smoke.mjs && node kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs && node kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs && node kits/foundation/seed-kit/smoke.test.mjs && node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs && node kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs && node tests/domains/foundation-domain-smoke.mjs && node tests/domains/spatial-domain-smoke.mjs && node tests/domains/simulation-domain-smoke.mjs && node tests/domains/procedural-creatures-domain-smoke.mjs && node tests/domains/procedural-objects-domain-smoke.mjs && node tests/domains/render-descriptors-instanced-batch-smoke.mjs && node tests/progress-smoke.mjs && npm run test:gpu",
+    "test:gpu": "node tests/providers/gpu-host-smoke.mjs && node tests/providers/gpu-compute-smoke.mjs && node tests/providers/gpu-shared-resource-smoke.mjs && node tests/providers/gpu-unified-frame-smoke.mjs"
   },
   "license": "MIT"
 }

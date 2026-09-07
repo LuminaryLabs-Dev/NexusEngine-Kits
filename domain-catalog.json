@@ -136,6 +136,21 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "gpu-providers",
+      "label": "GPU Providers",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:host:gpu-providers",
+      "entry": "./domains/gpu-providers/index.js",
+      "kits": [
+        "webgpu-host-provider-kit",
+        "webgpu-compute-provider-kit",
+        "webgpu-render-provider-kit",
+        "webgpu-frame-provider-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "hazard-combat",
       "label": "Hazard And Combat",
       "kind": "runtime-domain",

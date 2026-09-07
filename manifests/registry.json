@@ -40,7 +40,11 @@
       "moving-target-kit",
       "lock-and-socket-kit",
       "multiplayer-host-kit",
-      "peerjs-transport-provider-kit"
+      "peerjs-transport-provider-kit",
+      "webgpu-host-provider-kit",
+      "webgpu-compute-provider-kit",
+      "webgpu-render-provider-kit",
+      "webgpu-frame-provider-kit"
     ],
     "activeCapability": "clock-kit"
   },

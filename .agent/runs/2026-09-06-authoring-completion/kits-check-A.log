@@ -1,0 +1,354 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 check
+> npm run check:generated && npm run check:lock && npm run check:catalog && npm run check:manifests && npm run check:exports && npm run boundaries:check && npm run docs:check && npm test && npm run audit
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 check:generated
+> node scripts/check-generated-catalog.mjs
+
+generated catalog outputs match authoritative manifests { outputs: 55 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 check:lock
+> node scripts/check-self-lock.mjs
+
+self lockfile matches internal installer manifests { commit: 'e3246bd22497b8a925e9e0629621e23f1fa261c5', kits: 21 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 check:catalog
+> node scripts/validate-catalog.mjs
+
+catalog ok { domains: 23, kits: 140 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 check:manifests
+> node scripts/validate-manifests.mjs
+
+manifests ok {
+  kits: 140,
+  progress: {
+    baselineTotal: 108,
+    baselineResolved: 5,
+    baselineRemaining: 103,
+    official: 23,
+    candidate: 14,
+    scaffolded: 8,
+    placeholder: 95,
+    deprecated: 0,
+    archived: 0,
+    blocked: 0,
+    approvedAdditionsTotal: 32,
+    approvedAdditionsResolved: 18,
+    activeCapability: 'clock-kit',
+    stages: {
+      inventoried: 140,
+      sourceMapped: 140,
+      protoValidated: 12,
+      candidate: 37,
+      official: 23,
+      deprecated: 0,
+      archived: 0,
+      blocked: 0
+    }
+  }
+}
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 check:exports
+> node scripts/check-exports.mjs
+
+exports ok {
+  required: [
+    'createNexusEngineKitInstaller',
+    'createAllNexusEngineKits',
+    'createSeededWorldPatchControllerKit',
+    'createMessageWorkerExecutor',
+    'createCameraSmoothFollowKit',
+    'createSeedKit',
+    'getKitProgress',
+    'pullRegistry',
+    'hydrateCompositionRegistry',
+    'createInstallPlan'
+  ],
+  removed: [
+    'createCompletionLedgerKit',
+    'createGenericResourceLoopKit',
+    'createProtokitCore',
+    'createRepositoryRegistry',
+    'mergeRegistries',
+    'createCapabilityGraph',
+    'createKitRegistryDomainKit',
+    'createCapabilityGraphDomainKit',
+    'createCompositionPlanningDomainKit'
+  ]
+}
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 boundaries:check
+> node scripts/check-current-ownership.mjs
+
+Kit ownership boundaries ok: public Core imports only, trusted fishing manifest present, no complete game exports.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 docs:check
+> node scripts/check-active-docs.mjs
+
+Active Kits docs ok: 61 files.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 test
+> node tests/registry/repository-registry-smoke.mjs && node tests/registry/lockfile-smoke.mjs && node tests/registry/module-resolver-smoke.mjs && node tests/registry/planning-performance-smoke.mjs && node tests/installer/planning-rejection-smoke.mjs && node tests/installer/installer-smoke.mjs && node tests/package/package-import-smoke.mjs && node kits/network/multiplayer-host-kit/smoke.test.mjs && node kits/network/multiplayer-host-kit/network-conditions.test.mjs && node kits/network/peerjs-transport-provider-kit/smoke.test.mjs && node kits/aquatic/fishing-kit/smoke.test.mjs && node kits/production/agriculture-domain-kit/smoke.test.mjs && node kits/migrated-gameplay/proof/smoke.test.mjs && node kits/migrated-gameplay/examples/ar-smoke.mjs && node kits/migrated-gameplay/examples/ar-modes-smoke.mjs && node kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs && node kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs && node kits/foundation/seed-kit/smoke.test.mjs && node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs && node kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs && node tests/domains/foundation-domain-smoke.mjs && node tests/domains/spatial-domain-smoke.mjs && node tests/domains/simulation-domain-smoke.mjs && node tests/domains/procedural-creatures-domain-smoke.mjs && node tests/domains/procedural-objects-domain-smoke.mjs && node tests/domains/render-descriptors-instanced-batch-smoke.mjs && node tests/progress-smoke.mjs && npm run test:gpu
+
+composition registry v3 trust smoke ok
+registry lockfile smoke ok
+verified module resolver smoke ok
+1,000-manifest planning performance smoke ok { elapsedMs: 190.85013899999996 }
+installer planning rejection smoke ok
+installer smoke ok { installed: 5, catalog: 140, defaultReady: 21 }
+package import smoke ok
+multiplayer-host-kit smoke ok
+multiplayer-host-kit network conditions ok
+peerjs-transport-provider-kit smoke ok
+fishing-kit smoke ok
+agriculture-domain-kit: official tropical, temperate, replay, snapshot, duplicate, and perennial smoke passed
+migrated gameplay kits smoke ok { kits: 20 }
+{
+  "placement": "placed",
+  "experience": "complete",
+  "completed": true
+}
+{
+  "fallbackMode": "fallback-preview",
+  "placement": "placed",
+  "experience": "complete",
+  "androidClass": "android-webxr",
+  "androidWebXR": true
+}
+seeded world patch controller smoke passed {
+  base: {
+    id: 'world',
+    worldSeed: 'patch-world',
+    generatorVersion: 'test-v1',
+    patchSize: 8,
+    activeRadius: 0,
+    retainRadius: 1,
+    prefetchDistance: 1,
+    cacheLimit: 8,
+    activationBudget: 1,
+    generationBudget: 1,
+    priorityPolicyId: 'distance-first-v1',
+    focus: {
+      position: [Object],
+      velocity: [Object],
+      forward: [Object],
+      center: [Object]
+    },
+    desiredActive: 1,
+    desiredPrefetch: 9,
+    active: 1,
+    presentationPrefetched: 0,
+    cached: 12,
+    ready: 0,
+    presentationReady: 0,
+    queued: 17,
+    inflight: 0,
+    releasedPending: 1,
+    forwardBufferedSteps: 0,
+    forwardBufferedMeters: 0,
+    statuses: { active: 1, requested: 10, retained: 1 },
+    diagnostics: []
+  },
+  twoTier: {
+    id: 'two-tier-world',
+    worldSeed: 'patch-world',
+    generatorVersion: 'two-tier-v1',
+    patchSize: 8,
+    activeRadius: 1,
+    retainRadius: 3,
+    prefetchDistance: 3,
+    cacheLimit: 64,
+    activationBudget: 9,
+    generationBudget: 64,
+    priorityPolicyId: 'runner-forward-v1',
+    focus: {
+      position: [Object],
+      velocity: [Object],
+      forward: [Object],
+      center: [Object]
+    },
+    desiredActive: 9,
+    desiredPrefetch: 21,
+    active: 4,
+    presentationPrefetched: 11,
+    cached: 27,
+    ready: 0,
+    presentationReady: 0,
+    queued: 6,
+    inflight: 0,
+    releasedPending: 6,
+    forwardBufferedSteps: 1,
+    forwardBufferedMeters: 8,
+    statuses: {
+      retained: 6,
+      active: 4,
+      'presentation-prefetched': 11,
+      requested: 6
+    },
+    diagnostics: []
+  }
+}
+camera smooth follow smoke passed {
+  initialized: true,
+  revision: 184,
+  position: [ 100, 2, -6 ],
+  positionVelocity: [ 0, 0, 0 ],
+  lookPoint: [ 100, 1, 4 ],
+  lookVelocity: [ 0, 0, 0 ],
+  quaternion: [ 0, 0.998758526924799, 0.04981370188015976, 0 ],
+  targetPosition: [ 100, 2, -6 ],
+  targetLookPoint: [ 100, 1, 4 ],
+  targetQuaternion: [ 0, 0.998758526924799, 0.04981370188015976, 0 ],
+  lastDeltaTime: 0,
+  lastResetReason: 'teleport-threshold'
+}
+seed-kit official smoke passed
+procedural creature body smoke passed { vertices: 336, triangles: 576, bones: 22, hash: '400b4bb4' }
+instanced render batch smoke passed {
+  id: 'patch-owned-grass',
+  capacity: 8,
+  updateMode: 'incremental',
+  cellCapacity: 2,
+  activeCount: 3,
+  slotCount: 4,
+  requestedCount: 4,
+  overflowCount: 1,
+  cellCount: 2,
+  revision: 2,
+  dirty: false
+}
+foundation domain smoke ok { official: 1, expanded: 1 }
+spatial domain smoke ok { kits: 6 }
+simulation domain smoke ok { installed: 0, skipped: 2 }
+procedural creatures domain smoke passed {
+  installOrder: [
+    'runtime-lifecycle-kit',
+    'realtime-runtime-kit',
+    'runtime-sequence-kit',
+    'seed-kit',
+    'procedural-creature-body-kit'
+  ]
+}
+procedural objects domain smoke passed
+render descriptors instanced batch domain smoke passed domain-proof
+kit progress smoke ok {
+  baselineTotal: 108,
+  baselineResolved: 5,
+  baselineRemaining: 103,
+  official: 23,
+  candidate: 14,
+  scaffolded: 8,
+  placeholder: 95,
+  deprecated: 0,
+  archived: 0,
+  blocked: 0,
+  approvedAdditionsTotal: 32,
+  approvedAdditionsResolved: 18,
+  activeCapability: 'clock-kit',
+  stages: {
+    inventoried: 140,
+    sourceMapped: 140,
+    protoValidated: 12,
+    candidate: 37,
+    official: 23,
+    deprecated: 0,
+    archived: 0,
+    blocked: 0
+  }
+}
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 test:gpu
+> node tests/providers/gpu-host-smoke.mjs && node tests/providers/gpu-compute-smoke.mjs && node tests/providers/gpu-shared-resource-smoke.mjs && node tests/providers/gpu-unified-frame-smoke.mjs
+
+{
+  "status": "PASS",
+  "device": "gpu-1",
+  "restoredDevice": "gpu-2",
+  "resources": 1
+}
+WebGPU compute migration proof passed
+{
+  "status": "PASS",
+  "sharedDevice": "shared-device-1",
+  "computeDevice": "shared-device-1",
+  "renderDevice": "shared-device-1",
+  "zeroCopyVertex": true,
+  "zeroCopyIndirect": true,
+  "zeroCopyStorage": true,
+  "zeroCopyTexture": true,
+  "recoveryDevice": "shared-device-2"
+}
+{
+  "status": "PASS",
+  "sharedDevice": "frame-device",
+  "passCount": 3,
+  "submissionCount": 1,
+  "sharedDepth": true,
+  "zeroCopy": true
+}
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit
+> npm run audit:catalog && npm run audit:exports && npm run audit:docs && npm run audit:status && npm run audit:behavior && npm run audit:placeholders && npm run audit:readiness && npm run audit:gaps
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit:catalog
+> node scripts/audit-catalog-files.mjs
+
+Catalog File Audit ok { warnings: 16 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit:exports
+> node scripts/audit-package-exports.mjs
+
+Package Exports Audit ok { warnings: 0 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit:docs
+> node scripts/audit-docs-catalog.mjs
+
+Docs Catalog Audit ok { warnings: 12 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit:status
+> node scripts/audit-status.mjs
+
+Status Consistency Audit ok { warnings: 23 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit:behavior
+> node tests/registry/repository-registry-smoke.mjs && node tests/package/package-import-smoke.mjs
+
+composition registry v3 trust smoke ok
+package import smoke ok
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit:placeholders
+> node scripts/audit-placeholders.mjs
+
+Placeholder Audit ok { warnings: 0 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit:readiness
+> node scripts/audit-readiness-matrix.mjs
+
+Readiness Matrix Audit ok { warnings: 0 }
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @luminarylabs/nexusengine-kits@0.0.1 audit:gaps
+> node scripts/audit-known-gaps.mjs
+
+Known Gaps Audit ok { warnings: 0 }

@@ -6,6 +6,8 @@ This file records notable verified changes. No Git tag or GitHub release current
 
 ### Added
 
+- Moved four concrete WebGPU Host, Render, Frame and Compute providers from Engine into the optional `n:host:gpu-providers` domain, with public package exports, source lineage and preserved lifecycle/resource/frame mock-device tests. Provider status remains candidate.
+
 - Added the official `agriculture-domain-kit` with deterministic land, soil, cultivation, watering, growth, harvest, replay, snapshot, and perennial-crop behavior.
 - Added a professional documentation entry path, maintainer profile, and reusable repository image pack.
 - Added immutable Composition registry v3 hydration while keeping unresolved records non-installable.

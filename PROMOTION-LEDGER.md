@@ -2,7 +2,7 @@
 
 Baseline resolved: 5 / 108
 Baseline remaining: 103
-Approved additions: 18 / 28
+Approved additions: 18 / 32
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -138,6 +138,10 @@ Active capability: clock-kit
 | vegetation-placement-domain-kit | migration-placeholder | no | vegetation-placement-domain-kit has no validated stable implementation or parity record. |
 | view-rig-kit | migration-placeholder | no | view-rig-kit has no validated stable implementation or parity record. |
 | visual-pipeline-kit | migration-placeholder | no | visual-pipeline-kit has no validated stable implementation or parity record. |
+| webgpu-compute-provider-kit | candidate | no | Candidate provider migration requires independent physical-device validation before official promotion. |
+| webgpu-frame-provider-kit | candidate | no | Candidate provider migration requires independent physical-device validation before official promotion. |
+| webgpu-host-provider-kit | candidate | no | Candidate provider migration requires independent physical-device validation before official promotion. |
+| webgpu-render-provider-kit | candidate | no | Candidate provider migration requires independent physical-device validation before official promotion. |
 | webxr-hand-adapter-dsk | migration-placeholder | no | webxr-hand-adapter-dsk has no validated stable implementation or parity record. |
 | widget-domain-service-kit | migration-placeholder | no | widget-domain-service-kit has no validated stable implementation or parity record. |
 | widget-dsk | migration-placeholder | no | widget-dsk has no validated stable implementation or parity record. |

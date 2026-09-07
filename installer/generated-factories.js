@@ -31,6 +31,10 @@ import { createSortingKit as factory29 } from "../kits/migrated-gameplay/index.j
 import { createSpatialRoomKit as factory30 } from "../kits/migrated-gameplay/index.js";
 import { createSurfacePlacementKit as factory31 } from "../kits/migrated-gameplay/index.js";
 import { createSymbolAlignmentKit as factory32 } from "../kits/migrated-gameplay/index.js";
+import { createWebGPUComputeProvider as factory33 } from "../kits/gpu-providers/webgpu-compute-provider-kit/index.js";
+import { createWebGPUFrameExecutor as factory34 } from "../kits/gpu-providers/webgpu-frame-provider-kit/index.js";
+import { createWebGPUHostProvider as factory35 } from "../kits/gpu-providers/webgpu-host-provider-kit/index.js";
+import { createWebGPURenderProvider as factory36 } from "../kits/gpu-providers/webgpu-render-provider-kit/index.js";
 
 export const GENERATED_KIT_FACTORIES = Object.freeze({
   "agriculture-domain-kit": factory0,
@@ -65,5 +69,9 @@ export const GENERATED_KIT_FACTORIES = Object.freeze({
   "sorting-kit": factory29,
   "spatial-room-kit": factory30,
   "surface-placement-kit": factory31,
-  "symbol-alignment-kit": factory32
+  "symbol-alignment-kit": factory32,
+  "webgpu-compute-provider-kit": factory33,
+  "webgpu-frame-provider-kit": factory34,
+  "webgpu-host-provider-kit": factory35,
+  "webgpu-render-provider-kit": factory36
 });

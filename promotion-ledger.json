@@ -6,20 +6,20 @@
     "baselineResolved": 5,
     "baselineRemaining": 103,
     "official": 23,
-    "candidate": 10,
+    "candidate": 14,
     "scaffolded": 8,
     "placeholder": 95,
     "deprecated": 0,
     "archived": 0,
     "blocked": 0,
-    "approvedAdditionsTotal": 28,
+    "approvedAdditionsTotal": 32,
     "approvedAdditionsResolved": 18,
     "activeCapability": "clock-kit",
     "stages": {
-      "inventoried": 136,
-      "sourceMapped": 136,
+      "inventoried": 140,
+      "sourceMapped": 140,
       "protoValidated": 12,
-      "candidate": 33,
+      "candidate": 37,
       "official": 23,
       "deprecated": 0,
       "archived": 0,
@@ -2384,6 +2384,78 @@
       },
       "nextCapability": "visual-pipeline-kit",
       "blocker": "visual-pipeline-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "webgpu-compute-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "device diversity proof",
+      "blocker": "Candidate provider migration requires independent physical-device validation before official promotion."
+    },
+    {
+      "id": "webgpu-frame-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "device diversity proof",
+      "blocker": "Candidate provider migration requires independent physical-device validation before official promotion."
+    },
+    {
+      "id": "webgpu-host-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "device diversity proof",
+      "blocker": "Candidate provider migration requires independent physical-device validation before official promotion."
+    },
+    {
+      "id": "webgpu-render-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false,
+        "deprecated": false,
+        "archived": false,
+        "blocked": false
+      },
+      "nextCapability": "device diversity proof",
+      "blocker": "Candidate provider migration requires independent physical-device validation before official promotion."
     },
     {
       "id": "webxr-hand-adapter-dsk",
