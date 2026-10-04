@@ -2,7 +2,7 @@
 
 Baseline resolved: 5 / 108
 Baseline remaining: 103
-Approved additions: 18 / 32
+Approved additions: 18 / 42
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -37,16 +37,19 @@ Active capability: clock-kit
 | clock-kit | migration-placeholder | no | clock-kit has no validated stable implementation or parity record. |
 | collectible-kit | official | yes |  |
 | companion-command-kit | official | yes |  |
+| console-input-adapter-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | currency-kit | migration-placeholder | no | currency-kit has no validated stable implementation or parity record. |
 | damage-health-domain-kit | migration-placeholder | no | damage-health-domain-kit has no validated stable implementation or parity record. |
 | damage-health-kit | scaffolded | no | damage-health-kit has only scaffold or metadata behavior and lacks validated source parity. |
 | dialogue-line-domain-kit | migration-placeholder | no | dialogue-line-domain-kit has no validated stable implementation or parity record. |
 | diegetic-feedback-signal-kit | scaffolded | no | diegetic-feedback-signal-kit has only scaffold or metadata behavior and lacks validated source parity. |
+| emulator-memory-observer-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | encounter-director-kit | migration-placeholder | no | encounter-director-kit has no validated stable implementation or parity record. |
 | enemy-agent-domain-kit | migration-placeholder | no | enemy-agent-domain-kit has no validated stable implementation or parity record. |
 | enemy-object-domain-kit | migration-placeholder | no | enemy-object-domain-kit has no validated stable implementation or parity record. |
 | environment-kits | migration-placeholder | no | environment-kits has no validated stable implementation or parity record. |
 | fail-state-kit | migration-placeholder | no | fail-state-kit has no validated stable implementation or parity record. |
+| filesystem-snapshot-adapter-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | fishing-kit | official | yes |  |
 | flight-corridor-domain-kit | migration-placeholder | no | flight-corridor-domain-kit has no validated stable implementation or parity record. |
 | forest-placement-kit | official | yes |  |
@@ -81,6 +84,7 @@ Active capability: clock-kit
 | interaction-dsk | migration-placeholder | no | interaction-dsk has no validated stable implementation or parity record. |
 | interaction-target-kit | official | yes |  |
 | inventory-kit | migration-placeholder | no | inventory-kit has no validated stable implementation or parity record. |
+| libretro-provider-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | light-combat-kit | official | yes |  |
 | lighting-descriptor-kit | migration-placeholder | no | lighting-descriptor-kit has no validated stable implementation or parity record. |
 | lock-and-socket-kit | official | yes |  |
@@ -91,11 +95,15 @@ Active capability: clock-kit
 | mission-phase-kit | migration-placeholder | no | mission-phase-kit has no validated stable implementation or parity record. |
 | moving-target-kit | official | yes |  |
 | multiplayer-host-kit | candidate | no | Candidate requires production TURN and reconnect validation before official promotion. |
+| native-emulator-worker-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
+| nintendo-content-loader-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | npc-schedule-domain-kit | migration-placeholder | no | npc-schedule-domain-kit has no validated stable implementation or parity record. |
 | objective-bridge-kit | scaffolded | no | objective-bridge-kit has only scaffold or metadata behavior and lacks validated source parity. |
 | objective-kit | official | yes |  |
+| observed-game-state-adapter-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | openxr-hand-adapter-dsk | migration-placeholder | no | openxr-hand-adapter-dsk has no validated stable implementation or parity record. |
 | parry-window-domain-kit | migration-placeholder | no | parry-window-domain-kit has no validated stable implementation or parity record. |
+| pcm-audio-provider-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | peerjs-transport-provider-kit | candidate | no | Candidate requires cross-NAT TURN and reconnect validation before official promotion. |
 | performance-budget-kit | migration-placeholder | no | performance-budget-kit has no validated stable implementation or parity record. |
 | powered-aerial-flight-domain-kit | migration-placeholder | no | powered-aerial-flight-domain-kit has no validated stable implementation or parity record. |
@@ -106,6 +114,7 @@ Active capability: clock-kit
 | procedural-object-material-kit | candidate | no | Candidate requires multi-consumer and multi-renderer validation before official promotion. |
 | project-batch-deploy-bridge | migration-placeholder | no | project-batch-deploy-bridge has no validated stable implementation or parity record. |
 | quest-thread-domain-kit | migration-placeholder | no | quest-thread-domain-kit has no validated stable implementation or parity record. |
+| raster-frame-provider-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | recovery-site-kit | migration-placeholder | no | recovery-site-kit has no validated stable implementation or parity record. |
 | relationship-state-domain-kit | migration-placeholder | no | relationship-state-domain-kit has no validated stable implementation or parity record. |
 | render-descriptor-kit | official | yes |  |
@@ -113,6 +122,7 @@ Active capability: clock-kit
 | replay-test-kit | migration-placeholder | no | replay-test-kit has no validated stable implementation or parity record. |
 | resource-node-kit | scaffolded | no | resource-node-kit has only scaffold or metadata behavior and lacks validated source parity. |
 | reveal-light-kit | official | yes |  |
+| rom-test-runner-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | route-clearance-domain-kit | migration-placeholder | no | route-clearance-domain-kit has no validated stable implementation or parity record. |
 | score-summary-kit | migration-placeholder | no | score-summary-kit has no validated stable implementation or parity record. |
 | seed-kit | official | yes |  |

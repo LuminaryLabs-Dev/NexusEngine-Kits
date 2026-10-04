@@ -23,7 +23,7 @@ const metadataOnly = normalizeRegistrySnapshot(template, {
   allowExternalParents: true,
   allowExternalReferences: true
 });
-assert.equal(metadataOnly.kits.length, 140);
+assert.equal(metadataOnly.kits.length, 150);
 
 let metadataCalls = 0;
 const hydrated = await pullRegistry({ owner: "LuminaryLabs-Dev", repository: "NexusEngine-Kits" }, {

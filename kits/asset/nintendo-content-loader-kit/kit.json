@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "nintendo-content-loader-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "adapter-kit",
+  "domain": "emulation-assets",
+  "domainPath": "n:asset:extensions:nintendo-content",
+  "parentDomainPath": "n:asset:extensions",
+  "apiName": "nintendoContent",
+  "factory": "createNintendoContentLoaderKit",
+  "entry": "./kits/asset/nintendo-content-loader-kit/index.js",
+  "packageExport": "./nintendo-content-loader-kit",
+  "module": {
+    "package": "./kits/asset/nintendo-content-loader-kit/index.js",
+    "node": "./kits/asset/nintendo-content-loader-kit/index.js"
+  },
+  "integrity": "sha256-9kfnwtyDGQODkcDxOVJn5N4ffRlDBK1Y8ZFFpQinTE8=",
+  "environments": [
+    "node"
+  ],
+  "requires": [
+    "n:asset"
+  ],
+  "provides": [
+    "emulation:content-loader"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/asset/nintendo-content-loader-kit/index.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "nintendoContent",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": "kits/asset/nintendo-content-loader-kit/README.md",
+    "smoke": "kits/asset/nintendo-content-loader-kit/smoke.test.mjs",
+    "parity": "kits/asset/nintendo-content-loader-kit/source-parity.md",
+    "limitations": "kits/asset/nintendo-content-loader-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false
+    },
+    "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+  },
+  "stability": "candidate"
+}

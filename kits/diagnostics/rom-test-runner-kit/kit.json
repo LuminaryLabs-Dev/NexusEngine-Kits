@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "rom-test-runner-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "adapter-kit",
+  "domain": "emulation-diagnostics",
+  "domainPath": "n:diagnostics:extensions:rom-tests",
+  "parentDomainPath": "n:diagnostics:extensions",
+  "apiName": "romTests",
+  "factory": "createRomTestRunnerKit",
+  "entry": "./kits/diagnostics/rom-test-runner-kit/index.js",
+  "packageExport": "./rom-test-runner-kit",
+  "module": {
+    "package": "./kits/diagnostics/rom-test-runner-kit/index.js",
+    "node": "./kits/diagnostics/rom-test-runner-kit/index.js"
+  },
+  "integrity": "sha256-Z1IqJtpqeBEtg6qJuhoq0+18uOZfdBmfkxq2Q1WeJ/M=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "diagnostics:rom-tests"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/diagnostics/rom-test-runner-kit/index.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "romTests",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/diagnostics/rom-test-runner-kit/README.md",
+    "smoke": "kits/diagnostics/rom-test-runner-kit/smoke.test.mjs",
+    "parity": "kits/diagnostics/rom-test-runner-kit/source-parity.md",
+    "limitations": "kits/diagnostics/rom-test-runner-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false
+    },
+    "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+  },
+  "stability": "candidate"
+}

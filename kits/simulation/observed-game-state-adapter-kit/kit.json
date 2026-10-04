@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "observed-game-state-adapter-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "adapter-kit",
+  "domain": "simulation",
+  "domainPath": "n:simulation:extensions:observed-game-state",
+  "parentDomainPath": "n:simulation:extensions",
+  "apiName": "observedGameState",
+  "factory": "createObservedGameStateAdapterKit",
+  "entry": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+  "packageExport": "./observed-game-state-adapter-kit",
+  "module": {
+    "package": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+    "node": "./kits/simulation/observed-game-state-adapter-kit/index.js"
+  },
+  "integrity": "sha256-HH28UghZFLUwWJ7qexemt5skYG2Z3joYINpqIYUwZXg=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [
+    "simulation:resolution",
+    "data:observation-history",
+    "n:spatial"
+  ],
+  "provides": [
+    "emulation:semantic-observation"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/simulation/observed-game-state-adapter-kit/index.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "observedGameState",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/simulation/observed-game-state-adapter-kit/README.md",
+    "smoke": "kits/simulation/observed-game-state-adapter-kit/smoke.test.mjs",
+    "parity": "kits/simulation/observed-game-state-adapter-kit/source-parity.md",
+    "limitations": "kits/simulation/observed-game-state-adapter-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false
+    },
+    "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+  },
+  "stability": "candidate"
+}

@@ -8,7 +8,7 @@
       "package": "@luminarylabs/nexusengine-kits",
       "version": "0.0.1",
       "sourceCommit": "0000000000000000000000000000000000000000",
-      "integrity": "sha256:71807fce02d045b2ec17f771d2ea76861303cd09879b79496f1296c460398b44",
+      "integrity": "sha256:da92e3c2183ec2d18337ddef647653f6d849ec1ada7918d0eb04a8a3c88e6110",
       "status": "metadata-only",
       "environments": [
         "browser",
@@ -21,7 +21,7 @@
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolution": "immutable-fetch-required",
-        "executableFileCount": 129
+        "executableFileCount": 146
       }
     }
   ],
@@ -159,6 +159,141 @@
       "metadata": {
         "kind": "simulation-domain",
         "entry": "./domains/economy-resources/index.js"
+      }
+    },
+    {
+      "id": "kits-emulation-assets",
+      "domainPath": "n:asset:extensions",
+      "parentDomainPath": "n:asset",
+      "label": "Emulation Assets",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core Emulation Assets capabilities.",
+      "ownedMeaning": [
+        "Reusable Emulation Assets policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:asset:extensions"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/emulation-assets/index.js"
+      }
+    },
+    {
+      "id": "kits-emulation-diagnostics",
+      "domainPath": "n:diagnostics:extensions",
+      "parentDomainPath": "n:diagnostics",
+      "label": "Emulation Diagnostics",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core Emulation Diagnostics capabilities.",
+      "ownedMeaning": [
+        "Reusable Emulation Diagnostics policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:diagnostics:extensions"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/emulation-diagnostics/index.js"
+      }
+    },
+    {
+      "id": "kits-emulation-host",
+      "domainPath": "n:host:extensions",
+      "parentDomainPath": "n:host",
+      "label": "Emulation Host",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core Emulation Host capabilities.",
+      "ownedMeaning": [
+        "Reusable Emulation Host policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:host:extensions"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/emulation-host/index.js"
+      }
+    },
+    {
+      "id": "kits-emulation-persistence",
+      "domainPath": "n:runtime:persistence:extensions",
+      "parentDomainPath": "n:runtime:persistence",
+      "label": "Emulation Persistence",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core Emulation Persistence capabilities.",
+      "ownedMeaning": [
+        "Reusable Emulation Persistence policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:runtime:persistence:extensions"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/emulation-persistence/index.js"
+      }
+    },
+    {
+      "id": "kits-emulation-presentation",
+      "domainPath": "n:presentation:extensions",
+      "parentDomainPath": "n:presentation",
+      "label": "Emulation Presentation",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core Emulation Presentation capabilities.",
+      "ownedMeaning": [
+        "Reusable Emulation Presentation policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:presentation:extensions"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/emulation-presentation/index.js"
       }
     },
     {
@@ -2212,6 +2347,59 @@
       }
     },
     {
+      "id": "console-input-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "console-input-adapter-kit",
+      "domainPath": "n:interaction:input:extensions:console-input-adapter",
+      "parentDomainPath": "n:interaction:input:extensions",
+      "apiName": "consoleInput",
+      "apiVisibility": "public",
+      "requires": [
+        "n:interaction:input"
+      ],
+      "provides": [
+        "emulation:console-input"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./console-input-adapter-kit",
+        "exportName": "createConsoleInputAdapterKit",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/input/console-input-adapter-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/input/console-input-adapter-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/input/console-input-adapter-kit/README.md",
+          "smoke": "kits/input/console-input-adapter-kit/smoke.test.mjs",
+          "parity": "kits/input/console-input-adapter-kit/source-parity.md",
+          "limitations": "kits/input/console-input-adapter-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
       "id": "currency-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -2472,6 +2660,58 @@
       }
     },
     {
+      "id": "emulator-memory-observer-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "emulator-memory-observer-kit",
+      "domainPath": "n:host:extensions:emulator-memory",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorMemory",
+      "apiVisibility": "public",
+      "requires": [
+        "emulation:frame-step"
+      ],
+      "provides": [
+        "emulation:memory-observation"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./emulator-memory-observer-kit",
+        "exportName": "createEmulatorMemoryObserverKit",
+        "environments": [
+          "node"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/emulation/emulator-memory-observer-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/emulation/emulator-memory-observer-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/emulation/emulator-memory-observer-kit/README.md",
+          "smoke": "kits/emulation/emulator-memory-observer-kit/smoke.test.mjs",
+          "parity": "kits/emulation/emulator-memory-observer-kit/source-parity.md",
+          "limitations": "kits/emulation/emulator-memory-observer-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
       "id": "encounter-director-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -2728,6 +2968,58 @@
           "smoke": null,
           "parity": null,
           "limitations": null
+        }
+      }
+    },
+    {
+      "id": "filesystem-snapshot-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "filesystem-snapshot-adapter-kit",
+      "domainPath": "n:runtime:persistence:extensions:filesystem-snapshot",
+      "parentDomainPath": "n:runtime:persistence:extensions",
+      "apiName": "snapshotFiles",
+      "apiVisibility": "public",
+      "requires": [
+        "n:runtime:persistence"
+      ],
+      "provides": [
+        "persistence:filesystem-snapshot"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./filesystem-snapshot-adapter-kit",
+        "exportName": "createFilesystemSnapshotAdapterKit",
+        "environments": [
+          "node"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/persistence/filesystem-snapshot-adapter-kit/README.md",
+          "smoke": "kits/persistence/filesystem-snapshot-adapter-kit/smoke.test.mjs",
+          "parity": "kits/persistence/filesystem-snapshot-adapter-kit/source-parity.md",
+          "limitations": "kits/persistence/filesystem-snapshot-adapter-kit/LIMITATIONS.md"
         }
       }
     },
@@ -4504,6 +4796,59 @@
       }
     },
     {
+      "id": "libretro-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "libretro-provider-kit",
+      "domainPath": "n:host:extensions:libretro",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorProvider",
+      "apiVisibility": "public",
+      "requires": [
+        "emulation:worker"
+      ],
+      "provides": [
+        "emulation:frame-step",
+        "emulation:serialize"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./libretro-provider-kit",
+        "exportName": "createLibretroProviderKit",
+        "environments": [
+          "node"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/emulation/libretro-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/emulation/libretro-provider-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/emulation/libretro-provider-kit/README.md",
+          "smoke": "kits/emulation/libretro-provider-kit/smoke.test.mjs",
+          "parity": "kits/emulation/libretro-provider-kit/source-parity.md",
+          "limitations": "kits/emulation/libretro-provider-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
       "id": "light-combat-kit",
       "version": "1.0.0",
       "status": "official",
@@ -5025,6 +5370,108 @@
       }
     },
     {
+      "id": "native-emulator-worker-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "native-emulator-worker-kit",
+      "domainPath": "n:host:extensions:emulator-worker",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorWorker",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "emulation:worker"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./native-emulator-worker-kit",
+        "exportName": "createNativeEmulatorWorkerKit",
+        "environments": [
+          "node"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/host/native-emulator-worker-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/host/native-emulator-worker-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/host/native-emulator-worker-kit/README.md",
+          "smoke": "kits/host/native-emulator-worker-kit/smoke.test.mjs",
+          "parity": "kits/host/native-emulator-worker-kit/source-parity.md",
+          "limitations": "kits/host/native-emulator-worker-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
+      "id": "nintendo-content-loader-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "nintendo-content-loader-kit",
+      "domainPath": "n:asset:extensions:nintendo-content",
+      "parentDomainPath": "n:asset:extensions",
+      "apiName": "nintendoContent",
+      "apiVisibility": "public",
+      "requires": [
+        "n:asset"
+      ],
+      "provides": [
+        "emulation:content-loader"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./nintendo-content-loader-kit",
+        "exportName": "createNintendoContentLoaderKit",
+        "environments": [
+          "node"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/asset/nintendo-content-loader-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/asset/nintendo-content-loader-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/asset/nintendo-content-loader-kit/README.md",
+          "smoke": "kits/asset/nintendo-content-loader-kit/smoke.test.mjs",
+          "parity": "kits/asset/nintendo-content-loader-kit/source-parity.md",
+          "limitations": "kits/asset/nintendo-content-loader-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
       "id": "npc-schedule-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -5180,6 +5627,61 @@
       }
     },
     {
+      "id": "observed-game-state-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "observed-game-state-adapter-kit",
+      "domainPath": "n:simulation:extensions:extensions:observed-game-state",
+      "parentDomainPath": "n:simulation:extensions:extensions",
+      "apiName": "observedGameState",
+      "apiVisibility": "public",
+      "requires": [
+        "simulation:resolution",
+        "data:observation-history",
+        "n:spatial:extensions"
+      ],
+      "provides": [
+        "emulation:semantic-observation"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./observed-game-state-adapter-kit",
+        "exportName": "createObservedGameStateAdapterKit",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/simulation/observed-game-state-adapter-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/simulation/observed-game-state-adapter-kit/README.md",
+          "smoke": "kits/simulation/observed-game-state-adapter-kit/smoke.test.mjs",
+          "parity": "kits/simulation/observed-game-state-adapter-kit/source-parity.md",
+          "limitations": "kits/simulation/observed-game-state-adapter-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
       "id": "openxr-hand-adapter-dsk",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -5280,6 +5782,57 @@
           "smoke": null,
           "parity": null,
           "limitations": null
+        }
+      }
+    },
+    {
+      "id": "pcm-audio-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "pcm-audio-provider-kit",
+      "domainPath": "n:presentation:extensions:pcm-audio",
+      "parentDomainPath": "n:presentation:extensions",
+      "apiName": "pcmAudio",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "presentation:emulator-pcm"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./pcm-audio-provider-kit",
+        "exportName": "createPcmAudioProviderKit",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/presentation/pcm-audio-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/presentation/pcm-audio-provider-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/presentation/pcm-audio-provider-kit/README.md",
+          "smoke": "kits/presentation/pcm-audio-provider-kit/smoke.test.mjs",
+          "parity": "kits/presentation/pcm-audio-provider-kit/source-parity.md",
+          "limitations": "kits/presentation/pcm-audio-provider-kit/LIMITATIONS.md"
         }
       }
     },
@@ -5821,6 +6374,57 @@
       }
     },
     {
+      "id": "raster-frame-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "raster-frame-provider-kit",
+      "domainPath": "n:presentation:extensions:raster-frame",
+      "parentDomainPath": "n:presentation:extensions",
+      "apiName": "rasterFrame",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "presentation:emulator-raster"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./raster-frame-provider-kit",
+        "exportName": "createRasterFrameProviderKit",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/presentation/raster-frame-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/presentation/raster-frame-provider-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/presentation/raster-frame-provider-kit/README.md",
+          "smoke": "kits/presentation/raster-frame-provider-kit/smoke.test.mjs",
+          "parity": "kits/presentation/raster-frame-provider-kit/source-parity.md",
+          "limitations": "kits/presentation/raster-frame-provider-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
       "id": "recovery-site-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -6179,6 +6783,57 @@
           "smoke": "kits/migrated-gameplay/proof/smoke.test.mjs",
           "parity": "kits/migrated-gameplay/proof/source-parity.md",
           "limitations": "kits/migrated-gameplay/proof/LIMITATIONS.md"
+        }
+      }
+    },
+    {
+      "id": "rom-test-runner-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "rom-test-runner-kit",
+      "domainPath": "n:diagnostics:extensions:rom-tests",
+      "parentDomainPath": "n:diagnostics:extensions",
+      "apiName": "romTests",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "diagnostics:rom-tests"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./rom-test-runner-kit",
+        "exportName": "createRomTestRunnerKit",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/diagnostics/rom-test-runner-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/diagnostics/rom-test-runner-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/diagnostics/rom-test-runner-kit/README.md",
+          "smoke": "kits/diagnostics/rom-test-runner-kit/smoke.test.mjs",
+          "parity": "kits/diagnostics/rom-test-runner-kit/source-parity.md",
+          "limitations": "kits/diagnostics/rom-test-runner-kit/LIMITATIONS.md"
         }
       }
     },

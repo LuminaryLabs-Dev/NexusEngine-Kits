@@ -81,6 +81,12 @@ function immediateParent(domainPath) {
 }
 
 const COMPOSITION_DOMAIN_PATHS = Object.freeze({
+  "emulation-host": "n:host:extensions",
+  "emulation-assets": "n:asset:extensions",
+  "emulation-presentation": "n:presentation:extensions",
+  "emulation-persistence": "n:runtime:persistence:extensions",
+  "emulation-diagnostics": "n:diagnostics:extensions",
+
   aerial: "n:simulation:aerial",
   aquatic: "n:simulation:aquatic",
   building: "n:world:building",

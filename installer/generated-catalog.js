@@ -2074,6 +2074,71 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "console-input-adapter-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "input",
+    "domainPath": "n:interaction:input:extensions:console",
+    "parentDomainPath": "n:interaction:input:extensions",
+    "apiName": "consoleInput",
+    "factory": "createConsoleInputAdapterKit",
+    "entry": "./kits/input/console-input-adapter-kit/index.js",
+    "packageExport": "./console-input-adapter-kit",
+    "module": {
+      "package": "./kits/input/console-input-adapter-kit/index.js",
+      "node": "./kits/input/console-input-adapter-kit/index.js"
+    },
+    "integrity": "sha256-/BAkxLmWU6hIrKh4rH6qX/X/LhT+v7RsGt5tqyiKq1o=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [
+      "n:interaction:input"
+    ],
+    "provides": [
+      "emulation:console-input"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/input/console-input-adapter-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "consoleInput",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/input/console-input-adapter-kit/README.md",
+      "smoke": "kits/input/console-input-adapter-kit/smoke.test.mjs",
+      "parity": "kits/input/console-input-adapter-kit/source-parity.md",
+      "limitations": "kits/input/console-input-adapter-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "currency-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -2419,6 +2484,70 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "emulator-memory-observer-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "emulation-host",
+    "domainPath": "n:host:extensions:emulator-memory",
+    "parentDomainPath": "n:host:extensions",
+    "apiName": "emulatorMemory",
+    "factory": "createEmulatorMemoryObserverKit",
+    "entry": "./kits/emulation/emulator-memory-observer-kit/index.js",
+    "packageExport": "./emulator-memory-observer-kit",
+    "module": {
+      "package": "./kits/emulation/emulator-memory-observer-kit/index.js",
+      "node": "./kits/emulation/emulator-memory-observer-kit/index.js"
+    },
+    "integrity": "sha256-OFK1++EyiOA9/GeaYRWDN+M5bOQHLZSQBwNaZNi8fg8=",
+    "environments": [
+      "node"
+    ],
+    "requires": [
+      "emulation:frame-step"
+    ],
+    "provides": [
+      "emulation:memory-observation"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/emulation/emulator-memory-observer-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "emulatorMemory",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/emulation/emulator-memory-observer-kit/README.md",
+      "smoke": "kits/emulation/emulator-memory-observer-kit/smoke.test.mjs",
+      "parity": "kits/emulation/emulator-memory-observer-kit/source-parity.md",
+      "limitations": "kits/emulation/emulator-memory-observer-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "encounter-director-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -2761,6 +2890,70 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": "fail-state-kit has no validated stable implementation or parity record."
     },
     "stability": "migration-placeholder"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "filesystem-snapshot-adapter-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "emulation-persistence",
+    "domainPath": "n:runtime:persistence:extensions:filesystem-snapshot",
+    "parentDomainPath": "n:runtime:persistence:extensions",
+    "apiName": "snapshotFiles",
+    "factory": "createFilesystemSnapshotAdapterKit",
+    "entry": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+    "packageExport": "./filesystem-snapshot-adapter-kit",
+    "module": {
+      "package": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+      "node": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js"
+    },
+    "integrity": "sha256-l9+GvYVzDfKuNu0f4JrsJ7HAa9+PdrjhFHtihE6LorE=",
+    "environments": [
+      "node"
+    ],
+    "requires": [
+      "n:runtime:persistence"
+    ],
+    "provides": [
+      "persistence:filesystem-snapshot"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "snapshotFiles",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": false
+    },
+    "proof": {
+      "readme": "kits/persistence/filesystem-snapshot-adapter-kit/README.md",
+      "smoke": "kits/persistence/filesystem-snapshot-adapter-kit/smoke.test.mjs",
+      "parity": "kits/persistence/filesystem-snapshot-adapter-kit/source-parity.md",
+      "limitations": "kits/persistence/filesystem-snapshot-adapter-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -5114,6 +5307,71 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "libretro-provider-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "emulation-host",
+    "domainPath": "n:host:extensions:libretro",
+    "parentDomainPath": "n:host:extensions",
+    "apiName": "emulatorProvider",
+    "factory": "createLibretroProviderKit",
+    "entry": "./kits/emulation/libretro-provider-kit/index.js",
+    "packageExport": "./libretro-provider-kit",
+    "module": {
+      "package": "./kits/emulation/libretro-provider-kit/index.js",
+      "node": "./kits/emulation/libretro-provider-kit/index.js"
+    },
+    "integrity": "sha256-vqtevm1bIYV/AJR8u2/YmLqFv2gKSgNh9Od2KbaaiR8=",
+    "environments": [
+      "node"
+    ],
+    "requires": [
+      "emulation:worker"
+    ],
+    "provides": [
+      "emulation:frame-step",
+      "emulation:serialize"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/emulation/libretro-provider-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "emulatorProvider",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/emulation/libretro-provider-kit/README.md",
+      "smoke": "kits/emulation/libretro-provider-kit/smoke.test.mjs",
+      "parity": "kits/emulation/libretro-provider-kit/source-parity.md",
+      "limitations": "kits/emulation/libretro-provider-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "light-combat-kit",
     "version": "1.0.0",
     "status": "official",
@@ -5805,6 +6063,132 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "native-emulator-worker-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "emulation-host",
+    "domainPath": "n:host:extensions:emulator-worker",
+    "parentDomainPath": "n:host:extensions",
+    "apiName": "emulatorWorker",
+    "factory": "createNativeEmulatorWorkerKit",
+    "entry": "./kits/host/native-emulator-worker-kit/index.js",
+    "packageExport": "./native-emulator-worker-kit",
+    "module": {
+      "package": "./kits/host/native-emulator-worker-kit/index.js",
+      "node": "./kits/host/native-emulator-worker-kit/index.js"
+    },
+    "integrity": "sha256-58dTZ1C/ja/9mjI+6k+cva/mhcic1ZmFUcgjZSkrcHA=",
+    "environments": [
+      "node"
+    ],
+    "requires": [],
+    "provides": [
+      "emulation:worker"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/host/native-emulator-worker-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "emulatorWorker",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": false
+    },
+    "proof": {
+      "readme": "kits/host/native-emulator-worker-kit/README.md",
+      "smoke": "kits/host/native-emulator-worker-kit/smoke.test.mjs",
+      "parity": "kits/host/native-emulator-worker-kit/source-parity.md",
+      "limitations": "kits/host/native-emulator-worker-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "nintendo-content-loader-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "emulation-assets",
+    "domainPath": "n:asset:extensions:nintendo-content",
+    "parentDomainPath": "n:asset:extensions",
+    "apiName": "nintendoContent",
+    "factory": "createNintendoContentLoaderKit",
+    "entry": "./kits/asset/nintendo-content-loader-kit/index.js",
+    "packageExport": "./nintendo-content-loader-kit",
+    "module": {
+      "package": "./kits/asset/nintendo-content-loader-kit/index.js",
+      "node": "./kits/asset/nintendo-content-loader-kit/index.js"
+    },
+    "integrity": "sha256-9kfnwtyDGQODkcDxOVJn5N4ffRlDBK1Y8ZFFpQinTE8=",
+    "environments": [
+      "node"
+    ],
+    "requires": [
+      "n:asset"
+    ],
+    "provides": [
+      "emulation:content-loader"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/asset/nintendo-content-loader-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "nintendoContent",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": false
+    },
+    "proof": {
+      "readme": "kits/asset/nintendo-content-loader-kit/README.md",
+      "smoke": "kits/asset/nintendo-content-loader-kit/smoke.test.mjs",
+      "parity": "kits/asset/nintendo-content-loader-kit/source-parity.md",
+      "limitations": "kits/asset/nintendo-content-loader-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "npc-schedule-domain-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -6011,6 +6395,73 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "observed-game-state-adapter-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "simulation",
+    "domainPath": "n:simulation:extensions:observed-game-state",
+    "parentDomainPath": "n:simulation:extensions",
+    "apiName": "observedGameState",
+    "factory": "createObservedGameStateAdapterKit",
+    "entry": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+    "packageExport": "./observed-game-state-adapter-kit",
+    "module": {
+      "package": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+      "node": "./kits/simulation/observed-game-state-adapter-kit/index.js"
+    },
+    "integrity": "sha256-HH28UghZFLUwWJ7qexemt5skYG2Z3joYINpqIYUwZXg=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [
+      "simulation:resolution",
+      "data:observation-history",
+      "n:spatial"
+    ],
+    "provides": [
+      "emulation:semantic-observation"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/simulation/observed-game-state-adapter-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "observedGameState",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/simulation/observed-game-state-adapter-kit/README.md",
+      "smoke": "kits/simulation/observed-game-state-adapter-kit/smoke.test.mjs",
+      "parity": "kits/simulation/observed-game-state-adapter-kit/source-parity.md",
+      "limitations": "kits/simulation/observed-game-state-adapter-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "openxr-hand-adapter-dsk",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -6146,6 +6597,69 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
     },
     "stability": "migration-placeholder"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "pcm-audio-provider-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "emulation-presentation",
+    "domainPath": "n:presentation:extensions:pcm-audio",
+    "parentDomainPath": "n:presentation:extensions",
+    "apiName": "pcmAudio",
+    "factory": "createPcmAudioProviderKit",
+    "entry": "./kits/presentation/pcm-audio-provider-kit/index.js",
+    "packageExport": "./pcm-audio-provider-kit",
+    "module": {
+      "package": "./kits/presentation/pcm-audio-provider-kit/index.js",
+      "node": "./kits/presentation/pcm-audio-provider-kit/index.js"
+    },
+    "integrity": "sha256-FbGkHej32vR8JdBUQJDHSs7GNpDrRdi/S5DbvJWJO+w=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "presentation:emulator-pcm"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/presentation/pcm-audio-provider-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "pcmAudio",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/presentation/pcm-audio-provider-kit/README.md",
+      "smoke": "kits/presentation/pcm-audio-provider-kit/smoke.test.mjs",
+      "parity": "kits/presentation/pcm-audio-provider-kit/source-parity.md",
+      "limitations": "kits/presentation/pcm-audio-provider-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -6856,6 +7370,69 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "raster-frame-provider-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "emulation-presentation",
+    "domainPath": "n:presentation:extensions:raster-frame",
+    "parentDomainPath": "n:presentation:extensions",
+    "apiName": "rasterFrame",
+    "factory": "createRasterFrameProviderKit",
+    "entry": "./kits/presentation/raster-frame-provider-kit/index.js",
+    "packageExport": "./raster-frame-provider-kit",
+    "module": {
+      "package": "./kits/presentation/raster-frame-provider-kit/index.js",
+      "node": "./kits/presentation/raster-frame-provider-kit/index.js"
+    },
+    "integrity": "sha256-xeZWPFG6U472zkfsBm4wDc6bf2n7eIpA3M8Ozr9/csI=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "presentation:emulator-raster"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/presentation/raster-frame-provider-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "rasterFrame",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/presentation/raster-frame-provider-kit/README.md",
+      "smoke": "kits/presentation/raster-frame-provider-kit/smoke.test.mjs",
+      "parity": "kits/presentation/raster-frame-provider-kit/source-parity.md",
+      "limitations": "kits/presentation/raster-frame-provider-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
     "id": "recovery-site-kit",
     "version": "0.0.0",
     "status": "migration-placeholder",
@@ -7334,6 +7911,69 @@ export const GENERATED_KIT_MANIFESTS = Object.freeze([
       "blocker": null
     },
     "stability": "official"
+  },
+  {
+    "schemaVersion": "nexusengine.kit-manifest.v1",
+    "id": "rom-test-runner-kit",
+    "version": "0.1.0",
+    "status": "candidate",
+    "kind": "adapter-kit",
+    "domain": "emulation-diagnostics",
+    "domainPath": "n:diagnostics:extensions:rom-tests",
+    "parentDomainPath": "n:diagnostics:extensions",
+    "apiName": "romTests",
+    "factory": "createRomTestRunnerKit",
+    "entry": "./kits/diagnostics/rom-test-runner-kit/index.js",
+    "packageExport": "./rom-test-runner-kit",
+    "module": {
+      "package": "./kits/diagnostics/rom-test-runner-kit/index.js",
+      "node": "./kits/diagnostics/rom-test-runner-kit/index.js"
+    },
+    "integrity": "sha256-Z1IqJtpqeBEtg6qJuhoq0+18uOZfdBmfkxq2Q1WeJ/M=",
+    "environments": [
+      "node",
+      "browser"
+    ],
+    "requires": [],
+    "provides": [
+      "diagnostics:rom-tests"
+    ],
+    "composes": [],
+    "realBehavior": true,
+    "source": {
+      "owner": "LuminaryLabs-Dev",
+      "repository": "NexusEngine-Kits",
+      "requestedRef": "main",
+      "resolvedCommit": null,
+      "path": "kits/diagnostics/rom-test-runner-kit/index.js",
+      "parity": "candidate"
+    },
+    "runtime": {
+      "api": "romTests",
+      "snapshot": false,
+      "loadSnapshot": false,
+      "reset": false,
+      "deterministic": true
+    },
+    "proof": {
+      "readme": "kits/diagnostics/rom-test-runner-kit/README.md",
+      "smoke": "kits/diagnostics/rom-test-runner-kit/smoke.test.mjs",
+      "parity": "kits/diagnostics/rom-test-runner-kit/source-parity.md",
+      "limitations": "kits/diagnostics/rom-test-runner-kit/LIMITATIONS.md"
+    },
+    "promotion": {
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    "stability": "candidate"
   },
   {
     "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -9783,6 +10423,69 @@ export const GENERATED_DOMAIN_MANIFESTS = Object.freeze([
   },
   {
     "schemaVersion": "nexusengine.domain-manifest.v1",
+    "id": "emulation-assets",
+    "label": "Emulation Assets",
+    "kind": "service-domain",
+    "status": "candidate",
+    "domainPath": "n:asset:extensions",
+    "entry": "./domains/emulation-assets/index.js",
+    "kits": [
+      "nintendo-content-loader-kit"
+    ]
+  },
+  {
+    "schemaVersion": "nexusengine.domain-manifest.v1",
+    "id": "emulation-diagnostics",
+    "label": "Emulation Diagnostics",
+    "kind": "service-domain",
+    "status": "candidate",
+    "domainPath": "n:diagnostics:extensions",
+    "entry": "./domains/emulation-diagnostics/index.js",
+    "kits": [
+      "rom-test-runner-kit"
+    ]
+  },
+  {
+    "schemaVersion": "nexusengine.domain-manifest.v1",
+    "id": "emulation-host",
+    "label": "Emulation Host",
+    "kind": "service-domain",
+    "status": "candidate",
+    "domainPath": "n:host:extensions",
+    "entry": "./domains/emulation-host/index.js",
+    "kits": [
+      "native-emulator-worker-kit",
+      "libretro-provider-kit",
+      "emulator-memory-observer-kit"
+    ]
+  },
+  {
+    "schemaVersion": "nexusengine.domain-manifest.v1",
+    "id": "emulation-persistence",
+    "label": "Emulation Persistence",
+    "kind": "service-domain",
+    "status": "candidate",
+    "domainPath": "n:runtime:persistence:extensions",
+    "entry": "./domains/emulation-persistence/index.js",
+    "kits": [
+      "filesystem-snapshot-adapter-kit"
+    ]
+  },
+  {
+    "schemaVersion": "nexusengine.domain-manifest.v1",
+    "id": "emulation-presentation",
+    "label": "Emulation Presentation",
+    "kind": "service-domain",
+    "status": "candidate",
+    "domainPath": "n:presentation:extensions",
+    "entry": "./domains/emulation-presentation/index.js",
+    "kits": [
+      "raster-frame-provider-kit",
+      "pcm-audio-provider-kit"
+    ]
+  },
+  {
+    "schemaVersion": "nexusengine.domain-manifest.v1",
     "id": "foundation",
     "label": "Foundation",
     "kind": "foundation",
@@ -10250,7 +10953,17 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "webgpu-host-provider-kit",
       "webgpu-compute-provider-kit",
       "webgpu-render-provider-kit",
-      "webgpu-frame-provider-kit"
+      "webgpu-frame-provider-kit",
+      "native-emulator-worker-kit",
+      "libretro-provider-kit",
+      "nintendo-content-loader-kit",
+      "emulator-memory-observer-kit",
+      "observed-game-state-adapter-kit",
+      "console-input-adapter-kit",
+      "raster-frame-provider-kit",
+      "pcm-audio-provider-kit",
+      "filesystem-snapshot-adapter-kit",
+      "rom-test-runner-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -10301,6 +11014,24 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
       "resource-node-kit",
       "recovery-site-kit",
       "cargo-transfer-kit"
+    ],
+    "emulation-assets": [
+      "nintendo-content-loader-kit"
+    ],
+    "emulation-diagnostics": [
+      "rom-test-runner-kit"
+    ],
+    "emulation-host": [
+      "native-emulator-worker-kit",
+      "libretro-provider-kit",
+      "emulator-memory-observer-kit"
+    ],
+    "emulation-persistence": [
+      "filesystem-snapshot-adapter-kit"
+    ],
+    "emulation-presentation": [
+      "raster-frame-provider-kit",
+      "pcm-audio-provider-kit"
     ],
     "foundation": [
       "seed-kit",
@@ -12588,6 +13319,71 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "console-input-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "input",
+      "domainPath": "n:interaction:input:extensions:console",
+      "parentDomainPath": "n:interaction:input:extensions",
+      "apiName": "consoleInput",
+      "factory": "createConsoleInputAdapterKit",
+      "entry": "./kits/input/console-input-adapter-kit/index.js",
+      "packageExport": "./console-input-adapter-kit",
+      "module": {
+        "package": "./kits/input/console-input-adapter-kit/index.js",
+        "node": "./kits/input/console-input-adapter-kit/index.js"
+      },
+      "integrity": "sha256-/BAkxLmWU6hIrKh4rH6qX/X/LhT+v7RsGt5tqyiKq1o=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "n:interaction:input"
+      ],
+      "provides": [
+        "emulation:console-input"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/input/console-input-adapter-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "consoleInput",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/input/console-input-adapter-kit/README.md",
+        "smoke": "kits/input/console-input-adapter-kit/smoke.test.mjs",
+        "parity": "kits/input/console-input-adapter-kit/source-parity.md",
+        "limitations": "kits/input/console-input-adapter-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "currency-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -12933,6 +13729,70 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "emulator-memory-observer-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-host",
+      "domainPath": "n:host:extensions:emulator-memory",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorMemory",
+      "factory": "createEmulatorMemoryObserverKit",
+      "entry": "./kits/emulation/emulator-memory-observer-kit/index.js",
+      "packageExport": "./emulator-memory-observer-kit",
+      "module": {
+        "package": "./kits/emulation/emulator-memory-observer-kit/index.js",
+        "node": "./kits/emulation/emulator-memory-observer-kit/index.js"
+      },
+      "integrity": "sha256-OFK1++EyiOA9/GeaYRWDN+M5bOQHLZSQBwNaZNi8fg8=",
+      "environments": [
+        "node"
+      ],
+      "requires": [
+        "emulation:frame-step"
+      ],
+      "provides": [
+        "emulation:memory-observation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/emulation/emulator-memory-observer-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "emulatorMemory",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/emulation/emulator-memory-observer-kit/README.md",
+        "smoke": "kits/emulation/emulator-memory-observer-kit/smoke.test.mjs",
+        "parity": "kits/emulation/emulator-memory-observer-kit/source-parity.md",
+        "limitations": "kits/emulation/emulator-memory-observer-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "encounter-director-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -13275,6 +14135,70 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": "fail-state-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "filesystem-snapshot-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-persistence",
+      "domainPath": "n:runtime:persistence:extensions:filesystem-snapshot",
+      "parentDomainPath": "n:runtime:persistence:extensions",
+      "apiName": "snapshotFiles",
+      "factory": "createFilesystemSnapshotAdapterKit",
+      "entry": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+      "packageExport": "./filesystem-snapshot-adapter-kit",
+      "module": {
+        "package": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+        "node": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js"
+      },
+      "integrity": "sha256-l9+GvYVzDfKuNu0f4JrsJ7HAa9+PdrjhFHtihE6LorE=",
+      "environments": [
+        "node"
+      ],
+      "requires": [
+        "n:runtime:persistence"
+      ],
+      "provides": [
+        "persistence:filesystem-snapshot"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "snapshotFiles",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/persistence/filesystem-snapshot-adapter-kit/README.md",
+        "smoke": "kits/persistence/filesystem-snapshot-adapter-kit/smoke.test.mjs",
+        "parity": "kits/persistence/filesystem-snapshot-adapter-kit/source-parity.md",
+        "limitations": "kits/persistence/filesystem-snapshot-adapter-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -15628,6 +16552,71 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "libretro-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-host",
+      "domainPath": "n:host:extensions:libretro",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorProvider",
+      "factory": "createLibretroProviderKit",
+      "entry": "./kits/emulation/libretro-provider-kit/index.js",
+      "packageExport": "./libretro-provider-kit",
+      "module": {
+        "package": "./kits/emulation/libretro-provider-kit/index.js",
+        "node": "./kits/emulation/libretro-provider-kit/index.js"
+      },
+      "integrity": "sha256-vqtevm1bIYV/AJR8u2/YmLqFv2gKSgNh9Od2KbaaiR8=",
+      "environments": [
+        "node"
+      ],
+      "requires": [
+        "emulation:worker"
+      ],
+      "provides": [
+        "emulation:frame-step",
+        "emulation:serialize"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/emulation/libretro-provider-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "emulatorProvider",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/emulation/libretro-provider-kit/README.md",
+        "smoke": "kits/emulation/libretro-provider-kit/smoke.test.mjs",
+        "parity": "kits/emulation/libretro-provider-kit/source-parity.md",
+        "limitations": "kits/emulation/libretro-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "light-combat-kit",
       "version": "1.0.0",
       "status": "official",
@@ -16319,6 +17308,132 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "native-emulator-worker-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-host",
+      "domainPath": "n:host:extensions:emulator-worker",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorWorker",
+      "factory": "createNativeEmulatorWorkerKit",
+      "entry": "./kits/host/native-emulator-worker-kit/index.js",
+      "packageExport": "./native-emulator-worker-kit",
+      "module": {
+        "package": "./kits/host/native-emulator-worker-kit/index.js",
+        "node": "./kits/host/native-emulator-worker-kit/index.js"
+      },
+      "integrity": "sha256-58dTZ1C/ja/9mjI+6k+cva/mhcic1ZmFUcgjZSkrcHA=",
+      "environments": [
+        "node"
+      ],
+      "requires": [],
+      "provides": [
+        "emulation:worker"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/host/native-emulator-worker-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "emulatorWorker",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/host/native-emulator-worker-kit/README.md",
+        "smoke": "kits/host/native-emulator-worker-kit/smoke.test.mjs",
+        "parity": "kits/host/native-emulator-worker-kit/source-parity.md",
+        "limitations": "kits/host/native-emulator-worker-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "nintendo-content-loader-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-assets",
+      "domainPath": "n:asset:extensions:nintendo-content",
+      "parentDomainPath": "n:asset:extensions",
+      "apiName": "nintendoContent",
+      "factory": "createNintendoContentLoaderKit",
+      "entry": "./kits/asset/nintendo-content-loader-kit/index.js",
+      "packageExport": "./nintendo-content-loader-kit",
+      "module": {
+        "package": "./kits/asset/nintendo-content-loader-kit/index.js",
+        "node": "./kits/asset/nintendo-content-loader-kit/index.js"
+      },
+      "integrity": "sha256-9kfnwtyDGQODkcDxOVJn5N4ffRlDBK1Y8ZFFpQinTE8=",
+      "environments": [
+        "node"
+      ],
+      "requires": [
+        "n:asset"
+      ],
+      "provides": [
+        "emulation:content-loader"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/asset/nintendo-content-loader-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "nintendoContent",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/asset/nintendo-content-loader-kit/README.md",
+        "smoke": "kits/asset/nintendo-content-loader-kit/smoke.test.mjs",
+        "parity": "kits/asset/nintendo-content-loader-kit/source-parity.md",
+        "limitations": "kits/asset/nintendo-content-loader-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "npc-schedule-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -16525,6 +17640,73 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "observed-game-state-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "simulation",
+      "domainPath": "n:simulation:extensions:observed-game-state",
+      "parentDomainPath": "n:simulation:extensions",
+      "apiName": "observedGameState",
+      "factory": "createObservedGameStateAdapterKit",
+      "entry": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+      "packageExport": "./observed-game-state-adapter-kit",
+      "module": {
+        "package": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+        "node": "./kits/simulation/observed-game-state-adapter-kit/index.js"
+      },
+      "integrity": "sha256-HH28UghZFLUwWJ7qexemt5skYG2Z3joYINpqIYUwZXg=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "simulation:resolution",
+        "data:observation-history",
+        "n:spatial"
+      ],
+      "provides": [
+        "emulation:semantic-observation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/simulation/observed-game-state-adapter-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "observedGameState",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/simulation/observed-game-state-adapter-kit/README.md",
+        "smoke": "kits/simulation/observed-game-state-adapter-kit/smoke.test.mjs",
+        "parity": "kits/simulation/observed-game-state-adapter-kit/source-parity.md",
+        "limitations": "kits/simulation/observed-game-state-adapter-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "openxr-hand-adapter-dsk",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -16660,6 +17842,69 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "pcm-audio-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-presentation",
+      "domainPath": "n:presentation:extensions:pcm-audio",
+      "parentDomainPath": "n:presentation:extensions",
+      "apiName": "pcmAudio",
+      "factory": "createPcmAudioProviderKit",
+      "entry": "./kits/presentation/pcm-audio-provider-kit/index.js",
+      "packageExport": "./pcm-audio-provider-kit",
+      "module": {
+        "package": "./kits/presentation/pcm-audio-provider-kit/index.js",
+        "node": "./kits/presentation/pcm-audio-provider-kit/index.js"
+      },
+      "integrity": "sha256-FbGkHej32vR8JdBUQJDHSs7GNpDrRdi/S5DbvJWJO+w=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "presentation:emulator-pcm"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/presentation/pcm-audio-provider-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "pcmAudio",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/presentation/pcm-audio-provider-kit/README.md",
+        "smoke": "kits/presentation/pcm-audio-provider-kit/smoke.test.mjs",
+        "parity": "kits/presentation/pcm-audio-provider-kit/source-parity.md",
+        "limitations": "kits/presentation/pcm-audio-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -17370,6 +18615,69 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "raster-frame-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-presentation",
+      "domainPath": "n:presentation:extensions:raster-frame",
+      "parentDomainPath": "n:presentation:extensions",
+      "apiName": "rasterFrame",
+      "factory": "createRasterFrameProviderKit",
+      "entry": "./kits/presentation/raster-frame-provider-kit/index.js",
+      "packageExport": "./raster-frame-provider-kit",
+      "module": {
+        "package": "./kits/presentation/raster-frame-provider-kit/index.js",
+        "node": "./kits/presentation/raster-frame-provider-kit/index.js"
+      },
+      "integrity": "sha256-xeZWPFG6U472zkfsBm4wDc6bf2n7eIpA3M8Ozr9/csI=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "presentation:emulator-raster"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/presentation/raster-frame-provider-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "rasterFrame",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/presentation/raster-frame-provider-kit/README.md",
+        "smoke": "kits/presentation/raster-frame-provider-kit/smoke.test.mjs",
+        "parity": "kits/presentation/raster-frame-provider-kit/source-parity.md",
+        "limitations": "kits/presentation/raster-frame-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "recovery-site-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -17848,6 +19156,69 @@ export const GENERATED_KIT_CATALOG = Object.freeze({
         "blocker": null
       },
       "stability": "official"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "rom-test-runner-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-diagnostics",
+      "domainPath": "n:diagnostics:extensions:rom-tests",
+      "parentDomainPath": "n:diagnostics:extensions",
+      "apiName": "romTests",
+      "factory": "createRomTestRunnerKit",
+      "entry": "./kits/diagnostics/rom-test-runner-kit/index.js",
+      "packageExport": "./rom-test-runner-kit",
+      "module": {
+        "package": "./kits/diagnostics/rom-test-runner-kit/index.js",
+        "node": "./kits/diagnostics/rom-test-runner-kit/index.js"
+      },
+      "integrity": "sha256-Z1IqJtpqeBEtg6qJuhoq0+18uOZfdBmfkxq2Q1WeJ/M=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "diagnostics:rom-tests"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/diagnostics/rom-test-runner-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "romTests",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/diagnostics/rom-test-runner-kit/README.md",
+        "smoke": "kits/diagnostics/rom-test-runner-kit/smoke.test.mjs",
+        "parity": "kits/diagnostics/rom-test-runner-kit/source-parity.md",
+        "limitations": "kits/diagnostics/rom-test-runner-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -20248,7 +21619,17 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
       "webgpu-host-provider-kit",
       "webgpu-compute-provider-kit",
       "webgpu-render-provider-kit",
-      "webgpu-frame-provider-kit"
+      "webgpu-frame-provider-kit",
+      "native-emulator-worker-kit",
+      "libretro-provider-kit",
+      "nintendo-content-loader-kit",
+      "emulator-memory-observer-kit",
+      "observed-game-state-adapter-kit",
+      "console-input-adapter-kit",
+      "raster-frame-provider-kit",
+      "pcm-audio-provider-kit",
+      "filesystem-snapshot-adapter-kit",
+      "rom-test-runner-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -23118,6 +24499,93 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "console-input-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "input",
+      "domainPath": "n:interaction:input:extensions:console",
+      "parentDomainPath": "n:interaction:input:extensions",
+      "apiName": "consoleInput",
+      "factory": "createConsoleInputAdapterKit",
+      "entry": "./kits/input/console-input-adapter-kit/index.js",
+      "packageExport": "./console-input-adapter-kit",
+      "module": {
+        "package": "./kits/input/console-input-adapter-kit/index.js",
+        "node": "./kits/input/console-input-adapter-kit/index.js"
+      },
+      "integrity": "sha256-/BAkxLmWU6hIrKh4rH6qX/X/LhT+v7RsGt5tqyiKq1o=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "n:interaction:input"
+      ],
+      "provides": [
+        "emulation:console-input"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/input/console-input-adapter-kit/index.js"
+      },
+      "runtime": {
+        "api": "consoleInput",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/input/console-input-adapter-kit/README.md",
+        "smoke": "kits/input/console-input-adapter-kit/smoke.test.mjs",
+        "parity": "kits/input/console-input-adapter-kit/source-parity.md",
+        "limitations": "kits/input/console-input-adapter-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/input/console-input-adapter-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "currency-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -23593,6 +25061,92 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "emulator-memory-observer-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-host",
+      "domainPath": "n:host:extensions:emulator-memory",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorMemory",
+      "factory": "createEmulatorMemoryObserverKit",
+      "entry": "./kits/emulation/emulator-memory-observer-kit/index.js",
+      "packageExport": "./emulator-memory-observer-kit",
+      "module": {
+        "package": "./kits/emulation/emulator-memory-observer-kit/index.js",
+        "node": "./kits/emulation/emulator-memory-observer-kit/index.js"
+      },
+      "integrity": "sha256-OFK1++EyiOA9/GeaYRWDN+M5bOQHLZSQBwNaZNi8fg8=",
+      "environments": [
+        "node"
+      ],
+      "requires": [
+        "emulation:frame-step"
+      ],
+      "provides": [
+        "emulation:memory-observation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/emulation/emulator-memory-observer-kit/index.js"
+      },
+      "runtime": {
+        "api": "emulatorMemory",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/emulation/emulator-memory-observer-kit/README.md",
+        "smoke": "kits/emulation/emulator-memory-observer-kit/smoke.test.mjs",
+        "parity": "kits/emulation/emulator-memory-observer-kit/source-parity.md",
+        "limitations": "kits/emulation/emulator-memory-observer-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/emulation/emulator-memory-observer-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "encounter-director-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -24063,6 +25617,92 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "fail-state-kit",
           "blocker": "fail-state-kit has no validated stable implementation or parity record."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "filesystem-snapshot-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-persistence",
+      "domainPath": "n:runtime:persistence:extensions:filesystem-snapshot",
+      "parentDomainPath": "n:runtime:persistence:extensions",
+      "apiName": "snapshotFiles",
+      "factory": "createFilesystemSnapshotAdapterKit",
+      "entry": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+      "packageExport": "./filesystem-snapshot-adapter-kit",
+      "module": {
+        "package": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+        "node": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js"
+      },
+      "integrity": "sha256-l9+GvYVzDfKuNu0f4JrsJ7HAa9+PdrjhFHtihE6LorE=",
+      "environments": [
+        "node"
+      ],
+      "requires": [
+        "n:runtime:persistence"
+      ],
+      "provides": [
+        "persistence:filesystem-snapshot"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/persistence/filesystem-snapshot-adapter-kit/index.js"
+      },
+      "runtime": {
+        "api": "snapshotFiles",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/persistence/filesystem-snapshot-adapter-kit/README.md",
+        "smoke": "kits/persistence/filesystem-snapshot-adapter-kit/smoke.test.mjs",
+        "parity": "kits/persistence/filesystem-snapshot-adapter-kit/source-parity.md",
+        "limitations": "kits/persistence/filesystem-snapshot-adapter-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/persistence/filesystem-snapshot-adapter-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
         }
       }
     },
@@ -27302,6 +28942,93 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "libretro-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-host",
+      "domainPath": "n:host:extensions:libretro",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorProvider",
+      "factory": "createLibretroProviderKit",
+      "entry": "./kits/emulation/libretro-provider-kit/index.js",
+      "packageExport": "./libretro-provider-kit",
+      "module": {
+        "package": "./kits/emulation/libretro-provider-kit/index.js",
+        "node": "./kits/emulation/libretro-provider-kit/index.js"
+      },
+      "integrity": "sha256-vqtevm1bIYV/AJR8u2/YmLqFv2gKSgNh9Od2KbaaiR8=",
+      "environments": [
+        "node"
+      ],
+      "requires": [
+        "emulation:worker"
+      ],
+      "provides": [
+        "emulation:frame-step",
+        "emulation:serialize"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/emulation/libretro-provider-kit/index.js"
+      },
+      "runtime": {
+        "api": "emulatorProvider",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/emulation/libretro-provider-kit/README.md",
+        "smoke": "kits/emulation/libretro-provider-kit/smoke.test.mjs",
+        "parity": "kits/emulation/libretro-provider-kit/source-parity.md",
+        "limitations": "kits/emulation/libretro-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/emulation/libretro-provider-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "light-combat-kit",
       "version": "1.0.0",
       "status": "official",
@@ -28253,6 +29980,176 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "native-emulator-worker-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-host",
+      "domainPath": "n:host:extensions:emulator-worker",
+      "parentDomainPath": "n:host:extensions",
+      "apiName": "emulatorWorker",
+      "factory": "createNativeEmulatorWorkerKit",
+      "entry": "./kits/host/native-emulator-worker-kit/index.js",
+      "packageExport": "./native-emulator-worker-kit",
+      "module": {
+        "package": "./kits/host/native-emulator-worker-kit/index.js",
+        "node": "./kits/host/native-emulator-worker-kit/index.js"
+      },
+      "integrity": "sha256-58dTZ1C/ja/9mjI+6k+cva/mhcic1ZmFUcgjZSkrcHA=",
+      "environments": [
+        "node"
+      ],
+      "requires": [],
+      "provides": [
+        "emulation:worker"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/host/native-emulator-worker-kit/index.js"
+      },
+      "runtime": {
+        "api": "emulatorWorker",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/host/native-emulator-worker-kit/README.md",
+        "smoke": "kits/host/native-emulator-worker-kit/smoke.test.mjs",
+        "parity": "kits/host/native-emulator-worker-kit/source-parity.md",
+        "limitations": "kits/host/native-emulator-worker-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/host/native-emulator-worker-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "nintendo-content-loader-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-assets",
+      "domainPath": "n:asset:extensions:nintendo-content",
+      "parentDomainPath": "n:asset:extensions",
+      "apiName": "nintendoContent",
+      "factory": "createNintendoContentLoaderKit",
+      "entry": "./kits/asset/nintendo-content-loader-kit/index.js",
+      "packageExport": "./nintendo-content-loader-kit",
+      "module": {
+        "package": "./kits/asset/nintendo-content-loader-kit/index.js",
+        "node": "./kits/asset/nintendo-content-loader-kit/index.js"
+      },
+      "integrity": "sha256-9kfnwtyDGQODkcDxOVJn5N4ffRlDBK1Y8ZFFpQinTE8=",
+      "environments": [
+        "node"
+      ],
+      "requires": [
+        "n:asset"
+      ],
+      "provides": [
+        "emulation:content-loader"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/asset/nintendo-content-loader-kit/index.js"
+      },
+      "runtime": {
+        "api": "nintendoContent",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/asset/nintendo-content-loader-kit/README.md",
+        "smoke": "kits/asset/nintendo-content-loader-kit/smoke.test.mjs",
+        "parity": "kits/asset/nintendo-content-loader-kit/source-parity.md",
+        "limitations": "kits/asset/nintendo-content-loader-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/asset/nintendo-content-loader-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "npc-schedule-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -28537,6 +30434,95 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "observed-game-state-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "simulation",
+      "domainPath": "n:simulation:extensions:observed-game-state",
+      "parentDomainPath": "n:simulation:extensions",
+      "apiName": "observedGameState",
+      "factory": "createObservedGameStateAdapterKit",
+      "entry": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+      "packageExport": "./observed-game-state-adapter-kit",
+      "module": {
+        "package": "./kits/simulation/observed-game-state-adapter-kit/index.js",
+        "node": "./kits/simulation/observed-game-state-adapter-kit/index.js"
+      },
+      "integrity": "sha256-HH28UghZFLUwWJ7qexemt5skYG2Z3joYINpqIYUwZXg=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [
+        "simulation:resolution",
+        "data:observation-history",
+        "n:spatial"
+      ],
+      "provides": [
+        "emulation:semantic-observation"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/simulation/observed-game-state-adapter-kit/index.js"
+      },
+      "runtime": {
+        "api": "observedGameState",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/simulation/observed-game-state-adapter-kit/README.md",
+        "smoke": "kits/simulation/observed-game-state-adapter-kit/smoke.test.mjs",
+        "parity": "kits/simulation/observed-game-state-adapter-kit/source-parity.md",
+        "limitations": "kits/simulation/observed-game-state-adapter-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/simulation/observed-game-state-adapter-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "openxr-hand-adapter-dsk",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -28722,6 +30708,91 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": "parry-window-domain-kit",
           "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "pcm-audio-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-presentation",
+      "domainPath": "n:presentation:extensions:pcm-audio",
+      "parentDomainPath": "n:presentation:extensions",
+      "apiName": "pcmAudio",
+      "factory": "createPcmAudioProviderKit",
+      "entry": "./kits/presentation/pcm-audio-provider-kit/index.js",
+      "packageExport": "./pcm-audio-provider-kit",
+      "module": {
+        "package": "./kits/presentation/pcm-audio-provider-kit/index.js",
+        "node": "./kits/presentation/pcm-audio-provider-kit/index.js"
+      },
+      "integrity": "sha256-FbGkHej32vR8JdBUQJDHSs7GNpDrRdi/S5DbvJWJO+w=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "presentation:emulator-pcm"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/presentation/pcm-audio-provider-kit/index.js"
+      },
+      "runtime": {
+        "api": "pcmAudio",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/presentation/pcm-audio-provider-kit/README.md",
+        "smoke": "kits/presentation/pcm-audio-provider-kit/smoke.test.mjs",
+        "parity": "kits/presentation/pcm-audio-provider-kit/source-parity.md",
+        "limitations": "kits/presentation/pcm-audio-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/presentation/pcm-audio-provider-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
         }
       }
     },
@@ -29694,6 +31765,91 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "raster-frame-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-presentation",
+      "domainPath": "n:presentation:extensions:raster-frame",
+      "parentDomainPath": "n:presentation:extensions",
+      "apiName": "rasterFrame",
+      "factory": "createRasterFrameProviderKit",
+      "entry": "./kits/presentation/raster-frame-provider-kit/index.js",
+      "packageExport": "./raster-frame-provider-kit",
+      "module": {
+        "package": "./kits/presentation/raster-frame-provider-kit/index.js",
+        "node": "./kits/presentation/raster-frame-provider-kit/index.js"
+      },
+      "integrity": "sha256-xeZWPFG6U472zkfsBm4wDc6bf2n7eIpA3M8Ozr9/csI=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "presentation:emulator-raster"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/presentation/raster-frame-provider-kit/index.js"
+      },
+      "runtime": {
+        "api": "rasterFrame",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/presentation/raster-frame-provider-kit/README.md",
+        "smoke": "kits/presentation/raster-frame-provider-kit/smoke.test.mjs",
+        "parity": "kits/presentation/raster-frame-provider-kit/source-parity.md",
+        "limitations": "kits/presentation/raster-frame-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/presentation/raster-frame-provider-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "recovery-site-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -30352,6 +32508,91 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
           },
           "nextCapability": null,
           "blocker": null
+        }
+      }
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "rom-test-runner-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "emulation-diagnostics",
+      "domainPath": "n:diagnostics:extensions:rom-tests",
+      "parentDomainPath": "n:diagnostics:extensions",
+      "apiName": "romTests",
+      "factory": "createRomTestRunnerKit",
+      "entry": "./kits/diagnostics/rom-test-runner-kit/index.js",
+      "packageExport": "./rom-test-runner-kit",
+      "module": {
+        "package": "./kits/diagnostics/rom-test-runner-kit/index.js",
+        "node": "./kits/diagnostics/rom-test-runner-kit/index.js"
+      },
+      "integrity": "sha256-Z1IqJtpqeBEtg6qJuhoq0+18uOZfdBmfkxq2Q1WeJ/M=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "diagnostics:rom-tests"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "registryId": "LuminaryLabs-Dev/NexusEngine-Kits",
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "./kits/diagnostics/rom-test-runner-kit/index.js"
+      },
+      "runtime": {
+        "api": "romTests",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/diagnostics/rom-test-runner-kit/README.md",
+        "smoke": "kits/diagnostics/rom-test-runner-kit/smoke.test.mjs",
+        "parity": "kits/diagnostics/rom-test-runner-kit/source-parity.md",
+        "limitations": "kits/diagnostics/rom-test-runner-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+      },
+      "stability": "candidate",
+      "lineage": {
+        "source": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/diagnostics/rom-test-runner-kit/index.js",
+          "parity": "candidate"
+        },
+        "promotion": {
+          "baseline": false,
+          "resolved": false,
+          "stages": {
+            "inventoried": true,
+            "sourceMapped": true,
+            "protoValidated": false,
+            "candidate": true,
+            "official": false
+          },
+          "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
         }
       }
     },
@@ -33687,6 +35928,69 @@ export const GENERATED_REPOSITORY_REGISTRY = Object.freeze({
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-assets",
+      "label": "Emulation Assets",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:asset:extensions",
+      "entry": "./domains/emulation-assets/index.js",
+      "kits": [
+        "nintendo-content-loader-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-diagnostics",
+      "label": "Emulation Diagnostics",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:diagnostics:extensions",
+      "entry": "./domains/emulation-diagnostics/index.js",
+      "kits": [
+        "rom-test-runner-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-host",
+      "label": "Emulation Host",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:host:extensions",
+      "entry": "./domains/emulation-host/index.js",
+      "kits": [
+        "native-emulator-worker-kit",
+        "libretro-provider-kit",
+        "emulator-memory-observer-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-persistence",
+      "label": "Emulation Persistence",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:runtime:persistence:extensions",
+      "entry": "./domains/emulation-persistence/index.js",
+      "kits": [
+        "filesystem-snapshot-adapter-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-presentation",
+      "label": "Emulation Presentation",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:presentation:extensions",
+      "entry": "./domains/emulation-presentation/index.js",
+      "kits": [
+        "raster-frame-provider-kit",
+        "pcm-audio-provider-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "foundation",
       "label": "Foundation",
       "kind": "foundation",
@@ -34121,20 +36425,20 @@ export const GENERATED_KIT_PROGRESS = Object.freeze({
   "baselineResolved": 5,
   "baselineRemaining": 103,
   "official": 23,
-  "candidate": 14,
+  "candidate": 24,
   "scaffolded": 8,
   "placeholder": 95,
   "deprecated": 0,
   "archived": 0,
   "blocked": 0,
-  "approvedAdditionsTotal": 32,
+  "approvedAdditionsTotal": 42,
   "approvedAdditionsResolved": 18,
   "activeCapability": "clock-kit",
   "stages": {
-    "inventoried": 140,
-    "sourceMapped": 140,
+    "inventoried": 150,
+    "sourceMapped": 150,
     "protoValidated": 12,
-    "candidate": 37,
+    "candidate": 47,
     "official": 23,
     "deprecated": 0,
     "archived": 0,

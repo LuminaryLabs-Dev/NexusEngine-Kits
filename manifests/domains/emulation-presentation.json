@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "emulation-presentation",
+  "label": "Emulation Presentation",
+  "kind": "service-domain",
+  "status": "candidate",
+  "domainPath": "n:presentation:extensions",
+  "entry": "./domains/emulation-presentation/index.js",
+  "kits": [
+    "raster-frame-provider-kit",
+    "pcm-audio-provider-kit"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "pcm-audio-provider-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "adapter-kit",
+  "domain": "emulation-presentation",
+  "domainPath": "n:presentation:extensions:pcm-audio",
+  "parentDomainPath": "n:presentation:extensions",
+  "apiName": "pcmAudio",
+  "factory": "createPcmAudioProviderKit",
+  "entry": "./kits/presentation/pcm-audio-provider-kit/index.js",
+  "packageExport": "./pcm-audio-provider-kit",
+  "module": {
+    "package": "./kits/presentation/pcm-audio-provider-kit/index.js",
+    "node": "./kits/presentation/pcm-audio-provider-kit/index.js"
+  },
+  "integrity": null,
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "presentation:emulator-pcm"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/presentation/pcm-audio-provider-kit/index.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "pcmAudio",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/presentation/pcm-audio-provider-kit/README.md",
+    "smoke": "kits/presentation/pcm-audio-provider-kit/smoke.test.mjs",
+    "parity": "kits/presentation/pcm-audio-provider-kit/source-parity.md",
+    "limitations": "kits/presentation/pcm-audio-provider-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false
+    },
+    "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+  }
+}

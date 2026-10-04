@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "emulator-memory-observer-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "adapter-kit",
+  "domain": "emulation-host",
+  "domainPath": "n:host:extensions:emulator-memory",
+  "parentDomainPath": "n:host:extensions",
+  "apiName": "emulatorMemory",
+  "factory": "createEmulatorMemoryObserverKit",
+  "entry": "./kits/emulation/emulator-memory-observer-kit/index.js",
+  "packageExport": "./emulator-memory-observer-kit",
+  "module": {
+    "package": "./kits/emulation/emulator-memory-observer-kit/index.js",
+    "node": "./kits/emulation/emulator-memory-observer-kit/index.js"
+  },
+  "integrity": "sha256-OFK1++EyiOA9/GeaYRWDN+M5bOQHLZSQBwNaZNi8fg8=",
+  "environments": [
+    "node"
+  ],
+  "requires": [
+    "emulation:frame-step"
+  ],
+  "provides": [
+    "emulation:memory-observation"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/emulation/emulator-memory-observer-kit/index.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "emulatorMemory",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/emulation/emulator-memory-observer-kit/README.md",
+    "smoke": "kits/emulation/emulator-memory-observer-kit/smoke.test.mjs",
+    "parity": "kits/emulation/emulator-memory-observer-kit/source-parity.md",
+    "limitations": "kits/emulation/emulator-memory-observer-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false
+    },
+    "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+  },
+  "stability": "candidate"
+}

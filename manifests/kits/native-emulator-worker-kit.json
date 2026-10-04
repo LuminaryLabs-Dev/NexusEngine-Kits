@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "native-emulator-worker-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "adapter-kit",
+  "domain": "emulation-host",
+  "domainPath": "n:host:extensions:emulator-worker",
+  "parentDomainPath": "n:host:extensions",
+  "apiName": "emulatorWorker",
+  "factory": "createNativeEmulatorWorkerKit",
+  "entry": "./kits/host/native-emulator-worker-kit/index.js",
+  "packageExport": "./native-emulator-worker-kit",
+  "module": {
+    "package": "./kits/host/native-emulator-worker-kit/index.js",
+    "node": "./kits/host/native-emulator-worker-kit/index.js"
+  },
+  "integrity": null,
+  "environments": [
+    "node"
+  ],
+  "requires": [],
+  "provides": [
+    "emulation:worker"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/host/native-emulator-worker-kit/index.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "emulatorWorker",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": "kits/host/native-emulator-worker-kit/README.md",
+    "smoke": "kits/host/native-emulator-worker-kit/smoke.test.mjs",
+    "parity": "kits/host/native-emulator-worker-kit/source-parity.md",
+    "limitations": "kits/host/native-emulator-worker-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false
+    },
+    "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+  }
+}

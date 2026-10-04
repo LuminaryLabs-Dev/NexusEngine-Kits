@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "emulation-host",
+  "label": "Emulation Host",
+  "kind": "service-domain",
+  "status": "candidate",
+  "domainPath": "n:host:extensions",
+  "entry": "./domains/emulation-host/index.js",
+  "kits": [
+    "native-emulator-worker-kit",
+    "libretro-provider-kit",
+    "emulator-memory-observer-kit"
+  ]
+}

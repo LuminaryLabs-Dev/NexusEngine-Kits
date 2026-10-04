@@ -44,7 +44,17 @@
       "webgpu-host-provider-kit",
       "webgpu-compute-provider-kit",
       "webgpu-render-provider-kit",
-      "webgpu-frame-provider-kit"
+      "webgpu-frame-provider-kit",
+      "native-emulator-worker-kit",
+      "libretro-provider-kit",
+      "nintendo-content-loader-kit",
+      "emulator-memory-observer-kit",
+      "observed-game-state-adapter-kit",
+      "console-input-adapter-kit",
+      "raster-frame-provider-kit",
+      "pcm-audio-provider-kit",
+      "filesystem-snapshot-adapter-kit",
+      "rom-test-runner-kit"
     ],
     "activeCapability": "clock-kit"
   },

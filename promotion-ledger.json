@@ -6,20 +6,20 @@
     "baselineResolved": 5,
     "baselineRemaining": 103,
     "official": 23,
-    "candidate": 14,
+    "candidate": 24,
     "scaffolded": 8,
     "placeholder": 95,
     "deprecated": 0,
     "archived": 0,
     "blocked": 0,
-    "approvedAdditionsTotal": 32,
+    "approvedAdditionsTotal": 42,
     "approvedAdditionsResolved": 18,
     "activeCapability": "clock-kit",
     "stages": {
-      "inventoried": 140,
-      "sourceMapped": 140,
+      "inventoried": 150,
+      "sourceMapped": 150,
       "protoValidated": 12,
-      "candidate": 37,
+      "candidate": 47,
       "official": 23,
       "deprecated": 0,
       "archived": 0,
@@ -568,6 +568,20 @@
       "blocker": null
     },
     {
+      "id": "console-input-adapter-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    {
       "id": "currency-kit",
       "status": "migration-placeholder",
       "baseline": true,
@@ -658,6 +672,20 @@
       "blocker": "diegetic-feedback-signal-kit has only scaffold or metadata behavior and lacks validated source parity."
     },
     {
+      "id": "emulator-memory-observer-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    {
       "id": "encounter-director-kit",
       "status": "migration-placeholder",
       "baseline": true,
@@ -746,6 +774,20 @@
       },
       "nextCapability": "fail-state-kit",
       "blocker": "fail-state-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "filesystem-snapshot-adapter-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
     },
     {
       "id": "fishing-kit",
@@ -1360,6 +1402,20 @@
       "blocker": "inventory-kit has no validated stable implementation or parity record."
     },
     {
+      "id": "libretro-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    {
       "id": "light-combat-kit",
       "status": "official",
       "baseline": true,
@@ -1540,6 +1596,34 @@
       "blocker": "Candidate requires production TURN and reconnect validation before official promotion."
     },
     {
+      "id": "native-emulator-worker-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    {
+      "id": "nintendo-content-loader-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    {
       "id": "npc-schedule-domain-kit",
       "status": "migration-placeholder",
       "baseline": true,
@@ -1594,6 +1678,20 @@
       "blocker": null
     },
     {
+      "id": "observed-game-state-adapter-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    {
       "id": "openxr-hand-adapter-dsk",
       "status": "migration-placeholder",
       "baseline": true,
@@ -1628,6 +1726,20 @@
       },
       "nextCapability": "parry-window-domain-kit",
       "blocker": "parry-window-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "pcm-audio-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
     },
     {
       "id": "peerjs-transport-provider-kit",
@@ -1810,6 +1922,20 @@
       "blocker": "quest-thread-domain-kit has no validated stable implementation or parity record."
     },
     {
+      "id": "raster-frame-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
+    },
+    {
       "id": "recovery-site-kit",
       "status": "migration-placeholder",
       "baseline": true,
@@ -1934,6 +2060,20 @@
       },
       "nextCapability": null,
       "blocker": null
+    },
+    {
+      "id": "rom-test-runner-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "Candidate; immutable package hydration and cross-platform hardware proof remain required."
     },
     {
       "id": "route-clearance-domain-kit",

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "emulation-persistence",
+  "label": "Emulation Persistence",
+  "kind": "service-domain",
+  "status": "candidate",
+  "domainPath": "n:runtime:persistence:extensions",
+  "entry": "./domains/emulation-persistence/index.js",
+  "kits": [
+    "filesystem-snapshot-adapter-kit"
+  ]
+}

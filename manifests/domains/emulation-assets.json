@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "emulation-assets",
+  "label": "Emulation Assets",
+  "kind": "service-domain",
+  "status": "candidate",
+  "domainPath": "n:asset:extensions",
+  "entry": "./domains/emulation-assets/index.js",
+  "kits": [
+    "nintendo-content-loader-kit"
+  ]
+}

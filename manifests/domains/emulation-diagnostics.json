@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "emulation-diagnostics",
+  "label": "Emulation Diagnostics",
+  "kind": "service-domain",
+  "status": "candidate",
+  "domainPath": "n:diagnostics:extensions",
+  "entry": "./domains/emulation-diagnostics/index.js",
+  "kits": [
+    "rom-test-runner-kit"
+  ]
+}

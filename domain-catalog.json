@@ -96,6 +96,69 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-assets",
+      "label": "Emulation Assets",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:asset:extensions",
+      "entry": "./domains/emulation-assets/index.js",
+      "kits": [
+        "nintendo-content-loader-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-diagnostics",
+      "label": "Emulation Diagnostics",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:diagnostics:extensions",
+      "entry": "./domains/emulation-diagnostics/index.js",
+      "kits": [
+        "rom-test-runner-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-host",
+      "label": "Emulation Host",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:host:extensions",
+      "entry": "./domains/emulation-host/index.js",
+      "kits": [
+        "native-emulator-worker-kit",
+        "libretro-provider-kit",
+        "emulator-memory-observer-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-persistence",
+      "label": "Emulation Persistence",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:runtime:persistence:extensions",
+      "entry": "./domains/emulation-persistence/index.js",
+      "kits": [
+        "filesystem-snapshot-adapter-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "emulation-presentation",
+      "label": "Emulation Presentation",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:presentation:extensions",
+      "entry": "./domains/emulation-presentation/index.js",
+      "kits": [
+        "raster-frame-provider-kit",
+        "pcm-audio-provider-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "foundation",
       "label": "Foundation",
       "kind": "foundation",
