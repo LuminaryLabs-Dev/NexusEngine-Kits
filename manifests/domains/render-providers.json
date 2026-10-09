@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "render-providers",
+  "label": "Render providers",
+  "kind": "service-domain",
+  "status": "candidate",
+  "domainPath": "n:render:extensions",
+  "entry": "./domains/render-providers/index.js",
+  "kits": [
+    "three-physics-view-kit"
+  ]
+}

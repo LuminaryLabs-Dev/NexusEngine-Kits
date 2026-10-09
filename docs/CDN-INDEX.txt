@@ -97,6 +97,7 @@ parry-window-domain-kit unavailable
 pcm-audio-provider-kit unavailable
 peerjs-transport-provider-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/network/peerjs-transport-provider-kit/index.js
 performance-budget-kit unavailable
+physics-runtime-adapter-kit unavailable
 powered-aerial-flight-domain-kit unavailable
 procedural-creature-body-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-creatures/procedural-creature-body-kit/index.js
 procedural-object-body-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-body-kit/index.js
@@ -105,6 +106,7 @@ procedural-object-lod-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngi
 procedural-object-material-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/procedural-objects/procedural-object-material-kit/index.js
 project-batch-deploy-bridge unavailable
 quest-thread-domain-kit unavailable
+rapier-physics-provider-kit unavailable
 raster-frame-provider-kit unavailable
 recovery-site-kit unavailable
 relationship-state-domain-kit unavailable
@@ -134,6 +136,7 @@ structure-runtime-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-K
 surface-placement-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 symbol-alignment-kit https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine-Kits@{resolvedCommit}/kits/migrated-gameplay/index.js
 terrain-ground-contact-domain-kit unavailable
+three-physics-view-kit unavailable
 transform-dsk unavailable
 upgrade-kit unavailable
 vegetation-placement-domain-kit unavailable

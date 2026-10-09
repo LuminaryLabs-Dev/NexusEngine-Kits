@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "nexusengine.domain-manifest.v1",
+  "id": "physics-runtime",
+  "label": "Physics runtime providers",
+  "kind": "service-domain",
+  "status": "candidate",
+  "domainPath": "n:physics:extensions",
+  "entry": "./domains/physics-runtime/index.js",
+  "kits": [
+    "rapier-physics-provider-kit",
+    "physics-runtime-adapter-kit"
+  ]
+}

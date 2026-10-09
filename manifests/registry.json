@@ -8,7 +8,7 @@
   "engineCompatibility": {
     "package": "nexusengine",
     "range": "0.0.4",
-    "testedCommit": "a68544434424438491be1398e3f3d5aced5bc5ee"
+    "testedCommit": "447816ea39e89fa7095b7a1ffdf46d8fba7f68cd"
   },
   "promotion": {
     "baselineCount": 108,
@@ -54,7 +54,10 @@
       "raster-frame-provider-kit",
       "pcm-audio-provider-kit",
       "filesystem-snapshot-adapter-kit",
-      "rom-test-runner-kit"
+      "rom-test-runner-kit",
+      "rapier-physics-provider-kit",
+      "physics-runtime-adapter-kit",
+      "three-physics-view-kit"
     ],
     "activeCapability": "clock-kit"
   },

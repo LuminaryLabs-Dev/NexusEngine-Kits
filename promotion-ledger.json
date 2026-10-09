@@ -6,20 +6,20 @@
     "baselineResolved": 5,
     "baselineRemaining": 103,
     "official": 23,
-    "candidate": 24,
+    "candidate": 27,
     "scaffolded": 8,
     "placeholder": 95,
     "deprecated": 0,
     "archived": 0,
     "blocked": 0,
-    "approvedAdditionsTotal": 42,
+    "approvedAdditionsTotal": 45,
     "approvedAdditionsResolved": 18,
     "activeCapability": "clock-kit",
     "stages": {
-      "inventoried": 150,
-      "sourceMapped": 150,
+      "inventoried": 153,
+      "sourceMapped": 153,
       "protoValidated": 12,
-      "candidate": 47,
+      "candidate": 50,
       "official": 23,
       "deprecated": 0,
       "archived": 0,
@@ -1778,6 +1778,20 @@
       "blocker": "performance-budget-kit has no validated stable implementation or parity record."
     },
     {
+      "id": "physics-runtime-adapter-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
+    },
+    {
       "id": "powered-aerial-flight-domain-kit",
       "status": "migration-placeholder",
       "baseline": true,
@@ -1920,6 +1934,20 @@
       },
       "nextCapability": "quest-thread-domain-kit",
       "blocker": "quest-thread-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "rapier-physics-provider-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
     },
     {
       "id": "raster-frame-provider-kit",
@@ -2434,6 +2462,20 @@
       },
       "nextCapability": "terrain-ground-contact-domain-kit",
       "blocker": "terrain-ground-contact-domain-kit has no validated stable implementation or parity record."
+    },
+    {
+      "id": "three-physics-view-kit",
+      "status": "candidate",
+      "baseline": false,
+      "resolved": false,
+      "stages": {
+        "inventoried": true,
+        "sourceMapped": true,
+        "protoValidated": false,
+        "candidate": true,
+        "official": false
+      },
+      "blocker": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
     },
     {
       "id": "transform-dsk",

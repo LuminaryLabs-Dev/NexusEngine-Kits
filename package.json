@@ -6,9 +6,9 @@
   "nexusIntegrationArtifacts": {
     "engine": {
       "version": "0.0.4",
-      "commit": "2b5e070fab8c73986174b842559b96a7fd2db662",
-      "registryHash": "sha256:538fdb5fada709cbf7f305e58401c6fd260738cc2642704352fa180021ce2738",
-      "tarballSha256": "91e8fe7852603ceddf6f3576f38d3d73ea4d99aa858eb3b9794ae64afc4c0eba"
+      "commit": "447816ea39e89fa7095b7a1ffdf46d8fba7f68cd",
+      "registryHash": "sha256:6a107d85a5a389dabf666cf1115205cb62af3d5d6830cf4a910fa3079d35fd02",
+      "tarballSha256": "607d74000f1b6b4761198708dc7872e7d2d489513bcacc5e9ce5d82fd02b6230"
     }
   },
   "exports": {
@@ -91,13 +91,21 @@
     "./domain-emulation-presentation": "./domains/emulation-presentation/index.js",
     "./domain-emulation-persistence": "./domains/emulation-persistence/index.js",
     "./domain-emulation-diagnostics": "./domains/emulation-diagnostics/index.js",
-    "./pcm-playback": "./kits/presentation/pcm-audio-provider-kit/playback.js"
+    "./pcm-playback": "./kits/presentation/pcm-audio-provider-kit/playback.js",
+    "./domain-physics-runtime": "./domains/physics-runtime/index.js",
+    "./domain-render-providers": "./domains/render-providers/index.js",
+    "./rapier-physics-provider-kit": "./kits/physics/rapier-physics-provider-kit/index.js",
+    "./physics-runtime-adapter-kit": "./kits/physics/physics-runtime-adapter-kit/index.js",
+    "./three-physics-view-kit": "./kits/rendering/three-physics-view-kit/index.js"
   },
   "peerDependencies": {
     "nexusengine": "0.0.4"
   },
   "devDependencies": {
-    "nexusengine": "git+https://github.com/LuminaryLabs-Dev/NexusEngine.git#2b5e070fab8c73986174b842559b96a7fd2db662"
+    "nexusengine": "git+https://github.com/LuminaryLabs-Dev/NexusEngine.git#447816ea39e89fa7095b7a1ffdf46d8fba7f68cd",
+    "@dimforge/rapier3d-compat": "0.19.0",
+    "three": "0.180.0",
+    "@typescript/typescript6": "6.0.2"
   },
   "files": [
     "src",
@@ -160,7 +168,8 @@
     "progress": "node scripts/kit-progress.mjs",
     "test": "node tests/registry/repository-registry-smoke.mjs && node tests/registry/lockfile-smoke.mjs && node tests/registry/module-resolver-smoke.mjs && node tests/registry/planning-performance-smoke.mjs && node tests/installer/planning-rejection-smoke.mjs && node tests/installer/installer-smoke.mjs && node tests/package/package-import-smoke.mjs && node kits/network/multiplayer-host-kit/smoke.test.mjs && node kits/network/multiplayer-host-kit/network-conditions.test.mjs && node kits/network/peerjs-transport-provider-kit/smoke.test.mjs && node kits/aquatic/fishing-kit/smoke.test.mjs && node kits/production/agriculture-domain-kit/smoke.test.mjs && node kits/migrated-gameplay/proof/smoke.test.mjs && node kits/migrated-gameplay/examples/ar-smoke.mjs && node kits/migrated-gameplay/examples/ar-modes-smoke.mjs && node kits/simulation/seeded-world-patch-controller-kit/smoke.test.mjs && node kits/camera-feedback/camera-smooth-follow-kit/smoke.test.mjs && node kits/foundation/seed-kit/smoke.test.mjs && node kits/procedural-creatures/procedural-creature-body-kit/smoke.test.mjs && node kits/render-descriptors/instanced-render-batch-kit/smoke.test.mjs && node tests/domains/foundation-domain-smoke.mjs && node tests/domains/spatial-domain-smoke.mjs && node tests/domains/simulation-domain-smoke.mjs && node tests/domains/procedural-creatures-domain-smoke.mjs && node tests/domains/procedural-objects-domain-smoke.mjs && node tests/domains/render-descriptors-instanced-batch-smoke.mjs && node tests/progress-smoke.mjs && npm run test:gpu",
     "test:gpu": "node tests/providers/gpu-host-smoke.mjs && node tests/providers/gpu-compute-smoke.mjs && node tests/providers/gpu-shared-resource-smoke.mjs && node tests/providers/gpu-unified-frame-smoke.mjs",
-    "test:emulation": "node kits/emulation/proof/adapter-proof.mjs"
+    "test:emulation": "node kits/emulation/proof/adapter-proof.mjs",
+    "test:physics": "node --test tests/physics/runtime-smoke.mjs"
   },
   "license": "MIT"
 }

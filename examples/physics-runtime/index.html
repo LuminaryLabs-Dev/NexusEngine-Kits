@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NexusEngine Physics runtime proof</title>
+<style>body{margin:0;background:#111d29;color:#e9f4f5;font:16px system-ui}main{max-width:1080px;margin:28px auto;padding:0 24px}h1{font-size:28px;margin-bottom:8px}p{color:#bfd1d7}canvas,svg{width:100%;height:auto;display:block;border:1px solid #30475a;border-radius:8px}button{background:#263d50;color:inherit;border:1px solid #426077;border-radius:5px;padding:9px 14px;margin:10px 6px 0 0;cursor:pointer}#status{font-family:monospace;white-space:pre-wrap;font-size:13px;min-height:48px}</style>
+<script type="importmap">{
+  "imports": {
+    "@luminarylabs/nexusengine-kits/rapier-physics-provider-kit": "../../kits/physics/rapier-physics-provider-kit/index.js",
+    "@luminarylabs/nexusengine-kits/physics-runtime-adapter-kit": "../../kits/physics/physics-runtime-adapter-kit/index.js",
+    "@luminarylabs/nexusengine-kits/three-physics-view-kit": "../../kits/rendering/three-physics-view-kit/index.js",
+
+    "nexusengine": "../../node_modules/nexusengine/src/index.js",
+    "three/addons/renderers/SVGRenderer.js": "../../node_modules/three/examples/jsm/renderers/SVGRenderer.js",
+    "three": "../../node_modules/three/build/three.module.js",
+    "@dimforge/rapier3d-compat": "../../node_modules/@dimforge/rapier3d-compat/rapier.mjs",
+    "nexusengine/domains/physics/contracts": "../../node_modules/nexusengine/src/core-domains/physics/contracts/index.js",
+    "nexusengine/domains/physics/lifecycle": "../../node_modules/nexusengine/src/core-domains/physics/lifecycle/index.js",
+    "nexusengine/domains/physics/body": "../../node_modules/nexusengine/src/core-domains/physics/body/index.js",
+    "nexusengine/domains/physics/shape": "../../node_modules/nexusengine/src/core-domains/physics/shape/index.js",
+    "nexusengine/domains/physics/material": "../../node_modules/nexusengine/src/core-domains/physics/material/index.js",
+    "nexusengine/domains/physics/world": "../../node_modules/nexusengine/src/core-domains/physics/world/index.js",
+    "nexusengine/domains/physics/collider": "../../node_modules/nexusengine/src/core-domains/physics/collider/index.js",
+    "nexusengine/domains/physics/constraints": "../../node_modules/nexusengine/src/core-domains/physics/constraints/index.js",
+    "nexusengine/domains/spatial": "../../node_modules/nexusengine/src/core-domains/spatial/index.js",
+    "nexusengine/domains/simulation": "../../node_modules/nexusengine/src/core-domains/simulation/index.js",
+    "nexusengine/domains/render/frame-schema": "../../node_modules/nexusengine/src/core-domains/render/contracts/kits/render-frame-schema-kit/index.js"
+  }
+}</script></head><body><main><h1>NexusEngine · Physics runtime proof</h1><p>One engine tick. Canonical body state. Rapier response. Three.js pixels.</p><canvas width="1000" height="600"></canvas><div><button id="play">Pause</button><button id="step">Step</button><button id="save">Save</button><button id="load">Restore</button><button id="reset">Reset</button></div><p id="status">Loading pinned providers…</p></main><script type="module" src="./app.mjs"></script></body></html>

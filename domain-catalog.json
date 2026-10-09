@@ -258,6 +258,19 @@
     },
     {
       "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "physics-runtime",
+      "label": "Physics runtime providers",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:physics:extensions",
+      "entry": "./domains/physics-runtime/index.js",
+      "kits": [
+        "rapier-physics-provider-kit",
+        "physics-runtime-adapter-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
       "id": "procedural-creatures",
       "label": "Procedural Creatures",
       "kind": "simulation-domain",
@@ -347,6 +360,18 @@
         "material-palette-kit",
         "lighting-descriptor-kit",
         "sky-atmosphere-kit"
+      ]
+    },
+    {
+      "schemaVersion": "nexusengine.domain-manifest.v1",
+      "id": "render-providers",
+      "label": "Render providers",
+      "kind": "service-domain",
+      "status": "candidate",
+      "domainPath": "n:render:extensions",
+      "entry": "./domains/render-providers/index.js",
+      "kits": [
+        "three-physics-view-kit"
       ]
     },
     {

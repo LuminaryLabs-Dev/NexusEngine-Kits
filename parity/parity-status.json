@@ -3,7 +3,7 @@
   "activeCapability": "clock-kit",
   "baselineCount": 108,
   "approvedAdditions": {
-    "total": 42,
+    "total": 45,
     "resolved": 18
   },
   "kits": {
@@ -700,6 +700,13 @@
       "sourceCommit": null,
       "next": "performance-budget-kit has no validated stable implementation or parity record."
     },
+    "physics-runtime-adapter-kit": {
+      "status": "candidate",
+      "target": "kits/physics/physics-runtime-adapter-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
+    },
     "powered-aerial-flight-domain-kit": {
       "status": "migration-placeholder",
       "target": "kits/aerial/powered-aerial-flight-domain-kit",
@@ -755,6 +762,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "quest-thread-domain-kit has no validated stable implementation or parity record."
+    },
+    "rapier-physics-provider-kit": {
+      "status": "candidate",
+      "target": "kits/physics/rapier-physics-provider-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
     },
     "raster-frame-provider-kit": {
       "status": "candidate",
@@ -958,6 +972,13 @@
       "realBehavior": false,
       "sourceCommit": null,
       "next": "terrain-ground-contact-domain-kit has no validated stable implementation or parity record."
+    },
+    "three-physics-view-kit": {
+      "status": "candidate",
+      "target": "kits/rendering/three-physics-view-kit",
+      "realBehavior": true,
+      "sourceCommit": null,
+      "next": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
     },
     "transform-dsk": {
       "status": "migration-placeholder",

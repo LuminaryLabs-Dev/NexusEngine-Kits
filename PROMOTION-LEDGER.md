@@ -2,7 +2,7 @@
 
 Baseline resolved: 5 / 108
 Baseline remaining: 103
-Approved additions: 18 / 42
+Approved additions: 18 / 45
 Active capability: clock-kit
 
 | Kit | Status | Resolved | Blocker |
@@ -106,6 +106,7 @@ Active capability: clock-kit
 | pcm-audio-provider-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | peerjs-transport-provider-kit | candidate | no | Candidate requires cross-NAT TURN and reconnect validation before official promotion. |
 | performance-budget-kit | migration-placeholder | no | performance-budget-kit has no validated stable implementation or parity record. |
+| physics-runtime-adapter-kit | candidate | no | First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open. |
 | powered-aerial-flight-domain-kit | migration-placeholder | no | powered-aerial-flight-domain-kit has no validated stable implementation or parity record. |
 | procedural-creature-body-kit | candidate | no | Candidate requires non-theropod body plans, core-object adoption proof in multiple products, and multi-renderer validation before official promotion. |
 | procedural-object-body-kit | candidate | no | Candidate requires multi-consumer and multi-renderer validation before official promotion. |
@@ -114,6 +115,7 @@ Active capability: clock-kit
 | procedural-object-material-kit | candidate | no | Candidate requires multi-consumer and multi-renderer validation before official promotion. |
 | project-batch-deploy-bridge | migration-placeholder | no | project-batch-deploy-bridge has no validated stable implementation or parity record. |
 | quest-thread-domain-kit | migration-placeholder | no | quest-thread-domain-kit has no validated stable implementation or parity record. |
+| rapier-physics-provider-kit | candidate | no | First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open. |
 | raster-frame-provider-kit | candidate | no | Candidate; immutable package hydration and cross-platform hardware proof remain required. |
 | recovery-site-kit | migration-placeholder | no | recovery-site-kit has no validated stable implementation or parity record. |
 | relationship-state-domain-kit | migration-placeholder | no | relationship-state-domain-kit has no validated stable implementation or parity record. |
@@ -143,6 +145,7 @@ Active capability: clock-kit
 | surface-placement-kit | official | yes |  |
 | symbol-alignment-kit | official | yes |  |
 | terrain-ground-contact-domain-kit | migration-placeholder | no | terrain-ground-contact-domain-kit has no validated stable implementation or parity record. |
+| three-physics-view-kit | candidate | no | First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open. |
 | transform-dsk | migration-placeholder | no | transform-dsk has no validated stable implementation or parity record. |
 | upgrade-kit | migration-placeholder | no | upgrade-kit has no validated stable implementation or parity record. |
 | vegetation-placement-domain-kit | migration-placeholder | no | vegetation-placement-domain-kit has no validated stable implementation or parity record. |

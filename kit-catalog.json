@@ -47,7 +47,10 @@
       "raster-frame-provider-kit",
       "pcm-audio-provider-kit",
       "filesystem-snapshot-adapter-kit",
-      "rom-test-runner-kit"
+      "rom-test-runner-kit",
+      "rapier-physics-provider-kit",
+      "physics-runtime-adapter-kit",
+      "three-physics-view-kit"
     ],
     "activeCapability": "clock-kit"
   },
@@ -162,6 +165,10 @@
       "multiplayer-host-kit",
       "peerjs-transport-provider-kit"
     ],
+    "physics-runtime": [
+      "rapier-physics-provider-kit",
+      "physics-runtime-adapter-kit"
+    ],
     "procedural-creatures": [
       "procedural-creature-body-kit"
     ],
@@ -199,6 +206,9 @@
       "material-palette-kit",
       "lighting-descriptor-kit",
       "sky-atmosphere-kit"
+    ],
+    "render-providers": [
+      "three-physics-view-kit"
     ],
     "route-extraction": [
       "generic-route-cargo-extraction-kit"
@@ -7130,6 +7140,69 @@
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "physics-runtime-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "domain": "physics-runtime",
+      "domainPath": "n:physics:extensions:runtime",
+      "parentDomainPath": "n:physics:extensions",
+      "apiName": "physicsRuntimeAdapter",
+      "factory": "createPhysicsRuntimeAdapter",
+      "entry": "./kits/physics/physics-runtime-adapter-kit/index.js",
+      "packageExport": "./physics-runtime-adapter-kit",
+      "module": {
+        "package": "./kits/physics/physics-runtime-adapter-kit/index.js",
+        "node": "./kits/physics/physics-runtime-adapter-kit/index.js"
+      },
+      "integrity": "sha256-7mMfVRL/JHDDvvN6L5BqpopRshtj1417gSWYcEn1jxA=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:physics:extensions:runtime"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/physics/physics-runtime-adapter-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "physicsRuntimeAdapter",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/physics/physics-runtime-adapter-kit/README.md",
+        "smoke": "tests/physics/runtime-smoke.mjs",
+        "parity": "kits/physics/physics-runtime-adapter-kit/source-parity.md",
+        "limitations": "kits/physics/physics-runtime-adapter-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
+      },
+      "stability": "candidate"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
       "id": "powered-aerial-flight-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -7696,6 +7769,69 @@
         "blocker": "quest-thread-domain-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "rapier-physics-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "domain": "physics-runtime",
+      "domainPath": "n:physics:extensions:rapier",
+      "parentDomainPath": "n:physics:extensions",
+      "apiName": "rapierPhysicsProvider",
+      "factory": "createRapierPhysicsProvider",
+      "entry": "./kits/physics/rapier-physics-provider-kit/index.js",
+      "packageExport": "./rapier-physics-provider-kit",
+      "module": {
+        "package": "./kits/physics/rapier-physics-provider-kit/index.js",
+        "node": "./kits/physics/rapier-physics-provider-kit/index.js"
+      },
+      "integrity": "sha256-Z+eTsbDUxBtGDLYt9oKKmROj+rKwEtTlan3C8XeVXMs=",
+      "environments": [
+        "node",
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:physics:extensions:rapier"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/physics/rapier-physics-provider-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "rapierPhysicsProvider",
+        "snapshot": true,
+        "loadSnapshot": true,
+        "reset": true,
+        "deterministic": true
+      },
+      "proof": {
+        "readme": "kits/physics/rapier-physics-provider-kit/README.md",
+        "smoke": "tests/physics/runtime-smoke.mjs",
+        "parity": "kits/physics/rapier-physics-provider-kit/source-parity.md",
+        "limitations": "kits/physics/rapier-physics-provider-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
+      },
+      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",
@@ -9688,6 +9824,68 @@
         "blocker": "terrain-ground-contact-domain-kit has no validated stable implementation or parity record."
       },
       "stability": "migration-placeholder"
+    },
+    {
+      "schemaVersion": "nexusengine.kit-manifest.v1",
+      "id": "three-physics-view-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "domain": "render-providers",
+      "domainPath": "n:render:extensions:physics-view",
+      "parentDomainPath": "n:render:extensions",
+      "apiName": "threePhysicsView",
+      "factory": "createThreePhysicsView",
+      "entry": "./kits/rendering/three-physics-view-kit/index.js",
+      "packageExport": "./three-physics-view-kit",
+      "module": {
+        "package": "./kits/rendering/three-physics-view-kit/index.js",
+        "node": "./kits/rendering/three-physics-view-kit/index.js"
+      },
+      "integrity": "sha256-30mzbtVRVNpTMvSOmVLoLkI0PftgGyfvCVsnnC3Ph8o=",
+      "environments": [
+        "browser"
+      ],
+      "requires": [],
+      "provides": [
+        "n:render:extensions:physics-view"
+      ],
+      "composes": [],
+      "realBehavior": true,
+      "source": {
+        "owner": "LuminaryLabs-Dev",
+        "repository": "NexusEngine-Kits",
+        "requestedRef": "main",
+        "resolvedCommit": null,
+        "path": "kits/rendering/three-physics-view-kit/index.js",
+        "parity": "candidate"
+      },
+      "runtime": {
+        "api": "threePhysicsView",
+        "snapshot": false,
+        "loadSnapshot": false,
+        "reset": false,
+        "deterministic": false
+      },
+      "proof": {
+        "readme": "kits/rendering/three-physics-view-kit/README.md",
+        "smoke": "tests/physics/browser-proof.py",
+        "parity": "kits/rendering/three-physics-view-kit/source-parity.md",
+        "limitations": "kits/rendering/three-physics-view-kit/LIMITATIONS.md"
+      },
+      "promotion": {
+        "baseline": false,
+        "resolved": false,
+        "stages": {
+          "inventoried": true,
+          "sourceMapped": true,
+          "protoValidated": false,
+          "candidate": true,
+          "official": false
+        },
+        "blocker": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
+      },
+      "stability": "candidate"
     },
     {
       "schemaVersion": "nexusengine.kit-manifest.v1",

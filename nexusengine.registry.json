@@ -8,7 +8,7 @@
       "package": "@luminarylabs/nexusengine-kits",
       "version": "0.0.1",
       "sourceCommit": "0000000000000000000000000000000000000000",
-      "integrity": "sha256:da92e3c2183ec2d18337ddef647653f6d849ec1ada7918d0eb04a8a3c88e6110",
+      "integrity": "sha256:d01307f55ec7cae6d8f47cf9f584774b624b98374592dca68d35aec39d21d895",
       "status": "metadata-only",
       "environments": [
         "browser",
@@ -21,7 +21,7 @@
         "repository": "NexusEngine-Kits",
         "requestedRef": "main",
         "resolution": "immutable-fetch-required",
-        "executableFileCount": 146
+        "executableFileCount": 152
       }
     }
   ],
@@ -459,6 +459,33 @@
       }
     },
     {
+      "id": "kits-physics-runtime",
+      "domainPath": "n:physics:extensions",
+      "parentDomainPath": "n:physics",
+      "label": "Physics runtime providers",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core Physics runtime providers capabilities.",
+      "ownedMeaning": [
+        "Reusable Physics runtime providers policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:physics:extensions"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/physics-runtime/index.js"
+      }
+    },
+    {
       "id": "kits-procedural-creatures",
       "domainPath": "n:actor:creature:procedural",
       "parentDomainPath": "n:actor:creature",
@@ -618,6 +645,33 @@
       "metadata": {
         "kind": "descriptor-domain",
         "entry": "./domains/render-descriptors/index.js"
+      }
+    },
+    {
+      "id": "kits-render-providers",
+      "domainPath": "n:render:extensions",
+      "parentDomainPath": "n:render",
+      "label": "Render providers",
+      "status": "candidate",
+      "responsibility": "Reusable non-Core Render providers capabilities.",
+      "ownedMeaning": [
+        "Reusable Render providers policies, adapters, and authored systems."
+      ],
+      "forbiddenResponsibilities": [
+        "Universal NexusEngine Core state and behavior."
+      ],
+      "requires": [],
+      "provides": [
+        "n:render:extensions"
+      ],
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "sourceRegistryId": "nexusengine-kits",
+      "metadata": {
+        "kind": "service-domain",
+        "entry": "./domains/render-providers/index.js"
       }
     },
     {
@@ -5941,6 +5995,57 @@
       }
     },
     {
+      "id": "physics-runtime-adapter-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "adapter-kit",
+      "responsibility": "physics-runtime-adapter-kit",
+      "domainPath": "n:physics:extensions:runtime",
+      "parentDomainPath": "n:physics:extensions",
+      "apiName": "physicsRuntimeAdapter",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "n:physics:extensions:runtime"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./physics-runtime-adapter-kit",
+        "exportName": "createPhysicsRuntimeAdapter",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/physics/physics-runtime-adapter-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/physics/physics-runtime-adapter-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/physics/physics-runtime-adapter-kit/README.md",
+          "smoke": "tests/physics/runtime-smoke.mjs",
+          "parity": "kits/physics/physics-runtime-adapter-kit/source-parity.md",
+          "limitations": "kits/physics/physics-runtime-adapter-kit/LIMITATIONS.md"
+        }
+      }
+    },
+    {
       "id": "powered-aerial-flight-domain-kit",
       "version": "0.0.0",
       "status": "migration-placeholder",
@@ -6370,6 +6475,57 @@
           "smoke": null,
           "parity": null,
           "limitations": null
+        }
+      }
+    },
+    {
+      "id": "rapier-physics-provider-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "responsibility": "rapier-physics-provider-kit",
+      "domainPath": "n:physics:extensions:rapier",
+      "parentDomainPath": "n:physics:extensions",
+      "apiName": "rapierPhysicsProvider",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "n:physics:extensions:rapier"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./rapier-physics-provider-kit",
+        "exportName": "createRapierPhysicsProvider",
+        "environments": [
+          "node",
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/physics/rapier-physics-provider-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/physics/rapier-physics-provider-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/physics/rapier-physics-provider-kit/README.md",
+          "smoke": "tests/physics/runtime-smoke.mjs",
+          "parity": "kits/physics/rapier-physics-provider-kit/source-parity.md",
+          "limitations": "kits/physics/rapier-physics-provider-kit/LIMITATIONS.md"
         }
       }
     },
@@ -7879,6 +8035,56 @@
           "smoke": null,
           "parity": null,
           "limitations": null
+        }
+      }
+    },
+    {
+      "id": "three-physics-view-kit",
+      "version": "0.1.0",
+      "status": "candidate",
+      "kind": "provider-kit",
+      "responsibility": "three-physics-view-kit",
+      "domainPath": "n:render:extensions:physics-view",
+      "parentDomainPath": "n:render:extensions",
+      "apiName": "threePhysicsView",
+      "apiVisibility": "public",
+      "requires": [],
+      "provides": [
+        "n:render:extensions:physics-view"
+      ],
+      "composes": [],
+      "defaults": {},
+      "settingsSchema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "source": {
+        "registryId": "nexusengine-kits",
+        "subpath": "./three-physics-view-kit",
+        "exportName": "createThreePhysicsView",
+        "environments": [
+          "browser"
+        ],
+        "permissions": [],
+        "installable": false
+      },
+      "metadata": {
+        "realBehavior": true,
+        "unresolved": true,
+        "sourcePath": "./kits/rendering/three-physics-view-kit/index.js",
+        "lineage": {
+          "owner": "LuminaryLabs-Dev",
+          "repository": "NexusEngine-Kits",
+          "requestedRef": "main",
+          "resolvedCommit": null,
+          "path": "kits/rendering/three-physics-view-kit/index.js",
+          "parity": "candidate"
+        },
+        "proof": {
+          "readme": "kits/rendering/three-physics-view-kit/README.md",
+          "smoke": "tests/physics/browser-proof.py",
+          "parity": "kits/rendering/three-physics-view-kit/source-parity.md",
+          "limitations": "kits/rendering/three-physics-view-kit/LIMITATIONS.md"
         }
       }
     },

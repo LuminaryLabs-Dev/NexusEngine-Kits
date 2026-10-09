@@ -1,3 +1,7 @@
 node_modules/
 audit/reports/*
 !audit/reports/README.md
+
+# Python browser proof cache is not source.
+__pycache__/
+*.pyc

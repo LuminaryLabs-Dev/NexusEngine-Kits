@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "three-physics-view-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "provider-kit",
+  "domain": "render-providers",
+  "domainPath": "n:render:extensions:physics-view",
+  "parentDomainPath": "n:render:extensions",
+  "apiName": "threePhysicsView",
+  "factory": "createThreePhysicsView",
+  "entry": "./kits/rendering/three-physics-view-kit/index.js",
+  "packageExport": "./three-physics-view-kit",
+  "module": {
+    "package": "./kits/rendering/three-physics-view-kit/index.js",
+    "node": "./kits/rendering/three-physics-view-kit/index.js"
+  },
+  "integrity": null,
+  "environments": [
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "n:render:extensions:physics-view"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/rendering/three-physics-view-kit/index.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "threePhysicsView",
+    "snapshot": false,
+    "loadSnapshot": false,
+    "reset": false,
+    "deterministic": false
+  },
+  "proof": {
+    "readme": "kits/rendering/three-physics-view-kit/README.md",
+    "smoke": "tests/physics/browser-proof.py",
+    "parity": "kits/rendering/three-physics-view-kit/source-parity.md",
+    "limitations": "kits/rendering/three-physics-view-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false
+    },
+    "blocker": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
+  }
+}

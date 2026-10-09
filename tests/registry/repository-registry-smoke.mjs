@@ -23,7 +23,7 @@ const metadataOnly = normalizeRegistrySnapshot(template, {
   allowExternalParents: true,
   allowExternalReferences: true
 });
-assert.equal(metadataOnly.kits.length, 150);
+assert.equal(metadataOnly.kits.length, 153);
 
 let metadataCalls = 0;
 const hydrated = await pullRegistry({ owner: "LuminaryLabs-Dev", repository: "NexusEngine-Kits" }, {
@@ -38,6 +38,12 @@ assert.equal(hydrated.sources[0].status, "available");
 assert.equal(hydrated.kits.find((kit) => kit.id === "fishing-kit").source.installable, true);
 assert.equal(hydrated.kits.find((kit) => kit.status === "migration-placeholder").source.installable, false);
 assert.equal(hydrated.kits.filter((kit) => kit.source.installable).length, 23);
+
+for (const id of ['rapier-physics-provider-kit', 'physics-runtime-adapter-kit', 'three-physics-view-kit']) {
+  const candidate = hydrated.kits.find(kit => kit.id === id);
+  assert.equal(candidate.status, 'candidate');
+  assert.equal(candidate.source.installable, false, 'candidate proof must not bypass official promotion');
+}
 
 const repeated = hydrateCompositionRegistry(template, commit);
 assert.equal(repeated.contentHash, hydrated.contentHash, "same immutable source must hydrate identically");

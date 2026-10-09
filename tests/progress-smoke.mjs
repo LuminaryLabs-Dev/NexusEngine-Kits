@@ -2,19 +2,19 @@ import assert from "node:assert/strict";
 import { getKitProgress, listKitIds } from "../installer/index.js";
 
 const progress = getKitProgress();
-assert.equal(listKitIds().length, 150);
+assert.equal(listKitIds().length, 153);
 assert.equal(progress.baselineTotal, 108);
 assert.equal(progress.baselineResolved, 5);
 assert.equal(progress.baselineRemaining, 103);
 assert.equal(progress.official, 23);
-assert.equal(progress.candidate, 24);
+assert.equal(progress.candidate, 27);
 assert.equal(progress.scaffolded, 8);
 assert.equal(progress.placeholder, 95);
 assert.equal(progress.deprecated, 0);
 assert.equal(progress.approvedAdditionsResolved, 18);
-assert.equal(progress.approvedAdditionsTotal, 42);
+assert.equal(progress.approvedAdditionsTotal, 45);
 assert.equal(progress.activeCapability, "clock-kit");
-assert.equal(progress.stages.inventoried, 150);
+assert.equal(progress.stages.inventoried, 153);
 assert.equal(progress.stages.protoValidated, 12);
 
 console.log("kit progress smoke ok", progress);

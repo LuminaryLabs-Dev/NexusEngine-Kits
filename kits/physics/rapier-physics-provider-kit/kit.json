@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "nexusengine.kit-manifest.v1",
+  "id": "rapier-physics-provider-kit",
+  "version": "0.1.0",
+  "status": "candidate",
+  "kind": "provider-kit",
+  "domain": "physics-runtime",
+  "domainPath": "n:physics:extensions:rapier",
+  "parentDomainPath": "n:physics:extensions",
+  "apiName": "rapierPhysicsProvider",
+  "factory": "createRapierPhysicsProvider",
+  "entry": "./kits/physics/rapier-physics-provider-kit/index.js",
+  "packageExport": "./rapier-physics-provider-kit",
+  "module": {
+    "package": "./kits/physics/rapier-physics-provider-kit/index.js",
+    "node": "./kits/physics/rapier-physics-provider-kit/index.js"
+  },
+  "integrity": "sha256-Z+eTsbDUxBtGDLYt9oKKmROj+rKwEtTlan3C8XeVXMs=",
+  "environments": [
+    "node",
+    "browser"
+  ],
+  "requires": [],
+  "provides": [
+    "n:physics:extensions:rapier"
+  ],
+  "composes": [],
+  "realBehavior": true,
+  "source": {
+    "owner": "LuminaryLabs-Dev",
+    "repository": "NexusEngine-Kits",
+    "requestedRef": "main",
+    "resolvedCommit": null,
+    "path": "kits/physics/rapier-physics-provider-kit/index.js",
+    "parity": "candidate"
+  },
+  "runtime": {
+    "api": "rapierPhysicsProvider",
+    "snapshot": true,
+    "loadSnapshot": true,
+    "reset": true,
+    "deterministic": true
+  },
+  "proof": {
+    "readme": "kits/physics/rapier-physics-provider-kit/README.md",
+    "smoke": "tests/physics/runtime-smoke.mjs",
+    "parity": "kits/physics/rapier-physics-provider-kit/source-parity.md",
+    "limitations": "kits/physics/rapier-physics-provider-kit/LIMITATIONS.md"
+  },
+  "promotion": {
+    "baseline": false,
+    "resolved": false,
+    "stages": {
+      "inventoried": true,
+      "sourceMapped": true,
+      "protoValidated": false,
+      "candidate": true,
+      "official": false
+    },
+    "blocker": "First bounded profile only; general capability matrix, immutable installer hydration, cross-runtime/device qualification and full 0.0.5 gates remain open."
+  },
+  "stability": "candidate"
+}

@@ -81,6 +81,8 @@ function immediateParent(domainPath) {
 }
 
 const COMPOSITION_DOMAIN_PATHS = Object.freeze({
+  "physics-runtime": "n:physics:extensions",
+  "render-providers": "n:render:extensions",
   "emulation-host": "n:host:extensions",
   "emulation-assets": "n:asset:extensions",
   "emulation-presentation": "n:presentation:extensions",
